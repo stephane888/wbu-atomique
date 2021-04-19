@@ -1,0 +1,8 @@
+// variable;
+@use "../../wbu-ressources.scss" as *;
+@use "./title";
+
+h1 {
+  font-size    : $h1-font-size;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,25 @@
+@use "../../wbu-ressources.scss" as *;
+@use "default";
+/**
+  Elment de base pour le titre.
+*/
+//
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+  line-height: $title-line-height;
+  margin     : 0;
+  color      : $title-color;
+}

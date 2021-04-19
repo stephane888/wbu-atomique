@@ -1,0 +1,24 @@
+.color {
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  padding: 2px;
+  a {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  &-1 {
+    background-color: #000000;
+  }
+  &-2 {
+    background-color: #bebebe;
+  }
+  &-3 {
+    background-color: #fe0000;
+  }
+  &-4 {
+    background-color: #ffff01;
+  }
+}

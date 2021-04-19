@@ -1,0 +1,9 @@
+$wbu-btn-border-carre: 0rem !default;
+@use "./buttons.scss";
+.btn {
+  padding: 0 8px;
+  font-size: 11px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #fff;
+}

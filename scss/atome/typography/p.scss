@@ -1,0 +1,7 @@
+@use "../../wbu-ressources.scss" as *;
+@use "./title";
+
+p {
+  font-size: $p-font-size;
+  margin   : 0 0 $wbu-margin;
+}

@@ -1,0 +1,6 @@
+//$h1-font-size        : 1.5rem;
+// @use "variable" as vars;
+// @use "../../ato_design/atome/typography/h1.scss" with ($h1-font-size: vars.$h1-font-size,);
+@use "../bootstrap-flex.scss";
+@use "../bootstrap-form.scss";
+@use "../organisme/product-metas.scss";

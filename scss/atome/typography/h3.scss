@@ -1,0 +1,6 @@
+@use "../../wbu-ressources.scss" as *;
+@use "./title";
+
+h3 {
+  font-size: $h3-font-size;
+}

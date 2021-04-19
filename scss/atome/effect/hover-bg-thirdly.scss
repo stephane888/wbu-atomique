@@ -1,0 +1,13 @@
+@use "../../wbu-ressources.scss" as *;
+
+.hover-bg-thirdly {
+  &:hover {
+    background-color: $color-thirdly;
+    border-color    : $color-thirdly;
+    color           : #fff;
+
+    * {
+      color: inherit;
+    }
+  }
+}

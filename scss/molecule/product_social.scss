@@ -1,0 +1,42 @@
+@use "../wbu-ressources.scss" as pts;
+@use "../atome/bouton/btn-small.scss";
+
+.product_social {
+  button {
+    color       : #FFF;
+    margin-right: pts.$default-line-height/3;
+
+    i {
+      margin-right: pts.$default-line-height/2.3;
+    }
+
+    &:hover {
+      color  : #fff;
+      opacity: 0.8;
+    }
+
+    &.last-child {
+      margin-right: 0;
+    }
+  }
+
+  .facebook {
+    background-color: #007bff;
+  }
+
+  .twitter {
+    background-color: #1da1f2;
+  }
+
+  .pinterest {
+    background-color: #cb2028;
+  }
+
+  .google {
+    background-color: #fe6d4c;
+  }
+
+  .linkedin {
+    background-color: #010103;
+  }
+}

@@ -1,0 +1,11 @@
+// variable;
+@use "../../wbu-ressources.scss" as *;
+
+.bg-primary {
+  background-color: $color-primary;
+
+  * {
+    //adjust-hue($color-primary, -180deg)
+    color: #FFF;
+  }
+}

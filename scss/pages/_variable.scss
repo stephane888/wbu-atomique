@@ -1,0 +1,14 @@
+@import "../wbu-ressources.scss";
+$title-font-weight: 400;
+$h1-font-size: 1.43rem;
+$h3-font-size: 1.15rem;
+/* space */
+// definit les marges et padding.
+$wbu-margin: 1.25rem !default;
+/* color */
+$color-primary: #fc5e28;
+$color-gris: #dee2e6;
+/* typography */
+//$p-font-size      : inherit;
+$default-font-size: 0.9rem;
+$title-color: lighten($color-text, 15);

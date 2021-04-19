@@ -1,0 +1,53 @@
+@forward "../../wbu-ressources.scss";
+@import "../../bootstrap_init";
+$btn-background-color: transparent !default;
+
+.btn {
+  display         : inline-block;
+  font-family     : $btn-font-family;
+  font-weight     : $btn-font-weight;
+  color           : $body-color;
+  text-align      : center;
+  text-decoration : if($link-decoration == none, null, none);
+  white-space     : $btn-white-space;
+  vertical-align  : middle;
+  user-select     : none;
+  background-color: $btn-background-color;
+  border          : $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+  @include hover() {
+    color          : $body-color;
+    text-decoration: none;
+  }
+
+  &.focus,
+  &:focus {
+    outline: 0;
+    //box-shadow: $btn-focus-box-shadow;
+  }
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+}
+/*
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+.btn-danger {
+  @include button-variant($danger, $danger);
+}
+
+.btn-outline-danger {
+  @include button-outline-variant($danger);
+}
+*/

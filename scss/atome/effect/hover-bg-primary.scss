@@ -1,0 +1,13 @@
+@use "../../wbu-ressources.scss" as *;
+
+.hover-bg-primary {
+  &:hover {
+    border-color    : $color-primary;
+    background-color: $color-primary;
+    color           : #fff;
+
+    * {
+      color: inherit;
+    }
+  }
+}

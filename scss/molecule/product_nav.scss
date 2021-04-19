@@ -1,0 +1,30 @@
+@use "../wbu-ressources.scss" as btn;
+@use "../atome/bouton/btn-round.scss";
+@use "../atome/effect/hover-bg-primary";
+
+.product_nav {
+  position: absolute;
+  top     : 0;
+  left    : auto;
+  right   : 15px;
+  @include btn.wbu--btn-round($wbu-btn-round-dimension:1.127rem);
+
+  .btn-round {
+    border-radius: 3px;
+  }
+
+  ul {
+    list-style: outside none none;
+    margin    : 0;
+    padding   : 0;
+
+    li {
+      display    : inline-block;
+      margin-left: 3px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@use "./buttons" as btsm;
+
+.btn-small {
+  @include btsm.button-size(btsm.$btn-padding-y-sm, btsm.$btn-padding-x-sm, btsm.$btn-font-size-sm, btsm.$btn-line-height-sm, btsm.$btn-border-radius-sm);
+}

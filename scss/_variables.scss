@@ -1,0 +1,33 @@
+//btn-round
+$wbu-btn-border-round    : 50% !default;
+$wbu-btn-round-dimension : 1.52rem !default;
+$btn-border-color        : #dee2e6 !default;
+/**/
+//$btn-radius
+$wbu-btn-border-radius   : 30px !default;
+$wbu-btn-radius-padding  : 0.3rem 1.5rem !default;
+/**/
+// typography
+// variable;
+$default-line-height     : 1.5rem !default;
+$default-font-size       : 1rem !default;
+$p-font-size             : inherit !default;
+$color-text              : #4c4c4c !default;
+$color-primary           : #ea000d !default;
+$color-secondary         : #0000ee !default;
+$color-thirdly           : #333 !default;
+/**/
+$title-color             : inherit !default;
+$title-font-family       : inherit !default;
+$title-line-height       : 1.7rem !default;
+$title-font-weight       : 600 !default;
+$h1-font-size            : 2.3rem !default;
+$h2-font-size            : 2rem !default;
+$h3-font-size            : 1.8rem !default;
+/* */
+// space.
+$wbu-margin              : 1.25rem !default;
+/* */
+// bootstrap variables
+$input-font-size         : inherit !default;
+$form-group-margin-bottom: $wbu-margin; // Buttons + Forms

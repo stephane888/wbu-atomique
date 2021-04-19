@@ -1,0 +1,18 @@
+.product_rating {
+  margin-bottom: 1rem;
+
+  ul {
+    list-style: outside none none;
+    margin    : 0;
+    padding   : 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        font-size: inherit;
+        color    : inherit;
+      }
+    }
+  }
+}

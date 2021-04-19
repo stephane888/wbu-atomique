@@ -1,0 +1,11 @@
+//boutton round parametre
+@mixin wbu--btn-round($wbu-btn-round-dimension:$wbu-btn-round-dimension,$wbu-btn-border-round:$wbu-btn-border-round,$btn-border-color:$btn-border-color) {
+  .btn-round {
+    border-radius: $wbu-btn-border-round;
+    font-size    : $wbu-btn-round-dimension*0.8;
+    line-height  : $wbu-btn-round-dimension*0.8;
+    width        : $wbu-btn-round-dimension *1.7;
+    height       : $wbu-btn-round-dimension *1.7;
+    border-color : $btn-border-color;
+  }
+}

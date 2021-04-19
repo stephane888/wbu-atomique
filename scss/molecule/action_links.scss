@@ -1,0 +1,31 @@
+@use "../wbu-ressources.scss" as acts;
+@use "../atome/bouton/btn-radius.scss";
+@use "../atome/effect/bg-primary.scss";
+@use "../atome/effect/hover-bg-secondary.scss";
+/* */
+// ne fonctionne pas. ???
+//$btn-round-dimension: #{acts.$default-line-height*2}rem;
+
+.action__links {
+  margin-bottom: 18px;
+
+  .add-to-cart {
+    i {
+      padding-right: acts.$default-line-height/2.8;
+    }
+  }
+
+  .btn-round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn {
+    margin-right: acts.$default-line-height/2;
+
+    &.last-child {
+      margin-right: 0;
+    }
+  }
+}

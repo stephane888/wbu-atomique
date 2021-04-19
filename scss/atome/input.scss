@@ -1,0 +1,16 @@
+@forward "../wbu-ressources.scss";
+@import "../bootstrap_init";
+
+input {
+  width        : 65px;
+  border       : 1px solid #ebebeb;
+  background   : none;
+  height       : 42px;
+  padding      : 0 20px;
+  border-radius: 5px;
+  margin-left  : 15px;
+
+  &:focus {
+    outline: none !important;
+  }
+}
