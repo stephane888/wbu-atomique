@@ -1,0 +1,11 @@
+// variable;
+@use "../../wbu-ressources.scss" as *;
+
+a {
+  text-decoration: none;
+  color          : $color-link;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}

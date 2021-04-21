@@ -7,7 +7,7 @@
 //$btn-round-dimension: #{acts.$default-line-height*2}rem;
 
 .action__links {
-  margin-bottom: 18px;
+  margin-bottom: acts.$wbu-margin;
 
   .add-to-cart {
     i {
@@ -16,9 +16,9 @@
   }
 
   .btn-round {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    align-items: center;
+    align-items    : center;
   }
 
   .btn {

@@ -1,0 +1,37 @@
+// variable;
+@use "../../wbu-ressources.scss" as *;
+$owl-color-active: $color-primary !default;
+$owl-color-default: $border-color !default;
+
+.owl-carousel {
+  .owl-item img {
+    height: auto;
+  }
+
+  .owl-dots {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: left;
+    align-items    : center;
+    margin-left    : -0.4rem;
+    overflow       : hidden;
+
+    .owl-dot {
+      display      : flex;
+      margin-bottom: 0.3rem;
+      margin-left  : 0.4rem;
+
+      img {
+        border    : 1px solid $owl-color-default;
+        background: #fff;
+        padding   : 0.3rem;
+      }
+
+      &.active {
+        img {
+          border-color: $owl-color-active;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+// permet de formatter les données d'information de base, tels, le titre, mini description, add to cart ...
+//@use "../../../ato_design/wbu-ressources.scss" as rs;
+@use "../../../variables" as vars;
+@use "../../../atome/typography/h1";
+@use "../../../atome/typography/h3";
+@use "../../../atome/typography/p";
+@use "../../../atome/typography/a";
+@use "../../../atome/product_rating.scss";
+@use "../../../molecule/product_nav.scss";
+@use "../../../molecule/price_box.scss";
+@use "../../../molecule/product_variant_color.scss";
+@use "../../../molecule/action_links.scss";
+@use "../../../molecule/product_meta.scss";
+@use "../../../molecule/product_social.scss";
+
+.small_description {
+  margin-bottom: vars.$wbu-margin;
+  border-bottom: 1px solid vars.$color-boder;
+}
+
+.container-qty {
+  max-width: 202px;
+}

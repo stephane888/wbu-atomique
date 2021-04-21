@@ -1,22 +1,31 @@
-//btn-round
+/**
+ * color de base
+ */
+$border-color            : #dee2e6 !default;
+$color-primary           : #ea000d !default;
+$color-secondary         : #0000ee !default;
+$color-thirdly           : #333 !default;
+$color-text              : #4c4c4c !default;
+$color-boder             : #dee2e6;
+$color-link              : $color-secondary !default;
+$color-link-hover        : $color-secondary !default;
+/**/
 $wbu-btn-border-round    : 50% !default;
 $wbu-btn-round-dimension : 1.52rem !default;
-$btn-border-color        : #dee2e6 !default;
+$btn-border-color        : $border-color !default;
 /**/
 //$btn-radius
 $wbu-btn-border-radius   : 30px !default;
 $wbu-btn-radius-padding  : 0.3rem 1.5rem !default;
-/**/
-// typography
-// variable;
+/**
+ * Typography
+ */
 $default-line-height     : 1.5rem !default;
 $default-font-size       : 1rem !default;
 $p-font-size             : inherit !default;
-$color-text              : #4c4c4c !default;
-$color-primary           : #ea000d !default;
-$color-secondary         : #0000ee !default;
-$color-thirdly           : #333 !default;
-/**/
+/**
+ * typography
+ */
 $title-color             : inherit !default;
 $title-font-family       : inherit !default;
 $title-line-height       : 1.7rem !default;
@@ -27,6 +36,7 @@ $h3-font-size            : 1.8rem !default;
 /* */
 // space.
 $wbu-margin              : 1.25rem !default;
+$wbu-h1-margin           : $wbu-margin * 1.6 !default;
 /* */
 // bootstrap variables
 $input-font-size         : inherit !default;
