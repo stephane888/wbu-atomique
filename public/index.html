@@ -1,118 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-        <link rel="stylesheet" href="../dist/css/app.css">
-        <title>Document</title>
-    </head>
+    <link rel="stylesheet" href="../dist/css/app.css" />
+    <title>Document</title>
+  </head>
 
-    <body>
-       
-        <div class="container">
-            <div class="row d-flex mt-5">
-                <div class="col-sm-6"></div>
-                <div class="product-single col-sm-6">
-                    <div class="row">
-                        <div class="col-md-5 product-single-gallery"></div>
-                        <div class="col-md-7 product-single-details">
-                            <h1 class="product-title">Aliquam Lobortis</h1>
-                            <!-- product_nav -->
-                            <div class="product_nav">
-                                <ul>
-                                    <li class="prev">
-                                        <button class="btn btn-round  hover-bg-primary">
-                                            <a href="#"><i class="fa fa-angle-left"></i></a>
-                                        </button>
-                                    </li>
-                                    <li class="prev">
-                                        <button class="btn btn-round  hover-bg-primary">
-                                            <a href="#"><i class="fa fa-angle-right"></i></a>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- product_rating -->
-                            <div class="product_rating">
-                                <ul>
-                                    <li><a href="#"><i class="far fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="far fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="far fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="far fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="far fa fa-star"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- price_box -->
-                            <div class="price_box">
-                                <span class="current_price">$70.00</span> <span class="old_price"> $80.00 </span>
-                            </div>
-                            <!-- small description -->
-                            <div class="small_description">
-                                <p> eget velit. Donec ac tempus ante. Fusce ultricies massa
-                                    massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero
-                                    hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor
-                                    sit amet, consectetur adipiscing elit. Sed tempor, lorem et
-                                    placerat vestibulum, metus nisi posuere nisl </p>
-                            </div>
-                            <!-- product options -->
-                            <div class="product_variant_color">
-                                <h3>Available Options</h3>
-                                <label>Color</label>
-                                <div class="d-flex group-btn">
-                                    <a href="#" class="btn btn-round btn-carre color-1"></a> <a
-                                        href="#" class="btn btn-round btn-carre color-2"></a> <a href="#"
-                                        class="btn btn-round btn-carre color-3"></a> <a href="#"
-                                        class="btn btn-round btn-carre color-4"></a>
-                                </div>
-                            </div>
-                            <!-- qte -->
-                            <div class="form-group row">
-                                <label for="inputPassword" class="col-auto col-form-label">
-                                    Quantity </label>
-                                <div class="col container-qty">
-                                    <input type="number" class="form-control" value="1">
-                                </div>
-                            </div>
-                            <!-- add to cart -->
-                            <div class="action__links">
-                                <div class="d-flex">
-                                    <button
-                                        class="btn btn-radius bg-primary hover-bg-secondary add-to-cart">
-                                        <a href="#"><i class="fas fa fa-shopping-cart"></i>add to cart</a>
-                                    </button>
-                                    <button class="btn btn-round hover-bg-primary">
-                                        <a href="#"><i class="far fa fa-heart"></i></a>
-                                    </button>
-                                    <button class="btn btn-round hover-bg-primary">
-                                        <a href="#"><i class="fa fa-road"></i></a>
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- cat -->
-                            <div class="product_meta">
-                                <span>Category: <a href="#">Clothing</a></span>
-                            </div>
-                            <!-- group buttons -->
-                            <div class="product_social">
-                                <div class="d-flex align-items-center">					
-                                        <button class="btn btn-small facebook"> <i class="fab fa fa-facebook"></i> like </button>					
-                                        <button class="btn btn-small twitter"> <i class="fab fa fa-twitter"></i> twitter </button>					
-                                        <button class="btn btn-small pinterest"> <i class="fab fa fa-pinterest"></i> pinterest </button>					
-                                        <button class="btn btn-small google"> <i class="fab fa fa-google-plus-g"></i> share </button>					
-                                        <button class="btn btn-small linkedin"> <i class="fab fa fa-linkedin"></i> linked </button>					
-                                </div>
-                            </div>
-                            <!-- .. -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <body>
+    <div class="projectHero-module">
+      <div
+        class="projectHero-module__image"
+        style="
+          background-image: url('https://prod-saint-gobain-fr.content.saint-gobain.io/sites/saint-gobain.fr/files/2020-04/terrasse-bois-sur-terrain-en-pente-amenagement-saint-gobain-00-apres.jpg');
+        "
+      ></div>
+
+      <div class="projectHero-module__header">
+        <ul>
+          <button class="btn btn-radius">21 500 €</button>
+          <button class="btn btn-radius">1 mois</button>
+          <button class="btn btn-radius">46 m²</button>
+        </ul>
+
+        <div class="projectHero-module__title">
+          Une terrasse bois sur un terrain en pente
         </div>
-        <script src="../dist/js/app.js"></script>
-        
-    </body>
+      </div>
+    </div>
 
+    <div class="ourAchievments-module">
+      <div>
+        <div
+          class="ourAchievments-module__image"
+          style="
+            background-image: url('https://prod-saint-gobain-fr.content.saint-gobain.io/sites/saint-gobain.fr/files/2020-07/une-salle-de-bain-familiale-design-00_1.jpg');
+          "
+        >
+          <div class="ourAchievments-module__container">
+            <div class="showProject">
+              <div>Voir le projet</div>
+            </div>
+            <ul>
+              <button class="btn btn-radius">12 900 €</button>
+              <button class="btn btn-radius">10 jours</button>
+              <button class="btn btn-radius">12 m²</button>
+            </ul>
+          </div>
+        </div>
+        <div class="ourAchievments-module__title">
+          Une salle de bain familiale
+        </div>
+      </div>
+    </div>
+
+    <div class="serviceBlock-module">
+      <div class="serviceBlock-module__container">
+        <div class="serviceBlock-module__serviceMessage">
+          <div class="serviceBlock-module__serviceTitle">
+            Ces idées vous ont donné
+          </div>
+          <div class="serviceBlock-module__serviceTitle">
+            envie de vous lancer&nbsp;?
+          </div>
+          <div class="serviceBlock-module__serviceDescription">
+            Publiez votre projet sur notre plateforme, sélectionnez et
+            rencontrez jusqu’à 3 professionnels, réalisez vos travaux en toute
+            sérénité&nbsp;!
+          </div>
+          <a
+            href="https://app.lamaisonsaintgobain.fr/projet/estimation?campaignId=e8686144a0&amp;reset=1&amp;utm_source=LMSG&amp;utm_medium=nos-realisations&amp;utm_campaign=&amp;utm_content=nos-plus-belles-realisations&amp;utm_term=undefined"
+            class="serviceBlock-module__button"
+          >
+            Je décris mon projet <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="seeMore">Voir plus de réalisations</div>
+    .
+
+    <div class="reinsuranceBlock">
+      <hr class="reinsuranceBlock__hr" />
+      <div class="reinsuranceBlock__h3">
+        Pourquoi choisir La Maison Saint-Gobain pour vos travaux&nbsp;?
+      </div>
+      <div class="reinsuranceBlock__container">
+        <div class="reinsuranceItem">
+          <div class="reinsuranceItem__iconContainer">
+            <svg class="reinsuranceItem__assistance" fill="none">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M20.175 51.097l2.598.539a3.643 3.643 0 002.974-.688 3.387 3.387 0 001.317-2.666V35.61c0-6.894 5.783-12.482 12.918-12.482 7.134 0 12.918 5.588 12.918 12.482v14.735c-.02 4.624-3.684 8.47-8.451 8.872-.654-2.153-2.846-3.515-5.145-3.196-2.299.32-4.006 2.222-4.006 4.466 0 2.245 1.707 4.148 4.006 4.467 2.299.319 4.491-1.043 5.145-3.196 5.742-.377 10.381-4.671 11.017-10.198.319.094.65.143.983.147.251 0 .501-.026.747-.076l2.598-.539c2.425-.51 4.157-2.581 4.164-4.98v-5.736c-.004-1.816-1.005-3.492-2.629-4.406v-.36C61.33 24.227 51.78 15 40 15c-11.78 0-21.329 9.227-21.329 20.61v.34c-1.624.913-2.625 2.59-2.63 4.405v5.758c.002 2.39 1.72 4.461 4.134 4.984zm19.81 11.392c-1.125 0-2.036-.88-2.036-1.966 0-1.086.911-1.966 2.035-1.966s2.035.88 2.035 1.966c0 1.086-.91 1.966-2.035 1.966zm19.24-13.887c1.225-.241 2.104-1.282 2.104-2.49l.026-5.741c0-1.208-.879-2.249-2.103-2.49l-3.713-.767v11.178c0 .268.126.521.341.69a.944.944 0 00.769.18l2.577-.56zm-19.24-31.061c10.144.013 18.432 7.832 18.688 17.632l-3.192-.661c-.522-7.908-7.312-14.064-15.513-14.064-8.2 0-14.99 6.156-15.512 14.064l-3.187.655c.26-9.807 8.562-17.627 18.715-17.626zM20.742 37.886c-1.224.241-2.104 1.282-2.103 2.49l-.021 5.757c0 1.207.878 2.248 2.103 2.49l2.598.538a.945.945 0 00.784-.165.878.878 0 00.352-.699V37.12l-3.713.767zm13.528-1.573c-.7 0-1.266.61-1.266 1.364 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-2.169 1.632-3.927 3.646-3.927 2.014 0 3.646 1.758 3.646 3.927 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-.753-.567-1.364-1.266-1.364zm12.5 0c-.7 0-1.266.61-1.266 1.364 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-2.169 1.632-3.927 3.646-3.927 2.014 0 3.646 1.758 3.646 3.927 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-.753-.567-1.364-1.266-1.364zm1.434 8.543c-1.426 2.752-4.407 4.506-7.682 4.519-3.276-.012-6.26-1.766-7.687-4.52a1.14 1.14 0 01.097-1.203c.26-.356.705-.556 1.165-.523.46.032.868.291 1.068.68.987 1.925 3.07 3.15 5.355 3.15 2.285 0 4.368-1.225 5.354-3.15.31-.6 1.083-.853 1.726-.564.643.289.914 1.01.604 1.61z"
+                fill="#007891"
+              ></path>
+            </svg>
+          </div>
+          <div class="reinsuranceItem__title">
+            Conseil et support<span
+              >&nbsp;<!-- -->à toutes les étapes du projet</span
+            >
+          </div>
+          <p>
+            Un conseiller client dédié vous accompagne tout au long de votre
+            projet. Joignable 6/7 jours.
+          </p>
+        </div>
+        <div class="reinsuranceItem">
+          <div class="reinsuranceItem__iconContainer">
+            <svg class="reinsuranceItem__assistance" fill="none">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M20.175 51.097l2.598.539a3.643 3.643 0 002.974-.688 3.387 3.387 0 001.317-2.666V35.61c0-6.894 5.783-12.482 12.918-12.482 7.134 0 12.918 5.588 12.918 12.482v14.735c-.02 4.624-3.684 8.47-8.451 8.872-.654-2.153-2.846-3.515-5.145-3.196-2.299.32-4.006 2.222-4.006 4.466 0 2.245 1.707 4.148 4.006 4.467 2.299.319 4.491-1.043 5.145-3.196 5.742-.377 10.381-4.671 11.017-10.198.319.094.65.143.983.147.251 0 .501-.026.747-.076l2.598-.539c2.425-.51 4.157-2.581 4.164-4.98v-5.736c-.004-1.816-1.005-3.492-2.629-4.406v-.36C61.33 24.227 51.78 15 40 15c-11.78 0-21.329 9.227-21.329 20.61v.34c-1.624.913-2.625 2.59-2.63 4.405v5.758c.002 2.39 1.72 4.461 4.134 4.984zm19.81 11.392c-1.125 0-2.036-.88-2.036-1.966 0-1.086.911-1.966 2.035-1.966s2.035.88 2.035 1.966c0 1.086-.91 1.966-2.035 1.966zm19.24-13.887c1.225-.241 2.104-1.282 2.104-2.49l.026-5.741c0-1.208-.879-2.249-2.103-2.49l-3.713-.767v11.178c0 .268.126.521.341.69a.944.944 0 00.769.18l2.577-.56zm-19.24-31.061c10.144.013 18.432 7.832 18.688 17.632l-3.192-.661c-.522-7.908-7.312-14.064-15.513-14.064-8.2 0-14.99 6.156-15.512 14.064l-3.187.655c.26-9.807 8.562-17.627 18.715-17.626zM20.742 37.886c-1.224.241-2.104 1.282-2.103 2.49l-.021 5.757c0 1.207.878 2.248 2.103 2.49l2.598.538a.945.945 0 00.784-.165.878.878 0 00.352-.699V37.12l-3.713.767zm13.528-1.573c-.7 0-1.266.61-1.266 1.364 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-2.169 1.632-3.927 3.646-3.927 2.014 0 3.646 1.758 3.646 3.927 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-.753-.567-1.364-1.266-1.364zm12.5 0c-.7 0-1.266.61-1.266 1.364 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-2.169 1.632-3.927 3.646-3.927 2.014 0 3.646 1.758 3.646 3.927 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-.753-.567-1.364-1.266-1.364zm1.434 8.543c-1.426 2.752-4.407 4.506-7.682 4.519-3.276-.012-6.26-1.766-7.687-4.52a1.14 1.14 0 01.097-1.203c.26-.356.705-.556 1.165-.523.46.032.868.291 1.068.68.987 1.925 3.07 3.15 5.355 3.15 2.285 0 4.368-1.225 5.354-3.15.31-.6 1.083-.853 1.726-.564.643.289.914 1.01.604 1.61z"
+                fill="#007891"
+              ></path>
+            </svg>
+          </div>
+          <div class="reinsuranceItem__title">
+            Conseil et support<span
+              >&nbsp;<!-- -->à toutes les étapes du projet</span
+            >
+          </div>
+          <p>
+            Un conseiller client dédié vous accompagne tout au long de votre
+            projet. Joignable 6/7 jours.
+          </p>
+        </div>
+        <div class="reinsuranceItem">
+          <div class="reinsuranceItem__iconContainer">
+            <svg class="reinsuranceItem__assistance" fill="none">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M20.175 51.097l2.598.539a3.643 3.643 0 002.974-.688 3.387 3.387 0 001.317-2.666V35.61c0-6.894 5.783-12.482 12.918-12.482 7.134 0 12.918 5.588 12.918 12.482v14.735c-.02 4.624-3.684 8.47-8.451 8.872-.654-2.153-2.846-3.515-5.145-3.196-2.299.32-4.006 2.222-4.006 4.466 0 2.245 1.707 4.148 4.006 4.467 2.299.319 4.491-1.043 5.145-3.196 5.742-.377 10.381-4.671 11.017-10.198.319.094.65.143.983.147.251 0 .501-.026.747-.076l2.598-.539c2.425-.51 4.157-2.581 4.164-4.98v-5.736c-.004-1.816-1.005-3.492-2.629-4.406v-.36C61.33 24.227 51.78 15 40 15c-11.78 0-21.329 9.227-21.329 20.61v.34c-1.624.913-2.625 2.59-2.63 4.405v5.758c.002 2.39 1.72 4.461 4.134 4.984zm19.81 11.392c-1.125 0-2.036-.88-2.036-1.966 0-1.086.911-1.966 2.035-1.966s2.035.88 2.035 1.966c0 1.086-.91 1.966-2.035 1.966zm19.24-13.887c1.225-.241 2.104-1.282 2.104-2.49l.026-5.741c0-1.208-.879-2.249-2.103-2.49l-3.713-.767v11.178c0 .268.126.521.341.69a.944.944 0 00.769.18l2.577-.56zm-19.24-31.061c10.144.013 18.432 7.832 18.688 17.632l-3.192-.661c-.522-7.908-7.312-14.064-15.513-14.064-8.2 0-14.99 6.156-15.512 14.064l-3.187.655c.26-9.807 8.562-17.627 18.715-17.626zM20.742 37.886c-1.224.241-2.104 1.282-2.103 2.49l-.021 5.757c0 1.207.878 2.248 2.103 2.49l2.598.538a.945.945 0 00.784-.165.878.878 0 00.352-.699V37.12l-3.713.767zm13.528-1.573c-.7 0-1.266.61-1.266 1.364 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-2.169 1.632-3.927 3.646-3.927 2.014 0 3.646 1.758 3.646 3.927 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-.753-.567-1.364-1.266-1.364zm12.5 0c-.7 0-1.266.61-1.266 1.364 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-2.169 1.632-3.927 3.646-3.927 2.014 0 3.646 1.758 3.646 3.927 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-.753-.567-1.364-1.266-1.364zm1.434 8.543c-1.426 2.752-4.407 4.506-7.682 4.519-3.276-.012-6.26-1.766-7.687-4.52a1.14 1.14 0 01.097-1.203c.26-.356.705-.556 1.165-.523.46.032.868.291 1.068.68.987 1.925 3.07 3.15 5.355 3.15 2.285 0 4.368-1.225 5.354-3.15.31-.6 1.083-.853 1.726-.564.643.289.914 1.01.604 1.61z"
+                fill="#007891"
+              ></path>
+            </svg>
+          </div>
+          <div class="reinsuranceItem__title">
+            Conseil et support<span
+              >&nbsp;<!-- -->à toutes les étapes du projet</span
+            >
+          </div>
+          <p>
+            Un conseiller client dédié vous accompagne tout au long de votre
+            projet. Joignable 6/7 jours.
+          </p>
+        </div>
+      </div>
+
+      <div class="reinsuranceBlock__bouton">
+        <button class="btn btn-radius">
+          <i class="fa fa-braille"></i> J'ai un projet
+        </button>
+      </div>
+    </div>
+
+    <div class="reinsuranceItem">
+      <div class="reinsuranceItem__iconContainer">
+        <svg class="reinsuranceItem__assistance" fill="none">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M20.175 51.097l2.598.539a3.643 3.643 0 002.974-.688 3.387 3.387 0 001.317-2.666V35.61c0-6.894 5.783-12.482 12.918-12.482 7.134 0 12.918 5.588 12.918 12.482v14.735c-.02 4.624-3.684 8.47-8.451 8.872-.654-2.153-2.846-3.515-5.145-3.196-2.299.32-4.006 2.222-4.006 4.466 0 2.245 1.707 4.148 4.006 4.467 2.299.319 4.491-1.043 5.145-3.196 5.742-.377 10.381-4.671 11.017-10.198.319.094.65.143.983.147.251 0 .501-.026.747-.076l2.598-.539c2.425-.51 4.157-2.581 4.164-4.98v-5.736c-.004-1.816-1.005-3.492-2.629-4.406v-.36C61.33 24.227 51.78 15 40 15c-11.78 0-21.329 9.227-21.329 20.61v.34c-1.624.913-2.625 2.59-2.63 4.405v5.758c.002 2.39 1.72 4.461 4.134 4.984zm19.81 11.392c-1.125 0-2.036-.88-2.036-1.966 0-1.086.911-1.966 2.035-1.966s2.035.88 2.035 1.966c0 1.086-.91 1.966-2.035 1.966zm19.24-13.887c1.225-.241 2.104-1.282 2.104-2.49l.026-5.741c0-1.208-.879-2.249-2.103-2.49l-3.713-.767v11.178c0 .268.126.521.341.69a.944.944 0 00.769.18l2.577-.56zm-19.24-31.061c10.144.013 18.432 7.832 18.688 17.632l-3.192-.661c-.522-7.908-7.312-14.064-15.513-14.064-8.2 0-14.99 6.156-15.512 14.064l-3.187.655c.26-9.807 8.562-17.627 18.715-17.626zM20.742 37.886c-1.224.241-2.104 1.282-2.103 2.49l-.021 5.757c0 1.207.878 2.248 2.103 2.49l2.598.538a.945.945 0 00.784-.165.878.878 0 00.352-.699V37.12l-3.713.767zm13.528-1.573c-.7 0-1.266.61-1.266 1.364 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-2.169 1.632-3.927 3.646-3.927 2.014 0 3.646 1.758 3.646 3.927 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-.753-.567-1.364-1.266-1.364zm12.5 0c-.7 0-1.266.61-1.266 1.364 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-2.169 1.632-3.927 3.646-3.927 2.014 0 3.646 1.758 3.646 3.927 0 .708-.533 1.281-1.19 1.281-.657 0-1.19-.573-1.19-1.281 0-.753-.567-1.364-1.266-1.364zm1.434 8.543c-1.426 2.752-4.407 4.506-7.682 4.519-3.276-.012-6.26-1.766-7.687-4.52a1.14 1.14 0 01.097-1.203c.26-.356.705-.556 1.165-.523.46.032.868.291 1.068.68.987 1.925 3.07 3.15 5.355 3.15 2.285 0 4.368-1.225 5.354-3.15.31-.6 1.083-.853 1.726-.564.643.289.914 1.01.604 1.61z"
+            fill="#007891"
+          ></path>
+        </svg>
+      </div>
+      <div class="reinsuranceItem__title">
+        Conseil et support<span
+          >&nbsp;<!-- -->à toutes les étapes du projet</span
+        >
+      </div>
+      <p>
+        Un conseiller client dédié vous accompagne tout au long de votre projet.
+        Joignable 6/7 jours.
+      </p>
+    </div>
+    <script src="../dist/js/app.js"></script>
+  </body>
 </html>
