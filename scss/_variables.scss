@@ -37,7 +37,7 @@ $wbu-h3-font-size        : 1.8rem !default;
 // space.
 $wbu-margin              : 1.25rem !default;
 $wbu-h1-margin           : $wbu-margin * 1.6 !default;
-/* */
+/*permet de surcharger les variables bootstrap */
 // bootstrap variables
 $input-font-size         : inherit !default;
 $form-group-margin-bottom: $wbu-margin; // Buttons + Forms
