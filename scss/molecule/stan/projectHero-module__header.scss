@@ -1,3 +1,4 @@
+@use '../../defaut/model/custom_bp.scss' as *;
 @use "../../atome/stan/btn-radius.scss";
 .projectHero-module {
   position: relative;
@@ -23,6 +24,9 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    @include media-max(XS) {
+      padding: 17px;
+    }
     ul {
       display: flex;
 
@@ -42,5 +46,14 @@
     color: #1b1918;
     width: 80%;
     margin-top: 15px;
+    @include media-max(SM) {
+      font-size: 1.9rem;
+      line-height: 2.5rem;
+      width: 100%;
+      margin-top: 5px;
+    }
+    @include media-max(XX) {
+      font-size: 1.5rem;
+    }
   }
 }

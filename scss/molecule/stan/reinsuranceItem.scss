@@ -1,0 +1,35 @@
+.reinsuranceItem {
+  max-width: 270px;
+  text-align: center;
+  margin: 0 auto 40px;
+  &__iconContainer {
+    height: 80px;
+    width: 80px;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    border: 1px solid #efefef;
+    margin: 0 auto 22px;
+  }
+  &__assistance {
+    height: 80px;
+    width: 80px;
+  }
+
+  &__title {
+    margin-bottom: 13px;
+    color: #1b1918;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    span {
+      color: #49a0a2;
+    }
+  }
+  p {
+    color: #1b1918;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 20px;
+  }
+}

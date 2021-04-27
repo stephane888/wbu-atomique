@@ -3,9 +3,12 @@
   color: #fff;
   background-color: black;
   color: #fff;
-  padding: 7px 12px;
+  padding: 0.4rem 0.75rem;
   font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.75rem;
+  line-height: 0.8rem;
   background-color: #000;
+  &:hover {
+    color: #fff;
+  }
 }
