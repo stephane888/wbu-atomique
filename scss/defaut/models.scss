@@ -1,0 +1,51 @@
+// doc : https://thoughtbot.com/blog/controlling-color-with-sass-color-functions
+// import var bootstrap
+// lighten() and darken()
+@import "../bootstrap-4/scss/_functions.scss";
+@import "../bootstrap-4/scss/_variables_custom.scss";
+@import "../bootstrap-4/scss/_variables.scss";
+@import "../bootstrap-4/scss/_mixins.scss";
+
+// customBP
+@import "model/custom_bp.scss";
+
+//// ******************** Les variable  *************************************
+$text_color_title: rgb(33, 33, 33);
+$text_color_body: rgb(103, 103, 103);
+$fontFamily: 'Rubik',
+sans-serif;
+$fontFamilyTitre: 'Rubik',
+sans-serif;
+$fontFamilySousTitre: 'AntennaCond-ExtraLight',
+Oswald;
+//$color_link: $link-color;
+//$clr_link_hv: $link-hover-color;//color link on haover and active
+$color_titre_carousel:#FFF;
+$color_txt_special:rgb(255, 115, 2);
+$font-size:15px;
+$color_site:rgba(228, 25, 43, 1);
+$color_link:$color_site;
+//space
+$space_bottom: 50px;
+$space_top: 50px;
+//
+$width_read: 750px;
+$width_small_read: 550px;
+//background
+//$body_bg: $site_bg_gris_claire;
+/**
+ * color theme
+ */
+$color_info: rgba(255, 99, 71, 1);
+$color_breadcrumb: #e9ecef;
+$border-color:#ccc;
+
+
+/**
+ * include mixins
+ */ 
+@import "mixins/components.scss";
+@import "mixins/transform.scss";
+
+
+

@@ -1,0 +1,134 @@
+//// ******************** social
+@mixin socialmediaicons() {
+	.socialmediaicons {
+		padding     : 10px 0 12px;
+		margin-left : auto;
+		margin-right: auto;
+
+		a {
+			padding        : 12px;
+			cursor         : pointer;
+			min-width      : 39px;
+			text-align     : center;
+			text-decoration: none;
+			font-size      : 14px;
+			color          : #FFF !important;
+			margin-bottom  : 3px;
+			@include transition($propriete:all);
+		}
+
+		a > span {
+			display    : inline-block;
+			padding    : 0 8px;
+			border-left: 1px solid rgba(206, 212, 226, 0.49);
+			margin-left: 8px;
+		}
+
+		a:hover {
+			opacity: 0.7;
+		}
+
+		.fb-share {
+			background: #3B5998;
+		}
+
+		.fa-twitter {
+			background: #55ACEE;
+		}
+
+		.fa-google {
+			background: #dd4b39;
+		}
+
+		.fa-instagram {
+			background: #125688;
+		}
+
+		.fa-pinterest {
+			background: rgb(170, 7, 25);
+		}
+
+		.fa-linkedin {
+			background: #007bb5;
+		}
+
+		.fa-youtube {
+			background: #bb0000;
+		}
+
+		.fa-instagram {
+			background: #125688;
+		}
+
+		.fa-skype {
+			background: #00aff0;
+		}
+
+		.fa-android {
+			background: #a4c639;
+		}
+
+		.fa-dribbble {
+			background: #ea4c89;
+		}
+
+		.fa-vimeo {
+			background: #45bbff;
+		}
+
+		.fa-yahoo {
+			background: #430297;
+		}
+
+		.fa-rss {
+			background: #ff6600;
+		}
+
+		.fa-reddit {
+			background: #ff5700;
+		}
+
+		.fa-flickr {
+			background: #f40083;
+		}
+
+		.fa-tumblr {
+			background: #2c4762;
+		}
+
+		.fa-vine {
+			background: #00b489;
+		}
+
+		.fa-foursquare {
+			background: #45bbff;
+		}
+
+		.fa-stumbleupon {
+			background: #eb4924;
+		}
+
+		.fb-whatsapp {
+			background: #6ae776;
+		}
+
+		.show-more {
+			min-width    : 32px;
+			text-align   : center;
+			border       : 1px solid #d8d8d8;
+			border-radius: 2px;
+			cursor       : pointer;
+			color        : #aaa;
+			font-size    : 17px;
+			display      : inline-block;
+			line-height  : 100%;
+			padding      : 8px 5px;
+		}
+
+		.show-more:hover {
+			background  : #f54337;
+			color       : #FFF;
+			border-color: #FFF;
+		}
+	}
+}
