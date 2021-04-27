@@ -1,0 +1,14 @@
+//Contient les données par defaut pour un bon fonctionnement des grids bootstrap.
+// variable;
+@use "../../wbu-ressources.scss" as *;
+
+body {
+  font-family             : 'Open Sans';
+  color                   : #888;
+  font-size               : 14px;
+  font-weight             : 400;
+  -webkit-font-smoothing  : antialiased;
+  -webkit-text-size-adjust: 100%;
+  overflow-x              : hidden;
+  overflow-y              : scroll;
+}

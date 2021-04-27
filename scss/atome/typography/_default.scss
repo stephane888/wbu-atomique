@@ -1,8 +1,8 @@
 @use "../../wbu-ressources.scss" as *;
 
 body {
-  font-size     : $default-font-size;
+  font-size     : $wbu-default-font-size;
   letter-spacing: normal;
-  line-height   : $default-line-height;
-  color         : $color-text;
+  line-height   : $wbu-default-line-height;
+  color         : $wbu-color-text;
 }

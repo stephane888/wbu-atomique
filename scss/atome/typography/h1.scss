@@ -3,6 +3,6 @@
 @use "./title";
 
 h1 {
-  font-size    : $h1-font-size;
-  margin-bottom: 2rem;
+  font-size    : $wbu-h1-font-size;
+  margin-bottom: $wbu-h1-margin;
 }

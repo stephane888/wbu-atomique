@@ -2,8 +2,8 @@
 
 .hover-bg-secondary {
   &:hover {
-    background-color: $color-secondary;
-    border-color    : $color-secondary;
+    background-color: $wbu-color-secondary;
+    border-color    : $wbu-color-secondary;
     color           : #fff;
 
     * {

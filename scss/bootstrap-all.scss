@@ -1,0 +1,8 @@
+@use "variables" as vars;
+@import "./bootstrap_init.scss";
+/* bootstrap-flex */
+// @import 'bootstrap/scss/bootstrap';
+/* end bootstrap-flex */
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/navbar'; //@import 'bootstrap/scss/navbar';

@@ -2,7 +2,7 @@
 @use "../../wbu-ressources.scss" as *;
 
 .bg-primary {
-  background-color: $wbu-color-primary;
+  background-color: $color-primary;
 
   * {
     //adjust-hue($color-primary, -180deg)

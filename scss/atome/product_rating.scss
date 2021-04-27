@@ -1,5 +1,8 @@
+// variable;
+@use "../wbu-ressources.scss" as *;
+
 .product_rating {
-  margin-bottom: 1rem;
+  margin-bottom: $wbu-margin;
 
   ul {
     list-style: outside none none;
