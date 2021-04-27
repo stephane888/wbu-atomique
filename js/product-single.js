@@ -1,2 +1,2 @@
-import 'font-awesome/css/font-awesome.min.css'
-import "../scss/pages/product-single.scss";
+//import 'font-awesome/css/font-awesome.min.css'
+import "../scss/molecule/stan/projectHero-module__header.scss"
