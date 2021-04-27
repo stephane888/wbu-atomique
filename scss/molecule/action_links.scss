@@ -11,7 +11,7 @@
 
   .add-to-cart {
     i {
-      padding-right: acts.$default-line-height/2.8;
+      padding-right: acts.$wbu-default-line-height/2.8;
     }
   }
 
@@ -22,7 +22,7 @@
   }
 
   .btn {
-    margin-right: acts.$default-line-height/2;
+    margin-right: acts.$wbu-default-line-height/2;
 
     &.last-child {
       margin-right: 0;

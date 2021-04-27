@@ -2,8 +2,8 @@
 
 .hover-bg-primary {
   &:hover {
-    border-color    : $color-primary;
-    background-color: $color-primary;
+    border-color    : $wbu-color-primary;
+    background-color: $wbu-color-primary;
     color           : #fff;
 
     * {

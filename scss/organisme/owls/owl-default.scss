@@ -1,7 +1,7 @@
 // variable;
 @use "../../wbu-ressources.scss" as *;
-$owl-color-active: $color-primary !default;
-$owl-color-default: $border-color !default;
+$owl-color-active: $wbu-color-primary !default;
+$owl-color-default: $wbu-border-color !default;
 
 .owl-carousel {
   .owl-item img {

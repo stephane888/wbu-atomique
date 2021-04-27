@@ -1,18 +1,18 @@
 /**
  * color de base
  */
-$border-color            : #dee2e6 !default;
-$color-primary           : #ea000d !default;
-$color-secondary         : #0000ee !default;
-$color-thirdly           : #333 !default;
-$color-text              : #4c4c4c !default;
-$color-boder             : #dee2e6;
-$color-link              : $color-secondary !default;
-$color-link-hover        : $color-secondary !default;
+$wbu-border-color        : #dee2e6 !default;
+$wbu-color-primary       : #ea000d !default;
+$wbu-color-secondary     : #0000ee !default;
+$wbu-color-thirdly       : #333 !default;
+$wbu-color-text          : #4c4c4c !default;
+$wbu-color-boder         : #dee2e6;
+$wbu-color-link          : $wbu-color-secondary !default;
+$wbu-color-link-hover    : $wbu-color-secondary !default;
 /**/
 $wbu-btn-border-round    : 50% !default;
 $wbu-btn-round-dimension : 1.52rem !default;
-$btn-border-color        : $border-color !default;
+$btn-border-color        : $wbu-border-color !default;
 /**/
 //$btn-radius
 $wbu-btn-border-radius   : 30px !default;
@@ -20,19 +20,19 @@ $wbu-btn-radius-padding  : 0.3rem 1.5rem !default;
 /**
  * Typography
  */
-$default-line-height     : 1.5rem !default;
-$default-font-size       : 1rem !default;
-$p-font-size             : inherit !default;
+$wbu-default-line-height : 1.5rem !default;
+$wbu-default-font-size   : 1rem !default;
+$wbu-p-font-size         : inherit !default;
 /**
  * typography
  */
-$title-color             : inherit !default;
-$title-font-family       : inherit !default;
-$title-line-height       : 1.7rem !default;
-$title-font-weight       : 600 !default;
-$h1-font-size            : 2.3rem !default;
-$h2-font-size            : 2rem !default;
-$h3-font-size            : 1.8rem !default;
+$wbu-title-color         : inherit !default;
+$wbu-title-font-family   : inherit !default;
+$wbu-title-line-height   : 1.7rem !default;
+$wbu-title-font-weight   : 600 !default; //
+$wbu-h1-font-size        : 5.3rem !default;
+$wbu-h2-font-size        : 2rem !default;
+$wbu-h3-font-size        : 1.8rem !default;
 /* */
 // space.
 $wbu-margin              : 1.25rem !default;

@@ -5,6 +5,7 @@
 @use "../../../atome/typography/h3";
 @use "../../../atome/typography/p";
 @use "../../../atome/typography/a";
+@use "../../../atome/typography/fieldset.scss";
 @use "../../../atome/product_rating.scss";
 @use "../../../molecule/product_nav.scss";
 @use "../../../molecule/price_box.scss";
@@ -15,9 +16,32 @@
 
 .small_description {
   margin-bottom: vars.$wbu-margin;
-  border-bottom: 1px solid vars.$color-boder;
+  border-bottom: 1px solid vars.$wbu-color-boder;
 }
 
 .container-qty {
   max-width: 202px;
+}
+/**
+ * design for bootstrap
+ */
+.product_variant_color {
+  // cache label
+  .field--label-hidden.field--name-name {
+    //display: none;
+  }
+
+  input:checked {
+    ~ label {
+      border: 0;
+
+      .btn-carre {
+        border-color: vars.$wbu-color-primary;
+      }
+    }
+  }
+
+  .form-check {
+    padding: 0;
+  }
 }
