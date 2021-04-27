@@ -1,0 +1,14 @@
+/**
+ * Boostrap load functions and mixins.
+ * Ce chemin est valide pour le loader uniqueùent.
+ */
+@import "_variables_custom.scss";
+@import "../node_modules/bootstrap/scss/_functions.scss";
+@import "../node_modules/bootstrap/scss/_variables.scss";
+@import "../node_modules/bootstrap/scss/_mixins.scss";
+/**
+ * include mixins
+ */
+@import "model/custom_bp.scss";
+@import "mixins/components.scss";
+@import "mixins/transform.scss";
