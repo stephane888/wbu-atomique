@@ -1,0 +1,126 @@
+// variable pour les PB
+$XX_fin :440px;
+
+$XS_debut :441px;
+$XS_fin: 575px;
+
+$SM_debut: 576px;
+$SM_fin: 768px;
+
+$MD_debut: 769px;
+$MD_fin: 991px;
+
+$DD_debut: 992px;
+$DD_fin: 1024px;
+
+$MS_debut: 1025px;
+$MS_fin: 1200px;
+
+$M_debut: 1201px;
+$M_fin: 1450px;
+
+$LM_debut: 1451px;
+$LM_fin: 1600px;
+
+$L_debut: 1601px;
+$L_fin: 1920px;
+
+$XL_debut: 1921px;
+//$XL_fin: 2500px;
+
+// variaibles BreakPoints
+$var: false !default; // Can be overridden elsewhere
+
+@if $var == true {
+  //div p{font-size:40px;}
+} @else if $var == false {  
+  //div p{font-size:80px;}
+}@else {  
+  //div p{font-size:80px;}
+}
+
+@mixin media-min($_key: false) {
+  @if $_key == 'XS' {
+    @media only screen and (min-width:$XS_debut) {
+        @content;
+    }
+  }
+  @else if $_key == 'SM' {
+    @media only screen and (min-width:$SM_debut) {
+        @content;
+    }
+  }
+  @else if $_key == 'MD' {
+    @media only screen and (min-width:$MD_debut) {
+        @content;
+    }
+  }
+  @else if $_key == 'DD' {
+    @media only screen and (min-width:$DD_debut) {
+        @content;
+    }
+  }
+  @else if $_key == 'MS' {
+    @media only screen and (min-width:$MS_debut) {
+        @content;
+    }
+  }
+  @else if $_key == 'M' {
+    @media only screen and (min-width:$M_debut) {
+        @content;
+    }
+  }
+  @else if $_key == 'LM' {
+    @media only screen and (min-width:$LM_debut) {
+        @content;
+    }
+  }
+  @else if $_key == 'L' {
+    @media only screen and (min-width:$L_debut) {
+        @content;
+    }
+  }
+  @else if $_key == 'XL' {
+    @media only screen and (min-width:$XL_debut) {
+        @content;
+    }
+  }
+}
+
+@mixin media-max($_key) {
+  @if $_key == 'XX' {
+    @media only screen and (max-width:$XX_fin){
+        @content;
+    }
+  } 
+  @else if $_key == 'SM' {
+    @media only screen and (max-width:$SM_fin) {
+        @content;
+    }
+  } 
+  @else if $_key == 'XS' {
+    @media only screen and (max-width:$XS_fin) {
+        @content;
+    }
+  }
+  @else if $_key == 'MD' {
+    @media only screen and (max-width:$MD_fin) {
+        @content;
+    }
+  }
+  @else if $_key == 'DD' {
+    @media only screen and (max-width:$DD_fin) {
+        @content;
+    }
+  }
+  @else if $_key == 'MS' {
+    @media only screen and (max-width:$MS_fin) {
+        @content;
+    }
+  }
+}
+
+@mixin media-between($_min, $_max) {
+  
+} 
+

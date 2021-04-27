@@ -1,0 +1,29 @@
+// Pour definir l'image dans un container responssive.
+// elle s'applique sur le conteneur del'image.
+@mixin imageContainer($height:30em, $padding:1.5em) {
+	height         : $height * 0.5;
+	position       : relative;
+	padding        : $padding * 0.5;
+	overflow       : hidden;
+	text-align     : center;
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+	@include media-min('MD') {
+		height : $height * 0.7;
+		padding: $padding * 0.7;
+	}
+	@include media-min('MS') {
+		height : $height;
+		padding: $padding;
+	}
+
+	img {
+		max-height: calc(100% - #{2*$padding});
+		max-width : calc(100% - #{2*$padding});
+		position  : absolute;
+		transform : translateX(-50%) translateY(-50%);
+		width     : auto !important;
+		height    : auto !important;
+	}
+}
