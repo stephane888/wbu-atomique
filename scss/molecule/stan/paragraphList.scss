@@ -1,0 +1,42 @@
+@use '../../defaut/model/custom_bp.scss' as *;
+.paragraphList {
+  margin-top: 10px;
+  text-align: center;
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin-top: 5px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      .list_icon {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        background-color: ghostwhite;
+        align-items: center;
+        border-radius: 20px;
+        padding: 5px;
+        color: teal;
+        margin-right: 15px;
+        @include media-max(XX) {
+          width: 18px;
+          height: 18px;
+          font-size: 11px;
+        }
+      }
+      p {
+        text-align: left;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: #1b1918;
+        span {
+          color: #49a0a2;
+        }
+      }
+    }
+  }
+}

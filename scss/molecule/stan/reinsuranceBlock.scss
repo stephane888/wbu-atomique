@@ -1,4 +1,5 @@
 //@use "../../atome/bouton/btn-radius.scss";
+@use '../../defaut/model/custom_bp.scss' as *;
 .reinsuranceBlock {
   max-width: 970px;
   width: 100%;
@@ -24,7 +25,7 @@
   }
   &__container {
     width: calc(100% + 16px);
-    margin: -8px;
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -34,8 +35,15 @@
     background: #49a0a2;
     color: #fff;
     border-radius: 0;
-    padding: 16px 65px;
+    padding: 20px 65px;
     font-size: 1.4rem;
+    @include media-max(XX) {
+      padding: 16px 20px;
+      font-size: 1rem;
+      display: flex;
+      line-height: 1;
+      align-items: center;
+    }
     i {
       padding-right: 5px;
     }
@@ -45,12 +53,8 @@
   }
   &__bouton {
     margin: 30px 0;
-    height: 100%;
-    white-space: nowrap;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 2px;
+
     justify-content: center;
     cursor: pointer;
   }
