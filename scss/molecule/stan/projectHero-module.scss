@@ -1,5 +1,5 @@
 @use '../../defaut/model/custom_bp.scss' as *;
-@use "../../atome/stan/btn-radius.scss";
+//@use "../../atome/bouton/btn-radius.scss";
 .projectHero-module {
   position: relative;
   -webkit-flex-basis: 100%;
@@ -20,7 +20,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    padding: 57px;
+    padding: 3.5em;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -47,13 +47,13 @@
     width: 80%;
     margin-top: 15px;
     @include media-max(SM) {
-      font-size: 1.9rem;
+      font-size: 1.9em;
       line-height: 2.5rem;
       width: 100%;
       margin-top: 5px;
     }
     @include media-max(XX) {
-      font-size: 1.5rem;
+      font-size: 1.5em;
     }
   }
 }

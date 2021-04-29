@@ -23,10 +23,6 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      button {
-        margin-right: 5px;
-        margin-bottom: 5px;
-      }
     }
     &:hover {
       background: hsla(0, 0%, 100%, 0.5);
@@ -39,7 +35,7 @@
         background-color: #000;
         color: #fff;
         font-weight: 700;
-        font-size: 0.75rem;
+        font-size: 0.75em;
         line-height: 0.8rem;
         display: flex;
         justify-content: center;
@@ -54,7 +50,7 @@
     font-size: 1.5em;
     line-height: 28px;
     color: #1b1918;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0.625em;
+    margin-right: 0.625em;
   }
 }
