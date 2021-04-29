@@ -11,7 +11,7 @@
     "serve": "webpack serve --mode='production' --open"
   },
   "author": "gugledas",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
