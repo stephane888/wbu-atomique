@@ -4,10 +4,11 @@
   "description": "Ce module  a été créer pour stocker nos différents composants en suivant le principe de l'atomique design",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\"",
     "dev": "webpack --watch --mode='development' --progress",
     "build": "NODE_ENV=production webpack --watch --progress",
     "copy": "NODE_ENV=production node scripts/build.js  --watch",
+    "publish": "npm publish --access public",
     "serve": "webpack serve --mode='production' --open"
   },
   "author": "gugledas",

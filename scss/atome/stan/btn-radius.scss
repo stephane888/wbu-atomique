@@ -1,0 +1,14 @@
+@use "../bouton/btn-radius.scss";
+.btn-radius {
+  color: #fff;
+  background-color: black;
+  color: #fff;
+  padding: 0.4rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 0.8rem;
+  background-color: #000;
+  &:hover {
+    color: #fff;
+  }
+}

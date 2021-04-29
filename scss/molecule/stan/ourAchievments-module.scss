@@ -1,0 +1,60 @@
+@use "../../atome/stan/btn-radius.scss";
+.ourAchievments-module {
+  margin-top: 50px;
+
+  &__image {
+    margin-top: 50px;
+    background-position: 50%;
+    background-size: cover;
+    margin: 0 5px 18px;
+  }
+  &__container {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    transition: ease-in-out 0.2s;
+    .showProject {
+      visibility: hidden;
+    }
+    ul {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      button {
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+    }
+    &:hover {
+      background: hsla(0, 0%, 100%, 0.5);
+      .showProject {
+        position: absolute;
+        width: 180px;
+        height: 44px;
+        top: calc(50% - 22px);
+        left: calc(50% - 90px);
+        background-color: #000;
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.75rem;
+        line-height: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 28px;
+    color: #1b1918;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
