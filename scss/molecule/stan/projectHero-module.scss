@@ -1,5 +1,5 @@
 @use '../../defaut/model/custom_bp.scss' as *;
-//@use "../../atome/bouton/btn-radius.scss";
+@use "../../atome/stan/btn-radius.scss";
 .projectHero-module {
   position: relative;
   -webkit-flex-basis: 100%;
