@@ -1,0 +1,26 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "../../../molecule/stan/billetDeBlogTeaser";
+@use "../../../molecule/stan/paragraphList";
+@use "../../../molecule/stan/serviceBlock-module";
+@use "../../../molecule/stan/pushNewsletter";
+@use "../../../molecule/steph/group-button-light";
+@use "../../../molecule/steph/header-blog";
+
+.home-blog {
+  margin-bottom: $wbu-margin*2.5;
+}
+
+.serviceBlock-module {
+  &__serviceMessage {
+    margin : $wbu-margin $wbu-margin/1.25 $wbu-margin*1.5;
+    padding: $wbu-margin*2.5 $wbu-margin 0;
+  }
+
+  .paragraphList {
+    margin-bottom: $wbu-margin*3;
+  }
+}
+
+.group-button-light {
+  margin-bottom: $wbu-margin*2.5;
+}

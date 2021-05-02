@@ -1,62 +1,68 @@
-@use '../../defaut/model/custom_bp.scss' as *;
+@use "../../wbu-ressources.scss" as *;
+
 .serviceBlock-module {
-  flex-basis: calc(50% - 15px);
-  margin-top: 50px;
-  margin-bottom: 20px;
+  flex-basis   : calc(50% - 15px);
+  margin-bottom: $wbu-margin*2.5;
+
   &__container {
-    background: linear-gradient(36.64deg, #007891 14.08%, #49a0a2);
-    display: flex;
+    background     : linear-gradient(36.64deg, #007891 14.08%, #49a0a2);
+    display        : flex;
     justify-content: center;
-    align-items: center;
+    align-items    : center;
   }
+
   &__serviceMessage {
     background-color: #fff;
-    margin: 40px 50px 60px;
-    padding: 20px 20px 60px;
-    position: relative;
-    text-align: center;
-    color: #1b1918;
+    margin          : $wbu-margin*2 $wbu-margin*2.5 $wbu-margin*3;
+    padding         : $wbu-margin $wbu-margin $wbu-margin*3;
+    position        : relative;
+    text-align      : center;
+    color           : #1b1918;
     @include media-max(MD) {
-      margin: 40px 30px 60px;
+      margin: $wbu-margin*2 $wbu-margin*1.5 $wbu-margin*3;
     }
   }
+
   &__serviceTitle {
     font-weight: 700;
-    font-size: 24px;
+    font-size  : 24px;
     line-height: 28px;
   }
+
   &__serviceDescription {
     font-weight: 400;
-    font-size: 16px;
+    font-size  : 16px;
     line-height: 18px;
-    margin-top: 22px;
+    margin-top : 22px;
   }
+
   a {
-    display: flex;
+    display        : flex;
     text-decoration: none;
-    flex-direction: row;
-    align-items: center;
+    flex-direction : row;
+    align-items    : center;
     justify-content: center;
-    color: #fff;
-    background: #1b1918;
-    border-radius: 2px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 24px;
-    padding: 10px 20px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 35%);
+    color          : #fff;
+    background     : #1b1918;
+    border-radius  : 2px;
+    font-style     : normal;
+    font-weight    : 700;
+    font-size      : 12px;
+    line-height    : 24px;
+    padding        : 10px 20px;
+    position       : absolute;
+    bottom         : 0;
+    left           : 50%;
+    transform      : translate(-50%, 35%);
+
     i {
-      font-size: 0.8rem;
+      font-size  : 0.8rem;
       font-weight: 200;
       margin-left: 10px;
     }
     @include media-max(MD) {
       margin-top: 10px;
-      position: relative;
+      position  : relative;
     }
   }
 }

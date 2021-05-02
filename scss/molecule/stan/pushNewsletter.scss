@@ -1,83 +1,93 @@
 .pushNewsletter {
-  background: linear-gradient(57.9deg, #007891 14.08%, #49a0a2);
-  display: flex;
+  background    : linear-gradient(57.9deg, #007891 14.08%, #49a0a2);
+  display       : flex;
   flex-direction: column;
-  align-items: center;
-  font-style: normal;
-  user-select: none;
-  text-align: center;
-  box-sizing: border-box;
-  width: 325px;
-  height: 422px;
+  align-items   : center;
+  font-style    : normal;
+  user-select   : none;
+  text-align    : center;
+  box-sizing    : border-box;
+  height        : 422px;
+
   &__title {
-    margin-top: 40px;
+    margin-top  : 40px;
     margin-right: 57px;
-    margin-left: 57px;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 32px;
-    color: #fff;
+    margin-left : 57px;
+    font-weight : 700;
+    font-size   : 25px;
+    line-height : 32px;
+    color       : #fff;
   }
+
   &__description {
-    margin: 20px 37px 0;
+    margin     : 20px 37px 0;
     font-weight: 400;
-    font-size: 14px;
+    font-size  : 14px;
     line-height: 18px;
-    color: #fff;
+    color      : #fff;
   }
+
   &__form {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
+    display       : flex;
+    width         : 100%;
+    box-sizing    : border-box;
     flex-direction: column;
-    padding: 25px 50px 0;
+    padding       : 25px 50px 0;
+
     .FormControl {
       display: inline-flex;
+
       .FormLabel {
-        position: absolute;
-        color: #979797;
-        z-index: 1;
+        position : absolute;
+        color    : #979797;
+        z-index  : 1;
         transform: translate(12px, 15px) scale(1);
       }
+
       .InputBase {
-        color: #1b1918;
-        height: 48px;
+        color        : #1b1918;
+        height       : 48px;
         border-radius: 2px;
-        overflow: hidden;
+        overflow     : hidden;
+
         .input {
           padding: 27px 12px 10px;
-          font: inherit;
-          border: 0;
+          font   : inherit;
+          border : 0;
         }
       }
     }
   }
+
   &__button {
-    margin-top: 30px;
-    height: 48px;
+    margin-top      : 30px;
+    height          : 48px;
     background-color: #a4d0d1;
-    border-radius: 2px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: ease-in-out 0.1s;
+    border-radius   : 2px;
+    color           : #fff;
+    font-weight     : 700;
+    font-size       : 14px;
+    line-height     : 18px;
+    display         : flex;
+    flex-direction  : row;
+    align-items     : center;
+    justify-content : center;
+    cursor          : pointer;
+    transition      : ease-in-out 0.1s;
+
     &:hover {
       background-color: #49a0a2;
     }
   }
+
   &__privacy {
     font-weight: 400;
-    font-size: 11px;
+    font-size  : 11px;
     line-height: 13px;
-    color: #fff;
-    margin-top: 14px;
-    padding: 0 50px;
+    color      : #fff;
+    margin-top : 14px;
+    padding    : 0 50px;
+
     a {
       color: #fff;
     }

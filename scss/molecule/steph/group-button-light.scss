@@ -1,0 +1,21 @@
+@use "../../wbu-ressources.scss" as *;
+@use "../../atome/stan/seeMore";
+
+.group-button-light {
+  .seeMore {
+    margin   : 0 0 $wbu-margin/2;
+    border   : 1px solid darken($wbu-border-color, 20);
+    font-size: $wbu-default-font-size*1.2;
+    padding  : 0;
+
+    a {
+      color  : inherit;
+      display: block;
+      padding: $wbu-margin/1.5 $wbu-margin;
+
+      &:hover {
+        background: rgba(27,25,24,.2);
+      }
+    }
+  }
+}

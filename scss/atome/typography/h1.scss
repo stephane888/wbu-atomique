@@ -5,4 +5,8 @@
 h1 {
   font-size    : $wbu-h1-font-size;
   margin-bottom: $wbu-h1-margin;
+  line-height  : $wbu-h1-line-height;
+  @include media-min('DD') {
+    font-size: $wbu-h1-font-size *1.24;
+  }
 }

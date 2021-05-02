@@ -1,33 +1,59 @@
+@use "../../wbu-ressources.scss" as *;
+@use "../../atome/stephane/cover-link.scss";
+
 .billetDeBlogTeaser {
-  display: block;
-  position: relative;
-  height: 328px;
-  background-size: cover;
+  display            : block;
+  position           : relative;
+  height             : 328px;
+  background-size    : cover;
   background-position: top;
+  margin-bottom      : $wbu-margin *1.5;
+
   .background {
-    position: absolute;
-    bottom: 0;
-    height: 153px;
-    width: 100%;
+    position  : absolute;
+    bottom    : 0;
+    left      : 0;
+    height    : auto;
+    width     : 100%;
     background: linear-gradient(180deg, rgba(27, 25, 24, 0), #1b1918);
   }
+
   &__text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: 0 20px;
+
     .date {
-      font-size: 14px;
-      line-height: 18px;
-      color: #fff;
+      font-size    : 14px;
+      line-height  : 18px;
+      color        : #fff;
       margin-bottom: 10px;
     }
+
     .title {
-      font-size: 24px;
-      line-height: 24px;
-      color: #fff;
+      font-size    : 24px;
+      line-height  : 26px;
+      color        : #fff;
       margin-bottom: 22px;
+      font-weight  : 400;
+    }
+  }
+
+  &.a-la-une {
+    margin-bottom: $wbu-margin *2.5;
+    height       : 450px;
+
+    .billetDeBlogTeaser__text {
+      line-height: 2.2;
+
+      .a-la-une {
+        color    : #fff;
+        font-size: 22px;
+      }
+
+      .title {
+        font-size  : 34px;
+        line-height: 40px;
+        font-weight: 500;
+      }
     }
   }
 }
