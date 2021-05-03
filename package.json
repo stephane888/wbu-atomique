@@ -1,6 +1,6 @@
 {
   "name": "wbu-atomique",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Ce module  a été créer pour stocker nos différents composants en suivant le principe de l'atomique design",
   "main": "src/index.js",
   "scripts": {

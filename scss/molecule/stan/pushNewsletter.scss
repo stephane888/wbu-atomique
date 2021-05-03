@@ -1,3 +1,5 @@
+@use '../../variables' as *;
+
 .pushNewsletter {
   background: linear-gradient(57.9deg, #007891 14.08%, #49a0a2);
   display: flex;
@@ -14,14 +16,14 @@
     margin-right: 57px;
     margin-left: 57px;
     font-weight: 700;
-    font-size: 25px;
+    font-size: $wbu-default-font-size * 1.56;
     line-height: 32px;
     color: #fff;
   }
   &__description {
     margin: 20px 37px 0;
     font-weight: 400;
-    font-size: 14px;
+    font-size: $wbu-default-font-size * 0.87;
     line-height: 18px;
     color: #fff;
   }
@@ -59,7 +61,7 @@
     border-radius: 2px;
     color: #fff;
     font-weight: 700;
-    font-size: 14px;
+    font-size: $wbu-default-font-size * 0.87;
     line-height: 18px;
     display: flex;
     flex-direction: row;
