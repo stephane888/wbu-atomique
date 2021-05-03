@@ -1,0 +1,78 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "../../../bootstrap-grid.scss";
+@use "../../../molecule/stan/billetDeBlogTeaser";
+$wbu-single-blog-width-body: 770px;
+
+.single-blog {
+  margin-left : -$grid-gutter-width/2;
+  margin-right: -$grid-gutter-width/2;
+
+  .billetDeBlogTeaser {
+    margin-bottom: $wbu-margin*4.8;
+    height       : 375px;
+    @include media-min('DD') {
+      height: 530px;
+    }
+
+    .background {
+      padding-top: $wbu-margin*1.25;
+    }
+
+    &__text {
+      text-align  : center;
+      max-width   : $wbu-single-blog-width-body;
+      margin-left : auto;
+      margin-right: auto;
+
+      .title {
+        font-size    : $wbu-default-font-size*3;
+        font-weight  : 700;
+        margin-bottom: $wbu-margin*1.25;
+        line-height  : 1.2;
+      }
+
+      .infos {
+        font-size    : $wbu-default-font-size*1.2;
+        font-weight  : 600;
+        margin-bottom: $wbu-margin*1.25;
+
+        .date {
+          margin      : 0;
+          font-size   : inherit;
+          margin-right: $wbu-margin;
+        }
+
+        * {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &--description {
+    max-width   : $wbu-single-blog-width-body;
+    margin-left : auto;
+    margin-right: auto;
+    font-size   : $wbu-default-font-size*1.2;
+    @include media-min('DD') {
+      img {
+        margin-left : -$grid-gutter-width*2;
+        margin-right: -$grid-gutter-width*2;
+        max-width   : calc(100% + #{$grid-gutter-width*4});
+      }
+    }
+
+    h2 {
+      padding-top: $wbu-margin;
+      position   : relative;
+
+      &::before {
+        content      : "";
+        display      : block;
+        border-top   : 1px solid $wbu-border-color;
+        margin-bottom: $wbu-margin*2;
+        margin-top   : $wbu-margin*3.2;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @use "../../../wbu-ressources.scss" as *;
+@use "../../../bootstrap-grid.scss";
 @use "../../../molecule/stan/billetDeBlogTeaser";
 @use "../../../molecule/stan/paragraphList";
 @use "../../../molecule/stan/serviceBlock-module";
@@ -8,6 +9,19 @@
 
 .home-blog {
   margin-bottom: $wbu-margin*2.5;
+}
+
+.lesroisdelareno-entete-project {
+  padding-bottom: 8rem;
+  margin-bottom : $wbu-margin*3;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+  }
 }
 
 .serviceBlock-module {
