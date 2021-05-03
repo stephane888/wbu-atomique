@@ -1,6 +1,6 @@
 {
   "name": "wbu-atomique",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Ce module  a été créer pour stocker nos différents composants en suivant le principe de l'atomique design",
   "main": "src/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "serve": "webpack serve --mode='production' --open"
   },
   "author": "gugledas",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
