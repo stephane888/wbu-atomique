@@ -1,36 +1,43 @@
+//@use "../../wbu-ressources.scss" as *;
+@use '../../variables' as *;
 @use '../../defaut/model/custom_bp.scss' as *;
+@use "../../atome/typography/default";
 .serviceBlock-module {
   flex-basis: calc(50% - 15px);
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin: $wbu-margin * 2.5 auto;
+  width: 100%;
   &__container {
     background: linear-gradient(36.64deg, #007891 14.08%, #49a0a2);
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   &__serviceMessage {
     background-color: #fff;
-    margin: 40px 50px 60px;
-    padding: 20px 20px 60px;
+    margin: $wbu-margin * 2 $wbu-margin * 2.5 $wbu-margin * 3;
+    padding: $wbu-margin $wbu-margin $wbu-margin * 3;
     position: relative;
     text-align: center;
     color: #1b1918;
     @include media-max(MD) {
-      margin: 40px 30px 60px;
+      margin: $wbu-margin * 2 $wbu-margin * 1.5 $wbu-margin * 3;
     }
   }
+
   &__serviceTitle {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: $wbu-h2-font-size * 1.4;
+    line-height: $wbu-default-line-height * 0.85;
   }
+
   &__serviceDescription {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: $wbu-h2-font-size * 0.85;
+    line-height: $wbu-default-line-height;
     margin-top: 22px;
   }
+
   a {
     display: flex;
     text-decoration: none;
@@ -42,15 +49,16 @@
     border-radius: 2px;
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
+    font-size: $wbu-default-font-size * 1.1;
     line-height: 24px;
     padding: 10px 20px;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 35%);
+
     i {
-      font-size: 0.8rem;
+      font-size: $wbu-default-font-size;
       font-weight: 200;
       margin-left: 10px;
     }

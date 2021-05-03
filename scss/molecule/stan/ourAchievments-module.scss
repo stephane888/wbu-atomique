@@ -1,7 +1,10 @@
+//@use "../../wbu-ressources.scss" as *;
+@use '../../variables' as *;
 @use "../../atome/stan/btn-radius.scss";
+@use "../../atome/typography/default";
 .ourAchievments-module {
-  margin-top: 50px;
-
+  margin: $wbu-margin * 2.5 auto;
+  width: 100%;
   &__image {
     margin-top: 50px;
     background-position: 50%;
@@ -23,7 +26,11 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      button {
+        font-size: $wbu-default-font-size * 0.85;
+      }
     }
+
     &:hover {
       background: hsla(0, 0%, 100%, 0.5);
       .showProject {
@@ -35,7 +42,7 @@
         background-color: #000;
         color: #fff;
         font-weight: 700;
-        font-size: 0.75em;
+        font-size: $wbu-default-font-size * 0.9;
         line-height: 0.8rem;
         display: flex;
         justify-content: center;
@@ -47,10 +54,10 @@
   }
   &__title {
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: $wbu-default-font-size * 1.8;
     line-height: 28px;
     color: #1b1918;
-    margin-left: 0.625em;
-    margin-right: 0.625em;
+    margin-left: $wbu-margin * 0.5;
+    margin-right: $wbu-margin * 0.5;
   }
 }

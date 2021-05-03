@@ -20,24 +20,25 @@ $wbu-btn-radius-padding: 0.3em 1.5em !default;
 /**
  * Typography
  */
-$wbu-default-line-height: 1.5em !default;
-$wbu-default-font-size: 1em !default;
-$wbu-p-font-size: inherit !default;
+$wbu-default-line-height : 1.3 !default;
+$wbu-default-font-size   : 1.4rem !default;
+$wbu-p-font-size         : inherit !default;
 /**
  * typography
  */
-$wbu-title-color: inherit !default;
-$wbu-title-font-family: inherit !default;
-$wbu-title-line-height: 1.7em !default;
-$wbu-title-font-weight: 600 !default; //
-$wbu-h1-font-size: 5.3em !default;
-$wbu-h2-font-size: 2em !default;
-$wbu-h3-font-size: 1.8em !default;
+$wbu-title-color         : inherit !default;
+$wbu-title-font-family   : inherit !default;
+$wbu-title-line-height   : 1.7rem !default;
+$wbu-title-font-weight   : 600 !default; //
+$wbu-h1-font-size        : 3.4rem !default;
+$wbu-h1-line-height      : 4.2rem !default;
+$wbu-h2-font-size        : 2rem !default;
+$wbu-h3-font-size        : 1.8rem !default;
 /* */
 // space.
-$wbu-margin: 1.25em !default;
-$wbu-h1-margin: $wbu-margin * 1.6 !default;
+$wbu-margin              : 2rem !default;
+$wbu-h1-margin           : $wbu-margin /1.33 !default;
 /*permet de surcharger les variables bootstrap */
 // bootstrap variables
-$input-font-size: inherit !default;
+$input-font-size         : inherit !default;
 $form-group-margin-bottom: $wbu-margin; // Buttons + Forms
