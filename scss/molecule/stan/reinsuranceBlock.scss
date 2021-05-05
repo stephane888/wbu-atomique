@@ -1,5 +1,6 @@
 //@use "../../atome/bouton/btn-radius.scss";
 @use '../../defaut/model/custom_bp.scss' as *;
+@use './reinsuranceItem.scss';
 .reinsuranceBlock {
   max-width: 970px;
   width: 100%;

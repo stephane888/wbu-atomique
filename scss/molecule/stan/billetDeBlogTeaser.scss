@@ -36,4 +36,42 @@
       font-weight: 400;
     }
   }
+  &.a-la-une {
+    margin-bottom: $wbu-margin * 2.5;
+    height: 450px;
+
+    .billetDeBlogTeaser__text {
+      line-height: 2.2;
+
+      .a-la-une {
+        color: #fff;
+        font-size: 22px;
+      }
+
+      .title {
+        font-size: 34px;
+        line-height: 40px;
+        font-weight: 500;
+      }
+    }
+  }
+  &.a-la-une {
+    margin-bottom: $wbu-margin * 2.5;
+    height: 450px;
+
+    .billetDeBlogTeaser__text {
+      line-height: 2.2;
+
+      .a-la-une {
+        color: #fff;
+        font-size: 22px;
+      }
+
+      .title {
+        font-size: 34px;
+        line-height: 40px;
+        font-weight: 500;
+      }
+    }
+  }
 }

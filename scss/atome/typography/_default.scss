@@ -2,13 +2,14 @@
 
 body,
 html {
-  font-size     : $wbu-default-font-size;
+  font-size: $wbu-default-font-size;
   letter-spacing: normal;
-  line-height   : $wbu-default-line-height;
-  color         : $wbu-color-text;
+  line-height: $wbu-default-line-height;
+  color: $wbu-color-text;
+  margin: 0;
 }
 
 html {
-  font-size  : 62.5%;
+  font-size: 62.5%;
   line-height: 1.5;
 }
