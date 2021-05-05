@@ -1,4 +1,4 @@
-//boutton round parametre
+@use "../variables" as *; //boutton round parametre
 @mixin wbu--btn-round($wbu-btn-round-dimension:$wbu-btn-round-dimension,$wbu-btn-border-round:$wbu-btn-border-round,$btn-border-color:$btn-border-color) {
   .btn-round {
     border-radius: $wbu-btn-border-round;
