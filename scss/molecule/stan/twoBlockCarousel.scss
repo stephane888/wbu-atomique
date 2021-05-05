@@ -1,0 +1,152 @@
+@use '../../defaut/model/custom_bp.scss' as *;
+@use '../../variables' as *;
+@use "../../atome/typography/default";
+.stanCaroussel {
+  width: 100%;
+  padding-top: 6rem;
+
+  .close {
+    font-size: $wbu-default-font-size * 1.4;
+    font-weight: 100;
+    position: absolute;
+    right: 53px;
+    top: 49px;
+    cursor: pointer;
+  }
+  .twoBlockCarousel {
+    display: flex;
+    margin: auto;
+    padding: 0 4rem;
+    justify-content: space-around;
+    height: 100%;
+    margin: auto;
+    max-height: 70vh;
+    align-items: flex-start;
+    @include media-max(SM) {
+      max-height: 80vh;
+      padding: 0;
+    }
+    .slick-dots li.slick-active button:before {
+      color: $wbu-color-teal;
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: 12px;
+      li {
+        button {
+          &:before {
+            font-size: $wbu-default-font-size * 0.9;
+            color: #fff;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+
+    .bigImage {
+      width: 60%;
+      @include media-min(M) {
+        width: 65%;
+      }
+      @include media-max(SM) {
+        width: 100%;
+      }
+      .rer {
+        //background-color: rgba(245, 58, 192, 0.508);
+        padding: 2px;
+      }
+      .slick-disabled {
+        display: none;
+        opacity: 0;
+        top: -200px;
+      }
+    }
+    .secondBlock_number {
+      font-size: $wbu-default-font-size * 1.2;
+      font-weight: 700;
+      margin-top: 50px;
+    }
+    .secondBlock {
+      width: 30%;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      @include media-min(M) {
+        width: 27%;
+      }
+      @include media-max(SM) {
+        display: none;
+      }
+
+      .smallCarousel {
+        width: 100%;
+        .slick-current {
+          img {
+            border: 2px solid $wbu-color-teal;
+            border-radius: 2px;
+          }
+        }
+        img {
+          max-width: 70px;
+          width: 100%;
+          height: 60px;
+          @include media-max(MD) {
+            max-width: 50px;
+            height: 50px;
+          }
+        }
+      }
+      .smallCarousell {
+        width: 110%;
+        text-align: left;
+        p {
+          font-weight: 700;
+          max-width: 400px;
+          font-size: $wbu-default-font-size * 1.1;
+          line-height: $wbu-default-line-height;
+          width: 100%;
+          height: 60px;
+          @include media-max(MD) {
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+  .title {
+    font-weight: 700;
+    font-size: $wbu-default-font-size * 2;
+    color: #1b1918;
+    margin: 5px 4rem;
+    @include media-max(SM) {
+      font-size: $wbu-default-font-size * 1.5;
+      margin: 5px 1rem;
+    }
+  }
+
+  .stan-prev,
+  .stan-next {
+    opacity: 0.75;
+    border-left: 4px solid;
+    border-top: 4px solid;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    color: black;
+    display: block;
+    font-size: 0;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .stan-next {
+    right: -25px;
+    transform: rotate(140deg);
+  }
+  .stan-prev {
+    transform: rotate(-45deg);
+    left: -25px;
+  }
+}

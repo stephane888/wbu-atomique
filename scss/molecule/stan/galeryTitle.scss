@@ -1,0 +1,57 @@
+@use '../../defaut/model/custom_bp.scss' as *;
+@use '../../variables' as *;
+@use "../../atome/typography/default";
+
+.galeryTitle {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin: 1rem auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    h1 {
+      font-size: $wbu-default-font-size * 3.3;
+      color: #49a0a2;
+      text-align: center;
+      margin: 0;
+      line-height: 48px;
+      @include media-max(DD) {
+        font-size: $wbu-default-font-size * 2.5;
+        line-height: $wbu-default-line-height;
+      }
+      @include media-max(XS) {
+        font-size: $wbu-default-font-size * 2;
+        line-height: $wbu-default-line-height;
+      }
+    }
+    h3 {
+      margin: 10px 0 0;
+      font-weight: 700;
+      text-align: center;
+      font-size: $wbu-h3-font-size * 1.3;
+      @include media-max(DD) {
+        font-size: $wbu-h3-font-size;
+        line-height: $wbu-default-line-height;
+      }
+    }
+    .icon-ping {
+      margin-top: 20px;
+      text-align: center;
+      color: #959595;
+      font-size: 12px;
+      display: flex;
+      line-height: 14px;
+      i {
+        font-size: $wbu-default-font-size * 1.1;
+        margin-right: 14px;
+      }
+    }
+  }
+}

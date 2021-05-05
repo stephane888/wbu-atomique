@@ -1,4 +1,6 @@
 @use '../../defaut/model/custom_bp.scss' as *;
+@use "../../atome/typography/default";
+@use '../../variables' as *;
 .paragraphList {
   margin-top: 10px;
   text-align: center;
@@ -30,7 +32,7 @@
       p {
         text-align: left;
         font-weight: 700;
-        font-size: 14px;
+        font-size: $wbu-default-font-size * 1.1;
         line-height: 18px;
         color: #1b1918;
         span {
