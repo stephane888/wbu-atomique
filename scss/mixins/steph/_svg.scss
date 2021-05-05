@@ -1,0 +1,9 @@
+// utilise le site : https://websemantics.uk/tools/svg-to-background-image-conversion/ pour convertir le fichier svg.
+//
+//on peut aussi cette fonction pour faire le traitement ou recherche unmodule en ligne sass-inline-svg, mais ce processus reste assez lourd pendant le rendu.
+@use "../../libraries/inline-svg" as *;
+@mixin wbu__svg-puce-check($color:#FFA0A2, $dimension:25) {
+  //@include background-svg('<svg width= "25" height="25" viewBox="0 0 25 25" fill="none"><path d="M24.5 12.5C24.5 19.1274 19.1274 24.5 12.5 24.5C5.87258 24.5 0.5 19.1274 0.5 12.5C0.5 5.87258 5.87258 0.5 12.5 0.5C19.1274 0.5 24.5 5.87258 24.5 12.5Z" fill="#F8F8F8" stroke="#EFEFEF"></path><path d="M10.3994 17.218C10.1816 17.218 9.98204 17.1454 9.81873 16.9821L6.20786 13.3712C5.88125 13.0446 5.88125 12.5365 6.20786 12.2099C6.53447 11.8833 7.04252 11.8833 7.36913 12.2099L10.4175 15.2402L17.6575 8.01839C17.9841 7.69178 18.4921 7.69178 18.8187 8.01839C19.1454 8.34501 19.1454 8.85308 18.8187 9.17969L10.9982 16.9821C10.8167 17.1454 10.6171 17.218 10.3994 17.218Z" fill="#49A0A2"></path></svg>'); //
+  $color          : str-replace(#{$color},'\#', '');
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$dimension}' height='#{$dimension}' viewBox='0 0 25 25' fill='none'%3E%3Cpath d='M24.5 12.5C24.5 19.1274 19.1274 24.5 12.5 24.5C5.87258 24.5 0.5 19.1274 0.5 12.5C0.5 5.87258 5.87258 0.5 12.5 0.5C19.1274 0.5 24.5 5.87258 24.5 12.5Z' fill='%23F8F8F8' stroke='%23EFEFEF'%3E%3C/path%3E%3Cpath d='M10.3994 17.218C10.1816 17.218 9.98204 17.1454 9.81873 16.9821L6.20786 13.3712C5.88125 13.0446 5.88125 12.5365 6.20786 12.2099C6.53447 11.8833 7.04252 11.8833 7.36913 12.2099L10.4175 15.2402L17.6575 8.01839C17.9841 7.69178 18.4921 7.69178 18.8187 8.01839C19.1454 8.34501 19.1454 8.85308 18.8187 9.17969L10.9982 16.9821C10.8167 17.1454 10.6171 17.218 10.3994 17.218Z' fill='%23#{$color}'%3E%3C/path%3E%3C/svg%3E");
+}
