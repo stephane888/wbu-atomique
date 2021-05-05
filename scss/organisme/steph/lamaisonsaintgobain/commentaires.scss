@@ -1,0 +1,118 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "../../../atome/typography/_default";
+@use "../../../atome/typography/h2";
+
+.comment-lmsg {
+  padding   : 0 0 $wbu-margin*2.5;
+  //margin    : 0 0 $wbu-margin*2.5;
+  margin    : 0;
+  background: linear-gradient(11.96deg,darken($wbu-color-primary,30),$wbu-color-primary);
+  color     : #FFF;
+  text-align: center;
+  font-size : $wbu-default-font-size*1.58;
+
+  .title {
+    font-size     : $wbu-h2-font-size*1.7;
+    padding-top   : $wbu-margin*1.5;
+    padding-bottom: $wbu-margin*1.3;
+  }
+
+  &__container {
+    @include media-min('DD') {
+      max-width: 700px;
+    }
+    @include media-min('M') {
+      max-width: 920px;
+    }
+    @include media-min('LM') {
+      max-width: 100%;
+    }
+
+    .card-title-field {
+      margin-bottom: $wbu-margin;
+      position     : relative;
+      padding      : 0 $wbu-margin/1.5;
+
+      &::before {
+        content : "« ";
+        display : inline-block;
+        position: absolute;
+        left    : 0;
+        top     : 0;
+      }
+
+      &::after {
+        content : " »";
+        display : inline-block;
+        position: absolute;
+        right   : 0;
+        bottom  : 0;
+      }
+    }
+
+    .card-content-field {
+      font-weight: 600;
+      font-size  : $wbu-default-font-size*1.37;
+    }
+
+    .card-localisation {
+      font-size: $wbu-default-font-size/1.08;
+    }
+
+    .icons-reviews {
+      svg {
+        width  : 21px;
+        fill   : #FFF;
+        opacity: 0.5;
+      }
+
+      .active svg {
+        opacity: 1;
+      }
+    }
+
+    .owl-carousel {
+      .owl-item {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+      }
+
+      .owl-nav {
+        margin: 0;
+
+        button {
+          position     : absolute;
+          top          : calc(61% - 100px);
+          left         : -15%;
+          bottom       : auto;
+          background   : transparent;
+          font-size    : $wbu-default-font-size * 1.2;
+          border       : 2px solid #FFF;
+          border-radius: 0;
+          transform    : rotateZ(-90deg);
+          display      : none;
+          @include media-min('DD') {
+            display: inline-block;
+          }
+        }
+
+        button.owl-next {
+          left     : auto;
+          right    : -15%;
+          transform: rotateZ(90deg);
+        }
+
+        .owl-svg-nav {
+          width     : 40px;
+          background: transparent;
+          fill      : #FFF;
+        }
+      }
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}
