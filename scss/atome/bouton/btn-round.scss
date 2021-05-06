@@ -1,4 +1,5 @@
-@use "./buttons" as button;
+@use "../../wbu-ressources.scss" as button;
+@use "./buttons";
 
 .btn-round {
   padding        : 0;

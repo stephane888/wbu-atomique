@@ -4,7 +4,7 @@
   margin-bottom: $wbu-margin;
 
   .group-btn {
-    @include wbu--btn-round($wbu-btn-round-dimension:1.6rem,$wbu-btn-border-round:0);
+    @include wbu--btn-round($wbu-btn-round-dimension:2rem,$wbu-btn-border-round:0);
 
     .btn {
       margin-right: 0.5rem;
@@ -14,10 +14,10 @@
       & .color-carre {
         content : "";
         position: absolute;
-        top     : 0.1rem;
-        right   : 0.1rem;
-        left    : 0.1rem;
-        bottom  : 0.1rem;
+        top     : 0.2rem;
+        right   : 0.2rem;
+        left    : 0.2rem;
+        bottom  : 0.2rem;
         z-index : 1;
       }
 

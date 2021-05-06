@@ -1,7 +1,7 @@
 //@forward "./variables.scss";
-@forward "./mixins/mixins.scss"; //
+@forward "./mixins/wbu_mixins.scss"; //
 //@import "./variables";
-@import "./bootstrap_init.scss";
-@import "./defaut/model/custom_bp.scss";
+@forward "./bootstrap_init.scss";
+@forward "./defaut/model/custom_bp.scss";
 /**/
 //@forward "./variables.scss";

@@ -1,7 +1,8 @@
 @use "variables" as vars;
-@import "./bootstrap_init.scss";
+@use "./bootstrap_init.scss" as *;
 /* bootstrap-form */
-$input-font-size         : vars.$input-font-size;
-$form-group-margin-bottom: vars.$form-group-margin-bottom;
+$input-font-size         : vars.$wbu-input-font-size;
+/***/
+$form-group-margin-bottom: vars.$wbu-form-group-margin-bottom;
 @import 'bootstrap/scss/forms';
 /* end bootstrap-form */

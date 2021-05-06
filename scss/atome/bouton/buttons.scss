@@ -1,6 +1,10 @@
-@forward "../../wbu-ressources.scss";
-@import "../../bootstrap_init";
+@use "../../wbu-ressources.scss" as *;
+/**
+*/
+//@forward "../../bootstrap_init";
 $btn-background-color: transparent !default;
+$btn-font-size: $wbu-btn-font-size;
+$btn-line-height: $wbu-btn-line-height;
 
 .btn {
   display         : inline-block;
