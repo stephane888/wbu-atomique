@@ -4,6 +4,7 @@
 @use "../../bootstrap-form";
 @use "../../organisme/owls/owl-default.scss";
 @use "../../organisme/products/product-info/product-metas";
+@use "../../atome/typography/default";
 
 .product--header {
   margin-bottom: $wbu-margin*3;

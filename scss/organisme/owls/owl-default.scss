@@ -12,7 +12,7 @@ $owl-color-default: $wbu-border-color !default;
     display        : flex;
     flex-wrap      : wrap;
     justify-content: left;
-    align-items    : center;
+    align-items    : unset;
     margin-left    : -0.4rem;
     overflow       : hidden;
 
@@ -20,17 +20,16 @@ $owl-color-default: $wbu-border-color !default;
       display      : flex;
       margin-bottom: 0.3rem;
       margin-left  : 0.4rem;
+      border       : 1px solid $owl-color-default;
+      align-items  : center;
 
       img {
-        border    : 1px solid $owl-color-default;
         background: #fff;
         padding   : 0.3rem;
       }
 
       &.active {
-        img {
-          border-color: $owl-color-active;
-        }
+        border-color: $owl-color-active;
       }
     }
   }

@@ -7,7 +7,7 @@
   top     : 0;
   left    : auto;
   right   : 15px;
-  @include btn.wbu--btn-round($wbu-btn-round-dimension:1.127rem);
+  @include btn.wbu--btn-round($wbu-btn-round-dimension:2rem);
 
   .btn-round {
     border-radius: 3px;

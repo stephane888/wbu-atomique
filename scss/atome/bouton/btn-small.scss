@@ -1,4 +1,8 @@
-@use "./buttons" as btsm;
+@use "../../wbu-ressources.scss" as btsm;
+@use "./buttons";
+btsm.$btn-padding-y-sm: btsm.$wbu-btn-padding-y-sm;
+btsm.$btn-padding-x-sm: btsm.$wbu-btn-padding-x-sm;
+btsm.$btn-font-size-sm: btsm.$wbu-btn-font-size-sm;
 
 .btn-small {
   @include btsm.button-size(btsm.$btn-padding-y-sm, btsm.$btn-padding-x-sm, btsm.$btn-font-size-sm, btsm.$btn-line-height-sm, btsm.$btn-border-radius-sm);

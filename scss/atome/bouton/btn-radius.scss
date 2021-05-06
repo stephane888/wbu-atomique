@@ -1,6 +1,7 @@
-@use "./buttons" as button;
+@use "../../wbu-ressources.scss" as button;
+@use "./buttons";
 
 .btn-radius {
   border-radius: button.$wbu-btn-border-radius;
-  padding: button.$wbu-btn-radius-padding;
+  padding      : button.$wbu-btn-radius-padding;
 }
