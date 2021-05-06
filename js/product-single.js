@@ -8,8 +8,8 @@ import "../scss/molecule/stan/serviceBlock-module.scss";
 //import "../scss/molecule/stan/reinsuranceBlock.scss";
 // import "../scss/molecule/stan/billetDeBlogTeaser.scss";
 // import "../scss/molecule/stan/paragraphList.scss";
-// import "../scss/molecule/stan/pushNewsletter.scss";
-//import "../scss/molecule/stan/twoBlockCarousel.scss";
+import "../scss/molecule/stan/pushNewsletter.scss";
+import "../scss/molecule/stan/twoBlockCarousel.scss";
 //import "../scss/molecule/stan/galeryImage.scss";
 import "../scss/molecule/stan/galeryTitle.scss";
 import "../scss/molecule/stan/projectSummary.scss";
@@ -37,6 +37,8 @@ $(document).ready(function () {
           infinite: true,
           dots: true,
           arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
         },
       },
     ],
@@ -122,20 +124,18 @@ $(".bigImage").on("init", function (event, slick, currentSlide, nextSlide) {
   console.log(slick);
   var num = slick.slideOffset + 1;
   var total = slick.slideCount;
-  console.log(num);
   document.getElementById("num").innerHTML = num;
   document.getElementById("total").innerHTML = total;
 });
 $(".bigImage").on(
   "beforeChange",
   function (event, slick, currentSlide, nextSlide) {
-    console.log(slick);
-    var num = slick.slideOffset + 1;
-    console.log(num);
     if (slick.$nextArrow) {
       var num = nextSlide + 1;
-    } else {
+    } else if (slick.$prevArrow) {
       var num = currentSlide - 1;
+    } else {
+      var num = currentSlide + 1;
     }
     document.getElementById("num").innerHTML = num;
   }

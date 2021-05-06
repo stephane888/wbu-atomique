@@ -2,7 +2,7 @@
 @use "../../atome/stephane/cover-link.scss";
 @use "../../atome/typography/default";
 .billetDeBlogTeaser {
-  margin: $wbu-margin * 2.5 auto;
+  margin: 0 auto $wbu-margin * 2.5;
   width: 100%;
   display: block;
   position: relative;

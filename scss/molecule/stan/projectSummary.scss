@@ -75,10 +75,12 @@
         margin-bottom: 0.5rem;
         @include media-max(XS) {
           font-size: $wbu-default-font-size * 1.2;
+          margin-bottom: -5px;
         }
         @include media-max(XX) {
           font-size: $wbu-default-font-size * 0.8;
           margin: 0;
+          margin-bottom: -5px;
         }
         .number-unit {
           font-size: $wbu-default-font-size * 1.5;
