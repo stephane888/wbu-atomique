@@ -1,11 +1,15 @@
 @use "../../../wbu-ressources.scss" as *;
+/**
+  On surchage les variables;
+*/
+$wbu-title-font-weight: 600;
 @use "../../../bootstrap-grid.scss";
+@use "../../../molecule/steph/header-blog";
 @use "../../../molecule/stan/billetDeBlogTeaser";
 @use "../../../molecule/stan/paragraphList";
 @use "../../../molecule/stan/serviceBlock-module";
 @use "../../../molecule/stan/pushNewsletter";
 @use "../../../molecule/steph/group-button-light";
-@use "../../../molecule/steph/header-blog";
 @use "../../../molecule/steph/puce-check.scss";
 
 .home-blog {

@@ -1,20 +1,22 @@
 @use "../../wbu-ressources.scss" as *;
 @use "../../atome/stephane/cover-link.scss";
 @use "../../atome/typography/default";
+
 .billetDeBlogTeaser {
-  margin: $wbu-margin * 2.5 auto;
-  width: 100%;
-  display: block;
-  position: relative;
-  height: 328px;
-  background-size: cover;
+  margin             : $wbu-margin * 2.5 auto;
+  width              : 100%;
+  display            : block;
+  position           : relative;
+  height             : 328px;
+  background-size    : cover;
   background-position: top;
+
   .background {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: auto;
-    width: 100%;
+    position  : absolute;
+    bottom    : 0;
+    left      : 0;
+    height    : auto;
+    width     : 100%;
     background: linear-gradient(180deg, rgba(27, 25, 24, 0), #1b1918);
   }
 
@@ -22,53 +24,55 @@
     padding: 0 20px;
 
     .date {
-      font-size: $wbu-default-font-size;
-      line-height: 18px;
-      color: #fff;
+      font-size    : $wbu-default-font-size;
+      line-height  : 18px;
+      color        : #fff;
       margin-bottom: 10px;
     }
 
     .title {
-      font-size: $wbu-default-font-size * 1.7;
-      line-height: 26px;
-      color: #fff;
+      font-size    : $wbu-default-font-size * 1.7;
+      line-height  : 26px;
+      color        : #fff;
       margin-bottom: 22px;
-      font-weight: 400;
+      font-weight  : 400;
     }
   }
+
   &.a-la-une {
     margin-bottom: $wbu-margin * 2.5;
-    height: 450px;
+    height       : 450px;
 
     .billetDeBlogTeaser__text {
       line-height: 2.2;
 
       .a-la-une {
-        color: #fff;
+        color    : #fff;
         font-size: 22px;
       }
 
       .title {
-        font-size: 34px;
+        font-size  : 34px;
         line-height: 40px;
         font-weight: 500;
       }
     }
   }
+
   &.a-la-une {
     margin-bottom: $wbu-margin * 2.5;
-    height: 450px;
+    height       : 450px;
 
     .billetDeBlogTeaser__text {
       line-height: 2.2;
 
       .a-la-une {
-        color: #fff;
+        color    : #fff;
         font-size: 22px;
       }
 
       .title {
-        font-size: 34px;
+        font-size  : 34px;
         line-height: 40px;
         font-weight: 500;
       }
