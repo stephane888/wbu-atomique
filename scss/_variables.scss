@@ -29,12 +29,12 @@ $wbu-p-font-size             : inherit !default;
  */
 $wbu-title-color             : inherit !default;
 $wbu-title-font-family       : inherit !default;
-$wbu-title-line-height       : 1.7rem !default;
 $wbu-title-font-weight       : 600 !default; //
 $wbu-h1-font-size            : 3.4rem !default;
 $wbu-h1-line-height          : 4.2rem !default;
-$wbu-h2-font-size            : 2rem !default;
+$wbu-h2-font-size            : 2.4rem !default;
 $wbu-h3-font-size            : 1.8rem !default;
+$wbu-h3-line-height          : 2.4rem !default;
 /**
  * Lists buttons
  */
@@ -43,6 +43,8 @@ $wbu_dimension_puce          : 25px !default;
 // space.
 $wbu-margin                  : 2rem !default;
 $wbu-h1-margin               : $wbu-margin / 1.33 !default;
+/* page-header-bg */
+$wbu-page-header-bg          : 200px;
 /* Permet de surcharger les variables bootstrap */
 // bootstrap variables
 $wbu-input-font-size         : inherit !default;

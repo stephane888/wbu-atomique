@@ -2,5 +2,9 @@
 @use "./title";
 
 h3 {
-  font-size: $wbu-h3-font-size;
+  font-size  : $wbu-h3-font-size;
+  line-height: $wbu-h3-line-height;
+  @include media-min('DD') {
+    font-size: $wbu-h3-font-size *1.26;
+  }
 }

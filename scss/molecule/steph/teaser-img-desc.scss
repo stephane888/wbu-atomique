@@ -1,0 +1,65 @@
+@use "../../wbu-ressources.scss" as *;
+@use "../../atome/typography/h3.scss";
+
+.teaser-img-desc {
+  margin-bottom: $wbu-margin * 1.5;
+  position     : relative;
+
+  &__image {
+    width: 260px;
+
+    .categorie {
+      position     : absolute;
+      background   : #FFF;
+      border-radius: 0.2rem;
+      top          : 10px;
+      right        : auto;
+      left         : 10px;
+      padding      : 0.8rem 1.4rem;
+      font-weight  : 600;
+      font-size    : $wbu-default-font-size/1.17;
+    }
+  }
+
+  &__desc {
+    width          : calc(100% - 260px);
+    padding-left   : $wbu-margin / 1.5;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+    @include media-min('DD') {
+      padding-right: $wbu-margin*4;
+    }
+
+    .description {
+      margin-bottom: $wbu-margin / 2;
+    }
+
+    .title {
+      font-weight  : 500;
+      margin-bottom: $wbu-margin / 1.5;
+      line-height  : $wbu-h3-line-height;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .time_read {
+      position    : relative;
+      font-size   : $wbu-default-font-size/1.17;
+      padding-left: 1.7rem;
+
+      &::before {
+        content : "";
+        position: absolute;
+        width   : 1.2rem;
+        height  : 1.2rem;
+        top     : auto;
+        left    : 0;
+        bottom  : 0;
+        @include wbu__svg-time-clock($wbu-color-primary);
+      }
+    }
+  }
+}

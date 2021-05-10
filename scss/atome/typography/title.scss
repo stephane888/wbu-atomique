@@ -19,7 +19,7 @@ h5,
 h6 {
   font-family: $wbu-title-font-family;
   font-weight: $wbu-title-font-weight;
-  line-height: $wbu-title-line-height;
+  line-height: inherit;
   margin     : 0;
   color      : $wbu-title-color;
 }

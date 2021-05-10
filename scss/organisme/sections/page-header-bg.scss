@@ -1,0 +1,7 @@
+@use "../../wbu-ressources.scss" as *;
+
+.page-header-bg {
+  padding      : $wbu-margin*2 0;
+  min-height   : $wbu-page-header-bg;
+  margin-bottom: $wbu-margin*3;
+}
