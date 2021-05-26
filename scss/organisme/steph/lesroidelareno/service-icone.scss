@@ -1,0 +1,44 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "../../../atome/typography/h4.scss";
+
+.service-icone {
+  height          : 100%;
+  background-color: $wbu-color-primary;
+  color           : #FFF;
+  padding         : $wbu-margin*2;
+  @include WBUtransition();
+
+  .icone {
+    font-size   : $wbu-default-font-size * 4.4;
+    margin-right: $wbu-margin;
+  }
+
+  .titre {
+    color        : inherit;
+    line-height  : $wbu-h4-line-height*1.3;
+    margin-bottom: $wbu-margin*1.75;
+    position     : relative;
+
+    &::before {
+      position        : absolute;
+      top             : auto;
+      bottom          : -1rem;
+      width           : 3rem;
+      height          : 0.15rem;
+      background-color: #FFF;
+      content         : "";
+      @include WBUtransition();
+    }
+  }
+
+  &:hover {
+    background-color: #FFF;
+    color           : $wbu-color-text;
+
+    .titre {
+      &::before {
+        background-color: $wbu-color-text;
+      }
+    }
+  }
+}

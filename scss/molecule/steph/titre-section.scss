@@ -1,0 +1,9 @@
+@use "../../wbu-ressources.scss" as *;
+@use "../../atome/typography/h1";
+@use "../../atome/typography/h4";
+
+.titre-section {
+  .main {
+    margin-bottom: $wbu-margin;
+  }
+}

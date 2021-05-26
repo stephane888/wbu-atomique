@@ -35,6 +35,8 @@ $wbu-h1-line-height          : 4.2rem !default;
 $wbu-h2-font-size            : 2.4rem !default;
 $wbu-h3-font-size            : 1.8rem !default;
 $wbu-h3-line-height          : 2.4rem !default;
+$wbu-h4-font-size            : 1.6rem !default;
+$wbu-h4-line-height          : 2.0rem !default;
 /**
  * Lists buttons
  */
@@ -45,6 +47,7 @@ $wbu-margin                  : 2rem !default;
 $wbu-h1-margin               : $wbu-margin / 1.33 !default;
 $wbu-h2-margin               : $wbu-margin / 1.6 !default;
 $wbu-h3-margin               : $wbu-margin / 1.9 !default;
+$wbu-h4-margin               : $wbu-margin / 2.2 !default;
 /* page-header-bg */
 $wbu-page-header-bg          : 200px;
 /* Permet de surcharger les variables bootstrap */
