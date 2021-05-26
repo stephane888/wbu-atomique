@@ -1,61 +1,83 @@
-@use '../../defaut/model/custom_bp.scss' as *;
-@use '../../variables' as *;
+@use "../../wbu-ressources.scss" as *;
 @use "../../atome/typography/default";
+@use "../../atome/typography/h3";
+@use "../../atome/typography/h1";
 
 .galeryTitle {
-  width: 100%;
-  display: block;
-  box-sizing: border-box;
-  margin: 1rem auto;
-  padding-left: 10px;
+  width        : 100%;
+  display      : block;
+  box-sizing   : border-box;
+  margin       : 1rem auto;
+  padding-left : 10px;
   padding-right: 10px;
+  margin-bottom: $wbu-margin*2.5;
+
   &__container {
-    width: 100%;
-    display: flex;
-    align-items: center;
+    width         : 100%;
+    display       : flex;
+    align-items   : center;
     flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    h1 {
-      font-size: $wbu-default-font-size * 3.3;
-      color: #49a0a2;
-      text-align: center;
-      margin: 0;
-      line-height: 48px;
+    flex-wrap     : wrap;
+    box-sizing    : border-box;
+
+    .title {
+      font-size    : $wbu-default-font-size * 3.3;
+      color        : $wbu-color-primary;
+      text-align   : center;
+      margin       : 0;
+      line-height  : 48px;
+      margin-bottom: $wbu-margin/2;
       @include media-max(DD) {
-        font-size: $wbu-default-font-size * 2.5;
+        font-size  : $wbu-default-font-size * 2.5;
         line-height: $wbu-default-line-height;
       }
       @include media-max(XS) {
-        font-size: $wbu-default-font-size * 2;
+        font-size  : $wbu-default-font-size * 2;
         line-height: $wbu-default-line-height;
       }
     }
-    h3 {
-      margin: 10px 0 0;
-      font-weight: 500;
-      text-align: center;
-      color: black;
-      font-size: $wbu-h3-font-size * 1.5;
-      line-height: $wbu-default-line-height;
-      @include media-max(DD) {
-        font-size: $wbu-h3-font-size * 1.5;
-        line-height: $wbu-default-line-height;
-      }
-      @include media-max(XS) {
-        font-size: $wbu-h3-font-size;
-      }
+
+    .description {
+      margin-bottom: $wbu-margin;
     }
-    .icon-ping {
-      margin-top: 20px;
-      text-align: center;
-      color: #959595;
-      font-size: 12px;
-      display: flex;
-      line-height: 14px;
-      i {
-        font-size: $wbu-default-font-size * 1.1;
-        margin-right: 14px;
+
+    .list-terms {
+      font-size   : $wbu-default-font-size/1.1;
+      position    : relative;
+      padding-left: 1.4rem;
+
+      &::before {
+        position: absolute;
+        content : "";
+        @include wbu__svg-map($wbu-color-text, 10);
+        left    : 0;
+        top     : 0;
+        bottom  : 0;
+        right   : auto;
+        width   : 10px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      > * {
+        margin-right: 0.7rem;
+        display     : flex;
+
+        &::after {
+          content: ",";
+          display: inline;
+        }
+      }
+
+      > *:last-child {
+        margin-right: 0;
+
+        &::after {
+          content: ",";
+          display: none;
+        }
       }
     }
   }

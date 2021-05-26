@@ -1,75 +1,84 @@
-@use '../../defaut/model/custom_bp.scss' as *;
-@use '../../variables' as *;
+@use "../../wbu-ressources.scss" as *;
 @use "../../atome/typography/default";
 
 .galeryImage {
-  width: 100%;
-  display: flex;
+  width        : 100%;
+  display      : flex;
+  margin-bottom: $wbu-margin*2.5;
+
   &__big {
-    width: 75%;
+    width        : 75%;
     padding-right: 3px;
-    flex-grow: 0;
-    max-width: 75%;
+    flex-grow    : 0;
+    max-width    : 75%;
+
     img {
-      width: 100%;
+      width     : 100%;
       max-height: 500px;
-      height: 100%;
+      height    : 100%;
     }
   }
+
   &__small {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    max-width: 25%;
+    max-width     : 25%;
+
     .small {
-      margin-bottom: 4px;
-      width: 100%;
-      color: #fff;
-      display: flex;
+      margin-bottom  : 4px;
+      width          : 100%;
+      color          : #fff;
+      display        : flex;
       justify-content: center;
-      align-items: center;
-      text-align: center;
+      align-items    : center;
+      text-align     : center;
+
       &:last-child {
-        margin: 0;
-        margin-bottom: 0;
+        margin  : 0;
         position: relative;
-        a {
-          color: #fff;
-          position: absolute;
+
+        .small__voirPlus {
+          color          : #fff;
+          position       : absolute;
           text-decoration: none;
-          h3 {
-            font-size: $wbu-default-font-size * 1.6;
-            @include media-max(MD) {
-              font-size: $wbu-default-font-size;
-            }
-            @include media-max(XS) {
-              font-size: $wbu-default-font-size * 0.6;
-            }
+          font-weight    : 400;
+          font-size      : $wbu-default-font-size * 1.4;
+          cursor         : pointer;
+          @include media-max(MD) {
+            font-size: $wbu-default-font-size;
           }
+          @include media-max(XS) {
+            font-size: $wbu-default-font-size * 0.6;
+          }
+
           &:hover {
             text-decoration: underline;
           }
         }
+
         &::before {
-          content: "";
-          position: absolute;
+          content         : "";
+          position        : absolute;
           background-color: black;
-          top: 0;
-          opacity: 0.35;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          transition: ease-in-out 0.2s;
+          top             : 0;
+          opacity         : 0.35;
+          bottom          : 0;
+          right           : 0;
+          left            : 0;
+          transition      : ease-in-out 0.2s;
         }
+
         &:hover {
           &::before {
             opacity: 0.7;
           }
         }
       }
+
       img {
-        margin: 0;
+        margin   : 0;
         max-width: 295px;
-        width: 100%;
+        width    : 100%;
       }
     }
   }

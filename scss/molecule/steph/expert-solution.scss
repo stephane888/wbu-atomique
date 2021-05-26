@@ -1,0 +1,133 @@
+@use "../../wbu-ressources.scss" as *;
+@use "../../atome/stan/seeMore.scss";
+@use "puce-check";
+
+.expert-solution {
+  background-color: #f8f8f8;
+  padding         : $wbu-margin*4 0;
+  margin-bottom   : $wbu-margin*4;
+
+  img {
+    width: auto;
+  }
+
+  .profile {
+    position       : relative;
+    display        : flex;
+    justify-content: space-around;
+    flex-direction : column;
+    align-items    : center;
+    @include media-min('SM') {
+      flex-direction: row;
+    }
+    margin-bottom  : $wbu-margin*2;
+    @include media-min('MD') {
+      justify-content: left;
+      margin-bottom  : 0;
+    }
+    max-width      : 100%;
+
+    .profile_image {
+      padding-right: $wbu-margin/2;
+    }
+    @include media-min('MD') {
+      .profile_image {
+        position : absolute;
+        left     : 0;
+        top      : 0;
+        max-width: 290px;
+        width    : 100%;
+      }
+    }
+    @include media-min('DD') {
+      max-width: 60%;
+    }
+    @include media-min('M') {
+      max-width: 53%;
+    }
+
+    .profile__block {
+      position  : relative;
+      text-align: center;
+      @include media-min('SM') {
+        text-align: left;
+      }
+      @include media-min('MD') {
+        margin-left: calc(300px + 5%);
+      }
+    }
+
+    .seeMore {
+      margin    : 0 0 $wbu-margin/1.5;
+      background: #000;
+
+      a {
+        color: #FFF;
+      }
+    }
+
+    .profile_name_function {
+      font-size    : $wbu-default-font-size*2.3;
+      font-weight  : 600;
+      margin-bottom: $wbu-margin*2;
+
+      .profile_name {
+        color        : $wbu-color-primary;
+        padding-right: $wbu-margin/2;
+      }
+    }
+
+    .title {
+      font-size: $wbu-default-font-size*2.3;
+    }
+  }
+
+  .messages {
+    position      : relative;
+    z-index       : 1;
+    flex-direction: column;
+    @include media-min('DD') {
+      flex-direction: row;
+    }
+
+    .description {
+      padding      : $wbu-margin*2 $wbu-margin*2.5;
+      background   : #FFF;
+      font-size    : $wbu-default-font-size*1.2;
+      line-height  : $wbu-default-line-height*1.5;
+      font-weight  : 500;
+      margin-bottom: $wbu-margin*2.5;
+      @include media-min('MD') {
+        box-shadow : 0 0 20px 10px rgb(0 0 0 / 8%);
+        max-width  : 440px;
+        margin-left: 14%;
+      }
+    }
+  }
+
+  .block-avantages {
+    font-size  : $wbu-default-font-size*1.3;
+    line-height: $wbu-default-line-height*1.6;
+    align-self : center;
+    max-width  : 600px;
+    font-weight: 400;
+    padding-top: $wbu-margin*1.5;
+    border-top : 1px solid $wbu-border-color;
+    @include media-min('DD') {
+      max-width  : 400px;
+      border     : none;
+      padding    : 0 0 0 $wbu-margin* 1.5;
+      margin-left: $wbu-margin* 2.5;
+      border-left: 1px solid $wbu-border-color;
+    }
+
+    .titre_avantage {
+      margin-bottom: $wbu-margin/1.5;
+    }
+
+    .puce-check li {
+      font-weight  : 600;
+      margin-bottom: $wbu-margin/2;
+    }
+  }
+}

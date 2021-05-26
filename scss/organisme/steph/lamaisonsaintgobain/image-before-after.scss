@@ -1,0 +1,37 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "zurb-twentytwenty/scss/twentytwenty-no-compass";
+
+.main-twentytwenty {
+  .buttons {
+    .seeMore {
+      margin          : 0 0 $wbu-margin/1.5;
+      border          : 1px solid $wbu-border-color;
+      color           : lighten($wbu-color-text, 10);
+      background-color: #FFF;
+      font-weight     : 400;
+      @include WBUtransition();
+
+      &.after-before {
+        margin-right: $wbu-margin/2;
+      }
+
+      &.active {
+        background-color: $wbu-color-primary;
+        border-color    : $wbu-color-primary;
+        color           : #fff;
+      }
+    }
+  }
+}
+
+.container-zurb-twentytwenty {
+  .zurb-twentytwenty {
+    max-width   : 1000px;
+    margin-left : auto;
+    margin-right: auto;
+  }
+
+  img {
+    width: 100%;
+  }
+}

@@ -1,43 +1,82 @@
-@use '../../defaut/model/custom_bp.scss' as *;
-@use '../../variables' as *;
+@use "../../wbu-ressources.scss" as *;
 @use "../../atome/typography/default";
+@use "slick-carousel/slick/slick";
+@use "slick-carousel/slick/slick-theme";
+
 .stanCaroussel {
-  width: 100%;
+  width      : 100%;
   padding-top: 6rem;
+  position   : fixed;
+  top        : 0;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  background : #FFF;
+  z-index    : 99999;
+  margin-top : 100%;
+  opacity    : 0;
+  @include transition();
+
+  &.open {
+    margin-top: 0;
+    opacity   : 1;
+  }
 
   .close {
-    font-size: $wbu-default-font-size * 1.4;
-    font-weight: 100;
-    position: absolute;
-    right: 53px;
-    top: 49px;
-    cursor: pointer;
+    font-size      : $wbu-default-font-size * 2.2;
+    font-weight    : 100;
+    position       : absolute;
+    right          : 53px;
+    top            : 49px;
+    cursor         : pointer;
+    border-radius  : 50%;
+    width          : 45px;
+    height         : 45px;
+    display        : flex;
+    background     : rgba(#ccc,0);
+    align-items    : center;
+    justify-content: center;
+
+    &::before {
+      content    : "+";
+      display    : inline-block;
+      font-weight: 300;
+      transform  : rotateZ(-45deg);
+    }
+
+    &:hover {
+      background: rgba(#ccc,0.7);
+    }
   }
+
   .twoBlockCarousel {
-    display: flex;
-    margin: auto;
-    padding: 0 4rem;
+    display        : flex;
+    margin         : auto;
+    padding        : 0 4rem;
     justify-content: space-around;
-    height: 100%;
-    margin: auto;
-    max-height: 70vh;
-    align-items: flex-start;
+    height         : 100%;
+    margin         : auto;
+    max-height     : 70vh;
+    align-items    : flex-start;
     @include media-max(SM) {
       max-height: 80vh;
-      padding: 0;
+      padding   : 0;
     }
+
     .slick-dots li.slick-active button:before {
       color: $wbu-color-teal;
     }
+
     .slick-dots {
       position: absolute;
-      bottom: 12px;
+      bottom  : 12px;
+
       li {
         button {
           &:before {
             font-size: $wbu-default-font-size * 0.9;
-            color: #fff;
-            opacity: 0.9;
+            color    : #fff;
+            opacity  : 0.9;
           }
         }
       }
@@ -51,25 +90,33 @@
       @include media-max(SM) {
         width: 100%;
       }
+
       .rer {
         //background-color: rgba(245, 58, 192, 0.508);
         padding: 2px;
+
+        img {
+          width: 100%;
+        }
       }
+
       .slick-disabled {
         display: none;
         opacity: 0;
-        top: -200px;
+        top    : -200px;
       }
     }
+
     .secondBlock_number {
-      font-size: $wbu-default-font-size * 1.2;
+      font-size  : $wbu-default-font-size * 1.2;
       font-weight: 700;
-      margin-top: 50px;
+      margin-top : 50px;
     }
+
     .secondBlock {
-      width: 30%;
-      margin: 2rem auto;
-      display: flex;
+      width         : 30%;
+      margin        : 2rem auto;
+      display       : flex;
       flex-direction: column;
       @include media-min(M) {
         width: 27%;
@@ -80,73 +127,80 @@
 
       .smallCarousel {
         width: 100%;
+
         .slick-current {
           img {
-            border: 2px solid $wbu-color-teal;
+            border       : 2px solid $wbu-color-teal;
             border-radius: 2px;
           }
         }
+
         img {
           max-width: 70px;
-          width: 100%;
-          height: 60px;
+          width    : 100%;
+          height   : 60px;
           @include media-max(MD) {
             max-width: 50px;
-            height: 50px;
+            height   : 50px;
           }
         }
       }
+
       .smallCarousell {
-        width: 110%;
+        width     : 110%;
         text-align: left;
+
         p {
           font-weight: 700;
-          max-width: 400px;
-          font-size: $wbu-default-font-size * 1.1;
+          max-width  : 400px;
+          font-size  : $wbu-default-font-size * 1.1;
           line-height: $wbu-default-line-height;
-          width: 100%;
-          height: 60px;
+          width      : 100%;
+          height     : 60px;
           @include media-max(MD) {
             height: 50px;
           }
         }
       }
-    }
-  }
-  .title {
-    font-weight: 700;
-    font-size: $wbu-default-font-size * 2;
-    color: #1b1918;
-    margin: 5px 4rem;
-    @include media-max(SM) {
-      font-size: $wbu-default-font-size * 1.5;
-      margin: 5px 1rem;
     }
   }
 
-  .stan-prev,
-  .stan-next {
-    opacity: 0.75;
-    border-left: 4px solid;
-    border-top: 4px solid;
-    line-height: 0;
-    position: absolute;
-    top: 50%;
-    z-index: 2;
-    color: black;
-    display: block;
-    font-size: 0;
-    width: 13px;
-    height: 13px;
-    padding: 0;
-    cursor: pointer;
+  .title {
+    font-weight: 700;
+    font-size  : $wbu-default-font-size * 2;
+    color      : #1b1918;
+    margin     : 5px 4rem;
+    @include media-max(SM) {
+      font-size: $wbu-default-font-size * 1.5;
+      margin   : 5px 1rem;
+    }
   }
+
+  .stan-next,
+  .stan-prev {
+    opacity    : 0.75;
+    border-left: 4px solid;
+    border-top : 4px solid;
+    line-height: 0;
+    position   : absolute;
+    top        : 50%;
+    z-index    : 2;
+    color      : black;
+    display    : block;
+    font-size  : 0;
+    width      : 13px;
+    height     : 13px;
+    padding    : 0;
+    cursor     : pointer;
+  }
+
   .stan-next {
-    right: -25px;
+    right    : -25px;
     transform: rotate(140deg);
   }
+
   .stan-prev {
     transform: rotate(-45deg);
-    left: -25px;
+    left     : -25px;
   }
 }
