@@ -48,6 +48,7 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "image-webpack-loader": "^7.0.1",
-    "imagemin": "^7.0.1"
+    "imagemin": "^7.0.1",
+    "slick-carousel": "^1.8.1"
   }
 }

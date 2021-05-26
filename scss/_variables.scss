@@ -42,7 +42,7 @@ $wbu_dimension_puce          : 25px !default;
 /* */
 // space.
 $wbu-margin                  : 2rem !default;
-$wbu-h1-margin               : $wbu-margin / 1.33 !default;
+$wbu-h1-margin               : div($wbu-margin, 1.33) !default;
 /* page-header-bg */
 $wbu-page-header-bg          : 200px;
 /* Permet de surcharger les variables bootstrap */
@@ -53,4 +53,4 @@ $wbu-btn-font-size           : inherit !default;
 $wbu-form-group-margin-bottom: $wbu-margin;
 $wbu-btn-padding-y-sm        : 0.4rem !default;
 $wbu-btn-padding-x-sm        : 0.8rem !default;
-$wbu-btn-font-size-sm        : $wbu-default-font-size/1.3 !default;
+$wbu-btn-font-size-sm        : div($wbu-default-font-size,1.3) !default;
