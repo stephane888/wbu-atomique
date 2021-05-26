@@ -1,0 +1,28 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "../../../atome/typography/h1";
+@use "../../../atome/typography/h4";
+
+.services-sliders {
+  .titre {
+    margin-bottom: $wbu-margin/2;
+  }
+
+  .sub_title {
+    margin-bottom: $wbu-margin;
+    font-weight  : 300;
+  }
+
+  .main {
+    .owl-item {
+      padding-right: $wbu-margin;
+      padding-left : 1px;
+    }
+  }
+
+  .img-bg {
+    min-height         : 350px;
+    height             : 100%;
+    background-repeat  : no-repeat;
+    background-position: center top;
+  }
+}

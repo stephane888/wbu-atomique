@@ -1,0 +1,41 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "../../../atome/typography/h4.scss";
+@use "../../../atome/stan/seeMore.scss";
+
+.images-bg {
+  color                : #FFF;
+  background-attachment: fixed;
+  background-position  : center;
+
+  .seeMore {
+    display     : inline-block;
+    color       : inherit;
+    background  : transparent;
+    border-color: #FFF;
+  }
+
+  .titre {
+    font-size    : $wbu-h1-font-size;
+    line-height  : 1.2;
+    @include media-min('DD') {
+      font-size: $wbu-h1-font-size*2;
+    }
+    margin-bottom: $wbu-margin*2;
+  }
+
+  .sub_title {
+    font-size: $wbu-h4-font-size;
+    @include media-min('DD') {
+      font-size: $wbu-h4-font-size*2;
+    }
+  }
+
+  .row {
+    padding-top   : $wbu-margin;
+    padding-bottom: $wbu-margin;
+    @include media-min('DD') {
+      padding-top   : $wbu-margin*2;
+      padding-bottom: $wbu-margin*2;
+    }
+  }
+}
