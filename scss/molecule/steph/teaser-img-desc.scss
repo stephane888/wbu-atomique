@@ -4,9 +4,11 @@
 .teaser-img-desc {
   margin-bottom: $wbu-margin * 1.5;
   position     : relative;
+  z-index      : 1;
 
   &__image {
-    width: 260px;
+    width   : 260px;
+    position: relative;
 
     .categorie {
       position     : absolute;
@@ -18,6 +20,19 @@
       padding      : 0.8rem 1.4rem;
       font-weight  : 600;
       font-size    : $wbu-default-font-size/1.17;
+      z-index      : 1;
+    }
+
+    .img a::before {
+      content         : "";
+      background-color: #333;
+      opacity         : 0.3;
+      position        : absolute;
+      top             : 0;
+      left            : 0;
+      right           : 0;
+      bottom          : 0;
+      z-index         : 0;
     }
   }
 
@@ -60,6 +75,17 @@
         bottom  : 0;
         @include wbu__svg-time-clock($wbu-color-primary);
       }
+    }
+  }
+
+  &.flex-column {
+    .teaser-img-desc__image {
+      width: 100%;
+    }
+
+    .teaser-img-desc__desc {
+      width  : 100%;
+      padding: $wbu-margin $wbu-margin/1.5 0;
     }
   }
 }

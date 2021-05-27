@@ -1,0 +1,73 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "../../../organisme/owls/owl-default.scss";
+@use "../../../atome/typography/h4.scss";
+
+.item-section {
+  font-size    : 1.4rem;
+  max-width    : 560px;
+  padding-left : 1.5rem;
+  padding-right: 1.5rem;
+  @include media-min('DD') {
+    max-width    : 700px;
+    padding-left : 0;
+    padding-right: 0;
+  }
+  margin-left  : auto;
+  margin-right : auto;
+  padding-top  : 20px;
+  border-top   : 1px solid $wbu-border-color;
+
+  .titre-bold,
+  .titre-light {
+    font-size  : $wbu-default-font-size*3.5;
+    font-weight: 300;
+    line-height: 1.1;
+  }
+
+  .titre-bold {
+    font-weight  : 700;
+    margin-bottom: $wbu-margin*2;
+  }
+
+  .titre {
+    margin-bottom: div($wbu-margin, 2);
+  }
+
+  .description {
+    margin-bottom: 1rem;
+  }
+
+  .link {
+    align-items: center;
+    font-weight: 500;
+
+    svg {
+      margin-right: 1rem;
+      fill        : $wbu-color-primary;
+    }
+  }
+
+  .d-flex {
+    flex-direction: column;
+
+    .item {
+      width: 100%;
+    }
+    @include media-min('DD') {
+      flex-direction: row;
+
+      .item {
+        width: 58%;
+      }
+
+      .item.text {
+        width       : 38%;
+        margin-right: 4%;
+      }
+    }
+
+    &.link {
+      flex-direction: row;
+    }
+  }
+}

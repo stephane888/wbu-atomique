@@ -1,0 +1,49 @@
+@use "../../wbu-ressources.scss" as *;
+@use "../../atome/stan/seeMore.scss";
+
+.lmsg_call_toaction {
+  &__container {
+    border-top: 1rem solid $wbu-color-primary;
+    box-shadow: 3px 4px 20px rgba(0, 0, 0, 0.1);
+    position  : relative;
+
+    .titre {
+      padding: $wbu-margin*2 $wbu-margin*2 $wbu-margin*2 $wbu-margin/2;
+    }
+
+    .content-txt {
+      padding    : $wbu-margin*2 $wbu-margin*2 $wbu-margin*2 $wbu-margin/2;
+      font-size  : $wbu-default-font-size*1.18;
+      line-height: $wbu-default-line-height*1.2;
+    }
+
+    .seeMore {
+      display   : inline-block;
+      margin    : 0;
+      color     : #FFF;
+      background: #000;
+
+      a {
+        color: #FFF;
+      }
+    }
+
+    .new-badge {
+      position         : absolute;
+      top              : -18px;
+      left             : 0;
+      background       : #ff7d83;
+      box-shadow       : 0 2px 2px rgb(0 0 0 / 25%);
+      border-radius    : 4px;
+      -webkit-transform: rotate(-4deg);
+      transform        : rotate(-4deg);
+      padding          : $wbu-margin/3;
+      font-weight      : 600;
+      color            : #FFF;
+
+      svg {
+        margin-right: $wbu-margin/3;
+      }
+    }
+  }
+}

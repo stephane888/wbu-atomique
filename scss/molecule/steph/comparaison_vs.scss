@@ -1,0 +1,23 @@
+@use "../../wbu-ressources.scss" as *;
+
+.comparaison_vs {
+  @include media-min(DD) {
+    margin-left : -$wbu-margin*4;
+    margin-right: -$wbu-margin*4;
+  }
+  margin-bottom: $wbu-margin*2.5;
+
+  .content-img {
+    img {
+      margin   : 0;
+      max-width: 100%;
+    }
+    margin-bottom: $wbu-margin*1.2;
+  }
+
+  .content-text {
+    .titre {
+      margin-bottom: $wbu-margin;
+    }
+  }
+}

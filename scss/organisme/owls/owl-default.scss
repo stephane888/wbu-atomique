@@ -4,12 +4,58 @@ $owl-color-active: $wbu-color-primary !default;
 $owl-color-default: $wbu-border-color !default;
 
 .owl-carousel {
-  .owl-item img {
-    height: auto;
+  .owl-item {
+    > div {
+      width: 100%;
+    }
+
+    img {
+      height: auto;
+    }
+  }
+
+  .owl-nav {
+    [class*='owl-'] {
+      margin       : 0;
+      background   : transparent;
+      border-radius: 0;
+      @include WBUtransition();
+
+      &:hover {
+        background-color: $wbu-color-primary;
+        border-color    : $wbu-color-primary;
+      }
+    }
+
+    .owl-svg-nav {
+      width  : 40px;
+      height : 40px;
+      border : 0.2rem solid $wbu-border-color;
+      padding: 0.5rem;
+      fill   : $wbu-border-color;
+    }
+
+    .owl-prev {
+      position : absolute;
+      left     : auto;
+      bottom   : auto;
+      top      : 2rem;
+      right    : calc(1.5rem + 40px + 1.5rem);
+      transform: rotateZ(-90deg);
+    }
+
+    .owl-next {
+      position : absolute;
+      left     : auto;
+      bottom   : auto;
+      top      : 2rem;
+      right    : 1.5rem;
+      transform: rotateZ(90deg);
+    }
   }
 
   .owl-dots {
-    display        : flex;
+    display        : flex !important;
     flex-wrap      : wrap;
     justify-content: left;
     align-items    : unset;
@@ -21,6 +67,10 @@ $owl-color-default: $wbu-border-color !default;
       margin-bottom: 0.3rem;
       margin-left  : 0.4rem;
       border       : 1px solid $owl-color-default;
+
+      span {
+        background: $owl-color-default;
+      }
       align-items  : center;
 
       img {
@@ -30,6 +80,10 @@ $owl-color-default: $wbu-border-color !default;
 
       &.active {
         border-color: $owl-color-active;
+
+        span {
+          background: $owl-color-active;
+        }
       }
     }
   }

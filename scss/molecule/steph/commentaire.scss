@@ -1,0 +1,21 @@
+@use "../../wbu-ressources.scss" as *;
+
+.commentaire {
+  padding      : $wbu-margin*1.5 $wbu-margin;
+  font-size    : $wbu-default-font-size * 1.8;
+  position     : relative;
+  @include media-min('DD') {
+    padding: $wbu-margin*2 $wbu-margin*1.5;
+    margin : $wbu-margin*2 $wbu-margin*1.5 $wbu-margin*2.5;
+  }
+  border-top   : 2px solid darken($wbu-border-color,50);
+  border-bottom: 2px solid darken($wbu-border-color,50);
+
+  &::before {
+    @include wbu_svg_quote_before();
+  }
+
+  &::after {
+    @include wbu_svg_quote_after();
+  }
+}
