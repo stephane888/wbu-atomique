@@ -46,7 +46,10 @@
     "not ie 11"
   ],
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "@splidejs/splide": "^2.4.21",
     "bootstrap": "^4.6.0",
+    "glider-js": "^1.7.7",
     "image-webpack-loader": "^7.0.1",
     "imagemin": "^7.0.1",
     "slick-carousel": "^1.8.1",
