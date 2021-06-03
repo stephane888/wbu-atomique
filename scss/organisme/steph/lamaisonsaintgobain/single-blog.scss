@@ -1,75 +1,65 @@
 @use "../../../wbu-ressources.scss" as *;
-@use "../../../atome/typography/h1";
-@use "../../../atome/typography/p";
+@use "../../../bootstrap-grid.scss";
+@use "../../../molecule/stan/billetDeBlogTeaser";
 $wbu-single-blog-width-body: 770px;
 
 .single-blog {
-  max-width   : $wbu-single-blog-width-body;
-  margin-left : auto;
-  margin-right: auto;
-  font-size   : $wbu-default-font-size*1.29;
-  line-height : $wbu-default-line-height*1.29;
+  margin-left : -$grid-gutter-width/2;
+  margin-right: -$grid-gutter-width/2;
 
-  &--body,
-  &--images {
+  .billetDeBlogTeaser {
+    margin-bottom: $wbu-margin*4.8;
+    height       : 375px;
+    @include media-min('DD') {
+      height: 530px;
+    }
+
+    .background {
+      padding-top: $wbu-margin*1.25;
+    }
+
+    &__text {
+      text-align  : center;
+      max-width   : $wbu-single-blog-width-body;
+      margin-left : auto;
+      margin-right: auto;
+
+      .title {
+        font-size    : $wbu-default-font-size*3;
+        font-weight  : 700;
+        margin-bottom: $wbu-margin*1.25;
+        line-height  : 1.2;
+      }
+
+      .infos {
+        font-size    : $wbu-default-font-size*1.2;
+        font-weight  : 600;
+        margin-bottom: $wbu-margin*1.25;
+
+        .date {
+          margin      : 0;
+          font-size   : inherit;
+          margin-right: $wbu-margin;
+        }
+
+        * {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &--description {
+    max-width   : $wbu-single-blog-width-body;
+    margin-left : auto;
+    margin-right: auto;
+    font-size   : $wbu-default-font-size*1.2;
     @include media-min('DD') {
       img {
         margin-left : -$grid-gutter-width*2;
         margin-right: -$grid-gutter-width*2;
         max-width   : calc(100% + #{$grid-gutter-width*4});
       }
-    }
-  }
-
-  &--title {
-    text-align: center;
-  }
-
-  &--images {
-    margin-bottom: $wbu-margin*2;
-  }
-
-  &--introduction {
-    margin-bottom: $wbu-margin*2;
-    font-weight  : 400;
-  }
-
-  &--tags {
-    display        : flex;
-    justify-content: center;
-    font-size      : $wbu-default-font-size/1.18;
-    font-weight    : 500;
-    color          : lighten($wbu-color-text, 20);
-    margin-bottom  : $wbu-margin;
-
-    .item {
-      margin-right: $wbu-margin/2;
-      display     : inline-flex;
-
-      a {
-        padding: $wbu-margin/4 $wbu-margin/1.5;
-        border : 1px solid $wbu-border-color;
-        color  : inherit;
-      }
-    }
-  }
-
-  &--icones_info {
-    display        : flex;
-    justify-content: center;
-    margin-bottom  : $wbu-margin;
-    font-size      : $wbu-default-font-size/1.18;
-
-    .item {
-      margin-right: $wbu-margin/2;
-    }
-  }
-
-  &--body {
-    margin-bottom: $wbu-margin*2.5;
-
-    p + p img {
-      margin-top: $wbu-margin;
     }
 
     h2 {
@@ -82,36 +72,6 @@ $wbu-single-blog-width-body: 770px;
         border-top   : 1px solid $wbu-border-color;
         margin-bottom: $wbu-margin*2;
         margin-top   : $wbu-margin*3.2;
-      }
-    }
-  }
-
-  .single-blog--owl {
-    .owl-nav {
-      .owl-prev {
-        left  : 0;
-        right : auto;
-        top   : auto;
-        bottom: 8rem;
-      }
-
-      .owl-next {
-        left  : 5rem;
-        right : auto;
-        top   : auto;
-        bottom: 8rem;
-      }
-    }
-
-    .owl-nav {
-      position    : relative;
-      max-width   : 500px;
-      width       : calc(100% - 60px);
-      margin-left : auto;
-      margin-right: auto;
-      @include media-min('DD') {
-        max-width: 100%;
-        width    : calc(100% - 100px);
       }
     }
   }

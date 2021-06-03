@@ -3,6 +3,12 @@
 
 .teaser-img-desc {
   margin-bottom: $wbu-margin * 1.5;
+
+  &.flex-column {
+    @include media-min('DD') {
+      margin-bottom: 0;
+    }
+  }
   position     : relative;
   z-index      : 1;
 
