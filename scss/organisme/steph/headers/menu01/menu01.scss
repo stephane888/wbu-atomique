@@ -1,0 +1,109 @@
+@use "../../../../wbu-ressources.scss" as *;
+
+.menu01 {
+  padding-top   : 0;
+  padding-bottom: 0;
+
+  .container-menu {
+    padding-top   : $wbu-margin/4;
+    padding-bottom: $wbu-margin/4;
+    position      : relative;
+  }
+
+  .navbar-brand {
+    max-height: 70px;
+    max-width : 180px;
+    display   : inline-flex;
+
+    img {
+      max-height: 100%;
+      max-width : 100%;
+    }
+  }
+
+  .menu {
+    .navbar-nav {
+      padding-top   : $wbu-margin;
+      padding-bottom: $wbu-margin*1.5;
+      @include media-min('DD') {
+        padding-top   : 0;
+        padding-bottom: 0;
+      }
+
+      .nav-item {
+        font-weight   : bold;
+        text-transform: uppercase;
+
+        &.active {
+          color: $wbu-color-primary;
+        }
+
+        &:hover {
+          color: $wbu-color-primary;
+        }
+
+        .nav-link {
+          color        : inherit;
+          padding-left : 0;
+          padding-right: 0;
+          @include media-min('DD') {
+            padding-left : $wbu-margin;
+            padding-right: $wbu-margin;
+          }
+        }
+      }
+    }
+  }
+
+  &__search {
+    @include media-min('DD') {
+      padding-left: $wbu-margin;
+      width       : $wbu-margin/2;
+      height      : $wbu-margin;
+    }
+
+    .icon {
+      display : none;
+      @include media-min('DD') {
+        display: block;
+      }
+      cursor  : pointer;
+      position: absolute;
+    }
+
+    &--form {
+      @include media-min('DD') {
+        position: absolute;
+      }
+      padding   : 2rem;
+      border-top: 1px solid $wbu-border-color;
+      min-width : 300px;
+      right     : 0;
+      left      : auto;
+      bottom    : auto;
+      top       : 100%;
+      visibility: visible;
+      @include WBUtransition();
+    }
+
+    &.fermer {
+      .icon.fermer {
+        display: none;
+      }
+
+      .menu01__search--form {
+        @include media-min('DD') {
+          margin-top: $wbu-margin*2;
+          opacity   : 0;
+          visibility: hidden;
+        }
+      }
+    }
+
+    &.ouvert {
+      .icon.ouvert {
+        display: none;
+      }
+    }
+  }
+}

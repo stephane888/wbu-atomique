@@ -1,6 +1,6 @@
 {
-  "name": "wbu-atomique",
-  "version": "1.0.3",
+  "name": "@stephane888/wbu-atomique",
+  "version": "1.0.4",
   "description": "Ce module  a été créer pour stocker nos différents composants en suivant le principe de l'atomique design",
   "main": "src/index.js",
   "scripts": {
@@ -47,6 +47,7 @@
   ],
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
+    "@popperjs/core": "^2.9.2",
     "@splidejs/splide": "^2.4.21",
     "bootstrap": "^4.6.0",
     "glider-js": "^1.7.7",

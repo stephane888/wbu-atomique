@@ -1,0 +1,38 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "../../../molecule/steph/socials-items.scss";
+$wbu-default-font-size-head: $wbu-default-font-size - 0.1rem;
+
+.fm-header-thegem-01 {
+  font-size: $wbu-default-font-size-head;
+
+  .item {
+    margin-top   : $wbu-margin/1.7;
+    margin-bottom: $wbu-margin/1.7;
+  }
+
+  .btn {
+    font-size: $wbu-default-font-size-head;
+  }
+
+  .link-text {
+    > .col,
+    .btn {
+      white-space: nowrap;
+    }
+
+    .link {
+      color: inherit;
+    }
+
+    .angle-right {
+      &::before {
+        @include wbu__angle-right();
+        content     : "";
+        display     : inline-block;
+        width       : $wbu-default-font-size-head - 0.45rem;
+        height      : $wbu-default-font-size-head - 0.45rem;
+        margin-right: 0.3rem;
+      }
+    }
+  }
+}
