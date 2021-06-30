@@ -1,5 +1,109 @@
 @use "../../../wbu-ressources.scss" as *;
+$wbu-h1-font-size: $wbu-h1-font-size*1.5;
+$wbu-h1-line-height: $wbu-h1-line-height*1.5;
+@use "../../../atome/typography/h1.scss";
+$width-content: 700px;
+$border-width: 1rem;
 
 .fm-hero-thegem-18 {
-  //
+  min-height     : 100vh;
+  background-size: cover;
+  position       : relative;
+  z-index        : 1;
+
+  .container {
+    z-index  : 2;
+    position : relative;
+    max-width: 1000px;
+  }
+
+  &__border {
+    display     : none;
+    @include media-min('SM') {
+      display: block;
+    }
+    position    : absolute;
+    z-index     : -1;
+    top         : 0;
+    bottom      : 0;
+    right       : auto;
+    left        : 0;
+    width       : 60%;
+    border      : $border-width solid #fff;
+    border-right: none;
+
+    &::after,
+    &::before {
+      content   : "";
+      width     : $border-width;
+      height    : 5rem;
+      background: #FFF;
+      left      : 100%;
+      right     : auto;
+      display   : block;
+      position  : absolute;
+    }
+
+    &::after {
+      bottom: -#{$border-width};
+      top   : auto;
+      @include media-min('DD') {
+        bottom: -#{$border-width*2};
+      }
+    }
+
+    &::before {
+      top   : -#{$border-width};
+      bottom: auto;
+      @include media-min('DD') {
+        top: -#{$border-width*2};
+      }
+    }
+    @include media-min('DD') {
+      border-width: $border-width*2;
+
+      &::after,
+      &::before {
+        width: $border-width*2;
+      }
+    }
+  }
+
+  &__content {
+    color     : #FFF;
+    padding   : $wbu-margin*1.5 $wbu-margin;
+    font-size : $wbu-default-font-size*1.8;
+    margin-top: $wbu-margin;
+    @include media-min('SM') {
+      padding  : $wbu-margin*3 $wbu-margin*2;
+      font-size: $wbu-default-font-size*2.2;
+    }
+    @include media-min('DD') {
+      padding: $wbu-margin*4 $wbu-margin*3;
+    }
+
+    .title {
+      color: #FFF;
+    }
+
+    .desscription {
+      padding  : $wbu-margin 0;
+      max-width: $width-content;
+      @include media-min('DD') {
+        padding: $wbu-margin*1.5 0;
+      }
+    }
+  }
+
+  &::after {
+    content         : "";
+    display         : block;
+    position        : absolute;
+    background-color: rgb(10 12 41 / 58%);
+    z-index         : 0;
+    top             : 0;
+    bottom          : 0;
+    right           : 0;
+    left            : 0;
+  }
 }
