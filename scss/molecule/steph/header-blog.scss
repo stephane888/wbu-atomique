@@ -3,18 +3,17 @@
 @use "../../atome/typography/p";
 
 .header-blog {
-  margin-bottom: $wbu-margin*2.5;
-  font-size    : $wbu-default-font-size*1.89;
-  line-height  : 1.1;
-  text-align   : center;
-  @include media-min('DD') {
-    text-align : left;
-    font-size  : $wbu-default-font-size*1.32;
+  font-size: $wbu-default-font-size * 1.89;
+  line-height: 1.1;
+  text-align: center;
+  @include media-min("DD") {
+    text-align: left;
+    font-size: $wbu-default-font-size * 1.32;
     line-height: 1.65;
   }
 
   p {
-    font-size    : inherit;
+    font-size: inherit;
     margin-bottom: 0;
   }
 }

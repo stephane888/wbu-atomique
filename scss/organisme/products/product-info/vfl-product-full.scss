@@ -1,0 +1,41 @@
+@use "../../../wbu-ressources.scss" as *;
+.vfl-product-full {
+  //
+  .item {
+    color: inherit;
+    padding: 0;
+    .item-label {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: $wbu-default-font-size;
+      color: inherit;
+      @include addTwoPointAfterLabel();
+    }
+  }
+  //
+  .title {
+    font-size: $wbu-default-font-size * 1.5;
+    line-height: $wbu-default-line-height * 1.5;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: $wbu-margin;
+  }
+  //
+  .price {
+    font-size: $wbu-default-font-size * 2;
+    font-weight: 600;
+    margin-bottom: $wbu-margin;
+    color: $wbu-color-primary;
+  }
+  //
+  .button {
+    margin-bottom: $wbu-margin;
+  }
+  //
+  .reference {
+    .item-content {
+      font-weight: 500;
+      color: $wbu-color-primary;
+    }
+  }
+}

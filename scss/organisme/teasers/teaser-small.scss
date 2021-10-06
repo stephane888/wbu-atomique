@@ -1,0 +1,23 @@
+@use "../../wbu-ressources.scss" as *;
+.teaser-small {
+  padding-bottom: $wbu-margin;
+  background-color: #fff;
+  .image {
+    img {
+      height: 100px;
+    }
+  }
+  .content-text {
+    padding: $wbu-margin;
+    max-width: 160px;
+    margin-right: $wbu-margin * 0.7;
+    .titre {
+      font-size: $wbu-default-font-size;
+      overflow: hidden;
+      max-height: $wbu-default-font-size * 3.1;
+      a {
+        color: inherit;
+      }
+    }
+  }
+}

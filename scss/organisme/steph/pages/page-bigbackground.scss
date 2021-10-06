@@ -1,0 +1,70 @@
+@use "../../../wbu-ressources.scss" as *;
+@use "../../../atome/typography/h1";
+
+.page-bigbackground {
+  .entete {
+    position: relative;
+    z-index: 1;
+    background-size: 100%;
+    background-position: center;
+    margin-bottom: $wbu-margin * 2;
+    &:before {
+      z-index: -1;
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+  .content-header {
+    min-height: 400px;
+    color: #fff;
+    .title {
+      font-weight: 900;
+      color: #fff;
+      @include media-min(M) {
+        font-size: $wbu-h1-font-size * 1.25;
+      }
+      @include media-min(L) {
+        font-size: $wbu-h1-font-size * 1.5;
+      }
+    }
+  }
+  .body {
+    font-size: $wbu-default-font-size * 1.4;
+    line-height: 1.7;
+    text-align: justify;
+    .block-layout-builder {
+      margin-bottom: $wbu-margin;
+    }
+  }
+
+  .side_bar_left {
+    box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
+    padding: 0 15px 15px 15px;
+    margin-right: -15px;
+    min-height: 100%;
+    .block-layout-builder {
+      margin-bottom: $wbu-margin * 2;
+    }
+    .field__label {
+      font-size: $wbu-default-font-size * 1.6;
+      display: block;
+      margin-bottom: $wbu-margin * 1.5;
+      position: relative;
+      &::before {
+        display: inline-block;
+        content: "";
+        border-bottom: 1px solid #e1e3e5;
+        border-left: 1px solid #e1e3e5;
+        position: absolute;
+        width: 100%;
+        bottom: -10px;
+        left: 0;
+      }
+    }
+  }
+}

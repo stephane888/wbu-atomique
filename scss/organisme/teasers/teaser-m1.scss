@@ -1,0 +1,29 @@
+@use "../../wbu-ressources.scss" as *;
+.teaser-m1 {
+  max-width: calc(100% - #{$wbu-margin * 1.5});
+  border-top: 3px solid $wbu-color-primary;
+  height: 100%;
+  a {
+    color: inherit;
+  }
+  .card-body {
+    position: relative;
+    padding-top: $wbu-margin;
+    .card-title {
+      max-width: calc(100% - #{$wbu-margin * 3});
+    }
+    .icone {
+      font-size: $wbu-default-font-size * 2;
+      position: absolute;
+      color: #fff;
+      background: #000;
+      border-top: 3px solid $wbu-color-primary;
+      padding: $wbu-margin;
+      top: -$wbu-margin * 1.4;
+      right: $wbu-margin;
+      bottom: auto;
+      left: auto;
+      line-height: 0;
+    }
+  }
+}

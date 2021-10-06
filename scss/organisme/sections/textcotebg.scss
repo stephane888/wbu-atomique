@@ -1,0 +1,33 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.textcotebg {
+  padding: $space_top $wbu-margin $space_bottom $wbu-margin;
+  margin: 0;
+  line-height: 1.8;
+  font-size: $wbu-default-font-size * 1.2;
+  background-attachment: fixed;
+  background-position: left bottom !important;
+  .entete {
+    padding: $wbu-margin * 3 $wbu-margin * 3;
+    background-color: #fff;
+
+    .title {
+      margin-bottom: $wbu-margin * 1.5;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+    .description {
+      margin-bottom: $wbu-margin * 1.5;
+    }
+    .call_action {
+      line-height: 1;
+      i {
+        font-size: 4rem;
+        line-height: 0;
+        color: $wbu-color-primary;
+      }
+      .counter {
+        font-weight: 900;
+      }
+    }
+  }
+}

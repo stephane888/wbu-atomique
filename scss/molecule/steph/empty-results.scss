@@ -1,0 +1,6 @@
+@use "../../wbu-ressources.scss" as *;
+.empty-results {
+  font-size: $wbu-default-font-size * 3;
+  margin: $wbu-margin * 3 $wbu-margin;
+  font-weight: 300;
+}

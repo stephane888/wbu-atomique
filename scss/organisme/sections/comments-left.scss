@@ -1,0 +1,17 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.comments-left {
+  overflow: hidden;
+  .row {
+    margin: 0;
+  }
+  .entete {
+    color: #fff;
+    padding: $wbu-margin * 3 $wbu-margin * 2;
+    background-color: rgba($color: #161616, $alpha: 0.7);
+    .layout-region.title {
+      color: #fff;
+      margin-bottom: $wbu-margin * 2;
+      margin-top: $wbu-margin * 0.5;
+    }
+  }
+}

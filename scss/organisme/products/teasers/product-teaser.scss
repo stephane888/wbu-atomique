@@ -1,0 +1,79 @@
+@use "../../../wbu-ressources.scss" as *;
+.product-teaser {
+  box-shadow: 0px 2px 6px rgb(129 129 129 / 21%);
+  .field--name-quantity {
+    display: none;
+  }
+  .field {
+    display: flex;
+  }
+  .item {
+    margin-bottom: $wbu-margin;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    .item-label {
+      color: darken($wbu-color-text, 50%);
+      &::after {
+        content: ":";
+        display: inline-block;
+        padding: 0 2px;
+      }
+    }
+  }
+  .image {
+    position: relative;
+    margin: 0;
+    margin-bottom: $wbu-margin;
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      bottom: auto;
+      max-height: 100%;
+      width: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .reference {
+    .item-content {
+      font-weight: 500;
+      color: $wbu-color-primary;
+    }
+  }
+  .price {
+    font-size: $wbu-default-font-size * 1.5;
+    font-weight: 600;
+    color: $wbu-color-primary;
+  }
+  .title {
+    margin-bottom: $wbu-margin * 1.5;
+    font-size: $wbu-default-font-size * 1.2;
+    font-weight: 500;
+    @include traitBottom($wbu-margin, $wbu-color-primary, $wbu-margin-left: 0);
+    a {
+      color: $wbu-color-text;
+    }
+  }
+  .button {
+    .item-content {
+      width: 100%;
+    }
+  }
+  .stock {
+    .field {
+      justify-content: end;
+    }
+    .item-content {
+      display: flex;
+      justify-content: end;
+      *:first-child {
+        padding-right: 5px;
+      }
+    }
+  }
+}

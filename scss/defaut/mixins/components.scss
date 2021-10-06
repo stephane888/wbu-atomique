@@ -2,585 +2,628 @@
  * Chargement progressif
  */
 @mixin load_progressive_image() {
-	position: relative;
-	z-index : 1;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 400ms, -webkit-backdrop-filter 400ms,
+      -webkit-backdrop-filter 400ms;
+  }
 
-	&::after {
-		content   : "";
-		position  : absolute;
-		top       : 0;
-		left      : 0;
-		bottom    : 0;
-		right     : 0;
-		z-index   : -1;
-		filter: blur(10px);
-		backdrop-filter: blur(10px);
-		transition: all 400ms, -webkit-backdrop-filter 400ms, -webkit-backdrop-filter 400ms;
-	}
-
-	&.lazyloaded::after {
-		filter: none;
-		backdrop-filter: none;
-	}
+  &.lazyloaded::after {
+    filter: none;
+    backdrop-filter: none;
+  }
 }
+
 /**
  * Affichage de la langue.
  * Model simple.
  */
-@mixin select_langue($padding:0.3em) {
-	.nav-link {
-		padding       : $padding;
-		color         : $text_normal;
-		text-transform: uppercase;
-	}
+@mixin select_langue($padding: 0.3em) {
+  .nav-link {
+    padding: $padding;
+    color: $text_normal;
+    text-transform: uppercase;
+  }
 
-	.nav-link.active,
-	.nav-link.is-active {
-		color: $link_color;
-	}
+  .nav-link.active,
+  .nav-link.is-active {
+    color: $link_color;
+  }
 }
+
 /**
  *
  */
-@mixin effet_boutton($color:$color2, $color_hover:$color2) {
-	display      : flex;
-	align-items  : center;
-	margin-top   : 1em;
-	margin-bottom: 0.8em;
-	@include media-min(DD) {
-		margin-top   : -3px;
-		padding-left : 2em;
-		margin-bottom: 0;
-	}
+@mixin effet_boutton($color: $color2, $color_hover: $color2) {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+  @include media-min(DD) {
+    margin-top: -3px;
+    padding-left: 2em;
+    margin-bottom: 0;
+  }
 
-	> a {
-		padding      : 0.9em 2em;
-		border       : 1px solid $color;
-		border-radius: 25px;
-		color        : $color;
-		@include WBUtransition();
-	}
+  > a {
+    padding: 0.9em 2em;
+    border: 1px solid $color;
+    border-radius: 25px;
+    color: $color;
+    @include WBUtransition();
+  }
 
-	&:hover {
-		> a {
-			border-color: $color_hover;
-			color       : #ffffff;
-			background  : $color_hover;
-		}
-	}
+  &:hover {
+    > a {
+      border-color: $color_hover;
+      color: #ffffff;
+      background: $color_hover;
+    }
+  }
 }
+
 @mixin LabelAddRequiredStar($color_star) {
-	position: relative;
-
-	&::after {
-		content    : "*";
-		padding    : 0 0.5em;
-		color      : $color_star;
-		position   : absolute;
-		right      : -1em;
-		font-size  : 1.8em;
-		top        : 0;
-		line-height: 1.1;
-		display    : block;
-	}
+  position: relative;
+  &::after {
+    content: "*";
+    padding: 0 0.5em;
+    color: $color_star;
+    position: absolute;
+    right: -1em;
+    font-size: 1.8em;
+    top: 0;
+    line-height: 1.1;
+    display: block;
+  }
 }
+
 @mixin requiredFieldForm($color_star: $color1) {
-	label.form-required {
-		@include LabelAddRequiredStar($color_star);
-	}
+  label.form-required {
+    @include LabelAddRequiredStar($color_star);
+  }
 
-	.js-form-type-checkbox {
-		input.required + label {
-			@include LabelAddRequiredStar($color_star);
+  .js-form-type-checkbox {
+    input.required + label {
+      @include LabelAddRequiredStar($color_star);
 
-			&::after {
-				display : inline-block;
-				position: relative;
-				padding : 0;
-				height  : 17px;
-				overflow: hidden;
-				right   : -2px;
-			}
-		}
-		/*
-		label::after{display: none;}
-		input{
-			@include LabelAddRequiredStar();
-			position: absolute;
-		}
-	*/
-	}
+      &::after {
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        height: 17px;
+        overflow: hidden;
+        right: -2px;
+      }
+    }
+  }
 }
 /**
  * Card rotation
  */
-@mixin card_rotation($background_bg:#3c5265) {
-	padding      : 0;
-	border       : none;
-	border-radius: 0;
-	//overflow: hidden;
-	@include rotatePerpective($width: 292px, $height: 400px, $time: 0.5s);
+@mixin card_rotation($background_bg: #3c5265) {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  //overflow: hidden;
+  @include rotatePerpective($width: 292px, $height: 400px, $time: 0.5s);
 
-	.card-header {
-		padding      : 0;
-		border       : none;
-		border-radius: 0;
-		max-height   : 400px;
-		overflow     : hidden;
+  .card-header {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    max-height: 400px;
+    overflow: hidden;
 
-		img {
-			max-width: 350px;
-		}
-	}
+    img {
+      max-width: 350px;
+    }
+  }
 
-	.card-body {
-		overflow: hidden;
-	}
+  .card-body {
+    overflow: hidden;
+  }
 
-	.card-text {
-		padding-bottom: 1.5em;
-	}
+  .card-text {
+    padding-bottom: 1.5em;
+  }
 }
 /**
 * translation on hover
 */
-@mixin WBUtransition($propriete:all, $temps:0.3s, $style:ease-in-out) {
-	transition-property       : $propriete;
-	transition-duration       : $temps;
-	transition-timing-function: $style;
+@mixin WBUtransition($propriete: all, $temps: 0.3s, $style: ease-in-out) {
+  transition-property: $propriete;
+  transition-duration: $temps;
+  transition-timing-function: $style;
 }
 /**
 * Before cover
 */
 @mixin beforeCover($bg_color: rgba(5, 12, 29, 0.4), $zindex: 0) {
-	z-index : 2;
-	position: relative;
+  z-index: 2;
+  position: relative;
 
-	&::before {
-		background-color: $bg_color;
-		z-index         : $zindex;
-		right           : 0;
-		bottom          : 0;
-		display         : block;
-		left            : 0;
-		top             : 0;
-		position        : absolute;
-		content         : '';
-	}
+  &::before {
+    background-color: $bg_color;
+    z-index: $zindex;
+    right: 0;
+    bottom: 0;
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+  }
 }
 /**
 * Before cover
 */
 @mixin afterCover($bg_color: rgba(5, 12, 29, 0.4)) {
-	z-index : 2;
-	position: relative;
+  z-index: 2;
+  position: relative;
 
-	&::after {
-		background-color: $bg_color;
-		z-index         : 0;
-		right           : 0;
-		bottom          : 0;
-		display         : block;
-		left            : 0;
-		top             : 0;
-		position        : absolute;
-		content         : '';
-	}
+  &::after {
+    background-color: $bg_color;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+  }
 }
 /**
  *  pas de retour à la ligne
  */
-@mixin notbackline($width:100px) {
-	height       : auto;
-	width        : $width;
-	overflow     : hidden;
-	white-space  : nowrap;
-	text-overflow: ellipsis;
+@mixin notbackline($width: 100px) {
+  height: auto;
+  width: $width;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 /**
- *  mixin for multiline limit text css
+ *  Mixin for multiline limit text css
  */
-@mixin multiLineEllipsis($lineHeight:1.2em, $lineCount: 1, $bgColor: white, $text-align:left, $opacity:0.5, $ellipsis-margin-right:0) {
-	overflow                 : hidden;
-	display                  : block;
-	position                 : relative;
-	line-height              : $lineHeight;
-	max-height               : $lineHeight * $lineCount;
-	text-align               : $text-align;
-	margin-right             : -0.5em;
-	padding-right            : 0.5em;
-	word-break               : break-all;
-	$multiLineEllipsis_before: $lineHeight * $lineCount;
+@mixin multiLineEllipsis(
+  $lineHeight: 1.2em,
+  $lineCount: 1,
+  $bgColor: white,
+  $text-align: left,
+  $opacity: 0.5,
+  $ellipsis-margin-right: 0
+) {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: $text-align;
+  margin-right: -0.5em;
+  padding-right: 0.5em;
+  word-break: break-all;
+  $multiLineEllipsis_before: $lineHeight * $lineCount;
 
-	&:before {
-		content     : '...';
-		position    : absolute;
-		right       : 0;
-		top         : -1em;
-		opacity     : $opacity;
-		z-index     : 1;
-		width       : 1em;
-		height      : 1em;
-		margin-right: $ellipsis-margin-right;
-		margin-top  : calc(#{$multiLineEllipsis_before} - 1px);
-	}
+  &:before {
+    content: "...";
+    position: absolute;
+    right: 0;
+    top: -1em;
+    opacity: $opacity;
+    z-index: 1;
+    width: 1em;
+    height: 1em;
+    margin-right: $ellipsis-margin-right;
+    margin-top: calc(#{$multiLineEllipsis_before} - 1px);
+  }
 
-	&:after {
-		content     : '';
-		position    : absolute;
-		right       : 0;
-		top         : -1em;
-		width       : 1em;
-		height      : 1em;
-		margin-top  : $lineHeight * $lineCount;
-		background  : $bgColor;
-		margin-right: $ellipsis-margin-right;
-	}
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -1em;
+    width: 1em;
+    height: 1em;
+    margin-top: $lineHeight * $lineCount;
+    background: $bgColor;
+    margin-right: $ellipsis-margin-right;
+  }
 }
 //https://codepen.io/wabeshew/pen/XdbBdM
 @mixin waitingboule() {
-	$width        : 15px;
-	$height       : 15px;
-	$bounce_height: 30px;
+  $width: 15px;
+  $height: 15px;
+  $bounce_height: 30px;
 
-	.bounceball {
-		position: relative;
-		display : inline-block;
-		height  : 37px;
-		width   : $width;
+  .bounceball {
+    position: relative;
+    display: inline-block;
+    height: 37px;
+    width: $width;
 
-		&:before {
-			position        : absolute;
-			content         : '';
-			display         : block;
-			top             : 0;
-			width           : $width;
-			height          : $height;
-			border-radius   : 50%;
-			background-color: #fbae17;
-			transform-origin: 50%;
-			animation       : bounce 500ms alternate infinite ease;
-		}
-	}
-	@keyframes bounce {
-		0% {
-			top          : $bounce_height;
-			height       : 5px;
-			border-radius: 60px 60px 20px 20px;
-			transform    : scaleX(2);
-		}
+    &:before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 0;
+      width: $width;
+      height: $height;
+      border-radius: 50%;
+      background-color: #fbae17;
+      transform-origin: 50%;
+      animation: bounce 500ms alternate infinite ease;
+    }
+  }
+  @keyframes bounce {
+    0% {
+      top: $bounce_height;
+      height: 5px;
+      border-radius: 60px 60px 20px 20px;
+      transform: scaleX(2);
+    }
 
-		35% {
-			height       : $height;
-			border-radius: 50%;
-			transform    : scaleX(1);
-		}
+    35% {
+      height: $height;
+      border-radius: 50%;
+      transform: scaleX(1);
+    }
 
-		100% {
-			top: 0;
-		}
-	}
+    100% {
+      top: 0;
+    }
+  }
 }
 /*!
  * .list-element{@include list-element(($paddingY:10px, $paddingX:5px, $borderW:1px));}
  */
-@mixin list-element($paddingT:10px, $paddingB:10px, $paddingL:5px, $paddingR:5px, $borderW:1px) {
-	margin    : 0;
-	list-style: none;
-	padding   : 0;
-	max-width : 600px;
+@mixin list-element(
+  $paddingT: 10px,
+  $paddingB: 10px,
+  $paddingL: 5px,
+  $paddingR: 5px,
+  $borderW: 1px
+) {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
 
-	li {
-		padding        : $paddingT $paddingR $paddingB $paddingL;
-		display        : flex;
-		margin         : 0;
-		justify-content: space-between;
-		border-bottom  : $borderW solid $border-color;
+  li {
+    padding: $paddingT $paddingR $paddingB $paddingL;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    border-bottom: $borderW solid $border-color;
 
-		> *:first-child {
-			min-width: auto;
-		}
+    > *:first-child {
+      min-width: auto;
+    }
 
-		> *:first-child+* {
-			text-align: right;
-			min-width : 50px;
-		}
-	}
+    > *:first-child + * {
+      text-align: right;
+      min-width: 50px;
+    }
+  }
 }
 /**
  *  Images area to preload,
  *  on ajoute sur la div contenant l'image
  */
-@mixin image-dpace-preload($space:70%) {
-	display : block;
-	position: relative;
-	top     : 0;
-	left    : 0;
-	right   : 0;
-	bottom  : 0;
+@mixin image-dpace-preload($space: 70%) {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-	img {
-		position: absolute;
-		top     : 0;
-		left    : 0;
-	}
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-	&::before {
-		content       : "";
-		display       : block;
-		padding-bottom: $space;
-	}
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: $space;
+  }
 }
 /**
  *
  */
-@mixin linear-gradient($start-color:#929090, $end-color:#e2e2e2, $orientation:'vertical') {
-	background: $start-color;
+@mixin linear-gradient(
+  $start-color: #929090,
+  $end-color: #e2e2e2,
+  $orientation: "vertical"
+) {
+  background: $start-color;
 
-	@if $orientation== 'vertical' {
-		background: -webkit-linear-gradient(top, $start-color, $end-color);
-		background: linear-gradient(to bottom, $start-color, $end-color);
-	} @else 
-	if $orientation=='horizontal' {
-		background: -webkit-linear-gradient(left, $start-color, $end-color);
-		background: linear-gradient(to right, $start-color, $end-color);
-	} @else {
-		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
-		background: radial-gradient(ellipse at center, $start-color, $end-color);
-	}
+  @if $orientation== "vertical" {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  } @else if $orientation== "horizontal" {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  } @else {
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      $start-color,
+      $end-color
+    );
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
 }
 /**
  * Affet Ombre
  */
-@mixin ombre($start-color:#b1b0b0, $end-color:#fffcfc) {
-	@include linear-gradient($start-color, $end-color, $orientation:'vertical');
+@mixin ombre($start-color: #b1b0b0, $end-color: #fffcfc) {
+  @include linear-gradient($start-color, $end-color, $orientation: "vertical");
 }
 @mixin rorationblock() {
-	width              : 400px;
-	height             : 400px;
-	display            : inline-block;
-	position           : relative;
-	color              : #FFF;
-	-webkit-perspective: 600px;
-	perspective        : 600px;
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  -webkit-perspective: 600px;
+  perspective: 600px;
 
-	.face-avant {
-		position                   : absolute;
-		top                        : 0;
-		left                       : 0;
-		background                 : #f00;
-		bottom                     : 0;
-		right                      : 0;
-		width                      : 100%;
-		transform-style            : preserve-3d;
-		backface-visibility        : hidden;
-		-webkit-transform-style    : preserve-3d;
-		-webkit-backface-visibility: hidden;
-		transition                 : 0.8s;
-	}
+  .face-avant {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f00;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    transition: 0.8s;
+  }
 
-	.face-arriere {
-		position                   : absolute;
-		top                        : 0;
-		left                       : 0;
-		background                 : #00F;
-		bottom                     : 0;
-		right                      : 0;
-		width                      : 100%;
-		backface-visibility        : hidden;
-		transform-style            : preserve-3d;
-		transform                  : rotatey(-180deg);
-		-webkit-transform-style    : preserve-3d;
-		-webkit-backface-visibility: hidden;
-		-webkit-transform          : rotatey(-180deg);
-		transition                 : 0.8s;
-	}
+  .face-arriere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00f;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotatey(-180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: rotatey(-180deg);
+    transition: 0.8s;
+  }
 
-	&:hover {
-		.face-arriere {
-			transform        : rotatey(0);
-			-webkit-transform: rotatey(0);
-		}
+  &:hover {
+    .face-arriere {
+      transform: rotatey(0);
+      -webkit-transform: rotatey(0);
+    }
 
-		.face-avant {
-			-webkit-transform: rotatey(180deg);
-			transform        : rotatey(180deg);
-		}
-	}
+    .face-avant {
+      -webkit-transform: rotatey(180deg);
+      transform: rotatey(180deg);
+    }
+  }
 }
 /**
  * Pricelist
  */
-@mixin priceList($background_bg:#3c5265) {
-	padding-top  : 40px;
-	margin-left  : 15px;
-	margin-right : 15px;
-	margin-bottom: 30px;
-	max-width    : 350px;
-	width        : 100%;
+@mixin priceList($background_bg: #3c5265) {
+  padding-top: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  max-width: 350px;
+  width: 100%;
 
-	.card-header {
-		background: $background_bg;
-		position  : relative;
-		z-index   : 0;
-		color     : #FFF;
-		min-height: 90px;
-		font-size : 0.7em;
-		@include media-min(XS) {
-			min-height: 115px;
-			font-size : 1em;
-		}
+  .card-header {
+    background: $background_bg;
+    position: relative;
+    z-index: 0;
+    color: #fff;
+    min-height: 90px;
+    font-size: 0.7em;
+    @include media-min(XS) {
+      min-height: 115px;
+      font-size: 1em;
+    }
 
-		svg {
-			position     : absolute;
-			top          : 0;
-			right        : -19px; //-28px;
-			bottom       : 0;
-			height       : 126%;
-			width        : 110%; //114%;
-			z-index      : -1;
-			border-radius: 8px 0 0 0;
-			max-width    : 600px;
+    svg {
+      position: absolute;
+      top: 0;
+      right: -19px; //-28px;
+      bottom: 0;
+      height: 126%;
+      width: 110%; //114%;
+      z-index: -1;
+      border-radius: 8px 0 0 0;
+      max-width: 600px;
 
-			> path {
-				fill           : $background_bg;
-				stroke         : $background_bg;
-				stroke-width   : 0;
-				stroke-linejoin: round;
-			}
+      > path {
+        fill: $background_bg;
+        stroke: $background_bg;
+        stroke-width: 0;
+        stroke-linejoin: round;
+      }
 
-			> path.ombre-left {
-				fill  : darken($background_bg, 7);
-				stroke: darken($background_bg, 7);
-				d     : path("M 0,80 L 20,79 L 10,100");
-			}
-		}
+      > path.ombre-left {
+        fill: darken($background_bg, 7);
+        stroke: darken($background_bg, 7);
+        d: path("M 0,80 L 20,79 L 10,100");
+      }
+    }
 
-		.title-small {
-			font-weight  : 500;
-			margin       : 0;
-			line-height  : 100%;
-			margin-bottom: 10px;
-			color        : #FFF;
-		}
+    .title-small {
+      font-weight: 500;
+      margin: 0;
+      line-height: 100%;
+      margin-bottom: 10px;
+      color: #fff;
+    }
 
-		.title {
-			font-weight   : 300;
-			text-transform: uppercase;
-			margin        : 0;
-			line-height   : 100%;
-			margin-bottom : 5px;
-			color         : #FFF;
-		}
-	}
+    .title {
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 100%;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+  }
 
-	.card-body {
-		position  : relative;
-		z-index   : 1;
-		background: #FFF;
-		padding   : 2em 0.8rem 0.8rem;
-		@include media-min(XS) {
-			padding: 2em 1.25rem 1.25rem;
-		}
+  .card-body {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 2em 0.8rem 0.8rem;
+    @include media-min(XS) {
+      padding: 2em 1.25rem 1.25rem;
+    }
 
-		&::before {
-			content   : "";
-			width     : 100%;
-			height    : 6px;
-			background: #e2e2e2;
-			@include ombre();
-			top       : 0;
-			left      : 0;
-			position  : absolute;
-		}
-	}
+    &::before {
+      content: "";
+      width: 100%;
+      height: 6px;
+      background: #e2e2e2;
+      @include ombre();
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
 
-	.body-header {
-		padding-left : 1em;
-		border-bottom: 2px solid $background_bg;
-		margin-bottom: 30px;
-	}
+  .body-header {
+    padding-left: 1em;
+    border-bottom: 2px solid $background_bg;
+    margin-bottom: 30px;
+  }
 
-	.card-title.price,
-	.card-title.price-promo {
-		font-size    : 2.2em;
-		line-height  : 100%;
-		font-weight  : 300;
-		margin-bottom: 0.6rem;
-	}
+  .card-title.price,
+  .card-title.price-promo {
+    font-size: 2.2em;
+    line-height: 100%;
+    font-weight: 300;
+    margin-bottom: 0.6rem;
+  }
 
-	.card-title.price.barre {
-		position       : absolute;
-		top            : 10px;
-		right          : 1.25rem;
-		font-size      : 1.2em;
-		text-decoration: line-through;
-		color          : #f5504b;
-	}
+  .card-title.price.barre {
+    position: absolute;
+    top: 10px;
+    right: 1.25rem;
+    font-size: 1.2em;
+    text-decoration: line-through;
+    color: #f5504b;
+  }
 
-	.card-title.price-suffix {
-		font-size   : 0.8em;
-		line-height : 100%;
-		padding-left: 4px;
-	}
+  .card-title.price-suffix {
+    font-size: 0.8em;
+    line-height: 100%;
+    padding-left: 4px;
+  }
 
-	.list {
-		margin-bottom: 15px;
-		line-height  : 1.3em;
-		font-size    : 0.9em;
+  .list {
+    margin-bottom: 15px;
+    line-height: 1.3em;
+    font-size: 0.9em;
 
-		.icone {
-			padding-right: 10px;
+    .icone {
+      padding-right: 10px;
 
-			i {
-				transform: translateX(-2px);
-			}
+      i {
+        transform: translateX(-2px);
+      }
 
-			i.active {
-				color: lighten($color: $background_bg, $amount: 10);
-			}
+      i.active {
+        color: lighten($color: $background_bg, $amount: 10);
+      }
 
-			i.disable {
-				color: #c12f2f;
-			}
-		}
+      i.disable {
+        color: #c12f2f;
+      }
+    }
 
-		.explication {
-			font-size: 0.8em;
-		}
-	}
+    .explication {
+      font-size: 0.8em;
+    }
+  }
 
-	.btn {
-		color       : $background_bg;
-		border-color: $background_bg;
-	}
+  .btn {
+    color: $background_bg;
+    border-color: $background_bg;
+  }
 
-	.btn:hover {
-		color           : #FFF;
-		background-color: saturate($color: $background_bg, $amount: 25%);
-		border-color    : saturate($color: $background_bg, $amount: 25%);
-	}
+  .btn:hover {
+    color: #fff;
+    background-color: saturate($color: $background_bg, $amount: 25%);
+    border-color: saturate($color: $background_bg, $amount: 25%);
+  }
 
-	.btn.focus,
-	.btn:focus {
-		box-shadow: 0 0 0 0.2rem rgba($background_bg, 0.5);
-	}
+  .btn.focus,
+  .btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba($background_bg, 0.5);
+  }
 
-	.actions {
-		border-top : 1px solid $background_bg;
-		margin-top : 1em;
-		padding-top: 1.5em;
-		position   : relative;
+  .actions {
+    border-top: 1px solid $background_bg;
+    margin-top: 1em;
+    padding-top: 1.5em;
+    position: relative;
 
-		&::before {
-			@include ombre($start-color:#b1b0b0, $end-color:#fffcfc);
-			content : "";
-			position: absolute;
-			top     : 0;
-			left    : 0;
-			right   : 0;
-			bottom  : auto;
-			height  : 2px;
-		}
-	}
+    &::before {
+      @include ombre($start-color: #b1b0b0, $end-color: #fffcfc);
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: auto;
+      height: 2px;
+    }
+  }
+}
+
+@mixin traitBottom(
+  $wbu-margin,
+  $wbu-border-color,
+  $wbu-width: 40px,
+  $wbu-margin-left: auto
+) {
+  &::after {
+    content: "";
+    margin-top: $wbu-margin * 0.8;
+    background-color: $wbu-border-color;
+    display: block;
+    margin-left: $wbu-margin-left;
+    margin-right: auto;
+    width: $wbu-width;
+    height: 2px;
+  }
+}
+
+@mixin addTwoPointAfterLabel() {
+  &::after {
+    content: ":";
+    display: inline-block;
+    padding: 0 2px;
+  }
 }
