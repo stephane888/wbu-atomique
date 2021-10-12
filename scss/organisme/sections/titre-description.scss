@@ -24,4 +24,28 @@
       }
     }
   }
+  &.bar-left {
+    padding-left: $space_inner_top;
+    position: relative;
+    &::after {
+      content: "";
+      width: 3px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: auto;
+      position: absolute;
+      background-color: $wbu-color-primary;
+    }
+    .description {
+      max-width: 100%;
+    }
+    .title {
+      max-width: 100%;
+      &::after {
+        display: none;
+      }
+    }
+  }
 }

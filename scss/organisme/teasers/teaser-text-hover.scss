@@ -1,0 +1,71 @@
+@use "../../wbu-ressources.scss" as *;
+$transition: 0.4s;
+$delay: 0s;
+.teaser-text-hover {
+  overflow: hidden;
+  img {
+    transition: all $transition cubic-bezier(0.215, 0.61, 0.355, 1) $delay;
+    transform: scale(1) rotate(0deg);
+  }
+  .titre {
+    padding-left: $wbu-margin;
+    position: relative;
+    color: #fff;
+    a {
+      color: inherit;
+    }
+    &::before {
+      content: "";
+      width: 2px;
+      top: 0;
+      right: auto;
+      bottom: 0;
+      left: 0;
+      background-color: $wbu-color-primary;
+      position: absolute;
+    }
+  }
+  &::before {
+    content: "";
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#000000),
+      to(transparent)
+    );
+    background: linear-gradient(to top, #000000, transparent);
+    opacity: 0.8;
+    height: 60%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .card-body {
+    transition: all $transition cubic-bezier(0.215, 0.61, 0.355, 1) $delay;
+    transform: translate3d(0, 0, 0);
+    position: absolute !important;
+    bottom: auto;
+    top: calc(100% - 50px);
+    color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+  &:hover {
+    &::before {
+      height: 90%;
+    }
+    .card-body {
+      transform: translate3d(0, -70%, 0);
+    }
+    img {
+      transform: scale(1.1) rotate(3deg);
+    }
+  }
+}
