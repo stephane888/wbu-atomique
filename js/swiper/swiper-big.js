@@ -1,14 +1,18 @@
+// import Swiper JS
+// import Swiper from "swiper/bundle";
+//--
 import Swiper, { Navigation, Pagination, Parallax, Autoplay } from "swiper";
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination, Parallax, Autoplay]);
 // import Swiper styles
 import "swiper/css/bundle";
-//import "../../scss/organisme/sections/swiper-big-v3.scss";
 
+//custom style
+//import "../../scss/organisme/sections/swiper-big.scss";
 /**
  * --
  */
-var mySwiper = new Swiper(".swiper-big-v3", {
+var mySwiper = new Swiper(".swiper-big", {
   direction: "horizontal",
   loop: true,
   pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },

@@ -3,53 +3,62 @@
 
 .teaser-img-desc {
   margin-bottom: $wbu-margin * 1.5;
-
-  &.flex-column {
-    @include media-min('DD') {
-      margin-bottom: 0;
-    }
+  @include WBUtransition();
+  &:hover {
+    display: block;
+    box-shadow: 0 0 15px #0000001c;
   }
-  position     : relative;
-  z-index      : 1;
+
+  // &.flex-column {
+  //   @include media-min("DD") {
+  //     margin-bottom: 0;
+  //   }
+  // }
+  .cover-test {
+    color: inherit;
+    text-decoration: none !important;
+  }
+  position: relative;
+  z-index: 1;
 
   &__image {
-    width   : 260px;
+    width: 260px;
     position: relative;
 
     .categorie {
-      position     : absolute;
-      background   : #FFF;
+      position: absolute;
+      background: #fff;
       border-radius: 0.2rem;
-      top          : 10px;
-      right        : auto;
-      left         : 10px;
-      padding      : 0.8rem 1.4rem;
-      font-weight  : 600;
-      font-size    : $wbu-default-font-size/1.17;
-      z-index      : 1;
+      top: 10px;
+      right: auto;
+      left: 10px;
+      padding: 0.8rem 1.4rem;
+      font-weight: 600;
+      font-size: $wbu-default-font-size/1.17;
+      z-index: 1;
     }
 
     .img a::before {
-      content         : "";
+      content: "";
       background-color: #333;
-      opacity         : 0.3;
-      position        : absolute;
-      top             : 0;
-      left            : 0;
-      right           : 0;
-      bottom          : 0;
-      z-index         : 0;
+      opacity: 0.3;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
     }
   }
 
   &__desc {
-    width          : calc(100% - 260px);
-    padding-left   : $wbu-margin / 1.5;
-    display        : flex;
-    flex-direction : column;
+    width: calc(100% - 260px);
+    padding-left: $wbu-margin / 1.5;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    @include media-min('DD') {
-      padding-right: $wbu-margin*4;
+    @include media-min("DD") {
+      padding-right: $wbu-margin * 4;
     }
 
     .description {
@@ -57,9 +66,9 @@
     }
 
     .title {
-      font-weight  : 500;
+      font-weight: 500;
       margin-bottom: $wbu-margin / 1.5;
-      line-height  : $wbu-h3-line-height;
+      line-height: $wbu-h3-line-height;
 
       a {
         color: inherit;
@@ -67,18 +76,18 @@
     }
 
     .time_read {
-      position    : relative;
-      font-size   : $wbu-default-font-size/1.17;
+      position: relative;
+      font-size: $wbu-default-font-size/1.17;
       padding-left: 1.7rem;
 
       &::before {
-        content : "";
+        content: "";
         position: absolute;
-        width   : 1.2rem;
-        height  : 1.2rem;
-        top     : auto;
-        left    : 0;
-        bottom  : 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        top: auto;
+        left: 0;
+        bottom: 0;
         @include wbu__svg-time-clock($wbu-color-primary);
       }
     }
@@ -90,7 +99,7 @@
     }
 
     .teaser-img-desc__desc {
-      width  : 100%;
+      width: 100%;
       padding: $wbu-margin $wbu-margin/1.5 0;
     }
   }

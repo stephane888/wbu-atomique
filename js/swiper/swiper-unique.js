@@ -3,12 +3,8 @@ import Swiper, { Navigation, Pagination, Parallax, Autoplay } from "swiper";
 Swiper.use([Navigation, Pagination, Parallax, Autoplay]);
 // import Swiper styles
 import "swiper/css/bundle";
-//import "../../scss/organisme/sections/swiper-big-v3.scss";
 
-/**
- * --
- */
-var mySwiper = new Swiper(".swiper-big-v3", {
+var mySwiper = new Swiper(".swiper-unique", {
   direction: "horizontal",
   loop: true,
   pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
@@ -18,7 +14,7 @@ var mySwiper = new Swiper(".swiper-big-v3", {
   //effect: "slide",
   //mousewheelControl: 1,
   autoplay: {
-    delay: 8000,
+    delay: 12000,
   },
   //autoplay: false,
 });

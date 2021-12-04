@@ -1,0 +1,166 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+
+.footer1 {
+  /* 21 Footer
+================================================== */
+  .footer {
+    background: #32373c;
+    color: #ccc;
+    padding: 5rem 0;
+    p.gray {
+      font-weight: 400;
+      color: #969ba0;
+      margin-bottom: 0px;
+      background: none;
+    }
+    a {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .timing {
+      margin-top: $wbu-margin;
+      p.bold {
+        color: #ccc;
+      }
+    }
+
+    /** 
+   *  . Circled
+   *  - ====================================
+   */
+    .circled {
+      padding: 0;
+      list-style: none;
+      .useful-links {
+        &:before {
+          content: "\e800";
+          margin-right: 15px;
+          font-weight: normal;
+          vertical-align: top;
+          padding-top: 1px;
+          display: inline-block;
+          font-family: "fontello-circle";
+          color: $wbu-color-primary;
+          font-size: 8px;
+        }
+        margin-left: -2px;
+        display: inline-block;
+        width: 50%;
+        padding: 6px 0px;
+      }
+    }
+  }
+
+  .footer h1,
+  .footer h2,
+  .footer h3,
+  .footer h4,
+  .footer h5,
+  .footer h6 {
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+  }
+  .footer .widget .contact .content p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 0px;
+    padding: 0 0 10px 0;
+    text-transform: none;
+  }
+  .footer-links li {
+    display: inline-block;
+    padding: 8px 6px;
+  }
+  .footer-links li a {
+    color: #969ba0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer-links li a:hover {
+    color: #fff;
+  }
+  .footer p.bold {
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0px;
+  }
+  .footer .widget .contact i {
+    display: block;
+    color: #fff;
+    line-height: 1;
+    font-size: 36px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding-top: 0px;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* Social Icons
+====================================*/
+  .social-icons {
+    float: left;
+    margin-left: -20px;
+    margin-top: 10px;
+  }
+  .social-icons li {
+    display: inline-block;
+    padding-right: 8px;
+  }
+  .social-icons li a i {
+    width: 40px;
+    height: 40px;
+    padding-top: 12px;
+    background: #64696e;
+    color: #fff;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .social-icons .tooltip-inner {
+    color: #fff;
+    background-color: #64696e;
+    padding: 5px 12px;
+    position: relative;
+    top: -10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .social-icons .tooltip.top .tooltip-arrow {
+    border-top-color: #64696e;
+    position: relative;
+    bottom: -20px;
+  }
+
+  /**
+ * -
+ */
+  .bg-darker-gray {
+    background: #282d32;
+    color: #fff;
+    padding: $wbu-margin;
+  }
+}

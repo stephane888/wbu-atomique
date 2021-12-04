@@ -3,6 +3,7 @@
   max-width: calc(100% - #{$wbu-margin * 1.5});
   border-top: 3px solid $wbu-color-primary;
   height: 100%;
+  margin-bottom: $wbu-margin * 1.5;
   a {
     color: inherit;
   }

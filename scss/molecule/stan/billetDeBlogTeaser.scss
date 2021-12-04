@@ -59,6 +59,21 @@
       margin-bottom: 22px;
       font-weight: 400;
     }
+    .description {
+      color: #fff;
+      margin-bottom: $wbu-margin * 0.5;
+      font-weight: 500;
+      position: relative;
+      a {
+        color: #fff;
+      }
+      i {
+        margin-right: $wbu-margin * 0.25;
+        font-size: 1.6rem;
+        position: absolute;
+        left: -$wbu-margin;
+      }
+    }
   }
 
   &.a-la-une {
