@@ -1,0 +1,138 @@
+/** @format */
+
+@use "../../wbu-ressources.scss" as *;
+
+@use "../../defaut/model/custom_bp.scss" as *;
+@use "../../variables" as *;
+@use "../../atome/typography/default";
+
+.sub-menu {
+	.navbar {
+		overflow: hidden;
+		//background-color: #333;
+		font-family: Arial, Helvetica, sans-serif;
+		border-bottom: 1px solid rgb(212 190 190 / 51%);
+		width: 85%;
+		margin: auto;
+		.nav {
+			float: left;
+			color: rgb(0, 0, 0);
+			text-align: center;
+			text-decoration: none;
+			font-size: 16px;
+			border-bottom: 2px solid transparent;
+			padding: 14px 16px;
+			cursor: pointer;
+			&:hover {
+				border-bottom: 2px solid black;
+			}
+		}
+	}
+
+	.dropdown {
+		float: left;
+		overflow: hidden;
+		.dropbtn {
+			border: none;
+			outline: none;
+			color: rgb(0, 0, 0);
+			background-color: inherit;
+			font: inherit;
+			margin: 0;
+			// &:hover {
+			// 	border-bottom: 2px solid rgb(30, 83, 66);
+			// }
+		}
+		&:hover {
+			.dropdown-content {
+				//display: block;
+				z-index: 1;
+				opacity: 100%;
+			}
+		}
+	}
+
+	// .dropdown:hover .dropdown-content {
+	// 	display: block;
+	// 	background-color: blue;
+	// }
+	.dropdown-content {
+		display: block;
+		position: absolute;
+		background-color: #f9f9f9;
+		width: 85%;
+		left: 7.5%;
+		top: 51px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		opacity: 1;
+		max-height: 72vh;
+		overflow: auto;
+		transition: ease-in-out 0.25s;
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			@include media-max(SM) {
+				justify-content: space-between;
+			}
+		}
+	}
+
+	/* Create three equal columns that floats next to each other */
+	.column {
+		float: left;
+		flex: 1 0 20%;
+		font-size: 14px;
+
+		padding: 23px 23px;
+		//background-color: #ccc;
+		font-family: "Open Sans", sans-serif;
+		@include media-max(SM) {
+			flex: 1 0 40%;
+		}
+
+		a {
+			color: black;
+			padding: 6px;
+			text-decoration: none;
+			display: flex;
+			line-height: 1.6em;
+			text-align: left;
+			&:hover {
+				border-radius: 8px;
+				background-color: #ecedf0;
+			}
+		}
+		&-title {
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			flex-direction: row;
+			font-size: 16px;
+			font-weight: 700;
+			color: black;
+			.fa {
+				margin-right: 12px;
+				font-size: 23px;
+				color: teal;
+			}
+		}
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 600px) {
+		.column {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
