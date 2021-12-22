@@ -8,7 +8,16 @@
 $wbu-default-font-size-menu: $wbu-default-font-size * 0.9;
 
 .sub-menu {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #f8f9fa;
+  z-index: 100;
+  @include media-min(SM) {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
   .navbar {
     //overflow: hidden;
     //background-color: #333;
@@ -22,6 +31,12 @@ $wbu-default-font-size-menu: $wbu-default-font-size * 0.9;
       text-decoration: none;
       font-size: 16px;
       padding: $wbu-margin * 0.5 $wbu-margin;
+      width: 100%;
+      position: relative;
+      @include media-min(SM) {
+        width: auto;
+        position: unset;
+      }
     }
     .menu.navbar {
       list-style: none;
@@ -30,8 +45,10 @@ $wbu-default-font-size-menu: $wbu-default-font-size * 0.9;
 
   .dropdown {
     float: left;
-    overflow: hidden;
     position: initial;
+    @include media-min(SM) {
+      overflow: hidden;
+    }
     .dropbtn {
       border: none;
       outline: none;
@@ -115,7 +132,7 @@ $wbu-default-font-size-menu: $wbu-default-font-size * 0.9;
     }
     &:hover {
       .dropdown-content {
-        //display: block;
+        display: block;
         z-index: 1;
         opacity: 1;
       }
@@ -128,19 +145,22 @@ $wbu-default-font-size-menu: $wbu-default-font-size * 0.9;
   // }
   .dropdown-content {
     font-size: $wbu-default-font-size-menu;
-    display: block;
-    position: absolute;
+    display: none;
     background-color: #f9f9f9;
     width: 100%;
     left: 0;
     right: 0;
-    top: calc(100% + 4px);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: -1;
     opacity: 0;
     max-height: 72vh;
     overflow: auto;
     transition: ease-in-out 0.25s;
+    @include media-min(SM) {
+      top: calc(100% + 4px);
+      position: absolute;
+      //display: block;
+    }
   }
 
   /* Create three equal columns that floats next to each other */
@@ -198,7 +218,7 @@ $wbu-default-font-size-menu: $wbu-default-font-size * 0.9;
 
 // .path-comment-ca-marche {
 //   .dropdown {
-//     &:nth-child(12) {
+//     &:nth-child(13) {
 //       .dropdown-content {
 //         display: block;
 //         z-index: 1;
