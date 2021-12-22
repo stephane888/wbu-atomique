@@ -25,7 +25,7 @@ module.exports = {
 	plugins,
 	mode: env || "development", // on définit le mode en fonction de la valeur de NODE_ENV
 	entry: {
-		app: "./js/sub-menu.js"
+		app: "./js/home-page"
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
