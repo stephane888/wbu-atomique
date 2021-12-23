@@ -1,0 +1,8 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+
+.the-content {
+  .title {
+    font-size: $wbu-default-font-size * 1.8;
+    margin-bottom: $wbu-margin * 0.5;
+  }
+}
