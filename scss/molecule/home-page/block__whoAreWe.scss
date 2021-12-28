@@ -1,0 +1,41 @@
+@use "../../atome/home_page/h2Title.scss";
+@use "../../atome/home_page/spanForH2.scss";
+@use "../../atome/home_page/subDescription.scss";
+@use "../../atome/home_page/line.scss";
+@use "../../atome/home_page/pTeam.scss";
+@use "../../defaut/model/custom_bp.scss";
+
+.block__whoAreWe {
+
+    display:block;
+    //border:1px solid black;
+    text-align:center;
+    margin: 0 auto;
+    width:100%;
+    margin-bottom: 7rem;
+    box-sizing: border-box;
+    padding-top: 3.5rem ;
+    padding-bottom: 3.5rem ;
+    font-family: "Poppins", sans-serif;
+
+    h2 {
+
+        color: black;
+        text-transform: uppercase;
+
+    }
+    
+    div {
+
+        text-align: center;
+
+    }
+
+
+    @media only screen and (max-width:480px) {
+        
+        width: 35.5rem;
+
+    }
+
+}

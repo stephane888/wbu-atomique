@@ -8,4 +8,9 @@
 @use "../../atome/home_page/pTeam.scss";
 @use "../../atome/home_page/spanForH2.scss";
 @use "../../atome/home_page/btnLarge.scss";
-@use "../../atome/home_page/btnLargeNoFill.scss"
+@use "../../atome/home_page/btnLargeNoFill.scss";
+@use "../../molecule/home-page/block__whoAreWe.scss";
+@use "../../molecule/home-page/block__whoAreWe--plain.scss";
+@use "../../molecule/home-page/block__whoAreWe--plain--no-bg.scss";
+@use "../../molecule/home-page/block__title__description.scss";
+@use "../../molecule/home-page/block__team-item.scss";

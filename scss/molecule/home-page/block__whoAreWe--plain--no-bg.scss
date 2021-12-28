@@ -1,0 +1,18 @@
+@use "../../molecule/home-page/block__whoAreWe--plain.scss";
+@use "../../molecule/home-page/block__whoAreWe.scss";
+
+.block__whoAreWe--plain--no-bg {
+
+    display: block ;
+    background: white ;
+    text-align: center ;
+    width: 100%;
+
+    h2 {
+
+        text-transform: uppercase;
+        color:black;
+
+    }
+
+}

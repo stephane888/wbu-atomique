@@ -29,14 +29,14 @@ $XL_debut: 1921px;
 //$XL_fin: 2500px;
 
 // variaibles BreakPoints
-$var: false !default; // Can be overridden elsewhere
+$var: true !default; // Can be overridden elsewhere
 
 @if $var == true {
-  //div p{font-size:40px;}
+  div p{font-size:40px;}
 } @else if $var == false {  
-  //div p{font-size:80px;}
+  div p{font-size:80px;}
 }@else {  
-  //div p{font-size:80px;}
+  div p{font-size:80px;}
 }
 
 @mixin media-min($_key: false) {
