@@ -1,0 +1,16 @@
+@use "../../atome/typography/h2.scss";
+
+h2 {
+
+    color: #424242;
+    opacity: 1;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    //font-weight: bold;
+    text-align: center;
+    font-size:4.1rem;
+
+}

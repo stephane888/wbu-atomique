@@ -1,0 +1,21 @@
+@use "../bouton/buttons.scss";
+
+.btnLarge {
+
+    background-color:#c59b6d;
+    font-family: "Poppins", sans-serif;
+    margin-right: 0;
+    margin-bottom: 0;
+    border: 0.2rem solid #c59b6d;
+    padding: 1.2rem 3rem 1.5rem 3.1rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color:#fff;
+    border-radius: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.07rem;
+    display: inline-block;
+    text-decoration: none;
+    text-align:center;
+
+}

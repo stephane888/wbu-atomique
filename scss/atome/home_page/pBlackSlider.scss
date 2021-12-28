@@ -1,0 +1,16 @@
+@use "../typography/p.scss";
+
+.pBlackSlider {
+
+    color: #c5c5c5;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.09rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0;    
+    display:block;
+    font-family: "Poppins", sans-serif;
+    background-color:#666565; // à commentez avant l'utilisation
+
+}
