@@ -1,4 +1,7 @@
 // variable;
+/**
+ * Utilise les nav ‹ et ›
+ */
 @use "../../wbu-ressources.scss" as *;
 $owl-color-active: $wbu-color-primary !default;
 $owl-color-default: $wbu-border-color !default;
@@ -15,72 +18,73 @@ $owl-color-default: $wbu-border-color !default;
   }
 
   .owl-nav {
-    [class*='owl-'] {
-      margin       : 0;
-      background   : transparent;
+    margin: 0;
+    [class*="owl-"] {
+      margin: 0;
+      background: transparent;
       border-radius: 0;
       @include WBUtransition();
+      width: 36px;
+      height: 36px;
 
       &:hover {
         background-color: $wbu-color-primary;
-        border-color    : $wbu-color-primary;
+        border-color: $wbu-color-primary;
+        color: #fff;
       }
     }
 
     .owl-svg-nav {
-      width  : 40px;
-      height : 40px;
-      border : 0.2rem solid $wbu-border-color;
+      width: 40px;
+      height: 40px;
+      border: 0.2rem solid $wbu-border-color;
       padding: 0.5rem;
-      fill   : $wbu-border-color;
+      fill: $wbu-border-color;
+    }
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      left: auto;
+      bottom: auto;
+      top: -$wbu-margin * 2;
+      font-size: $wbu-default-font-size * 2;
+      * {
+        font-size: $wbu-default-font-size * 2;
+      }
     }
 
     .owl-prev {
-      position : absolute;
-      left     : auto;
-      bottom   : auto;
-      top      : 2rem;
-      right    : calc(1.5rem + 40px + 1.5rem);
-      transform: rotateZ(-90deg);
+      right: calc(1.5rem + 40px + 1.5rem);
     }
 
     .owl-next {
-      position : absolute;
-      left     : auto;
-      bottom   : auto;
-      top      : 2rem;
-      right    : 1.5rem;
-      transform: rotateZ(90deg);
+      right: 1.5rem;
     }
   }
 
   .owl-dots {
-    display        : flex !important;
-    flex-wrap      : wrap;
-    justify-content: left;
-    align-items    : unset;
-    margin-left    : -0.4rem;
-    overflow       : hidden;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: unset;
+    margin-left: -0.4rem;
+    overflow: hidden;
 
     .owl-dot {
-      display      : flex;
+      display: flex;
       margin-bottom: 0.3rem;
-      margin-left  : 0.4rem;
-      border       : 1px solid $owl-color-default;
-
+      margin-left: 0.4rem;
+      border: 1px solid $owl-color-default;
       span {
         background: $owl-color-default;
       }
-      align-items  : center;
-
+      align-items: center;
       img {
         background: #fff;
-        padding   : 0.3rem;
+        padding: 0.3rem;
       }
-
       &.active {
         border-color: $owl-color-active;
-
         span {
           background: $owl-color-active;
         }
