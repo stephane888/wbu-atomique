@@ -31,7 +31,7 @@
 			border: 1px solid $wbu-hp-color-primary;
 			transform: rotate(90deg);
 			width: 125px;
-			position: absolute;
+			position: relative;
 			display: block;
 			left: calc(50% + -58px);
 			margin: 0 auto;
@@ -41,15 +41,23 @@
 			}
 		}
 		&::before {
-			top: 150px;
+			top: 270px;
+			left: calc(0%);
+			@include media-max(SM) {
+				top: 205px;
+			}
+			@include media-max(XX) {
+				top: 224px;
+			}
 		}
 		&::after {
 			bottom: 274px;
+			left: calc(0%);
 			@include media-max(SM) {
-				bottom: 320px;
+				bottom: 225px;
 			}
 			@include media-max(XX) {
-				bottom: 300px;
+				bottom: 230px;
 			}
 		}
 		.description {
