@@ -1,0 +1,23 @@
+/** @format */
+
+@use "../../molecule/home_page/block__whoAreWe--plain.scss";
+
+.block__whoAreWe--plain--no-bg {
+	padding-bottom: 25px;
+	.block__whoAreWe--plain {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: white;
+		.h2Title {
+			padding-bottom: 5px;
+		}
+	}
+
+	// h2 {
+
+	//     text-transform: uppercase;
+	//     color:black;
+
+	// }
+}

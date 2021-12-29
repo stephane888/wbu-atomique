@@ -1,0 +1,60 @@
+/** @format */
+
+@use "../../../scss/wbu-ressources.scss" as *;
+@use "../../defaut/model/custom_bp.scss" as *;
+@use "../../variables" as *;
+@use "slick-carousel/slick/slick";
+@use "slick-carousel/slick/slick-theme";
+@use "./block__whoAreWe--plain--no-bg.scss";
+@use "../../atome/arrow_left.scss";
+@use "../../atome/arrow_right.scss";
+
+.block-service {
+	background-color: $wbu-hp-color-bg;
+	color: black;
+
+	.service-carousel {
+		width: 95%;
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+	}
+	.block__whoAreWe--plain--no-bg {
+		.block__whoAreWe--plain {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: $wbu-hp-color-bg;
+			color: white;
+			.h2Title {
+				padding-bottom: 5px;
+				color: white;
+				span {
+					color: $wbu-hp-color-primary;
+				}
+			}
+			div {
+				color: white;
+			}
+		}
+
+		// h2 {
+
+		//     text-transform: uppercase;
+		//     color:black;
+
+		// }
+	}
+	.slick-dots li button:before {
+		color: white;
+	}
+	.slick-dots li.slick-active button:before {
+		color: white;
+	}
+	.slick-dots li button:before {
+		font-size: 13px;
+	}
+	.slick-dots {
+		bottom: -30px;
+	}
+}

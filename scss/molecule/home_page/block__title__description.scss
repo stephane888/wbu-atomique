@@ -1,0 +1,28 @@
+@use "../../../scss/variables";
+@use "../../atome/home_page/h2Title.scss";
+@use "../../atome/home_page/line.scss";
+@use "../../atome/home_page/subDescription.scss";
+
+.block__title_description {
+
+    text-align: center;
+    display:block;
+    width:100%;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 7rem ;
+
+
+    h2 {
+
+        text-transform: uppercase;
+        color:black;
+
+    }
+
+    @media only scren and (max-width:480px) {
+
+        width: 35.5rem ;
+
+    }
+
+}

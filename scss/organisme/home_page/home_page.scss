@@ -1,6 +1,10 @@
 /** @format */
 
 @use "../../../scss/wbu-ressources.scss";
+
 @use "../../molecule/home_page/hero_section.scss";
 @use "../../molecule/home_page/card_service.scss";
 @use "../../molecule/home_page/line_caroussel.scss";
+@use "../../molecule/home_page/block__whoAreWe--plain.scss";
+@use "../../molecule/home_page/block__whoAreWe--plain--no-bg.scss";
+@use "../../molecule/home_page/block_service.scss";

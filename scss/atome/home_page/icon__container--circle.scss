@@ -1,0 +1,28 @@
+@use "../../wbu-ressources.scss";
+@use "../../atome/home_page/icon.scss";
+
+.icon__container--circle {
+
+    width:9rem;
+    height:9rem;
+    background: #424242;
+    display:inline-block;
+    position:relative;
+    text-align:center;
+    border-radius:50%;
+    top:25%;
+    margin:0 auto;
+
+    .icon {
+
+        position:relative;
+        display:inline-block;
+        height:6.4rem;
+        width:4rem;
+        margin:0 auto;
+        //border:1px solid white;
+        top:25%;
+
+    }
+    
+}

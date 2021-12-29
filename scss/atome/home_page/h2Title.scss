@@ -1,16 +1,20 @@
+/** @format */
+
 @use "../../atome/typography/h2.scss";
+@use "../../defaut/model/custom_bp.scss";
 
 h2 {
+	opacity: 1;
+	line-height: 1;
+	//font-weight: bold;
+	text-align: center;
+	font-size: 4.1rem;
 
-    color: #424242;
-    opacity: 1;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    line-height: 1;
-    margin-top: 0;
-    margin-bottom: 0;
-    //font-weight: bold;
-    text-align: center;
-    font-size:4.1rem;
-
+	@media only screen and (max-width: 480px) {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	// @include media-min(XS) {
+	//     color:blue;
+	//}
 }

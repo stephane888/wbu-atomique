@@ -1,13 +1,18 @@
 /** @format */
 
 @use "../../../scss/wbu-ressources.scss";
+@use "../../variables" as *;
 
 .card-service {
-	background-color: #1b1b1b;
+	background-color: $wbu-hp-color-bg-card;
 	color: white;
 	padding: 25px 15px;
 	text-align: center;
 	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2px;
 	&__img {
 		width: 65px;
 		height: 65px;

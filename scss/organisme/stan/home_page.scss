@@ -1,15 +1,19 @@
 /** @format */
 
-// @use "../../../scss/wbu-ressources.scss";
-// @use "../../atome/home_page/h2Title.scss";
-// @use "../../atome/home_page/description.scss";
-// @use "../../atome/home_page/line.scss";
-// @use "../../atome/home_page/subDescription.scss";
-// @use "../../atome/home_page/h4.scss";
-// @use "../../atome/home_page/pBlackSlider.scss";
-// @use "../../atome/home_page/pTeam.scss";
-// @use "../../atome/home_page/spanForH2.scss";
-// @use "../../atome/home_page/btnLarge.scss";
-// @use "../../atome/home_page/btnLargeNoFill.scss";
+@use "../../../scss/wbu-ressources.scss";
+@use "../../atome/home_page/h2Title.scss";
+@use "../../atome/home_page/description.scss";
+@use "../../atome/home_page/line.scss";
+@use "../../atome/home_page/subDescription.scss";
+@use "../../atome/home_page/h4.scss";
+@use "../../atome/home_page/pBlackSlider.scss";
+@use "../../atome/home_page/pTeam.scss";
+@use "../../atome/home_page/spanForH2.scss";
+@use "../../atome/home_page/btnLarge.scss";
+@use "../../atome/home_page/btnLargeNoFill.scss";
+@use "../../molecule/home_page/block__whoAreWe.scss";
 
+@use "../../molecule/home_page/block__whoAreWe--plain--no-bg.scss";
+@use "../../molecule/home_page/block__title__description.scss";
+@use "../../molecule/home_page/block__team-item.scss";
 @use "../../organisme/home_page/home_page.scss";
