@@ -1,16 +1,16 @@
 /** @format */
 
-@use "../../atome/bouton/btn-carre.scss";
+@use "../../variables" as *;
 
 .btn-carre {
   background-color: transparent;
-  color: #c69c6d75;
+  color: $wbu-color-primary;
   padding: 15px 56px;
-  border: 1px solid #c69c6d4f;
+  border: 1px solid $wbu-color-primary;
   font-size: 17px;
   letter-spacing: 1.9px;
   transition: ease-in-out 0.3s;
   &:hover {
-    border-color: #c69c6d;
+    border-color: $wbu-color-boder;
   }
 }

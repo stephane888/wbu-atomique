@@ -1,6 +1,6 @@
 /** @format */
 
-import "../../scss/organisme/stan/home_page.scss"
+import "../../scss/organisme/home_page/home_page.scss"
 
 $(document).ready(function () {
 	$(".line-carousel").slick({
