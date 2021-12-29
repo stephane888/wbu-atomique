@@ -1,0 +1,60 @@
+/** @format */
+@use "../../../scss/wbu-ressources.scss";
+@use "../../atome/home_page/h2Title.scss";
+@use "../../atome/home_page/h4.scss";
+@use "../../atome/home_page/btn-carre.scss";
+@use "../../atome/home_page/description.scss";
+
+$wbu-hp-color-primary: #c69c6d;
+.hero-section {
+	height: 90vh;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(29, 26, 26);
+	margin-bottom: 30px;
+	.btn-carre {
+		position: relative;
+		bottom: -180px;
+	}
+	&__block-center {
+		margin-top: calc(27vh);
+		&::before,
+		&::after {
+			content: "";
+			border: 1px solid #c69c6d;
+			transform: rotate(90deg);
+			width: 125px;
+			position: absolute;
+			display: block;
+			left: calc(50% + -58px);
+			margin: 0 auto;
+			text-align: center;
+		}
+		&::before {
+			top: 150px;
+		}
+		&::after {
+			bottom: 282px;
+		}
+		.description {
+			color: #c5a076;
+			//letter-spacing: 0.2rem;
+			margin-bottom: -1.1rem;
+			font-size: 2.7rem;
+			text-transform: none;
+			letter-spacing: 3px;
+		}
+		h2 {
+			font-size: 7rem;
+			text-transform: none;
+
+			font-weight: 400;
+			color: white;
+			span {
+				color: $wbu-hp-color-primary;
+			}
+		}
+	}
+}

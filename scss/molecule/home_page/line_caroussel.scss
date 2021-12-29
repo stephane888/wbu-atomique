@@ -1,0 +1,21 @@
+/** @format */
+
+@use "../../../scss/wbu-ressources.scss";
+@use "slick-carousel/slick/slick";
+@use "slick-carousel/slick/slick-theme";
+@use "../../atome/arrow_left.scss";
+@use "../../atome/arrow_right.scss";
+
+.slick-dots li button:before {
+	font-size: 12px;
+}
+.slick-dots {
+	bottom: -30px;
+}
+.line-carousel {
+	width: 95%;
+	margin: 10px auto;
+	// display: flex;
+	// flex-wrap: nowrap;
+	// justify-content: center;
+}

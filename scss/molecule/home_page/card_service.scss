@@ -1,0 +1,24 @@
+/** @format */
+
+@use "../../../scss/wbu-ressources.scss";
+
+.card-service {
+	background-color: #1b1b1b;
+	color: white;
+	padding: 25px 15px;
+	text-align: center;
+	max-width: 300px;
+	&__img {
+		width: 65px;
+		height: 65px;
+	}
+	&__title {
+		font-size: 22px;
+		font-weight: bold;
+		margin: 23px 0;
+	}
+	&__desc {
+		font-size: 16px;
+		line-height: 1.6;
+	}
+}

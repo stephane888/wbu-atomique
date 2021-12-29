@@ -7,6 +7,7 @@
 		"test": "echo \"No test specified\"",
 		"dev": "webpack serve  --mode='development'  --progress",
 		"build": "NODE_ENV=production webpack --watch --progress",
+		"devel": "NODE_ENV=development webpack --watch --progress",
 		"copy": "NODE_ENV=production node scripts/build.js  --watch",
 		"publish": "npm publish --access public",
 		"serve": "webpack serve --mode='production' --open"
