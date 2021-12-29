@@ -18,6 +18,7 @@ $owl-color-default: $wbu-border-color !default;
   }
 
   .owl-nav {
+    margin: 0;
     [class*="owl-"] {
       margin: 0;
       background: transparent;
