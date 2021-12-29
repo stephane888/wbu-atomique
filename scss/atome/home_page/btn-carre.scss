@@ -3,14 +3,14 @@
 @use "../../atome/bouton/btn-carre.scss";
 
 .btn-carre {
-	background-color: transparent;
-	color: #c69c6d75;
-	padding: 15px 56px;
-	border: 1px solid #c69c6d4f;
-	font-size: 17px;
-	letter-spacing: 1.9px;
-	transition: ease-in-out 0.3s;
-	&:hover {
-		border-color: #c69c6d;
-	}
+  background-color: transparent;
+  color: #c69c6d75;
+  padding: 15px 56px;
+  border: 1px solid #c69c6d4f;
+  font-size: 17px;
+  letter-spacing: 1.9px;
+  transition: ease-in-out 0.3s;
+  &:hover {
+    border-color: #c69c6d;
+  }
 }

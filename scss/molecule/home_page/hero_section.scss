@@ -9,98 +9,98 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300;400&display=swap";
 
 .hero-section {
-	height: 90vh;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: $wbu-hp-color-bg;
-	.btn-carre {
-		position: relative;
-		bottom: -180px;
-		@include media-max(XX) {
-			font-size: 14px;
-		}
-	}
-	&__block-center {
-		margin-top: calc(27vh);
-		&::before,
-		&::after {
-			content: "";
-			border: 1px solid $wbu-hp-color-primary;
-			transform: rotate(90deg);
-			width: 125px;
-			position: relative;
-			display: block;
-			left: calc(50% + -58px);
-			margin: 0 auto;
-			text-align: center;
-			@include media-max(XS) {
-				width: 100px;
-			}
-		}
-		&::before {
-			top: 270px;
-			left: calc(0%);
-			@include media-max(SM) {
-				top: 205px;
-			}
-			@include media-max(XX) {
-				top: 224px;
-			}
-		}
-		&::after {
-			bottom: 274px;
-			left: calc(0%);
-			@include media-max(SM) {
-				bottom: 225px;
-			}
-			@include media-max(XX) {
-				bottom: 230px;
-			}
-		}
-		.description {
-			color: #c5a076;
-			//letter-spacing: 0.2rem;
-			//margin-bottom: -1.1rem;
-			font-size: 2.7rem;
-			text-transform: none;
-			letter-spacing: 3px;
-			@include media-max(SM) {
-				font-size: 1.8rem;
-				padding-bottom: 3px;
-			}
-			@include media-max(MD) {
-				font-size: 2rem;
-			}
-			@include media-max(XS) {
-				font-size: 1.2rem;
-			}
-		}
-		h2 {
-			font-size: 6.8rem;
-			text-transform: none;
-			font-family: "Roboto", sans-serif;
-			font-weight: 600;
-			color: white;
-			letter-spacing: 1px;
+  height: 90vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $wbu-hp-color-bg;
+  .btn-carre {
+    position: relative;
+    bottom: -180px;
+    @include media-max(XX) {
+      font-size: 14px;
+    }
+  }
+  &__block-center {
+    margin-top: calc(27vh);
+    &::before,
+    &::after {
+      content: "";
+      border: 1px solid $wbu-hp-color-primary;
+      transform: rotate(90deg);
+      width: 125px;
+      position: relative;
+      display: block;
+      left: calc(50% + -58px);
+      margin: 0 auto;
+      text-align: center;
+      @include media-max(XS) {
+        width: 100px;
+      }
+    }
+    &::before {
+      top: 270px;
+      left: calc(0%);
+      @include media-max(SM) {
+        top: 205px;
+      }
+      @include media-max(XX) {
+        top: 224px;
+      }
+    }
+    &::after {
+      bottom: 274px;
+      left: calc(0%);
+      @include media-max(SM) {
+        bottom: 225px;
+      }
+      @include media-max(XX) {
+        bottom: 230px;
+      }
+    }
+    .description {
+      color: #c5a076;
+      //letter-spacing: 0.2rem;
+      //margin-bottom: -1.1rem;
+      font-size: 2.7rem;
+      text-transform: none;
+      letter-spacing: 3px;
+      @include media-max(SM) {
+        font-size: 1.8rem;
+        padding-bottom: 3px;
+      }
+      @include media-max(MD) {
+        font-size: 2rem;
+      }
+      @include media-max(XS) {
+        font-size: 1.2rem;
+      }
+    }
+    h2 {
+      font-size: 6.8rem;
+      text-transform: none;
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 1px;
 
-			@include media-max(MD) {
-				font-size: 5.8rem;
-			}
-			@include media-max(SM) {
-				font-size: 4.2rem;
-			}
-			@include media-max(XS) {
-				font-size: 3.6rem;
-			}
-			@include media-max(XX) {
-				font-size: 3rem;
-			}
+      @include media-max(MD) {
+        font-size: 5.8rem;
+      }
+      @include media-max(SM) {
+        font-size: 4.2rem;
+      }
+      @include media-max(XS) {
+        font-size: 3.6rem;
+      }
+      @include media-max(XX) {
+        font-size: 3rem;
+      }
 
-			span {
-				color: $wbu-hp-color-primary;
-			}
-		}
-	}
+      span {
+        color: $wbu-hp-color-primary;
+      }
+    }
+  }
 }
