@@ -1,6 +1,6 @@
 /** @format */
 
-@use "../../../scss/wbu-ressources.scss";
+@use "../../../scss/wbu-ressources-clean.scss" as *;
 
 @use "../../molecule/home_page/hero_section.scss";
 @use "../../molecule/home_page/card_service.scss";
