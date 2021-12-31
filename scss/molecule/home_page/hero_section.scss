@@ -7,7 +7,7 @@
 @use "../../atome/home_page/description.scss";
 
 .hero-section {
-  height: 90vh;
+  min-height: 90vh;
   padding: 10px;
   display: flex;
   flex-direction: column;
