@@ -2,11 +2,11 @@
 /**
  * Utilise les nav ‹ et ›
  */
-@use "../../wbu-ressources.scss" as *;
+@use "../../wbu-ressources-clean.scss" as *;
 $owl-color-active: $wbu-color-primary !default;
 $owl-color-default: $wbu-border-color !default;
 
-.owl-carousel {
+.owl-theme-default {
   .owl-item {
     > div {
       width: 100%;

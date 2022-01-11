@@ -42,6 +42,7 @@ $d_button: $d_description + 0.2;
           width: 100%;
           border-right: 8px solid $wbu-color-primary;
           height: 0;
+          z-index: -1;
         }
         .sub_title {
           transition: all #{$transition * 2} cubic-bezier(0.215, 0.61, 0.355, 1)
