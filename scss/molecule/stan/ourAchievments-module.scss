@@ -20,6 +20,7 @@
     left: auto;
     right: 0;
     text-shadow: 0 0 #282828;
+    max-width: calc(50% - 20px);
   }
 
   &__container {
@@ -27,7 +28,21 @@
     height: 320px;
     overflow: hidden;
     transition: ease-in-out 0.2s;
-
+    &:hover::before {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 150px;
+      display: block;
+      background: linear-gradient(
+        180deg,
+        rgb(252 252 252 / 3%) 0%,
+        rgb(244 246 247 / 85%) 100%
+      );
+    }
     .showProject {
       visibility: hidden;
     }
@@ -39,7 +54,7 @@
       margin: 0;
       padding: 0;
       list-style: none;
-
+      max-width: calc(45% - 20px);
       button {
         font-size: $wbu-default-font-size * 0.85;
       }
@@ -47,7 +62,6 @@
 
     &:hover {
       background: hsla(0, 0%, 100%, 0.5);
-
       .showProject {
         position: absolute;
         width: 180px;
