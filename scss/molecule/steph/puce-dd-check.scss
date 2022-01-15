@@ -1,6 +1,6 @@
 @use "../../wbu-ressources.scss" as *;
 
-ul.puce-check {
+ul.puce-dd-check {
   padding-left: 0;
   li {
     position: relative;
@@ -15,7 +15,7 @@ ul.puce-check {
       height: $wbu_dimension_puce;
       top: 0;
       left: 0;
-      @include wbu__svg-puce-check($wbu-color-primary, $wbu_dimension_puce);
+      @include wbu__svg-dd-puce-check($wbu-color-primary, $wbu_dimension_puce);
     }
   }
 }
