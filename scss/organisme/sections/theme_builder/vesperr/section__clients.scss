@@ -1,0 +1,45 @@
+@use "../../../../wbu-ressources-clean.scss";
+@import "../../../../variables";  
+  
+  .clients {
+    
+      background: #f3f9fd;
+      padding: 10px 0;
+      text-align: center;
+      overflow: hidden;
+
+      .img-fluid {
+
+        max-width: 100%;
+        height: auto;
+
+      }
+  
+      .col-lg-2 {
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //border:1px solid black;
+  
+      }
+
+      img {
+  
+        width: 50%;
+        filter: grayscale(100);
+        transition: all 0.4s ease-in-out;
+        display: inline-block;
+        //border:2px solid blue;
+        padding: 10px 0;
+  
+        &:hover {
+    
+          filter: none;
+    
+        }
+  
+      }
+  
+
+    }
