@@ -1,0 +1,38 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.rc-contact {
+  padding: $space_top 0 $space_bottom;
+  text-align: center;
+  @include media-max(SM) {
+    padding: 100px 60px;
+  }
+  @include media-max(XX) {
+    padding: 80px 20px;
+  }
+  &__title {
+    color: #424242;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $wbu-default-font-size * 3;
+    margin: 55px 0px;
+    @include media-max(MD) {
+      font-size: $wbu-default-font-size * 2.7;
+    }
+    @include media-max(SM) {
+      font-size: $wbu-default-font-size * 2.1;
+    }
+  }
+  &__desc {
+    color: #424242;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $wbu-default-font-size * 1.4;
+    margin: 55px 0px;
+  }
+  .btn-blue {
+    font-size: 13px;
+  }
+}

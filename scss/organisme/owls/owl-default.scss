@@ -13,7 +13,8 @@ $owl-color-default: $wbu-border-color !default;
     }
 
     img {
-      height: auto;
+      height: auto !important;
+      width: auto !important;
     }
   }
 

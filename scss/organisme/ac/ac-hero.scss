@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+@use "../../wbu-ressources.scss" as *;
+@use "../../atome/typography/h4.scss";
+@use "../../atome/typography/h1.scss";
+.ac-hero {
+  padding-top: $space_top;
+  padding-bottom: $space_bottom;
+  background: $wbu-background;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+
+  .subtitle {
+    color: $wbu-color-primary;
+    margin-bottom: $space_bottom * 0.3;
+  }
+  .title {
+    font-size: $wbu-default-font-size * 8;
+    line-height: 100%;
+    margin-bottom: $space_bottom * 0.6;
+  }
+  .description {
+    font-size: $wbu-default-font-size * 1.58;
+    margin-bottom: $space_bottom * 0.6;
+  }
+  .content-image {
+    position: relative;
+    min-height: 300px;
+    img {
+      position: absolute;
+      left: 0;
+      top: -$space_top;
+      max-width: 1900px;
+      max-height: calc(100% + #{$space_bottom} + #{$space_top});
+      width: auto;
+      height: auto;
+    }
+  }
+}

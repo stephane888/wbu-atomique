@@ -11,8 +11,8 @@ var mySwiper = new Swiper(".swiper-unique", {
   //grabCursor: true,
   speed: 1000,
   parallax: true,
-  //effect: "slide",
-  //mousewheelControl: 1,
+  // effect: "slide",
+  // mousewheelControl: 1,
   autoplay: {
     delay: 12000,
   },
