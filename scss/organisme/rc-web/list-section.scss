@@ -4,7 +4,7 @@
 @use "../../wbu-ressources-clean.scss" as *;
 //
 .list-section {
-  margin-top: 50px;
+  margin-top: $space_top * 0.7;
   .list-block {
     border-bottom: 1px solid #ccc;
     margin-bottom: 40px;
