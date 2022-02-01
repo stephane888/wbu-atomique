@@ -1,0 +1,230 @@
+@use "../../../../wbu-ressources-clean.scss";
+@import "../../../../atome/typography/default";
+@import "../../../../variables";
+
+.ac-nos-services{
+
+    .ac-container {
+
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+
+        .ac-column-image {
+
+            position: relative;
+            display: flex;
+            width: 38.327%;
+            min-height: 1px;
+            background-image: url("https://agenceconstant.ch/wp-content/uploads/2021/06/sigmund-KAN4bY3oqSw-unsplash-scaled.jpg");
+            background-size: cover;
+
+
+        }
+
+        .ac-nos-services--content {
+
+            margin-left: auto;
+            position: relative;
+            padding: 60px;
+            padding: 96px 48px 96px 96px;
+            height: auto;
+            width: 65vw;
+            background : #192028;
+            //border: 2px solid red;
+
+        } 
+
+        .service-container {
+
+            max-width: 1140px;
+            display: flex;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+
+            @media (min-width: 768px) {
+
+                .service {
+
+                    width: 50%;
+
+                }
+
+            }
+
+        }
+
+        .service {
+
+            position: relative;
+            display: flex;
+
+            .icon-title{
+
+                display: flex;
+                background-color: rgba(0, 0, 0, 0);
+                position: relative;
+                padding: 24px 16px 24px 16px;
+                overflow: hidden;
+                background-position: center center;
+                border: 1px solid white;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                width: 100%;
+
+
+                .icon{
+
+                    flex: 0 0 auto;
+                    position: relative;
+                    z-index: 2;
+                    margin: 0px 32px 3px 0px;
+                    display: inline-block;
+                    border: 1px solid white;
+                    //color: #FFD500;
+                    text-align: left!important;
+                    font-size: 40px;
+                    //font-weight: 400;
+                    //line-height: 1;
+                    //-webkit-font-smoothing: antialiased;
+
+                }
+
+                .text{
+
+                    position: relative;
+                    flex: auto;
+                    margin: 0px 32px 0px 0px;
+                    display: inline-block;
+                    z-index: 2;
+                    border: 1px solid white;
+                    text-align: left!important;
+
+                    h2 {
+
+                        margin: 0px;
+                        padding: 0px;
+                        color: #FFD500;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+
+                    }
+                    
+                    p {
+                        
+                        color: #DEDEDE;
+                        margin: 16px 0px 0px 0px;
+                        font-size: 1.6rem;
+
+                    }
+                    
+                }
+            }
+
+            /*h3 {
+
+                color: #FFD500;
+                padding: 0px;
+                margin: 0px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+
+            }
+
+            p {
+
+                color: #DEDEDE;
+                margin: 16px 0px 0px 0px;
+
+            }*/
+
+        }
+
+
+        .ac-left-header {
+
+            padding: 10px;
+            display: flex;
+            position: relative;
+            width: 100%;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+            .ac-first-title {
+
+                text-align: left;
+                margin-bottom: 20px;
+                width: 100%;
+                color: #ffffff;
+                font-size: 1.4rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                line-height: 1.5em;
+                letter-spacing: 5px;
+
+            }
+            .ac-head-title {
+
+                margin-bottom: 20px;
+                width: 100%;
+                position: relative;
+
+                h2 {
+
+                    color: #FFFFFF;
+                    font-size: 7.5rem;
+                    font-weight: 800;
+                    padding: 0px;
+                    margin: 0;
+
+                }
+
+            }
+
+            .ac-text-descriptor {
+
+                width: 100%;
+                position: relative;
+                color: #FFFFFF;
+                line-height: 1.5em;
+                padding: 0;
+                margin: 0;  
+                font-size: 1.6rem;              
+
+            }
+
+        }
+
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .ac-container .ac-column-image {
+            width: 100%;
+            //background: black;
+            display: none;
+        }
+
+        .ac-container .ac-nos-services--content {
+
+            width: 100%;
+
+            .col {
+
+                display: inline-block;
+                border: 1px solid white;
+                height: auto;
+                width: 100%;
+
+            }
+
+        }
+    }  
+    
+}
