@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+@use "../../wbu-ressources-clean.scss" as *;
+//
+.btn-blue {
+  font-size: $wbu-default-font-size * 1.2;
+  background-color: $wbu-color-primary;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 15px 30px 15px 31px;
+  border-radius: 30px;
+  letter-spacing: 0.7px;
+  transition: all ease 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+    background-color: #b28c62;
+    color: #fff;
+    text-decoration: none;
+  }
+}

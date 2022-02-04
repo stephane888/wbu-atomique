@@ -2,6 +2,7 @@
 # Hero Section
 --------------------------------------------------------------*/
 @use "../../wbu-ressources-clean.scss" as *;
+@use "./rc-web.scss";
 .price-block {
   max-width: 600px;
   margin: 0 auto;
@@ -38,12 +39,13 @@
         text-align: center;
         padding-top: 15px;
         h2 {
-          font-size: 17px;
+          font-size: $wbu-default-font-size * 1.4;
           font-weight: 400;
           margin-top: 0;
           margin-bottom: 0;
           letter-spacing: 0.3px;
           padding-bottom: 4px;
+          color: #fff;
         }
         &::after {
           content: "";

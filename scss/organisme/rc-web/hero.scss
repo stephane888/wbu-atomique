@@ -3,8 +3,8 @@
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero-section {
-  padding: $space_top * 2.7 0 $space_bottom * 1.8;
+.hero-section-rc-web {
+  padding: $space_top * 1.6 0 $space_bottom * 1.2 0;
   background: rgb(15, 10, 10);
   @include media-max(SM) {
     padding: 100px 60px;
@@ -15,9 +15,8 @@
   .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: start;
-    min-height: 227px;
+    min-height: 150px;
     @include media-max(SM) {
       min-height: 260px;
     }
@@ -26,11 +25,23 @@
       color: #ffffff;
       text-transform: uppercase;
       font-weight: bold;
+      position: relative;
+      margin-bottom: $space_top;
       @include media-max(SM) {
         font-size: $wbu-default-font-size * 2;
       }
       span {
         color: #c69c6d;
+      }
+      &::before {
+        content: "";
+        width: 60px;
+        left: 0;
+        height: 2px;
+        background-color: $wbu-color-primary;
+        bottom: -$space_top * 0.5;
+        display: block;
+        position: absolute;
       }
     }
     &__desc {

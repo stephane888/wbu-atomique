@@ -16,18 +16,22 @@
     color: $wbu-color-primary;
     margin-bottom: $space_bottom * 0.3;
   }
+
   .title {
     font-size: $wbu-default-font-size * 8;
     line-height: 100%;
     margin-bottom: $space_bottom * 0.6;
   }
+
   .description {
     font-size: $wbu-default-font-size * 1.58;
     margin-bottom: $space_bottom * 0.6;
   }
+
   .content-image {
     position: relative;
     min-height: 300px;
+
     img {
       position: absolute;
       left: 0;
