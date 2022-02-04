@@ -6,21 +6,27 @@
 @use "../../atome/home_page/description.scss";
 
 .hero-section {
-  min-height: 90vh;
-  padding: 10px;
+  min-height: 60vh;
+  padding: 128px 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: $wbu-color-thirdly;
-  .btn-carre {
+  .btn-block {
     position: relative;
-    bottom: -180px;
+    bottom: -92px;
+  }
+  .btn-carre {
     @include media-max(XX) {
       font-size: 14px;
     }
   }
   &__block-center {
-    margin-top: calc(27vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     &::before,
     &::after {
       content: "";
@@ -29,32 +35,13 @@
       width: 125px;
       position: relative;
       display: block;
-      left: calc(50% + -58px);
-      margin: 0 auto;
-      text-align: center;
       @include media-max(XS) {
         width: 100px;
       }
     }
-    &::before {
-      top: 283px;
-      left: calc(0%);
-      @include media-max(SM) {
-        top: 234px;
-      }
-      @include media-max(XX) {
-        top: 224px;
-      }
-    }
-    &::after {
-      bottom: 274px;
-      left: calc(0%);
-      @include media-max(SM) {
-        bottom: 252px;
-      }
-      @include media-max(XX) {
-        bottom: 230px;
-      }
+
+    .desc {
+      padding: 81px 0;
     }
     .hp-desc {
       color: $wbu-color-primary;
