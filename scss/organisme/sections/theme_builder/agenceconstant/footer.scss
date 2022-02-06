@@ -1,2 +1,92 @@
 @use "../../../../wbu-ressources-clean.scss";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 @import "../../../../variables";
+hr{
+    height: 5px;
+    color: #fff;
+    width: 100%;
+    
+}
+
+
+.footer-video-container{
+    position: absolute;
+    //height: 180vh;
+    
+    
+    
+    
+    
+}
+.ac-footer-floating-section-handler{
+    position: relative;
+    background: rgba(0, 0, 0, 0.76);
+    
+   
+    
+}
+.button{
+    font-size: 12px;
+    
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: #333333;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px 48px 20px 48px;
+    border: 1px solid white; 
+    
+    
+    a{
+        color: #333333;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    a:hover{
+    color: #FFD500;
+}
+}
+button:hover{
+    color: #FFD500;
+    a{
+        color: #FFD500;
+        text-decoration: none;
+    }
+}
+
+.input{
+    height: 60px;
+    width: 50vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.inbut{
+    height: 40px;
+    width: 150px;
+}
+.img{
+    margin-bottom: 30px;
+    text-align: center;
+    
+
+    
+}
+.list-el {
+    color: #fff;
+}
+.list-el:hover{
+    color: #FFD500;
+    text-decoration: underline 1px solid #FFD500;
+}
+
+.last{
+    padding-bottom: auto;
+}
+
+@media  screen and (max-width: 480px) {
+    .img{
+        margin-left: 50px;
+    }
+}
