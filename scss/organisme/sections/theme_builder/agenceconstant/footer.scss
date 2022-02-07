@@ -28,6 +28,11 @@ p{
     }
     a{
         font-size: 1.5rem;
+       // text-decoration: 0px solid rgba(0, 0, 0, 0.021);
+    }
+
+    a:hover{
+        text-decoration:1px solid #FFD500;
     }
     
 }
@@ -76,7 +81,10 @@ button:hover{
         text-decoration: none;
     }
 }
-
+.line{
+   border-bottom: 0.1rem solid rgba(255, 255, 255, 0.26);
+   position: relative;
+}
 .input{
    // height: 100px;
    font-size: 3rem;
@@ -87,6 +95,16 @@ button:hover{
 .inbut{
     height: 35px;
     width: 150px;
+    color: rgb(5, 5, 5);
+    background: #FFD500;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.inbut:hover{
+    color: #FFD500;
+    background: #333333;
 }
 .img{
     margin-bottom: 30px;
