@@ -1,14 +1,14 @@
 @use "../../../../wbu-ressources-clean.scss";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+@import "../../../../atome/typography/default";
 @import "../../../../variables";
-hr{
-    height: 5px;
-    color: #fff;
-    width: 100%;
+
+
+.footer{
+    height: 99vh;
+
+
     
 }
-
-
 .footer-video-container{
     position: absolute;
     //height: 180vh;
@@ -18,15 +18,37 @@ hr{
     
     
 }
+p:hover{
+    text-decoration:1px solid #FFD500;
+}
+p{
+    font-size: 1.5rem;
+    
+    span{
+        font-size: 1.5rem;
+    }
+    a{
+        font-size: 1.5rem;
+    }
+    
+}
+.last-list{
+    ul{
+        li {
+            a{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
 .ac-footer-floating-section-handler{
     position: relative;
     background: rgba(0, 0, 0, 0.76);
-    
-   
-    
+    height: 100%;    
 }
+
 .button{
-    font-size: 12px;
+    font-size: 1.5rem;
     
     text-transform: uppercase;
     text-decoration: none;
@@ -57,13 +79,14 @@ button:hover{
 }
 
 .input{
-    height: 60px;
+   // height: 100px;
+   font-size: 3rem;
     width: 50vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 .inbut{
-    height: 40px;
+    height: 35px;
     width: 150px;
 }
 .img{
@@ -75,6 +98,7 @@ button:hover{
 }
 .list-el {
     color: #fff;
+    font-size: 1.5rem;
 }
 .list-el:hover{
     color: #FFD500;
@@ -88,5 +112,13 @@ button:hover{
 @media  screen and (max-width: 480px) {
     .img{
         margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 1160) {
+    .bgvideo{
+        display: none;
+        width: 0;
+        height: 0;
     }
 }
