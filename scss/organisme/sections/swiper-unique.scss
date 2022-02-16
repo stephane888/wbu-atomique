@@ -10,23 +10,40 @@ $d_description: $d_title + 0.2;
   width: 100%;
   overflow: hidden;
   position: relative;
+  &::before {
+    position: absolute;
+    background-color: rgba($color: $wbu-background, $alpha: 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+  }
   .swiper-slide {
     overflow: hidden;
+    margin: $space_top 0 $space_bottom 0;
     .swiper-image {
       .cover-text {
         transition: all $transition cubic-bezier(0.215, 0.61, 0.355, 1) $delay;
         transform: translate3d(100%, 0, 0);
+
         .title {
           transition: all #{$transition * 2} cubic-bezier(0.215, 0.61, 0.355, 1)
             #{$d_title};
           transform: translate3d(0, -30px, 0);
           opacity: 0;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
         }
         .description {
           transition: all #{$transition * 2} cubic-bezier(0.215, 0.61, 0.355, 1)
             #{$d_description};
           transform: translate3d(0, -60px, 0);
           opacity: 0;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
         }
       }
     }

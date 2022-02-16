@@ -2,6 +2,7 @@
 @import "../../../../atome/typography/default";
 @import "../../../../variables";
 
+
 .ac-nos-services{
 
     .ac-container {
@@ -48,7 +49,9 @@
 
                 .service {
 
-                    width: 50%;
+                    width: 150%;
+                    display: block;
+                    columns: 1;
 
                 }
 
@@ -60,19 +63,21 @@
 
             position: relative;
             display: flex;
+            
 
             .icon-title{
 
                 display: flex;
                 background-color: rgba(0, 0, 0, 0);
                 position: relative;
-                padding: 24px 16px 24px 16px;
+                padding: 24px 26px 34px 16px;
                 overflow: hidden;
                 background-position: center center;
-                border: 1px solid white;
-                flex-wrap: wrap;
-                align-items: flex-start;
+               // border: 1px solid rgb(231, 33, 33);
+                //flex-wrap: wrap;
+                //align-items: flex-start;
                 width: 100%;
+                
 
 
                 .icon{
@@ -82,7 +87,7 @@
                     z-index: 2;
                     margin: 0px 32px 3px 0px;
                     display: inline-block;
-                    border: 1px solid white;
+                    //border: 1px solid white;
                     //color: #FFD500;
                     text-align: left!important;
                     font-size: 40px;
@@ -96,10 +101,11 @@
 
                     position: relative;
                     flex: auto;
+                    width: 100vw;
                     margin: 0px 32px 0px 0px;
                     display: inline-block;
                     z-index: 2;
-                    border: 1px solid white;
+                    //border: 1px solid rgb(38, 175, 72);
                     text-align: left!important;
 
                     h2 {
@@ -126,7 +132,6 @@
             }
 
             /*h3 {
-
                 color: #FFD500;
                 padding: 0px;
                 margin: 0px;
@@ -134,14 +139,10 @@
                 font-weight: 600;
                 text-transform: uppercase;
                 letter-spacing: 2px;
-
             }
-
             p {
-
                 color: #DEDEDE;
                 margin: 16px 0px 0px 0px;
-
             }*/
 
         }
@@ -218,7 +219,7 @@
             .col {
 
                 display: inline-block;
-                border: 1px solid white;
+                //border: 1px solid white;
                 height: auto;
                 width: 100%;
 

@@ -1,2 +1,145 @@
 @use "../../../../wbu-ressources-clean.scss";
+@import "../../../../atome/typography/default";
 @import "../../../../variables";
+
+
+.footer{
+    
+    height: 99vh;
+    
+}
+.footer-video-container{
+    position: absolute;
+    //height: 180vh;
+    
+    
+    
+    
+    
+}
+p:hover{
+    text-decoration:1px solid #FFD500;
+}
+p{
+    font-size: 1.5rem;
+    
+    span{
+        font-size: 1.5rem;
+    }
+    a{
+        font-size: 1.5rem;
+       // text-decoration: 0px solid rgba(0, 0, 0, 0.021);
+    }
+
+    a:hover{
+        text-decoration:1px solid #FFD500;
+    }
+    
+}
+.last-list{
+    
+    ul{
+        li {
+            a{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+.ac-footer-floating-section-handler{
+    position: relative;
+    background: rgba(0, 0, 0, 0.76);
+    min-height: 99vh;    
+}
+
+.button{
+    font-size: 1.5rem;
+    
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: #333333;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px 48px 20px 48px;
+    border: 1px solid white; 
+    
+    
+    a{
+        color: #333333;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    a:hover{
+    color: #FFD500;
+}
+}
+button:hover{
+    color: #FFD500;
+    a{
+        color: #FFD500;
+        text-decoration: none;
+    }
+}
+.line{
+   border-bottom: 0.1rem solid rgba(255, 255, 255, 0.26);
+   position: relative;
+}
+.input{
+   // height: 100px;
+   font-size: 3rem;
+    width: 50vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.inbut{
+    height: 35px;
+    width: 150px;
+    color: rgb(5, 5, 5);
+    background: #FFD500;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.inbut:hover{
+    color: #FFD500;
+    background: #333333;
+}
+.img{
+    margin-bottom: 30px;
+    text-align: center;
+    
+
+    
+}
+.list-el {
+    color: #929191;
+    font-size: 1.5rem;
+}
+.list-el:hover{
+    color: #FFD500;
+    text-decoration: underline 1px solid #FFD500;
+}
+
+.last{
+    padding-bottom: auto;
+}
+.copyright{
+    color: #929191;
+}
+
+@media  screen and (max-width: 480px) {
+    .img{
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 1160) {
+    .bgvideo{
+        display: none;
+        width: 0;
+        height: 0;
+    }
+}
