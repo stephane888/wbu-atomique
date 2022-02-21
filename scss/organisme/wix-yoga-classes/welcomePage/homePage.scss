@@ -1,0 +1,69 @@
+@use "../../../wbu-ressources-clean.scss";
+@import "../../../atome/typography/default";
+@import "../../../variables";
+
+.wix-full-page-handler{
+  
+
+    .wix-yoga-header-handler{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        background: #0b0ff58c;
+        overflow-x: hidden;
+
+        .img-side{
+         //float: left;
+          height: 100vh;
+          
+            img{
+                
+            }
+        }
+        .right-side{
+            background: #f5800b8c;
+            display: block;
+            height: 100vh;
+            .top-element{
+                background: #f6f3f0;
+                width: 50vw;
+                height: 77vh;
+                padding-top: 50px;
+                
+                p{
+                    font-size: 9rem;
+                    margin-left: 15rem;
+                   font-family: 'Cormorant Garamond', sans-serif;
+                    
+                }
+            }
+           .bottom-element{
+               width: 50vw;
+               height: 53.5vh;
+               font-family: normal normal normal 16px/1.4em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;;
+               margin-top: -20;
+               background: rgb(202,219,215);
+
+               p{
+                   padding: 70px;
+                   line-height: 2em;
+                   font-size: 2rem;
+               }
+               button{
+                   background: transparent;
+                   height: 40px;
+                   border: 1px solid #333;
+                   margin-left: 65px;
+                   padding: 2px 12px 2px 12px ;
+                   border-radius: 30px;
+                   font-size: 1.5rem;
+
+                    &:hover{
+                        background: #333;
+                        color: #fff;
+                    }
+               }
+           }
+        }
+    }
+}
