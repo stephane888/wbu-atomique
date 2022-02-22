@@ -187,46 +187,58 @@
         }
 
         .about-section-main-content{
-            display: flex;
+            display: block;
 
-            .img-container{
-                margin-top: 100px;
-                width: 50vw;
+            .first-about-section{
+                display: flex;
+            
 
-                img{
-                    margin-left: 130px;
-                    border-radius: 180px 180px 0 0 ;
+                .img-container{
+                    margin-top: 40px;
+                    width: 50vw;
+
+                    img{
+                        margin-left: 130px;
+                        border-radius: 180px 180px 0 0 ;
+                    }
                 }
-            }
 
-            .text-description{
-                width: 50vw;
-                padding: 0 150px 0 200px;
-                margin-left: 70px;
+                .text-description{
+                    width: 50vw;
+                    padding: 0 150px 0 200px;
+                    margin-left: 70px;
 
-                p{
-                    line-height: 3rem;
-                    font-size: 1.5rem;
-                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                }
-                .read-more{
-                    margin-top: 100px;
+                    p{
+                        line-height: 3rem;
+                        font-size: 1.5rem;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    }
+                    .read-more{
+                        margin-top: 100px;
 
-                    a{
-                        text-decoration: none;
-                        color: #33330098;
-                        font-size: 1.4rem;
-                        border: 1px solid #33330098;
-                        padding: 10px 25px 10px 25px;
-                        border-radius: 80px;
-                        background-color: #f6f3f0;
+                        a{
+                            text-decoration: none;
+                            color: #33330098;
+                            font-size: 1.4rem;
+                            border: 1px solid #33330098;
+                            padding: 10px 25px 10px 25px;
+                            border-radius: 80px;
+                            background-color: #f6f3f0;
 
-                        &:hover{
-                            color: #f6f3f0;
-                            background: #333;
+                            &:hover{
+                                color: #f6f3f0;
+                                background: #333;
+                            }
                         }
                     }
                 }
+            }
+            .yoga-icon{
+                width: 100vw;
+                background: #f6f3f0;
+                height: 60vh;
+                padding-top: -70px;
+                position: relative;
             }
         }
     }
