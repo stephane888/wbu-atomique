@@ -242,4 +242,135 @@
             }
         }
     }
+    .wix-classes-handler{
+        width: 100vw;
+        background: #e7edec;
+        height: 100vh;
+        margin-top: -15px;
+        
+       
+        .section-header{
+            display: flex;
+            width: 100vw;
+            height: auto;
+
+            .left-header-section{
+               width: 50vw;
+                
+                .section-title{
+                    padding-top: 20px;
+                    
+                    p{
+                        margin-top: 10px;
+                        margin-left: 100px;
+                        font-size: 1.5rem;
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    }
+                }
+                .section-subtitle{
+                    margin-top: 8px;
+    
+                    p{
+                        margin-left: 100px;
+                        font-family: 'Cormorant Garamond', sans-serif;
+                        font-size: 5rem;
+                        width: 50vw;
+                    }
+                }
+                .section-text-descriptor{
+                    margin-left: 100px;
+
+                    p{
+                        font-size: 1.8rem;
+                        line-height: 1.8;
+                        font-family: fantasy;
+                    }
+                }
+            }
+            .right-header-section{
+                margin-top: 100px;
+
+                a{
+                    margin-left: 300px;
+                    font-family: fantasy;
+                    font-size: 2rem;
+                    text-decoration: none;
+                    color: #333;
+                    border: 1px solid #333;
+                    padding: 8px 30px 8px 30px ;
+                    border-radius: 100px;
+
+                    &:hover{
+                        background: #333;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .section-bottom{
+          
+          margin-top: -71px;
+            .flex-list{
+                display: flex; 
+                min-height: 50vh;
+                margin-top: 300px;
+                //position: initial;
+                background: #f6f3f0;
+                .single-element{
+                    margin-left: 30px;
+                    margin-top: -250px;
+                    .pic-handler{
+
+                        img{
+                            height: 400px;
+                            width: 400px;
+                            opacity: 0.87;
+                            
+                            &:hover{
+                            opacity: 1;
+                             }
+                        }
+                    }
+                    .name-handler{
+
+                        p{
+                            font-family: 'Cormorant Garamond', sans-serif;
+                            font-size: 2.3rem;
+                            font-weight: 500;
+                            text-align: center;
+                        }
+                    }
+                    .description-area{
+                        margin-top: -15px;
+                        p{
+                            font-size: 1.7rem;
+                            text-align: center;
+                        }
+                    }
+                    .book-button{
+                        margin-top: 15px;
+                        text-align: center;
+                        margin-top: 50px;
+                        
+                        a{
+                            font-family: fantasy;
+                            font-size: 1.8rem;
+                            text-align: center;
+                            text-decoration: none;
+                            color: #fff;
+                            background: #333;
+                            border: 1px solid #333;
+                            padding: 8px 20px 8px 20px ;
+                            border-radius: 100px;
+
+                            &:hover{
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
 }
