@@ -247,6 +247,7 @@
         background: #e7edec;
         height: 100vh;
         margin-top: -15px;
+        position: relative;
         
        
         .section-header{
@@ -289,9 +290,10 @@
             }
             .right-header-section{
                 margin-top: 100px;
+                width: 50vw;
 
                 a{
-                    margin-left: 300px;
+                    margin-left: 200px;
                     font-family: fantasy;
                     font-size: 2rem;
                     text-decoration: none;
@@ -348,7 +350,6 @@
                         }
                     }
                     .book-button{
-                        margin-top: 15px;
                         text-align: center;
                         margin-top: 50px;
                         
@@ -367,8 +368,85 @@
                                 opacity: 0.8;
                             }
                         }
+                    } 
+                }
+            }
+        }
+    }
+    .guarantee-section-handler{
+        background: url("https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_425,ar_1.77,c_fill/dpr_2/image/diy/aede9f6d-c647-4873-9765-7c890dd168ab");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #333;
+        height: 100vh;
+        width: 100vw;
+        margin-top: 250px;
+        position: absolute;
+
+        .floating-pub-element{
+            background: #eee0d1;
+            width: 29vw;
+            height:90vh;
+            margin-top: 200px;
+
+            .icon-handler{
+
+               .sphere{
+                   float: right;
+                   fill: #AF4B43;
+                   margin-top: 30px;
+                   margin-left: 260px;
+                   position: absolute;
+               }
+               .circle{
+                   margin-left: 210px;
+                   position: relative;
+                   
+               }
+            }
+            .text-handler{
+                margin-top: -60px;
+                .element-title{
+
+                    p{
+                        font-family: 'Cormorant Garamond', sans-serif;
+                        margin-left: 50px;
+                        font-weight: 100;
+                        font-size: 5rem;
+                        line-height: 6rem;
                     }
-                    
+                }
+                .element-text-desc{
+                    margin-bottom: 80px;
+                    margin-top: -25px;
+                    p{
+                        font-weight: 50;
+                        visibility: inherit;
+                        line-height: 2em;
+                        font-size: 1.8rem;
+                        margin-left: 50px;
+                    }
+                }
+                .element-bottom-button{
+                    margin-top: -20px;
+                    text-align: center;
+
+                    a{
+                        text-decoration: none;
+                        color: #333;
+                        background-color: transparent;
+                        border: 1px solid #333;
+                        padding: 14px  30px 14px 30px;
+                        border-radius: 55px;
+                        font-weight: 300;
+                        word-spacing: 5;
+                        font-size: 1.8rem;
+
+                        &:hover{
+                            color: #eee0d1;
+                            background: #333;
+                        }
+                    }
                 }
             }
         }
