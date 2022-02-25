@@ -8,7 +8,7 @@
 .top-banner{
     display: flex;
     background: rgb(238,224,209);
-    position: relative;
+    position: initial;
     width: 100vw;
     overflow: none;
 
@@ -128,15 +128,15 @@
             }
            .bottom-element{
                width: 50.6vw;
-               height: 53.5vh;
+               height: 65.5vh;
                font-family: normal normal normal 16px/1.4em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;;
-               margin-top: -20;
+               margin-top: -20px;
                background: rgb(202,219,215);
 
                p{
                    padding: 70px;
                    line-height: 2em;
-                   font-size: 2rem;
+                   font-size: 1.8rem;
                }
                button{
                    background: transparent;
@@ -198,7 +198,7 @@
                     width: 50vw;
 
                     img{
-                        margin-left: 130px;
+                        margin-left: 120px;
                         border-radius: 180px 180px 0 0 ;
                     }
                 }
@@ -207,8 +207,12 @@
                     width: 50vw;
                     padding: 0 150px 0 200px;
                     margin-left: 70px;
+                    display: block;
+                    overflow: hidden;
 
                     p{
+                        width: 30vw;
+                        height: 60vh;
                         line-height: 3rem;
                         font-size: 1.5rem;
                         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -314,9 +318,9 @@
           margin-top: -71px;
             .flex-list{
                 display: flex; 
-                min-height: 50vh;
+                min-height: 65vh;
                 margin-top: 300px;
-                //position: initial;
+                //position: relative;
                 background: #f6f3f0;
                 .single-element{
                     margin-left: 30px;
@@ -380,14 +384,15 @@
         color: #333;
         height: 100vh;
         width: 100vw;
-        margin-top: 250px;
-        position: absolute;
+        margin-top: 280px;
+        position: relative;
 
         .floating-pub-element{
             background: #eee0d1;
             width: 29vw;
             height:90vh;
-            margin-top: 200px;
+            margin-top: 150px;
+            position: absolute;
 
             .icon-handler{
 
@@ -446,6 +451,186 @@
                             color: #eee0d1;
                             background: #333;
                         }
+                    }
+                }
+            }
+        }
+    }
+    .staff-section-handler{
+        height: 170vh;
+        width: 100vw;
+        background: #f6f3f0;
+        position: initial;
+        margin-top: -14px;
+        display: block;
+
+        .section-header{
+            position: initial;
+            display: flex;
+            .left-side-header{
+                
+                .section-title{
+                    margin-top: 180px;
+                    margin-left: 100px;
+                    p{
+                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                        font-size: 1.5rem;
+                        line-height: 1.8em;
+                    }
+                }
+                .section-subtitle{
+                    margin-top: -20px;
+
+                    p{
+                        margin-left: 100px;
+                        font-family: 'Cormorant Garamond', sans-serif;
+                        font-size: 5rem;
+                        width: 50vw;
+                    }
+                }
+                .text-desc{
+                    margin-left: 100px;
+                    p{
+                    font-size: 1.8rem;
+                    line-height: 1.8;
+                    font-family: fantasy;
+                    width: 50vw;
+                    }
+                }
+            }
+            .right-side-header{
+                width: 30vw;
+                margin-top: 200px;
+                
+                a{
+                    text-decoration: none;
+                    color: #333;
+                    background-color: transparent;
+                    border: 1px solid #333;
+                    padding: 8px  30px 8px 30px;
+                    border-radius: 55px;
+                    margin-left: 100px;
+                    font-weight: 300;
+                    word-spacing: 5;
+                    font-size: 1.8rem;
+
+                    &:hover{
+                        background: #333;
+                        color: #e7edec;
+                    }
+                }
+            }
+        }
+        .instructor-section{
+            position: absolute;
+            .instructor-handler{
+                display: flex;
+
+                .single-instructor1{
+                    margin-top: 100px;
+                    margin-left: 100px;
+
+                    img{
+                        border-radius: 150px 150px 0 0 ;
+                    }
+                    .name-post{
+                        height: 11vh;
+                        width: 15vw;
+                        margin-top: -40px;
+                        position: absolute;
+                        background: #f6f3f0;
+
+                        .name{
+                            margin-top: 5px;
+                            margin-left: 20px;
+                            font-size: 1.9rem;
+                        }
+                        .post{
+                            margin-top: -5px;
+                            font-family: 'Cormorant Garamond', sans-serif;
+                            font-style: italic;
+                            font-weight: bold;
+                            font-size: 1.9rem;
+                        }
+                    }
+                }
+                .single-instructor2{
+                    margin-top: 180px;
+                    margin-left: 100px;
+
+                    img{
+                        border-radius: 150px 150px 0 0 ;
+                    }
+                    .name-post{
+                        height: 11vh;
+                        width: 15vw;
+                        margin-top: -40px;
+                        position: absolute;
+                        background: #f6f3f0;
+
+                        .name{
+                            margin-top: 5px;
+                            margin-left: 20px;
+                            font-size: 1.9rem;
+                        }
+                        .post{
+                            margin-top: -5px;
+                            font-family: 'Cormorant Garamond', sans-serif;
+                            font-style: italic;
+                            font-weight: bold;
+                            font-size: 1.9rem;
+                        }
+                    }
+                }
+                .single-instructor3{
+                    margin-top: 0px;
+                    margin-left: 100px;
+
+                    img{
+                        border-radius: 150px 150px 0 0 ;
+                    }
+                    .name-post{
+                        height: 11vh;
+                        width: 15vw;
+                        margin-top: -40px;
+                        position: absolute;
+                        background: #f6f3f0;
+
+                        .name{
+                            margin-top: 5px;
+                            margin-left: 20px;
+                            font-size: 1.9rem;
+                        }
+                        .post{
+                            margin-top: -5px;
+                            font-family: 'Cormorant Garamond', sans-serif;
+                            font-style: italic;
+                            font-weight: bold;
+                            font-size: 1.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .element-list-handler{
+        background: #e7edec;
+        height: 40vh;
+        width: 100vw;
+
+        .elements{
+            display: flex;
+
+            .single-element{
+                display: block;
+                padding: 20px 30px 20px 70px;
+
+                .title{
+                    
+
+                    p{
+                        text-align: center;
+                        font-size: 1.5rem
                     }
                 }
             }
