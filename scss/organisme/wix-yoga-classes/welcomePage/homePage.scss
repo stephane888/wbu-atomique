@@ -7,6 +7,7 @@
 
 .top-banner{
     display: flex;
+    
     background: rgb(238,224,209);
     position: initial;
     width: 100vw;
@@ -860,9 +861,8 @@
         }
     }
     .chat{
-        position: -webkit-sticky;
-        position: sticky;
         top: 85%;
+        position: fixed;
         height: 50px;
         width: 180px;
         margin-left: 83%;
@@ -870,6 +870,7 @@
         background: #AF4B43;
         p{
             text-align: center;
+            font-size: 1.5rem;
             padding: 15px 0 0 0 ;
         }
     }
