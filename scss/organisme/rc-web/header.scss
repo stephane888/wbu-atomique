@@ -5,7 +5,7 @@
 --------------------------------------------------------------*/
 .header-section-rc-web {
   padding: $space_bottom * 1.2 0;
-  background: rgb(15, 10, 10);
+  background: $wbu-background;
   @include media-max(SM) {
     padding: 100px 60px;
   }

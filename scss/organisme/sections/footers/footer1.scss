@@ -1,10 +1,10 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 
 .footer1 {
+  background: $wbu-background;
   /* 21 Footer
 ================================================== */
   .footer {
-    background: #32373c;
     color: #ccc;
     padding: 5rem 0;
     p.gray {
@@ -159,7 +159,7 @@
  * -
  */
   .bg-darker-gray {
-    background: #282d32;
+    background: lighten($color: $wbu-background, $amount: 5);
     color: #fff;
     padding: $wbu-margin;
   }
