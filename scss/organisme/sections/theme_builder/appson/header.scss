@@ -1,0 +1,74 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+.appson-section-handler {
+  background: url("https://preview.colorlib.com/theme/appson/appson/assets/img/bg/img-background.jpg.webp")
+    center center/cover no-repeat;
+  position: relative;
+  padding-bottom: 50px;
+  position: relative;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #264956c7;
+  }
+
+  .container {
+    .slider-content {
+      .col-md-8 {
+        .slider-nner {
+          margin-top: 20%;
+
+          .title,
+          .sub-title {
+            color: #fff;
+            font-size: 5.5rem;
+            font-family: "Montserrat", sans-serif;
+            margin-bottom: 0;
+            line-height: 7.5rem;
+          }
+          .title {
+            font-weight: 900;
+          }
+          .sub-title {
+            margin-bottom: $wbu-margin * 1.5;
+          }
+          p {
+            font-size: 18px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            color: #fff;
+            letter-spacing: 0;
+            line-height: 30px;
+            margin: 28px 0 39px;
+          }
+          .btn-area {
+            a {
+              height: 50px;
+              width: 195px;
+              border: 2px solid #fff;
+              display: inline-block;
+              text-align: center;
+              line-height: 46px;
+              border-radius: 20px;
+              font-weight: 500;
+              font-size: 14px;
+              color: #fff;
+              letter-spacing: 0;
+
+              &:hover {
+                background-color: #fff;
+                color: #444;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
