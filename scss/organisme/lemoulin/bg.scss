@@ -1,0 +1,17 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+/*--------------------------------------------------------------
+# emptybg section
+--------------------------------------------------------------*/
+.lm-bg-section {
+  height: 85vh;
+  margin: 0;
+
+  .bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 1;
+  }
+}

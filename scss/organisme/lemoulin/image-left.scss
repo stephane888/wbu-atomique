@@ -1,0 +1,20 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@use "./image-right.scss";
+/*--------------------------------------------------------------
+# Image Left section
+--------------------------------------------------------------*/
+.lm-il-section {
+  .lm-ir-section {
+    &__text {
+      justify-content: start;
+      @include media-max(SM) {
+        justify-content: center;
+      }
+    }
+    &__img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
