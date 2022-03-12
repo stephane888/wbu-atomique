@@ -1,174 +1,164 @@
-#features{
-    background: #fff;
-    .icon{
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-        border-radius: 4px;
-        text-align: center;
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.fub-features {
+  background: #fff;
+
+  .icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-header {
+    .section-title {
+    }
+    .shape {
+      height: 1px;
+      margin: 0 auto 30px;
+      position: relative;
+      width: 60px;
+      background-color: $wbu-color-primary;
+    }
+  }
+  .row-handler {
+    .content-left {
+      .box-item {
+        box-shadow: 0px 2px 18px 0px rgb(198 198 198 / 30%);
+        padding: 15px;
+        line-height: 22px;
+        margin-top: 30px;
+        border-radius: 3px;
+        background-color: #fff;
         position: relative;
-        z-index: 1;
-    }
-    .container{
+        top: 0;
+        //display: flex;
+        transition: all 0.3s;
+        &:hover {
+          box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
 
-        .section-header{
-
-            .section-title{}
-            .shape{
-                height: 1px;
-                margin: 0 auto 30px;
-                position: relative;
-                width: 60px;
-                background-color: #F63854;
-            }
-
+          h4 {
+            color: $wbu-color-primary;
+          }
         }
-        .row-handler{
+        .icon {
+          float: right;
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          border-radius: 4px;
+          text-align: center;
+          position: relative;
+          z-index: 1;
 
-            .col-lg-4{
-
-                .content-left{
-                    
-                    .box-item{
-                        box-shadow: 0px 2px 18px 0px rgb(198 198 198 / 30%);
-                        padding: 15px;
-                        line-height: 22px;
-                        margin-top: 30px;
-                        border-radius: 3px;
-                        background-color: #fff;
-                        position: relative;
-                        top: 0;
-                        //display: flex;
-                        transition: all 0.3s;
-                        &:hover{
-                            box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
-
-                            h4{
-                                
-                                color: #F63854;
-                            }
-                        }
-                        .icon{
-                            float: right;
-                            display: inline-block;
-                            width: 60px;
-                            height: 60px;
-                            border-radius: 4px;
-                            text-align: center;
-                            position: relative;
-                            z-index: 1;
-                
-                            margin: 12px;
-                            -webkit-transition: all 0.2s linear;
-                            -moz-transition: all 0.2s linear;
-                            -o-transition: all 0.2s linear;
-                            transition: all 0.2s linear; 
-                            i{
-                                float: left;
-                                color: #F63854;
-                                font-size: 30px;
-                                -webkit-transition: all 0.2s linear;
-                                -moz-transition: all 0.2s linear;
-                                -o-transition: all 0.2s linear;
-                                transition: all 0.2s linear;
-                            }
-                        }
-                        .text{
-                            text-align: right;
-
-                            h4{
-                                cursor: pointer;
-                                font-size: 1.3rem;
-                                font-weight: 700;
-                                line-height: 22px;
-                                -webkit-transition: all 0.2s linear;
-                                -moz-transition: all 0.2s linear;
-                                -o-transition: all 0.2s linear;
-                                transition: all 0.2s linear;
-                            }
-                            p{
-                                font-size: 14px;
-                                line-height: 26px;
-                            }
-                        }
-                    }
-                }
-            }
-            .img-handler{
-                
-                .show-box{
-                    margin-top: 50px;
-                    img{
-                        width: 100%;
-                    }
-                }
-            }
-            .right-content-handler{
-                
-
-                .content-right{
-
-                    .box-item{
-                        box-shadow: 0px 2px 18px 0px rgba(198, 198, 198, 0.3);
-                        padding: 15px;
-                        line-height: 22px;
-                        margin-top: 30px;
-                        border-radius: 3px;
-                        background-color: #fff;
-                        position: relative;
-                        top: 0;
-                        display: flex;
-                        transition: all 0.3s;
-                        &:hover{
-                            box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
-
-                            h4{
-                                
-                                color: #F63854;
-                            }
-                        }
-                        .icon{
-                            display: inline-block;
-                            width: 60px;
-                            height: 60px;
-                            border-radius: 4px;
-                            text-align: center;
-                            position: relative;
-                            z-index: 1;
-                            text-align: center;
-                            margin: 12px;
-                            -webkit-transition: all 0.2s linear;
-                            -moz-transition: all 0.2s linear;
-                            -o-transition: all 0.2s linear;
-                            transition: all 0.2s linear; 
-                            i{
-                                color: #F63854;
-                                font-size: 30px;
-                                -webkit-transition: all 0.2s linear;
-                                -moz-transition: all 0.2s linear;
-                                -o-transition: all 0.2s linear;
-                                transition: all 0.2s linear;
-                            }
-                        }
-                        .text{
-                            h4{
-                                cursor: pointer;
-                                font-size: 1.3rem;
-                                font-weight: 700;
-                                line-height: 22px;
-                                -webkit-transition: all 0.2s linear;
-                                -moz-transition: all 0.2s linear;
-                                -o-transition: all 0.2s linear;
-                                transition: all 0.2s linear;
-                            }
-                            p{
-                                font-size: 14px;
-                                line-height: 26px;
-                            }
-                        }
-                    }
-                }
-            }
+          margin: 12px;
+          -webkit-transition: all 0.2s linear;
+          -moz-transition: all 0.2s linear;
+          -o-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+          i {
+            float: left;
+            color: $wbu-color-primary;
+            font-size: 30px;
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+          }
         }
+        .text {
+          text-align: right;
+
+          h4 {
+            cursor: pointer;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 22px;
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+          }
+          p {
+            font-size: 14px;
+            line-height: 26px;
+          }
+        }
+      }
     }
+
+    .img-handler {
+      .show-box {
+        margin-top: 50px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .right-content-handler {
+      .content-right {
+        .box-item {
+          box-shadow: 0px 2px 18px 0px rgba(198, 198, 198, 0.3);
+          padding: 15px;
+          line-height: 22px;
+          margin-top: 30px;
+          border-radius: 3px;
+          background-color: #fff;
+          position: relative;
+          top: 0;
+          display: flex;
+          transition: all 0.3s;
+          &:hover {
+            box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+
+            h4 {
+              color: $wbu-color-primary;
+            }
+          }
+          .icon {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 4px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin: 12px;
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+            i {
+              color: $wbu-color-primary;
+              font-size: 30px;
+              -webkit-transition: all 0.2s linear;
+              -moz-transition: all 0.2s linear;
+              -o-transition: all 0.2s linear;
+              transition: all 0.2s linear;
+            }
+          }
+          .text {
+            h4 {
+              cursor: pointer;
+              font-size: 1.3rem;
+              font-weight: 700;
+              line-height: 22px;
+              -webkit-transition: all 0.2s linear;
+              -moz-transition: all 0.2s linear;
+              -o-transition: all 0.2s linear;
+              transition: all 0.2s linear;
+            }
+            p {
+              font-size: 14px;
+              line-height: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

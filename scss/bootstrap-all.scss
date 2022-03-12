@@ -1,3 +1,2 @@
-//@import "./wbu-ressources.scss";
-//$input-btn-padding-y-lg: 5rem;
+@use "./variables-bootstrap" as *;
 @import "bootstrap/scss/bootstrap";
