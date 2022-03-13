@@ -31,3 +31,18 @@ $input-btn-padding-x-lg: $wbu-margin * 1.44 !default; //1rem !default;
 //$input-btn-line-height-lg: $line-height-lg !default;
 
 //$input-btn-border-width: $border-width !default;
+
+/*------------------------------------
+  custom
+------------------------------------*/
+
+//bootstrap override
+$primary: $wbu-color-primary;
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+$navbar-nav-link-padding-x: $wbu-margin * 0.5;
+$nav-link-padding-y: $wbu-margin * 0.5;
+$nav-link-padding-x: $wbu-margin * 0.8;
+$form-check-input-gutter: $wbu-margin;
+$card-spacer-x: $wbu-margin;
