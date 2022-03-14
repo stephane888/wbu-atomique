@@ -1,50 +1,394 @@
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 .reassurance-section-handler{
     background: #b9d2e9;
+    background-position: cover;
     //height: auto;
     width: 100vw;
     #reassurance{
 
         .container{
-            
-            .row{
+            .contenu{
 
-                .col-12{
+                .title{
+                    color: #1d1d1d;
+                    font-size: 3rem;
+                    font-weight: 100;
+                    font-family: "Raleway", sans;
+                    margin-top: 40px;
+                    width: 100%;
+                                    
+                    .sub-title{
+                        color: #085796 ;
+                        font-size: 2rem;
+                        font-weight: 900;
+                        font-family: "Roboto", sans-serif;
+                    } 
+                    .shape{
+                        //position: absolute;
+                        margin-top: 25px;
+                        left: 0;
+                        bottom: 0;
+                        width: 60px;
+                        height: 0;
+                        margin-left: 0px;
+                        border-bottom: 1px solid #085796;
+                    }
+                }
+              
+                .description{
+                    position: relative;
+                    padding-right: 150px;
+                    font-size: 0.99rem;
+                    color: #1d1d1d;
+                    font-family: "Roboto", sans-serif;
+                }
+            }
+            .liste-atout{
+                list-style-type: none;
+                position: relative;
+                margin-top: 15px;
+                
 
-                    .row{
+                .atout-1{
+                    //flex-direction: column;
+                    display: flex;
+                    margin-left: 50px;
+                    margin-top: 20px;
 
-                        .col-12{
+                    span{
+                        display: block;
+                        position: relative;
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        text-align: center;
+                        box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
+                        border-radius: 50%;
+                        background: transparent;
+                        overflow: hidden;
+                        
 
-                            .contenu{
+                        i{
 
-                                h2{
-                                    color: #1d1d1d;
-                                    font-size: 3.8rem;
-                                    font-weight: 100;
-                                    font-family: fantasy;
+                            svg{
 
-                                    strong{
-                                        color: #085796 ;
-                                        font-size: 2.3rem;
-                                        line-height: 0.5rem;
-                                        font-weight: 900;
-                                        font-family: "Roboto", sans-serif;
-                                    }
-                                    &::after{
-                                        content: '';
-                                        position: absolute;
-                                        left: 0;
-                                        bottom: 0;
-                                        width: 60px;
-                                        height: 0;
-                                        margin-left: -20px;
-                                        border-bottom: 1px solid #085796;
-                                    }
+                                path{
+                                    fill: #085796;
                                 }
                             }
                         }
                     }
+                    .content-atout{
+                        margin-left: 15px;
+                        position: relative;
+                        max-width: 50%;
+                        h3{
+
+                        font-size: 1.4rem;
+                        font-family: 'Raleway', sans;
+                        margin-bottom: 15px;
+                        font-weight: 350;
+
+                        b{
+                            color: #f08001;
+                        }
+                        }
+                        
+                        p{
+                            display: block;
+                            color: #1d1d1d;
+                            font-size: 1rem;
+                            font-family: 'Roboto', sans-serif;
+                        }
+                    }
+                }
+
+                .atout-2{
+                    display: flex;
+                    margin-left: 30px;
+                    margin-top: 20px;
+
+                    span{
+                        display: block;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        text-align: center;
+                        box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
+                        border-radius: 50%;
+                        background: transparent;
+                        overflow: hidden;
+
+                        i{
+
+                            svg{
+
+                                path{
+                                    fill: #085796;
+                                }
+                            }
+                        }
+                    }
+                    .content-atout{
+                        margin-left: 15px;
+                        position: relative;
+                        max-width: 50%;
+                        h3{
+
+                        font-size: 1.4rem;
+                        font-family: 'Raleway', sans;
+                        margin-bottom: 15px;
+                        font-weight: 350;
+
+                        b{
+                            color: #f08001;
+                        }
+                        }
+                        
+                        p{
+                            display: block;
+                            color: #1d1d1d;
+                            font-size: 1rem;
+                            font-family: 'Roboto', sans-serif;
+                        }
+                    }
+                }
+                .atout-3{
+                    display: flex;
+                    margin-top: 30px;
+                    margin-left: 10px;
+                    span{
+                        display: block;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        text-align: center;
+                        box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
+                        border-radius: 50%;
+                        background: transparent;
+                        overflow: hidden;
+
+                        i{
+
+                            svg{
+
+                                path{
+                                    fill: #085796;
+                                }
+                            }
+                        }
+                    }
+                    .content-atout{
+                        margin-left: 15px;
+                        position: relative;
+                        max-width: 50%;
+                        h3{
+
+                        font-size: 1.4rem;
+                        font-family: 'Raleway', sans;
+                        margin-bottom: 15px;
+                        font-weight: 350;
+
+                        b{
+                            color: #f08001;
+                        }
+                        }
+                        
+                        p{
+                            display: block;
+                            color: #1d1d1d;
+                            font-size: 1rem;
+                            font-family: 'Roboto', sans-serif;
+                        }
+                    }
+                }
+                .atout-4{
+                    display: flex;
+                    margin-left: 20px;
+
+                    span{
+                        display: block;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        text-align: center;
+                        box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
+                        border-radius: 50%;
+                        background: transparent;
+                        overflow: hidden;
+
+                        i{
+
+                            svg{
+
+                                path{
+                                    fill: #085796;
+                                }
+                            }
+                        }
+                    }
+                    .content-atout{
+                        margin-left: 15px;
+                        position: relative;
+                        max-width: 50%;
+                        h3{
+
+                        font-size: 1.4rem;
+                        font-family: 'Raleway', sans;
+                        margin-bottom: 15px;
+                        font-weight: 350;
+
+                        b{
+                            color: #f08001;
+                        }
+                        }
+                        
+                        p{
+                            display: block;
+                            color: #1d1d1d;
+                            font-size: 1rem;
+                            font-family: 'Roboto', sans-serif;
+                        }
+                    }
+                }
+                .atout-5{
+                    display: flex;
+                    margin-left: 40px;
+
+                    span{
+                        display: block;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        text-align: center;
+                        box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
+                        border-radius: 50%;
+                        background: transparent;
+                        overflow: hidden;
+
+                        i{
+
+                            svg{
+
+                                path{
+                                    fill: #085796;
+                                }
+                            }
+                        }
+                    }
+                    .content-atout{
+                        margin-left: 15px;
+                        position: relative;
+                        max-width: 50%;
+                        h3{
+
+                        font-size: 1.4rem;
+                        font-family: 'Raleway', sans;
+                        margin-bottom: 15px;
+                        font-weight: 350;
+
+                        b{
+                            color: #f08001;
+                        }
+                        }
+                        
+                        p{
+                            display: block;
+                            color: #1d1d1d;
+                            font-size: 1rem;
+                            font-family: 'Roboto', sans-serif;
+                        }
+                    }
+                }
+
+                .float-btn{
+                    margin-top: 70px;
+                    margin-left: 35px;
+                    border: 0px solid transparent;
+                    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+                    background: #f08001;
+                    height: max-content;
+                    width: max-content;
+                    white-space: nowrap;
+                    padding: 10px 20px 10px 20px;
+                    border-radius: 30px;
+                    font-family: 'Roboto', sans;
+
+                    a{
+                        color: #fff;
+                        font-weight: 800;
+                    }
                 }
             }
+            .macaron{
+                position: absolute;
+                margin-top: -800px;
+                margin-left: 800px;
+            }
+            
+        }.mascotte{
+                margin-left: 33%;
+                position: absolute;
+                margin-top: -550px;
+            }
+    }
+}
+@media only screen and (max-width: 993px) {
+    .liste-atout{
+        display: block;
+        margin-top: 10px;
+        margin-left: 0px;
+        
+
+        .atout-1{
+            margin-left: 0px;
+            margin-bottom: 30px;
+           margin-top: 50px;
+            //position: relative;
         }
+        .atout-2{
+            margin-left: 0px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            position: relative;
+        }
+        .atout-3{
+            margin-left: 0px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            position: relative;
+        }
+        .atout-4{
+            margin-left: 0px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            position: relative;
+        }
+        .atout-5{
+            position: relative;
+            margin-left: 0px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        
+    }
+    .macaron{
+        display: none;
+        }
+    .mascotte{display: none;
     }
 }
