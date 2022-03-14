@@ -12,70 +12,62 @@
         background-color: $wbu-background;
       }
     }
-    .row {
-      .col-md-6 {
-        &:hover {
-          .icon {
-            background: $wbu-color-primary;
-            svg {
-              color: #fff;
-            }
+
+    .services-item {
+      &:hover {
+        .icon {
+          background: $wbu-color-primary;
+          svg {
+            color: #fff;
           }
         }
-        .services-item {
-          padding: 10px;
-          border-radius: 4px;
-          text-align: center;
-          margin: 15px 0;
-          box-shadow: 0px 2px 18px 0px rgba(198, 198, 198, 0.3);
+      }
+      padding: $wbu-margin;
+      border-radius: 4px;
+      text-align: center;
+      margin: 15px 0;
+      box-shadow: 0px 2px 18px 0px rgba(198, 198, 198, 0.3);
+      transition: all 0.3s;
+
+      .icon {
+        border: 1px solid rgba(198, 198, 198, 0.3);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 0 auto;
+        transition: all 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 100%;
+        i {
+          color: $wbu-color-primary;
           transition: all 0.3s;
-
-          .icon {
-            border: 1px solid rgba(198, 198, 198, 0.3);
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            margin: 0 auto;
-            transition: all 0.3s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            line-height: 100%;
-            i {
-              font-size: 30px;
-              color: $wbu-color-primary;
-              line-height: 70px;
-              transition: all 0.3s;
-            }
+          display: flex;
+          padding: $wbu-margin * 0.5;
+        }
+        svg {
+          width: 100%;
+        }
+        &:hover {
+          background: $wbu-color-primary;
+        }
+      }
+      .services-content {
+        .title {
+          margin-top: $wbu-margin;
+          font-weight: 500;
+          margin-bottom: $wbu-margin;
+          a {
+            color: inherit;
             &:hover {
-              background: $wbu-color-primary;
+              color: $wbu-color-primary;
             }
-          }
-          .services-content {
-            h3 {
-              margin-top: 10px;
-              font-weight: 500;
-              text-transform: uppercase;
-              margin-bottom: 10px;
-
-              a {
-                font-size: 16px;
-                color: #585b60;
-
-                &:hover {
-                  color: $wbu-color-primary;
-                  text-decoration: none;
-                }
-              }
-            }
-            p {
-              color: #abacae;
-            }
-          }
-          &:hover {
-            box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
           }
         }
+      }
+      &:hover {
+        box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
       }
     }
   }
