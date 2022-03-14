@@ -82,9 +82,9 @@
             -o-transition: all 0.2s linear;
             transition: all 0.2s linear;
           }
-          p {
-            font-size: 14px;
-            line-height: 26px;
+          .description {
+            font-size: $wbu-default-font-size;
+            line-height: $wbu-default-line-height;
           }
         }
       }
