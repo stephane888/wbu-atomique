@@ -12,7 +12,8 @@ $prim-font: "Poppins", sans-serif;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 120vh;
+    min-height: 110vh;
+    padding-bottom: 30px;
     //position: absolute;
     width: 100vw;
 
@@ -50,15 +51,18 @@ $prim-font: "Poppins", sans-serif;
         width: 100vw;
         background: $secondary;
         z-index: 1;
-        margin-left: 90px;
+        margin-left: 80px;
         //position: absolute;
         display: flex;
         overflow: hidden;
         .slide{
             //margin: 0px 40px 0 0;
-            margin-right: 5px;
-            width: auto;
-            display: none;
+            margin-right: 10px;
+            margin-left: -22px;
+            height: fit-content;
+            position: absolute;
+            display: block;
+            
 
             .describe{
                 font-family: $prim-font;
@@ -66,7 +70,9 @@ $prim-font: "Poppins", sans-serif;
                 font-style: italic;
                 font-weight: 300;
                 color: #1d1d1d;
+                width: 380px;
                 font-size: 1.5rem;
+                display: block;
             }
             .single-user{
                 margin-left: 37%;
@@ -108,7 +114,7 @@ $prim-font: "Poppins", sans-serif;
                     font-size: 1.7rem;
                     padding: 20px 20px 10px 20px;
                     text-decoration: none;
-                    margin-left: 90%;
+                    margin-left: 85%;
                 }
         }
         
@@ -124,8 +130,16 @@ $prim-font: "Poppins", sans-serif;
     }
 }
 
-@media  only screen and (max-width: 955px) {
+
+
+
+
+
+@media  only screen and (max-width: 995px) {
     .empty-square{
+        display: none;
+    }
+    .right-green-element{
         display: none;
     }
 }
