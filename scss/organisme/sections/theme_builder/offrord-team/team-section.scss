@@ -1,0 +1,131 @@
+@use '../../../../wbu-ressources-clean.scss';
+@import "../../../../atome/typography/default";
+@import "../../../../variables";
+
+$primary: #2CE161;
+$secondary: #fff;
+$prim-font: "Poppins", sans-serif;
+
+.team-section-handler{
+    background: rgba(7, 7, 7, 0.281);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 120vh;
+    //position: absolute;
+    width: 100vw;
+
+    .right-green-element{
+        background: $primary;
+        height: 100vh;
+        position: absolute;
+        z-index: 1;
+        width: 30vw;
+        margin-left: 70%;
+    }
+    .small-desc{
+        //position: relative;
+        margin-top: 70px;
+        .shape{
+            width: 60px;
+            height: 8px;
+            background: $primary;
+        }
+        .text-descriptor{
+            font-family: $prim-font;
+            font-size: 1.9rem;
+            color: $secondary;
+        }
+        .title{
+            font-family: $prim-font;
+            margin-top: 40px;
+            color: $secondary;
+            font-size: 5rem;
+        }
+    }
+    .slider{
+        margin-top: 65px;
+        height: 65vh;
+        width: 100vw;
+        background: $secondary;
+        z-index: 1;
+        margin-left: 90px;
+        //position: absolute;
+        display: flex;
+        overflow: hidden;
+        .slide{
+            //margin: 0px 40px 0 0;
+            margin-right: 5px;
+            width: auto;
+            display: none;
+
+            .describe{
+                font-family: $prim-font;
+                text-align: center;
+                font-style: italic;
+                font-weight: 300;
+                color: #1d1d1d;
+                font-size: 1.5rem;
+            }
+            .single-user{
+                margin-left: 37%;
+                margin-top: 15px;
+                box-shadow: 5px 5px 5px 5px solid #333;
+            }
+            .single-info{
+                text-align: center;
+
+                h3{
+                    color: $primary;
+                    font-family: $prim-font;
+                    font-weight: 400;
+                    font-size: 2rem;
+                    margin-top: 15px;
+                }
+                p{
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                }
+            }
+            
+        }
+            .toggler{
+                display: flex;
+                margin-top: -50px;
+                position: initial;
+                .prev{
+                    color: #1d1d1d;
+                    cursor: pointer;
+                    font-size: 1.7rem;
+                    padding: 20px 20px 10px 20px;
+                    text-decoration: none;
+                    margin-left: -30px;
+                }
+                .next{
+                    color: #1d1d1d;
+                    cursor: pointer;
+                    font-size: 1.7rem;
+                    padding: 20px 20px 10px 20px;
+                    text-decoration: none;
+                    margin-left: 90%;
+                }
+        }
+        
+        
+    }
+    .empty-square{
+        border: 7px solid $secondary;
+        position: absolute;
+        height: 75vh;
+        width: 50vw;
+        margin-left: 42%;
+        border-right: 0px;
+    }
+}
+
+@media  only screen and (max-width: 955px) {
+    .empty-square{
+        display: none;
+    }
+}
