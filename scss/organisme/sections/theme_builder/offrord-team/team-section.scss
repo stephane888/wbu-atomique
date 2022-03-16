@@ -7,15 +7,15 @@ $secondary: #fff;
 $prim-font: "Poppins", sans-serif;
 
 .team-section-handler{
-    background: rgba(7, 7, 7, 0.281);
+    background: url(https://www.offroad.works/wp-content/uploads/2021/09/Sans-titre-2.jpg);
     background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    
     min-height: 110vh;
     padding-bottom: 30px;
+    animation-name: back;
     //position: absolute;
     width: 100vw;
+
 
     .right-green-element{
         background: $primary;
