@@ -35,17 +35,16 @@
         background-color: #fff;
         position: relative;
         top: 0;
-        //display: flex;
+        display: flex;
         transition: all 0.3s;
         &:hover {
           box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
-
           h4 {
             color: $wbu-color-primary;
           }
         }
         .icon {
-          float: right;
+          //float: right;
           display: inline-block;
           width: 60px;
           height: 60px;
@@ -53,7 +52,7 @@
           text-align: center;
           position: relative;
           z-index: 1;
-
+          order: 2;
           margin: 12px;
           -webkit-transition: all 0.2s linear;
           -moz-transition: all 0.2s linear;
@@ -113,7 +112,6 @@
           transition: all 0.3s;
           &:hover {
             box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
-
             h4 {
               color: $wbu-color-primary;
             }
