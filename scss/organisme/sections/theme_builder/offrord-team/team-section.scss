@@ -10,7 +10,8 @@ $prim-font: "Poppins", sans-serif;
       background: url("https://www.offroad.works/wp-content/uploads/2021/09/Sans-titre-2.jpg");
     background-position: center center;
     position: absolute;
-    min-height: 110vh;
+    min-height: 100vh;
+    padding-bottom: 50px;
     padding-bottom: 30px;
     background-size: cover;
     animation: moving 30s linear infinite;
@@ -37,7 +38,7 @@ $prim-font: "Poppins", sans-serif;
         position: absolute;
         z-index: 1;
         width: 30vw;
-        margin-left: 70.8%;
+        margin-left: 70%;
         margin-right: -12px;
     }
     .small-desc{
@@ -160,7 +161,7 @@ $prim-font: "Poppins", sans-serif;
     
 }
 
-@media  only screen and (max-width: 765px) {
+@media  only screen and (max-width: 770px) {
     .empty-square{
         display: none;
     }
