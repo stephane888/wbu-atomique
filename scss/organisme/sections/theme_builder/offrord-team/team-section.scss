@@ -63,10 +63,14 @@ $prim-font: "Poppins", sans-serif;
             position: absolute;
             display: block;
             
-
+            .quote{
+                margin-top: -25px;
+                margin-left: -15;
+            }
             .describe{
                 font-family: $prim-font;
-                text-align: center;
+                margin-left: 34px;
+                //text-align: center;
                 font-style: italic;
                 font-weight: 300;
                 color: #1d1d1d;
@@ -76,11 +80,12 @@ $prim-font: "Poppins", sans-serif;
             }
             .single-user{
                 margin-left: 37%;
-                margin-top: 15px;
+                margin-top: -5px;
                 box-shadow: 5px 5px 5px 5px solid #333;
             }
             .single-info{
                 text-align: center;
+                margin-top: -10px;
 
                 h3{
                     color: $primary;
@@ -98,7 +103,7 @@ $prim-font: "Poppins", sans-serif;
         }
             .toggler{
                 display: flex;
-                margin-top: -50px;
+                margin-top: 300px;
                 position: initial;
                 .prev{
                     color: #1d1d1d;
@@ -114,7 +119,7 @@ $prim-font: "Poppins", sans-serif;
                     font-size: 1.7rem;
                     padding: 20px 20px 10px 20px;
                     text-decoration: none;
-                    margin-left: 85%;
+                    margin-left: 370px;
                 }
         }
         
