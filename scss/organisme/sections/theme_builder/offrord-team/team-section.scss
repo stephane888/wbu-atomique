@@ -6,29 +6,30 @@ $primary: #2CE161;
 $secondary: #fff;
 $prim-font: "Poppins", sans-serif;
 
-.team-section-handler{
-    background: url("https://www.offroad.works/wp-content/uploads/2021/09/Sans-titre-2.jpg");
+.bg-moving-image{
+      background: url("https://www.offroad.works/wp-content/uploads/2021/09/Sans-titre-2.jpg");
     background-position: center center;
-    box-sizing: content-box;
-
+    position: absolute;
     min-height: 100%;
     padding-bottom: 30px;
-    animation-name: back;
-    //position: ;
     background-size: cover;
-    animation: moving 2s linear infinite;
+    animation: moving 30s linear infinite;
     width: 100vw;
-    overflow: hidden;
-
+    overflow-x: hidden;
+    
     @keyframes moving{
         from{
             transform: translate(0);
         }
         to{
-            transform: translate(-10px);
+            transform: translate(-300px);
         }
     }
 
+}
+
+.team-section-handler{
+  
 
     .right-green-element{
         background: $primary;
