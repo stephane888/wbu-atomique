@@ -7,14 +7,27 @@ $secondary: #fff;
 $prim-font: "Poppins", sans-serif;
 
 .team-section-handler{
-    background: url(https://www.offroad.works/wp-content/uploads/2021/09/Sans-titre-2.jpg);
+    background: url("https://www.offroad.works/wp-content/uploads/2021/09/Sans-titre-2.jpg");
     background-position: center center;
-    
-    min-height: 110vh;
+    box-sizing: content-box;
+
+    min-height: 100%;
     padding-bottom: 30px;
     animation-name: back;
-    //position: absolute;
+    //position: ;
+    background-size: cover;
+    animation: moving 2s linear infinite;
     width: 100vw;
+    overflow: hidden;
+
+    @keyframes moving{
+        from{
+            transform: translate(0);
+        }
+        to{
+            transform: translate(-10px);
+        }
+    }
 
 
     .right-green-element{
@@ -23,7 +36,8 @@ $prim-font: "Poppins", sans-serif;
         position: absolute;
         z-index: 1;
         width: 30vw;
-        margin-left: 70%;
+        margin-left: 70.8%;
+        margin-right: -12px;
     }
     .small-desc{
         //position: relative;
@@ -52,24 +66,24 @@ $prim-font: "Poppins", sans-serif;
         background: $secondary;
         z-index: 1;
         margin-left: 80px;
-        //position: absolute;
         display: flex;
         overflow: hidden;
         .slide{
             //margin: 0px 40px 0 0;
             margin-right: 10px;
             margin-left: -22px;
-            height: fit-content;
+            width: 100vw;
             position: absolute;
             display: block;
             
             .quote{
                 margin-top: -25px;
                 margin-left: -15;
+                position: absolute;
             }
             .describe{
                 font-family: $prim-font;
-                margin-left: 34px;
+                margin-left: 22px;
                 //text-align: center;
                 font-style: italic;
                 font-weight: 300;
@@ -79,7 +93,7 @@ $prim-font: "Poppins", sans-serif;
                 display: block;
             }
             .single-user{
-                margin-left: 37%;
+                margin-left: 33%;
                 margin-top: -5px;
                 box-shadow: 5px 5px 5px 5px solid #333;
             }
@@ -104,22 +118,25 @@ $prim-font: "Poppins", sans-serif;
             .toggler{
                 display: flex;
                 margin-top: 300px;
-                position: initial;
+                margin-left: -33px;
+                width: 100%;
+                overflow: none;
+                position: absolute;
                 .prev{
                     color: #1d1d1d;
                     cursor: pointer;
                     font-size: 1.7rem;
                     padding: 20px 20px 10px 20px;
                     text-decoration: none;
-                    margin-left: -30px;
+                    margin-right: auto;
                 }
                 .next{
                     color: #1d1d1d;
                     cursor: pointer;
                     font-size: 1.7rem;
-                    padding: 20px 20px 10px 20px;
+                    padding: 19px 20px 10px 20px;
                     text-decoration: none;
-                    margin-left: 370px;
+                    margin-left: auto;
                 }
         }
         
@@ -138,9 +155,11 @@ $prim-font: "Poppins", sans-serif;
 
 
 
+@media only screen and (max-width: 1007px){
+    
+}
 
-
-@media  only screen and (max-width: 995px) {
+@media  only screen and (max-width: 765px) {
     .empty-square{
         display: none;
     }
