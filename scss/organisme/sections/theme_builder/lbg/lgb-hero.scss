@@ -5,6 +5,7 @@
   font-size: $wbu-h4-font-size;
   line-height: $wbu-h4-line-height;
   background-size: cover;
+  background-attachment: fixed;
   &--content {
     background-color: #fff;
     padding: $wbu-margin * 2 0 $wbu-margin 0;

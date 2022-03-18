@@ -1,6 +1,5 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 .lgb-left-right {
-  max-width: 900px;
   text-align: center;
   .title {
     font-size: $wbu-h1-font-size;
@@ -21,6 +20,8 @@
   &--content {
     padding: 0;
     text-align: left;
+    background: #fff;
+    box-shadow: 10px 8px 10px 3px #0000001a;
     @include media-min(DD) {
       padding: $wbu-margin;
       font-size: $wbu-h4-font-size;
