@@ -1,6 +1,5 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
-$wbu-color-primary: #085796;
-$wbu-color-secondary: #f07e02;
+
 .wp-block-columns {
   display: flex;
   justify-content: center;
@@ -21,10 +20,10 @@ $wbu-color-secondary: #f07e02;
       margin: 0;
     }
     &__p {
-      padding: 15px 4%;
+      padding: $wbu-margin * 0.75;
       border-radius: 8px;
       background-color: darken($color: $wbu-color-primary, $amount: 10);
-      font-size: 18px;
+      font-size: $wbu-h3-font-size;
       text-align: center;
       color: white;
     }
@@ -37,8 +36,8 @@ $wbu-color-secondary: #f07e02;
     border-radius: 8px;
     box-shadow: 0px 10px 40px -15px rgb(6 59 101 / 20%);
     p {
-      font-size: 1.8rem;
-      line-height: 1.6;
+      font-size: $wbu-h3-font-size;
+      line-height: $wbu-h3-line-height;
     }
     &::after {
       content: "";
@@ -56,7 +55,7 @@ $wbu-color-secondary: #f07e02;
       color: $wbu-color-secondary;
     }
     &--red {
-      color: #cf2e2e;
+      color: $wbu-color-primary;
     }
   }
 }

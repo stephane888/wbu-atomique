@@ -1,7 +1,5 @@
-@use "../../../../atome/separator/separator_rectangele_middle.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
-$wbu-color-primary: #085796;
-$wbu-color-secondary: #f07e02;
+@use "../../../../atome/separator/separator_rectangele_middle.scss";
 
 .type-parquet {
   &__title {
@@ -13,28 +11,20 @@ $wbu-color-secondary: #f07e02;
     text-transform: none;
     letter-spacing: normal;
     font-weight: 700;
-    font-size: $wbu-default-font-size * 2;
+    font-size: $wbu-h2-font-size;
+    line-height: $wbu-h2-margin * 1.2;
   }
   &__desc {
     margin: 10px 0;
     text-align: left;
-    line-height: 1.65;
-    font-size: $wbu-default-font-size * 1.2;
   }
   &__h3 {
     text-align: center;
     position: relative;
     margin: 15px 0;
-    font-size: $wbu-default-font-size * 1.8;
+    line-height: $wbu-h3-line-height;
+    font-size: $wbu-h3-font-size;
     color: $wbu-color-secondary;
-    font-weight: 700;
-  }
-  &__h4 {
-    position: relative;
-    text-align: left;
-    margin: 15px 0;
-    font-size: $wbu-default-font-size * 1.8;
-    color: $wbu-color-primary;
     font-weight: 700;
   }
 }
