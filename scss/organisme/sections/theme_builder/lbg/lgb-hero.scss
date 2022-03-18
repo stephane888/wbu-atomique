@@ -1,0 +1,45 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+.lgb-hero {
+  padding: $space_top $space_bottom;
+  text-align: center;
+  font-size: $wbu-h4-font-size;
+  line-height: $wbu-h4-line-height;
+  background-size: cover;
+  &--content {
+    background-color: #fff;
+    padding: $wbu-margin * 2 0 $wbu-margin 0;
+    border-radius: $wbu-margin * 0.3;
+  }
+  .title {
+    margin-bottom: $wbu-margin * 2;
+  }
+  .introduction {
+    background-color: $wbu-color-primary;
+    color: #fff;
+    padding: $wbu-margin * 0.5 $wbu-margin;
+    font-size: $wbu-h3-font-size;
+    line-height: $wbu-h3-line-height;
+    margin-bottom: $wbu-margin * 2;
+  }
+  .puce-svg {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-bottom: $wbu-margin;
+    font-weight: 600;
+    padding: 0 $wbu-margin;
+    > li {
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: $wbu-margin * 0.5;
+    }
+    svg {
+      background-color: $wbu-color-primary;
+      border-radius: 50%;
+      margin-right: $wbu-margin * 0.25;
+    }
+  }
+}
