@@ -1,0 +1,62 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+$wbu-color-primary: #085796;
+$wbu-color-secondary: #f07e02;
+.wp-block-columns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  //width: 75%;
+  margin: 0 auto;
+  @include media-min(MD) {
+    flex-wrap: nowrap;
+  }
+  .wp-block-column {
+    //min-width: 300px;
+    margin: 10px;
+    @include media-min(MD) {
+      flex-basis: calc(50% - 1rem);
+    }
+    @include media-max(SM) {
+      flex-basis: calc(100% - 1rem);
+      margin: 0;
+    }
+    &__p {
+      padding: 15px 4%;
+      border-radius: 8px;
+      background-color: darken($color: $wbu-color-primary, $amount: 10);
+      font-size: 18px;
+      text-align: center;
+      color: white;
+    }
+  }
+  .wp-block-quote {
+    margin: 15px 0;
+    padding: 25px 30px 15px 30px;
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 10px 40px -15px rgb(6 59 101 / 20%);
+    p {
+      font-size: 1.8rem;
+      line-height: 1.6;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: $wbu-color-primary;
+      left: 0;
+      width: 4px;
+      height: calc(100% - 50px);
+      top: 25px;
+    }
+  }
+  .tadv-color {
+    margin-right: 2px;
+    &--orange {
+      color: $wbu-color-secondary;
+    }
+    &--red {
+      color: #cf2e2e;
+    }
+  }
+}

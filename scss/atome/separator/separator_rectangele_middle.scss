@@ -1,0 +1,23 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.separator-rectangle-middle {
+  border: 0;
+  border-top: 1px solid rgba(29, 29, 29, 0.25);
+  position: relative;
+  overflow: inherit;
+  margin: $space_top * 0.6 0 $space_bottom * 0.4;
+  width: 100%;
+  &::after
+    {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: #f08001;
+        border-radius: 8px;
+    }
+  
+}
