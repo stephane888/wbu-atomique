@@ -17,6 +17,7 @@
   .cover-test {
     color: inherit;
     text-decoration: none !important;
+    display: flex;
   }
   position: relative;
   z-index: 1;
@@ -93,7 +94,10 @@
     }
   }
 
-  &.flex-column {
+  &.card-vertical {
+    .cover-test {
+      flex-direction: column;
+    }
     .teaser-img-desc__image {
       width: 100%;
     }
