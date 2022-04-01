@@ -7,9 +7,13 @@
   width: 100%;
   display: block;
   position: relative;
-  height: 328px;
+  min-height: 328px;
   background-size: cover;
   background-position: top;
+  *,
+  .layout-region * {
+    color: #fff;
+  }
 
   .background {
     position: absolute;
@@ -17,22 +21,36 @@
     left: 0;
     height: auto;
     width: 100%;
-    background: linear-gradient(180deg, rgba(27, 25, 24, 0), #1b1918);
+    background: linear-gradient(
+      180deg,
+      rgba(27, 25, 24, 0),
+      rgba(16, 16, 16, 0.88)
+    );
     padding-top: $wbu-margin * 1.5;
+    @include WBUtransition();
   }
-
+  &:hover {
+    .background {
+      background: linear-gradient(
+        180deg,
+        rgba(27, 25, 24, 0.2),
+        rgba(16, 16, 16, 1)
+      );
+    }
+  }
+  //
   &__text {
     padding: 0 20px;
+    .layout-region {
+      margin-bottom: $wbu-margin * 0.5;
+    }
 
     .date {
       font-size: $wbu-default-font-size;
       line-height: 18px;
-      color: #fff;
-      margin-bottom: 10px;
       display: flex;
       flex-wrap: wrap;
       a {
-        color: #fff;
         display: inline-block;
         padding-right: $wbu-margin * 0.25;
         position: relative;
@@ -51,22 +69,14 @@
         }
       }
     }
-
     .title {
-      font-size: $wbu-default-font-size * 1.7;
-      line-height: 26px;
-      color: #fff;
-      margin-bottom: 22px;
+      font-size: $wbu-h3-font-size;
+      margin-bottom: $wbu-margin;
       font-weight: 400;
     }
     .description {
-      color: #fff;
-      margin-bottom: $wbu-margin * 0.5;
       font-weight: 500;
       position: relative;
-      a {
-        color: #fff;
-      }
       i {
         margin-right: $wbu-margin * 0.25;
         font-size: 1.6rem;
@@ -75,41 +85,33 @@
       }
     }
   }
-
+  //
   &.a-la-une {
     margin-bottom: $wbu-margin * 2.5;
     height: 450px;
-
     .billetDeBlogTeaser__text {
       line-height: 2.2;
-
       .a-la-une {
-        color: #fff;
         font-size: 22px;
       }
-
       .title {
-        font-size: 34px;
+        font-size: $wbu-h1-font-size;
         line-height: 40px;
         font-weight: 500;
       }
     }
   }
-
+  //
   &.a-la-une {
     margin-bottom: $wbu-margin * 2.5;
     height: 450px;
-
     .billetDeBlogTeaser__text {
       line-height: 2.2;
-
       .a-la-une {
-        color: #fff;
         font-size: 22px;
       }
-
       .title {
-        font-size: 34px;
+        font-size: $wbu-h1-font-size;
         line-height: 40px;
         font-weight: 500;
       }

@@ -16,6 +16,21 @@
   justify-content: center;
   align-items: center;
   background-color: $wbu-background;
+  z-index: 1;
+  &.cover-bg {
+    position: relative;
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: rgba($color: $wbu-background, $alpha: 0.8);
+    }
+  }
   .rc-btn-block {
     position: relative;
     bottom: -92px;
@@ -26,6 +41,8 @@
     }
   }
   &__block-center {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;

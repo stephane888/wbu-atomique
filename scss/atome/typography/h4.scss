@@ -1,11 +1,10 @@
-@use "../../wbu-ressources.scss" as *;
-@use "./title";
+// @use "../../wbu-ressources.scss" as *;
+// @use "./title";
 
-h4 {
-  font-size  : $wbu-h4-font-size;
-  margin     : 0 0 $wbu-h4-margin;
-  line-height: $wbu-h4-line-height;
-  @include media-min('DD') {
-    font-size: $wbu-h4-font-size *1.24;
-  }
-}
+// h4 {
+//   font-size: $wbu-title-font-size;
+//   margin: 0 0 $wbu-h4-margin;
+//   @include media-min("DD") {
+//     font-size: $wbu-title-font-size-sm;
+//   }
+// }
