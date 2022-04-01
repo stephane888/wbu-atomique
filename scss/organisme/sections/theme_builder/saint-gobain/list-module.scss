@@ -1,0 +1,82 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+.list-module-gobain {
+  padding: $wbu-margin * 0.8;
+  .content-list {
+    &__title {
+      font-weight: 700;
+      font-size: $wbu-default-font-size * 1.6;
+      line-height: $wbu-default-line-height * 1.1;
+      max-width: 645px;
+      text-align: center;
+      margin: 74px auto 60px;
+      @include media-max(MD) {
+        font-size: $wbu-default-font-size * 1.2;
+        line-height: $wbu-default-line-height * 1.1;
+        max-width: 70%;
+        margin: auto;
+      }
+    }
+    &__box {
+      display: flex;
+      justify-content: center;
+      @include media-max(MD) {
+        flex-wrap: wrap;
+      }
+      .box-item {
+        &__title {
+          font-size: $wbu-default-font-size * 1.25;
+          font-weight: 700;
+          text-align: center;
+        }
+        ul {
+          max-width: 488px;
+          margin-top: 30px;
+          li {
+            list-style: none;
+            display: flex;
+            line-height: 22px;
+            margin-bottom: $wbu-margin * 0.4;
+          }
+        }
+        .list-module {
+          display: flex;
+          font-size: $wbu-default-font-size * 0.82;
+          line-height: 22px;
+          &__check {
+            width: 21px;
+            height: 21px;
+            margin-right: 13px;
+            overflow: visible;
+            fill: $wbu-color-primary;
+          }
+        }
+      }
+    }
+    &__btn {
+      height: 90px;
+      margin-top: $wbu-margin * 0.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .btn-link-rectangle {
+        padding: {
+          bottom: 14px;
+          top: 14px;
+        }
+      }
+    }
+  }
+}
+.btn-link-rectangle {
+  padding: 13px 106px;
+  background: $wbu-color-primary;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.1s;
+  font-size: $wbu-default-font-size * 0.89;
+  font-weight: 700;
+  &:hover {
+    background: darken($color: $wbu-color-primary, $amount: 5);
+  }
+}

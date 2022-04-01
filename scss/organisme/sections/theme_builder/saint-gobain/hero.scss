@@ -1,0 +1,142 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.hero-saint-gobain {
+  position: relative;
+  display: block;
+  @include media-min(DD) {
+    display: flex;
+  }
+  .module-empty {
+    min-width: 400px;
+    display: none;
+    width: calc(36%);
+    position: relative;
+    @include media-min(DD) {
+      display: block;
+    }
+  }
+  .module-text {
+    position: relative;
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    //   max-width: 800px;
+    //background-color: gray;
+    text-align: center;
+    position: relative;
+    @include media-min(DD) {
+      padding: 60px 60px 60px 0;
+      box-shadow: 1px 1px 103px 31px rgb(255, 255, 255, 0.75);
+      position: absolute;
+      top: 50%;
+      left: calc(46% - (50% / 1.2));
+      transform: translateY(-50%);
+      width: 540px;
+      margin-left: calc(100% - 89%);
+      background: #fff;
+    }
+    &__title {
+      font-size: $wbu-default-font-size * 1.6;
+      font-weight: bold;
+      margin: $space_top * 0.5 auto $wbu-margin * 0.5;
+      @include media-min(DD) {
+        font-size: $wbu-default-font-size * 1.9;
+        margin-top: 0;
+      }
+    }
+    &__small {
+      font-size: $wbu-default-font-size * 0.9;
+      font-weight: 700;
+      margin: 0px 0 $wbu-margin;
+    }
+    &__btn {
+      position: absolute;
+      bottom: -13px;
+
+      @include media-min(DD) {
+        width: 90%;
+        position: relative;
+        margin-bottom: $wbu-margin * 0.8;
+        .btn-link-rectangle {
+          padding: 12px 180px;
+        }
+      }
+      @include media-max(XS) {
+        .btn-link-rectangle {
+          padding: 12px 50px;
+        }
+      }
+    }
+  }
+  .module-img {
+    flex-grow: 1;
+    height: 744px;
+    background-position: 50%;
+    background-image: url("./img/gobain.jpg");
+    background-size: cover;
+    @include media-max(MD) {
+      height: 541px;
+    }
+  }
+  .module-grille {
+    display: flex;
+    justify-content: space-around;
+    display: none;
+    padding: $wbu-margin 0;
+    // flex-wrap: wrap;
+    @include media-max(XS) {
+      flex-wrap: wrap;
+    }
+    @include media-max(MD) {
+      display: flex;
+    }
+    .grille-bloc {
+      display: flex;
+      // background-color: gray;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      //max-width: 400px;
+      //min-width: 200px;
+      padding: 1rem;
+      &__svg {
+        margin-bottom: 10px;
+        svg {
+          fill: $wbu-color-primary;
+        }
+      }
+      &__p {
+        margin: 0;
+        font-size: $wbu-default-font-size * 0.65;
+      }
+      &__titre {
+        font-weight: bold;
+        font-size: $wbu-default-font-size * 0.8;
+      }
+    }
+    &--sm {
+      display: none;
+      padding: 10px 0;
+      @include media-min(DD) {
+        display: flex;
+      }
+    }
+  }
+}
+.btn-link-rectangle {
+  padding: 13px 106px;
+  background: $wbu-color-primary;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.1s;
+  font-size: $wbu-default-font-size * 0.89;
+  font-weight: 700;
+  &:hover {
+    background: darken($color: $wbu-color-primary, $amount: 5);
+  }
+}

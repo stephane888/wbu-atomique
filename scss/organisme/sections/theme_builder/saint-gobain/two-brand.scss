@@ -1,0 +1,20 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.two-brand-section {
+  background-color: #f8f8f8;
+  height: 115px;
+  margin-bottom: $space_bottom * 0.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  .content-bloc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    &__img {
+      margin: 0 $wbu-margin;
+    }
+  }
+}

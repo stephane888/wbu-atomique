@@ -1,0 +1,43 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.image-left-gobain {
+  display: flex;
+  justify-content: space-around;
+  padding: $wbu-margin * 0.5;
+  .content-left-bloc {
+    max-width: 1030px;
+    display: flex;
+    justify-content: space-around;
+    @include media-max(MD) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__img {
+    max-width: 500px;
+    @include media-min(DD) {
+      max-height: 334px;
+    }
+    @include media-max(MD) {
+      margin-bottom: 45px;
+    }
+  }
+  .left-block {
+    max-width: 500px;
+
+    &__title {
+      text-align: center;
+      font-size: $wbu-default-font-size * 1.4;
+      margin-bottom: 35px;
+      margin-top: 0;
+    }
+    ul {
+      li {
+        font-size: $wbu-default-font-size * 0.82;
+        line-height: $wbu-default-line-height;
+        color: black;
+        margin-bottom: $wbu-margin * 0.5;
+      }
+    }
+  }
+}
