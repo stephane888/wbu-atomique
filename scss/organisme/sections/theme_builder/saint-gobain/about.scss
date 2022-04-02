@@ -1,0 +1,75 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.about-section-gobain {
+  padding: 0 10px;
+  background-color: #f8f8f8;
+  margin-top: $space_top;
+  display: flex;
+  justify-content: center;
+  .about-content {
+    padding: $wbu-margin 0;
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    display: flex;
+
+    flex-direction: row;
+    @include media-max(MD) {
+      flex-direction: column;
+    }
+  }
+  .bloc-content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    max-width: 500px;
+    padding: 10px;
+    flex-direction: column;
+    flex-basis: 50%;
+
+    &:first-child {
+      border-right: 1px solid #dfdfdf;
+      align-items: flex-start;
+      @include media-max(MD) {
+        align-items: center;
+        border: none;
+        text-align: center;
+        margin-bottom: $wbu-margin * 0.2;
+      }
+    }
+    &__title {
+      color: #1b1918;
+      //text-align: center;
+      font-size: $wbu-default-font-size * 1.2;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: $space_bottom * 0.2;
+      // @include media-max(XS) {
+      //   font-size: $wbu-default-font-size * 1.2;
+      // }
+    }
+    &__desc {
+      //margin-top: 37px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: $wbu-default-font-size * 0.8;
+      line-height: $wbu-default-line-height * 1.1;
+      width: 100%;
+      @include media-max(XS) {
+        font-size: $wbu-default-font-size * 0.7;
+      }
+    }
+    &__img {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      img {
+        max-width: 100px;
+        margin: 10px;
+      }
+    }
+  }
+}

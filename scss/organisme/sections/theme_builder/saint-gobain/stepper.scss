@@ -1,0 +1,24 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.stepper-section-gobain {
+  padding: $wbu-margin * 2 10px;
+  .title-stepper {
+    text-align: center;
+    font-size: $wbu-default-font-size * 1.6;
+    font-weight: bold;
+    margin: 0;
+    @include media-max(XS) {
+      font-size: $wbu-default-font-size * 1.4;
+    }
+  }
+  .block-stepper {
+    max-width: 680px;
+    margin: auto;
+    .stepper-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 680px;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/bouton/btn-link-rectangle.scss";
 
 .hero-saint-gobain {
   position: relative;
@@ -47,6 +48,9 @@
         font-size: $wbu-default-font-size * 1.9;
         margin-top: 0;
       }
+      @include media-max(XS) {
+        font-size: $wbu-default-font-size * 1.5;
+      }
     }
     &__small {
       font-size: $wbu-default-font-size * 0.9;
@@ -54,20 +58,21 @@
       margin: 0px 0 $wbu-margin;
     }
     &__btn {
+      display: flex;
       position: absolute;
-      bottom: -13px;
+      bottom: -23px;
+      width: 100%;
+      justify-content: center;
 
       @include media-min(DD) {
         width: 90%;
         position: relative;
         margin-bottom: $wbu-margin * 0.8;
-        .btn-link-rectangle {
-          padding: 12px 180px;
-        }
       }
-      @include media-max(XS) {
+      @include media-max(MD) {
         .btn-link-rectangle {
-          padding: 12px 50px;
+          //padding: 12px 50px;
+          max-width: 330px;
         }
       }
     }
@@ -125,18 +130,5 @@
         display: flex;
       }
     }
-  }
-}
-.btn-link-rectangle {
-  padding: 13px 106px;
-  background: $wbu-color-primary;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: 0.1s;
-  font-size: $wbu-default-font-size * 0.89;
-  font-weight: 700;
-  &:hover {
-    background: darken($color: $wbu-color-primary, $amount: 5);
   }
 }

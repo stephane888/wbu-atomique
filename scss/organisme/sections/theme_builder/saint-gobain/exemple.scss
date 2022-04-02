@@ -1,1 +1,32 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
+
+.exemple-section-gobain {
+  padding: $wbu-margin * 2 10px;
+  .title-exemple {
+    text-align: center;
+    font-size: $wbu-default-font-size * 1.6;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: $wbu-margin * 1.2;
+    @include media-max(XS) {
+      font-size: $wbu-default-font-size * 1.4;
+    }
+  }
+  .block-img-exemple {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .img-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+    }
+    .img-exemple {
+      max-width: 323px;
+      width: 100%;
+      filter: drop-shadow(0 4px 20px rgba(27, 25, 24, 0.15));
+      margin: $wbu-margin * 0.3;
+    }
+  }
+}

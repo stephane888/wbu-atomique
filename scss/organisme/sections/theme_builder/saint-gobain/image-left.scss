@@ -10,6 +10,7 @@
     justify-content: space-around;
     @include media-max(MD) {
       flex-wrap: wrap;
+      max-width: 98%;
     }
   }
 
@@ -20,6 +21,8 @@
     }
     @include media-max(MD) {
       margin-bottom: 45px;
+      max-width: 400px;
+      width: 100%;
     }
   }
   .left-block {
@@ -30,6 +33,9 @@
       font-size: $wbu-default-font-size * 1.4;
       margin-bottom: 35px;
       margin-top: 0;
+      @include media-max(MD) {
+        font-size: $wbu-default-font-size * 1.2;
+      }
     }
     ul {
       li {
@@ -37,6 +43,9 @@
         line-height: $wbu-default-line-height;
         color: black;
         margin-bottom: $wbu-margin * 0.5;
+        @include media-max(MD) {
+          font-size: $wbu-default-font-size * 0.75;
+        }
       }
     }
   }

@@ -1,4 +1,5 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/bouton/btn-link-rectangle.scss";
 .list-module-gobain {
   padding: $wbu-margin * 0.8;
   .content-list {
@@ -10,10 +11,12 @@
       text-align: center;
       margin: 74px auto 60px;
       @include media-max(MD) {
-        font-size: $wbu-default-font-size * 1.2;
+        font-size: $wbu-default-font-size * 1.5;
         line-height: $wbu-default-line-height * 1.1;
-        max-width: 70%;
         margin: auto;
+      }
+      @include media-max(XS) {
+        font-size: $wbu-default-font-size * 1.2;
       }
     }
     &__box {
@@ -27,6 +30,9 @@
           font-size: $wbu-default-font-size * 1.25;
           font-weight: 700;
           text-align: center;
+          @include media-max(XS) {
+            font-size: $wbu-default-font-size;
+          }
         }
         ul {
           max-width: 488px;
@@ -42,6 +48,9 @@
           display: flex;
           font-size: $wbu-default-font-size * 0.82;
           line-height: 22px;
+          @include media-max(XS) {
+            font-size: $wbu-default-font-size * 0.75;
+          }
           &__check {
             width: 21px;
             height: 21px;
@@ -58,25 +67,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      .btn-link-rectangle {
-        padding: {
-          bottom: 14px;
-          top: 14px;
-        }
+      div {
+        max-width: 325px;
+        width: 100%;
       }
     }
-  }
-}
-.btn-link-rectangle {
-  padding: 13px 106px;
-  background: $wbu-color-primary;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: 0.1s;
-  font-size: $wbu-default-font-size * 0.89;
-  font-weight: 700;
-  &:hover {
-    background: darken($color: $wbu-color-primary, $amount: 5);
   }
 }

@@ -1,0 +1,93 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.service-section-gobain {
+  // display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  padding: 0 10px;
+  .service-content {
+    max-width: 1100px;
+    margin: $space_top auto $space_bottom * 0.9;
+    width: 100%;
+    svg {
+      fill: $wbu-color-primary;
+    }
+    &__hr {
+      height: 1px;
+      padding: 0;
+      color: #cbcbcb;
+      background-color: #cbcbcb;
+
+      margin-bottom: $space_bottom * 0.5;
+      border: none;
+    }
+    &__title {
+      text-align: center;
+      font-size: $wbu-default-font-size * 1.6;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: $space_bottom * 0.5;
+      @include media-max(XS) {
+        font-size: $wbu-default-font-size * 1.4;
+      }
+    }
+    &__service {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      @include media-max(MD) {
+        flex-wrap: wrap;
+      }
+    }
+    .service-bloc {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto $wbu-margin * 0.8;
+      padding: $wbu-margin * 0.3;
+      &__svg {
+        height: 80px;
+        width: 80px;
+        background-color: #f8f8f8;
+        border-radius: 50%;
+        border: 1px solid #efefef;
+        margin: 0 auto $space_bottom * 0.2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__title {
+        max-width: 280px;
+        color: #1b1918;
+        font-style: normal;
+        font-weight: 700;
+        font-size: $wbu-default-font-size;
+        line-height: $wbu-default-line-height;
+        margin: 0;
+      }
+      &__desc {
+        max-width: 420px;
+        color: #1b1918;
+        font-weight: 300;
+        font-size: 1em;
+        line-height: $wbu-default-line-height * 1.2;
+      }
+      &__link {
+        margin-top: $wbu-margin * 0.5;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: $wbu-color-primary;
+        }
+
+        .svg {
+          margin-left: 21px;
+        }
+      }
+    }
+  }
+}

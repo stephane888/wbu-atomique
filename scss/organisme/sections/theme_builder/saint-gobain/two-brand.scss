@@ -2,19 +2,29 @@
 
 .two-brand-section {
   background-color: #f8f8f8;
-  height: 115px;
+  min-height: 115px;
   margin-bottom: $space_bottom * 0.4;
   display: flex;
   align-items: center;
+  width: 100%;
   justify-content: center;
   flex-direction: row;
+
   .content-bloc {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     &__img {
-      margin: 0 $wbu-margin;
+      //width: 200px;
+      margin: $wbu-margin * 0.9 $wbu-margin;
+      max-width: 300px;
+      @include media-max(XS) {
+        margin: 0;
+        padding: $wbu-margin * 0.8 $wbu-margin * 0.2;
+        max-width: 170px;
+      }
     }
   }
 }
