@@ -41,11 +41,11 @@
       background: #fff;
     }
     &__title {
-      font-size: $wbu-default-font-size * 1.6;
+      font-size: $wbu-h1-font-size-md;
       font-weight: bold;
       margin: $space_top * 0.5 auto $wbu-margin * 0.5;
       @include media-min(DD) {
-        font-size: $wbu-default-font-size * 1.9;
+        font-size: $wbu-h1-font-size;
         margin-top: 0;
       }
       @include media-max(XS) {
@@ -53,7 +53,7 @@
       }
     }
     &__small {
-      font-size: $wbu-default-font-size * 0.9;
+      font-size: $wbu-default-font-size;
       font-weight: 700;
       margin: 0px 0 $wbu-margin;
     }

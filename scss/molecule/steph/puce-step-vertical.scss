@@ -1,0 +1,41 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.puce-step-vertical {
+  > li {
+    margin-bottom: $wbu-margin;
+    list-style-type: none;
+    counter-increment: repas; /* on incrémente le compteur à chaque nouveau li */
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    &::before {
+      content: counter(repas); /* on affiche le compteur */
+      background-color: $wbu-color-primary;
+      color: #fff;
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      line-height: 100%;
+      border-radius: 50%;
+      font-weight: 600;
+      margin-right: $wbu-margin;
+      border: 2px solid #fff;
+      z-index: 2;
+      position: relative;
+    }
+    &::after {
+      content: "";
+      height: 100%;
+      width: 3px;
+      background-color: $wbu-color-primary;
+      position: absolute;
+      left: 15px;
+      top: 100%;
+      z-index: 2;
+    }
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
