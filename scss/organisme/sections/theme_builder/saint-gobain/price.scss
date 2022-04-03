@@ -1,12 +1,16 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 
 .saint-gaobin--price-block {
-  padding: $space_top;
+  padding: $wbu-margin;
+  @include media-min(DD) {
+    padding: $space_top;
+  }
   .item {
     padding: $wbu-margin;
     min-width: 370px;
     background-color: #fff;
     text-align: center;
+    box-shadow: 0 10px 74px #e8e8e8;
     .title {
       margin: $wbu-margin 0;
     }
@@ -32,6 +36,7 @@
       padding: $wbu-margin;
       .list-options {
         max-width: 250px;
+        text-align: left;
       }
     }
   }
