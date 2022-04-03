@@ -1,0 +1,44 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.saint-gaobin--price-block {
+  padding: $wbu-margin;
+  @include media-min(DD) {
+    padding: $space_top;
+    padding-top: 0;
+  }
+  .item {
+    padding: $wbu-margin;
+    min-width: 370px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 74px #e8e8e8;
+    .title {
+      margin: $wbu-margin 0;
+    }
+    .price {
+      font-size: $wbu-h1-font-size;
+      font-weight: 600;
+      margin: $wbu-margin 0;
+    }
+    .price-currency {
+      font-size: $wbu-default-font-size;
+      text-align: left;
+      line-height: 100%;
+    }
+    .price-montant {
+      padding-right: $wbu-margin * 0.25;
+    }
+    .header,
+    .contain-options {
+      margin: $wbu-margin 0;
+    }
+    .contain-options {
+      border-top: 1px solid $wbu-color-primary;
+      padding: $wbu-margin;
+      .list-options {
+        max-width: 250px;
+        text-align: left;
+      }
+    }
+  }
+}
