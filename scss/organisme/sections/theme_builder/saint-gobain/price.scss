@@ -4,6 +4,7 @@
   padding: $wbu-margin;
   @include media-min(DD) {
     padding: $space_top;
+    padding-top: 0;
   }
   .item {
     padding: $wbu-margin;
