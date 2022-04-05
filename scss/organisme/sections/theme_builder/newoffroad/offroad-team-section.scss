@@ -1,25 +1,22 @@
-$primary: #2CE161;
-$secondary: rgb(22, 21, 21);
-$prim-font: "Poppins", sans-serif;
-
-
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss";
 .small-desc{
     //position: relative;
     margin-top: 70px;
     .shape{
         width: 60px;
         height: 8px;
-        background: $primary;
+        background: $wbu-color-primary;
     }
     .text-descriptor{
-        font-family: $prim-font;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 1.9rem;
-        color: $secondary;
+        color: $wbu-color-thirdly;
     }
     .title{
-        font-family: $prim-font;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         margin-top: 40px;
-        color: $secondary;
+        color: $wbu-color-thirdly;
         font-size: 5rem;
     }
 }
