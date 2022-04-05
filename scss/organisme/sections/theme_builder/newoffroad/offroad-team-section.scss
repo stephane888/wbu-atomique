@@ -25,12 +25,13 @@
 }
 
 .right-green-element{
-    
+    position: relative;
+
     &::before{
         content: "";
         background: $wbu-color-primary;
         display: block;
-        height: 100vh;
+        height: 100%;
         width: 35vw;
         margin-left: auto;
     }
