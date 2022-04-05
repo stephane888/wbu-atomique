@@ -79,10 +79,16 @@ $width_cover_right: 35vw;
             fill: $wbu-color-primary;
         }
         .text-descriptor{
-            padding-bottom: $wbu-margin - 1.6;
-            padding-top: $wbu-margin - 1.7;
+            padding-bottom: $wbu-margin * 0.5;
+            padding-top: $wbu-margin * 0.5;
             font-size: $wbu-title-font-size-sm;
             font-weight: $wbu-title-font-weight;
+        }
+        .lutin-pic{
+            max-width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: $wbu-margin;
         }
         .lutin{
             border-radius: 100%;
