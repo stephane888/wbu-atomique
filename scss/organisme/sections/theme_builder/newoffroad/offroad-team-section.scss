@@ -3,7 +3,10 @@
 .small-desc{
     //position: relative;
     margin-top: 70px;
-    .shape{
+    
+    &::before{
+        content: "";
+        display: block;
         width: 60px;
         height: 8px;
         background: $wbu-color-primary;
