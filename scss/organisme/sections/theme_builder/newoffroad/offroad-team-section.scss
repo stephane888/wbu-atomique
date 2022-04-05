@@ -3,7 +3,7 @@
 
 .offroad-team-section{
 
-
+    position: relative;
     &::before{
         content: "";
         background: $wbu-color-primary;
