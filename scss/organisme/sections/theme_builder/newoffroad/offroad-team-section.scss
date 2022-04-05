@@ -1,0 +1,25 @@
+$primary: #2CE161;
+$secondary: rgb(22, 21, 21);
+$prim-font: "Poppins", sans-serif;
+
+
+.small-desc{
+    //position: relative;
+    margin-top: 70px;
+    .shape{
+        width: 60px;
+        height: 8px;
+        background: $primary;
+    }
+    .text-descriptor{
+        font-family: $prim-font;
+        font-size: 1.9rem;
+        color: $secondary;
+    }
+    .title{
+        font-family: $prim-font;
+        margin-top: 40px;
+        color: $secondary;
+        font-size: 5rem;
+    }
+}
