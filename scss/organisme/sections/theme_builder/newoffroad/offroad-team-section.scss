@@ -23,3 +23,16 @@
         font-size: 5rem;
     }
 }
+
+.right-green-element{
+    
+    &::before{
+        content: "";
+        background: $wbu-color-primary;
+        display: block;
+        height: 100vh;
+        width: 35vw;
+        margin-left: auto;
+    }
+    
+}
