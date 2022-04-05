@@ -1,8 +1,8 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss";
 .small-desc{
-    //position: relative;
-    margin-top: 70px;
+    position: relative;
+    
     
     &::before{
         content: "";
