@@ -42,8 +42,20 @@
     
     .right-green-element{
         position: relative;
-        
+        &::before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            margin-top: $space_inner_top + 1;
+            border: 5px solid $wbu-background;
+            background: transparent;
+            height: 90vh;
+            width: 80%;
+            display: block;
+
+        }
        .slider{
+        
         height: 65vh;
         width: 70%;
         background: $wbu-background;
