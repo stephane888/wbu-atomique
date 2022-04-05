@@ -73,11 +73,14 @@ $width_cover_right: 35vw;
     
     
     .single-slide{
+        padding: $wbu-margin*1.5;
         .quote{
             text-align: left;
             fill: $wbu-color-primary;
         }
         .text-descriptor{
+            padding-bottom: $wbu-margin - 1.6;
+            padding-top: $wbu-margin - 1.7;
             font-size: $wbu-title-font-size-sm;
             font-weight: $wbu-title-font-weight;
         }
