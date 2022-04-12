@@ -96,6 +96,7 @@
 
   &.card-vertical {
     flex-direction: column;
+    display: flex;
     .cover-test {
       flex-direction: column;
     }
