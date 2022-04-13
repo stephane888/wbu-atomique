@@ -1,0 +1,73 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+/* lemoulin btn */
+@use "../../atome/lemoulin/lm-btn.scss";
+/*--------------------------------------------------------------
+# image right section
+--------------------------------------------------------------*/
+.lm-ir-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  &__text {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    //background: rgb(146, 196, 230);
+    @include media-max(SM) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  &__img {
+    width: 50%;
+    // background: rgb(214, 131, 131);
+    @include media-max(SM) {
+      width: 100%;
+    }
+
+    img {
+      width: 475px;
+      height: 640px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      background: gray;
+      @include media-max(MD) {
+        width: 100%;
+      }
+      @include media-max(SM) {
+        height: auto;
+      }
+    }
+  }
+  .text-block {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    color: black;
+    width: 575px;
+    height: 640px;
+    // background-color: olive;
+    padding-left: $wbu-margin * 2.5;
+    @include media-max(MD) {
+      padding-left: $wbu-margin;
+      width: 100%;
+    }
+    &__title {
+      font-size: $wbu-default-font-size * 1.5;
+      font-weight: bold;
+      span {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      margin-bottom: $space_bottom * 0.5;
+    }
+    &__desc {
+      font-size: $wbu-default-font-size * 0.71;
+      margin-bottom: $space_bottom * 0.8;
+      padding-right: $wbu-margin * 3;
+    }
+  }
+}

@@ -1,0 +1,189 @@
+@use "../../../../wbu-ressources-clean.scss";
+@import "../../../../atome/typography/default";
+@import "../../../../variables";
+
+
+.mckinsey-section-handler{
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    background: #051c2c;
+    background-image: linear-gradient(-20deg,rgba(0, 0, 255, 0.521),#051c2c,#051c2c,#051c2c,#051c2c);
+    position: absolute;
+    background-size: cover;
+    overflow: hidden;
+    
+
+    .broom{
+        position: absolute;
+        width: auto;
+        height: 100vh;
+    }
+
+    .mck-section-content{
+       display: flex;
+       position: relative;
+
+        .mck-text-section{
+            display: block;
+            width: 100%;
+            margin-top: 80px;
+            
+           
+           .side-head-title{
+                margin-left: 50px;
+                
+           
+                h2{
+                    font-size: 6rem;
+                    line-height: 5.75rem;
+                    overflow-wrap: normal;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-weight: 700;
+                    color: #fff;
+
+                    &:hover{
+                    color: #0037ff;
+                    cursor: pointer;
+                    }
+                }
+           }
+            p{
+                font-size: 2rem;
+                font-family: Arial, Helvetica, sans-serif;
+                position: relative;
+                line-height: 3.75rem;
+                margin-bottom: 0;
+                margin-left: 50px;
+                margin-top: 3rem;
+                color:  rgba(248, 246, 246, 0.849);
+            }   
+
+        
+        }
+        .mck-link-handler{
+            margin-top: 2rem;
+            margin-left: 50px;
+            font-size: 2rem;
+            position: absolute;
+            .mck-single-link{
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    align-self: flex-start;
+                    
+                    &:hover{
+                        color: #0537ff;
+                        right: 1;
+                        transform: translate(5);
+
+                        span{
+                            
+                            i{
+                                line-height: 2.9rem;  
+                            }
+                        }
+                    }
+                    span{
+                        margin-top: 50px;
+                        i{
+                            color: #0537ff;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .mck-img-handler{
+            width: 100%;
+            img{
+                width: 65%;
+                height:auto;
+                margin-top: 1px;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and ( max-width: 482px) {
+   .mckinsey-section-handler{
+       min-height: 175vh;
+       
+   }
+   .side-head-title{
+       margin-top: 150px;
+   }
+    .mck-section-content{
+        //display: block;
+        width: auto;
+}
+        .mck-img-handler{
+            background: #05202e;
+            height: 230px;
+            width: 200px;
+            margin-bottom: 100px;
+            position: absolute;
+        }
+        img{
+            
+            width: 80vw;
+            margin-bottom: 25%;
+            margin-top: -30px;
+            position: absolute;
+        }
+        .mck-text-section{
+            margin-left: -50px;
+            position: absolute;
+            margin-top: 100px;
+            width: 10%;
+
+           .side-head-title{
+               margin-left: 0;
+               
+            h2{
+                color: #0037ff;
+            }
+           }
+        }
+
+    
+}
+
+@media only screen and (max-width: 630px) {
+    .mckinsey-section-handler{
+        height: 120vh;
+        padding-bottom: 100px;
+
+        
+    }
+    
+}
+
+@media only screen and (max-width: 985px) {
+    .mckinsey-section-handler{
+        min-height: 120vh;
+        padding-bottom: 100px;
+        
+    }
+    
+}
+@media only screen and (max-width: 479px) {
+    .mckinsey-section-handler{
+        height: 165vh;
+        .mck-text-section{
+            margin-top: 300px;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 300px) {
+    .mckinsey-section-handler{
+        height: 209vh;
+        .mck-text-section{
+            margin-top: 300px;
+        }
+    }
+    
+}

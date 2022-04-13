@@ -1,0 +1,69 @@
+@use "../../wbu-ressources.scss" as *;
+
+.vlf-grid {
+  :root {
+    --ff-primary: basic-sans, sans-serif;
+    --clr-primary: #ee6352;
+    --clr-body: #333;
+    --clr-bg: #ddd;
+    --spacer: 1rem;
+  }
+  --gap: 1em;
+  --columns: 4;
+  margin: 0 auto;
+  display: column;
+  columns: var(--columns);
+  gap: var(--gap);
+
+  .featured {
+    grid-column: span 2;
+  }
+  p {
+    font-size: 16.4px;
+    color: #6d6d6d;
+  }
+
+  h1 {
+    margin: 3rem 0;
+    text-align: center;
+    font-size: clamp(2rem, 1rem + 3vw, 6rem);
+    font-weight: 300;
+    line-height: 1;
+    opacity: 0.2;
+  }
+
+  .flow > * + * {
+    margin-top: var(--flow-space, var(--spacer));
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.vlf-grid > * {
+  break-inside: avoid;
+  margin-bottom: var(--gap);
+}
+
+@supports (grid-template-rows: masonry) {
+  .vlf-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: masonry;
+    grid-auto-flow: dense;
+    /* align-tracks: stretch; */
+  }
+
+  .vlf-grid > * {
+    margin-bottom: 0em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .vlf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
+  }
+}

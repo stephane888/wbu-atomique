@@ -1,0 +1,62 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.lm-hero {
+  padding: $space_top * 2.8 10px $space_bottom * 2.5;
+  background-color: dimgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  background-image: url("./img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: inherit;
+    width: 100%;
+    opacity: 0.1;
+  }
+  &__content {
+    color: black;
+    z-index: 1;
+    text-align: center;
+    .big-title {
+      font-size: $wbu-default-font-size * 8;
+      font-weight: bold;
+      margin: 0;
+      line-height: 1;
+      @include media-max(DD) {
+        font-size: $wbu-default-font-size * 6;
+      }
+      @include media-max(XX) {
+        font-size: $wbu-default-font-size * 3.5;
+      }
+    }
+    .sm-title {
+      font-size: $wbu-default-font-size * 1.5;
+      font-weight: bold;
+      margin: 0;
+      line-height: 1;
+      @include media-max(DD) {
+        font-size: $wbu-default-font-size * 1.2;
+      }
+      @include media-max(SM) {
+        font-size: $wbu-default-font-size;
+      }
+    }
+  }
+  .fleche-down {
+    position: absolute;
+    bottom: 64px;
+    cursor: pointer;
+    width: 35px;
+  }
+}

@@ -1,0 +1,44 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+/* lemoulin btn */
+@use "../../atome/lemoulin/lm-btn.scss";
+/*--------------------------------------------------------------
+# menu-section
+--------------------------------------------------------------*/
+.lm-menu-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: $space_top * 1.09 0 $space_bottom;
+  &__title {
+    font-weight: bold;
+    font-size: $wbu-default-font-size * 1.5;
+    text-align: center;
+    margin: 0 0 $space_bottom * 0.8;
+  }
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    margin-bottom: $space_bottom * 0.8;
+  }
+  .ms-block-card {
+    text-align: center;
+    color: #000000;
+    margin: 0 15px 18px;
+    &__img {
+      width: 317px;
+      height: 320;
+      margin-bottom: 25px;
+      background-color: gray;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+    &__title {
+      font-size: $wbu-default-font-size * 1.12;
+      font-weight: bold;
+    }
+  }
+}

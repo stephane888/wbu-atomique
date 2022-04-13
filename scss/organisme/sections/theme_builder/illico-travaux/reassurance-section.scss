@@ -1,0 +1,50 @@
+.reassurance-section-handler{
+    background: #b9d2e9;
+    //height: auto;
+    width: 100vw;
+    #reassurance{
+
+        .container{
+            
+            .row{
+
+                .col-12{
+
+                    .row{
+
+                        .col-12{
+
+                            .contenu{
+
+                                h2{
+                                    color: #1d1d1d;
+                                    font-size: 3.8rem;
+                                    font-weight: 100;
+                                    font-family: fantasy;
+
+                                    strong{
+                                        color: #085796 ;
+                                        font-size: 2.3rem;
+                                        line-height: 0.5rem;
+                                        font-weight: 900;
+                                        font-family: "Roboto", sans-serif;
+                                    }
+                                    &::after{
+                                        content: '';
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 0;
+                                        width: 60px;
+                                        height: 0;
+                                        margin-left: -20px;
+                                        border-bottom: 1px solid #085796;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

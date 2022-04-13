@@ -1,0 +1,14 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.lm-btn {
+  background-color: black;
+  color: white;
+  padding: 16px 36px;
+  border: none;
+  line-height: 1;
+  font-size: $wbu-default-font-size * 0.7;
+  transition: ease-in 0.2s;
+  &:hover {
+    background-color: lighten($color: #000000, $amount: 25);
+  }
+}
