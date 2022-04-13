@@ -1,0 +1,33 @@
+@use "../wbu-atomique/scss/_variables.scss";
+@use "..//wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+
+.our-services-handler{
+    &::before{
+        content: '';
+        width: 50px;
+        display: block;
+        height: 3px;
+        margin-top: $space-top * 0.6;
+        margin-bottom: $wbu-margin * 0.49;
+        background: $wbu-color-secondary;
+    }
+    .section-title{
+        font-size: $wbu-btn-font-size-sm;
+        color: $wbu-background;
+        margin-bottom: $space-bottom;
+    }
+
+    .services-column{
+        vertical-align: top;
+        position: relative;
+        min-height: 1px;
+        padding-left: $wbu-btn-padding-y-sm * 1.5;
+        padding-right: $wbu-btn-padding-y-sm ;
+        box-sizing: border-box;
+        .all-service-item{
+            .single-service-items{
+                width: 50%;
+            }
+        }
+    }
+}
