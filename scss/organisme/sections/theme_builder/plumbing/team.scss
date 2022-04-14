@@ -1,0 +1,182 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+.team-section-plumbing {
+  // display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  padding: $space_top * 2 10px $space_bottom * 0.8;
+  .service-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    &__h1 {
+      text-align: center;
+      color: black;
+      font-size: $wbu-h1-font-size;
+      font-weight: bold;
+      margin: 0;
+      text-transform: capitalize;
+      margin-bottom: $wbu-margin;
+      @include media-max(XS) {
+        font-size: $wbu-h1-font-size-md;
+      }
+    }
+    &__h2 {
+      text-align: center;
+      font-size: $wbu-h2-font-size;
+      margin: 0;
+      @include media-max(XS) {
+        font-size: $wbu-h2-font-size-sm;
+      }
+    }
+    &__service {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: $wbu-margin * 2 0;
+      gap: 20px;
+      @include media-max(MD) {
+        flex-wrap: wrap;
+      }
+    }
+    .service-bloc {
+      background: #000;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      height: 319px;
+      &:hover {
+        .sb-card__body {
+          transform: translateY(-60px);
+        }
+        .card-social {
+          opacity: 1;
+        }
+      }
+      //padding: $wbu-margin * 0.3;
+    }
+    .sb-card {
+      max-width: 270px;
+      width: 100%;
+      height: 100%;
+
+      border: none;
+      text-align: left;
+      overflow: hidden;
+      &__img {
+        width: 100%;
+        transition: ease 0.5s;
+        overflow: hidden;
+        min-height: 230px;
+        position: relative;
+
+        &::before {
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          transition: ease 0.3s;
+          position: absolute;
+          z-index: 1;
+          opacity: 0;
+          background-color: rgba(0, 0, 0, 0.151);
+        }
+
+        img {
+          transform: scale(1);
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: top;
+          transition: ease 2s;
+        }
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+      &__body {
+        min-height: 169px;
+        display: flex;
+        height: 100%;
+        z-index: 10;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        text-align: center;
+        background: white;
+        transform: translateY(0px);
+        transition: ease-in-out 0.3s;
+        @include media-max(XS) {
+          min-height: 200px;
+        }
+      }
+      .card-title {
+        color: $wbu-color-primary;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: $wbu-h2-font-size-sm;
+        text-decoration: none;
+        &:hover {
+          color: black;
+        }
+      }
+      .card-text {
+        text-transform: capitalize;
+        font-size: $wbu-default-font-size;
+        @include media-max(XX) {
+          font-size: $wbu-default-font-size * 0.8;
+        }
+      }
+      .card-social {
+        border-top: 1px solid rgba($color: $wbu-color-primary, $alpha: 0.1);
+        width: 125%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: $wbu-margin * 0.5;
+        opacity: 0;
+        transition: ease 0.3s;
+        a {
+          text-decoration: none;
+          width: 35px;
+          height: 35px;
+          background: $wbu-color-boder;
+          transition: ease 0.2s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+          &:hover {
+            color: white;
+            fill: white;
+            background: black;
+          }
+        }
+        .instagram {
+          fill: #c94783;
+        }
+        .facebook {
+          fill: #3c5999;
+          color: rgb(4, 0, 255);
+        }
+        .twitter {
+          fill: #00aced;
+        }
+      }
+    }
+  }
+}

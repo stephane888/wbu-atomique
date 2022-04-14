@@ -1,0 +1,152 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+.service-section-plumbing {
+  // display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  padding: $wbu-margin * 4 10px;
+  background: rgba($color: $wbu-color-boder, $alpha: 0.4);
+  .service-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    &__h1 {
+      text-align: center;
+      color: black;
+      font-size: $wbu-h1-font-size;
+      font-weight: bold;
+      margin: 0;
+      text-transform: capitalize;
+      margin-bottom: $wbu-margin;
+      @include media-max(XS) {
+        font-size: $wbu-h1-font-size-md;
+      }
+    }
+    &__h2 {
+      text-align: center;
+      font-size: $wbu-h2-font-size;
+      margin: 0;
+      @include media-max(XS) {
+        font-size: $wbu-h2-font-size-sm;
+      }
+    }
+    &__service {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: $wbu-margin * 2 0;
+      gap: 20px;
+      @include media-max(MD) {
+        flex-wrap: wrap;
+      }
+    }
+    .service-bloc {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto $wbu-margin * 0.8;
+      padding: $wbu-margin * 0.3;
+    }
+    .sb-card {
+      max-width: 500px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      &__img {
+        width: 100%;
+        transition: ease 0.5s;
+        overflow: hidden;
+        min-height: 230px;
+        position: relative;
+        @include media-max(XS) {
+          min-height: auto;
+        }
+        &::before {
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          transition: ease 0.3s;
+          position: absolute;
+          z-index: 1;
+          opacity: 0;
+          background-color: rgba(0, 0, 0, 0.233);
+        }
+        .icon-search {
+          position: absolute;
+          width: 45px;
+          height: 45px;
+          background-color: white;
+          border-radius: 5px;
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+          opacity: 0;
+          transition: ease 0.3s;
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 15px;
+            fill: $wbu-color-primary;
+          }
+          &:hover {
+            background-color: $wbu-color-primary;
+            svg {
+              fill: white;
+            }
+          }
+        }
+        img {
+          transform: scale(1);
+          height: 100%;
+          width: 100%;
+          // object-fit: cover;
+          transition: ease 4s;
+        }
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+          &::before {
+            opacity: 1;
+          }
+          .icon-search {
+            opacity: 1;
+          }
+        }
+      }
+      &__body {
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        @include media-max(XS) {
+          min-height: 200px;
+        }
+      }
+      .card-title {
+        color: black;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: $wbu-h2-font-size-sm;
+        &:hover {
+          color: $wbu-color-primary;
+        }
+      }
+      .card-text {
+        text-transform: capitalize;
+        font-size: $wbu-default-font-size;
+        @include media-max(XX) {
+          font-size: $wbu-default-font-size * 0.8;
+        }
+      }
+    }
+  }
+}

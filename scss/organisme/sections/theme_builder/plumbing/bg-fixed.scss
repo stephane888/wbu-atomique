@@ -1,0 +1,55 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+.bg-fixed-plumbing {
+  height: 60vh;
+  width: 100%;
+  background-position: top left;
+
+  background: url("https://plumbing-repair.themerex.net/wp-content/uploads/2019/02/parallax.jpg");
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  @include media-max(DD) {
+    background-position: center center;
+  }
+  .bfp-content {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: $wbu-margin * 4 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .left-bloc {
+    max-width: 600px;
+    &__h3 {
+      font-size: $wbu-h3-font-size;
+      color: lighten($color: #000000, $amount: 15);
+      font-weight: bold;
+      margin: 0;
+    }
+    &__h2 {
+      font-size: $wbu-h2-font-size;
+      line-height: $wbu-h3-line-height;
+      color: black;
+      font-weight: bold;
+      margin: $wbu-margin * 2.2 0;
+    }
+    &__btn {
+      .lm-btn-big {
+        background-color: $wbu-color-primary;
+        a {
+          color: white;
+        }
+        &:hover {
+          background-color: transparent;
+
+          a {
+            color: $wbu-color-primary;
+          }
+        }
+      }
+    }
+  }
+}

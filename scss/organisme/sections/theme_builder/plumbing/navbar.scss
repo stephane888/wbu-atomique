@@ -1,0 +1,143 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+//$wbu-background: #292f3477;
+
+.navbar-section-plumbing {
+  padding: $wbu-margin * 0.8 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  background-color: transparent;
+  transition: all ease 0.3s;
+}
+.nsp-nav-toggler {
+  display: none;
+  width: 28px;
+  cursor: pointer;
+  svg {
+    fill: $wbu-color-primary;
+    transition: fill ease 0.2s;
+    &:hover {
+      fill: black;
+    }
+  }
+  @include media-max(MS) {
+    display: block;
+  }
+}
+.pl-fixed-top {
+  position: fixed;
+  background-color: rgba($color: $wbu-background, $alpha: 0.4);
+  padding: $wbu-margin * 0.5 0;
+}
+.nsp-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__brand {
+    max-width: 35%;
+    @include media-max(SM) {
+      max-width: 300px;
+    }
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    @include media-max(MS) {
+      display: none;
+    }
+  }
+  .nsp-nav-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .nsp-nav-link {
+    list-style: none;
+    padding: $wbu-margin * 0.4;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $wbu-default-font-size;
+
+    a {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        color: $wbu-color-primary;
+      }
+    }
+    svg {
+      cursor: pointer;
+      width: 19px;
+      fill: white;
+    }
+    &--active {
+      a {
+        color: $wbu-color-primary;
+      }
+    }
+  }
+}
+
+.nsp-mobile-menu {
+  position: absolute;
+  width: 100%;
+  // height: 105vh;u
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-219%);
+  //bottom: 0;
+  text-align: center;
+  overflow: hidden;
+  background-color: $wbu-background;
+  z-index: 10;
+  transition: transform ease-in-out 0.6s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: $wbu-margin * 6 $wbu-margin * 0.5 0;
+  .menu-hide {
+    position: absolute;
+    right: 48px;
+    cursor: pointer;
+    width: 25px;
+    top: 34px;
+    svg {
+      fill: white;
+    }
+  }
+  .mobile-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    img {
+      max-width: 200px;
+      width: 100%;
+      object-fit: contain;
+    }
+    &__content {
+      margin-top: $wbu-margin * 4;
+      max-width: 400px;
+      width: 100%;
+      background: rgb(180, 170, 170);
+    }
+  }
+}
+.mobile-menu-active {
+  position: fixed;
+  transition: ease-in-out 0.45s;
+  transform: translateY(0%);
+}

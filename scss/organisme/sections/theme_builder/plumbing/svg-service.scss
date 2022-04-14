@@ -1,0 +1,93 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+@use "../../../../atome/plumbing/pl-separator.scss";
+.svg-service-plumbing {
+  // display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  padding: $wbu-margin * 4 10px;
+
+  .service-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: $wbu-margin * 0.8;
+
+    &__service {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+
+      gap: 20px;
+      @include media-max(MD) {
+        flex-wrap: wrap;
+      }
+    }
+    .service-bloc {
+      margin: 5px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto $wbu-margin * 0.8;
+      padding: $wbu-margin * 0.3;
+      a {
+        text-decoration: none;
+      }
+      &:hover {
+        svg {
+          fill: black;
+        }
+      }
+    }
+    .sb-card {
+      max-width: 400px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      padding: 0;
+      // background: rgb(199, 193, 193);
+      &__img {
+        // width: 100%;
+        // transition: ease 0.5s;
+        // overflow: hidden;
+        // min-height: 230px;
+        // position: relative;
+        margin: 10px 0;
+        cursor: pointer;
+        svg {
+          height: 72px;
+          width: 72px;
+          fill: $wbu-color-primary;
+          transition: ease 0.5s;
+        }
+      }
+      &__body {
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        padding: 0;
+        @include media-max(XS) {
+          min-height: 200px;
+        }
+      }
+      .card-title {
+        color: black;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: $wbu-h2-font-size-sm;
+        &:hover {
+          color: $wbu-color-primary;
+        }
+      }
+      .card-text {
+        text-transform: capitalize;
+        font-size: $wbu-default-font-size;
+        line-height: $wbu-default-line-height * 1.3;
+      }
+    }
+  }
+}
