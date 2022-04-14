@@ -28,10 +28,8 @@
         box-sizing: border-box;
         .all-service-item{
             .single-service-items{
-                width: 50%;
-                height: 470px;
+                height: 70vh;
                 padding-bottom: $space-bottom * 0.4;
-                margin: 5px;
 
                 &:hover{
                     transition: all 0.5s;
@@ -59,13 +57,13 @@
                 }
                 .item-image{
                     position: relative;
-
+                    left: -10.3;
                     &::before{
                         content: "";
                         position: absolute;
                         opacity: 0.6;
                         height: 100%;
-                        width: 100%;
+                        width: 107%;
                     }
                     &:hover::before{
                         background: $wbu-background;
@@ -75,6 +73,7 @@
                             display: block;
                             transition: cubic-bezier(0.165, 0.84, 0.44, 1);
                             color: $wbu-color-secondary;
+                            cursor: pointer;
                             .icon{
 
                                 i{
@@ -91,7 +90,7 @@
                         display: none;
                         .icon{
                             position: relative;
-                            left: 12vw;
+                            left: 11vw;
                             top: 7vw;
                             i{
                                 svg{
@@ -168,6 +167,21 @@
                     }
                 }
             }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .descriptor-item{
+        display: none;
+    }
+    .single-service-items{
+       height: fit-content;
+    }
+    .item-image{
+        img{
+            width: 106%;
         }
     }
 }
