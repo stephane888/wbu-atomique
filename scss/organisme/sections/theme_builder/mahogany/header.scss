@@ -1,0 +1,356 @@
+@use "../../../../wbu-ressources-clean.scss";
+@import "../../../../atome/typography/default";
+@import "../../../../variables";
+
+.header {
+    position: relative;
+    background-position: center;
+    margin-top: 0;// to remove 
+    z-index: 8000;
+    display: block;
+    background-repeat: no-repeat;
+    .top_header{
+        background-color: $wbu-color-boder;
+        color: $wbu-color-text;
+        font-size: $wbu-default-font-size;
+        position: relative;
+    }
+    .top_header_container{
+        background-color: $wbu-color-boder;
+        color: $wbu-color-text;
+        font-size: $wbu-default-font-size;
+        position: relative;
+        .content_one{
+            float: left;
+            position: relative;
+            justify-content: center;
+            padding: $wbu-margin;
+            p{
+                display: block;
+                span{
+                    color: $wbu-color-secondary;
+                    font-family: "Satisfy",cursive;
+                    font-size: $wbu-h2-font-size;
+                    font-weight: $wbu-title-font-weight;
+                    margin-right: $wbu-margin;
+                }
+            }
+        }
+        .content_two{
+            align-items: stretch;
+            text-align: right;
+            padding: $wbu-margin;
+            ul{
+                display: inline-block;
+                vertical-align: middle;
+                overflow: visible;
+                visibility: visible;
+                position: relative;
+                list-style: none;
+                li{
+                    text-decoration: none;
+                    margin-left: $wbu-margin;
+                    text-transform: none;
+                    position: relative;
+                    float: left;
+                    a{
+                        text-decoration: none;
+                        color: $wbu-color-text;
+                        display: inline-block;
+                        &:hover{
+                            color: $wbu-color-secondary;
+                        }
+                        span{
+                            background-color: $wbu-color-secondary;
+                            color: $wbu-color-boder;
+                            text-align: center;
+                            display: inline-block;
+                            font-size: $wbu-default-font-size;
+                            position: absolute;
+                            width: 1.6rem;
+                            height:1.6rem;
+                            border-radius: 50%; // to remove 
+                            margin-right: -0.5rem;
+                            margin-bottom: 0.5rem;
+                            right: 0; // to remove
+                        }
+                        svg{
+                            &:hover{
+                                color: $wbu-color-text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom_header{
+        position:relative;
+        .bottom_header_container{
+            position: relative;
+            .container_one{
+                padding: $wbu-margin;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: $wbu-margin;
+                padding-right: $wbu-margin;
+                display: block;
+                a{
+                    text-decoration: none;
+                    img{
+                        padding-top: $space_inner_top;
+                        border: none;
+                        width: auto;
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .container_two{
+                padding: $wbu-margin;
+                align-items: stretch;
+                display: flex;
+                // text-align: right; 
+                position: relative;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: $wbu-margin;
+                padding-right: $wbu-margin;
+                .navbar-mobile{
+                    position:fixed;
+                    overflow:hidden;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    background: rgba(9,9,9,0.9);
+                    transition: 0.3s;
+                    z-index: 999;
+                    ul {
+                        display: block;
+                        position: absolute;
+                        top: 55px;
+                        right: 15px;
+                        bottom: 15px;
+                        left: 15px;
+                        padding: 10px 0;
+                        border-radius: 8px;
+                        background-color: #fff;
+                        overflow-y: auto;
+                        transition: 0.3s;
+                    }
+                    .dropdown ul {
+                        position: static;
+                        margin: 10px 20px;
+                        padding: 10px 0;
+                        z-index: 99;
+                        opacity: 1;
+                        visibility: visible;
+                        background: #fff;
+                        box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
+                    }
+                    .dropdown > .dropdown-active {
+                        display: block;
+                    }
+                }
+                .navbar{
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: auto;
+                    .active {
+                        color: $wbu-color-text;
+                    }
+                    .mobile-nav-toggle{
+                        color: #222222;
+                        font-size: 2.8rem;
+                        cursor: pointer;
+                        display: none;
+                        line-height: 0;
+                        transition: 0.5s;
+                    }
+                    .dot {
+                        display: none;
+                    }
+                    ul {
+                        margin:0;
+                        padding:0;
+                        display:flex;
+                        list-style: none;
+                        align-items: center;
+                    }
+                    li {
+                        position: relative;
+                    }
+                    a {
+                        display:flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: $wbu-margin ;// to remove
+                        font-size: $wbu-h3-font-size;
+                        text-decoration: none;
+                        font-weight: $wbu-title-font-weight;
+                        color: $wbu-color-thirdly;
+                        white-space: nowrap;
+                        transition:0.3s;
+                        &:hover{
+                            color: $wbu-color-text;
+                        }
+                        i {
+                            font-size:$wbu-default-font-size;
+                            line-height: 0;
+                            margin-left: 0.5rem;
+                        }
+                    }
+                    .dropdown {
+                        ul {
+                            display:block;
+                            position:absolute;
+                            //height: auto;
+                            top: calc(90%);
+                            padding-top: $space_inner_top;
+                            padding-bottom: $space_inner_top;
+                            z-index: 99;
+                            opacity: 0;
+                            visibility: hidden;
+                            background: $wbu-color-secondary;
+                            transition: 0.3s;
+                            a {
+                                font-size: $wbu-h3-font-size;
+                                color: $wbu-color-boder;
+                                &:hover{
+                                    background: rgba($color: $wbu-color-text, $alpha: 0.3);
+                                }
+                            }
+                            li {
+                                min-width: 20rem;
+                            }
+                        }
+                        .dropdown ul {
+                            top: -25;
+                            left: 204;
+                        }
+                        &:hover>ul {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .call{
+                    display: flex;
+                    width: auto;
+                    text-align: right;
+                    a{
+                        color: $wbu-color-text;
+                        text-decoration: none;
+                        display: block;
+                        .call_icon{
+                           border: none;  
+                        }
+                        .call_detail{
+                            display: inline-block;
+                            vertical-align: middle;
+                            white-space: normal;
+                            text-align: left;
+                            .call_detail_item1{
+                                font-size: $wbu-default-font-size;
+                                font-weight: 400;
+                                color: $wbu-color-text;
+                                text-align: left;
+                                display: flex;
+                            }
+                            .call_detail_item2{
+                                font-size: $wbu-h4-line-height;
+                                color: $wbu-color-secondary;
+                                font-weight: $wbu-title-font-weight;
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width:823px) {
+        position: relative;
+        width: 100%;
+        .top_header {
+            display: none;
+        }
+        .bottom_header {
+            //border: 1px solid black; // to remove
+            .bottom_header_container {
+                //border: 1px solid black; // to remove
+                .row{
+                    //border: 1px solid black; // to remove
+                    .container_one {
+                        display : block;
+                        //border: 1px solid black; // to remove
+                    }
+                    .container_two {
+                        //border: 1px solid black; // to remove
+                        .navbar {
+                            //border: 1px solid black; // to remove
+                            ul {
+                                border: 1px solid black; // to remove
+                                //display: none;
+                            }
+                            .call {
+                                display: none;
+                            }
+                            .middle-nav-toggle {
+                                display: block;
+                                &:hover{
+                                    color:rgba($color: $wbu-color-secondary, $alpha: 0.3);
+                                }
+                            }
+                        }
+                    }                   
+                }
+
+            }
+        }
+    }
+    @media only screen and (max-width:412px) {
+        position: relative;
+        width: 100%;
+        .top_header {
+            display: none;
+        }
+        .bottom_header {
+            //border: 1px solid black; // to remove
+            .bottom_header_container {
+                //border: 1px solid black; // to remove
+                .row{
+                    //border: 1px solid black; // to remove
+                    .container_one { /* is for the logo */
+                        display : none;
+                        //border: 1px solid black; // to remove
+                    }
+                    .container_two {
+                        //border: 1px solid black; // to remove
+                        .navbar {
+                            //border: 1px solid black; // to remove
+                            ul {
+                                border: 1px solid black; // to remove
+                                display: none;
+                            }
+                            .call {
+                                display: none;
+                            }
+                            .middle-nav-toggle {
+                                display: none;
+                            }
+                            .mobile-nav-toggle {
+                                display: block;
+                            }
+                        }
+                    }                   
+                }
+
+            }
+        }
+    }
+}
