@@ -1,0 +1,187 @@
+@use "../wbu-atomique/scss/_variables.scss";
+@use "..//wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+
+.our-services-handler{
+    &::before{
+        content: '';
+        width: 50px;
+        display: block;
+        height: 3px;
+        margin-top: $space-top * 0.6;
+        margin-left: $wbu-h1-margin * 3.35;
+        margin-bottom: $wbu-margin * 0.49;
+        background: $wbu-color-secondary;
+    }
+    .section-title{
+        font-size: $wbu-btn-font-size-sm;
+        color: $wbu-background;
+        margin-bottom: $space-bottom * 0.7;
+        margin-left: $wbu-h1-margin * 3.35;
+    }
+
+    .services-column{
+        vertical-align: top;
+        position: relative;
+        min-height: 1px;
+        padding-left: $wbu-btn-padding-y-sm * 1.5;
+        padding-right: $wbu-btn-padding-y-sm ;
+        box-sizing: border-box;
+        .all-service-item{
+            .single-service-items{
+                height: 70vh;
+                padding-bottom: $space-bottom * 0.4;
+
+                &:hover{
+                    transition: all 0.5s;
+                    background: $wbu-background;
+
+                    
+                    .info-items{
+                        color: $wbu-border-color;
+
+                        .item-title{
+                            h4{
+
+                                a{
+                                    color: $wbu-color-secondary;
+                                }
+                            }
+                        }
+                        .read-btn{
+                            background: $wbu-border-color;
+                            .link{
+                                color: $wbu-background;
+                            }
+                        }
+                    }
+                }
+                .item-image{
+                    position: relative;
+                    left: -10.3;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        opacity: 0.6;
+                        height: 100%;
+                        width: 107%;
+                    }
+                    &:hover::before{
+                        background: $wbu-background;
+                    }
+                    &:hover{
+                        .element{
+                            display: block;
+                            transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+                            color: $wbu-color-secondary;
+                            cursor: pointer;
+                            .icon{
+
+                                i{
+                                    svg{
+                                        transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+                                        margin: 5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .element{
+                        position: absolute;
+                        display: none;
+                        .icon{
+                            position: relative;
+                            left: 11vw;
+                            top: 7vw;
+                            i{
+                                svg{
+                                    margin: -5;
+                                }
+                            }
+                        }
+                    }
+                }
+                .info-items{
+                    margin-top: $space-top * 0.5;
+                    margin-left: $wbu-h1-margin;
+                    width: 280px;
+                    position: absolute;
+
+                    .item-title{
+                        margin-bottom: $space-bottom * 0.19;
+                       
+                        h4{
+
+                            a{
+                                color: $wbu-background;
+                                font-weight: 300;
+                                font-size: $wbu-h2-font-size * 0.49;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    .descriptor-item{
+                        font-size: $wbu-btn-font-size-sm * 0.8;
+                    }
+                    .read-btn{
+                        background: $wbu-background;
+                        width: 150px;
+                        text-align: center;
+                        margin-top: $space-top * 0.3;
+                        padding: $wbu-btn-padding-x-sm;
+                        position: relative;
+                        &:hover{
+                            color: $wbu-color-secondary;
+                            .link{
+                                z-index: 1;
+                            }
+                        }
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: $wbu-color-secondary;
+                            transition: transform 0.5s;
+                            transform-origin: 0 0;
+                            transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                            
+                        }
+                        &::before{
+                            transform: scaleX(0);
+                        }
+                        &:hover::before{
+                            
+                            transform: scaleX(1);
+                        }
+                        .link{
+                            color: $wbu-border-color;
+                            font-size: $wbu-title-font-size-sm * 0.6 ;
+                            text-decoration: none;
+                            font-weight: 400;
+                            position: relative;
+                            
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .descriptor-item{
+        display: none;
+    }
+    .single-service-items{
+       height: fit-content;
+    }
+    .item-image{
+        img{
+            width: 106%;
+        }
+    }
+}

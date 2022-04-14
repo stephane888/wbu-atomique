@@ -1,0 +1,51 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss";
+$width_cover_right: 35vw;
+
+  .content-text {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    height: calc(100% - #{$space_top * 2});
+    width: calc(100% - #{$space_top * 2});
+    background: rgb(8, 196, 127);
+    margin-left: auto;
+    margin-top: $space_top;
+    margin-bottom: $space_top;
+    
+    
+    .single-slide{
+        padding: $wbu-margin*1.5;
+        .quote{
+            text-align: left;
+            fill: $wbu-color-primary;
+        }
+        .text-descriptor{
+            padding-bottom: $wbu-margin * 0.5;
+            padding-top: $wbu-margin * 0.5;
+            font-size: $wbu-title-font-size-sm;
+            font-weight: $wbu-title-font-weight;
+        }
+        .lutin-pic{
+            max-width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: $wbu-margin;
+        }
+        .lutin{
+            border-radius: 100%;
+            border: 2px solid transparent;
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .lutin-name{
+            font-size: $wbu-h3-font-size + 0.5;
+            font-weight: $wbu-title-font-weight;
+            color: $wbu-color-primary;
+        }
+        .lutin-poste{
+            font-size: $wbu-default-font-size;
+            font-weight: $wbu-title-font-weight;
+        }
+      }
+  }
+ 

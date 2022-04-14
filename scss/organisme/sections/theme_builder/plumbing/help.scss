@@ -1,0 +1,59 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+.help-section-plumbing {
+  margin: $space_top 0 $space_bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .help-content {
+    max-width: 1200px;
+    padding: $wbu-margin;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    .help-block {
+      display: flex;
+      //justify-content: center;
+      @include media-max(XS) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .hb-title {
+    padding: $wbu-margin * 0.5 $wbu-margin;
+    color: $wbu-color-primary;
+    text-align: left;
+    max-width: 500px;
+    &__h1 {
+      text-transform: uppercase;
+      font-size: $wbu-h1-font-size;
+      margin: 0 0 $wbu-margin * 0.8;
+      max-width: 500px;
+      font-weight: 700;
+      @include media-max(SM) {
+        font-size: $wbu-h1-font-size-md;
+        line-height: 1.5;
+      }
+    }
+    &__h2 {
+      font-size: $wbu-h2-font-size;
+      @include media-max(SM) {
+        font-size: $wbu-h2-font-size-sm;
+      }
+    }
+  }
+  .hb-desc {
+    padding: $wbu-margin * 0.5 $wbu-margin;
+    max-width: 710px;
+    &__h3 {
+      font-size: $wbu-h3-font-size;
+      font-weight: 500;
+      color: black;
+    }
+    &__p {
+      font-size: $wbu-default-font-size;
+      margin: $wbu-margin * 1.2 0;
+    }
+  }
+}
