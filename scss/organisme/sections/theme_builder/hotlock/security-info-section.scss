@@ -1,0 +1,65 @@
+@use "../wbu-atomique/scss/_variables.scss";
+@use "..//wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+
+.security-info-handler{
+    
+    .security-service{
+        background: $wbu-background;
+        color: $wbu-border-color;
+        position: relative;
+        overflow: hidden;
+
+        .icon{
+            position: absolute;
+            top: 120;
+            left: -300;
+            opacity: 0.6;
+            color: $wbu-color-thirdly;
+        }
+        .head-title{
+            font-size: $wbu-titre-big * 0.6;
+            font-weight: lighter;
+            margin-left: $space-bottom * 1.38;
+            margin-top: $space-top * 1.3;
+        }
+    }
+    .all-services{
+        margin-left: $space-bottom * 1.4;
+        margin-top: $space-top * 0.5;
+        .list-services{
+            color: $wbu-color-text;
+            .element{
+                list-style-type: disc;
+
+                &::before{
+                    content: "\2022";
+                    color: $wbu-color-secondary;
+                    font-weight: bold;
+                    display: inline-block; 
+                    width: 1em;
+                    margin-left: -1em;
+                }
+            }
+        }
+    }
+    .call-info{
+        background: $wbu-color-secondary;
+        overflow: hidden;
+
+        .icon{
+            position: absolute;
+            top: 30;
+            left: 270;
+            color: $wbu-color-thirdly;
+            opacity: 0.6;
+        }
+        .head-title{
+            font-size: $wbu-titre-biggest;
+            margin-left: $space-bottom * 0.1;
+            margin-top: $space-top * 1.4;
+        }
+        .phone-number{
+            font-size: $wbu-titre-biggest * 0.9;
+        }
+    }
+}
