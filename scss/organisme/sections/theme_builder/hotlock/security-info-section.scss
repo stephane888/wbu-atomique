@@ -2,7 +2,7 @@
 @use "..//wbu-atomique/scss/wbu-ressources-clean.scss" as *;
 
 .security-info-handler{
-    
+    overflow: hidden;
     .security-service{
         background: $wbu-background;
         color: $wbu-border-color;
@@ -61,5 +61,85 @@
         .phone-number{
             font-size: $wbu-titre-biggest * 0.9;
         }
+    }
+
+    .safety-text{
+        height: 60vh;
+        width: 100vw;
+        background: url("https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_cta2.jpg");
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        margin-left: $wbu-margin * -0.5;
+
+        .icon{
+            color: $wbu-color-secondary;
+
+            i{
+
+                svg{
+                    margin-top: $space-top;
+                }
+            }
+        }
+        .text-title{
+            color: $wbu-border-color;
+            font-size: $wbu-titre-big;
+            font-weight: lighter;
+        }
+        .text-paragraph{
+            color: $wbu-border-color;
+            font-size: $wbu-h1-line-height + 25 ;
+            font-weight: lighter;
+            margin-top: $space-top * 0.5;
+            margin-bottom: $space-bottom;
+        }
+        .learn-btn{
+            background: $wbu-color-secondary;
+            color: $wbu-background;
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: $space-top * 0.3;
+            padding: $wbu-btn-padding-x-sm;
+            position: relative;
+            &:hover{
+                color: $wbu-border-color;
+                .link{
+                    z-index: 1;
+                    color: $wbu-border-color;
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $wbu-background;
+                transition: transform 0.5s;
+                transform-origin: 0 0;
+                transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                
+            }
+            &::before{
+                transform: scaleX(0);
+            }
+            &:hover::before{
+                
+                transform: scaleX(1);
+            }
+            .link{
+                color: $wbu-background;
+                font-size: $wbu-title-font-size-sm * 0.6 ;
+                text-decoration: none;
+                font-weight: 400;
+                position: relative;
+                
+                
+            }
+        }
+        
     }
 }
