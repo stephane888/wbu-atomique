@@ -1,7 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/plumbing/pl-btn.scss";
 .bg-fixed-plumbing {
-  height: 60vh;
+  min-height: 60vh;
   width: 100%;
   background-position: top left;
 
@@ -16,7 +16,7 @@
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding: $wbu-margin * 4 10px;
+    padding: $wbu-margin 10px;
     display: flex;
     justify-content: end;
     align-items: center;

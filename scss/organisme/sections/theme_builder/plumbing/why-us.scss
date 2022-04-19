@@ -1,92 +1,144 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/plumbing/pl-btn.scss";
-@use "../../../../atome/plumbing/pl-separator.scss";
-.svg-service-plumbing {
+.why-us-plumbing {
   // display: flex;
   //     justify-content: center;
   //     align-items: center;
-  padding: $wbu-margin * 4 10px;
+  padding: $space_top 0;
 
-  .service-content {
-    max-width: 1200px;
-    margin: 0 auto;
+  .why-us-content {
+    //max-width: 1200px;
+    //margin: 0 auto;
     width: 100%;
-    padding: $wbu-margin * 0.8;
-
-    &__service {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-
-      gap: 20px;
-      @include media-max(MD) {
-        flex-wrap: wrap;
-      }
+    // padding:0 $wbu-margin * 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+    @include media-max(SM) {
+      flex-wrap: wrap;
     }
-    .service-bloc {
-      margin: 5px;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      margin: 0 auto $wbu-margin * 0.8;
-      padding: $wbu-margin * 0.3;
-      a {
-        text-decoration: none;
+
+    .column-bloc {
+      min-height: 400px;
+
+      flex-basis: 50%;
+      padding-bottom: $wbu-margin * 0.8;
+      @include media-max(SM) {
+        flex-basis: 100%;
       }
-      &:hover {
-        svg {
-          fill: black;
-        }
+      &__title {
+        font-size: $wbu-h2-font-size;
+        font-weight: bold;
+        color: black;
+        margin-bottom: $wbu-margin * 2;
+        text-align: center;
       }
-    }
-    .sb-card {
-      max-width: 400px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      padding: 0;
-      // background: rgb(199, 193, 193);
-      &__img {
-        // width: 100%;
-        // transition: ease 0.5s;
-        // overflow: hidden;
-        // min-height: 230px;
-        // position: relative;
-        margin: 10px 0;
-        cursor: pointer;
-        svg {
-          height: 72px;
-          width: 72px;
-          fill: $wbu-color-primary;
-          transition: ease 0.5s;
-        }
-      }
-      &__body {
-        min-height: 240px;
+      &__content {
         display: flex;
         flex-direction: column;
-        align-items: start;
-        justify-content: space-evenly;
-        padding: 0;
-        @include media-max(XS) {
-          min-height: 200px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        .card-testimony {
+          padding: $wbu-margin * 3;
+          max-width: 500px;
+          background-color: $wbu-color-boder;
+          min-height: 375px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          flex-direction: column;
+          gap: 20px;
+          @include media-max(XS) {
+            padding: 0 $wbu-margin * 0.5;
+          }
+          &__p {
+            font-size: $wbu-default-font-size * 1.5;
+            line-height: $wbu-default-line-height;
+          }
+          &__author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 15px;
+            img {
+              object-fit: cover;
+              border-radius: 50px;
+            }
+          }
+          .author {
+            display: flex;
+            flex-direction: column;
+          }
+          .author-name {
+            font-size: $wbu-h3-font-size;
+            font-weight: bold;
+            color: black;
+            text-transform: capitalize;
+            margin: 0;
+          }
+          .author-poste {
+            font-size: $wbu-default-font-size;
+            text-transform: capitalize;
+            margin: 0;
+          }
         }
-      }
-      .card-title {
-        color: black;
-        font-weight: bold;
-        text-transform: capitalize;
-        font-size: $wbu-h2-font-size-sm;
-        &:hover {
-          color: $wbu-color-primary;
+        .cbc-card {
+          box-sizing: border-box;
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          //height: 250px;
+          max-width: 550px;
+          width: 100%;
+          @include media-max(SM) {
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 400px;
+          }
+          &__img {
+            //height: 100px;
+            max-width: 440px;
+            width: 100%;
+            @include media-max(SM) {
+              max-width: none;
+            }
+            img {
+              width: 100%;
+              //min-width: 250px;
+              @include media-max(SM) {
+                min-width: 0;
+              }
+            }
+          }
+          & > * {
+            flex-basis: 50%;
+            @include media-max(SM) {
+              flex-basis: 100%;
+            }
+          }
+          &__body {
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            justify-content: space-evenly;
+            gap: 10px;
+            .body-title {
+              //margin-bottom: $wbu-margin;
+              font-size: $wbu-h3-font-size;
+              font-weight: bold;
+            }
+            .body-desc {
+              margin: 0;
+              margin-bottom: auto;
+              font-size: $wbu-default-font-size;
+              line-height: $wbu-default-line-height;
+            }
+          }
         }
-      }
-      .card-text {
-        text-transform: capitalize;
-        font-size: $wbu-default-font-size;
-        line-height: $wbu-default-line-height * 1.3;
       }
     }
   }
