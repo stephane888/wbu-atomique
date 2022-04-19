@@ -117,4 +117,18 @@
       }
     }
   }
+  &.show-text-hover {
+    overflow: hidden;
+    .background {
+      bottom: $wbu-margin * 1.5;
+      transform: translateY(100%);
+      @include WBUtransition();
+    }
+    &:hover {
+      .background {
+        bottom: 0;
+        transform: translateY(0);
+      }
+    }
+  }
 }
