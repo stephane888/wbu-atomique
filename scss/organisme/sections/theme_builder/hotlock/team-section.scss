@@ -101,9 +101,10 @@
         padding: $wbu-btn-padding-x-sm;
         position: relative;
         &:hover{
-            color: $wbu-color-secondary;
+            
             .link{
                 z-index: 1;
+                color: $wbu-background;
             }
         }
         &::before{
