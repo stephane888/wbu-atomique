@@ -13,14 +13,59 @@
         
     
         .single-lutin{
-            
             .lutin-img{
-                
-                background: seagreen;
+                overflow: hidden;
+                //background: seagreen;
                 margin-left: $wbu-margin;
                 img{
                     height: 316px;
-                    
+                    overflow: hidden;
+                    &:hover{
+                        height: 325px;
+                        background-position: center center;
+                        transition: height 0.25s;
+                    }
+                }
+                .social-network{
+                    position: relative;
+                    color: $wbu-border-color;
+                    margin-top: -45;
+                    left: 45;
+                    height: 30px;
+                    background: $wbu-background;
+                    width: 150px;
+                    display: none;
+                   
+    
+                    .icon{
+                        margin-left: auto;
+                        margin-right: auto;
+    
+                        &::after{
+                            content: "";
+                            display: block;
+                            position: relative;
+                            left: 40;
+                            top: -25;
+                            height: 25px;
+                            width: 1px;
+                            background: $wbu-color-thirdly;
+                        }
+                        &:hover{
+                            color: $wbu-color-secondary;
+                        }
+                        &:last-child::after{
+                            content: "";
+                            display: none;
+                        }
+                    }
+                }
+                &:hover{
+
+                    .social-network{
+                        transition: all 9s;
+                        display: block;
+                    }
                 }
             }
             .lutin-name{
@@ -43,39 +88,7 @@
                 color: $wbu-color-text;
                 
             }
-            .social-network{
-                position: relative;
-                color: $wbu-border-color;
-                top: -150;
-                left: 90;
-                height: 30px;
-                background: $wbu-background;
-                width: 150px;
-                display: none;
-
-                .icon{
-                    margin-left: auto;
-                    margin-right: auto;
-
-                    &::after{
-                        content: "";
-                        display: block;
-                        position: relative;
-                        left: 40;
-                        top: -25;
-                        height: 25px;
-                        width: 1px;
-                        background: $wbu-color-thirdly;
-                    }
-                    &:hover{
-                        color: $wbu-color-secondary;
-                    }
-                    &:last-child::after{
-                        content: "";
-                        display: none;
-                    }
-                }
-            }
+            
         }
     }
     .aboutus-btn{
