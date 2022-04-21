@@ -1,0 +1,19 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@import "../../../../variables";
+
+.flooring {
+    position: relative;
+    border: 1px solid black; // to remove
+
+    .card-container {
+        border: 1px solid black; // to remove
+        position: relative;
+        .carder {
+            border: 1px solid red; // to remove
+            position: relative;
+            @include media-max(MD){
+                margin-top: $space_inner_top;
+            }
+        }
+    }
+}

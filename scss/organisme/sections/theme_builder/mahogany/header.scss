@@ -21,7 +21,6 @@
         font-size: $wbu-default-font-size;
         position: relative;
         .content_one{
-            float: left;
             position: relative;
             justify-content: center;
             padding: $wbu-margin;
@@ -88,7 +87,6 @@
         position:relative;
         .bottom_header_container{
             padding-left: $wbu-margin;
-            border: 1px solid black; // to remove
             position: relative;
             .container_one{
                 padding: $wbu-margin;
@@ -214,9 +212,9 @@
                             display:block;
                             position:absolute;
                             //height: auto;
-                            top: calc(90%);
+                            top: calc(100%);
                             padding-top: $space_inner_top;
-                            padding-bottom: $space_inner_top;
+                            //padding-bottom: $space_inner_top;
                             z-index: 99;
                             opacity: 0;
                             visibility: hidden;

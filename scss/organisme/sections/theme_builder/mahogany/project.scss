@@ -1,0 +1,51 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@import "../../../../variables";
+
+.project-section{
+
+    position: relative;
+    display: block;
+
+    .bouton .btn{
+        margin-top: 0;
+        border: 0;
+        &:hover{
+            background: $wbu-color-thirdly;
+            color: $wbu-color-boder;
+        }
+    }
+
+    .image-container {
+        position: relative;
+
+    }
+
+    @include media-max(MD){
+        overflow: hidden;
+        .image-container{
+            position: relative;
+            margin: $wbu-margin;
+            margin-left: -10%;
+            width: 120%;
+            padding: 0;
+            .col-md-4{
+                position: relative;
+                display: block;
+                padding: 0;
+                width: 150%;
+                img{
+                    display: block;
+                    width: 100%;
+                }
+            }
+            margin-top: 0;
+            .img-two {
+                display: none;
+            }
+            .img-three {
+                display: none;
+            }
+        }
+    }
+
+}

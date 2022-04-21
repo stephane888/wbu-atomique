@@ -1,0 +1,74 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@import "../../variables";
+
+.image-caption-simple-hover{
+
+    display:block;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: $wbu-margin;
+    padding-left: $space_inner_top;
+    padding-right: $space_inner_top;
+
+    @include media-max(MD){
+        padding: 0 $wbu-margin;
+        margin: $space_inner_top $wbu-margin;
+        height: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    img{
+        width: 100%;
+    }
+    .image{
+        //margin: $wbu-margin;
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+    }
+    .caption{
+
+        background: rgba($color: $wbu-background, $alpha: 0.7);
+        position: relative;
+        height: auto;
+        width: 100%;
+        margin-bottom: -14rem;
+        display: block;
+        visibility: hidden;
+        text-align: center;
+        padding: $wbu-margin; 
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+
+        span{
+
+            color: $wbu-color-boder;
+            font-size: $wbu-h3-font-size;
+            padding-top: $wbu-margin * 2;
+            padding-bottom: $wbu-margin * 2;
+            display: block;
+
+        }
+        @include media-max(MD){
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+
+    &:hover .caption{
+        -moz-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        visibility: visible;
+        bottom: 0.07rem;
+    }
+}

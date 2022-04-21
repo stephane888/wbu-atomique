@@ -1,0 +1,167 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@import "../../../../variables";
+
+.footer {
+
+    position: relative;
+    color: $wbu-color-text;
+    bottom: 0;
+    display: block;
+    height: auto;
+    background-image: url("http://mahogany.themerex.net/wp-content/uploads/2017/08/footer-copyright.jpg?id=446");
+    background-repeat: no-repeat;
+
+    
+    .footer-one{
+        background-color: rgba($color: $wbu-color-thirdly, $alpha:0.9);
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        padding: $wbu-margin * 2;
+        padding-top: $wbu-margin * 2;
+        padding-bottom: $wbu-margin * 2;
+        .col-lg-3{
+            .text {
+                color: $wbu-border-color;
+                display: block;
+                padding-top: $wbu-margin;
+                //padding-bottom: $wbu-margin;
+                text-align: justify;
+                font-size: $wbu-default-font-size;
+            }
+            .foot-title{
+                color: $wbu-color-boder;
+                //padding-top: $wbu-margin;
+                font-size: $wbu-h3-font-size;
+                @include media-max(MD){
+                    padding-top: $wbu-margin;
+                }
+            }
+            .links {
+                display: block;
+                list-style: none;
+                color: $wbu-color-boder;
+                padding: 0; // magic thing help us to remove default left margin on ul
+                li{
+                    .link{
+                        text-decoration: none;
+                        color: $wbu-border-color;
+                        margin: 0;
+                        display: block;
+                        padding-top: $wbu-btn-padding-x-sm;
+                        &:hover{
+                            color: $wbu-color-secondary;
+                        }
+                    }
+                }
+            }
+            .bloc {
+                display: flex;
+                padding-top: $space_inner_top;
+                .icon {
+                    display: inline-block;
+                    span{
+                        position: relative;
+                        padding-left: 0;
+                        padding-right: 0;
+                        display: block;
+                    }
+                }
+                .bloc-text {
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0;
+                    .title-icon {
+                        display: block; 
+                        //padding-top: $space_inner_top;
+                        padding-left: 0.5rem;
+                        color: $wbu-color-boder;
+                        font-size: $wbu-title-font-size;
+                    }
+                    .bloc-link {
+                        text-decoration: none;
+                        font-size: $wbu-h3-font-size;
+                        color: $wbu-color-secondary;
+                        padding-left: 0.5rem;
+                        font-weight: 500;
+                        &:hover{
+                            color: $wbu-color-boder;
+                        }
+                    }
+                    .bloc-link-mail{
+                        text-decoration: none;
+                        font-size: $wbu-title-font-size;
+                        padding-left: 0.5rem;
+                        color: $wbu-color-secondary;
+                        &:hover{
+                            color: $wbu-color-boder;
+                        }  
+                    }
+                    p{
+                        color: $wbu-color-boder;
+                        font-size: $wbu-title-font-size;
+                        padding-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-two{
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        //padding: $wbu-margin * 2;
+        padding-left: 0;
+        padding-right: 0;
+        display:flex;
+        background-color: $wbu-color-text;
+        .col-lg-6{
+            display: flex;
+            padding-left: $wbu-margin * 2;
+            .footer-two-text-left{
+                padding: $space_inner_top+1rem;
+                padding-left: -0.5rem;
+                color: $wbu-color-boder;
+                font-size: $wbu-default-font-size;
+                a {
+                    color: $wbu-color-secondary;
+                    text-decoration: none;
+                    font-size: $wbu-default-font-size;
+                }
+                @include media-max(MD){
+                    padding-left: $space_inner_top;
+                }
+            }
+            .foot-title{
+                padding: $space_inner_top+1rem;
+                font-size: $wbu-title-font-size;
+                color: $wbu-color-boder;
+                font-weight: 500;
+                @include media-max(MD){
+                    padding-left: $space_inner_top;
+                }
+            }
+            .icon-container{
+                padding: $space_inner_top;
+                margin-left: $wbu-margin;
+                span{
+                    background-color: inherit;
+                    border-radius: 50%;
+                    display: inline-block;
+                    padding: 0.2rem;
+                    margin-left: 0.3rem;
+                    background-color: rgba($color: $wbu-color-thirdly, $alpha:0.9);
+                    &:hover{
+                        background-color: $wbu-color-secondary;
+                    }
+                }
+            }
+        }
+    }
+    
+}

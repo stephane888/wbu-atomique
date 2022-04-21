@@ -1,0 +1,25 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@import "../../variables";
+
+.bouton {
+
+    position: relative;
+    margin-top: $wbu-margin;
+    margin-bottom: $wbu-margin;
+    padding: $space_inner_top;
+
+    a {
+        color: white;
+        background-color: $wbu-color-secondary;
+        font-weight: bold;
+        padding: $space_inner_top;
+        border: 0;
+    }
+    @include media-max(MD){
+            margin-top: 0;
+            padding-top: 0;
+        a{
+            padding: $wbu-btn-padding-x-sm * 2;
+        }
+    }
+}

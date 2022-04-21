@@ -1,0 +1,72 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@import "../../variables";
+
+.image-caption-simple-hover-icon {
+
+    display:block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    overflow: hidden;
+    margin: $wbu-margin;
+    @include media-max(MD){
+        height: auto;
+        margin: 0;
+        padding: $wbu-margin;
+    }
+    img{
+        width: 100%;
+        @include media-max(MD){
+            width: 100%;
+        }
+    }
+    .image{
+        //margin: $wbu-margin;
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+    }
+    .caption{
+
+        background: rgba($color: $wbu-background, $alpha: 0.7);
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+        opacity: 0;
+        text-align: center;
+        @include media-max(MD){
+            display: block;
+        }
+        a {
+            position: relative;
+            border: 1px solid white;
+            display: block;
+            height: 100%;
+            span{
+
+                color: $wbu-color-boder;
+                font-size: $wbu-h3-font-size;
+                position: absolute;
+                padding: $wbu-margin;
+                display: block;
+                top: 40%;
+                left: 40%;
+                background-color: $wbu-color-secondary;
+                &:hover {
+                    background: $wbu-color-text;
+                }
+            }
+        }
+    }
+
+    &:hover .caption{
+        opacity: 1;
+        //bottom: 0.07rem;
+    }
+
+}

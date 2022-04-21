@@ -1,0 +1,36 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@import "../../variables";
+
+.subtitle-and-Title{
+
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: $wbu-margin 0 $wbu-margin 0;
+    text-align: center;
+    overflow: hidden;
+
+    .subtitle {
+        position: relative;
+        font-size: $wbu-h3-font-size;
+        padding: $space_inner_top 0 0 $space_inner_top;
+        color: $wbu-color-secondary;
+        font-weight: $wbu-title-font-weight;
+        @include media-max(MD){
+            padding: 0 $space_inner_top 0 $space_inner_top;
+        }
+    }
+    
+    .Title{
+        position: inherit;
+        padding: 0 0 0 $space_inner_top;
+        font-size: $wbu-titre-big;
+        color: $wbu-color-text;
+        font-weight: normal;
+        @include media-max(MD){
+            font-size: $wbu-h1-font-size-md;
+            padding: 0 $space_inner_top 0 $space_inner_top;
+        }
+    }
+
+}
