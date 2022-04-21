@@ -1,0 +1,145 @@
+@use "../wbu-atomique/scss/_variables.scss";
+@use "..//wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+
+.security-info-handler{
+    overflow: hidden;
+    .security-service{
+        background: $wbu-background;
+        color: $wbu-border-color;
+        position: relative;
+        overflow: hidden;
+
+        .icon{
+            position: absolute;
+            top: 120;
+            left: -300;
+            opacity: 0.6;
+            color: $wbu-color-thirdly;
+        }
+        .head-title{
+            font-size: $wbu-titre-big * 0.6;
+            font-weight: lighter;
+            margin-left: $space-bottom * 1.38;
+            margin-top: $space-top * 1.3;
+        }
+    }
+    .all-services{
+        margin-left: $space-bottom * 1.4;
+        margin-top: $space-top * 0.5;
+        .list-services{
+            color: $wbu-color-text;
+            .element{
+                list-style-type: disc;
+
+                &::before{
+                    content: "\2022";
+                    color: $wbu-color-secondary;
+                    font-weight: bold;
+                    display: inline-block; 
+                    width: 1em;
+                    margin-left: -1em;
+                }
+            }
+        }
+    }
+    .call-info{
+        background: $wbu-color-secondary;
+        overflow: hidden;
+
+        .icon{
+            position: absolute;
+            top: 30;
+            left: 270;
+            color: $wbu-color-thirdly;
+            opacity: 0.6;
+        }
+        .head-title{
+            font-size: $wbu-titre-biggest;
+            margin-left: $space-bottom * 0.1;
+            margin-top: $space-top * 1.4;
+        }
+        .phone-number{
+            font-size: $wbu-titre-biggest * 0.9;
+        }
+    }
+
+    .safety-text{
+        min-height: 60vh;
+        width: 100vw;
+        background: url("https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_cta2.jpg");
+        background-position: center !important;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        margin-left: $wbu-margin * -0.5;
+
+        .icon{
+            color: $wbu-color-secondary;
+
+            i{
+
+                svg{
+                    margin-top: $space-top;
+                }
+            }
+        }
+        .text-title{
+            color: $wbu-border-color;
+            font-size: $wbu-titre-big;
+            font-weight: lighter;
+        }
+        .text-paragraph{
+            color: $wbu-border-color;
+            font-size: $wbu-h1-line-height + 25 ;
+            font-weight: lighter;
+            margin-top: $space-top * 0.5;
+            margin-bottom: $space-bottom;
+        }
+        .learn-btn{
+            background: $wbu-color-secondary;
+            color: $wbu-background;
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: $space-top * 0.3;
+            padding: $wbu-btn-padding-x-sm;
+            position: relative;
+            &:hover{
+                color: $wbu-border-color;
+                .link{
+                    z-index: 1;
+                    color: $wbu-border-color;
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $wbu-background;
+                transition: transform 0.5s;
+                transform-origin: 0 0;
+                transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                
+            }
+            &::before{
+                transform: scaleX(0);
+            }
+            &:hover::before{
+                
+                transform: scaleX(1);
+            }
+            .link{
+                color: $wbu-background;
+                font-size: $wbu-title-font-size-sm * 0.6 ;
+                text-decoration: none;
+                font-weight: 400;
+                position: relative;
+                
+                
+            }
+        }
+        
+    }
+}

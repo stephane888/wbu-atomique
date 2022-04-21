@@ -94,26 +94,38 @@
   // height: 105vh;u
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateY(-219%);
+  height: 0;
+
   //bottom: 0;
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
   background-color: $wbu-background;
   z-index: 10;
-  transition: transform ease-in-out 0.6s;
+  transition: all ease 0.4s, opacity ease 4s;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: $wbu-margin * 6 $wbu-margin * 0.5 0;
+  opacity: 0;
+
   .menu-hide {
     position: absolute;
-    right: 48px;
+    right: 34px;
     cursor: pointer;
-    width: 25px;
-    top: 34px;
+    padding: 10px;
+    top: 0;
+    transform: scale(0) rotate(-90deg) translateY(-12px);
+    transition: ease 0.4s;
+    pointer-events: none;
+    opacity: 0;
+    &:hover {
+      transform: scale(1.15);
+      svg {
+        fill: $wbu-color-primary;
+      }
+    }
     svg {
+      transition: ease 0.3s;
+      width: 25px;
       fill: white;
     }
   }
@@ -123,7 +135,9 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
     img {
+      margin: $wbu-margin * 5 0 0;
       max-width: 200px;
       width: 100%;
       object-fit: contain;
@@ -132,12 +146,152 @@
       margin-top: $wbu-margin * 4;
       max-width: 400px;
       width: 100%;
-      background: rgb(180, 170, 170);
+      //background: rgb(180, 170, 170);
+    }
+    .nsp-nav-ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      padding: $wbu-margin 0;
+      margin: 0;
+      li {
+        list-style: none;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .link-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nsp-nav-link {
+      text-transform: uppercase;
+      padding: $wbu-margin * 0.2;
+      font-size: $wbu-h3-font-size;
+      font-weight: 500;
+      width: 100%;
+      ul {
+        padding: 0;
+        //visibility: hidden;
+        padding-left: $wbu-margin;
+        gap: 0;
+
+        overflow: hidden;
+        max-height: 0px;
+        // height: 0;
+        transition: max-height ease-out 0.3s;
+
+        // transform: translateY(-75px);
+        li {
+          padding: $wbu-margin * 0.2 0;
+        }
+      }
+
+      &,
+      a {
+        transition: ease 0.2s;
+      }
+      a {
+        &:hover {
+          color: $wbu-color-primary;
+          .lit-btn {
+            background-color: lighten($color: #666666, $amount: 20);
+            svg {
+              fill: $wbu-color-primary;
+            }
+          }
+        }
+      }
+    }
+    .nav-ul-opened {
+      & > ul {
+        //visibility: visible;
+        // transform: translateY(0px);
+        // opacity: 1;
+        //height: auto;
+        max-height: 1500px;
+        transition: max-height ease-in 0.5s;
+      }
+    }
+  }
+  .card-social {
+    border-top: 1px solid rgba($color: $wbu-color-primary, $alpha: 0.1);
+    width: 125%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: $wbu-margin * 0.5;
+
+    transition: ease 0.3s;
+    a {
+      text-decoration: none;
+      width: 35px;
+      height: 35px;
+      background: $wbu-color-boder;
+      transition: ease 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      background: $wbu-color-thirdly;
+      svg {
+        fill: $wbu-color-primary;
+        width: 18px;
+        height: 18px;
+        transition: ease 0.4s;
+      }
+      &:hover {
+        color: white;
+        svg {
+          fill: white;
+        }
+      }
     }
   }
 }
 .mobile-menu-active {
   position: fixed;
-  transition: ease-in-out 0.45s;
+  transition: height ease-in-out 0.3s, opacity ease-in-out 0.3s;
   transform: translateY(0%);
+  opacity: 1;
+  height: 100%;
+  .menu-hide {
+    transform: scale(1) rotate(0deg) translateY(0px);
+    pointer-events: inherit;
+    opacity: 1;
+    // &:hover {
+    //   transform: scale(1.15);
+    //   svg {
+    //     fill: $wbu-color-primary;
+    //   }
+    // }
+  }
+}
+.lit-btn {
+  width: 35px;
+  height: 35px;
+  border: none;
+  line-height: 1;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: ease 0.5s;
+  svg {
+    width: 15px;
+    fill: white;
+    transition: ease 0.5s, transform ease 0.2s;
+  }
+  &--bg {
+    background-color: #706f6f;
+  }
+  &-opened {
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
 }

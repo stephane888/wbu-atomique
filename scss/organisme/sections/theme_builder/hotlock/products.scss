@@ -1,0 +1,114 @@
+@use "../wbu-atomique/scss/_variables.scss";
+@use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+
+
+.products-section-handler{
+
+    .section-title{
+        margin-top: $space_inner_top;
+        text-align: center;
+        font-size: $wbu-h2-font-size;
+        font-weight: lighter;
+        margin-bottom: $space_bottom * 0.5;
+    }
+    .all-products-area{
+        margin-left: auto;
+        margin-right: auto;
+        width: 94.5vw;
+
+        .single-product{
+            .prod-img{
+                overflow: hidden;
+                position: relative;
+                height: 260px;
+                &:hover{
+                    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+                    background-position: center center;
+                    
+                    img{
+                        height: 275px;
+                        transition: all 2s;
+                    }
+                }
+                .sticker{
+                    position: absolute;
+                    left: 200;
+                    top: 5;
+                    background: $wbu-color-secondary;
+                    height: 50px;
+                    width: 50px;
+                    padding-top: $wbu-margin * 0.5;
+                    font-size: $wbu-title-font-size-sm * 0.5;
+                    color: $wbu-border-color;
+                    text-align: center;
+                    border-radius: 100%;
+                    font-weight: bold;
+                }
+            }
+            .prod-name{
+                margin-top: $space_inner_top;
+                text-align: center;
+                font-size: $wbu-h2-font-size-sm * 0.6;
+                color: $wbu-background;
+
+                &:hover{
+                    transition: all 0.5s;
+                    color: $wbu-color-secondary;
+                }
+            }
+            .prod-amount{
+                margin-top: $space_inner_top;
+                text-align: center;
+                font-size: $wbu-title-font-size-sm * 0.68;
+            }
+            .buy-btn{
+                background: $wbu-background;
+                width: 130px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-weight: bold;
+                margin-top: $space-top * 0.3;
+                padding: $wbu-btn-padding-x-sm * 0.7;
+                position: relative;
+                &:hover{
+                    
+                    .link{
+                        z-index: 1;
+                        transition: all 0.5s;
+                        color: $wbu-background;
+                    }
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $wbu-color-secondary;
+                    transition: transform 0.5s;
+                    transform-origin: 0 0;
+                    transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                    
+                }
+                &::before{
+                    transform: scaleX(0);
+                }
+                &:hover::before{
+                    
+                    transform: scaleX(1);
+                }
+                .link{
+                    color: $wbu-border-color;
+                    font-size: $wbu-title-font-size-sm * 0.6 ;
+                    text-decoration: none;
+                    font-weight: 400;
+                    position: relative;
+                    
+                    
+                }
+            }
+        }
+    }
+}

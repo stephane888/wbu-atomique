@@ -2,7 +2,7 @@
 
 .lm-btn {
   color: white;
-  padding: 12px 24px;
+  padding: $wbu-margin * 0.7 $wbu-margin * 0.9;
   border: none;
   border: 3px solid white;
   border-radius: 5px;
@@ -12,6 +12,7 @@
   transition: ease-in-out 0.2s;
   font-weight: bold;
   text-transform: uppercase;
+  line-height: 1;
   a {
     color: white;
     pointer-events: none;
@@ -46,7 +47,7 @@
   &-big {
     border-color: $wbu-color-primary;
     background-color: transparent;
-    padding: 23px 44px;
+    //padding: $wbu-margin $wbu-margin * 2;
     font-size: $wbu-default-font-size * 1.3;
     @include media-max(XS) {
       padding: 15px;
@@ -62,4 +63,14 @@
       }
     }
   }
+}
+.lm-btn.btn {
+  padding: $wbu-margin * 0.6 $wbu-margin;
+  font-size: $wbu-default-font-size * 0.8;
+}
+.lm-btn.btn-lg {
+  padding: $wbu-margin * 0.8 $wbu-margin * 1.3;
+}
+.lm-btn-big.btn-lg {
+  padding: $wbu-margin $wbu-margin * 2;
 }
