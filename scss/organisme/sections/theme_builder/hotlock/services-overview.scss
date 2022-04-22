@@ -73,19 +73,22 @@
 
     .services-elements{
         position: relative;
-
+        .card-handler{
+            width: 70vw;
+        }
         .middle{
-            position: absolute;
+            position: relative;
             left: 50%;
-            top: 418%;
+            top: 50%;
             transform: translate(-50%, -50%);
 
         }
         .card{
             cursor: pointer;
-            width: 210px;
-            height: 200px;
-
+            width: calc(100% + 50px);
+            height: 210px;
+            background: $wbu-background;
+            border-left: 0.2px solid $wbu-border-color;
             :is(.front, .back){
                 width: 100%;
                 height: 100%;
@@ -93,24 +96,38 @@
                 backface-visibility: hidden;
                 position: absolute;
                 transition: transform .6s linear;
+                
             }
             .front{
                 transform: perspective(600px) rotateY(0deg);
-
+                margin-top: $space_inner_top;
                 .icon{
-                   margin-left: $space-bottom * 0.5 ;
-                   margin-top: $wbu-margin;
-
+                   margin: $space-bottom * 0.5 ;
+                   color: $wbu-color-secondary;
+                   height: 100vh;
+                }
+                .title{
+                    color: $wbu-border-color;
+                    text-align: center;
+                    margin-top: $space-top * 0.3;
+                    font-size: $wbu-h3-font-size * 0.7;
                 }
             }
             .back{
-                background: #f1f1f1;
+                background: $wbu-background;
                 transform: perspective(600px) rotateY(180deg);
                 
                 .back-content{
-                    color: #2c3e50;
+                    color: $wbu-border-color;
                     text-align: center;
-                    width: 100%;
+                    width: 75%;
+                    .title{
+                        color: $wbu-color-secondary;
+                        font-size: $wbu-h2-font-size * 0.5;
+                    }
+                    .description{
+                        margin-top: $wbu-margin * 0.5;
+                    }
                 }
             }
             &:hover > .front {
@@ -122,3 +139,4 @@
         }
     }
 }
+
