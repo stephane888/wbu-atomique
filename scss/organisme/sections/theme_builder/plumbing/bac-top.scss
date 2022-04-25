@@ -8,6 +8,7 @@
   visibility: hidden;
   opacity: 0;
   transition: ease 0.4s;
+
   .btn-bac-top {
     width: 5rem;
     height: 5rem;
@@ -17,22 +18,10 @@
     cursor: pointer;
     transition: ease 0.3s;
     display: flex;
-    position: relative;
+    //position: relative;
     justify-content: center;
     align-items: center;
-    i {
-    }
-    .wbu-angle-up {
-      &::after {
-        content: "";
-        position: absolute;
-        height: 2.2rem;
-        width: 2.3rem;
-        transition: ease 0.3s;
-        transform: translate(-50%, -50%);
-        @include wbu__angle-up(white);
-      }
-    }
+
     &:hover {
       background-color: transparent;
       .wbu-angle-up {

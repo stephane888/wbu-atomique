@@ -95,6 +95,9 @@
           svg {
             fill: $wbu-color-primary;
           }
+          .wbu-angle-right::after {
+            @include wbu__angle-right($wbu-color-primary, 15);
+          }
         }
       }
     }
@@ -134,11 +137,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .wbu-angle-right::after {
+          @include wbu__angle-right(white, 13);
+        }
 
         &:hover {
           color: $wbu-color-primary;
           svg {
             fill: $wbu-color-primary;
+          }
+          .wbu-angle-right::after {
+            @include wbu__angle-right($wbu-color-primary, 13);
           }
         }
       }
@@ -479,10 +488,18 @@
           transform: rotate(90deg);
           transition: transform ease 0.3s;
         }
+        .wbu-angle-right::after {
+          width: 2rem;
+          height: 2rem;
+          transform: rotate(90deg);
+          @include wbu__angle-right(white, 15);
+        }
       }
 
       .sub-alt-btn {
         padding: 6px;
+        width: 3.3rem;
+        height: 3.3rem;
         border-radius: 5px;
         background-color: $wbu-color-text;
         transition: ease 0.3s;
@@ -491,6 +508,9 @@
       &--open {
         & > a {
           svg {
+            transform: rotate(-90deg);
+          }
+          .wbu-angle-right::after {
             transform: rotate(-90deg);
           }
         }
