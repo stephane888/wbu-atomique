@@ -117,10 +117,11 @@
     li {
       position: relative;
       line-height: 8rem;
+      display: block;
 
       &:hover {
         & > .sub-menu {
-          display: block;
+          display: inherit;
           opacity: 1;
           visibility: visible;
           z-index: 10;
@@ -166,12 +167,12 @@
       min-width: 25rem;
       z-index: 0;
       top: 8.2rem;
-      opacity: 0;
+      opacity: 5;
       visibility: hidden;
       // left: 10rem;
       padding: $wbu-margin * 1.2;
-      transition: ease 0.5s;
-      left: -130%;
+      transition: ease 0.3s;
+      left: -200%;
       &:hover {
         visibility: visible;
         opacity: 1;
@@ -188,12 +189,19 @@
         & > .sub-menu {
           //left: 100%;
           z-index: 150;
-          left: 105%;
+          left: 115%;
           top: -2.4rem;
         }
         & .sub-menu li > .sub-menu {
-          left: -130%;
+          left: -138%;
           // top: -4.4rem;
+        }
+
+        & > .sub-menu li > .sub-menu li > .sub-menu {
+          left: 114%;
+        }
+        & > .sub-menu li > .sub-menu li > .sub-menu li > .sub-menu {
+          left: -138%;
         }
       }
 
@@ -201,7 +209,7 @@
     }
     .sub-build {
       padding: 0 1.4rem;
-      height: 8rem;
+      //height: 8rem;
       display: flex;
       & > a {
         background-color: white;
@@ -214,21 +222,24 @@
           height: 2rem;
         }
       }
+
       & .sub-menu {
-        li {
-          & > .sub-menu {
-            left: -130%;
-          }
-          & > .sub-menu li > .sub-menu {
-            left: 105%;
-          }
-          & > .sub-menu li > .sub-menu li > .sub-menu {
-            left: -120%;
-          }
-          & > .sub-menu li > .sub-menu li > .sub-menu li > .sub-menu {
-            left: 105%;
-          }
-        }
+        top: 6rem;
+        left: -325%;
+        // li {
+        // & > .sub-menu {
+        //left: -130%;
+        // }
+        // & > .sub-menu li > .sub-menu {
+        //   left: -138%;
+        // }
+        // & > .sub-menu li > .sub-menu li > .sub-menu {
+        //   left: 114%;
+        // }
+        // & > .sub-menu li > .sub-menu li > .sub-menu li > .sub-menu {
+        //   left: -138%;
+        // }
+        //    }
       }
     }
     .sub-build {

@@ -74,13 +74,13 @@
 }
 .wbu-angle-right {
   // position: relative;
-  transition: ease 0.3s;
+  //transition: ease 0.3s;
   &::after {
     content: "";
     position: absolute;
     height: 2.2rem;
     width: 2.3rem;
-    transition: ease 0.3s;
+    transition: transform ease 0.3s, background-image ease 0.3s;
     transform: translate(-50%, -50%);
     @include wbu__angle-right(white, 25);
     background-position: center;
