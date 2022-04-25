@@ -216,6 +216,9 @@
           & > .sub-menu li > .sub-menu li > .sub-menu {
             left: -120%;
           }
+          & > .sub-menu li > .sub-menu li > .sub-menu li > .sub-menu {
+            left: 105%;
+          }
         }
       }
     }
@@ -274,6 +277,99 @@
           fill: white;
         }
       }
+    }
+  }
+}
+.search-pop-up {
+  position: absolute;
+  background-color: white;
+  color: white;
+  width: 100%;
+  height: 0px;
+  top: 0;
+  overflow: hidden;
+  left: 0;
+  opacity: 1;
+  z-index: -1;
+  gap: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: ease 0.3s;
+  &--show {
+    height: 100vh;
+    overflow: visible;
+    opacity: 1;
+    z-index: 100;
+    position: fixed;
+  }
+  input {
+    border: none;
+    height: 5rem;
+    font-size: $wbu-h3-font-size * 1.2;
+    padding-bottom: 3rem;
+    padding-left: 3.5rem;
+    border-bottom: 2px solid black;
+    &:focus {
+      border: none;
+      box-shadow: none;
+      border-bottom: 2px solid;
+      border-color: $wbu-color-primary;
+    }
+  }
+  .spu-content {
+    position: relative;
+    width: inherit;
+    min-height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7rem;
+    margin-bottom: $space-top * 0.5;
+  }
+  .hide-search {
+    position: absolute;
+    top: 10rem;
+    right: 1.5rem;
+    padding: 2rem;
+    cursor: pointer;
+    svg {
+      width: 3rem;
+      height: 3rem;
+      fill: black;
+      transition: ease 0.4s;
+      &:hover {
+        fill: $wbu-color-primary;
+      }
+    }
+  }
+  .search-input {
+    width: 100%;
+    max-width: 60rem;
+    .svg-before {
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+      bottom: -2.5rem;
+    }
+  }
+  .logo {
+    //background-color: red;
+    width: 100%;
+    max-width: none;
+    // height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 20rem;
+      height: auto;
+    }
+
+    &-2 {
+      display: block;
     }
   }
 }
