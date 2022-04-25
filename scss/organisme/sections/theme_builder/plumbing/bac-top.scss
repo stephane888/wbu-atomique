@@ -8,6 +8,7 @@
   visibility: hidden;
   opacity: 0;
   transition: ease 0.4s;
+  z-index: 15;
 
   .btn-bac-top {
     width: 5rem;

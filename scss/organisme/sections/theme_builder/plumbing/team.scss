@@ -45,6 +45,12 @@
       flex-direction: column;
       text-align: center;
       height: 319px;
+      @include media-max(MD) {
+        height: 425px;
+      }
+      @include media-max(SM) {
+        height: 320px;
+      }
       &:hover {
         .sb-card__body {
           transform: translateY(-60px);
@@ -63,13 +69,25 @@
       border: none;
       text-align: left;
       overflow: hidden;
+      @include media-max(MD) {
+        max-width: 325px;
+      }
+      @include media-max(SM) {
+        max-width: 270px;
+      }
       &__img {
         width: 100%;
         transition: ease 0.5s;
         overflow: hidden;
         min-height: 230px;
         position: relative;
+        @include media-max(MD) {
+          min-height: 320px;
+        }
 
+        @include media-max(SM) {
+          min-height: 230px;
+        }
         &::before {
           content: "";
           top: 0;
