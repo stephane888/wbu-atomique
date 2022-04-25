@@ -1,0 +1,409 @@
+@use "../wbu-atomique/scss/_variables.scss";
+@use "..//wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+
+.header-section-handler{
+    overflow: hidden;
+    .header-nav{
+        padding-left: $wbu-margin;
+        padding-top: $wbu-margin * 0.5;
+        padding-bottom: $wbu-margin * 0.5;
+
+        .nav-links{
+            margin-left: 65px;
+            
+            .nav-link{
+                margin-right: 12px;
+                &:last-child{
+                }
+            }
+            .colored {
+                color: $wbu-color-secondary;
+                text-decoration: none;
+            }
+            .cart{
+                .count{
+                    position: absolute;
+                    background: $wbu-background;
+                    color: $wbu-border-color;
+                    font-size: 10px;
+                    padding: 1px 3px 1px 3px;
+                    margin-left: -3.8px;
+                    border-radius: 100%;
+                }
+            }
+            .app-btn{
+                background: $wbu-color-secondary;
+                width: 130px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-weight: bold;
+                margin-top: $space-top * 0.3;
+                padding-top: $wbu-btn-padding-y-sm * 0.2 ;
+                padding-bottom: $wbu-btn-padding-y-sm * 0.2 ;
+                padding-left: $wbu-btn-padding-x-sm * 0.5 ;
+                padding-right: $wbu-btn-padding-x-sm * 0.5 ;
+                position: relative;
+                &:hover{
+                    
+                    .link{
+                        z-index: 1;
+                        transition: all 0.5s;
+                        color: $wbu-border-color;
+                    }
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $wbu-background;
+                    transition: transform 0.5s;
+                    transform-origin: 0 0;
+                    transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                    
+                }
+                &::before{
+                    transform: scaleX(0);
+                }
+                &:hover::before{
+                    
+                    transform: scaleX(1);
+                }
+                .link{
+                    color: $wbu-background;
+                    font-size: $wbu-title-font-size-sm * 0.6 ;
+                    text-decoration: none;
+                    font-weight: 400;
+                    position: relative;
+                    letter-spacing: 2;
+                    font-size: 10px;
+                    
+                }
+            }
+            .search-form{
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            height: 65px;
+            overflow: hidden;
+
+            .input-search{
+                height: 65px;
+                outline: none;
+                border: 1px solid $wbu-border-color;
+            }
+            .btn{
+                background: $wbu-color-secondary;
+                border-radius: 0;
+                height: 65px;
+                width: 90px;
+                margin-left: -5px;
+                color: $wbu-border-color;
+
+                &::before{
+                    content: "";
+                    background: $wbu-background;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $wbu-color-secondary;
+                    transition: transform 0.5s;
+                    transform: 0 0;
+                    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
+
+                }
+                &::before{
+                    transform: scaleX(0);
+                }
+                &:hover::before{
+                    transform: scaleX(1);
+                }
+                &:hover{
+                    color: $wbu-border-color;
+                    font-size: $wbu-title-font-size-sm * 0.6 ;
+                    background: $wbu-background;
+                    position: relative;
+                    transition: all 0.5s;
+                }
+            }
+            }
+        }
+        
+    }
+
+    .header-back-slide {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 70%;
+      }
+
+      .swiper-slide {
+        font-size: 18px;
+        position: relative;
+
+        /* Center slide text vertically */
+        
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper-v {
+        background: #eee;
+      }
+      .header-slider-1{
+          background: url("https://www.francetvinfo.fr/pictures/irhmQ_SrzAInupT6b6aEeZjZXOA/1200x1200/2016/12/27/phpkDRkQh_1.jpg");
+          background-size: cover;
+          height: 100%;
+          background-position: center center ;
+          background-repeat: no-repeat;
+          
+          .description{
+            float: right;
+            margin-right: $space-top;
+            margin-top: $space_top * 2;
+            width: 35%;
+            text-align: center;
+          .title{
+              font-size: $wbu-h2-font-size * 0.7;
+              font-weight: lighter;
+              margin-bottom: $wbu-margin;
+              color: $wbu-background;
+          }
+          .sub-title{
+              font-size: $wbu-h1-font-size;
+              font-weight: bold;
+              color: $wbu-border-color;
+          }
+          .btn-desc{
+              background: $wbu-background;
+              width: 160px;
+              font-weight: bold;
+              text-align: center;
+              margin-right: auto;
+              margin-left: auto;
+              margin-top: $space-top;
+              padding: $wbu-btn-padding-x-sm;
+              position: relative;
+              &:hover{
+                  
+                  .link{
+                      z-index: 1;
+                      transition: all 0.5s;
+                      color: $wbu-background;
+                  }
+              }
+              &::before{
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: $wbu-color-secondary;
+                  transition: transform 0.5s;
+                  transform-origin: 0 0;
+                  transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                  
+              }
+              &::before{
+                  transform: scaleX(0);
+              }
+              &:hover::before{
+                  
+                  transform: scaleX(1);
+              }
+              .link{
+                  color: $wbu-border-color;
+                  font-size: $wbu-title-font-size-sm * 0.6 ;
+                  text-decoration: none;
+                  font-weight: 400;
+                  position: relative;
+                  
+                  
+              }
+          }
+      }
+      }
+      .header-slider-2{
+          position: absolute;
+          background: url("https://static.cotemaison.fr/medias_11915/w_640,c_fill,g_north/porte-dentree-une-selection-de-poignees-stylees-6_6100848.jpg");
+          background-size: cover;
+          height: 100%;
+          width: 100%;
+          background-repeat: no-repeat;
+          .description{
+            float: right;
+            margin-right: $space-top;
+            margin-top: $space_top * 2;
+            width: 35%;
+            text-align: center;
+          .title{
+              font-size: $wbu-h2-font-size * 0.7;
+              font-weight: lighter;
+              margin-bottom: $wbu-margin;
+              color: $wbu-background;
+          }
+          .sub-title{
+              font-size: $wbu-h1-font-size;
+              font-weight: bold;
+              color: $wbu-border-color;
+          }
+          .btn-desc{
+              background: $wbu-background;
+              width: 160px;
+              font-weight: bold;
+              text-align: center;
+              margin-right: auto;
+              margin-left: auto;
+              margin-top: $space-top;
+              padding: $wbu-btn-padding-x-sm;
+              position: relative;
+              &:hover{
+                  
+                  .link{
+                      z-index: 1;
+                      transition: all 0.5s;
+                      color: $wbu-background;
+                  }
+              }
+              &::before{
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: $wbu-color-secondary;
+                  transition: transform 0.5s;
+                  transform-origin: 0 0;
+                  transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                  
+              }
+              &::before{
+                  transform: scaleX(0);
+              }
+              &:hover::before{
+                  
+                  transform: scaleX(1);
+              }
+              .link{
+                  color: $wbu-border-color;
+                  font-size: $wbu-title-font-size-sm * 0.6 ;
+                  text-decoration: none;
+                  font-weight: 400;
+                  position: relative;
+                  
+                  
+              }
+          }
+      }
+        }
+      .header-slider-3{
+          position: absolute;
+          background: url("https://www.ul.com/sites/g/files/qbfpbp251/files/styles/hero_boxed_width/public/2020-04/BLST_081_Access_Control_webinars-v2business-door-entry-fb-event-image_2400x1600_0.jpg?itok=Haky9-uB");
+          width: 100%;
+          height: 100%;
+          background-position: center center;
+
+          .description{
+            float: right;
+            margin-right: $space-top;
+            margin-top: $space_top * 2;
+            width: 35%;
+            text-align: center;
+          .title{
+              font-size: $wbu-h2-font-size * 0.7;
+              font-weight: lighter;
+              margin-bottom: $wbu-margin;
+              color: $wbu-background;
+          }
+          .sub-title{
+              font-size: $wbu-h1-font-size;
+              font-weight: bold;
+              color: $wbu-border-color;
+          }
+          .btn-desc{
+              background: $wbu-background;
+              width: 160px;
+              font-weight: bold;
+              text-align: center;
+              margin-right: auto;
+              margin-left: auto;
+              margin-top: $space-top;
+              padding: $wbu-btn-padding-x-sm;
+              position: relative;
+              &:hover{
+                  
+                  .link{
+                      z-index: 1;
+                      transition: all 0.5s;
+                      color: $wbu-background;
+                  }
+              }
+              &::before{
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: $wbu-color-secondary;
+                  transition: transform 0.5s;
+                  transform-origin: 0 0;
+                  transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                  
+              }
+              &::before{
+                  transform: scaleX(0);
+              }
+              &:hover::before{
+                  
+                  transform: scaleX(1);
+              }
+              .link{
+                  color: $wbu-border-color;
+                  font-size: $wbu-title-font-size-sm * 0.6 ;
+                  text-decoration: none;
+                  font-weight: 400;
+                  position: relative;
+                  
+                  
+              }
+          }
+      }
+      .header-slide{
+            position: relative;
+      }
+    }
+    .services-items{
+        background: $wbu-background;
+        .icon{
+            margin-left: $wbu-margin * 0.2;
+            color: $wbu-color-secondary;
+        }
+        .icon-title{
+            margin-top: $wbu-margin * 0.5;
+            font-weight: bold;
+            color: $wbu-border-color;
+            margin-left: $wbu-margin * 0.2;
+        }
+    }
+        
+}
