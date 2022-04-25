@@ -242,7 +242,6 @@
       }
       }
       .header-slider-2{
-          position: absolute;
           background: url("https://static.cotemaison.fr/medias_11915/w_640,c_fill,g_north/porte-dentree-une-selection-de-poignees-stylees-6_6100848.jpg");
           background-size: cover;
           height: 100%;
@@ -316,7 +315,6 @@
       }
         }
       .header-slider-3{
-          position: absolute;
           background: url("https://www.ul.com/sites/g/files/qbfpbp251/files/styles/hero_boxed_width/public/2020-04/BLST_081_Access_Control_webinars-v2business-door-entry-fb-event-image_2400x1600_0.jpg?itok=Haky9-uB");
           width: 100%;
           height: 100%;
@@ -405,5 +403,69 @@
             margin-left: $wbu-margin * 0.2;
         }
     }
+    .left-list{
+        position: fixed;
+        top: 40%;
+        z-index: 1;
+        .element{
+            margin-top: $space-top * 0.05;
+            color: $wbu-background;
+            
+            &:hover{
+                transition: all 1s;
+                background: $wbu-background;
+                .icon{
+                    transition: all 1s;
+                    padding: $wbu-margin * 0.4;
+                }
+                .icon-title{
+                    transition: all 0.7s;
+                    display: block;
+                }
+            }
+            .icon{
+                background: $wbu-color-secondary;
+                height: 50%;
+                padding: $wbu-margin * 0.3;
+            }
+            .icon-title{
+                margin-top: $space-top * 0.27;
+                margin-left: $wbu-margin * 0.8;
+                margin-right: $wbu-margin;
+                color: $wbu-border-color;
+                display: none;
+            }
+        }
+    }
+    .bac-top-btn {
+        position: fixed;
+        right: 3rem;
+        bottom: 4rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: ease 0.4s;
+        z-index: 15;
+      
+        .btn-bac-top {
+          width: 3rem;
+          height: 3rem;
+          background-color: $wbu-background;
+          color: $wbu-color-secondary;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: ease 0.3s;
+          display: flex;
+          //position: relative;
+          justify-content: center;
+          align-items: center;
+      
+          &:hover {
+              background: $wbu-color-secondary;
+              color: $wbu-background;
+            
+          }
+        }
+      }
+      
         
 }
