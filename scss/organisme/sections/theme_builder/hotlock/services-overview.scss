@@ -1,0 +1,142 @@
+@use "../wbu-atomique/scss/_variables.scss";
+@use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+
+
+.services-overview-section-handler{
+    margin-top: $space-top;
+    margin-left: $wbu-margin * 1.8;
+    &::before{
+        content: "";
+        width: 50px;
+        height: 3px;
+        display: block;
+        background: $wbu-color-secondary;
+    }
+    .head-title{
+        margin-top: $wbu-margin * 0.7;
+        font-size: $wbu-title-font-size * 0.75;
+        font-weight: 400 !important ;
+    }
+    .subtitle{
+        margin-top: $space_top * 0.6;
+        font-size: $wbu-h3-font-size * 1.3;
+    }
+    .description{
+        margin-top: $wbu-margin 0.5;
+        font-size: $wbu-title-font-size* 0.55;
+    }
+    .read-btn{
+        background: $wbu-background;
+        width: 160px;
+        text-align: center;
+        margin-top: $space-top ;
+        padding: $wbu-btn-padding-x-sm;
+        position: relative;
+        &:hover{
+            
+            .link{
+                transition: all 0.4S;
+                color: $wbu-background;
+                z-index: 1;
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $wbu-color-secondary;
+            transition: transform 0.5s;
+            transform-origin: 0 0;
+            transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+            
+        }
+        &::before{
+            transform: scaleX(0);
+        }
+        &:hover::before{
+            
+            transform: scaleX(1);
+        }
+        .link{
+            color: $wbu-border-color;
+            font-size: $wbu-title-font-size-sm * 0.6 ;
+            text-decoration: none;
+            font-weight: 400;
+            position: relative;
+            
+            
+        }
+    }
+
+    .services-elements{
+        position: relative;
+        .card-handler{
+            width: 70vw;
+        }
+        .middle{
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+        .card{
+            cursor: pointer;
+            width: calc(100% + 50px);
+            height: 210px;
+            background: $wbu-background;
+            border-left: 0.2px solid $wbu-border-color;
+            :is(.front, .back){
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                backface-visibility: hidden;
+                position: absolute;
+                transition: transform .6s linear;
+                
+            }
+            .front{
+                transform: perspective(600px) rotateY(0deg);
+                margin-top: $space_inner_top;
+                .icon{
+                   margin: $space-bottom * 0.5 ;
+                   color: $wbu-color-secondary;
+                   height: 100vh;
+                }
+                .title{
+                    color: $wbu-border-color;
+                    text-align: center;
+                    margin-top: $space-top * 0.3;
+                    font-size: $wbu-h3-font-size * 0.7;
+                }
+            }
+            .back{
+                background: $wbu-background;
+                transform: perspective(600px) rotateY(180deg);
+                
+                .back-content{
+                    color: $wbu-border-color;
+                    text-align: center;
+                    width: 75%;
+                    .title{
+                        color: $wbu-color-secondary;
+                        font-size: $wbu-h2-font-size * 0.5;
+                    }
+                    .description{
+                        margin-top: $wbu-margin * 0.5;
+                    }
+                }
+            }
+            &:hover > .front {
+                transform: perspective(600px) rotateY(-180deg);
+            }
+            &:hover > .back {
+                transform: perspective(600px) rotateY(0deg);
+            }
+        }
+    }
+}
+
