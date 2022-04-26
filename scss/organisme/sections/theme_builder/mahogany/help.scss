@@ -13,6 +13,15 @@
             .content-container {
                 position: relative;
                 display: block;
+                .content {
+                    display: none;
+                    @include media-max(MD){
+                        display: block;
+                    }
+                }
+                .content--active {
+                    display: block;
+                }
                 .subtitle-and-Title {
                     display: inline-block;
                     text-align: left;
@@ -49,6 +58,8 @@
                 }
                 .button-container{
                     display: inline-block;
+                    padding-top: 0;
+                    margin-top: 0;
                     text-align: left;
                     @include media-max(MD){
                         display: none;
@@ -66,9 +77,6 @@
                     display: flex;
                     position: relative;
                     margin-top: $wbu-margin;
-                    .current {
-                        background-color: $wbu-color-secondary;
-                    }
                     .btn-full {
                         text-decoration: none;
                         display: flex;
@@ -94,6 +102,11 @@
                             height: 100%;
                             width: 100%;
                         }
+                    }
+                    .btn-full--active {
+                        background-color: $wbu-color-secondary;
+                        color: $wbu-color-boder;
+                        font-weight: 500;
                     }
                 }
             }
