@@ -2,11 +2,70 @@
 @import "../../../../atome/typography/default";
 @import "../../../../variables";
 
+/*** fixed pannel butoon ***/
+
+.fixed-pannel {
+    position: fixed;
+    background: none;
+    z-index: 2000;
+    top: 50%;
+    right: 0;
+    height: auto;
+    width: auto;
+    z-index: 3000;
+    //width: auto;
+    display: block;
+    .pannel {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 0.1rem;
+        width: 25rem;
+        &:hover .before{
+            visibility: visible;
+            left: 10%;
+            //transition: translateX(0rem);
+        }
+        .before {
+            display: inline-block;
+            position: relative;
+            box-shadow: 0 0.2rem 2.4rem -0.2rem rgba($color: $wbu-color-text, $alpha: 0.14);
+            height: 100%;
+            width: 70%;
+            visibility: hidden;
+            transition: all 5s;
+            padding: $wbu-margin;
+            background-color: $wbu-background;
+            color: $wbu-color-boder;
+            margin-top: 0.5rem;
+            margin-left: 0;
+            transition: transform 200ms;
+        }
+        .pannel-link {
+            position: absolute;
+            display: inline-block;
+            width: auto;
+            right: 0;
+            //width: 10rem;
+            background-color : $wbu-color-secondary;
+            //padding: $wbu-margin;
+            margin-top: 0.5rem;
+            margin-right: 0;
+            svg{
+                position: relative;
+                margin: $wbu-margin;
+            }
+        }
+    }
+}
+
+/*** header of the site ***/ 
+
 .header {
     position: relative;
     background-position: center;
     margin-top: 0;// to remove 
-    z-index: 8000;
+    z-index: 2500;
     display: block;
     background-repeat: no-repeat;
     .top_header{

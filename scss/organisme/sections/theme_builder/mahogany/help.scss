@@ -1,0 +1,102 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@import "../../../../variables";
+
+.help {
+    position: relative;
+    padding-top: $space_inner_top;
+    padding-bottom: $space_inner_top;
+    border: 1px solid black; // to remove
+    .help-content {
+        position: relative;
+        .row {
+            position: relative;
+            .content-container {
+                position: relative;
+                display: block;
+                .subtitle-and-Title {
+                    display: inline-block;
+                    text-align: left;
+                    h4{
+                        a{
+                            color: $wbu-color-secondary;
+                            text-decoration: none;
+                            &:hover {
+                                color: $wbu-color-text;
+                            }
+                        } 
+                    }
+                    h1 {
+                        a{
+                            color: $wbu-color-text;
+                            text-decoration: none;
+                            &:hover {
+                                color: $wbu-color-secondary;
+                            }
+                        }
+                    }
+                }
+                .paragraph-container {
+                    display: inline-block;
+                    text-align: left;
+                    padding-top: $wbu-margin;
+                    padding-bottom: $wbu-margin;
+                    p {
+                        margin-left: $wbu-margin;
+                    }
+                    @include media-max(MD){
+                        display: none;
+                    }
+                }
+                .button-container{
+                    display: inline-block;
+                    text-align: left;
+                    @include media-max(MD){
+                        display: none;
+                    }
+                }
+            }
+            .action-container {
+                position: relative;
+                display: block;
+                padding: $wbu-margin;
+                @include media-max(MD){
+                    display: none;
+                }
+                .pannel {
+                    display: flex;
+                    position: relative;
+                    margin-top: $wbu-margin;
+                    .current {
+                        background-color: $wbu-color-secondary;
+                    }
+                    .btn-full {
+                        text-decoration: none;
+                        display: flex;
+                        position: relative;
+                        color: $wbu-color-thirdly;
+                        background-color: rgba($color: $wbu-color-text, $alpha: 0.1);
+                        width: 48%;
+                        height: 10rem;
+                        font-size: $wbu-default-font-size;
+                        padding-top: $space_inner_top;
+                        padding-bottom: -$wbu-margin;
+                        padding-left: $space_inner_top;
+                        padding-right: $space_inner_top;
+                        margin-left: $wbu-margin;
+                        text-align: justify;
+                        cursor: pointer;
+                        justify-content: center;
+                        border-left: 0.5rem solid white;
+                        &:hover{
+                            border-left: 0.5rem solid $wbu-color-secondary;
+                        }
+                        span {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
