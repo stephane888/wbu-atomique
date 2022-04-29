@@ -114,7 +114,6 @@
                         }
                     }
                     sup {
-                        border: 1px solid gray;
                         display: inline;
                         padding: 0.5rem;
                         padding-top: 0;
@@ -138,12 +137,31 @@
         padding-top: $space_inner_top * 2;
         padding-bottom: $space_inner_top * 2;
         margin: 0;
+        @include media-max(MD) {
+            display: none;
+        }
+        .closer {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
         .logo {
             padding-left: $space_inner_top * 2;
-            border: 1px solid red;// to remove
+        }
+        .logo-two {
+            display: none;
+        }
+        .search-bar {
+            display: none;
+            width: 100%;
+        }
+        .socials-cont {
+            display: none;
+            width: 100%;
         }
         .menu {
-            border: 1px solid yellow;// to remove
+            padding-left: $space_inner_top;
             .active-link {
                 color: $wbu-color-text;
             }
@@ -155,39 +173,87 @@
                     padding: $wbu-margin;
                     a {
                         text-decoration: none;
+                        display: block;
+                        width: 100%;
                         color: $wbu-color-thirdly;
                         font-size: $wbu-title-font-size;
                         font-weight: 500;
+                        span {
+                            display: inline-block;
+                            width: 100%;
+                            margin: 0;
+                        }
+                        svg{
+                            position: relative;
+                            display: none;
+                            width: 10%;
+                            padding-top: 0.2rem;
+                            top: 0;
+                            right: 0; 
+                        }
+                        &:hover {
+                            color: $wbu-color-text;
+                        }
                     }
-                    #submenu {
+                }
+                #submenu{
+                    ul{
                         background-color: $wbu-color-secondary;
                         display: none;
-                        position: relative;
+                        position: absolute;
+                        margin-left: -9rem;
+                        margin-top: 1rem;
                         padding: 0;
-                        margin: 0;
-                        //left:-5rem;
-                        //top: 1rem;
+                        svg{
+                            position: absolute;
+                            top: -1rem;
+                            left: 10rem;
+                        }
                         li {
                             display: block;
-                            position: relative;
                             width: 100%;
                             margin: 0;
                             padding: 0;
                             a{
                                 color: $wbu-color-boder;
                                 text-decoration: none;
+                                width: 20rem;
                                 display: block;
-                                position: relative;
-                                width: 100%;
                                 padding: $space_inner_top;
-                                margin: 0;
+                                span {
+                                    display: inline-block;
+                                    width: 80%;
+                                    margin: 0;
+                                }
+                                svg{
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 10%;
+                                    top: 0;
+                                    left: 1rem;
+                                }
                                 &:hover {
                                     background-color: $wbu-color-text;
-                                }   
+                                }  
+                            }
+                            &:hover {
+                                ul {
+                                    display: block;
+                                }
+                            }
+                        }
+                        .sub-submenu {
+                            position: relative;
+                            ul {
+                                display: none;
+                                position: absolute;
+                                top: 0;
+                                right: -103%;
+                                margin-top: -0.1rem;
                             }
                         }
                     }
-                    &:hover #submenu{
+                    &:hover ul{
                         display: block;
                     }
                 }
@@ -218,6 +284,237 @@
                     .number {
                         color: $wbu-color-secondary;
                     }
+                }
+            }
+        }
+    }
+        /************************
+    *************************
+    *** mob link menu *******
+    *************************
+    ************************/
+    .mobile-navigation {
+
+        @include media-max(MD){
+            height: 100vh;
+            width: 100%;
+            z-index: 5000;
+            display: block;
+            background: $wbu-background;
+            overflow: hidden;
+            /*** default logo for full width *****/
+            .logo {
+                margin-left: $space_inner_top;
+                display: none;
+            }
+            /*********** close button ********/
+            .closer {
+                display: block;
+                top: 2rem;
+                right: 2rem;
+            }
+            /*********** logo container *******/
+            .logo-two {
+                margin-left: $space_inner_top;
+                position: relative;
+                display: block;
+                width: 100%;
+                padding-left: $space_inner_top;
+                img {
+                    max-height: 5rem;
+                    padding-left: $space_inner_top;
+                }
+            }
+            /****** search bar container *******/
+            .search-bar {
+                display: block;
+                width: 100%;
+                position: relative;
+                padding: $wbu-margin;
+                .form {
+                    background: $wbu-color-text;
+                    display: block;
+                    position: relative;
+                    margin-left: $space_inner_top * 2;
+                    margin-right: $space_inner_top * 2;
+                    input {
+                        padding: $wbu-margin;
+                        color: $wbu-color-boder;
+                        vertical-align: middle;
+                        outline: none;
+                        border-radius: 0;
+                        border: 0;
+                        margin: 0;
+                        opacity: 1 !important;
+                        background: inherit;
+                    }
+                    button {
+                        border: 0;
+                        outline: none;
+                        margin: 0;
+                        background: inherit;
+                    }
+                }
+            }
+            /******** socials icon container *******/
+            .socials-cont {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                position: relative;
+                margin-left: 25%;
+                padding: $wbu-margin;
+                a {
+                    text-decoration: none;
+                    padding-left: 1rem;
+                }
+            }
+            /*************************************/
+            /***** menu accordion container *****/
+            /************************************/
+            .menu {
+                margin-top: $wbu-margin;
+                border: 1px solid white;
+                .active-link {
+                    color: $wbu-color-secondary;
+                }
+                .narrow-bottom {
+                    transform: rotate(180deg);
+                }
+                .small-narrow-off {
+                    transform: rotate(90deg);
+                    background: none;
+                }
+                .displayMe {
+                    display: block;
+                }
+                ul {
+                    border: 1px solid red;
+                    display: block;
+                    position: relative;
+                    padding-right: $wbu-margin;
+                    li {
+                        display: block;
+                        position: relative;
+                        padding-top: 0;
+                        a {
+                            font-size: $wbu-h3-font-size;
+                            font-weight: $wbu-title-font-weight;
+                            color: $wbu-color-boder;
+                            position: relative;
+                            display: block;
+                            text-transform: uppercase;
+                            span {
+                                width: 80%;
+                            }
+                            svg {
+                                display: inline-block;
+                                position: relative;
+                                background: $wbu-color-text;
+                            }
+                        }
+                    }
+                    #submenu {
+                        position: relative;
+                        ul  {
+                            position: relative;
+                            background: inherit;
+                            margin: 0;
+                            padding-top: 1rem;
+                            li {
+                                a {
+                                    font-size: $wbu-title-font-size;
+                                    margin: 0;
+                                    padding: 1rem;
+                                }
+                            }
+                            svg{
+                                display: none;
+                            }
+                            .sub-submenu {
+                                position: relative;
+                                ul {
+                                    position: relative;
+                                    background: inherit;
+                                    margin: 0;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    padding-top: 1rem;
+                                    padding-left: 1rem;
+                                    li {
+                                        a {
+                                            font-size: $wbu-default-font-size;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contacts {
+                border: 1px solid white;
+                display: none;
+            }
+        }
+
+    }
+    /***********************/
+    /**** mob-nav logo + btns**
+    **************************
+    **************************/
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: $wbu-margin;
+        padding-left: $space_inner_top;
+        background: white;
+        z-index: 4000;
+        border-bottom: 1px solid gray;// to modify
+        box-shadow: 0.1rem 0.1rem gray;
+        @include media-max(MD) {
+            display: flex;
+        }
+        .title {
+            width: 50%;
+            display: inline-flex;
+            padding-left: $space_inner_top;
+            a {
+                text-decoration: none;
+                color: $wbu-color-text;
+                h3 {
+                    font-size:$wbu-h3-font-size;
+                    letter-spacing: 0.2rem;
+                    font-style: normal;
+                    font-weight: normal;
+                }
+                p{
+                    display: flex;
+                    flex-direction: row;
+                    font-size: $wbu-default-font-size;
+                    letter-spacing: 0;
+                    word-wrap: break-word;
+                    padding: 0;
+                    margin-top: 0;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .buttons {
+            display: inline-flex;
+            width: 50%;
+            .btns {
+                padding-top: $wbu-margin;
+                padding-left: $wbu-margin;
+                &:hover {
+                    cursor: help;
+                    background: black;
                 }
             }
         }
