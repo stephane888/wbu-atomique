@@ -65,7 +65,6 @@
     background-position: center;
     z-index: 2500;
     display: block;
-    border: 1px solid red;
     /*********************
     *** entete one *******
     **********************/
@@ -134,8 +133,8 @@
     **********************/
     .entete-two {
         position: relative;
-        padding-top: $space_inner_top * 2;
-        padding-bottom: $space_inner_top * 2;
+        padding-top: $space_inner_top;
+        padding-bottom: $wbu-margin;
         margin: 0;
         @include media-max(MD) {
             display: none;
@@ -299,7 +298,6 @@
             height: 100vh;
             width: 100%;
             z-index: 5000;
-            display: block;
             background: $wbu-background;
             overflow: hidden;
             /*** default logo for full width *****/
@@ -310,6 +308,7 @@
             /*********** close button ********/
             .closer {
                 display: block;
+                cursor: pointer;
                 top: 2rem;
                 right: 2rem;
             }
@@ -374,7 +373,6 @@
             /************************************/
             .menu {
                 margin-top: $wbu-margin;
-                border: 1px solid white;
                 .active-link {
                     color: $wbu-color-secondary;
                 }
@@ -382,14 +380,12 @@
                     transform: rotate(180deg);
                 }
                 .small-narrow-off {
-                    transform: rotate(90deg);
-                    background: none;
+                    transform: rotate(360deg);
                 }
-                .displayMe {
-                    display: block;
+                .small-narrow-turn {
+                    transform: rotate(90deg);
                 }
                 ul {
-                    border: 1px solid red;
                     display: block;
                     position: relative;
                     padding-right: $wbu-margin;
@@ -416,6 +412,9 @@
                     }
                     #submenu {
                         position: relative;
+                        .displayMe {
+                            display: block;
+                        }
                         ul  {
                             position: relative;
                             background: inherit;
@@ -433,6 +432,9 @@
                             }
                             .sub-submenu {
                                 position: relative;
+                                .me-display {
+                                    display: block;
+                                }
                                 ul {
                                     position: relative;
                                     background: inherit;
@@ -476,8 +478,7 @@
         padding-left: $space_inner_top;
         background: white;
         z-index: 4000;
-        border-bottom: 1px solid gray;// to modify
-        box-shadow: 0.1rem 0.1rem gray;
+        box-shadow: 0rem 0.5rem rgba($color: $wbu-background, $alpha: 0.1);
         @include media-max(MD) {
             display: flex;
         }
@@ -511,9 +512,9 @@
             width: 50%;
             .btns {
                 padding-top: $wbu-margin;
+                cursor: pointer;
                 padding-left: $wbu-margin;
                 &:hover {
-                    cursor: help;
                     background: black;
                 }
             }
