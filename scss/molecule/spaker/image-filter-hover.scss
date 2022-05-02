@@ -5,66 +5,50 @@
 
     display:block;
     position: relative;
-    width: 100%;
     cursor: pointer;
     overflow: hidden;
-    margin-top: $wbu-margin;
-    margin-bottom: $wbu-margin;
 
     @include media-max(MD){
-        padding: 0 $wbu-margin;
-        margin: $space_inner_top $wbu-margin;
+        margin: $space_inner_top;
     }
     img{
         width: 100%;
-        height: 100%;
-    }
-    .image{
-        //margin: $wbu-margin;
-        -webkit-transition: all 300ms ease-out;
-        -moz-transition: all 300ms ease-out;
-        -o-transition: all 300ms ease-out;
-        -ms-transition: all 300ms ease-out;
-        transition: all 300ms ease-out;
+        height: auto;
     }
     .caption{
 
         background: rgba($color: $wbu-background, $alpha: 0.7);
-        position: relative;
-        height: auto;
-        width: 100%;
-        bottom: 6.7rem;
+        position: absolute;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         display: block;
         text-align: center;
-        padding: $space_inner_top 0 $space_inner_top 0 ; 
-        -webkit-transition: all 300ms ease-out;
-        -moz-transition: all 300ms ease-out;
-        -o-transition: all 300ms ease-out;
-        -ms-transition: all 300ms ease-out;
-        transition: all 300ms ease-out;
+        padding-left: $wbu-margin;
+        padding-right: $wbu-margin;
+        padding-top: $space_inner_top;
+        padding-bottom: $space_inner_top;
+        transition: all 5s ease;
 
         span{
 
             color: $wbu-color-boder;
             font-size: $wbu-default-font-size;
-            display: block;
 
         }
     }
 
     &:hover .caption{
-        -moz-transform: translateY(-100%);
-        -o-transform: translateY(-100%);
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-        width: 100%;
+        transform: translateY(-0%);
         height: 100%;
-        position: relative;
-        bottom: 0;
         color:white;// to remove
         span{
             display: block;
             position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
             width: 100%;
             height: 100%;
             padding-top: 50%;

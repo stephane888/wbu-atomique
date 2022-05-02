@@ -5,11 +5,14 @@
     position: relative;
     padding-top: $space_bottom;
     padding-bottom: $space_bottom;
-
+    .text-center {
+        .subtitle-and-Title {
+            display: block; 
+            margin-top: 0;
+        }
+    }
     .card-container {
-        position: relative;
         .carder {
-            position: relative;
             @include media-max(MD){
                 margin-top: $space_inner_top;
             }
@@ -17,6 +20,10 @@
     }
     .bouton-container {
         .bouton {
+            display: block;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            margin-top: 0;
             a {
                 &:hover{
                     color: $wbu-color-boder;

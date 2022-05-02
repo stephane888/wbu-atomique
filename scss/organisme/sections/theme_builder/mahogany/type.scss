@@ -9,16 +9,4 @@
     width: 100%;
     padding-top: $space_bottom;
     padding-bottom: $space_bottom;
-    .container {
-        position: relative;
-        .row {
-            padding-top: 0;
-            .subtitle-and-Title {
-                padding-top: 0;
-            }
-            .bouton {
-                padding-bottom: 0;
-            }
-        }
-    }
 }
