@@ -1,0 +1,26 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@import "../../../../variables";
+
+.flooring {
+    position: relative;
+
+    .card-container {
+        position: relative;
+        .carder {
+            position: relative;
+            @include media-max(MD){
+                margin-top: $space_inner_top;
+            }
+        }
+    }
+    .bouton-container {
+        .bouton {
+            a {
+                &:hover{
+                    color: $wbu-color-boder;
+                    background-color: $wbu-color-text;
+                }
+            }
+        }
+    }
+}

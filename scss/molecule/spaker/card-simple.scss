@@ -1,0 +1,99 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@import "../../variables";
+
+.card-simple {
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    @include media-max(XS){
+        margin: $wbu-margin;
+        margin-top: 0;
+        //margin-left: 0;
+        margin-right: 0;
+        width: 90%;
+    }
+    .sale {
+        position: absolute;
+        z-index: 10;
+        background: rgba($color: $wbu-background, $alpha: 0.5);
+        top: 0;
+        right: 0;
+        display: none;
+        padding: $wbu-btn-padding-x-sm;
+        padding-left: $wbu-btn-padding-x-sm * 2;
+        padding-right: $wbu-btn-padding-x-sm * 2;
+        color: $wbu-color-boder;
+        text-decoration: none;
+        font-weight: $wbu-title-font-weight;
+        @include media-max(XS){
+            padding: $wbu-btn-padding-x-sm;
+        }
+    }
+    .card-text {
+        position: absolute;
+        z-index: 20;
+        top: 69%;
+        padding: $wbu-margin;
+        padding-top: 0;
+        padding-bottom: 0;
+        background: $wbu-color-thirdly;
+        color: $wbu-color-text;
+        text-align: center;
+        display: block;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        transition: transform 200ms;
+        &:hover{
+            transform: translateY(-28%);
+            height: 45%;
+        }
+        .card-title{
+            display: inline-block;
+            padding: $wbu-margin;
+            padding-bottom: 0;
+            font-size: $wbu-title-font-size;
+            width: 100%;
+            a{
+                text-decoration: none;
+                color: $wbu-color-text;
+            }
+            @include media-max(XS){
+                text-align: center;
+                padding-bottom: $wbu-margin;
+            }
+        }
+        .card-price{
+            display: inline-block;
+            width: 100%;
+            font-size: $wbu-default-font-size;
+            color: $wbu-color-secondary;
+            padding: $wbu-margin;
+            padding-top: 0;
+            s{
+                display: inline block;
+                margin-right: 1rem;
+                color: $wbu-color-text;
+                width: 50%;
+            }
+            @include media-max(XS){
+                padding-top: $wbu-margin;
+            }
+        }
+        .card-text-link {
+            display: inline-block;
+            width: 100%;
+            padding: $wbu-margin;
+            padding-top:0;
+            text-decoration: none;
+            color: $wbu-color-secondary;
+            &:hover{
+                color: $wbu-color-text;
+            }
+            @include media-max(XS){
+                display: none;
+            }
+        }
+    }
+}

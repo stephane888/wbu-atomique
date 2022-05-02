@@ -1,0 +1,112 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@import "../../../../variables";
+
+.update-section{
+
+    position: relative;
+    padding-left: 0;
+    padding-top: $wbu-margin * 2;
+    padding-bottom: $wbu-margin * 2;
+    .update-content{
+        
+        position: relative;
+
+        .col-md-4 {
+
+            position: relative;
+            width: 100%;
+            padding: $wbu-margin;
+            @include media-max(MD){
+                //margin-top: 0;
+                //margin: $wbu-margin;
+            }
+
+            .simple-title {
+                position: relative;
+                width: 100%;
+                padding-left: $space_inner_top;
+                //padding-top: 0;
+                font-size: $wbu-h3-font-size;
+                padding-bottom: 0;
+                a{
+                    color: $wbu-color-thirdly;
+                    text-decoration: none;
+                    &:hover{
+                        color: $wbu-color-secondary;
+                    }
+                }
+            }
+            .date-link {
+                position: relative;
+                padding-left: $space_inner_top;
+                color: $wbu-color-text;
+                text-decoration: none;
+                &:hover{
+                    color: $wbu-color-secondary;
+                }
+                &:hover svg{
+                    fill: $wbu-color-secondary;
+                }
+            }
+
+            .form-container{
+                width: 100%;
+                position: relative;
+                background-color: $wbu-color-secondary;
+                color: $wbu-color-boder;
+                margin-top: $space_inner_top;
+                padding: $wbu-margin;
+                padding-right: $wbu-margin * 3;
+                padding-bottom: $space_inner_top;
+                @include media-max(MD){
+                    margin-left: $wbu-margin/2;
+                    padding: $space_inner_top;
+                }
+                .form-title{
+                    font-size: $wbu-h1-font-size;
+                    padding: $space_inner_top;
+                    @include media-max(MD){
+                        font-size: $wbu-h3-font-size;
+                        padding-left: 0;
+                        padding-right: 0;
+                        padding-top: $space_inner_top;
+                        padding-bottom: $space_inner_top;
+                    }
+                }
+                .inputs-container {
+                    position: relative;
+                    padding-left: $wbu-margin;
+                    background-color: white;
+                    margin-left: $wbu-margin;
+                    padding-top: 0;
+                    margin-bottom: $wbu-margin;
+                    @include media-max(MD){
+                        padding: 0;
+                        margin: 0;
+                    }
+                    input {
+                        background: inherit;
+                        outline: none;
+                        border: 0;
+                        padding-top: $wbu-btn-padding-x-sm;
+                        padding-left: $wbu-btn-padding-x-sm;
+                        padding-bottom: $wbu-btn-padding-x-sm;
+                    }
+                    button {
+                        padding: $wbu-btn-padding-x-sm;
+                        padding-bottom: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        background: inherit;
+                        border: 0;
+                        margin-left: -0.5rem;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}

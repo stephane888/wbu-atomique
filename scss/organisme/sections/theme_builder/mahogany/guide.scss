@@ -1,0 +1,110 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@import "../../../../variables";
+
+.guide {
+    width: 100%;
+    position: relative;
+    background-color: rgba($color: $wbu-color-text, $alpha: 0.1);
+    .guide-content {
+        position: relative;
+        .col-md-12 {
+            padding: $space_inner_top;
+            .bg-vids{
+                position: relative;
+                @include media-max(MD){
+                    
+                }
+                //background-image: url("http://mahogany.themerex.net/wp-content/uploads/2017/08/bg-16.jpg?id=377");
+                img{
+                    width: 100%;
+                }
+                .sub-cont {
+                    display: block;
+                    position: absolute;
+                    height: auto;
+                    width: 100%;
+                    padding-top: 20%;
+                    padding-left: 20%;
+                    top: 0;
+                    left: 0;
+                    @include media-max(MD){
+                        height: 100%;
+                        padding-top: $space_inner_top;
+                        padding-left: $space_inner_top;
+                    }
+                    .btn-play{
+                        background: $wbu-border-color;
+                        border-radius: 50%;
+                        display: inline-block;
+                        position: relative;
+                        cursor: pointer;
+                        height: $space_inner_top;
+                        width: $space_inner_top;
+                        padding: $wbu-margin * 2;
+                        @include media-max(MD){
+                            margin-top: $wbu-margin;
+                        }
+                        svg{
+                            position: absolute;
+                            top: 29%;
+                            left: 30%;
+                        }
+                        &:hover{
+                            background-color:rgba($color: $wbu-border-color, $alpha: 0.4);
+                        }
+                    }
+                    .text-play{
+                        font-family: "Satisfy",cursive;
+                        display: inline-block;
+                        position: relative;
+                        color: $wbu-border-color;
+                        height: auto;
+                        width: 60%;
+                        margin-left: $wbu-margin;
+                        font-size: $wbu-titre-big;
+                        @include media-max(MD){
+                            width: 60%;
+                            font-size: $wbu-h1-font-size;
+                        }
+                    }
+                }
+            }
+            .title{
+                font-weight: normal;
+                font-size: $wbu-h1-font-size;
+                margin: $space_inner_top * 2;
+                margin-top: 0;
+                @include media-max(MD){
+                    font-size: $wbu-h1-font-size-md;
+                    margin: 0;
+                }
+            }
+            .text {
+                font-size: $wbu-default-font-size;
+                margin: $space_inner_top * 2;
+                @include media-max(MD){
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-top: $space_inner_top;
+                    margin-bottom: $space_inner_top;
+                }
+            }
+            .btn {
+                margin: $space_inner_top * 2;
+                font-size: $wbu-default-font-size;
+                padding: 0;
+                margin-top: 0;
+                color: $wbu-color-secondary;
+                @include media-max(MD){
+                    margin: 0;
+                }
+                &:hover {
+                    color: $wbu-color-text;
+                }
+            }
+            .video-play{
+                display: none;
+            }
+        }
+    }
+}

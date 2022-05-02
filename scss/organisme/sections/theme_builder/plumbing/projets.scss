@@ -1,0 +1,193 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+
+.last-projet-plumbing {
+  background: rgba($color: $wbu-color-boder, $alpha: 0.4);
+  .lp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    padding: $space-top * 1.7 0;
+
+    .lp-title {
+      text-align: center;
+      color: black;
+      font-size: $wbu-h2-font-size;
+      font-weight: bold;
+      margin: 0;
+      text-transform: capitalize;
+      margin-bottom: $wbu-margin;
+      @include media-max(XS) {
+        font-size: $wbu-h1-font-size-md;
+      }
+    }
+    .lp-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      list-style: none;
+      &__item {
+        text-align: center;
+        font-size: $wbu-h3-font-size;
+        font-weight: 500;
+        padding: 0 $wbu-margin;
+        margin: 0;
+        cursor: pointer;
+        color: $wbu-color-text;
+        transition: ease 0.3s;
+        @include media-max(XS) {
+          font-size: $wbu-h2-font-size-sm;
+        }
+        &:hover {
+          color: black;
+        }
+        &--active {
+          font-weight: bold;
+          color: black;
+        }
+      }
+    }
+    .icon-search {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      background-color: white;
+      border-radius: 5px;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      opacity: 0;
+      transition: ease 0.3s;
+      transform: translate(-50%, -175%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 15px;
+        fill: $wbu-color-primary;
+      }
+      &:hover {
+        background-color: $wbu-color-primary;
+        svg {
+          fill: white;
+        }
+      }
+    }
+    .desc-img {
+      font-size: $wbu-h3-font-size;
+      transform-origin: 50% 100%;
+      position: absolute;
+      opacity: 1;
+      top: 68%;
+      left: 50%;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      // visibility: hidden;
+      transform-style: flat;
+      text-align: center;
+      width: 90%;
+      transition: ease-in-out 0.4s;
+      transform: translate3d(0px, 0px, 0.001px) translate(-50%, -10%)
+        rotateX(90deg) scale(0.9, 0.9);
+    }
+    .lp-img {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 2rem;
+      overflow: hidden;
+      @include media-max(SM) {
+        flex-wrap: wrap;
+      }
+      &__img {
+        flex-basis: calc(100% / 3);
+        min-height: 200px;
+        min-width: 240px;
+        position: relative;
+
+        cursor: pointer;
+        @include media-max(SM) {
+          flex-basis: calc(100%);
+          max-width: 400px;
+          min-height: 250px;
+        }
+        @include media-min(DD) {
+          min-height: 300px;
+        }
+        &::before {
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          transition: ease 0.3s;
+          position: absolute;
+          z-index: 1;
+          opacity: 0;
+          background-color: rgba(0, 0, 0, 0.233);
+        }
+        &:hover {
+          .icon-search {
+            opacity: 1;
+            transform: translate(-50%, -100%);
+          }
+          &::before {
+            opacity: 1;
+          }
+          .desc-img {
+            transform: translate3d(0px, 0px, 0.001px) translate(-50%, -16%)
+              rotateX(0deg) scale(1, 1);
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          //max-width: 500px;
+          min-height: 100%;
+          @include media-max(SM) {
+            max-width: 400px;
+          }
+        }
+      }
+    }
+
+    .lp-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+    .page-btn {
+      width: 40px;
+      height: 40px;
+      font-size: $wbu-default-font-size;
+      color: $wbu-color-text;
+      border: 4px solid $wbu-color-text;
+      border-radius: 5px;
+      transition: ease 0.3s;
+      @include media-max(SM) {
+        width: 30px;
+        height: 30px;
+      }
+      &:hover {
+        background-color: black;
+        border-color: black;
+        color: white;
+      }
+      &--active {
+        background-color: black;
+        border-color: black;
+        color: white;
+      }
+    }
+  }
+}

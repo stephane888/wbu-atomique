@@ -40,6 +40,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 15px;
+        overflow: hidden;
         .card-testimony {
           padding: $wbu-margin * 3;
           max-width: 500px;
@@ -51,6 +52,16 @@
           align-items: start;
           flex-direction: column;
           gap: 20px;
+          position: relative;
+          &::before {
+            @include wbu_svg_quote_before();
+            transform: rotate(180deg);
+            top: -3rem;
+            left: 3.5rem;
+            opacity: 0.12;
+            color: gray;
+            font-size: 34rem;
+          }
           @include media-max(XS) {
             padding: 0 $wbu-margin * 0.5;
           }

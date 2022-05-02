@@ -1,10 +1,17 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/_default.scss";
 @use "../../../../variables";
+@use "../../../../molecule/spaker/subtile-and-Title.scss";
+@use "../../../../molecule/spaker/image-filter-hover.scss";
+@use "../../../../molecule/spaker/bouton.scss";
+@use "../../../../molecule/spaker/image-caption-simple-hover.scss";
+@use "../../../../molecule/spaker/image-caption-simple-hover-icon.scss";
+@use "../../../../molecule/spaker/card-sale.scss";
+@use "../../../../molecule/spaker/card-simple.scss";
 
 // style par défaut des sections : 
 
 /*.section {
-    margin-bottom: $space_bottom;
-    padding: $wbu-margin;
+    padding: 0;
+    border: 1px solid black; // to remove 
 }*/

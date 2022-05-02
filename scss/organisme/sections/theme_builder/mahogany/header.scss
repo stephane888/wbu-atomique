@@ -1,407 +1,527 @@
-@use "../../../../wbu-ressources-clean.scss";
-@import "../../../../atome/typography/default";
+@use "../../../../wbu-ressources-clean.scss" as *;
 @import "../../../../variables";
+
+/*** fixed pannel butoon ***/
+
+.fixed-pannel {
+    position: fixed; 
+    background: none;
+    z-index: 2000;
+    top: 50%;
+    right: 0;
+    height: auto;
+    width: auto;
+    z-index: 3000;
+    //width: auto;
+    display: block;
+    .pannel {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 0.1rem;
+        width: 25rem;
+        &:hover .before{
+            visibility: visible;
+            left: 10%;
+            //transition: translateX(0rem);
+        }
+        .before {
+            display: inline-block;
+            position: relative;
+            box-shadow: 0 0.2rem 2.4rem -0.2rem rgba($color: $wbu-color-text, $alpha: 0.14);
+            height: 100%;
+            width: 70%;
+            visibility: hidden;
+            transition: all 5s;
+            padding: $wbu-margin;
+            background-color: $wbu-background;
+            color: $wbu-color-boder;
+            margin-top: 0.5rem;
+            margin-left: 0;
+            transition: transform 200ms;
+        }
+        .pannel-link {
+            position: absolute;
+            display: inline-block;
+            width: auto;
+            right: 0;
+            //width: 10rem;
+            background-color : $wbu-color-secondary;
+            //padding: $wbu-margin;
+            margin-top: 0.5rem;
+            margin-right: 0;
+            svg{
+                position: relative;
+                margin: $wbu-margin;
+            }
+        }
+    }
+}
+
+/*** header of the site ***/ 
 
 .header {
     position: relative;
     background-position: center;
-    margin-top: 0;// to remove 
-    z-index: 8000;
+    z-index: 2500;
     display: block;
-    background-repeat: no-repeat;
-    .top_header{
-        background-color: $wbu-color-boder;
-        color: $wbu-color-text;
-        font-size: $wbu-default-font-size;
+    /*********************
+    *** entete one *******
+    **********************/
+    .entete-one{
         position: relative;
-    }
-    .top_header_container{
-        background-color: $wbu-color-boder;
-        color: $wbu-color-text;
-        font-size: $wbu-default-font-size;
-        position: relative;
-        .content_one{
-            float: left;
-            position: relative;
-            justify-content: center;
-            padding: $wbu-margin;
-            p{
-                display: block;
-                span{
-                    color: $wbu-color-secondary;
-                    font-family: "Satisfy",cursive;
-                    font-size: $wbu-h2-font-size;
-                    font-weight: $wbu-title-font-weight;
-                    margin-right: $wbu-margin;
+        width: 100%;
+        margin: 0;
+        background: rgba($color: $wbu-color-text, $alpha:0.05);
+        @include media-max(MD){
+            display: none;
+        }
+        .col-lg-6 {
+            display: inline-block;
+            padding-top: $wbu-margin;
+            padding-bottom: $wbu-margin;
+            .text {
+                margin-left: $space_inner_top * 2;
+                h5 {
+                    color: $wbu-color-text;
+                    font-size: $wbu-default-font-size;
+                    span {
+                        font-family: "Satisfy",cursive;
+                        color: $wbu-color-secondary;
+                        font-size: $wbu-h2-font-size;
+                        font-weight: 400;
+                    }
                 }
             }
-        }
-        .content_two{
-            align-items: stretch;
-            text-align: right;
-            padding: $wbu-margin;
-            ul{
-                display: inline-block;
-                vertical-align: middle;
-                overflow: visible;
-                visibility: visible;
-                position: relative;
-                list-style: none;
-                li{
-                    text-decoration: none;
+            ul {
+                display: block;
+                float: right;
+                margin-right: $space_inner_top * 2;
+                li {
+                    display: inline-block;
                     margin-left: $wbu-margin;
-                    text-transform: none;
-                    position: relative;
-                    float: left;
-                    a{
+                    a {
                         text-decoration: none;
                         color: $wbu-color-text;
-                        display: inline-block;
-                        &:hover{
+                        font-size: $wbu-default-font-size;
+                        font-weight: 500;
+                        &:hover {
                             color: $wbu-color-secondary;
                         }
-                        span{
-                            background-color: $wbu-color-secondary;
-                            color: $wbu-color-boder;
-                            text-align: center;
+                        &:hover svg {
+                            color: none;
+                        }
+                    }
+                    sup {
+                        display: inline;
+                        padding: 0.5rem;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        left: -1.5rem;
+                        top: -0.4rem;
+                        border-radius: 50%;
+                        background: $wbu-color-secondary;
+                        color: $wbu-color-boder;
+                        font-size: $wbu-default-font-size;
+                    }
+                }
+            }
+        }
+    }
+    /*********************
+    *** entete two *******
+    **********************/
+    .entete-two {
+        position: relative;
+        padding-top: $space_inner_top;
+        padding-bottom: $wbu-margin;
+        margin: 0;
+        @include media-max(MD) {
+            display: none;
+        }
+        .closer {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .logo {
+            padding-left: $space_inner_top * 2;
+        }
+        .logo-two {
+            display: none;
+        }
+        .search-bar {
+            display: none;
+            width: 100%;
+        }
+        .socials-cont {
+            display: none;
+            width: 100%;
+        }
+        .menu {
+            padding-left: $space_inner_top;
+            .active-link {
+                color: $wbu-color-text;
+            }
+            ul {
+                display: block;
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    padding: $wbu-margin;
+                    a {
+                        text-decoration: none;
+                        display: block;
+                        width: 100%;
+                        color: $wbu-color-thirdly;
+                        font-size: $wbu-title-font-size;
+                        font-weight: 500;
+                        span {
                             display: inline-block;
-                            font-size: $wbu-default-font-size;
-                            position: absolute;
-                            width: 1.6rem;
-                            height:1.6rem;
-                            border-radius: 50%; // to remove 
-                            margin-right: -0.5rem;
-                            margin-bottom: 0.5rem;
-                            right: 0; // to remove
+                            width: 100%;
+                            margin: 0;
                         }
                         svg{
-                            &:hover{
-                                color: $wbu-color-text;
-                            }
+                            position: relative;
+                            display: none;
+                            width: 10%;
+                            padding-top: 0.2rem;
+                            top: 0;
+                            right: 0; 
                         }
-                    }
-                }
-            }
-        }
-    }
-    .bottom_header{
-        position:relative;
-        .bottom_header_container{
-            padding-left: $wbu-margin;
-            border: 1px solid black; // to remove
-            position: relative;
-            .container_one{
-                padding: $wbu-margin;
-                justify-content: center;
-                flex-direction: column;
-                padding-left: $wbu-margin;
-                padding-right: $wbu-margin;
-                display: block;
-                a{
-                    text-decoration: none;
-                    img{
-                        padding-top: $space_inner_top;
-                        border: none;
-                        width: auto;
-                        max-width: 100%;
-                        height: auto;
-                    }
-                }
-            }
-            .container_two{
-                padding: $wbu-margin;
-                align-items: stretch;
-                display: flex;
-                // text-align: right;
-                position: relative;
-                justify-content: center;
-                flex-direction: column;
-                padding-left: $wbu-margin;
-                padding-right: $wbu-margin;
-                .navbar-mobile{
-                    position:fixed;
-                    overflow:hidden;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    bottom: 0;
-                    background: rgba(9,9,9,0.9);
-                    transition: 0.3s;
-                    z-index: 999;
-                    ul {
-                        display: block;
-                        position: absolute;
-                        top: 55px;
-                        right: 15px;
-                        bottom: 15px;
-                        left: 15px;
-                        padding: 10px 0;
-                        border-radius: 8px;
-                        background-color: #fff;
-                        overflow-y: auto;
-                        transition: 0.3s;
-                    }
-                    .dropdown ul {
-                        position: static;
-                        margin: 10px 20px;
-                        padding: 10px 0;
-                        z-index: 99;
-                        opacity: 1;
-                        visibility: visible;
-                        background: #fff;
-                        box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
-                    }
-                    .dropdown > .dropdown-active {
-                        display: block;
-                    }
-                }
-                .navbar{
-                    position: relative;
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: space-between;
-                    width: auto;
-                    .mobile-components{
-                        display: none;
-                    }
-                    .active {
-                        color: $wbu-color-text;
-                    }
-                    .mobile-nav-toggle{
-                        color: #222222;
-                        font-size: 2.8rem;
-                        cursor: pointer;
-                        display: none;
-                        line-height: 0;
-                        transition: 0.5s;
-                    }
-                    .dot {
-                        display: none;
-                    }
-                    ul {
-                        margin:0;
-                        padding:0;
-                        display:flex;
-                        list-style: none;
-                        align-items: center;
-                    }
-                    li {
-                        position: relative;
-                    }
-                    a {
-                        display:flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        padding: $wbu-margin ;// to remove
-                        font-size: $wbu-h3-font-size;
-                        text-decoration: none;
-                        font-weight: $wbu-title-font-weight;
-                        color: $wbu-color-thirdly;
-                        white-space: nowrap;
-                        transition:0.3s;
-                        &:hover{
+                        &:hover {
                             color: $wbu-color-text;
                         }
-                        i {
-                            font-size:$wbu-default-font-size;
-                            line-height: 0;
-                            margin-left: 0.5rem;
-                        }
-                    }
-                    .dropdown {
-                        ul {
-                            display:block;
-                            position:absolute;
-                            //height: auto;
-                            top: calc(90%);
-                            padding-top: $space_inner_top;
-                            padding-bottom: $space_inner_top;
-                            z-index: 99;
-                            opacity: 0;
-                            visibility: hidden;
-                            background: $wbu-color-secondary;
-                            transition: 0.3s;
-                            a {
-                                font-size: $wbu-h3-font-size;
-                                color: $wbu-color-boder;
-                                &:hover{
-                                    background: rgba($color: $wbu-color-text, $alpha: 0.3);
-                                }
-                            }
-                            li {
-                                min-width: 20rem;
-                            }
-                        }
-                        .dropdown ul {
-                            top: -25;
-                            left: 204;
-                        }
-                        &:hover>ul {
-                            visibility: visible;
-                            opacity: 1;
-                        }
                     }
                 }
-                .call{
-                    display: flex;
-                    width: auto;
-                    text-align: right;
-                    a{
-                        color: $wbu-color-text;
-                        text-decoration: none;
-                        display: block;
-                        .call_icon{
-                           border: none;  
+                #submenu{
+                    ul{
+                        background-color: $wbu-color-secondary;
+                        display: none;
+                        position: absolute;
+                        margin-left: -9rem;
+                        margin-top: 1rem;
+                        padding: 0;
+                        svg{
+                            position: absolute;
+                            top: -1rem;
+                            left: 10rem;
                         }
-                        .call_detail{
-                            display: inline-block;
-                            vertical-align: middle;
-                            white-space: normal;
-                            text-align: left;
-                            .call_detail_item1{
-                                font-size: $wbu-default-font-size;
-                                font-weight: 400;
-                                color: $wbu-color-text;
-                                text-align: left;
-                                display: flex;
-                            }
-                            .call_detail_item2{
-                                font-size: $wbu-h3-font-size;
-                                color: $wbu-color-secondary;
-                                font-weight: $wbu-title-font-weight;
-                                display: flex;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    @media only screen and (max-width:823px) {
-        position: relative;
-        width: 100%;
-        .top_header {
-            display: none;
-        }
-        .bottom_header {
-            //border: 1px solid black; // to remove
-            .bottom_header_container {
-                //border: 1px solid black; // to remove
-                .row{
-                    //border: 1px solid black; // to remove
-                    .container_one {
-                        display : block;
-                        //border: 1px solid black; // to remove
-                    }
-                    .container_two {
-                        //border: 1px solid black; // to remove
-                        .navbar {
-                            //border: 1px solid black; // to remove
-                            ul {
-                                border: 1px solid black; // to remove
-                                //display: none;
-                            }
-                            .call {
-                                display: none;
-                            }
-                            .middle-nav-toggle {
-                                display: block;
-                                &:hover{
-                                    color:rgba($color: $wbu-color-secondary, $alpha: 0.3);
-                                }
-                            }
-                        }
-                    }                   
-                }
-
-            }
-        }
-    }
-    @media only screen and (max-width:412px) {
-        position: relative;
-        width: 100%;
-        .top_header {
-            display: none;
-        }
-        .bottom_header {
-            width: 100%;
-            //border: 1px solid black; // to remove
-            .bottom_header_container {
-                width: 100%;
-                //border: 1px solid black; // to remove
-                .row{
-                    width: 100%;
-                    //border: 1px solid black; // to remove
-                    .container_one { /* is for the logo */
-                        display : none;
-                        //border: 1px solid black; // to remove
-                    }
-                    .container_two {
-                        width: 100%;
-                        //border: 1px solid black; // to remove
-                        .navbar {
+                        li {
+                            display: block;
                             width: 100%;
-                            //border: 1px solid black; // to remove
-                            ul {
-                                border: 1px solid black; // to remove
-                                display: none;
-                            }
-                            .call {
-                                display: none;
-                            }
-                            .middle-nav-toggle {
-                                display: none;
-                            }
-                            .mobile-components{
+                            margin: 0;
+                            padding: 0;
+                            a{
+                                color: $wbu-color-boder;
+                                text-decoration: none;
+                                width: 20rem;
                                 display: block;
-                                width: 100%;
-                                //border: 1px solid black; // to remove
+                                padding: $space_inner_top;
+                                span {
+                                    display: inline-block;
+                                    width: 80%;
+                                    margin: 0;
+                                }
+                                svg{
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 10%;
+                                    top: 0;
+                                    left: 1rem;
+                                }
+                                &:hover {
+                                    background-color: $wbu-color-text;
+                                }  
+                            }
+                            &:hover {
                                 ul {
-                                    display:block;
-                                    border: 1px solid black; // to remove
-                                    .logo {
-                                        word-wrap: break-word;
-                                        text-decoration: none;
-                                        width: 50%;
-                                        vertical-align: middle;
-                                        display: inline-block;
-                                        border: 1px solid black; // to remove
-                                        margin: 0;
-                                        color: $wbu-color-text;
-                                        font-weight: none;
-                                        word-wrap: break-word;
-                                        overflow: hidden;
-                                        .logo_text{
-                                            text-decoration: none;
-                                            text-transform: uppercase;
-                                            white-space: nowrap;
-                                            width: 100%;
-                                            display: block;
-                                            border: 1px solid black; // to remove
-                                            font-size: $wbu-h3-font-size;
-                                            top: 0;
-                                            font-weight: 400; // to see 
-                                        }
-                                        .logo_slogan{
-                                            font-size: $wbu-default-font-size;
-                                            display: block;
-                                            border: 1px solid black; // to remove
-                                            line-height: 1.2rem;
-                                            bottom: 0;
-                                            word-wrap: break-word;
-                                        }
-                                    }
+                                    display: block;
+                                }
+                            }
+                        }
+                        .sub-submenu {
+                            position: relative;
+                            ul {
+                                display: none;
+                                position: absolute;
+                                top: 0;
+                                right: -103%;
+                                margin-top: -0.1rem;
+                            }
+                        }
+                    }
+                    &:hover ul{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .contacts{
+            position: relative;
+            display: flex;
+            width: auto;
+            .icon {
+                display: inline-flex;
+                padding-top: 0.8rem;
+            }
+            .text {
+                display: inline-block;
+                color: $wbu-color-text;
+                .small-title {
+                    text-transform: capitalize;
+                }
+                .number {
+                    padding-top: 1rem;
+                    font-size: $wbu-title-font-size;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                .text {
+                    .number {
+                        color: $wbu-color-secondary;
+                    }
+                }
+            }
+        }
+    }
+        /************************
+    *************************
+    *** mob link menu *******
+    *************************
+    ************************/
+    .mobile-navigation {
+
+        @include media-max(MD){
+            height: 100vh;
+            width: 100%;
+            z-index: 5000;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: $wbu-background;
+            overflow: hidden;
+            /*** default logo for full width *****/
+            .logo {
+                margin-left: $space_inner_top;
+                display: none;
+            }
+            /*********** close button ********/
+            .closer {
+                display: block;
+                cursor: pointer;
+                top: 2rem;
+                right: 2rem;
+            }
+            /*********** logo container *******/
+            .logo-two {
+                margin-left: $space_inner_top;
+                position: relative;
+                display: block;
+                width: 100%;
+                padding-left: $space_inner_top;
+                img {
+                    max-height: 5rem;
+                    padding-left: $space_inner_top;
+                }
+            }
+            /****** search bar container *******/
+            .search-bar {
+                display: block;
+                width: 100%;
+                position: relative;
+                padding: $wbu-margin;
+                .form {
+                    background: $wbu-color-text;
+                    display: block;
+                    position: relative;
+                    margin-left: $space_inner_top * 2;
+                    margin-right: $space_inner_top * 2;
+                    input {
+                        padding: $wbu-margin;
+                        color: $wbu-color-boder;
+                        vertical-align: middle;
+                        outline: none;
+                        border-radius: 0;
+                        border: 0;
+                        margin: 0;
+                        opacity: 1 !important;
+                        background: inherit;
+                    }
+                    button {
+                        border: 0;
+                        outline: none;
+                        margin: 0;
+                        background: inherit;
+                    }
+                }
+            }
+            /******** socials icon container *******/
+            .socials-cont {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                position: relative;
+                margin-left: 25%;
+                padding: $wbu-margin;
+                a {
+                    text-decoration: none;
+                    padding-left: 1rem;
+                }
+            }
+            /*************************************/
+            /***** menu accordion container *****/
+            /************************************/
+            .menu {
+                margin-top: $wbu-margin;
+                .active-link {
+                    color: $wbu-color-secondary;
+                }
+                .narrow-bottom {
+                    transform: rotate(180deg);
+                }
+                .small-narrow-off {
+                    transform: rotate(360deg);
+                }
+                .small-narrow-turn {
+                    transform: rotate(90deg);
+                }
+                ul {
+                    display: block;
+                    position: relative;
+                    padding-right: $wbu-margin;
+                    li {
+                        display: block;
+                        position: relative;
+                        padding-top: 0;
+                        a {
+                            font-size: $wbu-h3-font-size;
+                            font-weight: $wbu-title-font-weight;
+                            color: $wbu-color-boder;
+                            position: relative;
+                            display: block;
+                            text-transform: uppercase;
+                            span {
+                                width: 80%;
+                            }
+                            svg {
+                                display: inline-block;
+                                position: relative;
+                                background: $wbu-color-text;
+                            }
+                        }
+                    }
+                    #submenu {
+                        position: relative;
+                        .displayMe {
+                            display: block;
+                        }
+                        ul  {
+                            position: relative;
+                            background: inherit;
+                            margin: 0;
+                            padding-top: 1rem;
+                            li {
+                                a {
+                                    font-size: $wbu-title-font-size;
+                                    margin: 0;
+                                    padding: 1rem;
+                                }
+                            }
+                            svg{
+                                display: none;
+                            }
+                            .sub-submenu {
+                                position: relative;
+                                .me-display {
+                                    display: block;
+                                }
+                                ul {
+                                    position: relative;
+                                    background: inherit;
+                                    margin: 0;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    padding-top: 1rem;
+                                    padding-left: 1rem;
                                     li {
-                                        display: inline-block;
-                                        //border: 1px solid black; // to remove
+                                        a {
+                                            font-size: $wbu-default-font-size;
+                                        }
                                     }
                                 }
                             }
                         }
-                    }                   
+                    }
                 }
+            }
+            .contacts {
+                border: 1px solid white;
+                display: none;
+            }
+        }
 
+    }
+    /***********************/
+    /**** mob-nav logo + btns**
+    **************************
+    **************************/
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        padding-top: $wbu-margin;
+        padding-left: $space_inner_top;
+        background: white;
+        z-index: 4000;
+        box-shadow: 0rem 0.5rem rgba($color: $wbu-background, $alpha: 0.1);
+        @include media-max(MD) {
+            display: flex;
+        }
+        .title {
+            width: 50%;
+            display: inline-flex;
+            padding-left: $space_inner_top;
+            a {
+                text-decoration: none;
+                color: $wbu-color-text;
+                h3 {
+                    font-size:$wbu-h3-font-size;
+                    letter-spacing: 0.2rem;
+                    font-style: normal;
+                    font-weight: normal;
+                }
+                p{
+                    display: flex;
+                    flex-direction: row;
+                    font-size: $wbu-default-font-size;
+                    letter-spacing: 0;
+                    word-wrap: break-word;
+                    padding: 0;
+                    margin-top: 0;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .buttons {
+            display: inline-flex;
+            width: 50%;
+            .btns {
+                padding-top: $wbu-margin;
+                cursor: pointer;
+                padding-left: $wbu-margin;
+                &:hover {
+                    background: black;
+                }
             }
         }
     }
