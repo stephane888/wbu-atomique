@@ -1,0 +1,38 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+$wbu-color-primary: #fbbd04;
+.bac-top-fnews {
+  position: fixed;
+  right: 3rem;
+  bottom: 4rem;
+  //visibility: hidden;
+  // opacity: 0;
+  transition: ease 0.4s;
+  z-index: 15;
+
+  .btn-bac-top {
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: white;
+    border: 1px solid black;
+    //border-radius: 50%;
+    cursor: pointer;
+    transition: ease 0.3s;
+    display: flex;
+    //position: relative;
+    justify-content: center;
+    align-items: center;
+    .wbu-angles-up {
+      &::after {
+        content: "";
+        width: 2.5rem;
+        height: 2.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include wbu__angles-up(black, 20);
+      }
+    }
+  }
+}

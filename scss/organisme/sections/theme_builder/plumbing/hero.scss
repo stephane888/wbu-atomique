@@ -18,6 +18,16 @@
       height: 100%;
       overflow: hidden;
       z-index: -1;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.3;
+        width: 100%;
+      }
       img {
         min-width: 100%;
         min-height: 100%;
@@ -146,12 +156,12 @@
       text-align: center;
       &__h1 {
         text-transform: capitalize;
-        font-size: $wbu-h1-font-size;
+        font-size: $wbu-titre-big;
         color: $wbu-color-primary;
 
         font-weight: bold;
         @include media-max(XS) {
-          font-size: $wbu-h1-font-size-md;
+          font-size: $wbu-titre-big-md;
           line-height: 1.5;
         }
       }
