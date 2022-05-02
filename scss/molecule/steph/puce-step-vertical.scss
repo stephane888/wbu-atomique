@@ -20,8 +20,8 @@
       border-radius: 50%;
       font-weight: 600;
       margin-right: $wbu-margin;
-      border: 2px solid #fff;
-      z-index: 2;
+      border: 3px solid #fff;
+      z-index: 5;
       position: relative;
     }
     &::after {
@@ -31,7 +31,7 @@
       background-color: $wbu-color-primary;
       position: absolute;
       left: 15px;
-      top: 100%;
+      top: 80%;
       z-index: 2;
     }
     &:last-child::after {
