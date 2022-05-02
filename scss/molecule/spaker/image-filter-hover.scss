@@ -9,8 +9,7 @@
     overflow: hidden;
 
     @include media-max(MD){
-        padding: 0 $wbu-margin;
-        margin: $space_inner_top $wbu-margin;
+        margin: $space_inner_top;
     }
     img{
         width: 100%;
