@@ -9,8 +9,7 @@
     cursor: pointer;
     overflow: hidden;
     margin-top: $wbu-margin;
-    padding-left: $space_inner_top;
-    padding-right: $space_inner_top;
+    margin-bottom: $wbu-margin;
 
     @include media-max(MD){
         padding: 0 $wbu-margin;
