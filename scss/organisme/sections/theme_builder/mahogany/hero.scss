@@ -3,25 +3,16 @@
 
 .hero-section {
     position: relative;
-    display: block;
-    width: 100%;
-    height: auto;
-    .container-flex {
-        display: block;
+    .row {
+        margin: 0;
         width: 100%;
         .slider-item{
             display: block;
             width: 100%;
-            position: absolute;
             .slider-image{
                 position: relative;
                 display: block;
                 width: 100%;
-                height: auto;
-                .fade{
-                    animation-name: fade;
-                    animation-duration: 1.5;
-                }
                 .img{
                     width: 100%;
                     vertical-align: middle;
@@ -65,15 +56,17 @@
                     .btn{
                         line-height: $wbu-btn-line-height;
                         font-size: $wbu-h3-font-size;
-                        margin: $wbu-margin;
+                        padding: $space_inner_top;
                         background-color: $wbu-color-secondary;
                         border: none;
-                        margin-left: 25%;
-                        margin-right: 25%;
                         height: auto;
                         width: auto;
+                        &:hover {
+                            background: $wbu-color-thirdly;
+                        }
                         @include media-max(MD){
-                            margin-top: 10%;
+                            margin-top: -$space_inner_top;
+                            padding: $wbu-margin;
                             font-size: $wbu-btn-font-size;
                         }
                     }
@@ -81,9 +74,11 @@
             }
         }
         .slider-bullets{
-
             position: absolute;
-            margin-top: 35%;
+            left: 0;
+            bottom: 0;
+            //margin-top: 35%;
+            margin-bottom: $space_top;
             z-index: 2000;
             display: block;
             width: 100%;
@@ -97,8 +92,8 @@
 
                 display: inline-block;
                 border-radius: 50%;
-                height: 1.5rem;
-                width: 1.5rem;
+                height: 2rem;
+                width: 2rem;
                 margin-left: 0.5rem;
                 background: white;
                 opacity:0.6;

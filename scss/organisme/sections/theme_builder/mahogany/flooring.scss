@@ -3,6 +3,8 @@
 
 .flooring {
     position: relative;
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
 
     .card-container {
         position: relative;
