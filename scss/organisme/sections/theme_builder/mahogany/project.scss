@@ -4,22 +4,16 @@
 .project-section{
 
     position: relative;
-    display: block;
-
-    .bouton .btn{
-        margin-top: 0;
-        border: 0;
-        &:hover{
-            background: $wbu-color-thirdly;
-            color: $wbu-color-boder;
+    padding-top:$space_bottom;
+    padding-bottom: $space_bottom;
+    .row {
+        .bouton {
+            padding: 0;
         }
     }
-
     .image-container {
         position: relative;
-
     }
-
     @include media-max(MD){
         overflow: hidden;
         .image-container{
@@ -36,6 +30,9 @@
                 img{
                     display: block;
                     width: 100%;
+                }
+                .caption {
+                    display: none;
                 }
             }
             margin-top: 0;
