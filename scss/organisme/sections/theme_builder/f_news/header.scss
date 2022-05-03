@@ -143,7 +143,7 @@
             max-height: 30rem;
             padding: 2rem 0;
             opacity: 1;
-            z-index: 100;
+            z-index: 15;
             overflow: visible;
             border-top: 4px solid $wbu-color-primary;
           }
@@ -158,13 +158,13 @@
         left: 0;
         overflow: hidden;
         opacity: 5;
-        z-index: 50;
+        z-index: 10;
         padding: 0;
         background-color: white;
         box-shadow: 0 2px 22px rgb(0, 0, 0, 0.25);
         border-color: transparent;
-        transition: display 0.5s, max-height 0.2s, border-color 0.4s,
-          opacity 0.3s, overflow 2.2s, padding 0.5s;
+        transition: display 0.5s, max-height 0.4s, border-color 0.4s, opacity 1s,
+          overflow 3.2s, padding 0.5s;
 
         .nav-item {
           // display: block;
@@ -236,6 +236,7 @@
         padding-left: 1rem;
       }
       &:hover {
+        text-decoration: none;
         color: rgba($color: $wbu-brand-color, $alpha: 0.9);
       }
     }

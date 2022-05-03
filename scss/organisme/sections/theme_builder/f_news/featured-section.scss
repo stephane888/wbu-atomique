@@ -1,0 +1,126 @@
+@use "../wbu-atomique/scss/_variables.scss";
+@use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+
+.featured-section-handler{
+    margin-top: $space-top;
+    overflow: hidden;
+    position: relative;
+    .section-title{
+        font-size: $wbu-h2-font-size;
+        color: $wbu-background;
+        text-align: center;
+    }
+    .section-sub-title{
+        text-align: center;
+        margin-top: $space-top * 0.1;
+        font-size: $wbu-title-font-size * 0.8;
+        color: $wbu-color-text;
+        font-weight: lighter;
+    }
+    .featured-cards-handler{
+        margin: 25px;
+        .element{
+            overflow: hidden;
+            margin-top: $space-top * 0.5;
+            .featured-single-card{
+                margin-left: $wbu-margin * -0.5;
+                .img-handler{
+                    
+                    
+                    .card-img{
+                        width: 410px;
+                        &:hover .img-sup{
+                            display: block;
+                        }
+                    }
+                    @media screen and (max-width: 1000px) {
+                        .card-img{
+                            width: 350px;
+                        }
+                    }
+                    @media screen and (max-width: 900px) {
+                        .card-img{
+                            width: 300px;
+                        }
+                    }
+                    @media screen and (max-width: 770px) {
+                        &{
+                            width: 100%;
+                            text-align: center;
+                            .card-img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .img-sup{
+                        height: 74%;
+                        width: 100%;
+                        &::before{
+                            content: "";
+                            top: -100;
+                            height: 79%;
+                            opacity: 0.2;
+                            width: 100%;
+                            background: $wbu-color-secondary;
+                            display: none;
+                            position: absolute;
+
+                        }
+                        &:hover::before{
+                            transition: cubic-bezier(0.19, 1, 0.22, 1);
+                            display: block;
+                        }
+                    }
+                }
+                .pub-info{
+                    font-size: $wbu-title-font-size * 0.6;
+                    margin-top: $space_inner_top * 0.3;
+                    color: $wbu-color-text;
+                    text-align: center;
+                }
+                .card-text-descriptor{
+                    text-decoration: none;
+                    font-size: $wbu-h3-font-size;
+                    font-weight: bolder;
+                    text-align: center;
+    
+                    a{
+                        color: $wbu-background;
+                        text-decoration: none;
+                        &:hover{
+                            transition: 0.5s;
+                            color: $wbu-color-teal;
+                        }
+                    }
+                }
+                .role{
+                    font-size: $wbu-title-font-size * 0.6;
+                    margin-top: $space_inner_top * 0.3;
+                    color: $wbu-color-text;
+                    text-align: center;
+                 }
+            }
+            @media screen and (max-width: 770px) {
+                &{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+    .more-link{
+        font-size: $wbu-h2-font-size * 0.55;
+        border-bottom: 0.15rem solid dodgerblue;
+        .link{
+            text-decoration: none;
+        }
+    }
+    .img-teaser{
+        background: $wbu-border-color;
+        margin-left: auto;
+        margin-right: auto;
+        width: 65%;
+        font-size: $wbu-h1-font-size;
+        padding-bottom: $wbu-margin * 0.0;
+    }
+}
