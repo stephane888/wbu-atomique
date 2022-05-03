@@ -5,18 +5,12 @@
 
     position: relative;
     display: block;
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
     background-color: rgba($color: $wbu-color-text, $alpha: 0.1);
     width: 100%;
 
     .text-container{
         padding-top: $wbu-margin ;
-    }
-    .bouton {
-        padding-top: 0;
-        .btn{
-            &:hover{
-                color: $wbu-color-boder;
-            }
-        }
     }
 }

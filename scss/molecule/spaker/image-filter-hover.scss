@@ -7,10 +7,6 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
-
-    @include media-max(MD){
-        margin: $space_inner_top;
-    }
     img{
         width: 100%;
     }
@@ -29,7 +25,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
         span{
             color: $wbu-color-boder;
             font-size: $wbu-default-font-size;

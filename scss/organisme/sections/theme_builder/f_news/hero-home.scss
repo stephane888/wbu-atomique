@@ -1,9 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/plumbing/pl-btn.scss";
 @use "./variables.scss" as *;
-$wbu-background: #f8f9fb;
-$wbu-color-boder: #f1f1f1;
-$wbu-color-primary: #fbbd04;
+
 .fn-home-hero {
   .wbu-pause {
     &::before {
@@ -58,7 +56,7 @@ $wbu-color-primary: #fbbd04;
     }
   }
   a {
-    color: $wbu-color-teal;
+    color: $wbu-color-secondary;
   }
   .fhh-content {
     background-color: $wbu-color-boder;
@@ -131,7 +129,7 @@ $wbu-color-primary: #fbbd04;
         font-weight: bold;
         line-height: $wbu-default-line-height * 0.9;
         @include media-max(SM) {
-          font-size: $wbu-h2-font-size * 1.8;
+          font-size: $wbu-h2-font-size * 0.9;
         }
       }
       .card-text {
@@ -169,7 +167,7 @@ $wbu-color-primary: #fbbd04;
         text-decoration: none;
         font-weight: bold;
         margin: 0;
-        color: $wbu-color-teal;
+        color: $wbu-color-secondary;
       }
       &__date {
         font-size: $wbu-default-font-size;
