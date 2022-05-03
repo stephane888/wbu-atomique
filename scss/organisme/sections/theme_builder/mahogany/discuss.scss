@@ -9,8 +9,10 @@
     padding-bottom: $space_bottom;
     background-color: rgba($color: $wbu-color-text, $alpha: 0.1);
     width: 100%;
-
-    .text-container{
-        padding-top: $wbu-margin ;
+    .row {
+        .subtitle-and-Title{
+            margin: 0;
+            padding-bottom: $wbu-margin;
+        }       
     }
 }

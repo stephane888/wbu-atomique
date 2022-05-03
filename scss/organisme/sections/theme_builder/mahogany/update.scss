@@ -6,12 +6,20 @@
     position: relative;
     padding-top: $space_bottom;
     padding-bottom: $space_bottom;
+    .row {
+        .subtitle-and-Title {
+            margin: 0;
+            margin-bottom: $wbu-margin;
+            .subtitle {
+                padding-top: 0;
+            }
+        }
+    }
     .update-content{
         
         position: relative;
 
         .col-md-4 {
-
             position: relative;
             @include media-max(MD){
                 //margin-top: 0;
@@ -29,7 +37,7 @@
             .simple-title {
                 position: relative;
                 width: 100%;
-                //padding-left: $space_inner_top;
+                margin-top: $wbu-margin;
                 font-size: $wbu-h3-font-size;
                 a{
                     color: $wbu-color-thirdly;
@@ -53,11 +61,20 @@
 
             .form-container{
                 width: 100%;
-                position: relative;
-                border: 1px solid green;
+                height: 100%;
+                position: absolute;
                 background-color: $wbu-color-secondary;
                 color: $wbu-color-boder;
-                padding-right: $wbu-margin;
+                padding: $space_inner_top;
+                margin: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                @include media-max(MD) {
+                    position: relative;
+                    margin-top: $wbu-margin;
+                }
                 .form-title{
                     font-size: $wbu-h1-font-size;
                     padding: $space_inner_top;
