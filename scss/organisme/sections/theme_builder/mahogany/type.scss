@@ -6,7 +6,9 @@
     position: relative;
     display: block;
     background-color: rgba($color: $wbu-color-text, $alpha: 0.1);
-    width: 100%;
     padding-top: $space_bottom;
     padding-bottom: $space_bottom;
+    .filter-container{
+        padding: $wbu-margin;
+    }
 }

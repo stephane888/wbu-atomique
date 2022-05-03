@@ -4,14 +4,7 @@
 .card-sale {
     position: relative;
     overflow: hidden;
-    width: 100%; 
-    @include media-max(XS){
-        margin: $wbu-margin;
-        margin-top: 0;
-        //margin-left: 0;
-        margin-right: 0;
-        width: 90%;
-    }
+    width: 100%;
     .sale {
         position: absolute;
         z-index: 10;
@@ -32,21 +25,24 @@
         position: absolute;
         z-index: 20;
         top: 69%;
-        padding: $wbu-margin;
-        padding-top: 0;
-        padding-bottom: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         background: $wbu-color-thirdly;
         color: $wbu-color-text;
         text-align: center;
         display: block;
-        left: 0;
-        bottom: 0;
         width: 100%;
         height: auto;
-        transition: transform 500ms;
+        transition: all 0.5s ease;
+        @include media-max(MD) {
+            top: 80%;
+        }
         &:hover{
-            transform: translateY(-26%);
-            height: 45%;
+            top: 52%;
+            @include media-max(MD) {
+                top: 70%;
+            }
         }
         .card-title{
             display: inline-block;
@@ -57,10 +53,6 @@
             a{
                 text-decoration: none;
                 color: $wbu-color-text;
-            }
-            @include media-max(XS){
-                text-align: center;
-                padding-bottom: $wbu-margin;
             }
         }
         .card-price{
@@ -83,20 +75,14 @@
         .card-text-link {
             display: inline-block;
             position: relative;
-            bottom: 0.5rem;
             left: 0;
-            margin-left: -10%;
-            width: 120%;
-            background: $wbu-color-thirdly;
-            padding-top: 1rem;
-            padding-bottom: 1.5rem;
+            right: 0;
+            bottom: 0;
+            width: 100%;
             text-decoration: none;
             color: $wbu-color-secondary;
             &:hover{
                 color: $wbu-color-text;
-            }
-            @include media-max(XS){
-                display: none;
             }
         }
     }
