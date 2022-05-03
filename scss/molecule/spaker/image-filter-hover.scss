@@ -13,47 +13,32 @@
     }
     img{
         width: 100%;
-        height: auto;
     }
     .caption{
 
         background: rgba($color: $wbu-background, $alpha: 0.7);
         position: absolute;
-        margin: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: block;
         text-align: center;
-        padding-left: $wbu-margin;
-        padding-right: $wbu-margin;
-        padding-top: $space_inner_top;
-        padding-bottom: $space_inner_top;
-        transition: all 5s ease;
-
+        height: 25%;
+        vertical-align:center;
+        top: auto;
+        left:0;
+        bottom: 0;
+        right: 0;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
         span{
-
             color: $wbu-color-boder;
             font-size: $wbu-default-font-size;
-
+            padding: $wbu-margin;
         }
     }
 
     &:hover .caption{
-        transform: translateY(-0%);
         height: 100%;
-        color:white;// to remove
-        span{
-            display: block;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            padding-top: 50%;
-            //padding-top: $wbu-margin;
-        }
     }
 
 }
