@@ -1,4 +1,4 @@
-@use "../wbu-atomique/scss/_variables.scss";
+
 @use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
 
@@ -17,7 +17,7 @@
             margin: $wbu-margin;
             padding: $wbu-btn-padding-x-sm;
             .created-date{
-                font-size: $wbu-title-font-size * 0.8;
+                font-size: $wbu-default-font-size;
                 color: $wbu-color-thirdly;
             }
             .story-title{
@@ -51,7 +51,7 @@
         }
     }
     .more-link{
-        font-size: $wbu-h2-font-size * 0.7;
+        font-size: $wbu-title-font-size;
         
         .link{
             text-decoration: none;

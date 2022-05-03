@@ -1,6 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/plumbing/pl-btn.scss";
-$wbu-color-primary: #fbbd04;
+@use "./variables.scss" as *;
+
 .bac-top-fnews {
   position: fixed;
   right: 3rem;
