@@ -1,0 +1,87 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+
+.hero-blog-fnews {
+  background-color: $bg-black;
+  .hbf-content {
+    padding: $wbu-margin * 11 0 $space-top * 0.7;
+    @include media-max(MD) {
+      padding-top: $wbu-margin * 7.5;
+    }
+    @include media-max(SM) {
+      padding-top: $wbu-margin * 5.5;
+    }
+  }
+  .hbf-list {
+    margin: 0;
+    padding: 0;
+    margin-bottom: $wbu-margin;
+    list-style: none;
+    display: flex;
+    &__item {
+      display: inline-block;
+      padding: 0.5rem 2rem;
+      position: relative;
+      text-transform: capitalize;
+      font-size: $wbu-default-font-size;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include media-max(SM) {
+        font-size: $wbu-default-font-size * 0.9;
+      }
+      a {
+        color: white;
+      }
+      &::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        top: calc(50% - 2.5px);
+        right: -2.5px;
+      }
+      &--active {
+        a {
+          color: $wbu-color-primary;
+        }
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        //padding-left: 0;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  .current-blog {
+    padding-bottom: $wbu-margin;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: $wbu-h5-font-size;
+    @include media-max(SM) {
+      font-size: $wbu-h5-font-size * 0.8;
+    }
+  }
+  .hbf-title {
+    text-transform: uppercase;
+    font-size: $wbu-h2-font-size;
+    font-weight: bold;
+    color: white;
+    @include media-max(MD) {
+      font-size: $wbu-h2-font-size * 0.8;
+    }
+    @include media-max(SM) {
+      font-size: $wbu-h2-font-size * 0.7;
+    }
+    @include media-max(XS) {
+      font-size: $wbu-h2-font-size * 0.48;
+    }
+  }
+}
