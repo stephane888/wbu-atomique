@@ -4,7 +4,9 @@
 .testimonial {
     position: relative;
     display: block;
-    padding: $space_inner_top;
+    background: rgba($color: $wbu-color-text, $alpha: 0.05);
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
     .container {
         position: relative;
         padding: $wbu-margin;
