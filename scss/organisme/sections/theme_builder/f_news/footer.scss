@@ -5,7 +5,7 @@
 .footer-fnews {
   background-color: $bg-black;
   color: $wbu-color-boder;
-  padding: $space-bottom 0 0;
+
   a {
     &:hover {
       color: $wbu-color-primary;
@@ -16,6 +16,7 @@
     justify-content: space-between;
     align-items: stretch;
     gap: 2rem;
+    padding: $space-bottom 0;
     @include media-max(MD) {
       flex-wrap: wrap;
     }

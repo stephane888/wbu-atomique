@@ -3,19 +3,18 @@
 
 .free-home {
     position: relative;
-    padding: $space_inner_top;
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
     background-image: url("http://mahogany.themerex.net/wp-content/uploads/2017/08/section_bg2-copyright.jpg?id=577");
     @include media-max(MD){
         background-position: center;
     }
     .title-content{
         color: $wbu-border-color;
-        font-size: $wbu-h1-font-size;
-        padding: $space_inner_top;
-        @include media-max(MD){
-            font-size: $wbu-h1-font-size-md;
+        .titled{
+            font-size: $wbu-titre-biggest;
         }
-        span{
+        .styled{
             font-family: "Satisfy",cursive;
         }
     }
@@ -24,11 +23,6 @@
         font-size: $wbu-h3-font-size;
         @include media-max(MD){
             padding-top: 0;
-        }
-        .btn {
-            &:hover{
-                color: $wbu-color-boder;
-            }
         }
     }
 }
