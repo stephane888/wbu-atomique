@@ -4,9 +4,8 @@
 .update-section{
 
     position: relative;
-    padding-left: 0;
-    padding-top: $wbu-margin * 2;
-    padding-bottom: $wbu-margin * 2;
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
     .update-content{
         
         position: relative;
@@ -14,20 +13,24 @@
         .col-md-4 {
 
             position: relative;
-            width: 100%;
-            padding: $wbu-margin;
             @include media-max(MD){
                 //margin-top: 0;
                 //margin: $wbu-margin;
+            }
+            .image-caption-simple-hover-icon {
+                padding: 0;
+                margin: 0;
+                .caption {
+                    padding: 0;
+                    margin: 0;
+                }
             }
 
             .simple-title {
                 position: relative;
                 width: 100%;
-                padding-left: $space_inner_top;
-                //padding-top: 0;
+                //padding-left: $space_inner_top;
                 font-size: $wbu-h3-font-size;
-                padding-bottom: 0;
                 a{
                     color: $wbu-color-thirdly;
                     text-decoration: none;
@@ -38,7 +41,6 @@
             }
             .date-link {
                 position: relative;
-                padding-left: $space_inner_top;
                 color: $wbu-color-text;
                 text-decoration: none;
                 &:hover{
@@ -52,26 +54,13 @@
             .form-container{
                 width: 100%;
                 position: relative;
+                border: 1px solid green;
                 background-color: $wbu-color-secondary;
                 color: $wbu-color-boder;
-                margin-top: $space_inner_top;
-                padding: $wbu-margin;
-                padding-right: $wbu-margin * 3;
-                padding-bottom: $space_inner_top;
-                @include media-max(MD){
-                    margin-left: $wbu-margin/2;
-                    padding: $space_inner_top;
-                }
+                padding-right: $wbu-margin;
                 .form-title{
                     font-size: $wbu-h1-font-size;
                     padding: $space_inner_top;
-                    @include media-max(MD){
-                        font-size: $wbu-h3-font-size;
-                        padding-left: 0;
-                        padding-right: 0;
-                        padding-top: $space_inner_top;
-                        padding-bottom: $space_inner_top;
-                    }
                 }
                 .inputs-container {
                     position: relative;
@@ -80,10 +69,6 @@
                     margin-left: $wbu-margin;
                     padding-top: 0;
                     margin-bottom: $wbu-margin;
-                    @include media-max(MD){
-                        padding: 0;
-                        margin: 0;
-                    }
                     input {
                         background: inherit;
                         outline: none;
