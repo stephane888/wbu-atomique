@@ -12,9 +12,7 @@
         .col-md-12 {
             .bg-vids{
                 position: relative;
-                @include media-max(MD){
-                    
-                }
+                margin-bottom: $space_inner_top;
                 img{
                     width: 100%;
                 }
@@ -48,11 +46,7 @@
                     }
                     .text-play{
                         font-family: "Satisfy",cursive;
-                        display: inline-block;
-                        position: relative;
                         color: $wbu-border-color;
-                        height: auto;
-                        width: 60%;
                         margin-left: $wbu-margin;
                         font-size: $wbu-titre-big;
                         @include media-max(MD){
@@ -65,32 +59,23 @@
             .title{
                 font-weight: normal;
                 font-size: $wbu-h1-font-size;
-                margin: $space_inner_top;
-                margin-top: 0;
+                border: 1px solid red;
+                margin-bottom: $space_inner_top;
                 @include media-max(MD){
                     font-size: $wbu-h1-font-size-md;
-                    margin: 0;
                 }
             }
             .text {
+                border: 1px solid red;
                 font-size: $wbu-default-font-size;
-                margin: $space_inner_top;
-                @include media-max(MD){
-                    margin-left: 0;
-                    margin-right: 0;
-                    margin-top: $space_inner_top;
-                    margin-bottom: $space_inner_top;
-                }
+                margin-bottom: $space_inner_top;
             }
             .btn {
-                margin: $space_inner_top;
+                border: 1px solid red;
+                margin-bottom: $space_inner_top;
                 font-size: $wbu-default-font-size;
                 padding: 0;
-                margin-top: 0;
                 color: $wbu-color-secondary;
-                @include media-max(MD){
-                    margin: 0;
-                }
                 &:hover {
                     color: $wbu-color-text;
                 }
