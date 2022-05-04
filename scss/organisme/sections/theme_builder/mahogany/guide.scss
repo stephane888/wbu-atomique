@@ -10,30 +10,24 @@
     .guide-content {
         position: relative;
         .col-md-12 {
-            padding: $space_inner_top;
             .bg-vids{
                 position: relative;
                 @include media-max(MD){
                     
                 }
-                //background-image: url("http://mahogany.themerex.net/wp-content/uploads/2017/08/bg-16.jpg?id=377");
                 img{
                     width: 100%;
                 }
                 .sub-cont {
-                    display: block;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
                     position: absolute;
-                    height: auto;
-                    width: 100%;
-                    padding-top: 20%;
-                    padding-left: 20%;
+                    right: 0;
+                    bottom: 0;
                     top: 0;
                     left: 0;
-                    @include media-max(MD){
-                        height: 100%;
-                        padding-top: $space_inner_top;
-                        padding-left: $space_inner_top;
-                    }
                     .btn-play{
                         background: $wbu-border-color;
                         border-radius: 50%;
@@ -43,9 +37,6 @@
                         height: $space_inner_top;
                         width: $space_inner_top;
                         padding: $wbu-margin * 2;
-                        @include media-max(MD){
-                            margin-top: $wbu-margin;
-                        }
                         svg{
                             position: absolute;
                             top: 29%;
