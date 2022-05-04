@@ -59,19 +59,16 @@
             .title{
                 font-weight: normal;
                 font-size: $wbu-h1-font-size;
-                border: 1px solid red;
                 margin-bottom: $space_inner_top;
                 @include media-max(MD){
                     font-size: $wbu-h1-font-size-md;
                 }
             }
             .text {
-                border: 1px solid red;
                 font-size: $wbu-default-font-size;
                 margin-bottom: $space_inner_top;
             }
             .btn {
-                border: 1px solid red;
                 margin-bottom: $space_inner_top;
                 font-size: $wbu-default-font-size;
                 padding: 0;
