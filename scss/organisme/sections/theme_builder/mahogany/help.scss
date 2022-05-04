@@ -7,6 +7,7 @@
     padding-bottom: $space_bottom;
     .help-content {
         position: relative;
+        padding: 0;
         .row {
             position: relative;
             .content-container {
@@ -22,6 +23,7 @@
                     display: block;
                 }
                 .subtitle-and-Title {
+                    margin-top: 0;
                     display: inline-block;
                     text-align: left;
                     h4{
@@ -68,14 +70,15 @@
             .action-container {
                 position: relative;
                 display: block;
-                padding: $wbu-margin;
+                padding: 0;
                 @include media-max(MD){
                     display: none;
                 }
                 .pannel {
                     display: flex;
                     position: relative;
-                    margin-top: $wbu-margin;
+                    padding-left: 0;
+                    margin: $wbu-margin;
                     .btn-full {
                         text-decoration: none;
                         display: flex;

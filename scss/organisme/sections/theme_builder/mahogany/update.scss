@@ -19,7 +19,7 @@
         
         position: relative;
 
-        .col-md-4 {
+        .col-xm-4 {
             position: relative;
             @include media-max(MD){
                 //margin-top: 0;
@@ -29,8 +29,11 @@
                 padding: 0;
                 margin: 0;
                 .caption {
-                    padding: 0;
-                    margin: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
                 }
             }
 
