@@ -5,41 +5,67 @@
 @use "../../atome/typography/h4.scss";
 @use "../../atome/typography/h1.scss";
 .ac-hero {
-  padding-top: $space_top;
-  padding-bottom: $space_bottom;
   background: $wbu-background;
   color: #fff;
   overflow: hidden;
   position: relative;
+  z-index: 1;
+  .content-text {
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
+    color: inherit;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
 
   .subtitle {
-    color: $wbu-color-primary;
+    color: inherit;
     margin-bottom: $space_bottom * 0.3;
   }
 
   .title {
-    font-size: $wbu-default-font-size * 8;
+    font-size: $wbu-titre-big-md;
+    @include media-min("DD") {
+      font-size: $wbu-titre-biggest;
+    }
     line-height: 100%;
-    margin-bottom: $space_bottom * 0.6;
+    margin-bottom: $space_bottom * 0.3;
+    @include media-min("DD") {
+      margin-bottom: $space_bottom * 0.6;
+    }
+    color: inherit;
   }
 
   .description {
-    font-size: $wbu-default-font-size * 1.58;
+    font-size: $wbu-h3-font-size;
     margin-bottom: $space_bottom * 0.6;
   }
 
   .content-image {
-    position: relative;
     min-height: 300px;
+    position: relative;
+    z-index: 0;
+    @include media-min("DD") {
+      min-height: 550px;
+    }
 
     img {
+      min-width: 100%;
       position: absolute;
       left: 0;
-      top: -$space_top;
-      max-width: 1900px;
-      max-height: calc(100% + #{$space_bottom} + #{$space_top});
       width: auto;
       height: auto;
+      max-width: 500px;
+      max-height: 1900px;
+      @include media-min("MD") {
+        max-width: 700px;
+      }
+      @include media-min("DD") {
+        max-width: 1900;
+        max-height: calc(100% + #{$space_bottom} + #{$space_top});
+      }
     }
   }
 }
