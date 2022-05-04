@@ -33,29 +33,22 @@
 
         background: rgba($color: $wbu-background, $alpha: 0.7);
         position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        display: block;
         opacity: 0;
         text-align: center;
         @include media-max(MD){
             display: block;
         }
-        a {
+        .caption-contener {
             position: relative;
-            border: 1px solid white;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             height: 100%;
-            span{
-
+            .caption-span{
                 color: $wbu-color-boder;
-                font-size: $wbu-h3-font-size;
-                position: absolute;
+                font-size: $wbu-default-font-size;
                 padding: $wbu-margin;
-                display: block;
-                top: 40%;
-                left: 40%;
                 background-color: $wbu-color-secondary;
                 &:hover {
                     background: $wbu-color-text;

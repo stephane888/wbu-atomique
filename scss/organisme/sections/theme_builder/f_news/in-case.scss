@@ -1,5 +1,5 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../atome/plumbing/pl-btn.scss";
+@use "../../../../atome/typography/default";
 @use "./variables.scss" as *;
 .in-case-fnews {
   padding: $space-top 0;
@@ -21,7 +21,7 @@
     font-weight: bold;
     text-align: center;
 
-    margin: $wbu-margin auto;
+    margin: $wbu-margin * 2 auto;
     a {
       color: $wbu-color-secondary;
       padding: 0.8rem;

@@ -5,29 +5,27 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-
     .row{
-        position: relative;
-
         .bloc{
             display: block;
             width: 100%;
             position: relative;
-            padding: $wbu-margin;
+            padding: $space_bottom;
             background-color: white;
+            @include media-max(MD){
+                padding: $space_inner_top;
+            }
+            //margin-left: $space_bottom;
 
             .titled_one{
                 line-height: $wbu-h3-line-height;
                 display: block;
-                padding: space_inner_top;
                 font-size: $wbu-h1-font-size;
                 font-weight: 400;
-                margin-top: $wbu-margin;
-                margin-left: $wbu-margin * 4;
                 @include media-max(MD){
                     margin: 0;
                     font-size: $wbu-title-font-size;
-                    padding: $wbu-btn-padding-x-sm * 2; 
+                    padding: $wbu-btn-padding-x-sm; 
                     font-weight: 0;
                     font-style: normal;
                 }
@@ -35,14 +33,11 @@
 
             .input-el{
                 display: inline-block;
-                vertical-align: middle;
                 position: relative;
-                margin-left: $wbu-margin * 4;
-                margin-bottom: $wbu-margin;
                 padding-top: $wbu-margin;
                 border-radius: 0;
                 @include media-max(MD){
-                    padding: $wbu-btn-padding-x-sm * 2;
+                    padding: $wbu-btn-padding-x-sm;
                     padding-top: 0;
                 }
                 
@@ -57,7 +52,7 @@
                 }
                 input[type="tel"].tel-input{
                     &:hover{
-                        border: 0.1rem solid $wbu-color-secondary;
+                        border: 0.01rem solid $wbu-color-secondary;
                         //border-color: $wbu-color-secondary;
                         outline: 0;
                         cursor: auto 
@@ -79,49 +74,42 @@
                     }
                     
                 }
-                @include media-max(MD){
-                    margin: 0;
-                }
             }
 
         }
         .bloc-link{
             background-color: $wbu-color-secondary;
             color: $wbu-color-boder;
+            padding: $space_bottom;
+            @include media-max(MD){
+                padding: $space_inner_top;
+            }
             .text{
-                margin-left: $wbu-margin * 4;
                 display: block;
-                padding: $space_inner_top $space_inner_top 0 $space_inner_top;
                 .titled{
                     display: block;
-                    line-height: $wbu-h3-line-height;
-                    font-size: $wbu-h1-font-size;
+                    font-size: $wbu-titre-big;
                     font-weight: 400;
                     @include media-max(MD){
                         font-size: 1.7rem;
                     }
                 }
                 @include media-max(MD){
-                    margin: $wbu-margin 0 0 $wbu-margin;
-                    padding: 0 $wbu-btn-padding-x-sm 0 $wbu-btn-padding-x-sm;
-                    padding-left: 0;
+                    padding: $wbu-btn-padding-x-sm;
                 }
             }
             a{
                 color: $wbu-color-boder;
                 background: $wbu-color-secondary;
+                padding-top: $wbu-margin;
                 display: block;
                 text-decoration: none;
-                margin-left: $wbu-margin * 4;
-                padding: 0 $space_inner_top 0 $space_inner_top;
                 font-weight: bold;
                 &:hover{
                     color: $wbu-color-text;
                 }
                 @include media-max(MD){
-                    margin-left: $wbu-margin;
-                    padding-bottom: $wbu-btn-padding-x-sm;
-                    padding-left: 0;
+                    padding: $wbu-btn-padding-x-sm;
                     font-size: 1.2rem;
                     text-align: left;
                 }

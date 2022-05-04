@@ -102,7 +102,9 @@
     }
 
     .footer-two{
+        position: relative;
         bottom: 0;
+        margin-top: $wbu-margin;
         padding-top: $wbu-margin;
         padding-bottom: $wbu-margin;
         left: 0;

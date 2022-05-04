@@ -1,0 +1,21 @@
+@use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+
+.home-bottom-teaser{
+    .teaser-title{
+        font-size: $wbu-titre-big;
+        color: $wbu-background;
+        margin-top: $space-top;
+        font-weight: bolder;
+    }
+    .teaser-desc{
+        font-size: $wbu-titre-big-sm;
+        padding: $wbu-btn-padding-x-sm;
+    }
+    .teaser-note{
+        margin-top: $space_top;
+        font-size: $wbu-titre-big-sm;
+        justify-content: end;
+        
+    }
+}
