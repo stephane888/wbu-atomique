@@ -3,7 +3,8 @@
 
 .hero-section {
     position: relative;
-    border: 1px solid red;
+    width: 100%;
+    overflow: hidden;
     .row {
         .slider-item{
             display: block;
