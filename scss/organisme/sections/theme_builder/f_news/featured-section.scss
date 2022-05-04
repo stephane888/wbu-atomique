@@ -1,126 +1,107 @@
-@use "../wbu-atomique/scss/_variables.scss";
 @use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
 
-.featured-section-handler{
-    margin-top: $space-top;
-    overflow: hidden;
-    position: relative;
-    .section-title{
-        font-size: $wbu-h2-font-size;
-        color: $wbu-background;
-        text-align: center;
-    }
-    .section-sub-title{
-        text-align: center;
-        margin-top: $space-top * 0.1;
-        font-size: $wbu-title-font-size * 0.8;
-        color: $wbu-color-text;
-        font-weight: lighter;
-    }
-    .featured-cards-handler{
-        margin: 25px;
-        .element{
-            overflow: hidden;
-            margin-top: $space-top * 0.5;
-            .featured-single-card{
-                margin-left: $wbu-margin * -0.5;
-                .img-handler{
-                    
-                    
-                    .card-img{
-                        width: 410px;
-                        &:hover .img-sup{
-                            display: block;
-                        }
-                    }
-                    @media screen and (max-width: 1000px) {
-                        .card-img{
-                            width: 350px;
-                        }
-                    }
-                    @media screen and (max-width: 900px) {
-                        .card-img{
-                            width: 300px;
-                        }
-                    }
-                    @media screen and (max-width: 770px) {
-                        &{
-                            width: 100%;
-                            text-align: center;
-                            .card-img{
-                                width: 100%;
-                            }
-                        }
-                    }
-                    .img-sup{
-                        height: 74%;
-                        width: 100%;
-                        &::before{
-                            content: "";
-                            top: -100;
-                            height: 79%;
-                            opacity: 0.2;
-                            width: 100%;
-                            background: $wbu-color-secondary;
-                            display: none;
-                            position: absolute;
+.featured-section-handler {
+  padding: $space-top 0;
+  overflow: hidden;
+  position: relative;
+  .section-title {
+    font-size: $wbu-h3-font-size;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+  }
+  .section-sub-title {
+    text-align: center;
+    margin-bottom: $wbu-margin;
+    font-size: $wbu-p-font-size;
+    color: black;
+    font-weight: lighter;
+  }
+  .featured-cards-handler {
+    display: flex;
+    justify-content: space-around;
+    .element {
+      overflow: hidden;
+      padding-bottom: $wbu-margin * 1.8;
+      @include media-max(SM) {
+        padding-bottom: $wbu-margin * 1.5;
+      }
+      .featured-single-card {
+        .img-handler {
+          margin-bottom: $wbu-margin * 1.5;
+          position: relative;
+          .img-sup {
+            height: 100%;
+            width: 100%;
+            &::before {
+              content: "";
+              top: -1;
+              height: 100%;
+              opacity: 0;
+              width: 100%;
+              background: $wbu-color-primary;
 
-                        }
-                        &:hover::before{
-                            transition: cubic-bezier(0.19, 1, 0.22, 1);
-                            display: block;
-                        }
-                    }
-                }
-                .pub-info{
-                    font-size: $wbu-title-font-size * 0.6;
-                    margin-top: $space_inner_top * 0.3;
-                    color: $wbu-color-text;
-                    text-align: center;
-                }
-                .card-text-descriptor{
-                    text-decoration: none;
-                    font-size: $wbu-h3-font-size;
-                    font-weight: bolder;
-                    text-align: center;
-    
-                    a{
-                        color: $wbu-background;
-                        text-decoration: none;
-                        &:hover{
-                            transition: 0.5s;
-                            color: $wbu-color-teal;
-                        }
-                    }
-                }
-                .role{
-                    font-size: $wbu-title-font-size * 0.6;
-                    margin-top: $space_inner_top * 0.3;
-                    color: $wbu-color-text;
-                    text-align: center;
-                 }
+              transition: ease-in-out 0.3s;
+              position: absolute;
             }
-            @media screen and (max-width: 770px) {
-                &{
-                    margin-left: auto;
-                    margin-right: auto;
-                }
+            &:hover::before {
+              opacity: 0.5;
             }
+          }
         }
-    }
-    .more-link{
-        font-size: $wbu-h2-font-size * 0.55;
-        border-bottom: 0.15rem solid dodgerblue;
-        .link{
-            text-decoration: none;
+        .pub-info {
+          font-size: $wbu-default-font-size;
+          // padding: $wbu-margin;
+          color: $wbu-color-text;
+          text-align: center;
+          p {
+            margin: 0;
+          }
         }
+        .card-text-descriptor {
+          font-size: $wbu-h4-font-size;
+          font-weight: bold;
+          text-align: center;
+          padding: $wbu-margin 0;
+          @include media-max(MD) {
+            font-size: $wbu-h4-font-size * 0.8;
+          }
+          @include media-max(SM) {
+            font-size: $wbu-h4-font-size;
+          }
+          a {
+            color: black;
+            transition: ease 0.5s;
+          }
+          &:hover {
+            a {
+              text-decoration: none;
+
+              color: $wbu-color-secondary;
+            }
+          }
+        }
+        .role {
+          font-size: $wbu-default-font-size;
+          color: $wbu-color-text;
+          text-align: center;
+        }
+      }
     }
-    .img-teaser{
-        background: $wbu-border-color;
-        margin-left: auto;
-        margin-right: auto;
-        width: 65%;
-        font-size: $wbu-h1-font-size;
-        padding-bottom: $wbu-margin * 0.0;
+  }
+  .more-link {
+    font-size: $wbu-p-font-size;
+    font-weight: bold;
+    text-align: center;
+
+    margin: $wbu-margin * 2 auto;
+    a {
+      color: $wbu-color-secondary;
+      padding: 0.8rem;
+      border-bottom: 1px solid $wbu-color-secondary;
+      text-decoration: none;
     }
+  }
 }
