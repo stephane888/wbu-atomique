@@ -1,0 +1,83 @@
+@use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+
+
+.video-headlines-section-handler{
+    margin-top: $space-top;
+    padding-top: $wbu-btn-padding-y-sm;
+    padding-bottom: $wbu-btn-padding-y-sm;
+    background: $wbu-color-secondary;
+    .section-title{
+        .title{
+            color: $wbu-background;
+            font-weight: bolder;
+            font-size: $wbu-h1-font-size;
+            text-align: center;
+        }
+    }
+    .video-single-card{
+        margin-left: $wbu-margin * -0.5;
+        .video-handler{
+            position: relative;
+            .video-sup{
+                height: 100%;
+                width: 100%;
+                &::before{
+                    content: "";
+                    top: -1;
+                    height: 100%;
+                    opacity: 0.5;
+                    width: 100%;
+                    background: $wbu-background;
+                    display: none;
+                    position: absolute;
+    
+                }
+                &:hover::before{
+                    transition: cubic-bezier(0.19, 1, 0.22, 1);
+                    display: block;
+                }
+            }
+        }
+        .pub-info{
+            font-size: $wbu-title-font-size ;
+            margin-top: $wbu-margin ;
+            color: $wbu-color-text;
+        }
+        .card-text-descriptor{
+            text-decoration: none;
+            font-size: $wbu-h3-font-size;
+            
+
+            .link{
+                font-weight: bolder;
+                color: $wbu-background;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                    color: $wbu-color-teal;
+                }
+            }
+        }
+        .role{
+            font-size: $wbu-title-font-size ;
+            margin-top: $space_inner_top ;
+            color: $wbu-color-text;
+         }
+    }
+    @media screen and (max-width: 770px) {
+        &{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .more-link{
+        font-size: $wbu-h2-font-size-sm;
+        margin-top: $space-top;
+        
+        .link{
+            text-decoration: none;
+            border-bottom: 0.15rem solid dodgerblue;
+        }
+    }
+}
