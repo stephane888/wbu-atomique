@@ -14,16 +14,16 @@
                 content: "";
                 top: -1;
                 height: 100%;
-                opacity: 0.5;
+                opacity: 0;
                 width: 100%;
                 background: $wbu-color-secondary;
                 display: none;
                 position: absolute;
-
+                 transition: cubic-bezier(0.19, 1, 0.22, 1);
+                
             }
             &:hover::before{
-                transition: cubic-bezier(0.19, 1, 0.22, 1);
-                display: block;
+               opacity: 0.5;
             }
         }
     }
