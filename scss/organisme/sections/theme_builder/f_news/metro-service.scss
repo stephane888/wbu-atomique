@@ -38,11 +38,7 @@
         z-index: 0;
         transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
       }
-      &:hover {
-        &::before {
-        //  opacity: 0.5;
-        }
-      }
+      
     }
     &__body {
       text-align: center;
