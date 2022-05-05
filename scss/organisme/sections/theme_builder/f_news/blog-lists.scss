@@ -55,6 +55,9 @@
       color: $wbu-color-secondary;
       font-size: $wbu-h4-font-size * 1.2;
       font-weight: bold;
+      @include media-max(XS) {
+          font-size:$wbu-h4-font-size ;
+      }
     }
   }
   .pub-info {
@@ -68,6 +71,7 @@
     color: black;
   }
   .details {
+      flex-wrap:wrap;
     .read-more-btn {
       color: $wbu-color-secondary;
       font-size: $wbu-p-font-size;
@@ -78,6 +82,7 @@
       position: relative;
       // border-bottom: 2px solid $wbu-color-secondary;
       transition: all 0.5s;
+      margin-bottom: 1rem;
       &::after {
         content: "";
         width: 100%;
