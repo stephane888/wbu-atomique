@@ -1,0 +1,62 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+
+.member-section-handler{
+    margin-top: $space_inner_top;
+    .single-member-card{
+        margin-bottom: $space_bottom;
+        .lutin {
+            position: relative;
+            .img-link{
+              
+                .__img{
+                   border-radius: 100%; 
+                   height: 360px;
+                }
+                &::before{
+                    content: "";
+                    top: 0;
+                    height: 100%;
+                    opacity: 0;
+                    width: 103%;
+                    border-radius: 100%; 
+                    background: $wbu-color-primary;
+                    position: absolute;
+                    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    
+                }
+                &:hover::before{
+                   opacity: 0.5;
+                }
+            }
+        }
+        .member-role{
+            font-size: $wbu-h6-font-size;
+        }
+        .member-name{
+
+            .name{
+                color: $wbu-brand-color;
+                font-weight: $wbu-title-font-weight;
+                font-size: $wbu-h4-font-size;
+                text-decoration: none;
+                &:hover{
+                    color: $wbu-color-secondary;
+                }
+            }
+        }
+        .social-links{
+
+            .icon{
+                margin-left: $wbu-margin * 0.5;
+                .__svg{
+                    color: $wbu-color-secondary;
+                    &:hover{
+                        width: 22.5;
+                    }
+                }
+            }
+        }
+    }
+}
