@@ -2,9 +2,13 @@
 @use "../../../../atome/typography/default";
 @use "./variables.scss" as *;
 .tag-list-fnews {
-  gap: 1rem;
+  padding: $wbu-margin;
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
   .tag-btn {
-    margin: $wbu-margin 0;
     margin-right: 1rem;
     .link-btn {
       padding: $wbu-margin * 0.5 $wbu-margin * 1.2;
