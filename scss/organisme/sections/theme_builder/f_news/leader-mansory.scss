@@ -1,0 +1,86 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+
+.leader-mansory-handler {
+  margin-top: $space_inner_top;
+  .single-mansory-card {
+    margin-bottom: $wbu-margin * 3;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    //position: relative;
+    &:hover {
+      .smc-body {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    .img-link {
+      position: relative;
+      display: inline-block;
+      .__img {
+        width: 100%;
+      }
+      &::before {
+        content: "";
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        width: 100%;
+        left: 0;
+        background: $wbu-color-primary;
+        position: absolute;
+        transition: ease-in-out 0.2s;
+        z-index: 1;
+      }
+      &:hover::before {
+        opacity: 0.5;
+      }
+    }
+
+    .member-role {
+      font-size: $wbu-p-font-size;
+      color: $wbu-color-text;
+      color: white;
+      text-align: right;
+    }
+    .member-name {
+      .name {
+        color: $wbu-brand-color;
+        font-weight: $wbu-title-font-weight;
+        font-size: $wbu-h3-font-size * 0.8;
+        text-decoration: none;
+        transition: ease 0.3s;
+        color: white;
+        text-align: right;
+        @include media-max(XX) {
+          font-size: $wbu-h4-font-size;
+        }
+      }
+    }
+    .smc-body {
+      position: absolute;
+      bottom: 10rem;
+      right: 4rem;
+      padding-bottom: 1rem;
+      z-index: 0;
+      &::after {
+        content: "";
+        border-radius: 8px;
+        // border-bottom: 4px solid $wbu-color-primary;
+        width: 0;
+        height: 4.5px;
+        position: absolute;
+        background-color: $wbu-color-primary;
+        bottom: 0;
+        transition: ease-in 0.15s;
+      }
+      @include media-max(XX) {
+        right: 2rem;
+      }
+    }
+  }
+}

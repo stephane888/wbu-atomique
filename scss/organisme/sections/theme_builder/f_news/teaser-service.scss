@@ -1,11 +1,10 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../atome/plumbing/pl-btn.scss";
 @use "./variables.scss" as *;
 .teaser-service-fnews {
   .teaser-service {
-    margin-bottom: $wbu-margin * 1.5;
+    margin-bottom: $wbu-margin * 1.8;
     .date-show {
-      padding: $wbu-margin *0.5 $wbu-margin *0.7 ;
+      padding: $wbu-margin * 0.5 $wbu-margin * 0.7;
       // width: 11rem;
       // height: ;
       position: absolute;
@@ -21,18 +20,18 @@
         font-size: $wbu-h4-font-size;
         color: black;
         font-weight: bold;
-        line-height:1;        @include media-max(XS)
-         {
-          font-size: $wbu-h3-font-size*0.8;
-         }
+        line-height: 1;
+        @include media-max(XS) {
+          font-size: $wbu-h3-font-size * 0.8;
+        }
       }
       &__date {
         display: block;
         font-size: $wbu-h6-font-size;
         color: black;
-        @include media-max(XS){
-          font-size: $wbu-h5-font-size*0.8;
-         }
+        @include media-max(XS) {
+          font-size: $wbu-h5-font-size * 0.8;
+        }
       }
     }
     &__img {
@@ -91,13 +90,19 @@
         font-weight: bold;
         color: black;
         transition: ease-in-out 0.3s;
-        margin-bottom: $wbu-margin;
+        margin-bottom: $wbu-margin * 0.8;
         display: inline-block;
         cursor: pointer;
         &:hover {
           color: $wbu-color-secondary;
           text-decoration: none;
         }
+      }
+      .node-price {
+        color: $wbu-color-text;
+        font-weight: bold;
+        font-size: $wbu-p-font-size * 1.1;
+        padding-bottom: $wbu-margin;
       }
     }
   }
@@ -110,7 +115,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
+    line-height: 1;
     position: relative;
     width: 15.8rem;
     height: 5.2rem;
@@ -119,17 +124,17 @@
         content: "";
         position: relative;
         width: 0;
-       
+
         height: 2rem;
         top: -2px;
         display: inline-block;
-opacity: 0;
-         transform: translateX(8px);
+        opacity: 0;
+        transform: translateX(8px);
         transition: ease-in-out 0.2s;
         @include wbu__angle-right(black, 15);
       }
     }
-    
+
     &:hover {
       text-decoration: none;
       .btn-angle-right::after {
