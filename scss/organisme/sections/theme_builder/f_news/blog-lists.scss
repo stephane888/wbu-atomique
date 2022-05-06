@@ -20,7 +20,7 @@
       //   width: 100%;
       display: block;
       .date-show {
-        padding: $wbu-margin *0.5 $wbu-margin *0.7 ;
+        padding: $wbu-margin * 0.5 $wbu-margin * 0.7;
         // width: 11rem;
         // height: ;
         position: absolute;
@@ -37,18 +37,18 @@
           font-size: $wbu-h4-font-size;
           color: black;
           font-weight: bold;
-          line-height:1;        @include media-max(XS)
-           {
-            font-size: $wbu-h3-font-size*0.8;
-           }
+          line-height: 1;
+          @include media-max(XS) {
+            font-size: $wbu-h3-font-size * 0.8;
+          }
         }
         &__date {
           display: block;
           font-size: $wbu-h6-font-size;
           color: black;
-          @include media-max(XS){
-            font-size: $wbu-h5-font-size*0.8;
-           }
+          @include media-max(XS) {
+            font-size: $wbu-h5-font-size * 0.8;
+          }
         }
       }
       &::before {
@@ -84,14 +84,14 @@
       }
     }
     &-black {
-      background-color: #4d4d4d;
+      background-color: $wbu-color-text;
       .link-btn {
-        border: 1px solid #4d4d4d;
+        border: 1px solid $wbu-color-text;
         color: white;
         cursor: text;
         &:hover {
-          background-color: #4d4d4d;
-          border: 1px solid #4d4d4d;
+          background-color: $wbu-color-text;
+          border: 1px solid $wbu-color-text;
         }
       }
     }
@@ -103,7 +103,7 @@
       font-size: $wbu-h4-font-size * 1.2;
       font-weight: bold;
       @include media-max(XS) {
-          font-size:$wbu-h4-font-size ;
+        font-size: $wbu-h4-font-size;
       }
     }
   }
@@ -118,7 +118,7 @@
     color: black;
   }
   .details {
-      flex-wrap:wrap;
+    flex-wrap: wrap;
     .read-more-btn {
       color: $wbu-color-secondary;
       font-size: $wbu-p-font-size;
