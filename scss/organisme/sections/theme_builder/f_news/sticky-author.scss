@@ -1,0 +1,146 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+.sticky-author-fnews {
+  max-width: 21rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  text-align: center;
+  padding: 0 $wbu-margin * 0.8 $wbu-margin;
+
+  .saf-author {
+    //margin-bottom: $wbu-margin;
+    &__img {
+      width: 6.5rem;
+      height: 6.5rem;
+      border-radius: 50%;
+      margin-bottom: $wbu-margin;
+    }
+    &__title {
+      font-weight: bold;
+      font-size: $wbu-p-font-size;
+      color: black;
+      font-weight: bold;
+      .author-by {
+        display: none;
+      }
+    }
+  }
+  .saf-desc {
+    //margin-bottom: $wbu-margin;
+    & > * {
+      display: block;
+    }
+    &__desc {
+      font-size: $wbu-h6-font-size;
+      color: $wbu-color-text;
+    }
+    &__title {
+      font-size: $wbu-p-font-size;
+      color: black;
+    }
+  }
+  .saf-btn {
+    &__btn {
+      display: block;
+      font-size: $wbu-p-font-size;
+      color: $wbu-color-secondary;
+      border: none;
+      background-color: transparent;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+  .saf-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: $wbu-margin * 0.2 0 $wbu-margin * 0.8;
+    gap: 1rem;
+    &__btn {
+      border: 1px solid black;
+      width: 8rem;
+      height: 8rem;
+      background-color: transparent;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      @include media-max(MD) {
+        width: 6.5rem;
+        height: 6.5rem;
+      }
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: black;
+        transition: 0.3s;
+      }
+      &:hover {
+        border-color: $wbu-color-primary;
+        svg {
+          fill: $wbu-color-primary;
+        }
+      }
+    }
+  }
+}
+@include media-max(SM) {
+  .sticky-author-fnews {
+    padding: $wbu-margin $wbu-margin $wbu-margin * 0.5;
+    //flex-direction: row;
+    gap: 0;
+    .saf-author {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      margin-bottom: $wbu-margin;
+      &__img {
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 0;
+      }
+      &__title {
+        font-size: $wbu-h6-font-size;
+        font-weight: 400;
+        .author-by {
+          display: inline;
+        }
+      }
+    }
+    .saf-desc {
+      display: none;
+    }
+    .saf-btn {
+      display: none;
+    }
+    .saf-social {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 0;
+      &__btn {
+        width: 2rem;
+        height: 2rem;
+        border: none;
+        transition: 0.3s;
+        svg {
+          transition: 0.3s;
+          width: 1.8rem;
+          height: 1.8rem;
+          fill: $wbu-color-secondary;
+        }
+        &:hover {
+          svg {
+            fill: $wbu-color-secondary;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

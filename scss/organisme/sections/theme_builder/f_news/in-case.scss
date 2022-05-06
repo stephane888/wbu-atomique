@@ -99,7 +99,7 @@
       color: white;
       z-index: 5;
       opacity: 0;
-      transition: ease-in-out 0.3s;
+      transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
       @include media-max(SM) {
         left: 5%;
       }

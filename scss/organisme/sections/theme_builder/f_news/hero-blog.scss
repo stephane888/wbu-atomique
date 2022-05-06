@@ -32,7 +32,7 @@
         font-size: $wbu-default-font-size * 0.9;
       }
       a {
-        color: white;
+        color: $wbu-color-primary;
       }
       &::after {
         content: "";
@@ -43,16 +43,80 @@
         top: calc(50% - 2.5px);
         right: -2.5px;
       }
-      &--active {
-        a {
-          color: $wbu-color-primary;
-        }
-      }
+
       &:first-child {
         padding-left: 0;
       }
       &:last-child {
         //padding-left: 0;
+        a {
+          color: white;
+          cursor: text;
+          pointer-events: none;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  .hbf-tag {
+    margin: 0;
+    padding: 0;
+    margin-top: $wbu-margin;
+    list-style: none;
+    display: flex;
+    &__item {
+      display: inline-block;
+      padding: 0.5rem 2rem;
+      position: relative;
+      text-transform: capitalize;
+      font-size: $wbu-h6-font-size;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include media-max(SM) {
+        font-size: $wbu-h6-font-size * 0.8;
+      }
+      a {
+        color: $wbu-color-primary;
+      }
+      &::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        top: calc(50% - 2.5px);
+        right: -2.5px;
+      }
+
+      &:first-child {
+        padding-left: 0;
+        &::before {
+          content: "";
+          width: 2rem;
+          height: 2rem;
+          //background-color: white;
+          position: relative;
+          margin-right: 0.8rem;
+          left: 0;
+          @include wbu-tags($wbu-color-primary, 20);
+        }
+      }
+      &:last-child {
+        //padding-left: 0;
+        a {
+          color: white;
+          pointer-events: none;
+          cursor: text;
+          &:hover {
+            text-decoration: none;
+          }
+        }
         &::after {
           display: none;
         }
