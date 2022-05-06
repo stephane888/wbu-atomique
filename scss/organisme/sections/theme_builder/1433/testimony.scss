@@ -1,0 +1,50 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+
+.testimony-section-handler {
+  .single-card-testimony {
+      margin-top: $space_inner_top;
+    .testimony {
+      font-size: $wbu-h1-font-size-sm;
+      color: $wbu-brand-color;
+    }
+    .testimony-info {
+      margin-top: $wbu-margin * 0.5;
+      .img-profiles {
+            position: relative;
+            .img-link{
+                .__img{
+                   border-radius: 100%; 
+                }
+                &::before{
+                    content: "";
+                    top: -1;
+                    height: 100%;
+                    opacity: 0;
+                    width: 100%;
+                    border-radius: 100%; 
+                    background: $wbu-color-primary;
+                    position: absolute;
+                    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    
+                }
+                &:hover::before{
+                   opacity: 0.5;
+                }
+            }
+        
+      }
+      .info {
+        margin-left: $wbu-margin;
+        .name-link {
+          color: $wbu-color-secondary;
+          font-weight: $wbu-title-font-weight;
+        }
+        .role {
+          font-size: $wbu-h1-font-size-sm;
+        }
+      }
+    }
+  }
+}
