@@ -4,6 +4,38 @@
 .first-service-fnews {
   padding: $space_top 0;
   .first-service {
+    .date-show {
+      padding: $wbu-margin *0.5 $wbu-margin *0.7 ;
+      // width: 11rem;
+      // height: ;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 0;
+      &__day {
+        display: block;
+        font-size: $wbu-h3-font-size*1.2;
+        color: black;
+        font-weight: bold;
+        line-height:1;        @include media-max(XS)
+         {
+          font-size: $wbu-h3-font-size*0.8;
+         }
+      }
+      &__date {
+        display: block;
+        font-size: $wbu-h5-font-size*1.2;
+        color: black;
+        @include media-max(XS){
+          font-size: $wbu-h5-font-size;
+         }
+      }
+    }
       &__img {
         width: 100%;
         position: relative;
@@ -25,6 +57,7 @@
           top: 0;
           left: 0;
           position: absolute;
+          z-index: 1;
           transition:cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
         }
         &:hover {
@@ -36,17 +69,20 @@
       &__body { 
       .head-nav {
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         font-size: $wbu-default-font-size*0.9;
 align-items: center;
+margin: 0;
+        padding: 0;
+        list-style: none;
         margin-bottom: $wbu-margin;
         text-transform: capitalize;
         .promoted-label {
-          padding: 0.4rem 0.8rem 0.3rem;
+          padding: 0.4rem 0.8rem ;
           background: black ;
           color:  white;
           display: inline-flex;
-          //padding-right: 1.5rem;
+          margin-right: 1rem;
         }
         .link-label {
           color: $wbu-color-text;

@@ -19,14 +19,47 @@
       //   height: 100%;
       //   width: 100%;
       display: block;
+      .date-show {
+        padding: $wbu-margin *0.5 $wbu-margin *0.7 ;
+        // width: 11rem;
+        // height: ;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &__day {
+          display: block;
+          font-size: $wbu-h4-font-size;
+          color: black;
+          font-weight: bold;
+          line-height:1;        @include media-max(XS)
+           {
+            font-size: $wbu-h3-font-size*0.8;
+           }
+        }
+        &__date {
+          display: block;
+          font-size: $wbu-h6-font-size;
+          color: black;
+          @include media-max(XS){
+            font-size: $wbu-h5-font-size*0.8;
+           }
+        }
+      }
       &::before {
         content: "";
-        top: -1;
+        top: 0;
         height: 100%;
         opacity: 0;
         width: 100%;
         background: $wbu-color-primary;
         position: absolute;
+        z-index: 1;
         transition: cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
       }
       &:hover::before {
@@ -36,6 +69,7 @@
   }
   .blog-btn {
     margin: $wbu-margin * 1.6 0 $wbu-margin * 1;
+    margin-right: 1rem;
     .link-btn {
       padding: $wbu-margin * 0.5 $wbu-margin * 1.2;
       border: 1px solid $wbu-color-secondary;
@@ -43,9 +77,22 @@
       text-decoration: none;
       transition: 0.5s;
       display: inline-block;
+      text-transform: capitalize;
       &:hover {
         background: $wbu-color-secondary;
         color: white;
+      }
+    }
+    &-black {
+      background-color: #4d4d4d;
+      .link-btn {
+        border: 1px solid #4d4d4d;
+        color: white;
+        cursor: text;
+        &:hover {
+          background-color: #4d4d4d;
+          border: 1px solid #4d4d4d;
+        }
       }
     }
   }
@@ -103,6 +150,15 @@
     .log-link {
       color: $wbu-color-secondary;
       margin-right: $wbu-margin * 0.2;
+      &:hover {
+        text-decoration: none;
+        color: $wbu-color-text;
+      }
+    }
+    .link-comment {
+      color: $wbu-color-secondary;
+      margin-right: $wbu-margin * 0.2;
+      font-size: $wbu-p-font-size;
       &:hover {
         text-decoration: none;
         color: $wbu-color-text;

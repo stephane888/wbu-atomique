@@ -12,6 +12,10 @@
         .head-nav {
           opacity: 1;
         }
+        .node-date {
+          opacity: 1;
+          height: 2rem;
+        }
       }
     }
     &__img {
@@ -30,7 +34,7 @@
         content: "";
         width: 100%;
         height: 100%;
-        background-color:black;
+        background-color: black;
         opacity: 0.3;
         top: 0;
         left: 0;
@@ -38,34 +42,30 @@
         z-index: 0;
         transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
       }
-      
     }
     &__body {
-      text-align: center;
+      // text-align: center;
       position: absolute;
       bottom: -5%;
 
       padding: $wbu-margin;
-      transition: ease-in-out 0.3s;
+      transition: all ease-in-out 0.3s;
       .head-nav {
         display: flex;
-        gap: 2rem;
-        justify-content: center;
-        font-size: $wbu-p-font-size *1.1;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: start;
+        font-size: $wbu-p-font-size * 1.1;
         align-items: center;
-        margin-bottom: $wbu-margin;
+        padding: 0;
+        list-style: none;
         text-transform: capitalize;
         opacity: 0;
-        transition: ease 0.3s;
-        .link-label {
-          color: rgba(255, 255, 255, 0.575);
-          position: relative;
-          font-weight: bold;
-          display: flex;
-          align-items: center;
+        transition: ease 0.4s;
+        li {
           &:first-child {
             padding-left: 0;
-            &::before {
+            & > a::before {
               content: "";
               width: 2rem;
               height: 2rem;
@@ -74,34 +74,50 @@
               margin-right: 0.8rem;
               display: inline-block;
               left: 0;
-              @include wbu-tags(rgba(255, 255, 255, 0.719), 17);
+              @include wbu-tags(rgba(255, 255, 255, 0.897), 17);
             }
           }
+        }
+        .link-label {
+          color: rgba(255, 255, 255, 0.726);
+          position: relative;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+
           &:hover {
-           text-decoration: none;
+            text-decoration: none;
             opacity: 1;
-            color: rgba(255, 255, 255, 0.719);
+            color: rgba(255, 255, 255, 0.897);
             border-color: $wbu-color-text;
           }
         }
       }
+      .node-date {
+        font-size: $wbu-h6-font-size;
+        color: rgba(255, 255, 255, 0.726);
+        opacity: 0;
+        transition: ease 0.3s;
+        overflow: hidden;
+        height: 0;
+        &:hover {
+          text-decoration: none;
+        }
+      }
       .node-title {
-        font-size: $wbu-h4-font-size;
+        font-size: $wbu-h4-font-size * 1.1;
         font-weight: bold;
         color: white;
         transition: ease-in-out 0.3s;
-        margin-bottom: $wbu-margin *0.7;
+        margin-bottom: $wbu-margin * 0.7;
         display: inline-block;
         cursor: pointer;
         text-transform: capitalize;
-       
         &:hover {
           color: white;
           text-decoration: none;
         }
       }
-    
     }
   }
-
 }

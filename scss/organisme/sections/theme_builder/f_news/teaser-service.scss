@@ -4,6 +4,37 @@
 .teaser-service-fnews {
   .teaser-service {
     margin-bottom: $wbu-margin * 1.5;
+    .date-show {
+      padding: $wbu-margin *0.5 $wbu-margin *0.7 ;
+      // width: 11rem;
+      // height: ;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &__day {
+        display: block;
+        font-size: $wbu-h4-font-size;
+        color: black;
+        font-weight: bold;
+        line-height:1;        @include media-max(XS)
+         {
+          font-size: $wbu-h3-font-size*0.8;
+         }
+      }
+      &__date {
+        display: block;
+        font-size: $wbu-h6-font-size;
+        color: black;
+        @include media-max(XS){
+          font-size: $wbu-h5-font-size*0.8;
+         }
+      }
+    }
     &__img {
       width: 100%;
       position: relative;
@@ -25,6 +56,7 @@
         top: 0;
         left: 0;
         position: absolute;
+        z-index: 1;
         transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
       }
       &:hover {
@@ -41,6 +73,9 @@
         justify-content: center;
         font-size: $wbu-h6-font-size;
         align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
         margin-bottom: $wbu-margin;
         text-transform: capitalize;
         .link-label {
