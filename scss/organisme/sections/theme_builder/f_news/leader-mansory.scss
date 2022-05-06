@@ -48,6 +48,8 @@
       text-align: right;
     }
     .member-name {
+      display: flex;
+      align-items: center;
       .name {
         color: $wbu-brand-color;
         font-weight: $wbu-title-font-weight;
@@ -56,8 +58,19 @@
         transition: ease 0.3s;
         color: white;
         text-align: right;
+        display: flex;
+        align-items: center;
         @include media-max(XX) {
           font-size: $wbu-h4-font-size;
+        }
+        &::after {
+          position: relative;
+          content: "";
+          width: 2rem;
+          height: 2rem;
+          top: 1px;
+          margin-left: 1rem;
+          @include wbu__angle-right(white, 18);
         }
       }
     }
