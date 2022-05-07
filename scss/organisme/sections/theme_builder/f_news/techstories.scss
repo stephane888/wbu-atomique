@@ -9,6 +9,9 @@
     color: black;
     padding-bottom: $wbu-margin * 3;
     text-transform: capitalize;
+    @include media-max(XX) {
+      font-size: $wbu-h4-font-size;
+    }
   }
   .stories-handler {
     display: flex;

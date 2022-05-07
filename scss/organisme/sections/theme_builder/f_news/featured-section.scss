@@ -11,6 +11,9 @@
     color: black;
     text-align: center;
     font-weight: bold;
+    @include media-max(XX) {
+      font-size: $wbu-h4-font-size;
+    }
   }
   .section-sub-title {
     text-align: center;
@@ -18,6 +21,9 @@
     font-size: $wbu-p-font-size;
     color: black;
     font-weight: lighter;
+    @include media-max(XX) {
+      font-size: $wbu-h6-font-size;
+    }
   }
   .featured-cards-handler {
     display: flex;
@@ -97,11 +103,28 @@
     text-align: center;
 
     margin: $wbu-margin * 2 auto;
-    a {
+    .link {
       color: $wbu-color-secondary;
       padding: 0.8rem;
-      border-bottom: 1px solid $wbu-color-secondary;
+      //border-bottom: 1px solid $wbu-color-secondary;
       text-decoration: none;
+      position: relative;
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $wbu-color-secondary;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+      }
+      &:hover {
+        &::after {
+          left: -5px;
+          width: 114%;
+        }
+      }
     }
   }
 }

@@ -8,14 +8,17 @@
     margin-bottom: $wbu-margin * 1.5;
     &:hover {
       .metro-service__body {
-        bottom: 10%;
+        transform:translateY(-20%) ;
         .head-nav {
           opacity: 1;
+          max-height: 5rem;
+          margin-bottom: 1rem;
         }
         .node-date {
           opacity: 1;
           height: 2rem;
         }
+        
       }
     }
     &__img {
@@ -46,10 +49,11 @@
     &__body {
       // text-align: center;
       position: absolute;
-      bottom: -5%;
+      bottom: 5%;
 
       padding: $wbu-margin;
-      transition: all ease-in-out 0.3s;
+      transition: all ease-in-out 0.5s;
+      transform: translateY(0);
       .head-nav {
         display: flex;
         flex-wrap: wrap;
@@ -62,6 +66,9 @@
         text-transform: capitalize;
         opacity: 0;
         transition: ease 0.4s;
+        max-height: 0;
+        overflow: hidden;
+        margin: 0;
         li {
           &:first-child {
             padding-left: 0;
@@ -109,14 +116,53 @@
         font-weight: bold;
         color: white;
         transition: ease-in-out 0.3s;
-        margin-bottom: $wbu-margin * 0.7;
+        margin-bottom: $wbu-margin * 0.5;
         display: inline-block;
+        line-height: 1;
         cursor: pointer;
         text-transform: capitalize;
         &:hover {
           color: white;
           text-decoration: none;
         }
+      }
+    }
+  }
+  .load-more-button {
+    margin: $wbu-margin 0;
+    background-color: $wbu-color-primary;
+    font-size: $wbu-default-font-size;
+    color: black;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    position: relative;
+    width: 15.8rem;
+    height: 4.9rem;
+    .btn-angle-right {
+      &::after {
+        content: "";
+        position: relative;
+        width: 0;
+
+        height: 2rem;
+        top: 0;
+        display: inline-block;
+        opacity: 0;
+        transform: translateX(8px);
+        transition: ease-in-out 0.2s;
+        @include wbu__angle-right(black, 15);
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      .btn-angle-right::after {
+        position: relative;
+        opacity: 1;
+        width: 2rem;
       }
     }
   }

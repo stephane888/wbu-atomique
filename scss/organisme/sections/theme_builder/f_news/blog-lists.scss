@@ -67,8 +67,15 @@
       }
     }
   }
+  .node-price {
+    color: $wbu-color-text;
+    font-weight: bold;
+    font-size: $wbu-p-font-size;
+    padding: $wbu-margin;
+    padding-right: 0;
+  }
   .blog-btn {
-    margin: $wbu-margin * 1.6 0 $wbu-margin * 1;
+    margin: $wbu-margin * 0.6 0 0.5rem;
     margin-right: 1rem;
     .link-btn {
       padding: $wbu-margin * 0.5 $wbu-margin * 1.2;

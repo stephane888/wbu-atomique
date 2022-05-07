@@ -1,8 +1,9 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "./variables.scss" as *;
 .teaser-service-fnews {
+  padding: $space_top 0;
   .teaser-service {
-    margin-bottom: $wbu-margin * 1.8;
+    padding-bottom: $wbu-margin * 1.8;
     .date-show {
       padding: $wbu-margin * 0.5 $wbu-margin * 0.7;
       // width: 11rem;
@@ -32,6 +33,29 @@
         @include media-max(XS) {
           font-size: $wbu-h5-font-size * 0.8;
         }
+      }
+    }
+    .tag-show {
+      width: 100%;
+      // height: ;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      @include media-max(XX) {
+        justify-content: start;
+      }
+      &__tag {
+        padding: $wbu-margin * 0.4 $wbu-margin * 0.75;
+        display: inline-block;
+        font-size: $wbu-default-font-size * 0.8;
+        text-transform: uppercase;
+        background-color: #ffffff;
+        color: $wbu-color-text;
       }
     }
     &__img {
@@ -109,7 +133,7 @@
   .load-more-button {
     margin: $wbu-margin 0;
     background-color: $wbu-color-primary;
-    font-size: $wbu-h6-font-size;
+    font-size: $wbu-default-font-size;
     color: black;
     text-transform: uppercase;
     display: inline-flex;
@@ -118,7 +142,7 @@
     line-height: 1;
     position: relative;
     width: 15.8rem;
-    height: 5.2rem;
+    height: 4.9rem;
     .btn-angle-right {
       &::after {
         content: "";
@@ -126,7 +150,7 @@
         width: 0;
 
         height: 2rem;
-        top: -2px;
+        top: 0;
         display: inline-block;
         opacity: 0;
         transform: translateX(8px);
