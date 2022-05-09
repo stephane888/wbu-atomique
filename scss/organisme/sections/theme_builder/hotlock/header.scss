@@ -1,5 +1,6 @@
-@use "../wbu-atomique/scss/_variables.scss";
-@use "..//wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use  "../../../../_variables.scss";
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
 
 .header-section-handler{
     overflow: hidden;
@@ -39,10 +40,7 @@
                 text-align: center;
                 font-weight: bold;
                 margin-top: $space-top * 0.3;
-                padding-top: $wbu-btn-padding-y-sm * 0.2 ;
-                padding-bottom: $wbu-btn-padding-y-sm * 0.2 ;
-                padding-left: $wbu-btn-padding-x-sm * 0.5 ;
-                padding-right: $wbu-btn-padding-x-sm * 0.5 ;
+                padding: $wbu-btn-padding-y-sm * 0.5 ;
                 position: relative;
                 &:hover{
                     
@@ -74,7 +72,7 @@
                 }
                 .link{
                     color: $wbu-background;
-                    font-size: $wbu-title-font-size-sm * 0.6 ;
+                    font-size: $wbu-title-font-size-sm  ;
                     text-decoration: none;
                     font-weight: 400;
                     position: relative;
@@ -171,24 +169,33 @@
           background: url("https://www.francetvinfo.fr/pictures/irhmQ_SrzAInupT6b6aEeZjZXOA/1200x1200/2016/12/27/phpkDRkQh_1.jpg");
           background-size: cover;
           height: 100%;
+          width: 100%;
+          position: absolute;
           background-position: center center ;
           background-repeat: no-repeat;
           
           .description{
-            float: right;
-            margin-right: $space-top;
-            margin-top: $space_top * 2;
+            margin-left: auto;
+            margin-right: $space-bottom;
+            margin-top: $space-bottom * 2;
             width: 35%;
             text-align: center;
+            @include media-max(SM) {
+                margin-left: auto;
+                margin-right: auto;
+              }
+              @include media-max(XS) {
+                margin-left: auto;
+                margin-right: auto;
+              }
           .title{
-              font-size: $wbu-h2-font-size * 0.7;
-              font-weight: lighter;
+              font-size: $wbu-h2-font-size;
+              font-weight: 100 !important;
               margin-bottom: $wbu-margin;
               color: $wbu-background;
           }
           .sub-title{
-              font-size: $wbu-h1-font-size;
-              font-weight: bold;
+              font-size: $wbu-titre-big;
               color: $wbu-border-color;
           }
           .btn-desc{
@@ -199,13 +206,13 @@
               margin-right: auto;
               margin-left: auto;
               margin-top: $space-top;
-              padding: $wbu-btn-padding-x-sm;
+              padding: $wbu-btn-padding-y-sm * 0.6;
               position: relative;
+            
               &:hover{
                   
                   .link{
                       z-index: 1;
-                      transition: all 0.5s;
                       color: $wbu-background;
                   }
               }
@@ -231,11 +238,11 @@
               }
               .link{
                   color: $wbu-border-color;
-                  font-size: $wbu-title-font-size-sm * 0.6 ;
+                  font-size: $wbu-default-font-size ;
                   text-decoration: none;
                   font-weight: 400;
                   position: relative;
-                  
+                  transition: all 0.5s;
                   
               }
           }
@@ -245,23 +252,31 @@
           background: url("https://static.cotemaison.fr/medias_11915/w_640,c_fill,g_north/porte-dentree-une-selection-de-poignees-stylees-6_6100848.jpg");
           background-size: cover;
           height: 100%;
+          position: absolute;
           width: 100%;
           background-repeat: no-repeat;
           .description{
-            float: right;
-            margin-right: $space-top;
-            margin-top: $space_top * 2;
+            margin-left: auto;
+            margin-right: $space-bottom;
+            margin-top: $space-bottom * 2;
             width: 35%;
             text-align: center;
+            @include media-max(SM) {
+                margin-left: auto;
+                margin-right: auto;
+              }
+              @include media-max(XS) {
+                margin-left: auto;
+                margin-right: auto;
+              }
           .title{
-              font-size: $wbu-h2-font-size * 0.7;
-              font-weight: lighter;
+              font-size: $wbu-h2-font-size;
+              font-weight: 100 !important;
               margin-bottom: $wbu-margin;
               color: $wbu-background;
           }
           .sub-title{
-              font-size: $wbu-h1-font-size;
-              font-weight: bold;
+              font-size: $wbu-titre-big;
               color: $wbu-border-color;
           }
           .btn-desc{
@@ -272,13 +287,13 @@
               margin-right: auto;
               margin-left: auto;
               margin-top: $space-top;
-              padding: $wbu-btn-padding-x-sm;
+              padding: $wbu-btn-padding-y-sm * 0.6;
               position: relative;
+            
               &:hover{
                   
                   .link{
                       z-index: 1;
-                      transition: all 0.5s;
                       color: $wbu-background;
                   }
               }
@@ -304,11 +319,11 @@
               }
               .link{
                   color: $wbu-border-color;
-                  font-size: $wbu-title-font-size-sm * 0.6 ;
+                  font-size: $wbu-default-font-size ;
                   text-decoration: none;
                   font-weight: 400;
                   position: relative;
-                  
+                  transition: all 0.5s;
                   
               }
           }
@@ -318,23 +333,32 @@
           background: url("https://www.ul.com/sites/g/files/qbfpbp251/files/styles/hero_boxed_width/public/2020-04/BLST_081_Access_Control_webinars-v2business-door-entry-fb-event-image_2400x1600_0.jpg?itok=Haky9-uB");
           width: 100%;
           height: 100%;
+          position: absolute;
+          height: 100%;
           background-position: center center;
 
           .description{
-            float: right;
-            margin-right: $space-top;
-            margin-top: $space_top * 2;
+            margin-left: auto;
+            margin-right: $space-bottom;
+            margin-top: $space-bottom * 2;
             width: 35%;
             text-align: center;
+            @include media-max(SM) {
+                margin-left: auto;
+                margin-right: auto;
+              }
+              @include media-max(XS) {
+                margin-left: auto;
+                margin-right: auto;
+              }
           .title{
-              font-size: $wbu-h2-font-size * 0.7;
-              font-weight: lighter;
+              font-size: $wbu-h2-font-size;
+              font-weight: 100 !important;
               margin-bottom: $wbu-margin;
               color: $wbu-background;
           }
           .sub-title{
-              font-size: $wbu-h1-font-size;
-              font-weight: bold;
+              font-size: $wbu-titre-big;
               color: $wbu-border-color;
           }
           .btn-desc{
@@ -345,13 +369,13 @@
               margin-right: auto;
               margin-left: auto;
               margin-top: $space-top;
-              padding: $wbu-btn-padding-x-sm;
+              padding: $wbu-btn-padding-y-sm * 0.6;
               position: relative;
+            
               &:hover{
                   
                   .link{
                       z-index: 1;
-                      transition: all 0.5s;
                       color: $wbu-background;
                   }
               }
@@ -377,11 +401,11 @@
               }
               .link{
                   color: $wbu-border-color;
-                  font-size: $wbu-title-font-size-sm * 0.6 ;
+                  font-size: $wbu-default-font-size ;
                   text-decoration: none;
                   font-weight: 400;
                   position: relative;
-                  
+                  transition: all 0.5s;
                   
               }
           }
