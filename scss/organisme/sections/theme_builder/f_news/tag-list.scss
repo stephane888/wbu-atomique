@@ -1,0 +1,40 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+.tag-list-fnews {
+  padding: $wbu-margin;
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .tag-btn {
+    margin-right: 1rem;
+    .link-btn {
+      padding: $wbu-margin * 0.5 $wbu-margin * 1.2;
+      border: 1px solid $bg-gray;
+      color: $wbu-color-secondary;
+      text-decoration: none;
+      transition: 0.5s;
+      display: inline-block;
+      text-transform: capitalize;
+      font-size: $wbu-default-font-size * 1.05;
+      background-color: $bg-gray;
+      color: black;
+      cursor: pointer;
+      &:hover {
+        background: $wbu-color-primary;
+      }
+    }
+    &__active {
+      .link-btn {
+        background-color: $bg-black;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          background-color: $bg-black;
+        }
+      }
+    }
+  }
+}

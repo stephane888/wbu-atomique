@@ -1,0 +1,77 @@
+@use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+
+.blog-list-section{
+    .blog-single-card{
+        margin-top: $space-top;
+    }
+    .blog-img{
+        position: relative;
+        .img-sup{
+            height: 100%;
+            width: 100%;
+            &::before{
+                content: "";
+                top: -1;
+                height: 100%;
+                opacity: 0;
+                width: 100%;
+                background: $wbu-color-secondary;
+                position: absolute;
+                 transition: cubic-bezier(0.19, 1, 0.22, 1);
+                
+            }
+            &:hover::before{
+               opacity: 0.5;
+            }
+        }
+    }
+    .blog-btn{
+        .link-btn{
+            padding: $wbu-margin * 0.5;
+            border: 1px solid $wbu-color-teal;
+            color: $wbu-color-teal;
+            text-decoration: none;
+            transition: all 0.5s;
+            &:hover{
+                background: $wbu-color-teal;   
+                color: $wbu-border-color; 
+            }
+        }
+    }
+    .blog-post-title{
+        .link-title{
+            color: $wbu-color-teal;
+            font-size: $wbu-h1-font-size;
+            font-weight: bold;
+        }
+    }
+    .pub-info{
+        color: $wbu-color-text;
+        font-size: $wbu-default-font-size;
+    }
+    .blog-preview{
+        font-size: $wbu-h2-font-size-sm;
+        color: $wbu-background;
+    }
+    .details{
+        .read-more-btn{
+            color: $wbu-color-teal;
+            font-size: $wbu-h3-font-size;
+            margin-right: $wbu-margin * 0.25;
+            text-decoration: none;
+            border-bottom:2px solid $wbu-color-teal ;
+            transition: all 0.5s;
+        }
+        .log-link{
+            color: $wbu-color-teal;
+            margin-right: $wbu-margin * 0.2;
+        }
+    }
+    .page-link{
+        border: none;
+        font-size: $wbu-h3-font-size;
+        padding: $wbu-margin;
+        color: $wbu-background;
+    }
+}

@@ -1,0 +1,89 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+
+.testimony-section-handler {
+  .single-card-testimony {
+      margin-top: $space_inner_top;
+    .testimony {
+      font-size: $wbu-h1-font-size-sm;
+      color: $wbu-brand-color;
+    }
+    .testimony-info {
+      margin-top: $wbu-margin * 0.5;
+      display: flex;
+      .img-profiles {
+            position: relative;
+            .img-link{
+              
+                .__img{
+                   border-radius: 100%; 
+                }
+                &::before{
+                    content: "";
+                    top: 0;
+                    height: 100%;
+                    opacity: 0;
+                    width: 70px;
+                    border-radius: 100%; 
+                    background: $wbu-color-primary;
+                    position: absolute;
+                    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    
+                }
+                &:hover::before{
+                   opacity: 0.5;
+                }
+            }
+            
+        
+      }
+      .info {
+        margin-left: $wbu-margin;
+        .name-link {
+          color: $wbu-color-secondary;
+          font-weight: $wbu-title-font-weight;
+        }
+        .role {
+          font-size: $wbu-h1-font-size-sm;
+        }
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      margin-bottom: $space-top;      
+      .testimony{
+              text-align: center;
+            }  
+            .testimony-info{
+              display: block;
+            }
+            .img-profiles {
+              margin-top: $wbu-margin;
+              margin-bottom: $wbu-margin;
+              position: relative;
+              text-align: center;
+              .img-link{
+                  .__img{
+                     border-radius: 100%; 
+                  }
+                  &::before{
+                      content: "";
+                      top: 0;
+                      height: 70px;
+                      opacity: 0.5;
+                      left: 196.5;
+                      width: 700px;
+                      border-radius: 10%; 
+                      display: block;
+                      background: wbu-color-primary;
+                      position: absolute;
+                      transition: cubic-bezier(0.19, 1, 0.22, 1);
+      
+                  }
+              }
+              
+          
+        }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+.contact-fnews {
+  padding: $space-top 0;
+  .cf-content {
+    @include media-max(MD) {
+      padding-bottom: $wbu-margin * 4;
+    }
+  }
+  .cfc-input {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+  }
+  .bloc-btn {
+    padding-top: $wbu-margin;
+    display: flex;
+    padding-left: 0;
+    gap: 2.5rem;
+    .cfc-btn {
+      padding: 1.6rem 3.3rem;
+      font-size: $wbu-default-font-size;
+    }
+  }
+  .fi-group {
+    &__label {
+      font-size: $wbu-default-font-size * 1.1;
+      color: $wbu-color-text;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      position: relative;
+    }
+    label[class^="required"] {
+      &::after {
+        content: "*";
+        position: absolute;
+        right: -1.5rem;
+        top: 0;
+        font-size: $wbu-p-font-size;
+        color: red;
+      }
+    }
+    &__input {
+      padding: 2.2rem 1.8rem;
+      border-color: black;
+      &:focus,
+      &:hover {
+        box-shadow: none;
+        border-color: $wbu-color-primary;
+      }
+    }
+  }
+  .cfc-info {
+    gap: 6rem;
+    flex-direction: column;
+  }
+  .info-bloc {
+    &__title {
+      font-size: $wbu-h5-font-size;
+      font-weight: bold;
+      padding-bottom: $wbu-margin * 0.7;
+    }
+    &__list {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      gap: $wbu-margin;
+    }
+    .ibl-item {
+      display: flex;
+      font-size: $wbu-p-font-size;
+      align-items: start;
+      @include media-max(XS) {
+        font-size: $wbu-h6-font-size;
+      }
+      svg {
+        width: 2.2rem;
+        height: 1.5rem;
+        fill: $wbu-color-primary;
+        margin-right: 8px;
+        margin-top: 3px;
+      }
+      &__div {
+        display: flex;
+        flex-direction: column;
+        a {
+          color: $wbu-color-secondary;
+        }
+      }
+    }
+  }
+}

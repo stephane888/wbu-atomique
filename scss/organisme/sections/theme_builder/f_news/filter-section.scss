@@ -1,0 +1,150 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+.filter-section-fnews {
+  padding: $space-top 0;
+  .filter-section {
+    &__input {
+      padding-bottom: $wbu-margin * 1.5;
+    }
+  }
+  .filter-title {
+    font-size: $wbu-p-font-size;
+    font-weight: bold;
+    text-align: left;
+    color: black;
+    padding: 0;
+    padding-bottom: $wbu-margin * 0.5;
+    text-transform: uppercase;
+    display: block;
+  }
+  .filter-input {
+    //padding: 2.2rem 1.8rem;
+    border-color: rgba(0, 0, 0, 0.445);
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      border-color: $wbu-color-primary;
+    }
+  }
+  .hide-btn {
+    display: none;
+  }
+  .filter-check {
+    label {
+      margin-left: 5px;
+      text-transform: capitalize;
+    }
+  }
+  .list-checked {
+    gap: 1.5rem;
+    margin-bottom: $wbu-margin;
+  }
+  .apply-btn {
+    margin-top: $wbu-margin;
+    padding: $wbu-margin * 0.5 $wbu-margin * 2;
+    font-size: $wbu-p-font-size;
+    text-transform: capitalize;
+  }
+}
+.filter-button {
+  display: none;
+  margin: $wbu-margin 0;
+  background-color: $wbu-color-primary;
+  font-size: $wbu-h6-font-size;
+  color: black;
+
+  text-transform: capitalize;
+
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  position: relative;
+  width: 15.8rem;
+  height: 5.2rem;
+  cursor: pointer;
+  transition: ease 0.4s;
+  @include media-max(MD) {
+    display: flex;
+  }
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+  .btn-angle-right {
+    &::after {
+      content: "";
+      position: relative;
+      width: 0;
+
+      height: 2rem;
+      top: 0;
+      display: inline-block;
+      opacity: 0;
+      transform: translateX(8px);
+      transition: ease-in-out 0.2s;
+      @include wbu__angle-right(black, 15);
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    .btn-angle-right::after {
+      position: relative;
+      opacity: 1;
+      width: 2rem;
+    }
+  }
+}
+.fsf-side {
+  width: 30rem;
+  box-shadow: 0px 0px 26px rgb(92, 92, 92);
+  padding-left: $wbu-margin * 0.8;
+  padding-top: $space-top * 1.8;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: -33rem;
+  z-index: 10;
+  background-color: white;
+  transition: ease-in-out 0.4s;
+  &--show {
+    left: 0;
+    opacity: 1;
+    & + .container .filter-button {
+      opacity: 0;
+    }
+  }
+  @include media-max(lg) {
+  }
+  .filter-section__check {
+    flex-direction: column;
+    .filter-check {
+      display: block;
+      width: 100%;
+    }
+  }
+  .apply-btn {
+    display: block;
+    margin-left: -1rem;
+    width: 100%;
+    position: sticky;
+    bottom: -4rem;
+    box-shadow: 0px 20px 1rem white;
+    left: -1rem;
+  }
+
+  .hide-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    line-height: 1;
+    display: block;
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}

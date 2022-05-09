@@ -1,7 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
-@use "./variables.scss" as *;
 @use "../../../../atome/typography/default";
-
+@use "./variables.scss" as *;
 .fnews-header {
   a {
     text-decoration: none;
