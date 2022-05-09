@@ -1,0 +1,37 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+.our-location-f_news {
+  padding: $space-top 0;
+  background: $bg-gray;
+  .olf-title {
+    color: black;
+    font-weight: bold;
+    font-size: $wbu-h3-font-size;
+    text-align: center;
+    padding-bottom: $wbu-margin * 2;
+    text-transform: capitalize;
+    @include media-max(XX) {
+      font-size: $wbu-h4-font-size;
+    }
+  }
+  .olf-map {
+    width: 100%;
+    height: 40rem;
+    & .map {
+      height: 40rem;
+      width: 100%;
+    }
+    .mapouter {
+      position: relative;
+      height: auto;
+      width: 100%;
+    }
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
