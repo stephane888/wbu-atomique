@@ -37,7 +37,7 @@
                 border-radius: 100%; 
                 background: $wbu-color-primary;
                 position: absolute;
-                transition: cubic-bezier(0.19, 1, 0.22, 1);
+                transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 
             }
             &:hover::before{
