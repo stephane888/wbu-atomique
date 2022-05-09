@@ -1,0 +1,31 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables" as *;
+.fn-tag-btn {
+  //margin-right: 1rem;
+  .link-btn {
+    padding: $wbu-margin * 0.5 $wbu-margin * 1.2;
+    border: 1px solid $wbu-color-secondary;
+    color: $wbu-color-secondary;
+    text-decoration: none;
+    transition: 0.5s;
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: $wbu-default-font-size * 1.05;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      background: $wbu-color-secondary;
+    }
+  }
+  &__active {
+    .link-btn {
+      background-color: $wbu-color-secondary;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}
