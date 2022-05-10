@@ -1,14 +1,16 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
 @use "./variables.scss" as *;
+@use "../../../../atome/f_news/load-more.scss";
 .metro-service-fnews {
+  padding: $space_top 0;
   .metro-service {
     position: relative;
     overflow: hidden;
     margin-bottom: $wbu-margin * 1.5;
     &:hover {
       .metro-service__body {
-        transform:translateY(-20%) ;
+        transform: translateY(-20%);
         .head-nav {
           opacity: 1;
           max-height: 5rem;
@@ -18,7 +20,6 @@
           opacity: 1;
           height: 2rem;
         }
-        
       }
     }
     &__img {
@@ -125,44 +126,6 @@
           color: white;
           text-decoration: none;
         }
-      }
-    }
-  }
-  .load-more-button {
-    margin: $wbu-margin 0;
-    background-color: $wbu-color-primary;
-    font-size: $wbu-default-font-size;
-    color: black;
-    text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    position: relative;
-    width: 15.8rem;
-    height: 4.9rem;
-    .btn-angle-right {
-      &::after {
-        content: "";
-        position: relative;
-        width: 0;
-
-        height: 2rem;
-        top: 0;
-        display: inline-block;
-        opacity: 0;
-        transform: translateX(8px);
-        transition: ease-in-out 0.2s;
-        @include wbu__angle-right(black, 15);
-      }
-    }
-
-    &:hover {
-      text-decoration: none;
-      .btn-angle-right::after {
-        position: relative;
-        opacity: 1;
-        width: 2rem;
       }
     }
   }

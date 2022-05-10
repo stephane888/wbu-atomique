@@ -1,0 +1,143 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+@use "../../../../atome/f_news/tag-btn.scss";
+.single-showcase_fnews {
+  padding: $space-top * 0.5 0 $space-top;
+  .ss-author {
+    padding: $wbu-margin 0;
+    display: flex;
+    align-items: center;
+
+    &__img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      object-fit: cover;
+      display: inline-block;
+      margin-right: $wbu-margin * 1.2;
+    }
+    &__author {
+      font-size: $wbu-default-font-size;
+      //color: black;
+      margin: 0;
+    }
+  }
+  .ssf__img {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: $wbu-margin * 1.7 0;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      background-color: $wbu-color-primary;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      transition: ease-in-out 0.3s;
+    }
+    &:hover {
+      &::before {
+        opacity: 0.5;
+      }
+    }
+  }
+  .video-handler {
+    position: relative;
+    .video-sup {
+      width: 100%;
+      display: inline-block;
+      margin: $wbu-margin * 1.5 0;
+      position: relative;
+      &::before {
+        content: "";
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        width: 100%;
+        background: black;
+        position: absolute;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+      }
+      &::after {
+        content: "";
+        width: 7rem;
+        height: 7rem;
+        position: absolute;
+        margin-right: 0.8rem;
+        display: inline-block;
+        left: 50%;
+        top: 50%;
+        opacity: 0.8;
+        transform: translate(-50%, -50%);
+        @include wbu-circle-play(white, 70);
+      }
+      &:hover {
+        &::before {
+          opacity: 0.5;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .ssf-paragraph {
+    font-size: $wbu-p-font-size;
+    padding: $wbu-margin 0;
+    color: $color-p-single;
+    margin: 0;
+    @include media-max(XX) {
+      font-size: $wbu-h6-font-size;
+    }
+    a {
+      color: $wbu-color-secondary;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .ssf-bq {
+    margin: $wbu-margin 0;
+    padding-left: $wbu-margin * 2;
+    font-size: $wbu-p-font-size;
+    position: relative;
+    color: $color-p-single;
+    @include media-max(XX) {
+      font-size: $wbu-h6-font-size;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include wbu_svg_quote_before();
+      transform: none;
+      color: black;
+    }
+  }
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .ss-two-bloc {
+    padding: $wbu-margin 0;
+    .ssf-h4 {
+      font-size: $wbu-h4-font-size;
+      color: black;
+      font-weight: bold;
+      text-align: left;
+      padding-bottom: 5px;
+    }
+  }
+}

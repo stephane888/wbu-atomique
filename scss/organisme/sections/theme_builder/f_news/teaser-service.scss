@@ -1,5 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "./variables.scss" as *;
+@use "../../../../atome/f_news/load-more.scss";
 .teaser-service-fnews {
   padding: $space_top 0;
   .teaser-service {
@@ -127,44 +128,6 @@
         font-weight: bold;
         font-size: $wbu-p-font-size * 1.1;
         padding-bottom: $wbu-margin;
-      }
-    }
-  }
-  .load-more-button {
-    margin: $wbu-margin 0;
-    background-color: $wbu-color-primary;
-    font-size: $wbu-default-font-size;
-    color: black;
-    text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    position: relative;
-    width: 15.8rem;
-    height: 4.9rem;
-    .btn-angle-right {
-      &::after {
-        content: "";
-        position: relative;
-        width: 0;
-
-        height: 2rem;
-        top: 0;
-        display: inline-block;
-        opacity: 0;
-        transform: translateX(8px);
-        transition: ease-in-out 0.2s;
-        @include wbu__angle-right(black, 15);
-      }
-    }
-
-    &:hover {
-      text-decoration: none;
-      .btn-angle-right::after {
-        position: relative;
-        opacity: 1;
-        width: 2rem;
       }
     }
   }

@@ -1,0 +1,106 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+
+.comment-section-handler{
+    .comment-title{
+        margin-top: $wbu-margin;
+        border-bottom: 1px solid $wbu-color-teal;
+        width: 66.5%;
+        padding-bottom: $wbu-btn-padding-x-sm;
+        font-weight: bold;
+        color: $wbu-brand-color;
+        font-size: $wbu-title-font-size;
+    }
+    .all-comments{
+        .single-comment{
+            background: $wbu-color-boder;
+            padding-top: $wbu-margin;
+            padding-bottom: $wbu-btn-padding-y-sm;
+            margin-bottom: $wbu-margin;
+            .reaction{
+                color: $wbu-brand-color;
+                font-size: $wbu-titre-big-md;
+                font-weight: bold;
+                margin-bottom: $wbu-margin * 0.5;
+            }
+            .comment-content{
+                font-size: $wbu-p-font-size;
+                margin-bottom: $wbu-margin ;
+                color: $wbu-brand-color;
+            }
+            .comment-detail{
+                .img-comment{
+                    height: 70px;
+                    margin-right: $wbu-margin;
+                }
+                .meta-info{
+                    margin-top: $wbu-margin * 0.5;
+                    color: $wbu-color-text;
+                    .role{
+                        margin-top: $wbu-margin * 0.1;
+                    }
+                }
+            }
+        }
+    }
+    .bill{
+        position: fixed;
+        top: 5rem;
+        right: 0;
+        transition: ease 0.4s;
+        .bill-title{
+            font-size: $wbu-titre-big;
+            font-weight: 600;
+            color: $wbu-brand-color;
+        }
+        .bill-description{
+            margin-top: $wbu-margin;
+            font-size: $wbu-title-font-size;
+        }
+        .bill-info{
+            margin-top: $wbu-margin;
+            .amount{
+                color: $wbu-brand-color;
+                font-size: $wbu-title-font-size;
+                font-weight: bold;
+                margin-right: auto;
+            }
+            .bill-code{
+                font-size: $wbu-title-font-size;
+                margin-right: $wbu-margin;
+            }
+            .product-disp{
+                color: $wbu-color-teal;
+                font-size: $wbu-title-font-size;
+            }
+        }
+        .buy-btn{
+            margin-top: $wbu-margin * 0.1;
+            .buy-link{
+                text-decoration: none;
+                display: block;
+                background: $wbu-color-primary;
+                text-align: center;
+                padding-top: $wbu-btn-padding-x-sm;
+                padding-bottom: $wbu-btn-padding-x-sm;
+                width: 100%;
+                color: $wbu-brand-color;
+                font-size: $wbu-title-font-size;
+                .icon{
+                    float: right;
+                    margin-right: $wbu-margin;
+                    transition: ease-in-out 0.5s;
+                    visibility: hidden;
+                }
+                &:hover{
+                    .icon{
+                        margin-left: $wbu-margin;
+                        visibility: visible;
+                    }
+                }
+            }
+
+        }
+    }
+}
