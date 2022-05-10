@@ -176,7 +176,7 @@
     }
   }
   .slide-control {
-    background-color: $wbu-background;
+    background-color: rgba($wbu-color-boder, 0.5);
     .slc-content {
       display: flex;
       align-items: center;

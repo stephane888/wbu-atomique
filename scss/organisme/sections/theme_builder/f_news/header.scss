@@ -53,7 +53,7 @@
     position: relative;
   }
   .first-nav {
-    background-color: $wbu-background;
+    background-color: rgba($wbu-color-boder, 0.5);
     display: flex;
     justify-content: start;
     padding: 0 4.5rem;

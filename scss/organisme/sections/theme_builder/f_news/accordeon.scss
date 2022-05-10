@@ -1,0 +1,73 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+@use "./variables.scss" as *;
+.accordeon-fnews {
+  padding: $wbu-margin * 1.5 0;
+  .acf-title {
+    font-size: $wbu-h4-font-size;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .acf-bloc {
+    &__item {
+      padding-bottom: $wbu-margin * 0.4;
+      border-bottom: 1px solid black;
+      margin-bottom: 1rem;
+      max-height: 5.2rem;
+      overflow: hidden;
+      transition: max-height ease 0.4s;
+      &:last-child {
+        border: none;
+      }
+    }
+
+    .opened {
+      > .aci-title {
+        &::after {
+          content: "";
+          width: 1.5rem;
+          height: 1.5rem;
+          @include wbu-close(black, 18);
+          top: 1.8rem;
+        }
+      }
+    }
+    .aci-title {
+      font-size: $wbu-h6-font-size;
+      text-transform: uppercase;
+      color: black;
+      font-weight: bold;
+      padding: $wbu-margin * 0.8 0;
+      padding-right: $wbu-margin * 1.5;
+      margin: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      position: relative;
+      justify-content: space-between;
+      line-height: 1;
+      width: 100%;
+      &::after {
+        content: "+";
+        font-size: $wbu-h5-font-size;
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        line-height: 0;
+        transition: ease 0.1s;
+      }
+    }
+    .aci-desc {
+      font-size: $wbu-p-font-size;
+      color: $color-p-single;
+      color: black;
+      margin: 0;
+      overflow: hidden;
+      padding: $wbu-margin * 0.5 0 $wbu-margin;
+    }
+  }
+}

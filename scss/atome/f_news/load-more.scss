@@ -14,6 +14,7 @@
   width: 15.8rem;
   height: 4.9rem;
 
+  transition: ease-in-out 0.3s;
   .btn-angle-right {
     &::after {
       content: "";
@@ -33,6 +34,7 @@
   &:hover {
     color: black;
     text-decoration: none;
+    background-color: darken($color: $wbu-color-primary, $amount: 2.5);
     .btn-angle-right::after {
       position: relative;
       opacity: 1;
@@ -54,9 +56,10 @@
   font-size: $wbu-default-font-size * 1.2;
   width: 100%;
   height: 4.9rem;
+  transition: ease-in-out 0.3s;
   & > :nth-child(1) {
     //background-color: red;
-    flex-basis: 90%;
+    flex-basis: 85%;
     text-align: center;
   }
   .btn-angle-right {
@@ -77,6 +80,7 @@
   &:hover {
     color: black;
     text-decoration: none;
+    background-color: darken($color: $wbu-color-primary, $amount: 2.5);
     .btn-angle-right::after {
       position: relative;
       opacity: 1;

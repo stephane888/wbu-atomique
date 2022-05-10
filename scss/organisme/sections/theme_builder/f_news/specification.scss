@@ -1,0 +1,36 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+@use "./variables.scss" as *;
+.specification-fnews {
+  padding: $wbu-margin * 1.5 0;
+  .spec-title {
+    font-size: $wbu-h4-font-size;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .spec-bloc {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+  }
+  .spec-item {
+    display: flex;
+    justify-content: space-between;
+    background: darken(white, 3);
+    padding: $wbu-margin * 0.5;
+    align-items: center;
+    .si-titre {
+      font-size: $wbu-p-font-size;
+      color: black;
+      font-weight: bold;
+    }
+    .si-desc {
+      font-size: $wbu-p-font-size;
+      color: rgba(black, 0.8);
+    }
+  }
+}

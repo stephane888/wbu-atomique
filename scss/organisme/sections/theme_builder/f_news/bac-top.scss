@@ -23,6 +23,11 @@
     //position: relative;
     justify-content: center;
     align-items: center;
+    transition: ease-in-out 0.4s;
+    &:hover {
+      background-color: $wbu-color-primary;
+      border-color: $wbu-color-primary;
+    }
     .wbu-angles-up {
       &::after {
         content: "";

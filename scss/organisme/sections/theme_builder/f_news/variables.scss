@@ -1,12 +1,10 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 
-$wbu-background: #f8f9fb;
-$wbu-color-primary: #fbbd04;
-$wbu-color-secondary: #086787;
 $wbu-brand-color: #2d2d2d;
-$bg-black: #1f2023;
+$bg-black: $wbu-background;
 $bg-gray: #f1f1f1;
 $wbu-color-text: #696969;
+$color-green: #388300;
 $color-p-text: #424242;
 $color-p-single: #363636;
 $wbu-h2-font-size: 5.5rem;
