@@ -1,0 +1,64 @@
+@use "@stephane888/wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use "../variables.scss" as *;
+.contain-main-menu {
+  font-family: "Oswald", sans-serif;
+  border-top: 1px solid #ebebeb;
+  .dropdown-toggle::after {
+    background: #f8f9fa;
+    margin-top: 6px;
+  }
+  .dropdown {
+    position: unset;
+  }
+  .dropdown-menu.show {
+    display: flex;
+  }
+  .main-level {
+    justify-content: center;
+    > .nav-item {
+      > .nav-link {
+        font-size: $wbu-default-font-size * 1.2;
+        font-weight: 500;
+        padding-left: $wbu-margin;
+        padding-right: $wbu-margin;
+      }
+      &.show {
+        a {
+          color: $wbu-color-link;
+        }
+      }
+    }
+  }
+  .sub-menu {
+    .dropdown-item {
+      min-width: 200px;
+      width: 25%;
+
+      &:hover {
+        background: transparent;
+      }
+      .layout__region {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: $wbu-margin * 1.5 0;
+        img {
+          margin-bottom: $wbu-margin * 0.5;
+        }
+        .block-layout-builder {
+          margin-bottom: $wbu-margin * 0.5;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        a {
+          color: inherit;
+          &:hover {
+            color: $wbu-color-link;
+          }
+        }
+      }
+    }
+  }
+}
