@@ -1,0 +1,110 @@
+@use "../../wbu-ressources-clean.scss" as *;
+/** @format */
+@use "../../variables" as *;
+@use "../../atome/home_page/h2Title.scss" as *;
+@use "../../atome/home_page/btn-carre.scss" as *;
+@use "../../atome/home_page/description.scss" as *;
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero-section-rc-web {
+  min-height: 60vh;
+  padding: 128px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $wbu-background;
+  z-index: 1;
+  &.cover-bg {
+    position: relative;
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      display: block;
+      background-color: rgba($color: $wbu-background, $alpha: 0.8);
+    }
+  }
+  .rc-btn-block {
+    position: relative;
+    bottom: -92px;
+  }
+  .btn-carre {
+    @include media-max(XX) {
+      font-size: 14px;
+    }
+  }
+  &__block-center {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &::before,
+    &::after {
+      content: "";
+      border: 1px solid $wbu-color-primary;
+      transform: rotate(90deg);
+      width: 125px;
+      position: relative;
+      display: block;
+      @include media-max(XS) {
+        width: 100px;
+      }
+    }
+
+    .desc {
+      padding: 81px 0;
+    }
+    .hp-desc {
+      color: $wbu-color-primary;
+      //letter-spacing: 0.2rem;
+      //margin-bottom: -1.1rem;
+      font-size: 2.7rem;
+      text-transform: none;
+      letter-spacing: 3px;
+      @include media-max(SM) {
+        font-size: 1.8rem;
+        padding-bottom: 3px;
+      }
+      @include media-max(MD) {
+        font-size: 2rem;
+      }
+      @include media-max(XS) {
+        font-size: 1.2rem;
+      }
+    }
+    .desc__title {
+      font-size: 6.8rem;
+      text-transform: none;
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 1px;
+      text-align: center;
+
+      @include media-max(MD) {
+        font-size: 5.8rem;
+      }
+      @include media-max(SM) {
+        font-size: 4.2rem;
+      }
+      @include media-max(XS) {
+        font-size: 3.6rem;
+      }
+      @include media-max(XX) {
+        font-size: 3rem;
+      }
+      span {
+        color: $wbu-color-primary;
+      }
+    }
+  }
+}
