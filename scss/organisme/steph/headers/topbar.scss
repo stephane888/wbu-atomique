@@ -1,4 +1,5 @@
 @use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../variables";
 .topbar {
   background: $wbu-color-primary;
   display: block;
