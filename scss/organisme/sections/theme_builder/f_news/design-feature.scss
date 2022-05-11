@@ -1,0 +1,28 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/plumbing/pl-btn.scss";
+@use "./variables.scss" as *;
+.design-feature-fnews {
+  padding: $wbu-margin * 1.5 0;
+  .dff-title {
+    font-size: $wbu-h4-font-size;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .dff-paragraph {
+    font-size: $wbu-p-font-size;
+    padding: $wbu-margin * 0.7 0 $wbu-margin * 0.4;
+    color: $color-p-single;
+    margin: 0;
+    @include media-max(XX) {
+      font-size: $wbu-h6-font-size;
+    }
+    a {
+      color: $wbu-color-secondary;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

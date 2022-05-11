@@ -168,15 +168,21 @@
         font-weight: bold;
         margin: 0;
         color: $wbu-color-secondary;
+        @include media-max(SM) {
+          font-size: $wbu-h5-font-size;
+        }
+        @include media-max(XX) {
+          font-size: $wbu-h6-font-size;
+        }
       }
       &__date {
-        font-size: $wbu-default-font-size;
+        font-size: $wbu-h6-font-size;
         color: $wbu-color-text;
       }
     }
   }
   .slide-control {
-    background-color: $wbu-background;
+    background-color: rgba($wbu-color-boder, 0.5);
     .slc-content {
       display: flex;
       align-items: center;

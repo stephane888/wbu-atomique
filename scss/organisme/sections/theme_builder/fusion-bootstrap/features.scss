@@ -14,8 +14,6 @@
   }
 
   .section-header {
-    .section-title {
-    }
     .shape {
       height: 1px;
       margin: 0 auto 30px;
@@ -141,7 +139,7 @@
           .text {
             h4 {
               cursor: pointer;
-              font-size: 1.3rem;
+              font-size: $wbu-title-font-size;
               font-weight: 700;
               line-height: 22px;
               -webkit-transition: all 0.2s linear;

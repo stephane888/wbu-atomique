@@ -2,39 +2,52 @@
   Wbu-Atomique variables
 ------------------------------------*/
 
-// Color System
+/*------------------------------------
+  COLORS
+------------------------------------*/
+//
+// Couleurs principal
 // =========================================================
-
-$wbu-border-color: #dee2e6 !default;
+// Couleur primaire ( y compris la couleur de liens par defaut ).
 $wbu-color-primary: #ea000d !default;
+// Couleur secondaire
 $wbu-color-secondary: #ee8700 !default;
-$wbu-background: #192028 !default;
-$wbu-color-thirdly: #333 !default;
+// Couleur d'arrière plan ( à priviliger au niveau du footer, des elements de covers ).
+$wbu-background: #0f103e !default;
+// Couleur des liens
+$wbu-color-thirdly: rgb(7, 79, 128) !default;
+//
+// Autre couleurs
+// =========================================================
+$wbu-border-color: #dee2e6 !default;
 $wbu-color-text: #4c4c4c !default;
 $wbu-color-teal: #49a0a2 !default;
 $wbu-color-boder: #dee2e6;
-$wbu-color-link: $wbu-color-secondary !default;
-$wbu-color-link-hover: $wbu-color-secondary !default;
 $wbu-title-color: inherit !default;
-/**/
+
+/*------------------------------------
+  BORDURES
+------------------------------------*/
+// buttom
 $wbu-btn-border-round: 50% !default;
 $wbu-btn-round-dimension: 2.2rem !default;
 $btn-border-color: $wbu-border-color !default;
-/**/
-
-//$btn-radius
 $wbu-btn-border-radius: 30px !default;
 $wbu-btn-radius-padding: 0.88rem 1.5rem !default;
-/**
- * Typography.
- */
+// largeur de la puce.
+$wbu_dimension_puce: 25px !default;
+
+/*------------------------------------
+  TYPOGRAPHY
+------------------------------------*/
+// default
 $wbu-default-line-height: 1.3 !default;
 $wbu-default-font-size: 1.4rem !default;
-// @depreciated.
-//$wbu-p-font-size: inherit !default;
+//
 $wbu-title-font-family: inherit !default;
 $wbu-title-font-weight: 600 !default;
 // Big text ( Generalement pour les sections hero ).
+$wbu-titre-suppra: 8.4rem !default;
 $wbu-titre-biggest: 5.4rem !default;
 $wbu-titre-big: 4.4rem !default;
 $wbu-titre-big-md: 3.4rem !default;
@@ -54,10 +67,6 @@ $wbu-h3-line-height: $wbu-default-line-height !default;
 $wbu-title-font-size: 1.6rem !default;
 $wbu-title-font-size-sm: 1.6rem !default;
 
-/**
- * Lists buttons
- */
-$wbu_dimension_puce: 25px !default;
 /* */
 // space.
 $wbu-margin: 2rem !default;

@@ -1,5 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
+@use "../../../../atome/f_news/load-more.scss";
 @use "./variables.scss" as *;
 .tech-stories-section-handler {
   padding: $space_top 0;
@@ -65,19 +66,6 @@
           margin-left: $wbu-margin * 0.5;
         }
       }
-    }
-  }
-  .more-link {
-    font-size: $wbu-p-font-size;
-    font-weight: bold;
-    text-align: center;
-
-    margin: $wbu-margin * 2 auto;
-    a {
-      color: $wbu-color-secondary;
-      padding: 0.8rem;
-      border-bottom: 1px solid $wbu-color-secondary;
-      text-decoration: none;
     }
   }
 }

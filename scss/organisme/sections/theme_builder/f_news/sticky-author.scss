@@ -9,7 +9,9 @@
   justify-content: center;
   text-align: center;
   padding: 0 $wbu-margin * 0.8 $wbu-margin;
-
+  position: sticky;
+  top: 7rem;
+  margin-bottom: $wbu-margin;
   .saf-author {
     //margin-bottom: $wbu-margin;
     &__img {

@@ -1,5 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
+@use "../../../../atome/f_news/load-more.scss";
 @use "./variables.scss" as *;
 .post-proposition-section-handler {
   overflow: hidden;
@@ -125,7 +126,7 @@
         margin-top: $space_top * 0.4;
         margin-left: $wbu-margin * 0.3;
         color: black;
-        font-size: $wbu-title-font-size;
+        font-size: $wbu-h6-font-size;
       }
     }
   }
@@ -136,20 +137,6 @@
       font-weight: bolder;
       margin-bottom: $wbu-margin;
       color: black;
-    }
-
-    .more-link {
-      font-size: $wbu-p-font-size;
-      font-weight: bold;
-      text-align: center;
-
-      margin: $wbu-margin auto;
-      a {
-        color: $wbu-color-secondary;
-        padding: 0.8rem;
-        border-bottom: 1px solid $wbu-color-secondary;
-        text-decoration: none;
-      }
     }
   }
 }

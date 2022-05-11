@@ -53,7 +53,7 @@
     position: relative;
   }
   .first-nav {
-    background-color: $wbu-background;
+    background-color: rgba($wbu-color-boder, 0.5);
     display: flex;
     justify-content: start;
     padding: 0 4.5rem;
@@ -145,11 +145,11 @@
             z-index: 15;
             overflow: visible;
             border-top: 4px solid $wbu-color-primary;
+            animation: anheight 0.6s;
           }
         }
       }
       .sub-menu {
-        // display: none;
         max-height: 0;
         position: absolute;
         top: 3.7rem;
@@ -162,13 +162,12 @@
         background-color: white;
         box-shadow: 0 2px 22px rgb(0, 0, 0, 0.25);
         border-color: transparent;
-        transition: display 0.5s, max-height 0.4s, border-color 0.4s, opacity 1s,
-          overflow 3.2s, padding 0.5s;
+
+        transition: display 0.5s, visibility 1s, ease-in-out max-height 0.4s,
+          border-color 0.4s, opacity 1s, overflow 2.2s, padding 0.4s;
 
         .nav-item {
-          // display: block;
           width: 25rem;
-          // width: 100%;
         }
         .sub-alt {
           .nav-link {
@@ -242,8 +241,10 @@
     ul li {
       font-size: 1.4rem;
       a {
-        padding: 4rem 2rem;
-
+        padding: 5rem 2rem;
+        @include media-max(MD) {
+          padding: 4rem 2rem;
+        }
         text-transform: capitalize;
         font-weight: bold;
         display: block;
@@ -422,7 +423,14 @@
     }
   }
 }
-
+@keyframes anheight {
+  to {
+    overflow: visible;
+  }
+  from {
+    overflow: hidden;
+  }
+}
 @include media-max(SM) {
   .fnews-header {
     .first-nav {

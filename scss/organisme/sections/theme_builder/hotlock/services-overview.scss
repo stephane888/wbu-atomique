@@ -1,5 +1,6 @@
-@use "../wbu-atomique/scss/_variables.scss";
-@use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
+@use  "../../../../_variables.scss";
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
 
 
 .services-overview-section-handler{

@@ -1,0 +1,47 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./variables.scss" as *;
+.comment-section-handler {
+  padding: $wbu-margin 0;
+  .comment-title {
+    margin-top: $wbu-margin;
+    border-bottom: 1px solid $wbu-color-secondary;
+    width: 66.5%;
+    padding-bottom: $wbu-margin;
+    font-weight: bold;
+    color: $wbu-brand-color;
+    font-size: $wbu-p-font-size;
+  }
+  .all-comments {
+    .single-comment {
+      background: rgba($wbu-color-boder, 0.5);
+      padding-top: $wbu-margin;
+      padding-bottom: $wbu-btn-padding-y-sm;
+      margin-bottom: $wbu-margin;
+      .reaction {
+        color: $wbu-brand-color;
+        font-size: $wbu-h5-font-size;
+        font-weight: bold;
+        margin-bottom: $wbu-margin * 0.5;
+      }
+      .comment-content {
+        font-size: $wbu-p-font-size;
+        margin-bottom: $wbu-margin;
+        color: $wbu-brand-color;
+      }
+      .comment-detail {
+        .img-comment {
+          height: 70px;
+          margin-right: $wbu-margin;
+        }
+        .meta-info {
+          margin-top: $wbu-margin * 0.5;
+          color: $wbu-color-text;
+          .role {
+            margin-top: $wbu-margin * 0.1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -22,7 +22,7 @@
   }
   .fn {
     &-bloc {
-      min-width: 10.5rem;
+      min-width: 11.5rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -148,10 +148,10 @@
       color: $wbu-color-primary;
       font-weight: bold;
       @include media-max(XS) {
-        font-size: $wbu-h2-font-size * 0.7;
+        font-size: $wbu-h5-font-size * 0.7;
       }
       @include media-max(SM) {
-        font-size: $wbu-h2-font-size * 0.8;
+        font-size: $wbu-h5-font-size * 0.8;
       }
     }
     .fna-date {
