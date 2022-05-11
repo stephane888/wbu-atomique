@@ -1,0 +1,48 @@
+@use "../../wbu-ressources.scss" as *;
+.reinsuranceItem {
+  max-width: 270px;
+  text-align: center;
+  margin: 0 auto $wbu-margin;
+
+  &__iconContainer {
+    height: 80px;
+    width: 80px;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    border: 1px solid #efefef;
+    margin: 0 auto 22px;
+  }
+
+  &__assistance {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: $wbu-margin * 1.5;
+    color: #1b1918;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    span {
+      color: #49a0a2;
+    }
+  }
+
+  &__description {
+    color: #1b1918;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 20px;
+  }
+}
