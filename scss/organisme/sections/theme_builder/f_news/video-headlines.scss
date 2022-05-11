@@ -1,10 +1,12 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
+@use "../../../../atome/f_news/load-more.scss";
 @use "./variables.scss" as *;
+
 .video-headlines-section-handler {
   padding: $space-top 0;
 
-  background: $wbu-color-primary;
+  //background: $wbu-color-primary;
   .section-title {
     .title {
       color: black;
@@ -96,20 +98,6 @@
       color: black;
       text-align: left;
       text-transform: lowercase;
-    }
-  }
-
-  .more-link {
-    font-size: $wbu-p-font-size;
-    font-weight: bold;
-    text-align: center;
-
-    margin: $wbu-margin * 1 auto;
-    a {
-      color: $wbu-color-secondary;
-      padding: 0.8rem;
-      border-bottom: 1px solid $wbu-color-secondary;
-      text-decoration: none;
     }
   }
 }

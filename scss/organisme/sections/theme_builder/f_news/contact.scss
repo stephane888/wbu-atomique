@@ -8,6 +8,12 @@
       padding-bottom: $wbu-margin * 4;
     }
   }
+  .cfc-btn {
+    background-color: $wbu-color-primary;
+    &:hover {
+      background-color: darken($wbu-color-primary, 5);
+    }
+  }
   .cfc-input {
     display: flex;
     flex-direction: column;
