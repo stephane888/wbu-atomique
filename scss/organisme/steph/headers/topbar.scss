@@ -41,16 +41,103 @@
       display: none;
     }
   }
+  .logo-bloc {
+    justify-content: center;
+    margin-bottom: 2rem;
+    @include media-min("SM") {
+      justify-content: left;
+    }
+    .basic-wrapper-slogan {
+      max-width: 270px;
+      display: none;
+      @include media-min("SM") {
+        display: block;
+      }
+    }
+  }
+  .data-right {
+    width: 100%;
+    position: relative;
+    .block-commerce-cart-popup {
+      position: absolute;
+      top: -60px;
+      left: 0;
+      @include media-min(SM) {
+        position: relative;
+        top: auto;
+        left: auto;
+      }
+      @include media-min(DD) {
+        position: absolute;
+        left: -10%;
+        right: auto;
+        top: 38%;
+      }
+
+      .commerce-cart-pop--summary__count {
+        top: -19px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: -9px;
+        right: auto;
+        background-color: $wbu-color-primary;
+      }
+      .commerce-cart-pop--summary__icon {
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+      }
+    }
+    .icon.icon-bloc {
+      white-space: nowrap;
+
+      min-width: 200px;
+      i {
+        margin-left: 0;
+        font-size: 18px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+      }
+      @include media-min("SM") {
+        i {
+          margin-left: 10px;
+          font-size: 24px;
+          height: 50px;
+          width: 50px;
+        }
+      }
+      @include media-max("SM") {
+        .btn-outline-force {
+          font-size: 16px;
+          padding: 0.7rem 1.2rem;
+        }
+      }
+    }
+    // .block-commerce-cart-popup {
+    //   position: absolute;
+    //   top: -50px;
+    //   left: 0;
+    // }
+  }
   .site-name {
     font-size: $wbu-default-font-size * 1.5;
     font-weight: 600;
     color: $wbu-color-primary;
   }
   .logo {
+    display: flex;
+    min-width: 130px;
     img {
       max-width: 200px;
       margin-top: -10px;
-      min-height: 80px;
+      max-height: 120px;
     }
   }
   .site-slogant {
