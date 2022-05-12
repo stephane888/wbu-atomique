@@ -4,6 +4,7 @@
 * description à modifier
 */
 @use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables";
 .container {
   max-width: 1200px;
   width: 100%;
