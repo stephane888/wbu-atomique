@@ -1,0 +1,56 @@
+/** 
+* pour la surcharges des themes v2lesroisdelarenos
+* nom à modifier
+* description à modifier
+*/
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.space-margin {
+  margin-bottom: $wbu-margin * 2;
+  @include media-min("DD") {
+    margin-bottom: $wbu-margin * 4;
+  }
+}
+.space-padding {
+  padding-top: $wbu-margin * 2;
+  padding-bottom: $wbu-margin * 1.5;
+  @include media-min("DD") {
+    padding-top: $wbu-margin * 4;
+    padding-bottom: $wbu-margin * 2.5;
+  }
+}
+// definie les container de lecture.
+.with-phone {
+  max-width: $with_phone;
+}
+.with-tablet {
+  max-width: $with_tablet;
+}
+
+// on supprimer la marge-bottom sur le dernier article dans une liste:
+.views {
+  .views-row {
+    &:last-child {
+      .teaser-img-desc {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.row > .row {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+body .owl-carousel .owl-item img {
+  width: auto;
+}
+
+.sub-menu .navbar {
+  justify-content: center !important;
+}
