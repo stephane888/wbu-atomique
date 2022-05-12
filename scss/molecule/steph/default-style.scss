@@ -1,0 +1,155 @@
+/** 
+* pour la surcharges des themes v2lesroisdelarenos
+* nom à modifier
+* description à modifier
+*/
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables";
+
+.dialog-off-canvas-main-canvas {
+  width: 100%;
+}
+.region-hero-slider {
+  position: relative;
+  z-index: 0;
+}
+.page-orther-custom {
+  //margin-top: $wbu-margin * 2;
+  margin-bottom: $wbu-margin * 2;
+}
+img {
+  max-width: 100%;
+}
+table {
+  tr {
+    td {
+      .form-check-label {
+        display: none;
+      }
+    }
+  }
+}
+.form-row {
+  align-items: end;
+  align-items: flex-end;
+}
+
+.lesroisdelareno-blockcounter {
+  .title {
+    margin-top: $wbu-margin;
+    margin-bottom: $wbu-margin * 0.5;
+  }
+  .owl-item {
+    img {
+      max-width: 150px;
+      max-height: 100px;
+    }
+  }
+}
+
+.space_bottom,
+.space-bottom {
+  margin-bottom: $space_bottom;
+}
+.space-inner-bottom {
+  margin-bottom: $space_inner_top;
+}
+.padding-top {
+  padding-top: $space_top;
+}
+.margin-top {
+  margin-top: $space_top;
+}
+.padding-bottom {
+  padding-bottom: $space_bottom;
+}
+
+.block-title {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 30px;
+  width: 100%;
+  font-weight: 600;
+  &::before {
+    display: inline-block;
+    content: "";
+    border-bottom: 1px solid #e1e3e5;
+    border-left: 1px solid #e1e3e5;
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+  }
+}
+
+/**
+ * -- styled multipled buttons.
+ */
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  .form-control {
+    width: auto;
+  }
+  .btn {
+    + .btn {
+      margin-left: $wbu-margin;
+    }
+    a {
+      color: inherit;
+    }
+  }
+  .js-form-wrapper {
+    margin-top: $wbu-margin;
+    width: 100%;
+  }
+  .form-checkbox + label {
+    padding-left: $wbu-margin * 0.5;
+  }
+}
+
+.btn {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/**
+ *
+ */
+.contain-main-menu {
+  .item-id-35 {
+    a {
+      color: #f00;
+    }
+  }
+}
+
+/**
+ *
+ */
+.bg-theme {
+  background-color: $wbu-background !important;
+  color: #c5c5c5;
+  .block__whoAreWe {
+    .h2Title {
+      color: #fff;
+      span {
+        color: $wbu-color-primary;
+      }
+    }
+  }
+  &.titre-section {
+    padding-bottom: $space_bottom;
+    .main {
+      color: #fff;
+      margin-bottom: $wbu-margin * 1.5;
+    }
+  }
+}
+.text-theme {
+  color: $wbu-color-primary !important;
+}
