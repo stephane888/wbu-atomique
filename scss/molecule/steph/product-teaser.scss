@@ -1,0 +1,25 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables";
+
+.page-product-full {
+  .col {
+    padding: 0;
+  }
+}
+.product-teaser {
+  height: 100%;
+  background: #fff;
+  i {
+    padding-right: $wbu-margin * 0.5;
+  }
+  .item:last-child {
+    margin-bottom: 0;
+  }
+  .title {
+    height: 67px;
+    overflow: hidden;
+  }
+  form .field--widget-commerce-product-variation-attributes {
+    display: none;
+  }
+}
