@@ -1,5 +1,5 @@
 @use "../../../wbu-ressources-clean.scss" as *;
-@use "../../../variables";
+@use "../../../variables.scss" as *;
 .contain-main-menu {
   font-family: "Oswald", sans-serif;
   border-top: 1px solid #ebebeb;
@@ -22,6 +22,11 @@
         padding-left: $wbu-margin;
         padding-right: $wbu-margin;
       }
+      // &.show {
+      //   a {
+      //     color: $wbu-color-link;
+      //   }
+      // }
     }
   }
   .sub-menu {
@@ -32,24 +37,37 @@
       &:hover {
         background: transparent;
       }
-      .layout__region {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: $wbu-margin * 1.5 0;
-        img {
-          margin-bottom: $wbu-margin * 0.5;
-        }
-        .block-layout-builder {
-          margin-bottom: $wbu-margin * 0.5;
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-        a {
-          color: inherit;
-        }
+
+      a {
+        color: inherit;
+        // &:hover {
+        //   color: $wbu-color-link;
+        // }
+      }
+    }
+  }
+}
+.layout__region.sub-menus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: $wbu-margin * 1.5 0;
+  img {
+    margin-bottom: $wbu-margin * 0.5;
+  }
+  .block-layout-builder {
+    margin-bottom: $wbu-margin * 0.5;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .layout-region {
+    &.dadas {
+      height: 60px;
+      img {
+        height: 54px;
+        width: auto;
       }
     }
   }
