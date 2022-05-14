@@ -134,17 +134,21 @@
     }
 
     .header-back-slide {
-        background: #eee;
+        
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
+        
+        position: relative;
         margin: 0;
         padding: 0;
+        z-index: -1;
+        
       }
 
       .swiper {
         width: 100%;
         height: 70%;
+        z-index: -1;
+       
       }
 
       .swiper-slide {
@@ -163,7 +167,7 @@
       }
 
       .swiper-v {
-        background: #eee;
+        
       }
       .header-slider-1{
           background: url("https://www.francetvinfo.fr/pictures/irhmQ_SrzAInupT6b6aEeZjZXOA/1200x1200/2016/12/27/phpkDRkQh_1.jpg");
@@ -173,13 +177,24 @@
           position: absolute;
           background-position: center center ;
           background-repeat: no-repeat;
-          
+          z-index: -1;
+          &::before{
+            content: '';
+            top: 0;
+            z-index: -1;
+            height: 100%;
+            opacity: 0.5;
+            width: 100%;
+            position: absolute;
+            background: $wbu-background;
+        }
           .description{
             margin-left: auto;
             margin-right: $space-bottom;
-            margin-top: $space-bottom * 2;
+            margin-top: $space-bottom ;
             width: 35%;
             text-align: center;
+            z-index: 1;
             @include media-max(SM) {
                 margin-left: auto;
                 margin-right: auto;
@@ -193,10 +208,12 @@
               font-weight: 100 !important;
               margin-bottom: $wbu-margin;
               color: $wbu-background;
+              z-index: 1;
           }
           .sub-title{
               font-size: $wbu-titre-big;
               color: $wbu-border-color;
+              z-index: 1;
           }
           .btn-desc{
               background: $wbu-background;
@@ -208,6 +225,7 @@
               margin-top: $space-top;
               padding: $wbu-btn-padding-y-sm * 0.6;
               position: relative;
+              cursor: pointer;
             
               &:hover{
                   
@@ -218,8 +236,9 @@
               }
               &::before{
                   content: "";
-                  position: absolute;
+                  position: relative;
                   top: 0;
+                  z-index: 1;
                   left: 0;
                   width: 100%;
                   height: 100%;
@@ -240,9 +259,10 @@
                   color: $wbu-border-color;
                   font-size: $wbu-default-font-size ;
                   text-decoration: none;
-                  font-weight: 400;
+                  font-weight: 500;
                   position: relative;
                   transition: all 0.5s;
+                  z-index: 1;
                   
               }
           }
@@ -255,10 +275,21 @@
           position: absolute;
           width: 100%;
           background-repeat: no-repeat;
+          z-index: 1;
+          &::before{
+            content: '';
+            top: 0;
+            z-index: -1;
+            height: 100%;
+            opacity: 0.5;
+            width: 100%;
+            position: absolute;
+            background: $wbu-background;
+        }
           .description{
             margin-left: auto;
             margin-right: $space-bottom;
-            margin-top: $space-bottom * 2;
+            margin-top: $space-bottom;
             width: 35%;
             text-align: center;
             @include media-max(SM) {
@@ -293,7 +324,7 @@
               &:hover{
                   
                   .link{
-                      z-index: 1;
+                      z-index: 2;
                       color: $wbu-background;
                   }
               }
@@ -336,11 +367,21 @@
           position: absolute;
           height: 100%;
           background-position: center center;
-
+          z-index: 1;
+          &::before{
+            content: '';
+            top: 0;
+            z-index: -1;
+            height: 100%;
+            opacity: 0.5;
+            width: 100%;
+            position: absolute;
+            background: $wbu-background;
+        }
           .description{
             margin-left: auto;
             margin-right: $space-bottom;
-            margin-top: $space-bottom * 2;
+            margin-top: $space-bottom ;
             width: 35%;
             text-align: center;
             @include media-max(SM) {
@@ -416,15 +457,19 @@
     }
     .services-items{
         background: $wbu-background;
+        .element{
+            height: 12rem;
+            padding-top: $wbu-btn-padding-y-sm;
+        }
         .icon{
-            margin-left: $wbu-margin * 0.2;
+            text-align: center;
             color: $wbu-color-secondary;
         }
         .icon-title{
-            margin-top: $wbu-margin * 0.5;
+            margin-top: $wbu-margin;
             font-weight: bold;
             color: $wbu-border-color;
-            margin-left: $wbu-margin * 0.2;
+            margin-left: $wbu-margin ;
         }
     }
     .left-list{
@@ -432,8 +477,9 @@
         top: 40%;
         z-index: 1;
         .element{
-            margin-top: $space-top * 0.05;
+            margin-top: $wbu-margin * 0.5 ;
             color: $wbu-background;
+        
             
             &:hover{
                 transition: all 1s;
