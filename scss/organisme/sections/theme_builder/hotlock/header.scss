@@ -213,8 +213,9 @@
               position: relative;
           }
           .btn-desc{
-              background: $wbu-background;
-              width: 160px;
+              background: $wbu-color-secondary;
+              padding: $wbu-btn-padding-y-sm;
+              display: inline-block;
               font-weight: bold;
               text-align: center;
               margin-right: auto;
@@ -223,42 +224,24 @@
               padding: $wbu-margin;
               position: relative;
               z-index: 1;
-            
-              &:hover{
-                  
+              
+              &:hover{      
+                  transition: all 0.7s;
+                  background: $wbu-background;
                   .link{
-                      z-index: 1;
-                      color: $wbu-background;
-                  }
-              }
-              &::before{
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  background: $wbu-color-secondary;
-                  transition: transform 0.5s;
-                  transform-origin: 0 0;
-                  transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-                  
-              }
-              &::before{
-                  transform: scaleX(0);
-              }
-              &:hover::before{
-                  
-                  transform: scaleX(1);
+                color: $wbu-border-color;
+            }
               }
               .link{
-                  color: $wbu-border-color;
+                  color: $wbu-background;
                   font-size: $wbu-default-font-size ;
                   text-decoration: none;
                   font-weight: 400;
                   position: relative;
                   transition: all 0.5s;
-                  
+                  &:hover{
+                      color: $wbu-border-color;
+                  }
               }
           }
       }
@@ -310,54 +293,37 @@
               position: relative;
           }
           .btn-desc{
-              background: $wbu-background;
-              width: 160px;
-              font-weight: bold;
-              text-align: center;
-              margin-right: auto;
-              margin-left: auto;
-              margin-top: $space-top;
-              padding: $wbu-margin;
-              position: relative;
-              z-index: 1;
+            background: $wbu-color-secondary;
+            padding: $wbu-btn-padding-y-sm;
+            display: inline-block;
+            font-weight: bold;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: $space-top;
+            padding: $wbu-margin;
+            position: relative;
+            z-index: 1;
             
-              &:hover{
-                  
-                  .link{
-                      z-index: 1;
-                      color: $wbu-background;
-                  }
-              }
-              &::before{
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  background: $wbu-color-secondary;
-                  transition: transform 0.5s;
-                  transform-origin: 0 0;
-                  transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-                  
-              }
-              &::before{
-                  transform: scaleX(0);
-              }
-              &:hover::before{
-                  
-                  transform: scaleX(1);
-              }
-              .link{
-                  color: $wbu-border-color;
-                  font-size: $wbu-default-font-size ;
-                  text-decoration: none;
-                  font-weight: 400;
-                  position: relative;
-                  transition: all 0.5s;
-                  
-              }
-          }
+            &:hover{      
+                transition: all 0.7s;
+                background: $wbu-background;
+                .link{
+                color: $wbu-border-color;
+            }
+            }
+            .link{
+                color: $wbu-background;
+                font-size: $wbu-default-font-size ;
+                text-decoration: none;
+                font-weight: 400;
+                position: relative;
+                transition: all 0.5s;
+                &:hover{
+                    color: $wbu-border-color;
+                }
+            }
+        }
       }
         }
       .header-slider-3{
@@ -406,54 +372,37 @@
               position: relative;
           }
           .btn-desc{
-              background: $wbu-background;
-              width: 160px;
-              font-weight: bold;
-              text-align: center;
-              margin-right: auto;
-              margin-left: auto;
-              margin-top: $space-top;
-              padding: $wbu-margin;
-              position: relative;
-              z-index: 1;
-            
-              &:hover{
-                  
-                  .link{
-                      z-index: 1;
-                      color: $wbu-background;
-                  }
-              }
-              &::before{
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  background: $wbu-color-secondary;
-                  transition: transform 0.5s;
-                  transform-origin: 0 0;
-                  transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-                  
-              }
-              &::before{
-                  transform: scaleX(0);
-              }
-              &:hover::before{
-                  
-                  transform: scaleX(1);
-              }
-              .link{
-                  color: $wbu-border-color;
-                  font-size: $wbu-default-font-size ;
-                  text-decoration: none;
-                  font-weight: 400;
-                  position: relative;
-                  transition: all 0.5s;
-                  
-              }
-          }
+            background: $wbu-color-secondary;
+            padding: $wbu-btn-padding-y-sm;
+            display: inline-block;
+            font-weight: bold;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: $space-top;
+            padding: $wbu-margin;
+            position: relative;
+            z-index: 1;
+          
+            &:hover{      
+                transition: all 0.7s;
+                background: $wbu-background;
+                .link{
+                    color: $wbu-border-color;
+                }
+            }
+            .link{
+                color: $wbu-background;
+                font-size: $wbu-default-font-size ;
+                text-decoration: none;
+                font-weight: 400;
+                position: relative;
+                transition: all 0.5s;
+                &:hover{
+                    color: $wbu-border-color;
+                }
+            }
+        }
       }
       .header-slide{
             position: relative;
