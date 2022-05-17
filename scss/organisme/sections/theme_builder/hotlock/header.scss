@@ -408,8 +408,18 @@
     .services-items{
         background: $wbu-background;
         .element{
-            height: 12rem;
-            padding-top: $wbu-btn-padding-y-sm;
+            //height: 12rem;
+            padding-x: auto;
+            text-decoration: none;
+            display: inline-block;
+            &:hover{
+                .icon{
+                    color: $wbu-color-secondary;
+                }
+                .icon-title{
+                    color: $wbu-color-secondary;
+                }
+            }
         }
         .icon{
             text-align: center;
