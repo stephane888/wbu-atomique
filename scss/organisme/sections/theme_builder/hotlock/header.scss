@@ -408,9 +408,17 @@
     .services-items{
         display: inline-flex;
         background: $wbu-background;
+        .h-el{
+            border-right: 1px solid $wbu-color-primary;
+            border-bottom: 1px solid $wbu-color-primary;
+        }
         .element{
             text-decoration: none;
-            border-right: 0.2px solid $wbu-color-boder;
+           
+            display: block;
+            width: 100%;
+            height: auto;
+            position: static;
             &:hover{
                 color: $wbu-color-secondary;
                 .icon{
