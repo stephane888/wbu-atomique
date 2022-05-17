@@ -406,13 +406,13 @@
       }
     }
     .services-items{
+        display: inline-flex;
         background: $wbu-background;
         .element{
-            //height: 12rem;
-            padding-x: auto;
             text-decoration: none;
-            display: inline-block;
+            border-right: 0.2px solid $wbu-color-boder;
             &:hover{
+                color: $wbu-color-secondary;
                 .icon{
                     color: $wbu-color-secondary;
                 }
@@ -422,14 +422,15 @@
             }
         }
         .icon{
-            text-align: center;
+            
             color: $wbu-color-secondary;
         }
         .icon-title{
             margin-top: $wbu-margin ; 
             font-weight: bold;
             color: $wbu-border-color;
-            margin-left: $wbu-margin * 0.2;
+            text-align: center;
+            
         }
     }
     .left-list{
