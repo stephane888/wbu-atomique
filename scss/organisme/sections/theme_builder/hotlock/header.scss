@@ -10,7 +10,7 @@
         padding-bottom: $wbu-margin * 0.5;
 
         .nav-links{
-            margin-left: 65px;
+            margin-left: auto;
             
             .nav-link{
                 margin-right: 12px;
@@ -406,7 +406,6 @@
       }
     }
     .services-items{
-        display: inline-flex;
         background: $wbu-background;
         .h-el{
             border-right: 1px solid $wbu-color-primary;

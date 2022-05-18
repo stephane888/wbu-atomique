@@ -1,0 +1,74 @@
+@use  "../../../../../variables";
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+
+.security-service{
+    background: $wbu-background;
+    color: $wbu-border-color;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: $space-top;
+    padding-top: $wbu-btn-padding-x-sm;
+.handler{
+    position: relative;
+    margin-left: $space-bottom;
+    margin-top: $wbu-margin;
+    
+}
+    .icon{
+        position: absolute;
+        top: 65;
+        left: -250;
+        opacity: 0.6;
+        color: $wbu-color-thirdly;
+    }
+    .head-title{
+        font-size: $wbu-h2-font-size ;
+        
+        font-weight: lighter;
+        margin-left: $wbu-btn-padding-y-sm;
+        margin-top: $space-top;
+    }
+}
+.all-services{
+    margin-top: $wbu-margin * 0.5;
+    margin-left: auto;
+    .list-services{
+        color: $wbu-color-text;
+        
+        .element{
+            list-style-type: disc;
+            padding-top: $wbu-margin * 0.5;
+            padding-right: $wbu-margin * 0.5;
+            &::before{
+                content: "\2022";
+                color: $wbu-color-secondary;
+                font-weight: bold;
+                display: inline-block; 
+                width: 1em;
+                margin-left: -1.12em;
+            }
+        }
+    }
+}
+.call-info{
+    background: $wbu-color-secondary;
+    overflow: hidden;
+
+    .icon{
+        position: absolute;
+        top: 80;
+        left: 140;
+        color: $wbu-border-color;
+        opacity: 0.6;
+    }
+    .head-title{
+        font-size: $wbu-titre-biggest;
+        margin-left: $space-top;
+        margin-top: $space-bottom;
+    }
+    .phone-number{
+        font-size: $wbu-h1-font-size;
+        margin-left: $space-top;
+    }
+}
