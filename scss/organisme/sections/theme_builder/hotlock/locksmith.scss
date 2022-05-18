@@ -3,18 +3,18 @@
 @use "../../../../atome/typography/default";
 
 
+
 .lock-smithing-service-handler{
-   
+   margin-top: $space_inner_top;
 
     .lock-info-section{
-        
         &::before{
             content: "";
             width: 70px;
             height: 3px;
             background: $wbu-color-secondary;
             display: block;
-            margin-top: $wbu-margin * 0.5;
+            margin-top: $space-top;
             margin-bottom: $space_bottom * 0.2;
         }
         .title{
@@ -25,20 +25,28 @@
         .description{
             font-size: $wbu-h1-font-size-md;
         }
+        .lists{
+            display: flex;
+            @include media-max(MD) {
+                display: block;
+              }
+        }
         .all-services{
-            margin-top: $space-top;
+            margin-top: $wbu-margin;
+            padding-left: 0;
             .list-services{
                 color: $wbu-color-text;
                 .element{
-                    list-style-type: disc;
-    
+                    list-style-type: none;
+                    margin-top: $wbu-margin * 0.5;
                     &::before{
                         content: "\2022";
+                        position: initial;
                         color: $wbu-color-secondary;
                         font-weight: bold;
                         display: inline-block; 
                         width: 1em;
-                        margin-left: -1.001em;
+                        margin-left: -1.12em;
                     }
                 }
             }
