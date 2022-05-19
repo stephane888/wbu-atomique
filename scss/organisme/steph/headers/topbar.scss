@@ -35,15 +35,18 @@
   }
 }
 .topbar-content {
+  .language-icon {
+    min-width: 28px;
+  }
   .topheader_right .lang-dropdown-form select {
     margin: 0;
     margin-right: 3rem;
-    width: auto;
+    width: auto !important;
     padding: 0;
     line-height: 150%;
     border: navajowhite;
     height: auto;
-    padding-left: 1rem;
+    padding-left: 0;
     padding-right: 1rem;
   }
 }
