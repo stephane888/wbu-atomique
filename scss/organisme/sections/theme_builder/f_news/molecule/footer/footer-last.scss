@@ -1,0 +1,40 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.footer-last-bar {
+  margin-top: $wbu-margin * 1.5;
+  border-top: 1px solid rgba(255, 255, 255, 0.459);
+  padding: $wbu-margin 0;
+
+  .flb-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include media-max(XS) {
+      justify-content: center;
+      gap: 1.5rem;
+    }
+  }
+  .ft-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    li {
+      a {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: $wbu-default-font-size;
+
+        color: white;
+      }
+    }
+  }
+  .explicit {
+    min-width: 2rem;
+    margin: 0;
+    font-size: $wbu-default-font-size * 1.1;
+  }
+}

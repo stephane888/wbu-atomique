@@ -1,0 +1,46 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.afc-nav {
+  display: flex;
+  flex-direction: column;
+  //gap: 2rem;
+  padding: 0;
+  margin: 0;
+  & > .active {
+    a {
+      color: black;
+      font-weight: bold;
+    }
+  }
+  &__item {
+    display: flex;
+    font-size: $wbu-default-font-size;
+    //gap: 2rem;
+    display: flex;
+    align-items: center;
+    a {
+      color: black;
+      padding: 1rem 2rem;
+      text-transform: capitalize;
+    }
+    &::before {
+      content: " ";
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+      left: 0;
+      transition: ease-in 0.3s;
+      @include wbu__angle-right(black, 12);
+    }
+    &:hover {
+      &::before {
+        left: 1rem;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

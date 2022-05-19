@@ -1,0 +1,53 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+.single-post {
+  margin-bottom: $wbu-margin;
+  display: flex;
+  @include media-min(DD) {
+    min-width: 35rem;
+  }
+  .post-img-handler {
+    margin-right: $wbu-margin;
+    .link {
+      position: relative;
+      display: inline-block;
+      img {
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+      }
+      &::before {
+        content: "";
+        top: 0;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: $wbu-color-primary;
+        position: absolute;
+        transition: ease-in-out 0.3s;
+      }
+      &:hover::before {
+        opacity: 0.5;
+      }
+    }
+  }
+  .post-link {
+    font-size: $wbu-h5-font-size;
+    @include media-max(XS) {
+      font-size: $wbu-h5-font-size * 0.8;
+    }
+    a {
+      color: $wbu-color-secondary;
+      font-weight: bolder;
+    }
+  }
+  .posted-date {
+    margin-top: $space_top * 0.2;
+    color: black;
+    font-size: $wbu-h6-font-size;
+  }
+}

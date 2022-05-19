@@ -1,0 +1,39 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.afc-search {
+  padding: 0 0 $wbu-margin * 4;
+  @include media-max(SM) {
+    padding-top: $wbu-margin * 4;
+  }
+  &__title {
+    font-size: $wbu-h5-font-size;
+    font-weight: bold;
+    margin-bottom: $wbu-margin * 1.5;
+    color: black;
+    text-transform: capitalize;
+  }
+  &__input {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      right: 2rem;
+      top: 26%;
+      transition: ease-in 0.3s;
+      @include wbu-search(black, 15);
+    }
+  }
+  & input {
+    padding: 2.2rem 1.8rem;
+    border-color: black;
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      border-color: $wbu-color-primary;
+    }
+  }
+}

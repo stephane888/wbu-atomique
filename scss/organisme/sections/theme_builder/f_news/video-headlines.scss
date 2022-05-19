@@ -1,8 +1,8 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
 @use "../../../../atome/f_news/load-more.scss";
+@use "./molecule/teaser/video-teaser.scss";
 @use "./variables.scss" as *;
-
 .video-headlines-section-handler {
   padding: $space-top 0;
 
@@ -17,87 +17,6 @@
       @include media-max(XX) {
         font-size: $wbu-h4-font-size;
       }
-    }
-  }
-  .video-single-card {
-    padding-bottom: $wbu-margin * 1.8;
-    .video-handler {
-      margin-bottom: $wbu-margin * 1.5;
-      position: relative;
-      .video-sup {
-        height: 100%;
-        width: 100%;
-        &::before {
-          content: "";
-          top: 0;
-          height: 100%;
-          opacity: 0;
-          width: 100%;
-          background: black;
-          position: absolute;
-          transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
-        }
-        &::after {
-          content: "";
-          width: 5rem;
-          height: 5rem;
-          position: absolute;
-          margin-right: 0.8rem;
-          display: inline-block;
-          left: 50%;
-          top: 50%;
-          opacity: 0.8;
-          transform: translate(-50%, -50%);
-          @include wbu-circle-play(white, 50);
-        }
-        &:hover {
-          &::before {
-            opacity: 0.5;
-          }
-          &::after {
-            opacity: 1;
-          }
-        }
-      }
-    }
-    .pub-info {
-      font-size: $wbu-default-font-size;
-      // padding: $wbu-margin;
-      color: $wbu-color-text;
-      text-align: left;
-      p {
-        margin: 0;
-      }
-    }
-    .card-text-descriptor {
-      font-size: $wbu-h4-font-size;
-      font-weight: bold;
-      text-align: left;
-      padding: $wbu-margin 0 $wbu-margin * 0.7;
-      @include media-max(MD) {
-        font-size: $wbu-h4-font-size * 0.8;
-      }
-      @include media-max(SM) {
-        font-size: $wbu-h4-font-size;
-      }
-      @include media-max(XS) {
-        font-size: $wbu-h4-font-size * 0.8;
-      }
-      a {
-        color: $wbu-color-secondary;
-        transition: ease 0.5s;
-      }
-      &:hover {
-        a {
-          text-decoration: underline;
-        }
-      }
-    }
-    .role {
-      font-size: $wbu-p-font-size;
-      color: black;
-      text-align: left;
-      text-transform: lowercase;
     }
   }
 }

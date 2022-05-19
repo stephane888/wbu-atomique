@@ -1,0 +1,173 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.single-mansory-card {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+
+  //position: relative;
+  &:hover {
+    .smc-body {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  .img-link {
+    position: relative;
+    display: inline-block;
+    .__img {
+      width: 100%;
+    }
+    &::before {
+      content: "";
+      top: 0;
+      height: 100%;
+      opacity: 0;
+      width: 100%;
+      left: 0;
+      background: $wbu-color-primary;
+      position: absolute;
+      transition: ease-in-out 0.2s;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      // border-bottom: 4px solid $wbu-color-primary;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(
+        150deg,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(0, 0, 0, 0.9) 100%
+      );
+      bottom: 0;
+      z-index: 2;
+      opacity: 1;
+      left: 0;
+      transition: ease-in-out 0.2s;
+    }
+    &:hover {
+      &::before {
+        opacity: 0.5;
+      }
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  .member-role {
+    font-size: $wbu-p-font-size;
+    color: $wbu-color-text;
+    color: white;
+    text-align: right;
+    padding-top: 4px;
+    @include media-max(XX) {
+      font-size: $wbu-default-font-size;
+    }
+  }
+  .member-name {
+    display: flex;
+    align-items: center;
+    .name {
+      color: $wbu-brand-color;
+      font-weight: $wbu-title-font-weight;
+      font-size: $wbu-h3-font-size * 0.8;
+      text-decoration: none;
+      transition: ease 0.3s;
+      color: white;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      @include media-max(MD) {
+        font-size: $wbu-h4-font-size;
+      }
+      @include media-max(SM) {
+        font-size: $wbu-h3-font-size;
+      }
+      @include media-max(XS) {
+        font-size: $wbu-h4-font-size;
+      }
+      @include media-max(XX) {
+        font-size: $wbu-h5-font-size;
+      }
+
+      &::after {
+        position: relative;
+        content: "";
+        width: 2rem;
+        height: 2rem;
+        top: 1px;
+        margin-left: 1rem;
+        @include wbu__angle-right(white, 18);
+      }
+    }
+  }
+  .smc-body {
+    pointer-events: none;
+    position: absolute;
+    bottom: 10%;
+    right: 4rem;
+    padding-bottom: 1rem;
+    z-index: 2;
+    &::after {
+      content: "";
+      border-radius: 8px;
+      // border-bottom: 4px solid $wbu-color-primary;
+      width: 0;
+      height: 4.5px;
+      position: absolute;
+      background-color: $wbu-color-primary;
+      bottom: 0;
+      transition: ease-in 0.2s;
+    }
+
+    @include media-max(XX) {
+      right: 3rem;
+    }
+  }
+
+  .load-more-button {
+    margin: $wbu-margin 0;
+    background-color: $wbu-color-primary;
+    font-size: $wbu-h6-font-size;
+    color: black;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    position: relative;
+    width: 15.8rem;
+    height: 5.2rem;
+    .btn-angle-right {
+      &::after {
+        content: "";
+        position: relative;
+        width: 0;
+
+        height: 2rem;
+        top: -2px;
+        display: inline-block;
+        opacity: 0;
+        transform: translateX(8px);
+        transition: ease-in-out 0.2s;
+        @include wbu__angle-right(black, 15);
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      .btn-angle-right::after {
+        position: relative;
+        opacity: 1;
+        width: 2rem;
+      }
+    }
+  }
+}

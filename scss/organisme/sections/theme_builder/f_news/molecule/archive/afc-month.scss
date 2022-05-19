@@ -1,0 +1,19 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.afc-month {
+  display: flex;
+  font-size: $wbu-p-font-size;
+  gap: 1.5rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(184, 184, 184, 0.589);
+  a {
+    color: $wbu-color-secondary;
+    padding: 1.5rem 0;
+    text-transform: capitalize;
+  }
+  span {
+    color: black;
+  }
+}
