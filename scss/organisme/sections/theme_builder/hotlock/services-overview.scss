@@ -14,24 +14,24 @@
         background: $wbu-color-secondary;
     }
     .head-title{
-        margin-top: $wbu-margin * 0.7;
-        font-size: $wbu-title-font-size * 0.75;
+        margin-top: $wbu-margin * 0.5;
+        font-size: $wbu-h2-font-size-sm ;
         font-weight: 400 !important ;
     }
     .subtitle{
-        margin-top: $space_top * 0.6;
-        font-size: $wbu-h3-font-size * 1.3;
+        margin-top: $space_inner_top;
+        font-size: $wbu-h1-font-size ;
     }
     .description{
-        margin-top: $wbu-margin 0.5;
-        font-size: $wbu-title-font-size* 0.55;
+        margin-top: $space-top;
+        font-size: $wbu-default-font-size;
     }
     .read-btn{
         background: $wbu-background;
-        width: 160px;
+        padding: $wbu-margin;
+        display: inline-block;
         text-align: center;
         margin-top: $space-top ;
-        padding: $wbu-btn-padding-x-sm;
         position: relative;
         &:hover{
             
@@ -63,7 +63,7 @@
         }
         .link{
             color: $wbu-border-color;
-            font-size: $wbu-title-font-size-sm * 0.6 ;
+            font-size: $wbu-title-font-size-sm  ;
             text-decoration: none;
             font-weight: 400;
             position: relative;
@@ -86,8 +86,8 @@
         }
         .card{
             cursor: pointer;
-            width: calc(100% + 50px);
-            height: 210px;
+            width: calc(120% + 20px);
+            height: 260px;
             background: $wbu-background;
             border-left: 0.2px solid $wbu-border-color;
             :is(.front, .back){
@@ -101,17 +101,18 @@
             }
             .front{
                 transform: perspective(600px) rotateY(0deg);
-                margin-top: $space_inner_top;
+                margin-top: $space-top;
+                display: block;
                 .icon{
-                   margin: $space-bottom * 0.5 ;
+                   margin-left: 33%;
                    color: $wbu-color-secondary;
                    height: 100vh;
                 }
                 .title{
                     color: $wbu-border-color;
                     text-align: center;
-                    margin-top: $space-top * 0.3;
-                    font-size: $wbu-h3-font-size * 0.7;
+                    margin-top: $space_inner_top;
+                    font-size: $wbu-title-font-size-sm;
                 }
             }
             .back{
