@@ -4,43 +4,61 @@
 
 .team-section-handler{
     overflow: hidden;
+    padding-top: $space-top;
     .title{
-        margin-top: $space-top * 0.5;   
-        font-size: $wbu-h1-font-size; 
-           
+        font-size: $wbu-titre-big; 
+        margin-bottom: $wbu-btn-padding-y-sm;
     }
     .all-team-lutin{
-        
-    
+        position: relative;
+        .img-handler{
+            overflow: hidden;
+            height: auto;
+            position: relative;
+            .user-img{
+                position: relative;
+                z-index: 10;
+                text-align: center;
+                height: fit-content;
+                display: block;
+                width: 100%;
+                transition: all 0.9s;
+                &:hover{
+                    height: fit-content;
+                }
+            }
+            &:hover{
+                .social-network{
+                    margin-top: -180px;
+                }
+            }
+        }
         .single-lutin{
+            overflow: hidden;
             .lutin-img{
                 overflow: hidden;
-                //background: seagreen;
-                margin-left: $wbu-margin;
-                img{
-                    height: 316px;
-                    overflow: hidden;
-                    &:hover{
-                        height: 325px;
-                        background-position: center center;
-                        transition: height 0.25s;
-                    }
-                }
                 .social-network{
-                    position: relative;
+                    z-index: 11;
+                    position: absolute;
                     color: $wbu-border-color;
-                    margin-top: -45;
-                    left: 45;
-                    height: 30px;
+                    bottom: 10%;
+                    left: 25%;
+                    display: block;
+                    height: 35px;
                     background: $wbu-background;
                     width: 150px;
+                    padding: auto;
                     display: none;
-                   
-    
                     .icon{
                         margin-left: auto;
                         margin-right: auto;
-    
+                        color: $wbu-border-color;
+                        .social-link{
+                            color: $wbu-border-color;
+                            &:hover{
+                                color: $wbu-color-secondary;
+                            }
+                        }
                         &::after{
                             content: "";
                             display: block;
@@ -63,15 +81,14 @@
                 &:hover{
 
                     .social-network{
-                        transition: all 9s;
                         display: block;
                     }
                 }
             }
             .lutin-name{
-                margin-top: $space-top * 0.4;
+                margin-top: $wbu-margin;
                 text-align: center;
-                font-size: $wbu-h3-font-size * 0.6;
+                font-size: $wbu-h3-font-size;
                 font-weight: bolder;
 
                 &:hover{
@@ -82,9 +99,7 @@
             }
             .lutin-poste{
                 text-align: center;
-                font-size: $wbu-h1-font-size-md * 0.35;
-                word-spacing: 3;
-                letter-spacing: 1.7;
+                font-size: $wbu-default-font-size;
                 color: $wbu-color-text;
                 
             }
@@ -97,9 +112,10 @@
         margin-left: auto;
         text-align: center;
         margin-right: auto;
-        margin-top: $space-top * 0.3;
-        padding: $wbu-btn-padding-x-sm;
+        margin-top: $space-top;
+        padding: $wbu-margin;
         position: relative;
+        cursor: pointer;
         &:hover{
             
             .link{
@@ -118,23 +134,19 @@
             transition: transform 0.5s;
             transform-origin: 0 0;
             transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-            
         }
         &::before{
             transform: scaleX(0);
         }
-        &:hover::before{
-            
+        &:hover::before{  
             transform: scaleX(1);
         }
         .link{
             color: $wbu-border-color;
-            font-size: $wbu-title-font-size-sm * 0.6 ;
+            font-size: $wbu-title-font-size;
             text-decoration: none;
             font-weight: 400;
             position: relative;
-            
-            
         }
     }
 }
