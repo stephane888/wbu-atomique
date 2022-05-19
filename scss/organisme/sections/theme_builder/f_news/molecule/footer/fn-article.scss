@@ -1,0 +1,71 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.fn-article {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  a {
+    &:hover {
+      color: $wbu-color-primary;
+    }
+  }
+  &__img {
+    display: inline-block;
+    position: relative;
+    max-height: 8rem;
+
+    @include media-max(SM) {
+      max-height: 6.5rem;
+    }
+    &::before {
+      content: "";
+      background-color: $wbu-color-primary;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: ease-in-out 0.3s;
+      bottom: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    &:hover {
+      &::before {
+        opacity: 0.5;
+      }
+    }
+  }
+  li {
+    display: flex;
+    gap: 1.5rem;
+    img {
+      width: 8rem;
+      height: 8rem;
+      object-fit: cover;
+      @include media-max(SM) {
+        width: 6.5rem;
+        height: 6.5rem;
+      }
+    }
+  }
+  .fna-title {
+    font-size: $wbu-h5-font-size;
+    color: $wbu-color-primary;
+    font-weight: bold;
+    @include media-max(XS) {
+      font-size: $wbu-h5-font-size * 0.7;
+    }
+    @include media-max(SM) {
+      font-size: $wbu-h5-font-size * 0.8;
+    }
+  }
+  .fna-date {
+    font-size: $wbu-default-font-size;
+    margin-top: 1rem;
+  }
+}

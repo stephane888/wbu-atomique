@@ -1,5 +1,9 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
+@use "./molecule/footer/fn-article.scss";
+@use "./molecule/footer/fns-menu.scss";
+@use "./molecule/footer/fns-social.scss";
+@use "./molecule/footer/footer-last.scss";
 @use "./variables.scss" as *;
 .footer-fnews {
   background-color: $bg-black;
@@ -42,194 +46,10 @@
         max-width: 45rem;
         align-items: center;
         text-align: center;
-      }
-    }
-
-    &-title {
-      font-size: $wbu-h4-font-size;
-      font-weight: bold;
-      color: white;
-      text-transform: capitalize;
-      margin-bottom: $wbu-margin * 0.7;
-    }
-    &-desc {
-      font-size: $wbu-h6-font-size;
-      font-weight: bold;
-      color: white;
-      text-transform: capitalize;
-      margin-bottom: $wbu-margin * 0.7;
-    }
-    &-img {
-      width: auto;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-  .fn-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    &-title {
-      font-size: $wbu-default-font-size;
-      margin: 0;
-    }
-    .list {
-      display: flex;
-      align-items: center;
-      svg {
-        margin-right: 1rem;
-      }
-      a {
-        text-decoration: none;
-        color: $wbu-color-boder;
-        transition: ease 0.3s;
-        font-size: $wbu-default-font-size;
-        &:hover {
-          color: $wbu-color-primary;
+        .card-social {
+          justify-content: center;
         }
       }
-    }
-    svg {
-      width: 2rem;
-      height: 2rem;
-      fill: $wbu-color-primary;
-      transition: ease 0.3s;
-    }
-  }
-  .fn-article {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    &__img {
-      display: inline-block;
-      position: relative;
-      max-height: 8rem;
-
-      @include media-max(SM) {
-        max-height: 6.5rem;
-      }
-      &::before {
-        content: "";
-        background-color: $wbu-color-primary;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: ease-in-out 0.3s;
-        bottom: 0;
-        width: 100%;
-        z-index: 10;
-      }
-      &:hover {
-        &::before {
-          opacity: 0.5;
-        }
-      }
-    }
-    li {
-      display: flex;
-      gap: 1.5rem;
-      img {
-        width: 7.5rem;
-        min-height: 100%;
-        object-fit: cover;
-        @include media-max(SM) {
-          width: 6.5rem;
-        }
-      }
-    }
-    .fna-title {
-      font-size: $wbu-h5-font-size;
-      color: $wbu-color-primary;
-      font-weight: bold;
-      @include media-max(XS) {
-        font-size: $wbu-h5-font-size * 0.7;
-      }
-      @include media-max(SM) {
-        font-size: $wbu-h5-font-size * 0.8;
-      }
-    }
-    .fna-date {
-      font-size: $wbu-default-font-size;
-      margin-top: 1rem;
-    }
-  }
-  .card-social {
-    display: flex;
-    gap: 1.5rem;
-    a {
-      &:hover {
-        svg {
-          transform: scale(1.2);
-        }
-      }
-    }
-    svg {
-      transition: 0.4s;
-      width: 4rem;
-      height: 4rem;
-      fill: $wbu-color-boder;
-    }
-  }
-  .fn-ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 1.5rem;
-    padding: 0;
-    &-li {
-      display: inline-block;
-      font-size: $wbu-default-font-size * 1.1;
-      text-transform: capitalize;
-
-      a {
-        color: $wbu-color-boder;
-        transition: ease 0.5s;
-        //line-height: $wbu-default-line-height * 1.8;
-        text-decoration: none;
-      }
-    }
-  }
-
-  .footer-last-bar {
-    margin-top: $wbu-margin * 1.5;
-    border-top: 1px solid rgba(255, 255, 255, 0.459);
-    padding: $wbu-margin 0;
-
-    .flb-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      @include media-max(XS) {
-        justify-content: center;
-        gap: 1.5rem;
-      }
-    }
-    .ft-list {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-      margin: 0;
-      li {
-        a {
-          text-transform: capitalize;
-          font-weight: bold;
-          font-size: $wbu-default-font-size;
-
-          color: white;
-        }
-      }
-    }
-    .explicit {
-      min-width: 2rem;
-      margin: 0;
-      font-size: $wbu-default-font-size * 1.1;
     }
   }
 }
