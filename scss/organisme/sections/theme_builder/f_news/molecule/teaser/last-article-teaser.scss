@@ -3,6 +3,10 @@
 @use "../.././variables.scss" as *;
 .single-post {
   margin-bottom: $wbu-margin;
+  display: flex;
+  @include media-min(DD) {
+    min-width: 35rem;
+  }
   .post-img-handler {
     margin-right: $wbu-margin;
     .link {
@@ -42,8 +46,7 @@
     }
   }
   .posted-date {
-    margin-top: $space_top * 0.4;
-    margin-left: $wbu-margin * 0.3;
+    margin-top: $space_top * 0.2;
     color: black;
     font-size: $wbu-h6-font-size;
   }

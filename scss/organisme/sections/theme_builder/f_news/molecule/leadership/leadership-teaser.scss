@@ -1,0 +1,71 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.single-member-card {
+  margin-bottom: $space_bottom;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  .lutin {
+    position: relative;
+    margin-bottom: $wbu-margin;
+    .img-link {
+      position: relative;
+      display: inline-block;
+      .__img {
+        border-radius: 100%;
+        width: 100%;
+      }
+      &::before {
+        content: "";
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        width: 100%;
+        left: 0;
+        border-radius: 100%;
+        background: $wbu-color-primary;
+        position: absolute;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) 0.7s;
+      }
+      &:hover::before {
+        opacity: 0.5;
+      }
+    }
+  }
+  .member-role {
+    font-size: $wbu-default-font-size;
+    color: $wbu-color-text;
+  }
+  .member-name {
+    .name {
+      color: $wbu-brand-color;
+      font-weight: $wbu-title-font-weight;
+      font-size: $wbu-h4-font-size;
+      text-decoration: none;
+      transition: ease 0.3s;
+      &:hover {
+        color: $wbu-color-secondary;
+      }
+    }
+  }
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    .icon {
+      padding: 5px;
+      .__svg {
+        color: $wbu-color-secondary;
+        height: 2rem;
+        width: 2rem;
+        transition: ease-in-out 0.3s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+}
