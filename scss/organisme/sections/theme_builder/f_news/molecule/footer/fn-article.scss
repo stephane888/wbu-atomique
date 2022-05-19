@@ -4,11 +4,17 @@
 
 .fn-article {
   display: flex;
-  gap: 2rem;
-  list-style: none;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
+  gap: 1.5rem;
+  padding-bottom: 1.2rem;
+  img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    @include media-max(SM) {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+  }
   a {
     &:hover {
       color: $wbu-color-primary;
@@ -40,19 +46,7 @@
       }
     }
   }
-  li {
-    display: flex;
-    gap: 1.5rem;
-    img {
-      width: 8rem;
-      height: 8rem;
-      object-fit: cover;
-      @include media-max(SM) {
-        width: 6.5rem;
-        height: 6.5rem;
-      }
-    }
-  }
+
   .fna-title {
     font-size: $wbu-h5-font-size;
     color: $wbu-color-primary;

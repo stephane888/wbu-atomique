@@ -1,6 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
 @use "../../../../atome/f_news/load-more.scss";
+@use "./molecule/teaser/feature-teaser.scss";
 @use "./variables.scss" as *;
 
 .featured-section-handler {
@@ -34,67 +35,6 @@
       padding-bottom: $wbu-margin * 1.8;
       @include media-max(SM) {
         padding-bottom: $wbu-margin * 1.5;
-      }
-      .featured-single-card {
-        .img-handler {
-          margin-bottom: $wbu-margin * 1.5;
-          position: relative;
-          .img-sup {
-            height: 100%;
-            width: 100%;
-            &::before {
-              content: "";
-              top: -1;
-              height: 100%;
-              opacity: 0;
-              width: 100%;
-              background: $wbu-color-primary;
-
-              transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
-              position: absolute;
-            }
-            &:hover::before {
-              opacity: 0.5;
-            }
-          }
-        }
-        .pub-info {
-          font-size: $wbu-default-font-size;
-          // padding: $wbu-margin;
-          color: $wbu-color-text;
-          text-align: center;
-          p {
-            margin: 0;
-          }
-        }
-        .card-text-descriptor {
-          font-size: $wbu-h4-font-size;
-          font-weight: bold;
-          text-align: center;
-          padding: $wbu-margin 0;
-          @include media-max(MD) {
-            font-size: $wbu-h4-font-size * 0.8;
-          }
-          @include media-max(SM) {
-            font-size: $wbu-h4-font-size;
-          }
-          a {
-            color: black;
-            transition: ease 0.5s;
-          }
-          &:hover {
-            a {
-              text-decoration: none;
-
-              color: $wbu-color-secondary;
-            }
-          }
-        }
-        .role {
-          font-size: $wbu-default-font-size;
-          color: $wbu-color-text;
-          text-align: center;
-        }
       }
     }
   }

@@ -1,0 +1,52 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+.single-story {
+  padding-bottom: $wbu-margin * 1.5;
+  .created-date {
+    font-size: $wbu-default-font-size;
+    color: $wbu-color-text;
+    p {
+      margin: 0;
+    }
+  }
+  .story-title {
+    font-size: $wbu-h4-font-size;
+    font-weight: bolder;
+    padding: $wbu-margin * 0.8 0;
+    @include media-max(XS) {
+      font-size: $wbu-h4-font-size * 0.8;
+    }
+    .link {
+      color: $wbu-color-secondary;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .story {
+    font-size: $wbu-p-font-size;
+    color: black;
+    font-weight: 500;
+    p {
+      margin: 0;
+    }
+  }
+  .pub-info {
+    padding: $wbu-margin * 0.8 0;
+    align-items: center;
+
+    .img-profile {
+      .img {
+        border-radius: 100%;
+        height: 4rem;
+      }
+    }
+    .role {
+      font-size: $wbu-default-font-size;
+      color: $wbu-color-text;
+      margin-left: $wbu-margin * 0.5;
+    }
+  }
+}
