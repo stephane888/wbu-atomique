@@ -4,7 +4,8 @@
 
 
 .products-section-handler{
-
+    padding-top: $space-top;
+    padding-bottom: $space-top;
     .section-title{
         margin-top: $space_inner_top;
         text-align: center;
@@ -13,22 +14,19 @@
         margin-bottom: $space_bottom * 0.5;
     }
     .all-products-area{
-        margin-left: auto;
-        margin-right: auto;
-        width: 94.5vw;
-
         .single-product{
             .prod-img{
                 overflow: hidden;
                 position: relative;
                 height: 260px;
+                 transition: cubic-bezier(0.075, 0.82, 0.165, 1);
                 &:hover{
-                    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+                   
                     background-position: center center;
                     
                     img{
                         height: 275px;
-                        transition: all 2s;
+                        transition: all 1s;
                     }
                 }
                 .sticker{
@@ -38,8 +36,8 @@
                     background: $wbu-color-secondary;
                     height: 50px;
                     width: 50px;
-                    padding-top: $wbu-margin * 0.5;
-                    font-size: $wbu-title-font-size-sm * 0.5;
+                    padding-top: $wbu-margin * 0.7;
+                    font-size: $wbu-default-font-size ;
                     color: $wbu-border-color;
                     text-align: center;
                     border-radius: 100%;
@@ -49,7 +47,7 @@
             .prod-name{
                 margin-top: $space_inner_top;
                 text-align: center;
-                font-size: $wbu-h2-font-size-sm * 0.6;
+                font-size: $wbu-h2-font-size-sm ;
                 color: $wbu-background;
 
                 &:hover{
@@ -60,7 +58,7 @@
             .prod-amount{
                 margin-top: $space_inner_top;
                 text-align: center;
-                font-size: $wbu-title-font-size-sm * 0.68;
+                font-size: $wbu-title-font-size-sm ;
             }
             .buy-btn{
                 background: $wbu-background;
@@ -69,8 +67,8 @@
                 margin-right: auto;
                 text-align: center;
                 font-weight: bold;
-                margin-top: $space-top * 0.3;
-                padding: $wbu-btn-padding-x-sm * 0.7;
+                margin-top: $wbu-margin;
+                padding: $wbu-btn-padding-x-sm ;
                 position: relative;
                 &:hover{
                     
@@ -102,7 +100,7 @@
                 }
                 .link{
                     color: $wbu-border-color;
-                    font-size: $wbu-title-font-size-sm * 0.6 ;
+                    font-size: $wbu-title-font-size-sm  ;
                     text-decoration: none;
                     font-weight: 400;
                     position: relative;
