@@ -170,6 +170,9 @@
           background-size: cover;
           height: 100%;
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: end;
           position: absolute;
           background-position: center center ;
           background-repeat: no-repeat;
@@ -185,11 +188,8 @@
           }
           
           .description{
-            margin-left: auto;
-            margin-right: $space-bottom;
-            margin-top: $space-top;
-            width: 35%;
             text-align: center;
+            padding: 2rem 2rem 0 0;
             @include media-max(SM) {
                 margin-left: auto;
                 margin-right: auto;
@@ -407,17 +407,15 @@
     }
     .services-items{
         background: $wbu-background;
-        .h-el{
-            border-right: 1px solid $wbu-color-primary;
-            border-bottom: 1px solid $wbu-color-primary;
-        }
         .element{
             text-decoration: none;
-           
-            display: block;
+            display: flex;
+            padding: 2rem;
             width: 100%;
             height: auto;
             position: static;
+            border-right: 1px solid $wbu-color-primary;
+            border-bottom: 1px solid $wbu-color-primary;
             &:hover{
                 color: $wbu-color-secondary;
                 .icon{

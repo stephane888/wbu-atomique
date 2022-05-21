@@ -2,7 +2,7 @@ import Swiper, {Navigation, Pagination, Parallax, Autoplay} from "swiper"
 Swiper.use([Navigation, Pagination, Parallax, Autoplay]);
 
 
-var swiper = new Swiper(".mySwiper", {
+/*var swiper = new Swiper(".mySwiper", {
     direction: "vertical",
     slidesPerView: 1,
     spaceBetween: 30,
@@ -16,7 +16,7 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
-
+*/
 
 let bacTop = document.querySelector(".bac-top-btn");
 bacTop.addEventListener("click", scrollUp);
