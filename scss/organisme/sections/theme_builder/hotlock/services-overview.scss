@@ -9,6 +9,7 @@
        max-width: 50rem;
        margin-left: auto;
        margin-right: auto;
+       padding: 4rem 2rem;
     &::before{
         content: "";
         width: 50px;
@@ -29,11 +30,10 @@
     .description{
         margin-top: $space-top;
         font-size: $wbu-default-font-size;
-        padding: 4rem 2rem;
     }
     .read-btn{
         background: $wbu-background;
-        padding: $wbu-margin;
+        padding: $wbu-margin*1.2 $wbu-margin*2;
         display: inline-block;
         text-align: center;
         margin-top: $space-top ;
@@ -68,9 +68,10 @@
         }
         .link{
             color: $wbu-border-color;
-            font-size: $wbu-title-font-size-sm  ;
+            font-size: $wbu-default-font-size  ;
             text-decoration: none;
-            font-weight: 400;
+            font-weight: bold;
+            letter-spacing: 1;
             position: relative;
             
             
@@ -94,6 +95,7 @@
             height: 260px;
             overflow: hidden;
             background: $wbu-background;
+            border: none;
             border-right: 1px solid rgba($wbu-border-color, 0.2);
             border-bottom: 1px solid rgba($wbu-border-color, 0.2);
            
@@ -103,7 +105,7 @@
                 overflow: hidden;
                 backface-visibility: hidden;
                 position: absolute;
-                transition: transform .6s linear;
+                transition: transform 0.5s ease;
                 
             }
             .front{
@@ -117,6 +119,7 @@
                 }
                 .title{
                     color: $wbu-border-color;
+                    margin-top: $wbu-margin;
                     text-align: center;
                     font-size: $wbu-title-font-size-sm;
                 }
