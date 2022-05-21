@@ -18,7 +18,7 @@
     }
    }
     .head-title{
-        margin-top: $wbu-margin * 0.5;
+        margin-top: $wbu-margin ;
         font-size: $wbu-h2-font-size-sm ;
         font-weight: 400 !important ;
     }
@@ -29,6 +29,7 @@
     .description{
         margin-top: $space-top;
         font-size: $wbu-default-font-size;
+        padding: 4rem 2rem;
     }
     .read-btn{
         background: $wbu-background;
@@ -91,8 +92,11 @@
         .card{
             cursor: pointer;
             height: 260px;
+            overflow: hidden;
             background: $wbu-background;
-            border-left: 0.2px solid $wbu-border-color;
+            border-right: 1px solid rgba($wbu-border-color, 0.2);
+            border-bottom: 1px solid rgba($wbu-border-color, 0.2);
+           
             :is(.front, .back){
                 width: 100%;
                 height: 100%;
@@ -104,31 +108,32 @@
             }
             .front{
                 transform: perspective(600px) rotateY(0deg);
-                padding-top: $wbu-btn-padding-y-sm;
-                display: block;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 .icon{
-                   margin-left: 33%;
                    color: $wbu-color-secondary;
-                   height: 100vh;
                 }
                 .title{
                     color: $wbu-border-color;
                     text-align: center;
-                    margin-top: $space_inner_top;
                     font-size: $wbu-title-font-size-sm;
                 }
             }
             .back{
-                background: $wbu-background;
+                background: $wbu-color-secondary;
                 transform: perspective(600px) rotateY(180deg);
                 
                 .back-content{
-                    color: $wbu-border-color;
+                    color: $wbu-background;
+                    background: $wbu-color-secondary;
                     text-align: center;
-                    width: 75%;
+                    padding: 1rem;
                     .title{
-                        color: $wbu-color-secondary;
-                        font-size: $wbu-h2-font-size * 0.5;
+                        color: $wbu-background;
+                        font-weight: bold;
+                        font-size: $wbu-h2-font-size-sm;
                     }
                     .description{
                         margin-top: $wbu-margin * 0.5;
