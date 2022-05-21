@@ -5,7 +5,10 @@
 
 .services-overview-section-handler{
     margin-top: $space-top;
-    margin-left: $wbu-margin * 1.8;
+   .service-description{
+       max-width: 50rem;
+       margin-left: auto;
+       margin-right: auto;
     &::before{
         content: "";
         width: 50px;
@@ -13,6 +16,7 @@
         display: block;
         background: $wbu-color-secondary;
     }
+   }
     .head-title{
         margin-top: $wbu-margin * 0.5;
         font-size: $wbu-h2-font-size-sm ;
@@ -86,7 +90,6 @@
         }
         .card{
             cursor: pointer;
-            width: calc(120% + 20px);
             height: 260px;
             background: $wbu-background;
             border-left: 0.2px solid $wbu-border-color;
@@ -101,7 +104,7 @@
             }
             .front{
                 transform: perspective(600px) rotateY(0deg);
-                margin-top: $space-top;
+                padding-top: $wbu-btn-padding-y-sm;
                 display: block;
                 .icon{
                    margin-left: 33%;
