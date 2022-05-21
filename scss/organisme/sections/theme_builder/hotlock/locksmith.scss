@@ -6,8 +6,14 @@
 
 .lock-smithing-service-handler{
    margin-top: $space_inner_top;
-
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-end;
+    .img-handler{
+        position: relative;
+    }
     .lock-info-section{
+        padding: 0 0 0 $wbu-margin * 3 ;
         &::before{
             content: "";
             width: 70px;
@@ -18,12 +24,17 @@
             margin-bottom: $space_bottom * 0.2;
         }
         .title{
-            font-size: $wbu-h2-font-size-sm * 0.55;
+            font-size: $wbu-title-font-size ;
             font-weight: bold;
             margin-bottom: $space_bottom * 0.7;
         }
         .description{
-            font-size: $wbu-h1-font-size-md;
+            font-size: $wbu-h1-font-size;
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            justify-content: space-between;
+            align-items: flex-start;
         }
         .lists{
             display: flex;
@@ -34,19 +45,25 @@
         .all-services{
             margin-top: $wbu-margin;
             padding-left: 0;
+            flex-direction: column;
+            text-align: center;
+            justify-content: start;
+            align-items: flex-start;
+            display: flex;
             .list-services{
                 color: $wbu-color-text;
+               
                 .element{
                     list-style-type: none;
-                    margin-top: $wbu-margin * 0.5;
+                    //margin-top: $wbu-margin * 0.5;
+                    
                     &::before{
                         content: "\2022";
                         position: initial;
                         color: $wbu-color-secondary;
                         font-weight: bold;
-                        display: inline-block; 
-                        width: 1em;
-                        margin-left: -1.12em;
+                        display: flex;
+
                     }
                 }
             }

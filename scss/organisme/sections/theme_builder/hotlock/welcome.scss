@@ -3,7 +3,8 @@
 @use "../../../../atome/typography/default";
 
 .welcome-section-handler{
-    margin-top: $space-top;
+    padding-top: $space-top;
+    padding-bottom: $space-bottom;
     .welcome-elements{
         &::before{
             content: "";
@@ -21,11 +22,11 @@
             margin-top: $space_inner_top * 0.5;
 
             .section-title{
-                font-size: $wbu-h1-font-size-md * 0.6;
+                font-size: $wbu-h2-font-size;
             }
             .welcome-words{
                 margin-top: $space-top * 0.5;
-                font-size: $wbu-h1-font-size-md * 0.8; 
+                font-size: $wbu-h1-font-size; 
             }
 
             .read-btn{
@@ -33,8 +34,8 @@
                 width: 150px;
                 text-align: center;
                 font-weight: bold;
-                margin-top: $space-top * 0.3;
-                padding: $wbu-btn-padding-x-sm ;
+                margin-top: $wbu-margin;
+                padding: $wbu-btn-padding-x-sm * 2  $wbu-btn-padding-x-sm * 1.5 ;
                 position: relative;
                 &:hover{
                     
@@ -66,7 +67,7 @@
                 }
                 .link{
                     color: $wbu-border-color;
-                    font-size: $wbu-title-font-size-sm * 0.6 ;
+                    font-size: $wbu-default-font-size ;
                     text-decoration: none;
                     font-weight: 400;
                     position: relative;

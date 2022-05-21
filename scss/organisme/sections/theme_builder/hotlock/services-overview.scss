@@ -10,6 +10,9 @@
        margin-left: auto;
        margin-right: auto;
        padding: 4rem 2rem;
+       @include media-max(SM){
+           max-width: 80rem;
+       }
     &::before{
         content: "";
         width: 50px;
@@ -33,7 +36,7 @@
     }
     .read-btn{
         background: $wbu-background;
-        padding: $wbu-margin*1.2 $wbu-margin*2;
+        padding: 1.5rem 4rem;
         display: inline-block;
         text-align: center;
         margin-top: $space-top ;
