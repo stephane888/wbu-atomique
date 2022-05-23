@@ -68,6 +68,11 @@
         font-size: $wbu-h5-font-size * 0.8;
       }
     }
+    .post-img-handler {
+      @include media-max(SM) {
+        min-width: 6.5rem;
+      }
+    }
     .link {
       img {
         width: 8rem;

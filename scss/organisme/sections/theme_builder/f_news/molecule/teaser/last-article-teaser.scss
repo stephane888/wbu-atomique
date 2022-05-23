@@ -9,6 +9,7 @@
   }
   .post-img-handler {
     margin-right: $wbu-margin;
+    min-width: 8rem;
     .link {
       position: relative;
       display: inline-block;
@@ -37,6 +38,11 @@
   }
   .post-link {
     font-size: $wbu-h5-font-size;
+    max-height: 2.2em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
     @include media-max(XS) {
       font-size: $wbu-h5-font-size * 0.8;
     }
