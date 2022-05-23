@@ -3,35 +3,39 @@
 @use "../../../../atome/typography/default";
 
 .our-services-handler{
+    margin-top: $space-top;
+    margin-bottom: $space-bottom;
+    position: initial;
     &::before{
         content: '';
         width: 50px;
         display: block;
         height: 3px;
         margin-top: $space-top * 0.6;
-        margin-left: $wbu-h1-margin * 3.35;
         margin-bottom: $wbu-margin * 0.49;
         background: $wbu-color-secondary;
     }
     .section-title{
-        font-size: $wbu-btn-font-size-sm;
+        font-size: $wbu-h2-font-size-sm ;
         color: $wbu-background;
         margin-bottom: $space-bottom * 0.7;
-        margin-left: $wbu-h1-margin * 3.35;
     }
 
     .services-column{
-        vertical-align: top;
+        //vertical-align: top;
+        height: 40rem;
         position: relative;
-        min-height: 1px;
-        padding-left: $wbu-btn-padding-y-sm * 1.5;
-        padding-right: $wbu-btn-padding-y-sm ;
         box-sizing: border-box;
         .all-service-item{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
             .single-service-items{
-                height: 70vh;
-                padding-bottom: $space-bottom * 0.4;
-
+                width: fit-content;
+                height: fit-content;
+                margin-right: $wbu-margin;
+                overflow: hidden;
                 &:hover{
                     transition: all 0.5s;
                     background: $wbu-background;
@@ -58,7 +62,9 @@
                 }
                 .item-image{
                     position: relative;
-                    left: -10.3;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     &::before{
                         content: "";
                         position: absolute;
@@ -91,8 +97,8 @@
                         display: none;
                         .icon{
                             position: relative;
-                            left: 11vw;
-                            top: 7vw;
+                            left: 0;
+                            top: 0;
                             i{
                                 svg{
                                     margin: -5;
@@ -102,33 +108,32 @@
                     }
                 }
                 .info-items{
-                    margin-top: $space-top * 0.5;
-                    margin-left: $wbu-h1-margin;
+                    margin: $wbu-margin * 1.3;
                     width: 280px;
-                    position: absolute;
+                    position: relative;
 
                     .item-title{
-                        margin-bottom: $space-bottom * 0.19;
+                        margin-bottom: $wbu-margin;
                        
                         h4{
 
                             a{
                                 color: $wbu-background;
                                 font-weight: 300;
-                                font-size: $wbu-h2-font-size * 0.49;
+                                font-size: $wbu-h2-font-size;
                                 text-decoration: none;
                             }
                         }
                     }
                     .descriptor-item{
-                        font-size: $wbu-btn-font-size-sm * 0.8;
+                        font-size: $wbu-default-font-size ;
                     }
                     .read-btn{
                         background: $wbu-background;
                         width: 150px;
                         text-align: center;
-                        margin-top: $space-top * 0.3;
-                        padding: $wbu-btn-padding-x-sm;
+                        margin-top: $wbu-margin * 1.5;
+                        padding: $wbu-margin *0.7  0 $wbu-margin *0.7 0;
                         position: relative;
                         &:hover{
                             color: $wbu-color-secondary;
@@ -158,8 +163,9 @@
                         }
                         .link{
                             color: $wbu-border-color;
-                            font-size: $wbu-title-font-size-sm * 0.6 ;
+                            font-size: $wbu-default-font-size ;
                             text-decoration: none;
+                            letter-spacing: 0.3rem;
                             font-weight: 400;
                             position: relative;
                             
@@ -184,5 +190,11 @@
         img{
             width: 106%;
         }
+    }
+    .services-column{
+        height: fit-content;
+    }
+    .single-service-items{
+        height: fit-content;
     }
 }

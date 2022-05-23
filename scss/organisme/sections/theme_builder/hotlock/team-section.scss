@@ -5,6 +5,9 @@
 .team-section-handler{
     overflow: hidden;
     padding-top: $space-top;
+    margin-top: $space-top;
+    margin-bottom: $space-bottom;
+    position: relative;
     .title{
         font-size: $wbu-titre-big; 
         margin-bottom: $wbu-btn-padding-y-sm;
@@ -13,18 +16,18 @@
         position: relative;
         .img-handler{
             overflow: hidden;
-            height: auto;
+            background: teal;
+            height: 80%;
             position: relative;
             .user-img{
                 position: relative;
                 z-index: 10;
-                text-align: center;
                 height: fit-content;
-                display: block;
                 width: 100%;
                 transition: all 0.9s;
                 &:hover{
-                    height: fit-content;
+                    transform: scale(1.5);
+                    background-position: bottom bottom;
                 }
             }
             &:hover{
@@ -40,18 +43,23 @@
                 .social-network{
                     z-index: 11;
                     position: absolute;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
                     color: $wbu-border-color;
-                    bottom: 10%;
-                    left: 25%;
-                    display: block;
+                    left: 3rem;
+                    //right: auto;
                     height: 35px;
                     background: $wbu-background;
-                    width: 150px;
-                    padding: auto;
-                    display: none;
+                    width: 70%;
+                    //padding: $wbu-margin;
+                    opacity: 0;
                     .icon{
-                        margin-left: auto;
-                        margin-right: auto;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         color: $wbu-border-color;
                         .social-link{
                             color: $wbu-border-color;
@@ -63,8 +71,9 @@
                             content: "";
                             display: block;
                             position: relative;
-                            left: 40;
-                            top: -25;
+                            left: 0;
+                            top: 0;
+                            margin: $wbu-margin *0.5;
                             height: 25px;
                             width: 1px;
                             background: $wbu-color-thirdly;
@@ -81,7 +90,9 @@
                 &:hover{
 
                     .social-network{
-                        display: block;
+                        opacity: 1;
+                        bottom: 25;
+                        transition: all 0.3s ease-in-out;
                     }
                 }
             }
@@ -107,33 +118,38 @@
         }
     }
     .aboutus-btn{
-        background: $wbu-background;
-        width: 300px;
-        margin-left: auto;
-        text-align: center;
-        margin-right: auto;
-        margin-top: $space-top;
-        padding: $wbu-margin;
-        position: relative;
-        cursor: pointer;
-        &:hover{
-            
-            .link{
-                z-index: 1;
+        display: flex;
+        margin-top: $space_inner_top;
+        margin-bottom: $space_inner_top;
+        justify-content: center;
+        align-items: center;
+        .link{
+            color: $wbu-border-color;
+            font-size: $wbu-default-font-size;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 0.3rem;
+            position: relative;
+            background: $wbu-background;
+            display: inline-block;
+            text-align: center;
+            padding: $wbu-margin;
+            z-index: 1;
+            &:hover{
                 color: $wbu-background;
             }
-        }
-        &::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: $wbu-color-secondary;
-            transition: transform 0.5s;
-            transform-origin: 0 0;
-            transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $wbu-color-secondary;
+                transition: transform 0.5s;
+                transform-origin: 0 0;
+                transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                z-index: -1;
         }
         &::before{
             transform: scaleX(0);
@@ -141,12 +157,6 @@
         &:hover::before{  
             transform: scaleX(1);
         }
-        .link{
-            color: $wbu-border-color;
-            font-size: $wbu-title-font-size;
-            text-decoration: none;
-            font-weight: 400;
-            position: relative;
         }
     }
 }

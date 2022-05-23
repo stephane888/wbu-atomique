@@ -13,6 +13,7 @@
         background-position: center !important;
         background-repeat: no-repeat;
         background-size: cover !important;
+        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -37,8 +38,7 @@
             font-size: $wbu-h2-font-size ;
             font-weight: lighter;
             margin-top: $wbu-margin ;
-            padding: 0 $space-bottom *6 0 $space-bottom *6;
-            margin-bottom: $space-bottom;
+            margin-bottom: $wbu-margin;
         }
         .learn-btn{
             background: $wbu-color-secondary;

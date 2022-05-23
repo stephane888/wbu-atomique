@@ -73,13 +73,14 @@
         color: $wbu-border-color;
     }
     .head-title{
+        display: flex;
         font-size: $wbu-titre-suppra;
         margin-top: $space-bottom;
         align-items: flex-start;
         justify-content: start;
     }
     .phone-number{
-
+    display: flex;
     justify-content: start;
     align-items: flex-start;
     font-size: $wbu-titre-biggest;

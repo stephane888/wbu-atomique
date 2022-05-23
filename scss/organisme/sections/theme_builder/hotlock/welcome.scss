@@ -5,6 +5,7 @@
 .welcome-section-handler{
     padding-top: $space-top;
     padding-bottom: $space-bottom;
+
     .welcome-elements{
         &::before{
             content: "";
@@ -35,6 +36,7 @@
                 text-align: center;
                 font-weight: bold;
                 margin-top: $wbu-margin;
+                margin-bottom: $wbu-margin;
                 padding: $wbu-btn-padding-x-sm * 2  $wbu-btn-padding-x-sm * 1.5 ;
                 position: relative;
                 &:hover{
