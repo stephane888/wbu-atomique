@@ -7,7 +7,7 @@
     margin-bottom: $wbu-margin * 1.5;
     position: relative;
     .img-sup {
-      height: 100%;
+      height: auto;
       width: 100%;
       &::before {
         content: "";
@@ -16,7 +16,7 @@
         opacity: 0;
         width: 100%;
         background: $wbu-color-primary;
-
+        pointer-events: none;
         transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
         position: absolute;
       }
@@ -38,7 +38,13 @@
     font-size: $wbu-h4-font-size;
     font-weight: bold;
     text-align: center;
-    padding: $wbu-margin 0;
+    margin: $wbu-margin 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    max-height: 12rem;
+
     @include media-max(MD) {
       font-size: $wbu-h4-font-size * 0.8;
     }
@@ -61,5 +67,8 @@
     font-size: $wbu-default-font-size;
     color: $wbu-color-text;
     text-align: center;
+    a {
+      color: $wbu-color-text;
+    }
   }
 }
