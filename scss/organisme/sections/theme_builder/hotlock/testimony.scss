@@ -1,0 +1,106 @@
+@use  "../../../../_variables.scss";
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+
+.testimony-section-handler{
+    //display: block;
+    background: url('https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_appointment.jpg?id=213') ;
+
+    .titles{
+        position: relative;
+        left: -140.8px;
+        height: auto;
+        box-sizing: border-box;
+        width: 1482px;
+        max-width: 1482px;
+        padding-left: 140.8px;
+        padding-right: 141.3px;
+        
+        .title-wrapper{
+            display: flex;
+            justify-content: start;
+            align-items: flex-start;
+            padding: $space-top $wbu-margin $space-top $space-top;
+            .title{
+                font-size: $wbu-h1-font-size;
+                color: $wbu-border-color;
+                padding: $space-top $wbu-margin $space-top $wbu-margin;
+                @include media-max(MD){
+                    line-height: 36px;
+                    margin-top: $wbu-margin * 0.5;
+                    margin-top: $wbu-margin * 0.2;
+                    letter-spacing: 0;
+                }
+            }
+        }
+        .btn-handler{
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            .link{
+                color: $wbu-background;
+                font-size: $wbu-default-font-size;
+                text-decoration: none;
+                position: relative;
+                background: $wbu-color-secondary;
+                display: inline-block;
+                text-align: center;
+                padding: $wbu-margin $space-top;
+                z-index: 1;
+                &:hover{
+                    color: $wbu-border-color;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $wbu-background;
+                    transition: transform 0.5s;
+                    transform-origin: 0 0;
+                    transition-timing-function: cubic-bezier(0.5,1.6,0.4);
+                    z-index: -1;
+            }
+            &::before{
+                transform: scaleX(0);
+            }
+            &:hover::before{  
+                transform: scaleX(1);
+            }
+            }
+        }
+        
+    }
+    .services-done-block{
+        .done{
+            background: $wbu-color-secondary;
+        }
+        .all-single-services{
+            padding: $space-bottom *2;
+            height: auto;
+            text-align: center;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            .services{
+                margin-right: $wbu-margin * 2;
+                &:first-child{
+                    margin-left: $wbu-margin * -1;
+                }
+                .icon{
+                    font-size: $wbu-titre-big;
+                }
+                .number{
+                    margin-top: $wbu-margin * 0.2;
+                    font-size: $wbu-titre-big;
+                }
+                .title{
+                    font-size: $wbu-h3-font-size;
+                }
+            }
+        }
+    }
+}

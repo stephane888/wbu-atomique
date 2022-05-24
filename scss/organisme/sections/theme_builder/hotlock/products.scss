@@ -6,6 +6,7 @@
 .products-section-handler{
     padding-top: $space-top;
     padding-bottom: $space-top;
+
     .section-title{
         margin-top: $space_inner_top;
         text-align: center;
@@ -14,29 +15,40 @@
         margin-bottom: $space_bottom * 0.5;
     }
     .all-products-area{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .single-product{
             .prod-img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 overflow: hidden;
                 position: relative;
                 height: 260px;
-                 transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+                 .img{
+                     width: fit-content;
+                     height: 100%;
+                 }
                 &:hover{
                    
                     background-position: center center;
                     
-                    img{
-                        height: 275px;
+                    .img{
+                        transform: scale(1.1);
                         transition: all 1s;
                     }
                 }
                 .sticker{
                     position: absolute;
-                    left: 200;
-                    top: 5;
+                    top: 5%;
+                    right: 5%;
+                    text-transform: uppercase;
+                    width: 3em;
                     background: $wbu-color-secondary;
-                    height: 50px;
-                    width: 50px;
-                    padding-top: $wbu-margin * 0.7;
+                    height: 3em;
+                    padding-top: $wbu-margin * 0.6;
                     font-size: $wbu-default-font-size ;
                     color: $wbu-border-color;
                     text-align: center;
@@ -68,6 +80,7 @@
                 text-align: center;
                 font-weight: bold;
                 margin-top: $wbu-margin;
+                margin-bottom: $wbu-margin;
                 padding: $wbu-btn-padding-x-sm ;
                 position: relative;
                 &:hover{
