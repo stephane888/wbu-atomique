@@ -17,7 +17,7 @@
     @include media-max(XS) {
       font-size: $wbu-h4-font-size * 0.8;
     }
-    .link {
+    a {
       color: $wbu-color-secondary;
       text-decoration: none;
       &:hover {
@@ -38,15 +38,20 @@
     align-items: center;
 
     .img-profile {
-      .img {
+      img {
         border-radius: 100%;
+        width: 4rem;
         height: 4rem;
+        object-fit: cover;
       }
     }
     .role {
       font-size: $wbu-default-font-size;
       color: $wbu-color-text;
       margin-left: $wbu-margin * 0.5;
+      a {
+        color: $wbu-color-text;
+      }
     }
   }
 }
