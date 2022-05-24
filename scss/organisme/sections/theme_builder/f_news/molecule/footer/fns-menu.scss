@@ -21,13 +21,13 @@
       display: inline-block;
       font-size: $wbu-default-font-size * 1.1;
       text-transform: capitalize;
-
+      margin-bottom: $wbu-margin * 0.9;
       a {
         color: $wbu-color-boder;
         transition: ease 0.5s;
         //line-height: $wbu-default-line-height * 1.8;
         text-decoration: none;
-        line-height: 2.5;
+        line-height: 1;
       }
     }
   }
