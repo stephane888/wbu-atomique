@@ -95,11 +95,16 @@
 
   margin: $wbu-margin auto;
   .link {
-    color: $wbu-color-secondary;
     padding: 0.8rem;
     //border-bottom: 1px solid $wbu-color-secondary;
-    text-decoration: none;
+
     position: relative;
+    display: inline-block;
+    &,
+    a {
+      text-decoration: none;
+      color: $wbu-color-secondary;
+    }
     &::after {
       content: "";
       width: 100%;
