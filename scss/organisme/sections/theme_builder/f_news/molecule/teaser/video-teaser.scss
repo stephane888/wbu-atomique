@@ -9,11 +9,17 @@
     .video-sup {
       height: 100%;
       width: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+        min-height: 100%;
+      }
       &::before {
         content: "";
         top: 0;
         height: 100%;
         opacity: 0;
+        pointer-events: none;
         width: 100%;
         background: black;
         position: absolute;
@@ -50,12 +56,22 @@
     p {
       margin: 0;
     }
+    a,
+    a:hover {
+      color: $wbu-color-text;
+    }
   }
   .card-text-descriptor {
     font-size: $wbu-h4-font-size;
     font-weight: bold;
     text-align: left;
-    padding: $wbu-margin 0 $wbu-margin * 0.7;
+    margin: $wbu-margin 0 $wbu-margin * 0.7;
+    max-height: 12rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: $wbu-color-secondary;
     @include media-max(MD) {
       font-size: $wbu-h4-font-size * 0.8;
     }
@@ -80,5 +96,9 @@
     color: black;
     text-align: left;
     text-transform: lowercase;
+    a,
+    a:hover {
+      color: black;
+    }
   }
 }
