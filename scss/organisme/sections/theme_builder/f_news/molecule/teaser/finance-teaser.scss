@@ -13,7 +13,13 @@
   .story-title {
     font-size: $wbu-h4-font-size;
     font-weight: bolder;
-    padding: $wbu-margin * 0.8 0;
+    margin: $wbu-margin * 0.8 0;
+    color: $wbu-color-secondary;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    max-height: 12rem;
     @include media-max(XS) {
       font-size: $wbu-h4-font-size * 0.8;
     }
@@ -40,7 +46,7 @@
     }
   }
   .pub-info {
-    padding: $wbu-margin * 0.8 0;
+    padding: $wbu-margin * 0.9 0;
     align-items: center;
 
     .img-profile {
