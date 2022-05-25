@@ -5,7 +5,7 @@
 .testimony-section-handler{
     //display: block;
     background: url('https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_appointment.jpg?id=213') ;
-
+    overflow: hidden;
     .titles{
         position: relative;
         left: -140.8px;
@@ -38,6 +38,7 @@
             display: flex;
             align-items: center;
             justify-content: end;
+            margin-bottom: $wbu-margin;
             .link{
                 color: $wbu-background;
                 font-size: $wbu-default-font-size;
@@ -74,7 +75,7 @@
         }
         
     }
-    .services-done-block{
+    .services-testimony{
         .done{
             background: $wbu-color-secondary;
         }
@@ -99,6 +100,58 @@
                 }
                 .title{
                     font-size: $wbu-h3-font-size;
+                }
+            }
+        }
+        .testimony-handler{
+            background: $wbu-background;
+            .testimony{
+                padding-top: $space-bottom;
+                padding-left: $space-top;
+                &::before{
+                    content: "";
+                    height: 2px;
+                    width: 55px;
+                    //display: block;
+                    margin-bottom: $wbu-margin;
+                    background: $wbu-color-secondary;
+                }
+            }
+            .title{
+                color: $wbu-border-color;
+                font-size: $wbu-h2-font-size;
+            }
+            .slider-container{
+                position: relative;
+                margin-top: $space-top;
+                display: flex;
+                width: 220%;
+                overflow: hidden;
+                .single-slide{
+                    padding-right: $space-bottom;
+                    overflow: hidden;
+                    width: 43%;
+                    cursor: grab;
+                    background: teal;
+                    margin-right: $space-bottom;
+                }
+                .speech{
+                    padding-right: $wbu-margin;
+                    line-height: 6rem;
+                    color: $wbu-border-color;
+                    font-size: $wbu-titre-big;
+                }
+                .info{
+                    display: flex;
+                    margin-top: $wbu-margin;
+                    .author{
+                        font-size: $wbu-h3-font-size;
+                        color: $wbu-border-color;
+                    }
+                    .company-name{
+                        padding: $wbu-margin * 0.25 0 0 $wbu-margin * 0.5;
+                        color: $wbu-color-boder;
+                    }
                 }
             }
         }
