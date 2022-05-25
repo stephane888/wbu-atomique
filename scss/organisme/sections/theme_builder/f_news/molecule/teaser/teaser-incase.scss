@@ -1,0 +1,126 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.bloc-img {
+  //max-width: 10rem;
+
+  //max-height: 40rem;
+  // max-width: 40rem;
+  min-width: 30rem;
+  width: 100%;
+  padding-bottom: $wbu-margin * 1.5;
+  // margin: 1.5rem;
+  //padding: 0;
+  // min-height: 30rem;
+  //cursor: pointer;
+  // flex-basis: calc(90% / 3);
+  // @include media-max(SM) {
+  //   flex-basis: calc(90% / 2);
+  //   //max-width: 90%;
+  //   min-height: 28rem;
+  //   min-width: 25rem;
+  // }
+  // @include media-max(XS) {
+  //   flex-basis: calc(90%);
+  //   //max-width: 90%;
+  //   min-height: 35rem;
+  // }
+  &-content {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: black;
+      opacity: 0.4;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+  &:hover {
+    .bloc-img__body {
+      transform: translateY(30px);
+      opacity: 1;
+    }
+    .bib-creator {
+      bottom: 10%;
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    //position: absolute;
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  &__body {
+    position: absolute;
+    padding: 1rem;
+    padding-left: 0;
+    top: 0;
+    left: 10%;
+    max-width: 90%;
+    transform: translateY(0px);
+    transition: ease 0.4s;
+    color: white;
+    z-index: 5;
+    opacity: 0;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+    @include media-max(SM) {
+      left: 5%;
+    }
+    .bib-title {
+      font-size: $wbu-h4-font-size;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 0.9rem;
+      max-height: 12rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      a,
+      a:hover {
+        color: white;
+      }
+      @include media-max(SM) {
+        font-size: $wbu-h4-font-size * 0.8;
+      }
+      @include media-max(MD) {
+        font-size: $wbu-h4-font-size * 0.9;
+      }
+    }
+    .bib-date {
+      font-size: $wbu-default-font-size;
+      text-transform: capitalize;
+      display: flex;
+      a {
+        color: $wbu-color-text;
+      }
+    }
+  }
+  .bib-creator {
+    &,
+    a,
+    a:hover {
+      color: white;
+    }
+    font-size: $wbu-default-font-size;
+    text-transform: uppercase;
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    z-index: 5;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    @include media-max(SM) {
+      left: 5%;
+    }
+  }
+}
