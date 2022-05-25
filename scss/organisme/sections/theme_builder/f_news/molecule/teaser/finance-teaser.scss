@@ -29,8 +29,14 @@
     font-size: $wbu-p-font-size;
     color: black;
     font-weight: 500;
+    .story-text,
     p {
       margin: 0;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      max-height: 12rem;
     }
   }
   .pub-info {
