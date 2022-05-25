@@ -34,6 +34,7 @@
         display: inline-block;
         left: 50%;
         top: 50%;
+        pointer-events: none;
         opacity: 0.8;
         transform: translate(-50%, -50%);
         @include wbu-circle-play(white, 50);

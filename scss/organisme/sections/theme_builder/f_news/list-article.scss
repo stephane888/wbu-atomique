@@ -1,0 +1,23 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./molecule/teaser/lal-item.scss";
+@use "./variables.scss" as *;
+
+.list-article {
+  &__title {
+    font-size: $wbu-h5-font-size;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: $wbu-margin;
+    color: black;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,81 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.last-article {
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+  &__img {
+    position: relative;
+    // height: 50rem;
+    overflow: hidden;
+    width: 100%;
+    //height: 100%;
+    display: block;
+    img {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-color: $wbu-color-primary;
+      opacity: 0;
+      z-index: 10;
+      display: block;
+      width: 100%;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+    &:hover {
+      &::after {
+        opacity: 0.5;
+      }
+    }
+    .lai-desc {
+      max-width: 65%;
+      font-size: $wbu-default-font-size;
+      line-height: 1.5;
+      text-decoration: none;
+      cursor: text;
+      padding: $wbu-margin * 0.8 $wbu-margin;
+      background-color: white;
+      color: black;
+      position: absolute;
+      margin: 0;
+      bottom: 0rem;
+      z-index: 14;
+      right: 0;
+      @include media-max(SM) {
+        font-size: $wbu-default-font-size * 0.9;
+      }
+    }
+  }
+  .card-body {
+    padding: $wbu-margin 0;
+    .card-title {
+      font-size: $wbu-h2-font-size;
+      font-weight: bold;
+      line-height: $wbu-default-line-height * 0.9;
+      margin-bottom: $wbu-margin * 0.8;
+      @include media-max(SM) {
+        font-size: $wbu-h2-font-size * 0.9;
+      }
+    }
+    .card-text {
+      font-size: $wbu-p-font-size;
+      text-decoration: none;
+      margin: 0;
+      //padding-bottom: $wbu-margin;
+      color: black;
+    }
+  }
+}
