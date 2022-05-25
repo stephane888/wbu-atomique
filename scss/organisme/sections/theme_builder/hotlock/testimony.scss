@@ -6,6 +6,7 @@
     //display: block;
     background: url('https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_appointment.jpg?id=213') ;
     overflow: hidden;
+    
     .titles{
         position: relative;
         left: -140.8px;
@@ -112,7 +113,7 @@
                     content: "";
                     height: 2px;
                     width: 55px;
-                    //display: block;
+                    display: block;
                     margin-bottom: $wbu-margin;
                     background: $wbu-color-secondary;
                 }
