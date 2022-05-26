@@ -118,7 +118,10 @@
       margin-bottom: $wbu-margin;
       text-transform: capitalize;
       .link-label {
-        color: $wbu-color-text;
+        a,
+        & {
+          color: $wbu-color-text;
+        }
         &:hover {
           text-decoration: underline;
           border-color: $wbu-color-text;
