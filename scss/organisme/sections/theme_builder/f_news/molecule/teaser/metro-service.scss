@@ -113,14 +113,22 @@
     .node-title {
       font-size: $wbu-h4-font-size * 1.1;
       font-weight: bold;
-      color: white;
-      transition: ease-in-out 0.3s;
       margin-bottom: $wbu-margin * 0.5;
       display: inline-block;
       line-height: 1;
       cursor: pointer;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
       text-transform: capitalize;
-      &:hover {
+      &,
+      a {
+        color: white;
+        transition: ease-in-out 0.3s;
+      }
+      &:hover,
+      &:hover a {
         color: white;
         text-decoration: none;
       }

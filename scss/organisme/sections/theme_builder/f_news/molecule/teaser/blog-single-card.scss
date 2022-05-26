@@ -15,6 +15,11 @@
       //   height: 100%;
       //   width: 100%;
       display: block;
+      img {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
       .date-show {
         padding: $wbu-margin * 0.5 $wbu-margin * 0.7;
         // width: 11rem;
@@ -35,7 +40,7 @@
           font-weight: bold;
           line-height: 1;
           @include media-max(XS) {
-            font-size: $wbu-h3-font-size * 0.8;
+            font-size: $wbu-h4-font-size * 0.8;
           }
         }
         &__date {
@@ -43,7 +48,7 @@
           font-size: $wbu-h6-font-size;
           color: black;
           @include media-max(XS) {
-            font-size: $wbu-h5-font-size * 0.8;
+            font-size: $wbu-h6-font-size * 0.8;
           }
         }
       }
@@ -56,6 +61,7 @@
         background: $wbu-color-primary;
         position: absolute;
         z-index: 1;
+        pointer-events: none;
         transition: cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
       }
       &:hover::before {
@@ -105,6 +111,13 @@
       color: $wbu-color-secondary;
       font-size: $wbu-h4-font-size * 1.2;
       font-weight: bold;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      a {
+        color: $wbu-color-secondary;
+      }
       @include media-max(XS) {
         font-size: $wbu-h4-font-size;
       }
@@ -113,7 +126,12 @@
   .pub-info {
     margin-bottom: $wbu-margin * 0.5;
     color: $wbu-color-text;
-    font-size: $wbu-default-font-size;
+    font-size: $wbu-default-font-size * 0.9;
+    text-transform: uppercase;
+    a,
+    a:hover {
+      color: $wbu-color-text;
+    }
   }
   .blog-preview {
     margin-bottom: $wbu-margin * 0.8;
@@ -122,17 +140,25 @@
   }
   .details {
     flex-wrap: wrap;
-    .read-more-btn {
+    a {
+      text-decoration: none;
       color: $wbu-color-secondary;
+    }
+    .read-more-btn {
       font-size: $wbu-p-font-size;
       margin-right: $wbu-margin * 2;
       padding: 0 0 8px;
-      text-align: center;
-      text-decoration: none;
+      margin-bottom: 5px;
       position: relative;
       // border-bottom: 2px solid $wbu-color-secondary;
       transition: all 0.5s;
       margin-bottom: 1rem;
+      &,
+      a {
+        text-align: center;
+        text-decoration: none;
+        color: $wbu-color-secondary;
+      }
       &::after {
         content: "";
         width: 100%;
@@ -151,18 +177,24 @@
       }
     }
     .log-link {
-      color: $wbu-color-secondary;
       margin-right: $wbu-margin * 0.2;
-      &:hover {
-        text-decoration: none;
-        color: $wbu-color-text;
+      a {
+        color: $wbu-color-secondary;
+        &:hover {
+          text-decoration: none;
+          color: $wbu-color-text;
+        }
       }
     }
     .link-comment {
-      color: $wbu-color-secondary;
       margin-right: $wbu-margin * 0.2;
       font-size: $wbu-p-font-size;
-      &:hover {
+      &,
+      a {
+        color: $wbu-color-secondary;
+      }
+      &:hover,
+      &:hover a {
         text-decoration: none;
         color: $wbu-color-text;
       }

@@ -4,17 +4,22 @@
   margin: $wbu-margin 0;
   background-color: $wbu-color-primary;
   font-size: $wbu-default-font-size;
-  color: black;
+
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
   position: relative;
-  width: 15.8rem;
-  height: 4.9rem;
+  min-width: 16.8rem;
+  min-height: 4.9rem;
 
-  transition: ease-in-out 0.3s;
+  &,
+  a {
+    color: black;
+    transition: ease-in-out 0.3s;
+    text-decoration: none;
+    line-height: 3;
+  }
   .btn-angle-right {
     &::after {
       content: "";
@@ -46,7 +51,7 @@
   margin: $wbu-margin 0;
   background-color: $wbu-color-primary;
   font-size: $wbu-default-font-size;
-  color: black;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +61,14 @@
   font-size: $wbu-default-font-size * 1.2;
   width: 100%;
   height: 4.9rem;
-  transition: ease-in-out 0.3s;
+
+  &,
+  a {
+    color: black;
+    transition: ease-in-out 0.3s;
+    text-decoration: none;
+    line-height: 1;
+  }
   & > :nth-child(1) {
     //background-color: red;
     flex-basis: 85%;
@@ -77,7 +89,8 @@
       @include wbu__angle-right(black, 15);
     }
   }
-  &:hover {
+  &:hover,
+  &:hover a {
     color: black;
     text-decoration: none;
     background-color: darken($color: $wbu-color-primary, $amount: 2.5);

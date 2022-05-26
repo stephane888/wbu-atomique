@@ -15,10 +15,14 @@
   .saf-author {
     //margin-bottom: $wbu-margin;
     &__img {
-      width: 6.5rem;
-      height: 6.5rem;
-      border-radius: 50%;
+      width: 100%;
       margin-bottom: $wbu-margin;
+      img {
+        width: 6.5rem;
+        height: 6.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
     }
     &__title {
       font-weight: bold;
@@ -70,6 +74,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      color: black;
       cursor: pointer;
       @include media-max(MD) {
         width: 6.5rem;
@@ -86,6 +91,8 @@
         svg {
           fill: $wbu-color-primary;
         }
+        color: $wbu-color-primary;
+        text-decoration: none;
       }
     }
   }
@@ -103,9 +110,12 @@
       margin-bottom: $wbu-margin;
       &__img {
         margin: 0;
-        width: 40px;
-        height: 40px;
-        border-radius: 0;
+        width: auto;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 0;
+        }
       }
       &__title {
         font-size: $wbu-h6-font-size;

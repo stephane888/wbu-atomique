@@ -27,7 +27,7 @@
         font-weight: bold;
         line-height: 1;
         @include media-max(XS) {
-          font-size: $wbu-h3-font-size * 0.8;
+          font-size: $wbu-h3-font-size * 0.7;
         }
       }
       &__date {
@@ -35,7 +35,7 @@
         font-size: $wbu-h5-font-size * 1.2;
         color: black;
         @include media-max(XS) {
-          font-size: $wbu-h5-font-size;
+          font-size: $wbu-h5-font-size * 0.9;
         }
       }
     }
@@ -62,6 +62,7 @@
         left: 0;
         position: absolute;
         z-index: 1;
+        pointer-events: none;
         transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
       }
       &:hover {
@@ -90,8 +91,12 @@
           margin-right: 1rem;
         }
         .link-label {
-          color: $wbu-color-text;
-          &:hover {
+          &,
+          a {
+            color: $wbu-color-text;
+          }
+          &:hover,
+          &:hover a {
             text-decoration: underline;
             border-color: $wbu-color-text;
           }
@@ -100,12 +105,22 @@
       .node-title {
         font-size: $wbu-h3-font-size;
         font-weight: bold;
-        color: black;
+
         transition: ease-in-out 0.3s;
         margin-bottom: $wbu-margin;
         display: inline-block;
         cursor: pointer;
-        &:hover {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        color: black;
+        a {
+          color: black;
+          transition: ease-in-out 0.3s;
+        }
+        &:hover,
+        &:hover a {
           color: $wbu-color-secondary;
           text-decoration: none;
         }
@@ -120,14 +135,21 @@
         }
       }
       .node-readmore {
-        color: $wbu-color-secondary;
         font-size: $wbu-p-font-size;
-        padding: 0 0 8px;
+
         text-align: center;
-        text-decoration: none;
+
         position: relative;
+        display: inline-block;
         transition: all 0.5s;
         margin-bottom: 1rem;
+        &,
+        a,
+        a:hover {
+          color: $wbu-color-secondary;
+          padding: 0 0 8px;
+          text-decoration: none;
+        }
         &::after {
           content: "";
           width: 100%;

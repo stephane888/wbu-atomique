@@ -16,6 +16,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    pointer-events: none;
+    &,
+    a,
+    a:hover {
+      color: $wbu-color-text;
+    }
     &__day {
       display: block;
       font-size: $wbu-h4-font-size;
@@ -45,6 +51,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    pointer-events: none;
     gap: 1rem;
     @include media-max(XX) {
       justify-content: start;
@@ -55,7 +62,12 @@
       font-size: $wbu-default-font-size * 0.8;
       text-transform: uppercase;
       background-color: #ffffff;
-      color: $wbu-color-text;
+
+      &,
+      a,
+      a:hover {
+        color: $wbu-color-text;
+      }
     }
   }
   &__img {
@@ -80,6 +92,7 @@
       left: 0;
       position: absolute;
       z-index: 1;
+      pointer-events: none;
       transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
     }
     &:hover {
@@ -112,12 +125,20 @@
     .node-title {
       font-size: $wbu-h4-font-size;
       font-weight: bold;
-      color: black;
-      transition: ease-in-out 0.3s;
       margin-bottom: $wbu-margin * 0.8;
       display: inline-block;
       cursor: pointer;
-      &:hover {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      &,
+      a {
+        color: black;
+        transition: ease-in-out 0.3s;
+      }
+      &:hover,
+      &:hover a {
         color: $wbu-color-secondary;
         text-decoration: none;
       }
