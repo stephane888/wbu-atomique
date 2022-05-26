@@ -118,17 +118,17 @@
       console.log("taille du ul:", ul.scrollHeight);
       if (ul.style.maxHeight) {
         ul.style.maxHeight = ul.scrollHeight;
-        ul.style.background = "blue";
+        ul.style.height = ul.scrollHeight;
         setTimeout(() => {
           ul.style.maxHeight = null;
-          ul.style.background = "pink";
+          ul.style.height = 0;
         }, 100);
       } else {
         ul.style.maxHeight = ul.scrollHeight;
-        ul.style.background = "yellow";
+        ul.style.height = ul.scrollHeight;
         setTimeout(() => {
           ul.style.maxHeight = "none";
-          ul.style.background = "green";
+          ul.style.height = auto;
         }, 600);
       }
     }
