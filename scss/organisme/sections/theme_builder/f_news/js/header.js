@@ -115,8 +115,10 @@
   function toggleAnimation(el) {
     const ul = el.querySelector("ul");
     if (ul) {
+      console.log("taille du ul:", ul.scrollHeight);
       if (ul.style.maxHeight) {
         ul.style.maxHeight = ul.scrollHeight;
+
         setTimeout(() => {
           ul.style.maxHeight = null;
         }, 100);
@@ -124,14 +126,16 @@
         ul.style.maxHeight = ul.scrollHeight;
         setTimeout(() => {
           ul.style.maxHeight = "none";
-        }, 500);
+        }, 600);
       }
     }
   }
   function showSmNav(nav) {
     if (nav) {
+      console.log("taille du nav:", nav.scrollHeight);
       if (nav.style.maxHeight) {
         nav.style.maxHeight = nav.scrollHeight;
+
         setTimeout(() => {
           nav.style.maxHeight = null;
         }, 200);
@@ -148,8 +152,12 @@
   let search = document.querySelector(".sn-search");
   let fermer = document.querySelector(".sn-hide");
   let blocSearch = document.querySelector(".sn-search-popup");
-  search.addEventListener("click", activeSearch);
-  fermer.addEventListener("click", activeSearch);
+  if (search && fermer) {
+    search.addEventListener("click", activeSearch);
+    fermer.addEventListener("click", activeSearch);
+  } else {
+    console.error("desoler pas de div pour la recherche");
+  }
 
   function activeSearch() {
     blocSearch.classList.toggle("sn-search-popup--show");

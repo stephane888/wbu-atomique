@@ -83,6 +83,7 @@
   .nav-list {
     display: flex;
     position: relative;
+    flex-wrap: wrap;
     & > .nav-item {
       &:nth-child(4) ~ * {
         @include media-max(MD) {
