@@ -111,6 +111,7 @@
       transition: ease 0.3s;
       overflow: hidden;
       height: 0;
+      text-transform: capitalize;
       &:hover {
         text-decoration: none;
       }
