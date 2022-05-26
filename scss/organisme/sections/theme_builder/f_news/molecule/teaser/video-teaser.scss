@@ -73,6 +73,9 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
     color: $wbu-color-secondary;
+    p {
+      margin: 0;
+    }
     @include media-max(MD) {
       font-size: $wbu-h4-font-size * 0.8;
     }

@@ -17,6 +17,9 @@
     justify-content: center;
     flex-direction: column;
     pointer-events: none;
+    p {
+      margin: 0;
+    }
     &,
     a,
     a:hover {

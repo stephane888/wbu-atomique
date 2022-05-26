@@ -20,6 +20,9 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
     max-height: 12rem;
+    p {
+      margin: 0;
+    }
     @include media-max(XS) {
       font-size: $wbu-h4-font-size * 0.8;
     }
