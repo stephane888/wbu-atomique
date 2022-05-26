@@ -12,3 +12,10 @@ $wbu-h4-font-size: $wbu-h1-font-size-sm * 1.4;
 $wbu-h5-font-size: $wbu-default-font-size * 1.6;
 $wbu-h6-font-size: $wbu-default-font-size * 1.15;
 $wbu-p-font-size: $wbu-default-font-size * 1.29;
+
+@mixin ellipseText($ligne: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $ligne;
+  overflow: hidden;
+}

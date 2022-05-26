@@ -71,6 +71,7 @@
     margin: 0;
     margin-left: 2rem;
     min-width: 10rem;
+    @include ellipseText();
     a {
       color: $wbu-color-text;
     }
