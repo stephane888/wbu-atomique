@@ -115,27 +115,25 @@
   function toggleAnimation(el) {
     const ul = el.querySelector("ul");
     if (ul) {
-      console.log("taille du ul:", ul.scrollHeight);
       if (ul.style.maxHeight) {
         ul.style.maxHeight = ul.scrollHeight;
-        ul.style.height = ul.scrollHeight;
+
         setTimeout(() => {
           ul.style.maxHeight = null;
-          ul.style.height = 0;
         }, 100);
       } else {
         ul.style.maxHeight = ul.scrollHeight;
-        ul.style.height = ul.scrollHeight;
+
+        console.log("taille du ul:", ul.scrollHeight, ul.style.maxHeight);
+        debugger;
         setTimeout(() => {
           ul.style.maxHeight = "none";
-          ul.style.height = auto;
         }, 600);
       }
     }
   }
   function showSmNav(nav) {
     if (nav) {
-      console.log("taille du nav:", nav.scrollHeight);
       if (nav.style.maxHeight) {
         nav.style.maxHeight = nav.scrollHeight;
 
@@ -144,9 +142,11 @@
         }, 100);
       } else {
         nav.style.maxHeight = nav.scrollHeight;
+        console.log("taille du nav:", nav.scrollHeight, nav.style.maxHeight);
+        debugger;
         setTimeout(() => {
           nav.style.maxHeight = "none";
-        }, 500);
+        }, 1000);
       }
     }
   }
