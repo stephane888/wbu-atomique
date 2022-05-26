@@ -123,9 +123,8 @@
         }, 100);
       } else {
         ul.style.maxHeight = ul.scrollHeight;
-
+        console.log("taille du nav:", nav.scrollHeight, nav.style.maxHeight);
         console.log("taille du ul:", ul.scrollHeight, ul.style.maxHeight);
-        debugger;
         setTimeout(() => {
           ul.style.maxHeight = "none";
         }, 600);
@@ -143,7 +142,6 @@
       } else {
         nav.style.maxHeight = nav.scrollHeight;
         console.log("taille du nav:", nav.scrollHeight, nav.style.maxHeight);
-        debugger;
         setTimeout(() => {
           nav.style.maxHeight = "none";
         }, 1000);
