@@ -1,0 +1,128 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+
+.second-nav {
+  & > .content {
+    display: flex;
+    align-items: center;
+
+    @include media-max(DD) {
+      flex-wrap: wrap;
+    }
+  }
+  &__brand {
+    margin-right: auto;
+    font-size: calc(3rem + 2.5vw);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    min-width: 0;
+    a {
+      color: black;
+    }
+
+    img {
+      max-width: 100%;
+      width: calc(30rem + 10%);
+      max-height: 10rem;
+      height: auto;
+      object-fit: cover;
+      @include media-max(XS) {
+        max-width: 15rem;
+      }
+    }
+    @include media-max(DD) {
+      font-size: calc(2rem + 2vw);
+      padding-left: 1rem;
+    }
+    &:hover {
+      text-decoration: none;
+      color: rgba($color: $wbu-brand-color, $alpha: 0.9);
+    }
+  }
+  ul li {
+    font-size: 1.4rem;
+    a {
+      padding: 5rem 2rem;
+      @include media-max(MD) {
+        padding: 4rem 2rem;
+      }
+      text-transform: capitalize;
+      font-weight: bold;
+      display: block;
+      color: black;
+      &:hover {
+        background-color: $wbu-color-primary;
+      }
+    }
+  }
+  .sn-list {
+    display: flex;
+    // background-color: gray;
+    // align-items: stretch;
+    // max-height: 10rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    @include media-max(SM) {
+      overflow: auto;
+    }
+  }
+  .sn-search {
+    background-color: $wbu-color-primary;
+    transition: 0.3s;
+    padding: 4rem 3.5rem;
+    display: block;
+    span {
+      display: block;
+      height: 1.8rem;
+      width: 2rem;
+    }
+    &:hover {
+      background-color: black;
+      .wbu-search::before {
+        @include wbu-search(white, 18);
+      }
+    }
+  }
+  .su-bloc {
+    display: flex;
+    justify-content: center;
+    //  width: 100%;
+  }
+  @include media-max(DD) {
+    &__brand {
+      min-width: 100%;
+    }
+    .su-bloc {
+      width: 100%;
+    }
+    .sn-list {
+      // justify-content: center;
+      // margin-right: auto;
+      position: relative;
+    }
+    .sn-search {
+      position: absolute;
+      right: 2rem;
+    }
+  }
+  @include media-max(SM) {
+    &__brand {
+      display: none;
+    }
+    .sn-list {
+      // justify-content: center;
+      // margin-right: auto;
+      position: relative;
+    }
+    .sn-search {
+      position: absolute;
+      right: 1.5rem;
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+.sn-search {
+  cursor: pointer;
+}
+.sn-search-popup {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.952);
+  color: white;
+  width: 100%;
+  height: 0px;
+  top: 0;
+  overflow: hidden;
+  left: 0;
+  opacity: 1;
+  z-index: -1;
+  gap: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: ease-in-out 0.4s;
+  .sn-hide {
+    position: absolute;
+    top: 4rem;
+    right: 6rem;
+    padding: 2rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      .wbu-close::before {
+        @include wbu-close($wbu-color-primary, 28);
+      }
+    }
+  }
+  &--show {
+    height: 100vh;
+    overflow: visible;
+    opacity: 1;
+    z-index: 100;
+    position: fixed;
+    .sn-hide {
+      opacity: 1;
+    }
+  }
+  input {
+    border: none;
+    height: 5rem;
+    font-size: $wbu-h3-font-size * 1.2;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-top: 2.5rem;
+    border-bottom: 1px solid black;
+    transition: border-color 0.3s;
+    position: relative;
+    background-color: transparent;
+    &:focus {
+      border: none;
+      box-shadow: none;
+      border-bottom: 2px solid;
+      border-color: $wbu-color-primary;
+      background-color: transparent;
+    }
+  }
+  .spu-content {
+    // position: relative;
+    width: inherit;
+    min-height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7rem;
+    margin-bottom: $wbu-margin;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 60rem;
+    position: relative;
+    &::after {
+      content: "";
+      width: 3rem;
+      height: 3rem;
+      margin: auto;
+      position: absolute;
+      top: calc(50% - 1rem);
+      right: 0;
+      transition: ease 0.3s;
+      transform: translate(-50%, -50%);
+      @include wbu-search(black, 18);
+    }
+  }
+  .logo {
+    //background-color: red;
+    width: 100%;
+    max-width: none;
+    // height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 20rem;
+      height: auto;
+    }
+
+    &-2 {
+      display: block;
+    }
+  }
+}
+
+.wbu-search {
+  position: relative;
+  &::before {
+    width: 3rem;
+    height: 3rem;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: ease 0.3s;
+    transform: translate(-50%, -50%);
+    content: "";
+    @include wbu-search(black, 18);
+  }
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li {
+  position: relative;
+}
+.wbu-close {
+  &::before {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    transition: ease 0.3s;
+    content: "";
+    transform: translate(-50%, -50%);
+    @include wbu-close(black, 28);
+  }
+}
