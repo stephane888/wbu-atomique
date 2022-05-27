@@ -1,0 +1,73 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../atome/typography/default";
+@use "../.././variables.scss" as *;
+.card-slide-control {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  .wbu-angle_right {
+    position: relative;
+    &::before {
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+
+      transition: ease 0.3s;
+      transform: translate(-50%, -50%);
+      @include wbu__angle-right(black, 25);
+    }
+  }
+  .wbu-angle-left {
+    position: relative;
+    &::before {
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      content: "";
+      top: 50%;
+
+      left: 50%;
+      transition: ease 0.3s;
+      transform: translate(-50%, -50%) rotate(180deg);
+      @include wbu__angle-right(black, 25);
+    }
+  }
+  .csc-angle {
+    display: flex;
+    gap: 0.5rem;
+    .csc-btn {
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+  .fn-nav-rect {
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .nav-slide-nav {
+    width: 3.5rem;
+    height: 0.7rem;
+    cursor: pointer;
+    //margin: 1rem 0.8rem;
+    border: 1px solid black;
+    background-color: transparent;
+    transition: ease 0.3s;
+    display: inline-block;
+    &:hover {
+      background-color: black;
+    }
+    &--active {
+      background-color: black;
+    }
+  }
+}

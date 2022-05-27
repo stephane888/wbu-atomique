@@ -3,66 +3,70 @@
 @use "./list-article.scss";
 @use "./molecule/teaser/slide-control.scss";
 @use "./molecule/teaser/last-article-card.scss";
+@use "./molecule/teaser/card-slide-control.scss";
 @use "./variables.scss" as *;
 
 .fn-home-hero {
-  .wbu-pause {
-    &::before {
-      width: 4rem;
-      height: 4rem;
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 50%;
-      transition: ease 0.3s;
-      transform: translate(-50%, -50%);
-      @include wbu-pause(black, 18);
-    }
-  }
-  .wbu-play {
-    &::before {
-      width: 4rem;
-      height: 4rem;
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 50%;
-      transition: ease 0.3s;
-      transform: translate(-50%, -50%);
-      @include wbu-play(black, 18);
-    }
-  }
-  .wbu-angle_right {
-    &::before {
-      width: 4rem;
-      height: 4rem;
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 50%;
-      transition: ease 0.3s;
-      transform: translate(-50%, -50%);
-      @include wbu__angle-right(black, 18);
-    }
-  }
-  .wbu-angle-left {
-    &::before {
-      width: 4rem;
-      height: 4rem;
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 50%;
-      transition: ease 0.3s;
-      transform: translate(-50%, -50%) rotate(180deg);
-      @include wbu__angle-right(black, 18);
-    }
-  }
+  // .wbu-pause {
+  //   &::before {
+  //     width: 4rem;
+  //     height: 4rem;
+  //     position: absolute;
+  //     content: "";
+  //     top: 50%;
+  //     left: 50%;
+  //     transition: ease 0.3s;
+  //     transform: translate(-50%, -50%);
+  //     @include wbu-pause(black, 18);
+  //   }
+  // }
+  // .wbu-play {
+  //   &::before {
+  //     width: 4rem;
+  //     height: 4rem;
+  //     position: absolute;
+  //     content: "";
+  //     top: 50%;
+  //     left: 50%;
+  //     transition: ease 0.3s;
+  //     transform: translate(-50%, -50%);
+  //     @include wbu-play(black, 18);
+  //   }
+  // }
+  // .wbu-angle_right {
+  //   &::before {
+  //     width: 4rem;
+  //     height: 4rem;
+  //     position: absolute;
+  //     content: "";
+  //     top: 50%;
+  //     left: 50%;
+  //     transition: ease 0.3s;
+  //     transform: translate(-50%, -50%);
+  //     @include wbu__angle-right(black, 18);
+  //   }
+  // }
+  // .wbu-angle-left {
+  //   &::before {
+  //     width: 4rem;
+  //     height: 4rem;
+  //     position: absolute;
+  //     content: "";
+  //     top: 50%;
+  //     left: 50%;
+  //     transition: ease 0.3s;
+  //     transform: translate(-50%, -50%) rotate(180deg);
+  //     @include wbu__angle-right(black, 18);
+  //   }
+  // }
   a {
     color: $wbu-color-secondary;
   }
   .fhh-content {
     background-color: $wbu-color-boder;
     padding: $space-top 0;
+  }
+  .slide-latest {
+    padding-bottom: $wbu-margin * 2;
   }
 }
