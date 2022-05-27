@@ -201,7 +201,8 @@
     .menu-icons {
       margin-right: 3rem;
       display: block;
-      transition: 0.3s;
+      transform: scale(1);
+      transition: ease 0.3s;
       span {
         width: 4rem;
         height: 4rem;
@@ -216,6 +217,9 @@
           transform: none;
         }
       }
+      &:hover {
+        transform: scale(1.1);
+      }
       //
     }
     .nav-list {
@@ -229,13 +233,13 @@
       overflow-x: hidden;
       max-height: 0;
       opacity: 0;
-      transition: max-height 0.6s, opacity 0.3s;
+      transition: max-height 0.4s, opacity 0.8s;
       .sub-menu {
         //display: none;
         max-height: 0;
         overflow: hidden;
         position: relative;
-        transition: max-height 0.6s;
+        transition: max-height 0.4s;
         .nav-item {
           width: 100%;
           & > .nav-link {
