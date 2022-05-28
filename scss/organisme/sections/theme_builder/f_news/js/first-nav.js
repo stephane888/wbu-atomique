@@ -76,7 +76,7 @@
   function isActive() {
     let active = fnewsHeader.classList.contains("active");
     if (active) {
-      showSmNav(firstNavUl);
+      showSmNav(fnewsHeader.querySelector(".first-nav .nav-list-mobile"));
       setTimeout(() => {
         fnewsHeader.classList.remove("active");
         firstNavUl.style = null;
@@ -84,7 +84,7 @@
     } else {
       fnewsHeader.classList.add("active");
 
-      showSmNav(firstNavUl);
+      showSmNav(fnewsHeader.querySelector(".first-nav .nav-list-mobile"));
     }
   }
   let attendre = false,
@@ -192,9 +192,9 @@
         nav.style.maxHeight = nav.scrollHeight;
         console.log("taille du nav:", nav.scrollHeight, nav.style.maxHeight);
 
-        // setTimeout(() => {
-        //   nav.style.maxHeight = "none";
-        // }, 600);
+        setTimeout(() => {
+          nav.style.maxHeight = "none";
+        }, 600);
       }
     }
   }
