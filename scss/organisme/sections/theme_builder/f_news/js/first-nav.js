@@ -76,7 +76,7 @@
   function isActive() {
     let active = fnewsHeader.classList.contains("active");
     if (active) {
-      showSmNav(fnewsHeader.querySelector(".first-nav .nav-list-mobile"));
+      showSmNav(firstNavUl);
       setTimeout(() => {
         fnewsHeader.classList.remove("active");
         firstNavUl.style = null;
@@ -84,7 +84,7 @@
     } else {
       fnewsHeader.classList.add("active");
 
-      showSmNav(fnewsHeader.querySelector(".first-nav .nav-list-mobile"));
+      showSmNav(firstNavUl);
     }
   }
   let attendre = false,
@@ -167,13 +167,13 @@
     const ul = el.querySelector("ul");
     if (ul) {
       if (ul.style.maxHeight) {
-        ul.style.maxHeight = ul.scrollHeight;
+        ul.style.maxHeight = ul.scrollHeight + "px";
 
         setTimeout(() => {
           ul.style.maxHeight = null;
         }, 200);
       } else {
-        ul.style.maxHeight = ul.scrollHeight;
+        ul.style.maxHeight = ul.scrollHeight + "px";
 
         setTimeout(() => {
           ul.style.maxHeight = "none";
@@ -184,12 +184,12 @@
   function showSmNav(nav) {
     if (nav) {
       if (nav.style.maxHeight) {
-        nav.style.maxHeight = nav.scrollHeight;
+        nav.style.maxHeight = nav.scrollHeight + "px";
         setTimeout(() => {
           nav.style.maxHeight = null;
         }, 100);
       } else {
-        nav.style.maxHeight = nav.scrollHeight;
+        nav.style.maxHeight = nav.scrollHeight + "px";
         console.log("taille du nav:", nav.scrollHeight, nav.style.maxHeight);
 
         setTimeout(() => {
