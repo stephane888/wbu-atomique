@@ -82,14 +82,22 @@
     .link-btn {
       padding: $wbu-margin * 0.5 $wbu-margin * 1.2;
       border: 1px solid $wbu-color-secondary;
-      color: $wbu-color-secondary;
-      text-decoration: none;
-      transition: 0.5s;
       display: inline-block;
       text-transform: capitalize;
+      cursor: pointer;
+
+      &,
+      a {
+        color: $wbu-color-secondary;
+        text-decoration: none;
+        transition: 0.5s;
+      }
       &:hover {
         background: $wbu-color-secondary;
         color: white;
+        a {
+          color: white;
+        }
       }
     }
     &-black {
