@@ -11,7 +11,7 @@
       transform: translateY(-20%);
       .head-nav {
         opacity: 1;
-        max-height: 5rem;
+        max-height: 6rem;
         margin-bottom: 1rem;
       }
       .node-date {
@@ -69,10 +69,12 @@
       max-height: 0;
       overflow: hidden;
       margin: 0;
-      li {
+      .link-label {
         &:first-child {
           padding-left: 0;
-          & > a::before {
+          display: flex;
+          align-items: center;
+          &::before {
             content: "";
             width: 2rem;
             height: 2rem;

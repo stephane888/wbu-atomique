@@ -111,10 +111,7 @@
       color: $wbu-color-secondary;
       font-size: $wbu-h4-font-size * 1.2;
       font-weight: bold;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
+      @include ellipseText(2);
       a {
         color: $wbu-color-secondary;
       }
@@ -134,9 +131,13 @@
     }
   }
   .blog-preview {
-    margin-bottom: $wbu-margin * 0.8;
+    margin-bottom: $wbu-margin * 1.2;
     font-size: $wbu-p-font-size;
     color: black;
+    @include ellipseText(3);
+    p {
+      margin: 0;
+    }
   }
   .details {
     flex-wrap: wrap;

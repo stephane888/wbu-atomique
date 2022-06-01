@@ -108,7 +108,7 @@
     text-align: center;
     .head-nav {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
       justify-content: center;
       font-size: $wbu-h6-font-size;
       align-items: center;
@@ -117,10 +117,12 @@
       list-style: none;
       margin-bottom: $wbu-margin;
       text-transform: capitalize;
+      flex-wrap: wrap;
       .link-label {
         a,
         & {
           color: $wbu-color-text;
+          padding: 0 5px;
         }
         &:hover {
           text-decoration: underline;

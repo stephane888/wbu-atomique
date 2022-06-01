@@ -73,6 +73,7 @@
     }
     &__body {
       margin-bottom: $wbu-margin;
+
       .head-nav {
         display: flex;
         gap: 1rem;
@@ -83,6 +84,7 @@
         list-style: none;
         margin-bottom: $wbu-margin;
         text-transform: capitalize;
+        flex-wrap: wrap;
         .promoted-label {
           padding: 0.4rem 0.8rem;
           background: black;
