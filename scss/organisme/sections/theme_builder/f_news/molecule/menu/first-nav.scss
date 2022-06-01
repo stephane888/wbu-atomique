@@ -86,9 +86,80 @@
     flex-wrap: wrap;
     justify-content: end;
     & > .nav-item {
-      &:nth-child(4) ~ * {
-        @include media-max(MD) {
+      &:nth-child(7) ~ * {
+        @include media-min(M) {
           .sub-menu {
+            //left: -25rem;
+            & ul {
+              left: -25rem;
+              & ul {
+                left: 25rem;
+                & ul {
+                  left: -25rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(7) ~ * {
+        @include media-min(LM) {
+          .sub-menu {
+            //left: -25rem;
+            & ul {
+              left: 25rem;
+              & ul {
+                left: -25rem;
+                & ul {
+                  left: 25rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(4) ~ * {
+        @include media-max(DD) {
+          .sub-menu {
+            left: 0;
+            & ul {
+              left: -25rem;
+
+              & ul {
+                left: 25rem;
+
+                & ul {
+                  left: -25rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(6) ~ * {
+        @include media-max(MS) {
+          .sub-menu {
+            right: 0;
+            left: auto;
+            & ul {
+              left: -25rem;
+              right: auto;
+              & ul {
+                left: 25rem;
+                right: auto;
+                & ul {
+                  left: -25rem;
+                  right: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(4) {
+        @include media-max(MS) {
+          .sub-menu {
+            //left: -25rem;
             & ul {
               left: -25rem;
               & ul {
