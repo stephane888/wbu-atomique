@@ -6,7 +6,8 @@
   & > .content {
     display: flex;
     align-items: center;
-
+    justify-content: end;
+    flex-wrap: wrap;
     @include media-max(DD) {
       flex-wrap: wrap;
     }
@@ -75,6 +76,7 @@
     }
   }
   .sn-search {
+    height: 100%;
     background-color: $wbu-color-primary;
     transition: 0.3s;
     padding: 4rem 3.5rem;
@@ -96,6 +98,7 @@
   .su-bloc {
     display: flex;
     justify-content: center;
+    position: relative;
     //  width: 100%;
   }
   @include media-max(DD) {
