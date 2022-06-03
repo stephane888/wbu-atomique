@@ -13,15 +13,19 @@
     .link-btn {
       padding: $wbu-margin * 0.5 $wbu-margin * 1.2;
       border: 1px solid $bg-gray;
-      color: $wbu-color-secondary;
-      text-decoration: none;
-      transition: 0.5s;
+
       display: inline-block;
       text-transform: capitalize;
       font-size: $wbu-default-font-size * 1.05;
       background-color: $bg-gray;
-      color: black;
+
       cursor: pointer;
+      a,
+      & {
+        color: black;
+        text-decoration: none;
+        transition: 0.5s;
+      }
       &:hover {
         background: $wbu-color-primary;
       }
@@ -29,8 +33,12 @@
     &__active {
       .link-btn {
         background-color: $bg-black;
-        color: white;
+
         cursor: pointer;
+        a,
+        & {
+          color: white;
+        }
         &:hover {
           background-color: $bg-black;
         }

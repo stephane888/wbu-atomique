@@ -73,7 +73,19 @@
     }
     &__body {
       margin-bottom: $wbu-margin;
-
+      .promoted-label {
+        padding: 0.4rem 0.8rem;
+        background: black;
+        color: white;
+        display: inline-flex;
+        margin-right: 1rem;
+      }
+      .head-nav-div {
+        display: flex;
+        align-items: center;
+        margin-bottom: $wbu-margin;
+        flex-wrap: wrap;
+      }
       .head-nav {
         display: flex;
         gap: 1rem;
@@ -82,17 +94,11 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        margin-bottom: $wbu-margin;
         text-transform: capitalize;
         flex-wrap: wrap;
-        .promoted-label {
-          padding: 0.4rem 0.8rem;
-          background: black;
-          color: white;
-          display: inline-flex;
-          margin-right: 1rem;
-        }
+
         .link-label {
+          padding: 1rem 0;
           &,
           a {
             color: $wbu-color-text;
