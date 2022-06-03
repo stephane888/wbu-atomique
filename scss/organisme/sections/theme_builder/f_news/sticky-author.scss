@@ -29,8 +29,16 @@
       font-size: $wbu-p-font-size;
       color: black;
       font-weight: bold;
+      a {
+        color: black;
+      }
       .author-by {
         display: none;
+      }
+      &:hover {
+        a {
+          color: black;
+        }
       }
     }
   }

@@ -5,6 +5,13 @@
 @use "./variables.scss" as *;
 .single-showcase_fnews {
   padding: $space-top * 0.5 0 $space-top;
+  a {
+    color: $wbu-color-secondary;
+    &:hover {
+      color: $wbu-color-secondary;
+      text-decoration: underline;
+    }
+  }
   .ss-author {
     padding: $wbu-margin 0;
     display: flex;
@@ -103,12 +110,6 @@
     margin: 0;
     @include media-max(XX) {
       font-size: $wbu-h6-font-size;
-    }
-    a {
-      color: $wbu-color-secondary;
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 
