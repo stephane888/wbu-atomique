@@ -11,12 +11,14 @@
   padding: 0 $wbu-margin * 0.8 $wbu-margin;
   position: sticky;
   top: 7rem;
-  margin-bottom: $wbu-margin;
+  //margin-bottom: $wbu-margin;
   .saf-author {
     //margin-bottom: $wbu-margin;
     &__img {
       width: 100%;
       margin-bottom: $wbu-margin;
+      display: flex;
+      justify-content: center;
     }
     img {
       width: 6.5rem;
@@ -110,6 +112,7 @@
     padding: $wbu-margin $wbu-margin $wbu-margin * 0.5;
     //flex-direction: row;
     gap: 0;
+    max-width: 50rem;
     .saf-author {
       display: flex;
       gap: 1rem;
