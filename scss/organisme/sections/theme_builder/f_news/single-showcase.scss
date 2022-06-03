@@ -106,8 +106,11 @@
   p {
     font-size: $wbu-p-font-size;
     padding: $wbu-margin 0;
-    color: $color-p-single;
+    color: darken($color: $color-p-single, $amount: 8);
     margin: 0;
+    span {
+      font-size: $wbu-p-font-size;
+    }
     @include media-max(XX) {
       font-size: $wbu-h6-font-size;
     }
