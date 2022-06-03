@@ -53,6 +53,7 @@
     padding: $wbu-margin * 0.9 0;
     align-items: center;
     text-transform: capitalize;
+    display: flex;
     .img-profile {
       img {
         border-radius: 100%;
