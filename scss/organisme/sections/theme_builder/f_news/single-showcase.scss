@@ -57,6 +57,10 @@
       display: inline-block;
       margin: $wbu-margin * 1.5 0;
       position: relative;
+      img {
+        width: 100%;
+        height: auto;
+      }
       &::before {
         content: "";
         top: 0;
@@ -90,7 +94,8 @@
       }
     }
   }
-  .ssf-paragraph {
+  .ssf-paragraph,
+  p {
     font-size: $wbu-p-font-size;
     padding: $wbu-margin 0;
     color: $color-p-single;

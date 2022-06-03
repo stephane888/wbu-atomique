@@ -17,12 +17,12 @@
     &__img {
       width: 100%;
       margin-bottom: $wbu-margin;
-      img {
-        width: 6.5rem;
-        height: 6.5rem;
-        border-radius: 50%;
-        object-fit: cover;
-      }
+    }
+    img {
+      width: 6.5rem;
+      height: 6.5rem;
+      border-radius: 50%;
+      object-fit: cover;
     }
     &__title {
       font-weight: bold;
