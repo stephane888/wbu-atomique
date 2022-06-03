@@ -106,9 +106,16 @@
         border: 1px solid $wbu-color-text;
         color: white;
         cursor: text;
+        a {
+          color: white;
+        }
         &:hover {
           background-color: $wbu-color-text;
           border: 1px solid $wbu-color-text;
+          a {
+            color: white;
+            text-decoration: none;
+          }
         }
       }
     }
