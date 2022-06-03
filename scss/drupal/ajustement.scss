@@ -1,0 +1,10 @@
+// Ce fichier permet d'ajuster, les styles.
+// Version : Drupal 8/9;
+/**
+ * Correction drupal/field_formatter
+ */
+// Les boutons sont crees avec les liens pour cela on doit ajouter les class btn au niveau de la balise A.
+// le module "drupal/field_formatter_class": "^1.5",  ne le fait pas. il aajoute les class au niveau des balises parent.
+.btn.field a {
+  color: inherit;
+}

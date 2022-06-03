@@ -6,15 +6,16 @@
 $owl-color-active: $wbu-color-primary !default;
 $owl-color-default: $wbu-border-color !default;
 
-.owl-theme-default {
+.owl-default {
   .owl-theme .owl-nav.disabled + .owl-dots {
     margin: 0;
   }
   .owl-item {
+    margin-bottom: $wbu-margin;
     > div {
       width: 100%;
+      display: flex;
     }
-
     img {
       height: auto !important;
       width: auto !important;

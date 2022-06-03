@@ -125,7 +125,6 @@ $d_button: $d_description + 0.2;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-     
 
     .title {
       font-weight: 900;
@@ -157,6 +156,55 @@ $d_button: $d_description + 0.2;
       background-color: #fff;
       &.swiper-pagination-bullet-active {
         background-color: $wbu-color-primary;
+      }
+    }
+  }
+}
+.layout-region {
+  .swiper-big-v3 {
+    .swiper-slide {
+      .swiper-image {
+        .cover-text {
+          font-size: $wbu-default-font-size * 1.5;
+          text-align: center;
+          font-weight: 600;
+          color: $wbu-color-text;
+          background-color: rgb(255 255 255 / 0.1%);
+          padding: $wbu-margin;
+          max-width: 500px;
+          @include media-min(DD) {
+            margin-right: 50px;
+          }
+          .sub_title {
+            display: none;
+          }
+          .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: $wbu-default-font-size * 1.6;
+            letter-spacing: normal;
+            text-shadow: none;
+            img {
+              max-width: 200px;
+              max-height: 100px;
+            }
+          }
+        }
+        .cover-img {
+          img {
+            transform: translateY(40%);
+            margin-top: -40%;
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+      &.swiper-slide-active {
+        .cover-text {
+          background-color: rgb(255, 255, 255);
+        }
       }
     }
   }

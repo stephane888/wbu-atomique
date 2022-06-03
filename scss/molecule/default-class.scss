@@ -1,0 +1,36 @@
+/** 
+* Contient une liste de class par defaut, utilisé dans la construction de tout rendu html.
+*/
+@use "../wbu-ressources-clean.scss" as *;
+@use "../variables";
+//on ajoute les models de puces.
+@use "./steph/puce-check.scss";
+@use "./steph/puce-dd-check.scss";
+@use "./steph/puce-step-vertical.scss";
+
+.space_bottom,
+.space-bottom {
+  margin-bottom: $space_bottom;
+}
+.space-padding {
+  padding-top: $space_top;
+  padding-bottom: $space_bottom;
+}
+.space-inner-bottom {
+  margin-bottom: $space_inner_top;
+}
+.padding-top {
+  padding-top: $space_top;
+}
+.margin-top {
+  margin-top: $space_top;
+}
+.padding-bottom {
+  padding-bottom: $space_bottom;
+}
+.bg-theme {
+  background-color: $wbu-background !important;
+}
+.text-theme {
+  color: $wbu-color-primary;
+}

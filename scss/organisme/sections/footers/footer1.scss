@@ -13,17 +13,21 @@
       margin-bottom: 0px;
       background: none;
     }
+    .bold {
+      font-weight: 400;
+      margin-bottom: $wbu-margin * 0.5;
+    }
+    .timing {
+      margin-top: $wbu-margin * 2;
+      .bold {
+        font-weight: 600;
+        margin-bottom: $wbu-margin * 0.5;
+      }
+    }
     a {
       color: #fff;
       &:hover {
         color: #fff;
-      }
-    }
-
-    .timing {
-      margin-top: $wbu-margin;
-      p.bold {
-        color: #ccc;
       }
     }
 
@@ -87,29 +91,9 @@
   .footer-links li a:hover {
     color: #fff;
   }
-  .footer p.bold {
-    font-weight: 400;
-    color: #fff;
-    margin-bottom: 0px;
-  }
+
   .footer .widget .contact i {
-    display: block;
-    color: #fff;
-    line-height: 1;
-    font-size: 36px;
-    float: left;
-    margin-right: 20px;
-    margin-top: 4px;
-    text-transform: uppercase;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    padding-top: 0px;
-    height: 48px;
-    width: 48px;
-    text-align: center;
-    cursor: pointer;
+    display: inline-block;
   }
 
   /* Social Icons
@@ -126,7 +110,9 @@
   .social-icons li a i {
     width: 40px;
     height: 40px;
-    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #64696e;
     color: #fff;
     border-radius: 50%;
