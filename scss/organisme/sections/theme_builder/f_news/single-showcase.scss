@@ -1,7 +1,8 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
-@use "./variables.scss" as *;
 @use "../../../../atome/f_news/tag-btn.scss";
+@use "./atome/blog-btn.scss";
+@use "./variables.scss" as *;
 .single-showcase_fnews {
   padding: $space-top * 0.5 0 $space-top;
   .ss-author {

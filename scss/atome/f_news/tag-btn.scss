@@ -5,17 +5,24 @@
   .link-btn {
     padding: $wbu-margin * 0.5 $wbu-margin * 1.2;
     border: 1px solid $wbu-color-secondary;
-    color: $wbu-color-secondary;
-    text-decoration: none;
+
     transition: 0.5s;
     display: inline-block;
     text-transform: capitalize;
     font-size: $wbu-default-font-size * 1.05;
     background-color: transparent;
     cursor: pointer;
+    &,
+    a {
+      color: $wbu-color-secondary;
+      text-decoration: none;
+    }
     &:hover {
       color: white;
       background: $wbu-color-secondary;
+      a {
+        color: white;
+      }
     }
   }
   &__active {
