@@ -1,0 +1,58 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables" as *;
+@mixin block {
+  //background-color: rgb(219 219 225 / 30%);
+  background-color: rgba($color: $wbu-background, $alpha: 0.03);
+  border: 1px solid rgba($color: $wbu-background, $alpha: 0.05);
+  border-radius: $wbu-margin * 0.25;
+  padding: $wbu-margin * 0.5;
+  margin-bottom: $wbu-margin;
+}
+.manomano__product {
+  &--title {
+    font-size: $wbu-h3-font-size;
+  }
+  &--images {
+    text-align: center;
+    @include block();
+  }
+  &--block {
+    @include block();
+    padding: $wbu-margin;
+    .layout-region {
+      margin-bottom: $wbu-margin * 0.5;
+      i {
+        display: inline-block;
+        width: $wbu-default-font-size * 2;
+        text-align: left;
+      }
+    }
+  }
+  &--price {
+    font-size: $wbu-h3-font-size;
+    font-weight: 900;
+    color: $wbu-color-primary;
+  }
+  &--header {
+    margin-bottom: $space_inner_top;
+  }
+  .titleblock {
+    font-size: $wbu-title-font-size;
+    margin-bottom: $wbu-margin;
+    font-weight: 900;
+  }
+  .block-title {
+    .title {
+      font-size: $wbu-h3-font-size;
+    }
+  }
+  .field.owl-carousel {
+    display: flex;
+    .owl-dot {
+      margin-bottom: 2px;
+      &.active {
+        border-top: 2px solid $wbu-color-primary;
+      }
+    }
+  }
+}

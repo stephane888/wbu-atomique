@@ -6,6 +6,9 @@
 $owl-color-active: $wbu-color-primary !default;
 $owl-color-default: $wbu-border-color !default;
 
+.owlcarousel {
+  max-width: 100%;
+}
 .owl-default {
   .owl-theme .owl-nav.disabled + .owl-dots {
     margin: 0;
