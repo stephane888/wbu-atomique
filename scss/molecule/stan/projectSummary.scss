@@ -1,35 +1,33 @@
-@use '../../defaut/model/custom_bp.scss' as *;
-@use '../../variables' as *;
-@use "../../atome/typography/default";
-@use './reinsuranceItem.scss';
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables" as *;
 
 .projectSummary {
-  display      : flex;
-  @include media-min(MS) {
-    margin-left : $wbu-margin*2.5;
-    margin-right: $wbu-margin*2.5;
-  }
-  margin-bottom: $wbu-margin*2.5;
+  display: flex;
+  max-width: $with_tablet;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: $wbu-margin * 2.5;
   //justify-content: space-around;
-  border-top   : 1px solid rgba(160, 160, 160, 0.227);
+  border-top: 1px solid rgba(160, 160, 160, 0.227);
 
   &__square {
-    display        : flex;
-    width          : 30%;
-    padding        : 2rem;
+    display: flex;
+    width: 30%;
+    padding: 2rem;
     //background-color: rgb(240, 240, 240);
     justify-content: center;
-    position       : relative;
+    position: relative;
     //border-left: 1px solid rgba(160, 160, 160, 0.227);
     &::after {
-      content         : "";
-      height          : 30%; //You can change this if you want smaller/bigger borders
-      width           : 1px;
-      display         : flex;
-      align-items     : center;
-      position        : absolute;
-      right           : 0;
-      top             : 78px; // If you want to set a smaller height and center it, change this value
+      content: "";
+      height: 30%; //You can change this if you want smaller/bigger borders
+      width: 1px;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 78px; // If you want to set a smaller height and center it, change this value
       @include media-max(XS) {
         top: 50px;
       }
@@ -47,22 +45,22 @@
 
       p {
         margin: 0.5rem 0 0;
-        color : #959595;
+        color: #959595;
         @include media-max(XX) {
           font-size: $wbu-default-font-size * 0.8;
-          margin   : 0;
+          margin: 0;
         }
       }
 
       &__iconContainer {
-        width          : 90px;
-        height         : 90px;
+        width: 90px;
+        height: 90px;
         justify-content: center;
-        display        : flex;
-        align-items    : center;
-        margin         : 0;
+        display: flex;
+        align-items: center;
+        margin: 0;
         @include media-max(XS) {
-          width : 50px;
+          width: 50px;
           height: 50px;
         }
       }
@@ -77,22 +75,22 @@
       }
 
       &__title {
-        font-size    : $wbu-default-font-size * 2;
-        font-weight  : 300;
-        margin-top   : 2rem;
+        font-size: $wbu-default-font-size * 2;
+        font-weight: 300;
+        margin-top: 2rem;
         margin-bottom: 0.5rem;
         @include media-max(XS) {
-          font-size    : $wbu-default-font-size * 1.2;
+          font-size: $wbu-default-font-size * 1.2;
           margin-bottom: -5px;
         }
         @include media-max(XX) {
           font-size: $wbu-default-font-size * 0.8;
-          margin   : 0 0 -5px;
+          margin: 0 0 -5px;
         }
 
         .number-unit {
           font-size: $wbu-default-font-size * 1.5;
-          color    : black;
+          color: black;
           @include media-max(XS) {
             font-size: $wbu-default-font-size * 1;
           }

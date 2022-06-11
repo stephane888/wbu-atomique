@@ -4,11 +4,11 @@
 .main-twentytwenty {
   .buttons {
     .seeMore {
-      margin          : 0 0 $wbu-margin/1.5;
-      border          : 1px solid $wbu-border-color;
-      color           : lighten($wbu-color-text, 10);
-      background-color: #FFF;
-      font-weight     : 400;
+      margin: 0 0 $wbu-margin/1.5;
+      border: 1px solid $wbu-border-color;
+      color: lighten($wbu-color-text, 10);
+      background-color: #fff;
+      font-weight: 400;
       @include WBUtransition();
 
       &.after-before {
@@ -17,17 +17,24 @@
 
       &.active {
         background-color: $wbu-color-primary;
-        border-color    : $wbu-color-primary;
-        color           : #fff;
+        border-color: $wbu-color-primary;
+        color: #fff;
       }
+    }
+  }
+
+  .container-vue-general {
+    &.show {
+      display: flex;
+      justify-content: center;
     }
   }
 }
 
 .container-zurb-twentytwenty {
   .zurb-twentytwenty {
-    max-width   : 1000px;
-    margin-left : auto;
+    max-width: 1000px;
+    margin-left: auto;
     margin-right: auto;
   }
 
