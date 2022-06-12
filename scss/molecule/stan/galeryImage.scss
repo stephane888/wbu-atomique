@@ -12,10 +12,13 @@
     flex-grow: 0;
     max-width: 75%;
     position: relative;
+    overflow: hidden;
+    min-height: 400px;
 
     img {
       width: auto;
-      height: 100%;
+      min-height: 100%;
+      min-width: 100%;
       position: absolute;
       right: 5px;
     }

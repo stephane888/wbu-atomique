@@ -1,0 +1,44 @@
+@use "../../wbu-ressources.scss" as *;
+@use "../../variables" as *;
+.menu-categories {
+  ul {
+    list-style: none;
+  }
+  .hierarchical-term__menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    .block {
+      margin-bottom: 0 !important;
+    }
+    li {
+      a {
+        color: inherit;
+      }
+      svg {
+        width: 20px;
+        fill: #000;
+        margin-right: $wbu-margin * 0.5;
+      }
+      img {
+        width: 20px;
+        margin-right: $wbu-margin * 0.5;
+      }
+    }
+    > li {
+      width: 25%;
+      min-width: 300px;
+      margin-bottom: $wbu-margin * 0.75;
+      > .block-taxonomymenu__link {
+        font-weight: 600;
+      }
+      .hierarchical-term__menu--sub {
+        padding-left: $wbu-margin * 1.5;
+
+        .hierarchical-term__menu--sub .hierarchical-term__menu--sub {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

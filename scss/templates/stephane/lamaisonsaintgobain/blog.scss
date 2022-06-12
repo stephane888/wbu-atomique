@@ -3,22 +3,22 @@
   On surchage les variables;
 */
 $wbu-title-font-weight: 600;
-@use "../../../bootstrap-grid.scss";
-@use "../../../molecule/steph/header-blog";
-@use "../../../molecule/stan/billetDeBlogTeaser";
-@use "../../../molecule/stan/paragraphList";
-@use "../../../molecule/stan/serviceBlock-module";
-@use "../../../molecule/stan/pushNewsletter";
-@use "../../../molecule/steph/group-button-light";
-@use "../../../molecule/steph/puce-check.scss";
+// @use "../../../bootstrap-grid.scss";
+// @use "../../../molecule/steph/header-blog";
+// @use "../../../molecule/stan/billetDeBlogTeaser";
+// @use "../../../molecule/stan/paragraphList";
+// @use "../../../molecule/stan/serviceBlock-module";
+// @use "../../../molecule/stan/pushNewsletter";
+// @use "../../../molecule/steph/group-button-light";
+// @use "../../../molecule/steph/puce-check.scss";
 
 .home-blog {
-  margin-bottom: $wbu-margin*2.5;
+  margin-bottom: $wbu-margin * 2.5;
 }
 
 .lesroisdelareno-entete-project {
   padding-bottom: 8rem;
-  margin-bottom : $wbu-margin*3;
+  margin-bottom: $wbu-margin * 3;
 
   &::before {
     display: none;
@@ -31,15 +31,15 @@ $wbu-title-font-weight: 600;
 
 .serviceBlock-module {
   &__serviceMessage {
-    margin : $wbu-margin $wbu-margin/1.25 $wbu-margin*1.5;
-    padding: $wbu-margin*2.5 $wbu-margin 0;
+    margin: $wbu-margin $wbu-margin/1.25 $wbu-margin * 1.5;
+    padding: $wbu-margin * 2.5 $wbu-margin 0;
   }
 
   .paragraphList {
-    margin-bottom: $wbu-margin*2;
+    margin-bottom: $wbu-margin * 2;
   }
 }
 
 .group-button-light {
-  margin-bottom: $wbu-margin*2.5;
+  margin-bottom: $wbu-margin * 2.5;
 }
