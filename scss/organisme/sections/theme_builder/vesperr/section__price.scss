@@ -2,6 +2,42 @@
 @import "../../../../variables";
 
 .pricing {
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+    //background:black;
+
+    p {
+      margin: 15px 0 0 0;
+      font-size: $wbu-title-font-size;
+    }
+
+    h2 {
+      font-size: $wbu-h1-font-size;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: relative;
+      color: #222222;
+
+      &::before {
+        content: "";
+        margin: 0 15px 10px 0;
+        width: 50px;
+        height: 2px;
+        background: $wbu-color-primary;
+        display: inline-block;
+      }
+
+      &::after {
+        content: "";
+        margin: 0 0 10px 15px;
+        width: 50px;
+        height: 2px;
+        background: $wbu-color-primary;
+        display: inline-block;
+      }
+    }
+  }
   .box {
     padding: 20px;
     background: #f9f9f9;
