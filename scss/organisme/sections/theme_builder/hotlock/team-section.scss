@@ -64,7 +64,7 @@
                         .social-link{
                             color: $wbu-border-color;
                             &:hover{
-                                color: $wbu-color-secondary;
+                                color:$wbu-color-primary;
                             }
                         }
                         &::after{
@@ -79,7 +79,7 @@
                             background: $wbu-color-thirdly;
                         }
                         &:hover{
-                            color: $wbu-color-secondary;
+                            color:$wbu-color-primary;
                         }
                         &:last-child::after{
                             content: "";
@@ -104,7 +104,7 @@
 
                 &:hover{
                     cursor: pointer;
-                    color: $wbu-color-secondary;
+                    color:$wbu-color-primary;
                     transition: all 0.2s;
                 }
             }
@@ -145,7 +145,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: $wbu-color-secondary;
+                background:$wbu-color-primary;
                 transition: transform 0.5s;
                 transform-origin: 0 0;
                 transition-timing-function: cubic-bezier(0.5,1.6,0.4);

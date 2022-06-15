@@ -1,0 +1,67 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+@use "../atome/hotlock-btn.scss";
+
+.hotlock-hero {
+  position: relative;
+  width: 100%;
+
+  height: 65vh;
+  .img-bloc {
+    position: relative;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      opacity: 0.5;
+      background: black;
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+    }
+  }
+  .hth-content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .title {
+      font-size: $wbu-h2-font-size;
+      margin-bottom: $wbu-margin;
+      color: darken($color: $wbu-background, $amount: 10);
+      max-width: 40rem;
+    }
+    .sub-title {
+      font-size: $wbu-titre-suppra * 0.8;
+      color: white;
+      max-width: 70rem;
+      @include media-max(DD) {
+        font-size: $wbu-titre-biggest;
+      }
+      @include media-max(SM) {
+        font-size: $wbu-titre-big;
+      }
+    }
+    .htl-btn {
+      margin-top: $space-top;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+.hotlock-bac-top {
+  position: fixed;
+  right: 3rem;
+  bottom: 4rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: ease 0.4s;
+  z-index: 15;
+
+  .btn-bac-top {
+    width: 5rem;
+    height: 5rem;
+    background-color: $wbu-background;
+    color: $wbu-color-primary;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: ease 0.3s;
+    display: flex;
+    //position: relative;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: $wbu-color-primary;
+      color: $wbu-background;
+    }
+  }
+}

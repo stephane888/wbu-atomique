@@ -3,8 +3,7 @@
 @use "../../../../atome/typography/default";
 
 .welcome-section-handler{
-    padding-top: $space-top;
-    padding-bottom: $space-bottom;
+    padding: $space-top 0;
 
     .welcome-elements{
         &::before{
@@ -12,7 +11,7 @@
             position: relative;
             height: 1.5px;
             width: 40px;
-            background: $wbu-color-secondary;
+            background:$wbu-color-primary;
             left: 55;  
         }
         width: 90%;
@@ -29,54 +28,11 @@
                 margin-top: $space-top * 0.5;
                 font-size: $wbu-h1-font-size; 
             }
-
-            .read-btn{
-                background: $wbu-background;
-                width: 150px;
-                text-align: center;
-                font-weight: bold;
-                margin-top: $wbu-margin;
-                margin-bottom: $wbu-margin;
-                padding: $wbu-btn-padding-x-sm * 2  $wbu-btn-padding-x-sm * 1.5 ;
-                position: relative;
-                &:hover{
-                    
-                    .link{
-                        z-index: 1;
-                        transition: all 0.5s;
-                        color: $wbu-background;
-                    }
-                }
-                &::before{
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: $wbu-color-secondary;
-                    transition: transform 0.5s;
-                    transform-origin: 0 0;
-                    transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-                    
-                }
-                &::before{
-                    transform: scaleX(0);
-                }
-                &:hover::before{
-                    
-                    transform: scaleX(1);
-                }
-                .link{
-                    color: $wbu-border-color;
-                    font-size: $wbu-default-font-size ;
-                    text-decoration: none;
-                    font-weight: 400;
-                    position: relative;
-                    
-                    
-                }
-            }
+.htl-btn {
+    margin-top: $wbu-margin;
+    margin-bottom: $wbu-margin;
+}
+          
         }
         .img-element{
             margin-left: auto;

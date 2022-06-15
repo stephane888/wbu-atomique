@@ -13,7 +13,7 @@
         height: 3px;
         margin-top: $space-top * 0.6;
         margin-bottom: $wbu-margin * 0.49;
-        background: $wbu-color-secondary;
+        background: $wbu-color-primary;
     }
     .section-title{
         font-size: $wbu-h2-font-size-sm ;
@@ -48,7 +48,7 @@
                             h4{
 
                                 a{
-                                    color: $wbu-color-secondary;
+                                    color: $wbu-color-primary;
                                 }
                             }
                         }
@@ -79,7 +79,7 @@
                         .element{
                             display: block;
                             transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-                            color: $wbu-color-secondary;
+                            color: $wbu-color-primary;
                             cursor: pointer;
                             .icon{
 
@@ -136,7 +136,7 @@
                         padding: $wbu-margin *0.7  0 $wbu-margin *0.7 0;
                         position: relative;
                         &:hover{
-                            color: $wbu-color-secondary;
+                            color: $wbu-color-primary;
                             .link{
                                 z-index: 1;
                             }
@@ -148,7 +148,7 @@
                             left: 0;
                             width: 100%;
                             height: 100%;
-                            background: $wbu-color-secondary;
+                            background: $wbu-color-primary;
                             transition: transform 0.5s;
                             transform-origin: 0 0;
                             transition-timing-function: cubic-bezier(0.5,1.6,0.4);

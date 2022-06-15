@@ -1,512 +1,442 @@
-@use  "../../../../_variables.scss";
+@use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
+@use "./molecule/hotlock-hero.scss";
+@use "./molecule/service-items.scss";
 
-.header-section-handler{
-    overflow: hidden;
-    .header-nav{
-        padding-left: $wbu-margin;
-        padding-top: $wbu-margin * 0.5;
-        padding-bottom: $wbu-margin * 0.5;
+.header-section-handler {
+  overflow: hidden;
+  .header-nav {
+    padding-left: $wbu-margin;
+    padding-top: $wbu-margin * 0.5;
+    padding-bottom: $wbu-margin * 0.5;
 
-        .nav-links{
-            margin-left: auto;
-            
-            .nav-link{
-                margin-right: 12px;
-                &:last-child{
-                }
-            }
-            .colored {
-                color: $wbu-color-secondary;
-                text-decoration: none;
-            }
-            .cart{
-                .count{
-                    position: absolute;
-                    background: $wbu-background;
-                    color: $wbu-border-color;
-                    font-size: 10px;
-                    padding: 1px 3px 1px 3px;
-                    margin-left: -3.8px;
-                    border-radius: 100%;
-                }
-            }
-            .app-btn{
-                background: $wbu-color-secondary;
-                width: 130px;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-                font-weight: bold;
-                margin-top: $wbu-margin;
-                padding: $wbu-margin ;
-                position: relative;
-                &:hover{
-                    
-                    .link{
-                        z-index: 1;
-                        transition: all 0.5s;
-                        color: $wbu-border-color;
-                    }
-                }
-                &::before{
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: $wbu-background;
-                    transition: transform 0.5s;
-                    transform-origin: 0 0;
-                    transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-                    
-                }
-                &::before{
-                    transform: scaleX(0);
-                }
-                &:hover::before{
-                    
-                    transform: scaleX(1);
-                }
-                .link{
-                    color: $wbu-background;
-                    font-size: $wbu-title-font-size-sm  ;
-                    text-decoration: none;
-                    font-weight: 400;
-                    position: relative;
-                    letter-spacing: 2;
-                    font-size: 10px;
-                    
-                }
-            }
-            .search-form{
-            margin-left: auto;
-            margin-right: auto;
-            width: 70%;
-            height: 65px;
-            overflow: hidden;
+    .nav-links {
+      margin-left: auto;
 
-            .input-search{
-                height: 65px;
-                outline: none;
-                border: 1px solid $wbu-border-color;
-            }
-            .btn{
-                background: $wbu-color-secondary;
-                border-radius: 0;
-                height: 65px;
-                width: 90px;
-                margin-left: -5px;
-                color: $wbu-border-color;
-
-                &::before{
-                    content: "";
-                    background: $wbu-background;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: $wbu-color-secondary;
-                    transition: transform 0.5s;
-                    transform: 0 0;
-                    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
-
-                }
-                &::before{
-                    transform: scaleX(0);
-                }
-                &:hover::before{
-                    transform: scaleX(1);
-                }
-                &:hover{
-                    color: $wbu-border-color;
-                    font-size: $wbu-title-font-size-sm * 0.6 ;
-                    background: $wbu-background;
-                    position: relative;
-                    transition: all 0.5s;
-                }
-            }
-            }
+      .nav-link {
+        margin-right: 12px;
+        &:last-child {
         }
-        
-    }
-
-    .header-back-slide {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
       }
-
-      .swiper {
-        width: 100%;
-        height: 70%;
+      .colored {
+        color: $wbu-color-secondary;
+        text-decoration: none;
       }
-
-      .swiper-slide {
-        font-size: 18px;
+      .cart {
+        .count {
+          position: absolute;
+          background: $wbu-background;
+          color: $wbu-border-color;
+          font-size: 10px;
+          padding: 1px 3px 1px 3px;
+          margin-left: -3.8px;
+          border-radius: 100%;
+        }
+      }
+      .app-btn {
+        background: $wbu-color-secondary;
+        width: 130px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-weight: bold;
+        margin-top: $wbu-margin;
+        padding: $wbu-margin;
         position: relative;
-
-        /* Center slide text vertically */
-        
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .swiper-v {
-        background: #eee;
-      }
-      .header-slider-1{
-          background: url("https://www.francetvinfo.fr/pictures/irhmQ_SrzAInupT6b6aEeZjZXOA/1200x1200/2016/12/27/phpkDRkQh_1.jpg");
-          background-size: cover;
-          height: 100%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: end;
-          position: absolute;
-          background-position: center center ;
-          background-repeat: no-repeat;
-          &::before{
-              content: "";
-              width: 100%;
-              height: 100%;
-              display: block;
-              opacity: 0.5;
-              background: $wbu-background;
-              position: absolute;
-              z-index: 1;
+        &:hover {
+          .link {
+            z-index: 1;
+            transition: all 0.5s;
+            color: $wbu-border-color;
           }
-          
-          .description{
-            text-align: center;
-            padding: $wbu-margin $wbu-margin 0 0;
-            @include media-max(SM) {
-                margin-left: auto;
-                margin-right: auto;
-              }
-              @include media-max(XS) {
-                margin-left: auto;
-                margin-right: auto;
-              }
-          .title{
-              font-size: $wbu-h2-font-size;
-              font-weight: 100 !important;
-              margin-bottom: $wbu-margin;
-              color: $wbu-background;
-              z-index: 1;
-              position: relative;
-          }
-          .sub-title{
-              font-size: $wbu-titre-big;
-              color: $wbu-border-color;
-              z-index: 1;
-              position: relative;
-          }
-          .btn-desc{
-              background: $wbu-color-secondary;
-              display: inline-block;
-              font-weight: bold;
-              text-align: center;
-              margin-right: auto;
-              margin-left: auto;
-              margin-top: $space-top;
-              padding: $wbu-margin;
-              position: relative;
-              z-index: 1;
-              
-              &:hover{      
-                  transition: all 0.7s;
-                  background: $wbu-background;
-                  .link{
-                color: $wbu-border-color;
-            }
-              }
-              .link{
-                  color: $wbu-background;
-                  font-size: $wbu-default-font-size ;
-                  text-decoration: none;
-                  font-weight: 400;
-                  position: relative;
-                  transition: all 0.5s;
-                  &:hover{
-                      color: $wbu-border-color;
-                  }
-              }
-          }
-      }
-      }
-      .header-slider-2{
-          background: url("https://static.cotemaison.fr/medias_11915/w_640,c_fill,g_north/porte-dentree-une-selection-de-poignees-stylees-6_6100848.jpg");
-          background-size: cover;
-          height: 100%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: start;
-          position: absolute;
-          background-position: center center ;
-          background-repeat: no-repeat;
-          &::before{
-              content: "";
-              width: 100%;
-              height: 100%;
-              display: block;
-              opacity: 0.5;
-              background: $wbu-background;
-              position: absolute;
-              z-index: 1;
-          }
-          
-          .description{
-            text-align: center;
-            padding: 0 $wbu-margin 0 $space-top  ;
-            @include media-max(SM) {
-                margin-left: auto;
-                margin-right: auto;
-              }
-              @include media-max(XS) {
-                margin-left: auto;
-                margin-right: auto;
-              }
-          .title{
-              font-size: $wbu-h2-font-size;
-              font-weight: 100 !important;
-              margin-bottom: $wbu-margin;
-              color: $wbu-background;
-              z-index: 1;
-              position: relative;
-          }
-          .sub-title{
-              font-size: $wbu-titre-big;
-              color: $wbu-border-color;
-              z-index: 1;
-              position: relative;
-          }
-          .btn-desc{
-              background: $wbu-color-secondary;
-              display: inline-block;
-              font-weight: bold;
-              text-align: center;
-              margin-right: auto;
-              margin-left: auto;
-              margin-top: $space-top;
-              padding: $wbu-margin;
-              position: relative;
-              z-index: 1;
-              
-              &:hover{      
-                  transition: all 0.7s;
-                  background: $wbu-background;
-                  .link{
-                color: $wbu-border-color;
-            }
-              }
-              .link{
-                  color: $wbu-background;
-                  font-size: $wbu-default-font-size ;
-                  text-decoration: none;
-                  font-weight: 400;
-                  position: relative;
-                  transition: all 0.5s;
-                  &:hover{
-                      color: $wbu-border-color;
-                  }
-              }
-          }
-      }
         }
-      .header-slider-3{
-          background: url("https://www.ul.com/sites/g/files/qbfpbp251/files/styles/hero_boxed_width/public/2020-04/BLST_081_Access_Control_webinars-v2business-door-entry-fb-event-image_2400x1600_0.jpg?itok=Haky9-uB");
-          background-size: cover;
-          height: 100%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: end;
+        &::before {
+          content: "";
           position: absolute;
-          background-position: center center ;
-          background-repeat: no-repeat;
-          &::before{
-              content: "";
-              width: 100%;
-              height: 100%;
-              display: block;
-              opacity: 0.5;
-              background: $wbu-background;
-              position: absolute;
-              z-index: 1;
-          }
-          
-          .description{
-            text-align: center;
-            padding: 0 $wbu-margin 0 $space-top  ;
-            @include media-max(SM) {
-                margin-left: auto;
-                margin-right: auto;
-              }
-              @include media-max(XS) {
-                margin-left: auto;
-                margin-right: auto;
-              }
-          .title{
-              font-size: $wbu-h2-font-size;
-              font-weight: 100 !important;
-              margin-bottom: $wbu-margin;
-              color: $wbu-background;
-              z-index: 1;
-              position: relative;
-          }
-          .sub-title{
-              font-size: $wbu-titre-big;
-              color: $wbu-border-color;
-              z-index: 1;
-              position: relative;
-          }
-          .btn-desc{
-              background: $wbu-color-secondary;
-              display: inline-block;
-              font-weight: bold;
-              text-align: center;
-              margin-right: auto;
-              margin-left: auto;
-              margin-top: $space-top;
-              padding: $wbu-margin;
-              position: relative;
-              z-index: 1;
-              
-              &:hover{      
-                  transition: all 0.7s;
-                  background: $wbu-background;
-                  .link{
-                color: $wbu-border-color;
-            }
-              }
-              .link{
-                  color: $wbu-background;
-                  font-size: $wbu-default-font-size ;
-                  text-decoration: none;
-                  font-weight: 400;
-                  position: relative;
-                  transition: all 0.5s;
-                  &:hover{
-                      color: $wbu-border-color;
-                  }
-              }
-          }
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: $wbu-background;
+          transition: transform 0.5s;
+          transform-origin: 0 0;
+          transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
+        }
+        &::before {
+          transform: scaleX(0);
+        }
+        &:hover::before {
+          transform: scaleX(1);
+        }
+        .link {
+          color: $wbu-background;
+          font-size: $wbu-title-font-size-sm;
+          text-decoration: none;
+          font-weight: 400;
+          position: relative;
+          letter-spacing: 2;
+          font-size: 10px;
+        }
       }
-      .header-slide{
-            position: relative;
-      }
-    }
-    .services-items{
-        background: $wbu-background;
-        .element{
-            text-decoration: none;
-            display: flex;
-            padding: 1rem;
+      .search-form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 65px;
+        overflow: hidden;
+
+        .input-search {
+          height: 65px;
+          outline: none;
+          border: 1px solid $wbu-border-color;
+        }
+        .btn {
+          background: $wbu-color-secondary;
+          border-radius: 0;
+          height: 65px;
+          width: 90px;
+          margin-left: -5px;
+          color: $wbu-border-color;
+
+          &::before {
+            content: "";
+            background: $wbu-background;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            min-height: 13rem;
-            align-items: center;
-            justify-content: center;
-            position: static;
-            border-right: 1px solid rgba($wbu-border-color, 0.2);
-            border-bottom: 1px solid rgba($wbu-border-color, 0.2);
-            &:hover{
-                color: $wbu-color-secondary;
-                .icon{
-                    color: $wbu-color-secondary;
-                }
-                .icon-title{
-                    color: $wbu-color-secondary;
-                }
-            }
-        }
-        .icon{
-            
-            color: $wbu-color-secondary;
-        }
-        .icon-title{
-            font-weight: bold;
-            color: $wbu-border-color;
-            text-align: center;
-            
-        }
-    }
-    .left-list{
-        position: fixed;
-        top: 40%;
-        z-index: 1;
-        .element{
-            margin-top: $wbu-margin * 0.5;
-            color: $wbu-background;
-        
-            
-            &:hover{
-                transition: all 1s;
-                background: $wbu-background;
-                .icon{
-                    transition: all 1s;
-                    padding: $wbu-margin * 0.4;
-                }
-                .icon-title{
-                    transition: all 0.7s;
-                    display: block;
-                }
-            }
-            .icon{
-                background: $wbu-color-secondary;
-                height: 50%;
-                padding: $wbu-margin * 0.3;
-            }
-            .icon-title{
-                margin-top: $wbu-margin ;
-                margin-left: $wbu-margin * 0.8;
-                margin-right: $wbu-margin;
-                color: $wbu-border-color;
-                display: none;
-            }
-        }
-    }
-    .bac-top-btn {
-        position: fixed;
-        right: 3rem;
-        bottom: 4rem;
-        visibility: hidden;
-        opacity: 0;
-        transition: ease 0.4s;
-        z-index: 15;
-      
-        .btn-bac-top {
-          width: 3rem;
-          height: 3rem;
-          background-color: $wbu-background;
-          color: $wbu-color-secondary;
-          border-radius: 50%;
-          cursor: pointer;
-          transition: ease 0.3s;
-          display: flex;
-          //position: relative;
-          justify-content: center;
-          align-items: center;
-      
+            background: $wbu-color-secondary;
+            transition: transform 0.5s;
+            transform: 0 0;
+            transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
+          }
+          &::before {
+            transform: scaleX(0);
+          }
+          &:hover::before {
+            transform: scaleX(1);
+          }
           &:hover {
-              background: $wbu-color-secondary;
-              color: $wbu-background;
-            
+            color: $wbu-border-color;
+            font-size: $wbu-title-font-size-sm * 0.6;
+            background: $wbu-background;
+            position: relative;
+            transition: all 0.5s;
           }
         }
       }
-      
-        
+    }
+  }
+
+  .header-back-slide {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 65vh;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    position: relative;
+
+    /* Center slide text vertically */
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-v {
+    background: #eee;
+  }
+  .header-slider-1 {
+    background: url("https://www.francetvinfo.fr/pictures/irhmQ_SrzAInupT6b6aEeZjZXOA/1200x1200/2016/12/27/phpkDRkQh_1.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      opacity: 0.5;
+      background: $wbu-background;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .description {
+      text-align: center;
+      padding: $wbu-margin $wbu-margin 0 0;
+      @include media-max(SM) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include media-max(XS) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .title {
+        font-size: $wbu-h2-font-size;
+        font-weight: 100 !important;
+        margin-bottom: $wbu-margin;
+        color: $wbu-background;
+        z-index: 1;
+        position: relative;
+      }
+      .sub-title {
+        font-size: $wbu-titre-big;
+        color: $wbu-border-color;
+        z-index: 1;
+        position: relative;
+      }
+      .btn-desc {
+        background: $wbu-color-secondary;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: $space-top;
+        padding: $wbu-margin;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          transition: all 0.7s;
+          background: $wbu-background;
+          .link {
+            color: $wbu-border-color;
+          }
+        }
+        .link {
+          color: $wbu-background;
+          font-size: $wbu-default-font-size;
+          text-decoration: none;
+          font-weight: 400;
+          position: relative;
+          transition: all 0.5s;
+          &:hover {
+            color: $wbu-border-color;
+          }
+        }
+      }
+    }
+  }
+  .header-slider-2 {
+    background: url("https://static.cotemaison.fr/medias_11915/w_640,c_fill,g_north/porte-dentree-une-selection-de-poignees-stylees-6_6100848.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      opacity: 0.5;
+      background: $wbu-background;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .description {
+      text-align: center;
+      padding: 0 $wbu-margin 0 $space-top;
+      @include media-max(SM) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include media-max(XS) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .title {
+        font-size: $wbu-h2-font-size;
+        font-weight: 100 !important;
+        margin-bottom: $wbu-margin;
+        color: $wbu-background;
+        z-index: 1;
+        position: relative;
+      }
+      .sub-title {
+        font-size: $wbu-titre-big;
+        color: $wbu-border-color;
+        z-index: 1;
+        position: relative;
+      }
+      .btn-desc {
+        background: $wbu-color-secondary;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: $space-top;
+        padding: $wbu-margin;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          transition: all 0.7s;
+          background: $wbu-background;
+          .link {
+            color: $wbu-border-color;
+          }
+        }
+        .link {
+          color: $wbu-background;
+          font-size: $wbu-default-font-size;
+          text-decoration: none;
+          font-weight: 400;
+          position: relative;
+          transition: all 0.5s;
+          &:hover {
+            color: $wbu-border-color;
+          }
+        }
+      }
+    }
+  }
+  .header-slider-3 {
+    background: url("https://www.ul.com/sites/g/files/qbfpbp251/files/styles/hero_boxed_width/public/2020-04/BLST_081_Access_Control_webinars-v2business-door-entry-fb-event-image_2400x1600_0.jpg?itok=Haky9-uB");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      opacity: 0.5;
+      background: $wbu-background;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .description {
+      text-align: center;
+      padding: 0 $wbu-margin 0 $space-top;
+      @include media-max(SM) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include media-max(XS) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .title {
+        font-size: $wbu-h2-font-size;
+        font-weight: 100 !important;
+        margin-bottom: $wbu-margin;
+        color: $wbu-background;
+        z-index: 1;
+        position: relative;
+      }
+      .sub-title {
+        font-size: $wbu-titre-big;
+        color: $wbu-border-color;
+        z-index: 1;
+        position: relative;
+      }
+      .btn-desc {
+        background: $wbu-color-secondary;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: $space-top;
+        padding: $wbu-margin;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          transition: all 0.7s;
+          background: $wbu-background;
+          .link {
+            color: $wbu-border-color;
+          }
+        }
+        .link {
+          color: $wbu-background;
+          font-size: $wbu-default-font-size;
+          text-decoration: none;
+          font-weight: 400;
+          position: relative;
+          transition: all 0.5s;
+          &:hover {
+            color: $wbu-border-color;
+          }
+        }
+      }
+    }
+    .header-slide {
+      position: relative;
+    }
+  }
+
+  .left-list {
+    position: fixed;
+    top: 40%;
+    z-index: 1;
+    .element {
+      margin-top: $wbu-margin * 0.5;
+      color: $wbu-background;
+
+      &:hover {
+        transition: all 1s;
+        background: $wbu-background;
+        .icon {
+          transition: all 1s;
+          padding: $wbu-margin * 0.4;
+        }
+        .icon-title {
+          transition: all 0.7s;
+          display: block;
+        }
+      }
+      .icon {
+        background: $wbu-color-secondary;
+        height: 50%;
+        padding: $wbu-margin * 0.3;
+      }
+      .icon-title {
+        margin-top: $wbu-margin;
+        margin-left: $wbu-margin * 0.8;
+        margin-right: $wbu-margin;
+        color: $wbu-border-color;
+        display: none;
+      }
+    }
+  }
+
 }

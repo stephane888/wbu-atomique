@@ -25,6 +25,8 @@
 
                 svg{
                     margin-top: $space-top;
+                    fill: $wbu-color-primary;
+                    color: $wbu-color-primary;
                 }
             }
         }
@@ -32,61 +34,17 @@
             color: $wbu-border-color;
             font-size: $wbu-titre-biggest;
             font-weight: lighter;
+            margin: $wbu-margin*2 0;
         }
         .text-paragraph{
             color: $wbu-border-color;
             font-size: $wbu-h2-font-size ;
             font-weight: lighter;
-            margin-top: $wbu-margin ;
-            margin-bottom: $wbu-margin;
+            margin-bottom: $wbu-margin*2;
+            max-width: 70rem;
+            line-height: 1.5;
         }
-        .learn-btn{
-            background: $wbu-color-secondary;
-            color: $wbu-background;
-            width: 150px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: $space-top ;
-            padding: $wbu-margin $wbu-btn-padding-x-sm $wbu-margin $wbu-btn-padding-x-sm;
-            position: relative;
-            &:hover{
-                color: $wbu-border-color;
-                .link{
-                    z-index: 1;
-                    color: $wbu-border-color;
-                }
-            }
-            &::before{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: $wbu-background;
-                transition: transform 0.5s;
-                transform-origin: 0 0;
-                transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-                
-            }
-            &::before{
-                transform: scaleX(0);
-            }
-            &:hover::before{
-                
-                transform: scaleX(1);
-            }
-            .link{
-                color: $wbu-background;
-                font-size: $wbu-default-font-size;
-                letter-spacing: 0.2rem;
-                text-decoration: none;
-                font-weight: 400;
-                position: relative;
-                
-                
-            }
-        }
+
         
     }
 }

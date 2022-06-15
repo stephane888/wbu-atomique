@@ -5,7 +5,7 @@
 
 
 .lock-smithing-service-handler{
-   margin-top: $space_inner_top;
+    padding: $space-top 0;
    display: flex;
    justify-content: space-around;
    align-items: flex-end;
@@ -18,7 +18,7 @@
             content: "";
             width: 70px;
             height: 3px;
-            background: $wbu-color-secondary;
+            background: $wbu-color-primary;
             display: block;
             margin-top: $space-top;
             margin-bottom: $space_bottom * 0.2;
@@ -44,6 +44,7 @@
         }
         .all-services{
             margin-top: $wbu-margin;
+          
             padding-left: 0;
             flex-direction: column;
             text-align: center;
@@ -52,17 +53,20 @@
             display: flex;
             .list-services{
                 color: $wbu-color-text;
-               
+                padding: 0;
                 .element{
                     list-style-type: none;
                     //margin-top: $wbu-margin * 0.5;
-                    
+                    display: flex; align-items: center;
+                    margin-bottom: $wbu-margin;
+                    font-size: $wbu-title-font-size;
                     &::before{
                         content: "\2022";
                         position: initial;
-                        color: $wbu-color-secondary;
+                        color: $wbu-color-primary;
                         font-weight: bold;
                         display: flex;
+                        margin-right: $wbu-margin;
 
                     }
                 }
