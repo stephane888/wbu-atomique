@@ -1,0 +1,27 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+.title-indicator {
+  .cna-title {
+    color: black;
+    text-transform: uppercase;
+    font-size: $wbu-h1-font-size-md;
+    //text-align: center;
+  }
+  .sm-indiactor {
+    width: 5rem;
+    height: 5px;
+    background-color: darken($wbu-color-boder, 1);
+    position: relative;
+    // margin: 0 auto;
+    margin-top: 1rem;
+    &::before {
+      content: "";
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      background-color: $wbu-color-primary;
+      left: 0;
+      top: 0;
+    }
+  }
+}

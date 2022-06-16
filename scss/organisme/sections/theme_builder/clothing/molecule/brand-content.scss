@@ -1,0 +1,92 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+@use "../../../../../variables";
+@use "./four-btn.scss";
+.brand-content {
+  margin: $wbu-margin * 2.5 0;
+  .brand-text {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: $wbu-margin * 1.5 $wbu-margin * 2;
+    @include media-max(MD) {
+      padding: $wbu-margin;
+    }
+  }
+  .sm-text {
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    font-size: $wbu-title-font-size;
+    color: $wbu-color-boder;
+  }
+  .title {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: $wbu-color-boder;
+    font-size: $wbu-h1-font-size;
+    font-weight: bold;
+    @include media-max(XS) {
+      font-size: $wbu-h1-font-size-md;
+    }
+  }
+  .price {
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: $wbu-h1-font-size * 0.85;
+  }
+  .desc {
+    text-transform: capitalize;
+    margin-bottom: $wbu-margin * 0.8;
+    color: $wbu-color-boder;
+    font-size: $wbu-default-font-size;
+    line-height: 1.7;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-top: $wbu-margin;
+    list-style: square;
+  }
+  .list {
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      color: $wbu-color-boder;
+      &::before {
+        background: darken($wbu-color-boder, 20);
+        content: "";
+        height: 5px;
+        margin-right: 15px;
+        position: relative;
+        display: inline-block;
+        //top: 50%;
+        width: 5px;
+      }
+    }
+  }
+  .clo-btn {
+    background: #fff;
+    color: black;
+    padding: $wbu-margin * 0.6 $wbu-margin;
+    border: 1px solid #fff;
+    border-radius: 0;
+    display: inline-block;
+    font-size: $wbu-default-font-size;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    margin-top: $wbu-margin;
+    &:hover {
+      background-color: $wbu-color-primary;
+      border-color: $wbu-color-primary;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}

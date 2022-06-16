@@ -1,5 +1,46 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../atome/typography/default";
-@use "../atome/hotlock-btn.scss";
+@use "../../../../../variables";
+.clothing-countdown {
+  background-color: white;
+  box-shadow: 0px 1px 20px rgba(#000000, 0.2);
+  padding: $wbu-margin $wbu-margin * 1.5;
+  display: flex;
+  .count-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: $wbu-title-font-size;
+    padding: 0 1.5rem;
+    border-right: 1px solid rgba(190, 190, 190, 0.671);
+    text-align: center;
 
-.clothing-countdown{}
+    width: 25%;
+    @include media-max(XS) {
+      font-size: $wbu-default-font-size;
+    }
+    &:first-child {
+      border-left: 1px solid rgba(190, 190, 190, 0.671);
+    }
+    div {
+      line-height: 1.8;
+      text-transform: uppercase;
+      width: fit-content;
+      text-align: center;
+      &:first-child {
+        color: black;
+        font-size: $wbu-h3-font-size * 1.2;
+        font-weight: bold;
+        @include media-max(XS) {
+          font-size: $wbu-default-font-size * 1.2;
+        }
+      }
+      &:last-child {
+        display: inline;
+
+        padding-top: 4px;
+        border-top: 1px solid rgba(190, 190, 190, 0.671);
+      }
+    }
+  }
+}

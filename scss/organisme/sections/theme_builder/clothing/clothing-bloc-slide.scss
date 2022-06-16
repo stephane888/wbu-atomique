@@ -1,7 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
-@use './molecule/hero-bloc-slide.scss';
+@use "./molecule/img-bloc-slide.scss";
 
 .clothing-bloc-slide {
-
+  background: url("./img/brand-bg.jpg") center center / cover scroll no-repeat;
 }

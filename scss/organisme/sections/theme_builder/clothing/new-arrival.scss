@@ -1,0 +1,10 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../atome/typography/default";
+@use "./molecule/clothing-single-product.scss";
+@use "./molecule/clothing-single-banner.scss";
+@use "./molecule/clothing-teaser-product.scss";
+@use "./atome/title-indicator.scss";
+
+.clothing-new-arrival {
+  padding: $space-top 0;
+}

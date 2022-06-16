@@ -1,0 +1,133 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+@use "./four-btn.scss";
+@use "../../../../../variables";
+.clothing-single-product {
+  padding: $wbu-margin * 2 0;
+  max-width: fit-content;
+  margin: 0 auto;
+  .bloc-img {
+    position: relative;
+    .images {
+      &::before {
+        content: "";
+        background-color: black;
+        opacity: 0;
+        width: 95%;
+        height: 95%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        transition: ease-in-out 0.3s;
+        pointer-events: none;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .img-2 {
+      display: none;
+    }
+  }
+  .badge {
+    padding: 1rem 2rem;
+    color: white;
+    background-color: black;
+    font-size: $wbu-default-font-size;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
+  }
+  .csp-title {
+    padding: $wbu-margin 0;
+    &,
+    a {
+      color: black;
+      font-size: $wbu-default-font-size;
+      transition: 0.3s;
+      &:hover {
+        color: $wbu-color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+  .price {
+    color: black;
+    font-weight: bold;
+    padding-right: 1rem;
+    &--old {
+      color: $wbu-color-boder;
+      text-decoration: line-through;
+    }
+  }
+  .rating {
+    display: flex;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: white;
+      stroke: black;
+    }
+    .rated {
+      fill: black;
+    }
+  }
+  .clothing-four-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    margin-top: 0;
+    pointer-events: none;
+    .btn-carre {
+      pointer-events: all;
+      opacity: 0;
+      position: relative;
+      top: 65%;
+      &:nth-child(1) {
+        transition: ease-in-out 0.4s;
+      }
+      &:nth-child(2) {
+        transition: ease-in-out 0.6s;
+      }
+      &:nth-child(3) {
+        transition: ease-in-out 0.8s;
+      }
+      &:nth-child(4) {
+        transition: ease-in-out 1s;
+      }
+      &:hover {
+        background-color: white;
+        border-color: white;
+        svg {
+          fill: $wbu-color-primary;
+        }
+      }
+    }
+  }
+  &:hover {
+    .images {
+      &::before {
+        opacity: 0.5;
+      }
+    }
+    .img-1 {
+      display: none;
+    }
+    .img-2 {
+      display: block;
+    }
+    .clothing-four-btn {
+      .btn-carre {
+        top: 50%;
+        opacity: 1;
+      }
+    }
+  }
+}

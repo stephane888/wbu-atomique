@@ -1,0 +1,71 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+@use "./brand-content.scss";
+@use "../../../../../variables";
+.clothing-single-banner {
+  padding: $wbu-margin * 2 0;
+  // width: 100%;
+  margin: 0 auto $wbu-margin;
+  //height: 100%;
+  background-color: rgba($wbu-color-boder, 0.5);
+  .div-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand-content {
+    margin: 0;
+    .brand-text {
+      background-color: transparent;
+
+      @include media-min(MS) {
+        padding: 0;
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
+    }
+    .sm-text,
+    .title,
+    .desc {
+      color: darken($wbu-color-boder, 60);
+    }
+    .title {
+      font-size: $wbu-h1-font-size * 0.8;
+    }
+    .price {
+      color: black;
+    }
+    ul li {
+      color: darken($wbu-color-boder, 60);
+    }
+  }
+  .sb-img {
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .btn-carre {
+    border-color: darken($wbu-color-boder, 60);
+    svg {
+      fill: darken($wbu-color-boder, 60);
+    }
+    &:hover {
+      border-color: white;
+      svg {
+        fill: white;
+      }
+    }
+  }
+  .clo-btn {
+    background: black;
+    border: 1px solid black;
+    color: #fff;
+
+    &:hover {
+      background-color: $wbu-color-primary;
+      border-color: $wbu-color-primary;
+    }
+  }
+}

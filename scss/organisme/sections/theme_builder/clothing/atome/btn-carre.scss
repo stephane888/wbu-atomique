@@ -1,107 +1,51 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../atome/typography/default";
-@mixin fade-blac() {
-  background: $wbu-color-primary;
-  a {
-    color: black;
-  }
-}
-@mixin fade-white() {
-  transition: all 0.5s;
-  background: $wbu-background;
-  a {
-    color: white;
-  }
-}
-@mixin bg-slide($color: $wbu-background) {
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $color;
-    transition: transform ease-in-out 0.3s;
-    transform-origin: 0 0;
-    transform: scaleX(0);
-    pointer-events: none;
-  }
-}
-.htl-btn {
-  display: inline-block;
-  font-weight: 600;
-  text-align: center;
-  font-size: $wbu-default-font-size;
+.btn-carre {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  background-color: transparent;
+  transition: all 0.3s ease-out 0s;
   position: relative;
   cursor: pointer;
-  text-transform: uppercase;
-  &,
-  a {
-    text-decoration: none;
-    transition: all 0.3s;
+  svg {
+    width: 1.6rem;
+    height: 2rem;
+    fill: white;
   }
-  a {
-    padding: 2rem 4.5rem;
-    display: inline-block;
-  }
-
-  &--fade {
-    @include fade-blac();
-    &:hover {
-      transition: all 0.5s;
-      @include fade-white;
+  &:hover {
+    background-color: $wbu-color-primary;
+    border-color: $wbu-color-primary;
+    .bc-tooltip {
+      top: -55px;
+      opacity: 1;
     }
   }
-  &--inv {
-    @include fade-white;
-    &:hover {
-      @include fade-blac();
-    }
-  }
-  &--big {
-    a {
-      padding: 2.5rem 5rem;
-    }
-  }
-  &--sm {
-    a {
-      padding: 2rem 3.5rem;
-    }
-  }
-  &--bg {
-    @include fade-blac();
-    a {
-      z-index: 1;
-      position: relative;
-      transition: ease-in-out 0.3s;
-    }
-    @include bg-slide();
-
-    &:hover {
-      &::before {
-        transform: scaleX(1);
-      }
-      a {
-        color: white;
-      }
-    }
-  }
-  &--bg-inv {
-    @include fade-white();
-    a {
-      z-index: 1;
-      position: relative;
-      transition: ease-in-out 0.3s;
-    }
-    @include bg-slide($wbu-color-primary);
-    &:hover {
-      &::before {
-        transform: scaleX(1);
-      }
-      a {
-        color: black;
-      }
+  .bc-tooltip {
+    position: absolute;
+    background-color: black;
+    padding: $wbu-margin * 0.5 $wbu-margin;
+    left: calc(3.5rem / 2);
+    width: auto;
+    top: -30px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translate(-50%, 0px);
+    transition: ease-in-out 0.3s;
+    color: white;
+    pointer-events: none;
+    &::before {
+      content: "";
+      border: 10px solid transparent;
+      border-top-color: black;
+      position: absolute;
+      left: 50%;
+      top: 95%;
+      transform: translate(-50%, 0px);
     }
   }
 }

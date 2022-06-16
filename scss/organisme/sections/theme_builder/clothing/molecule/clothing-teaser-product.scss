@@ -1,0 +1,79 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+@use "./four-btn.scss";
+@use "../atome//title-indicator.scss";
+@use "../../../../../variables";
+.clothing-teaser-product {
+  padding-bottom: $wbu-margin * 1.5;
+  .product-img {
+    position: relative;
+    margin-bottom: 1.5rem;
+    &::before {
+      content: "";
+      background-color: black;
+      opacity: 0;
+      width: 90%;
+      height: 90%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      transition: ease-in-out 0.3s;
+      pointer-events: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .csp-title {
+    padding-bottom: 1.2rem;
+    &,
+    a {
+      color: black;
+      font-size: $wbu-default-font-size;
+      transition: 0.3s;
+      &:hover {
+        color: $wbu-color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+  .price {
+    color: black;
+    font-weight: bold;
+    padding-right: 1rem;
+    &--old {
+      color: $wbu-color-boder;
+      text-decoration: line-through;
+    }
+  }
+  .clothing-four-btn {
+    margin-top: 1.5rem;
+  }
+  .btn-carre {
+    border-color: darken($wbu-color-boder, 60);
+    svg {
+      fill: darken($wbu-color-boder, 60);
+    }
+    &:hover {
+      border-color: white;
+      svg {
+        fill: white;
+      }
+    }
+  }
+  .title-indicator {
+    margin-bottom: 2.5rem;
+  }
+  &:hover {
+    .product-img {
+      &::before {
+        opacity: 0.5;
+      }
+    }
+  }
+}

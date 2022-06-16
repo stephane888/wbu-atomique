@@ -1,5 +1,10 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../atome/typography/default";
-@use "../atome/hotlock-btn.scss";
-
-.clothing-four-btn{}
+@use "../atome/btn-carre.scss";
+@use "../../../../../variables";
+.clothing-four-btn {
+  display: flex;
+  gap: 1rem;
+  margin-top: $wbu-margin * 1.5;
+  flex-wrap: wrap;
+}
