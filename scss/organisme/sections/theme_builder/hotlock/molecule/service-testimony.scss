@@ -1,0 +1,78 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+.services-testimony {
+  margin: 0;
+  .done {
+    background: $wbu-color-primary;
+  }
+  .all-single-services {
+    padding: $wbu-margin * 4 $wbu-margin;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .services {
+      &:first-child {
+        margin-left: $wbu-margin * -1;
+      }
+      .icon {
+        font-size: $wbu-titre-big;
+      }
+      .number {
+        margin-top: $wbu-margin * 0.2;
+        font-size: $wbu-titre-big;
+      }
+      .title {
+        font-size: $wbu-h3-font-size;
+      }
+    }
+  }
+  .testimony-handler {
+    background: $wbu-background;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .testimony {
+      padding: $wbu-margin * 1.5 $wbu-margin;
+      &::before {
+        content: "";
+        height: 2px;
+        width: 55px;
+        display: block;
+        margin-bottom: $wbu-margin;
+        background: $wbu-color-primary;
+      }
+    }
+    .title {
+      color: $wbu-border-color;
+      font-size: $wbu-h2-font-size;
+    }
+    .slider-container {
+      position: relative;
+      margin-top: $space-top;
+      display: flex;
+
+      .speech {
+        padding-right: $wbu-margin;
+        line-height: 6rem;
+        color: $wbu-border-color;
+        font-size: $wbu-titre-big;
+      }
+      .info {
+        display: flex;
+        margin-top: $wbu-margin;
+        align-items: center;
+        .author {
+          font-size: $wbu-h3-font-size;
+          color: $wbu-border-color;
+        }
+        .company-name {
+          padding: 0 0 0 $wbu-margin * 0.5;
+          color: rgba($color: $wbu-color-boder, $alpha: 0.5);
+          font-size: $wbu-default-font-size;
+        }
+      }
+    }
+  }
+}

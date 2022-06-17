@@ -1,88 +1,91 @@
-@use  "../../../../../variables";
+@use "../../../../../variables";
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../atome/typography/default";
-.safety-handler{
-    overflow: hidden;
+.safety-handler {
+  overflow: hidden;
 }
-.security-service{
-    background: $wbu-background;
-    color: $wbu-border-color;
-    position: relative;
-    overflow: hidden;
-    padding-bottom: $wbu-margin * 1.5;
-    padding-top: $space_inner_top;
-.handler{
+.security-service {
+  background: $wbu-background;
+  color: $wbu-border-color;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: $wbu-margin * 1.5;
+  padding-top: $space_inner_top;
+
+  .handler {
     position: relative;
     margin-top: $wbu-margin;
-    
-}
-    .icon{
-        position: absolute;
-        top: 65;
-        left: -250;
-        opacity: 0.6;
-        color: $wbu-color-thirdly;
-    }
-    .head-title{
-        font-size: $wbu-h1-font-size ;
-        font-weight: bold;
-        margin-top: $space-top;
-        padding-right: $wbu-margin * 2;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: end;
-    }
-}
-.all-services{
-    margin-top: $wbu-margin * 0.5;
     display: flex;
     align-items: center;
-    text-align: center;
+
     justify-content: end;
-    .list-services{
-        color: $wbu-color-text;
-        font-size: $wbu-title-font-size;
-        text-align: center;
-        .element{
-            list-style-type: disc;
-            display: flex;
-            padding-top: $wbu-margin * 0.5;
-            &::before{
-                content: "\2022";
-                color: $wbu-color-secondary;
-                display: flex;
-                padding-right: $wbu-margin;  
-            }
-        }
-    }
+  }
+  .icon {
+    position: absolute;
+    top: 65;
+    left: -250;
+    opacity: 0.6;
+    color: $wbu-color-thirdly;
+  }
+  .head-title {
+    font-size: $wbu-h1-font-size;
+    font-weight: bold;
+    text-align: left;
+    margin-top: $space-top;
+    display: inline-block;
+  }
 }
-.call-info{
-    background: $wbu-color-secondary;
-    overflow: hidden;
-    //display: flex;
-    //flex-direction: column;
-    padding:  $wbu-margin 0 0 $wbu-margin  *2;
-    //text-align: center;
-    
-    .icon{
-        position: absolute;
-        top: 65;
-        right: -150;
-        opacity: 0.6;
-        color: $wbu-border-color;
-    }
-    .head-title{
+.all-services {
+  margin-top: $wbu-margin * 0.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: end;
+  .list-services {
+    color: $wbu-color-text;
+    font-size: $wbu-title-font-size;
+    text-align: left;
+    .element {
+      list-style-type: disc;
+      display: flex;
+      padding-top: $wbu-margin * 0.5;
+      &::before {
+        content: "\2022";
+        color: $wbu-color-primary;
         display: flex;
-        font-size: $wbu-titre-suppra;
-        margin-top: $space-bottom;
-        align-items: flex-start;
-        justify-content: start;
+        padding-right: $wbu-margin;
+      }
     }
-    .phone-number{
+  }
+}
+.call-info {
+  background: $wbu-color-primary;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: $wbu-margin * 2 $wbu-margin * 2;
+  padding-right: 0;
+  text-align: center;
+
+  .icon {
+    position: absolute;
+    top: 65;
+    right: -150;
+    opacity: 0.6;
+    color: rgba($wbu-border-color, 0.5);
+  }
+  .head-title {
+    display: flex;
+    font-size: $wbu-titre-suppra;
+    align-items: flex-start;
+    justify-content: start;
+  }
+  .phone-number {
     display: flex;
     justify-content: start;
     align-items: flex-start;
     font-size: $wbu-titre-biggest;
-    }
+  }
 }

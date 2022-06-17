@@ -1,76 +1,79 @@
-@use  "../../../../_variables.scss";
+@use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
 
-
-
-.lock-smithing-service-handler{
-    padding: $space-top 0;
-   display: flex;
-   justify-content: space-around;
-   align-items: flex-end;
-    .img-handler{
-        position: relative;
+.lock-smithing-service-handler {
+  padding: $space-top 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  .img-handler {
+    position: relative;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      max-height: 60rem;
+      object-fit: contain;
     }
-    .lock-info-section{
-        padding: 0 0 0 $wbu-margin * 3 ;
-        &::before{
-            content: "";
-            width: 70px;
-            height: 3px;
-            background: $wbu-color-primary;
-            display: block;
-            margin-top: $space-top;
-            margin-bottom: $space_bottom * 0.2;
-        }
-        .title{
-            font-size: $wbu-title-font-size ;
+  }
+  .lock-info-section {
+    //   padding: 0 0 0 $wbu-margin * 3;
+    &::before {
+      content: "";
+      width: 70px;
+      height: 3px;
+      background: $wbu-color-primary;
+      display: block;
+      margin-top: $space-top;
+      margin-bottom: $space_bottom * 0.2;
+    }
+    .title {
+      font-size: $wbu-title-font-size;
+      font-weight: bold;
+      margin-bottom: $wbu-margin * 1.5;
+    }
+    .description {
+      font-size: $wbu-h1-font-size;
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .lists {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .all-services {
+      margin-top: $wbu-margin;
+
+      padding-left: 0;
+      flex-direction: column;
+      text-align: center;
+      justify-content: start;
+      align-items: flex-start;
+      display: flex;
+      .list-services {
+        color: $wbu-color-text;
+        padding: 0;
+        text-align: left;
+        .element {
+          list-style-type: none;
+          //margin-top: $wbu-margin * 0.5;
+          display: flex;
+          align-items: center;
+          margin-bottom: $wbu-margin;
+          font-size: $wbu-title-font-size;
+          &::before {
+            content: "\2022";
+            position: initial;
+            color: $wbu-color-primary;
             font-weight: bold;
-            margin-bottom: $space_bottom * 0.7;
-        }
-        .description{
-            font-size: $wbu-h1-font-size;
             display: flex;
-            flex-direction: column;
-            text-align: start;
-            justify-content: space-between;
-            align-items: flex-start;
+            // margin-right: $wbu-margin;
+          }
         }
-        .lists{
-            display: flex;
-            @include media-max(MD) {
-                display: block;
-              }
-        }
-        .all-services{
-            margin-top: $wbu-margin;
-          
-            padding-left: 0;
-            flex-direction: column;
-            text-align: center;
-            justify-content: start;
-            align-items: flex-start;
-            display: flex;
-            .list-services{
-                color: $wbu-color-text;
-                padding: 0;
-                .element{
-                    list-style-type: none;
-                    //margin-top: $wbu-margin * 0.5;
-                    display: flex; align-items: center;
-                    margin-bottom: $wbu-margin;
-                    font-size: $wbu-title-font-size;
-                    &::before{
-                        content: "\2022";
-                        position: initial;
-                        color: $wbu-color-primary;
-                        font-weight: bold;
-                        display: flex;
-                        margin-right: $wbu-margin;
-
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }

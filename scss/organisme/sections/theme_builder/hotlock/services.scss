@@ -1,200 +1,48 @@
-@use  "../../../../_variables.scss";
+@use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
+@use "./molecule/single-service-items.scss";
+.our-services-handler {
+  margin-top: $space-top;
+  margin-bottom: $space-bottom;
+  position: initial;
 
-.our-services-handler{
-    margin-top: $space-top;
-    margin-bottom: $space-bottom;
-    position: initial;
-    &::before{
-        content: '';
-        width: 50px;
-        display: block;
-        height: 3px;
-        margin-top: $space-top * 0.6;
-        margin-bottom: $wbu-margin * 0.49;
-        background: $wbu-color-primary;
+  &::before {
+    content: "";
+    width: 50px;
+    display: block;
+    height: 3px;
+    margin-top: $space-top * 0.6;
+    margin-bottom: $wbu-margin * 0.49;
+    background: $wbu-color-primary;
+  }
+  .section-title {
+    font-size: $wbu-h2-font-size-sm;
+    color: $wbu-background;
+    margin-bottom: $wbu-margin * 1.5;
+  }
+
+  .services-column {
+    //vertical-align: top;
+
+    .all-service-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
-    .section-title{
-        font-size: $wbu-h2-font-size-sm ;
-        color: $wbu-background;
-        margin-bottom: $space-bottom * 0.7;
-    }
-
-    .services-column{
-        //vertical-align: top;
-        height: 40rem;
-        position: relative;
-        box-sizing: border-box;
-        .all-service-item{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            .single-service-items{
-                width: fit-content;
-                height: fit-content;
-                margin-right: $wbu-margin;
-                overflow: hidden;
-                &:hover{
-                    transition: all 0.5s;
-                    background: $wbu-background;
-
-                    
-                    .info-items{
-                        color: $wbu-border-color;
-
-                        .item-title{
-                            h4{
-
-                                a{
-                                    color: $wbu-color-primary;
-                                }
-                            }
-                        }
-                        .read-btn{
-                            background: $wbu-border-color;
-                            .link{
-                                color: $wbu-background;
-                            }
-                        }
-                    }
-                }
-                .item-image{
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        opacity: 0.6;
-                        height: 100%;
-                        width: 107%;
-                    }
-                    &:hover::before{
-                        background: $wbu-background;
-                    }
-                    &:hover{
-                        .element{
-                            display: block;
-                            transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-                            color: $wbu-color-primary;
-                            cursor: pointer;
-                            .icon{
-
-                                i{
-                                    svg{
-                                        transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-                                        margin: 5;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .element{
-                        position: absolute;
-                        display: none;
-                        .icon{
-                            position: relative;
-                            left: 0;
-                            top: 0;
-                            i{
-                                svg{
-                                    margin: -5;
-                                }
-                            }
-                        }
-                    }
-                }
-                .info-items{
-                    margin: $wbu-margin * 1.3;
-                    width: 280px;
-                    position: relative;
-
-                    .item-title{
-                        margin-bottom: $wbu-margin;
-                       
-                        h4{
-
-                            a{
-                                color: $wbu-background;
-                                font-weight: 300;
-                                font-size: $wbu-h2-font-size;
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                    .descriptor-item{
-                        font-size: $wbu-default-font-size ;
-                    }
-                    .read-btn{
-                        background: $wbu-background;
-                        width: 150px;
-                        text-align: center;
-                        margin-top: $wbu-margin * 1.5;
-                        padding: $wbu-margin *0.7  0 $wbu-margin *0.7 0;
-                        position: relative;
-                        &:hover{
-                            color: $wbu-color-primary;
-                            .link{
-                                z-index: 1;
-                            }
-                        }
-                        &::before{
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background: $wbu-color-primary;
-                            transition: transform 0.5s;
-                            transform-origin: 0 0;
-                            transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-                            
-                        }
-                        &::before{
-                            transform: scaleX(0);
-                        }
-                        &:hover::before{
-                            
-                            transform: scaleX(1);
-                        }
-                        .link{
-                            color: $wbu-border-color;
-                            font-size: $wbu-default-font-size ;
-                            text-decoration: none;
-                            letter-spacing: 0.3rem;
-                            font-weight: 400;
-                            position: relative;
-                            
-                            
-                        }
-                    }
-                }
-            }
-        }
-    }
-
+  }
 }
-
 @media only screen and (max-width: 700px) {
-    .descriptor-item{
-        display: none;
+  .single-service-items {
+    .descriptor-item {
+      display: none;
     }
-    .single-service-items{
-       height: fit-content;
+    .htl-btn {
+      display: none;
     }
-    .item-image{
-        img{
-            width: 106%;
-        }
+    .info-items {
+      padding-bottom: 0;
     }
-    .services-column{
-        height: fit-content;
-    }
-    .single-service-items{
-        height: fit-content;
-    }
+  }
 }

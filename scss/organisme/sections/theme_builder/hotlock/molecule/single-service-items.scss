@@ -1,0 +1,100 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+@use "../atome/hotlock-btn.scss";
+.single-service-items {
+  max-width: 37rem;
+  margin: 0 auto;
+  margin-bottom: $wbu-margin;
+  &:hover {
+    transition: ease 0.4s;
+    background: $wbu-background;
+
+    .info-items {
+      color: $wbu-border-color;
+      .item-title {
+        color: $wbu-color-primary;
+        a {
+          color: $wbu-color-primary;
+          text-decoration: none;
+        }
+      }
+      .htl-btn {
+        background: $wbu-border-color;
+        a {
+          color: $wbu-background;
+        }
+      }
+    }
+  }
+  .item-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      background: $wbu-background;
+      transition: ease-in-out 0.3s;
+      pointer-events: none;
+    }
+    &:hover::before {
+      opacity: 0.6;
+    }
+    &:hover {
+      .icon {
+        span {
+          margin: 5px;
+          opacity: 1;
+          width: 6px;
+        }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      // left: 0;
+      // top: 0;
+      z-index: 1;
+      span {
+        display: inline-block;
+        width: 0;
+        height: 6px;
+        border-radius: 50%;
+        margin: 0;
+        opacity: 0;
+        background-color: $wbu-color-primary;
+        transition: margin ease-in-out 0.2s, opacity ease-in-out 0.3s,
+          width ease-in-out 0.3s;
+      }
+    }
+  }
+  .info-items {
+    padding: $wbu-margin;
+    position: relative;
+    .item-title {
+      padding-bottom: $wbu-margin;
+
+      h4 {
+        a {
+          color: $wbu-background;
+          font-weight: 300;
+          font-size: $wbu-h2-font-size;
+          text-decoration: none;
+        }
+      }
+    }
+    .descriptor-item {
+      font-size: $wbu-default-font-size;
+    }
+    .htl-btn {
+      margin-top: $wbu-margin * 1.5;
+    }
+  }
+}
