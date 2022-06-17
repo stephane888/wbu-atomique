@@ -1,0 +1,55 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+@use "./separateur.scss" as *;
+.clothings_hero {
+  position: relative;
+  min-height: 350px;
+  padding: 0 $wbu-margin;
+
+  @include media-min(MD) {
+    min-height: 500px;
+  }
+
+  @include media-min(DD) {
+    min-height: 600px;
+  }
+
+  @include media-min(LM) {
+    min-height: 700px;
+  }
+  .image_bg {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    img {
+      min-height: 100%;
+      min-width: 100%;
+      max-height: 2000px;
+      max-width: 3000px;
+    }
+  }
+  &__desc {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    max-width: 680px;
+    width: 100%;
+    .sub-title {
+      @include bp_h3();
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    .title {
+      @include bp_hero();
+      margin-bottom: $wbu-margin * 3;
+      @include hr_separation();
+    }
+  }
+  &.right {
+    justify-content: end;
+  }
+}

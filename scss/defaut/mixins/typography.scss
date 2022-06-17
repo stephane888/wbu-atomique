@@ -1,0 +1,54 @@
+@use "../model/custom_bp.scss" as *;
+@use "../../variables" as *;
+
+/**
+ *  Breack point hero.
+ */
+@mixin bp_hero() {
+  font-size: $wbu-h1-font-size-sm;
+  @include media-min(SM) {
+    font-size: $wbu-titre-big-sm;
+  }
+  @include media-min(DD) {
+    font-size: $wbu-titre-big-md;
+  }
+  @include media-min(M) {
+    font-size: $wbu-titre-big;
+  }
+  @include media-min(LM) {
+    font-size: $wbu-titre-biggest;
+  }
+}
+
+/**
+ *  Breack point h1.
+ */
+@mixin bp_h1() {
+  font-size: $wbu-h1-font-size-sm;
+  @include media-min(DD) {
+    font-size: $wbu-h1-font-size-md;
+  }
+  @include media-min(M) {
+    font-size: $wbu-h1-font-size;
+  }
+}
+
+/**
+ *  Breack point h1.
+ */
+@mixin bp_h2() {
+  font-size: $wbu-h2-font-size;
+  @include media-min(DD) {
+    font-size: $wbu-h2-font-size-sm;
+  }
+}
+
+/**
+ *  Breack point h1.
+ */
+@mixin bp_h3() {
+  font-size: $wbu-title-font-size;
+  @include media-min(DD) {
+    font-size: $wbu-h3-font-size;
+  }
+}
