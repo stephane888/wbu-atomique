@@ -1,42 +1,42 @@
-@use  "../../../../_variables.scss";
+@use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
 
-.welcome-section-handler{
-    padding: $space-top 0;
+.welcome-section-handler {
+  padding: $space-top 0;
 
-    .welcome-elements{
-        &::before{
-            content: "";
-            position: relative;
-            height: 1.5px;
-            width: 40px;
-            background:$wbu-color-primary;
-            left: 55;  
-        }
-        width: 90%;
-        margin-left: $wbu-margin * 3;
-        margin-right: auto;
-        
-        .text-element{
-            margin-top: $space_inner_top * 0.5;
-
-            .section-title{
-                font-size: $wbu-h2-font-size;
-            }
-            .welcome-words{
-                margin-top: $space-top * 0.5;
-                font-size: $wbu-h1-font-size; 
-            }
-.htl-btn {
-    margin-top: $wbu-margin;
-    margin-bottom: $wbu-margin;
-}
-          
-        }
-        .img-element{
-            margin-left: auto;
-            margin-right: auto;
-        }
+  .welcome-elements {
+    &::before {
+      content: "";
+      position: relative;
+      height: 1.5px;
+      width: 40px;
+      background: $wbu-color-primary;
+      left: 55;
     }
+
+    .text-element {
+      margin-top: $space_inner_top * 0.5;
+
+      .section-title {
+        font-size: $wbu-h2-font-size;
+      }
+      .welcome-words {
+        margin-top: $space-top * 0.5;
+        font-size: $wbu-h1-font-size;
+      }
+      .htl-btn {
+        margin-top: $wbu-margin;
+        margin-bottom: $wbu-margin;
+      }
+    }
+    .img-element {
+      margin-left: auto;
+      margin-right: auto;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }

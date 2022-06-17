@@ -1,0 +1,90 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+.single-lutin {
+  padding-bottom: $wbu-margin;
+  max-width: 37rem;
+  margin: 0 auto;
+  .lutin-img {
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: all linear 0.3s;
+      &:hover {
+        transform: scale(1.1);
+        background-position: bottom bottom;
+      }
+    }
+
+    .social-network {
+      padding: 2rem 0;
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      color: $wbu-border-color;
+      left: 50%;
+      top: 75%;
+      transform: translateX(-50%);
+      background: $wbu-background;
+      // width: 70%;
+      //padding: $wbu-margin;
+      transition: top ease-in-out 0.3s, opacity ease-in-out 0.4s;
+      opacity: 0;
+      .icon {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $wbu-border-color;
+        padding: 0 1.5rem;
+        border-right: 1px solid rgba(214, 214, 214, 0.486);
+        svg {
+          width: 2rem;
+          height: 2rem;
+          transition: 0.3s;
+          fill: white;
+          color: white;
+        }
+
+        &:hover {
+          color: $wbu-color-primary;
+          svg {
+            fill: $wbu-color-primary;
+            color: $wbu-color-primary;
+          }
+        }
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+    &:hover {
+      .social-network {
+        opacity: 1;
+        top: 70%;
+      }
+    }
+  }
+  .lutin-name {
+    margin-top: $wbu-margin;
+    text-align: center;
+    font-size: $wbu-h3-font-size;
+    font-weight: bolder;
+
+    &:hover {
+      cursor: pointer;
+      color: $wbu-color-primary;
+      transition: all 0.2s;
+    }
+  }
+  .lutin-poste {
+    text-align: center;
+    font-size: $wbu-default-font-size;
+    color: $wbu-color-text;
+  }
+}

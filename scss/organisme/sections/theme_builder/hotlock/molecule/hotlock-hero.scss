@@ -46,8 +46,9 @@
     .title {
       font-size: $wbu-h2-font-size;
       margin-bottom: $wbu-margin;
-      color: darken($color: $wbu-background, $amount: 10);
+      color: darken($color: $wbu-color-boder, $amount: 5);
       max-width: 40rem;
+      font-weight: lighter;
     }
     .sub-title {
       font-size: $wbu-titre-suppra * 0.8;
@@ -62,6 +63,7 @@
     }
     .htl-btn {
       margin-top: $space-top;
+      font-size: $wbu-default-font-size * 0.8;
     }
   }
 }
