@@ -1,145 +1,162 @@
-@use  "../../../../_variables.scss";
+@use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
 
-
-.footer-handler{
-    background: $wbu-background;
-    padding-bottom: $wbu-btn-padding-y-sm;
-    .footer-elements{
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-
-        .first-column{
-            margin-top: $space_top * 0.7;
-
-            .element{
-                display: flex;
-                &:last-child{
-                    padding-bottom: $space-bottom * 0.1;
-                }
-                
-                .icon1{
-                    margin-top: $wbu-margin * 0.88;  
-                    border: 2px soliid tomato;
-                    color: $wbu-color-secondary;
-                }
-                .icon{
-                   margin-top: $wbu-margin * 0.15;
-                    border: 2px soliid tomato;
-                    color: $wbu-color-secondary;
-                }
-                .location{
-                    color: $wbu-border-color;
-                    margin-top: $wbu-margin * 0.75;
-                    margin-left: $wbu-margin * 0.5;
-                }
-                .email{
-                    color: $wbu-border-color;
-                    margin-left: $wbu-margin * 0.5;
-                }
-                .phone-number{
-                    margin-left: $wbu-margin * 0.5;
-                    .link{
-                        color: $wbu-border-color;
-                        text-decoration: none;
-                        &:hover{
-                            transition: all 0.5s;
-                            color: $wbu-color-secondary;
-                        }
-                    }
-                }
-            }
-        }
-        :is(.second-column, .third-column, .forth-column){
-            
-            .head-element{
-                margin-top: $space_top * 0.7;
-                color: $wbu-border-color;
-            }
-            .links{
-                display: block;
-                margin-top: $wbu-margin;
-                .link{
-                    margin-top: $wbu-margin * 0.4;
-                }
-                .linker{
-                    color: $wbu-border-color;
-                    text-decoration: none;
-
-                    &:hover{
-                        transition: all 0.5s;
-                        color: $wbu-color-secondary;
-                    }
-                }
-            }
-        }
-        .forth-column{
-
-            .description{
-                margin-top: $space_inner_top * 0.6;
-                color: $wbu-border-color;
-            }
-            .email-form{
-                margin-top: $space_top * 0.5;
-                .mail{
-                    width: 60%;
-                    height: 60px;
-                    padding-left: $wbu-margin * 0.5;
-                }
-                .send{
-                    position: relative;
-                    height: 58px;
-                    background: $wbu-color-secondary;
-                    margin-left: $wbu-margin * -0.2;
-                    border: none;
-                    color: $wbu-border-color;
-                    letter-spacing: 0.5;
-                    z-index: 1;
-                    padding-left: $wbu-margin * 0.3;
-                    padding-right: $wbu-margin * 0.3;
-                    
-                    //transform: scaleX(1);
-                    &::before{
-                        content: "";
-                        height: 100%;
-                        width: 100%;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        transform: scaleX(0);
-                        z-index: -1;
-                        position: absolute;
-                        color: teal;
-                        background: $wbu-background;
-                        transition: transform 0.5s;
-                        transform-origin: 0 0;
-                        transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-                    }
-                    &:hover::before{
-                        transform: scaleX(1);
-                    }
-                }
-            }
-        }
+.footer-handler {
+  background: $wbu-background;
+  padding: $space-bottom 0;
+  .footer-column {
+  }
+  .info-bloc {
+  }
+  .img-logo {
+    margin-bottom: 3.5rem;
+    img {
+      max-width: 100%;
     }
-    .copyright{
-        margin-top: $space-top * 1.5;
+  }
+  p {
+    margin: 0;
+  }
 
-        .elements{
-            color: $wbu-border-color;
-            font-size: $wbu-title-font-size ;
+  .element {
+    display: flex;
+    align-items: center;
+    padding-bottom: $wbu-margin * 0.8;
 
-            .f-link{
-                color: $wbu-color-boder;
-                text-decoration: none;
-                &:hover{
-                    transition: all 0.3s;
-                    color: $wbu-color-secondary;
-                }
-            }
-        }
+    .icon {
+      border: 2px soliid tomato;
+      color: $wbu-color-primary;
     }
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: $wbu-color-primary;
+      fill: $wbu-color-primary;
+    }
+
+    .location {
+      color: white;
+      margin-left: $wbu-margin * 0.8;
+    }
+    .email {
+      color: white;
+      margin-left: $wbu-margin * 0.5;
+    }
+    a {
+      transition: all 0.5s;
+      color: white;
+      &:hover {
+        text-decoration: none;
+        color: $wbu-color-primary;
+      }
+    }
+  }
+  .link {
+    color: white;
+
+    a,
+    & {
+      transition: all 0.5s;
+      color: white;
+    }
+    &:hover,
+    a:hover {
+      text-decoration: none;
+      color: $wbu-color-primary;
+    }
+  }
+
+  .head-element {
+    margin-bottom: 3.5rem;
+    color: white;
+    font-weight: bold;
+  }
+  .links {
+    display: block;
+    margin-top: $wbu-margin;
+    .link {
+      padding-bottom: $wbu-margin * 0.8;
+    }
+  }
+
+  .description {
+    margin-top: $space_inner_top * 0.6;
+    color: white;
+  }
+  .email-form {
+    margin-top: $space_top * 0.5;
+    display: flex;
+    align-items: center;
+    .mail {
+      width: 60%;
+      height: 60px;
+      padding-left: $wbu-margin * 0.5;
+      &:focus {
+        box-shadow: none;
+        border-color: $wbu-color-primary;
+      }
+    }
+    .send {
+      position: relative;
+      height: 60px;
+      background: $wbu-color-primary;
+      margin-left: $wbu-margin * -0.2;
+      border: none;
+      color: black;
+      letter-spacing: 0.5;
+      z-index: 1;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-left: $wbu-margin * 0.3;
+      //white-space: nowrap;
+      padding-right: $wbu-margin * 0.3;
+      //transform: scaleX(1);
+      width: 40%;
+      transition: ease-in-out 0.3s;
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: scaleX(0);
+        z-index: -1;
+        position: absolute;
+        background: $wbu-background;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
+      }
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+        color: white;
+      }
+    }
+  }
+}
+.copyright {
+  padding-top: $wbu-margin * 3;
+  p {
+    margin: 0;
+  }
+
+  .elements {
+    color: white;
+    font-size: $wbu-title-font-size;
+
+    .f-link {
+      color: $wbu-color-boder;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        transition: all 0.3s;
+        color: $wbu-color-primary;
+      }
+    }
+  }
 }

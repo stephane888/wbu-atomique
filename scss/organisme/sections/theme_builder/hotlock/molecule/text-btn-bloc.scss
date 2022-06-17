@@ -1,0 +1,85 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+@use "../atome/hotlock-btn.scss";
+.text-btn-bloc {
+  background: url("../img/bg-appoint.jpg") no-repeat center / cover;
+  padding: $wbu-margin * 1.5;
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  &::before {
+    content: "";
+    background-color: black;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //margin-bottom: $wbu-margin;
+    .title {
+      @include media-min(SM) {
+        max-width: 55rem;
+      }
+      font-size: $wbu-h1-font-size;
+      color: $wbu-border-color;
+      font-weight: 400;
+      strong {
+        color: white;
+      }
+      @include media-max(MD) {
+        line-height: 36px;
+        margin-top: $wbu-margin * 0.5;
+        margin-top: $wbu-margin * 0.2;
+        letter-spacing: 0;
+      }
+    }
+  }
+  .btn-handler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .link {
+      color: $wbu-background;
+      font-size: $wbu-default-font-size;
+      text-decoration: none;
+      position: relative;
+      background: $wbu-color-secondary;
+      display: inline-block;
+      text-align: center;
+      padding: $wbu-margin $space-top;
+      z-index: 1;
+      &:hover {
+        color: $wbu-border-color;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $wbu-background;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
+        z-index: -1;
+      }
+      &::before {
+        transform: scaleX(0);
+      }
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

@@ -1,126 +1,19 @@
-@use  "../../../../_variables.scss";
+@use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
+@use "./molecule/htl-single-product.scss";
+.products-section-handler {
+  padding: $space-top 0;
 
-
-.products-section-handler{
-    padding-top: $space-top;
-    padding-bottom: $space-top;
-
-    .section-title{
-        margin-top: $space_inner_top;
-        text-align: center;
-        font-size: $wbu-h2-font-size;
-        font-weight: lighter;
-        margin-bottom: $space_bottom * 0.5;
-    }
-    .all-products-area{
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .single-product{
-            .prod-img{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-                position: relative;
-                height: 260px;
-                 .img{
-                     width: fit-content;
-                     height: 100%;
-                 }
-                &:hover{
-                   
-                    background-position: center center;
-                    
-                    .img{
-                        transform: scale(1.1);
-                        transition: all 1s;
-                    }
-                }
-                .sticker{
-                    position: absolute;
-                    top: 5%;
-                    right: 5%;
-                    text-transform: uppercase;
-                    width: 3em;
-                    background: $wbu-color-primary;
-                    height: 3em;
-                    padding-top: $wbu-margin * 0.6;
-                    font-size: $wbu-default-font-size ;
-                    color: $wbu-border-color;
-                    text-align: center;
-                    border-radius: 100%;
-                    font-weight: bold;
-                }
-            }
-            .prod-name{
-                margin-top: $space_inner_top;
-                text-align: center;
-                font-size: $wbu-h2-font-size-sm ;
-                color: $wbu-background;
-
-                &:hover{
-                    transition: all 0.5s;
-                    color: $wbu-color-primary;
-                }
-            }
-            .prod-amount{
-                margin-top: $space_inner_top;
-                text-align: center;
-                font-size: $wbu-title-font-size-sm ;
-            }
-            .buy-btn{
-                background: $wbu-background;
-                width: 130px;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-                font-weight: bold;
-                margin-top: $wbu-margin;
-                margin-bottom: $wbu-margin;
-                padding: $wbu-btn-padding-x-sm ;
-                position: relative;
-                &:hover{
-                    
-                    .link{
-                        z-index: 1;
-                        transition: all 0.5s;
-                        color: $wbu-background;
-                    }
-                }
-                &::before{
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: $wbu-color-primary;
-                    transition: transform 0.5s;
-                    transform-origin: 0 0;
-                    transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-                    
-                }
-                &::before{
-                    transform: scaleX(0);
-                }
-                &:hover::before{
-                    
-                    transform: scaleX(1);
-                }
-                .link{
-                    color: $wbu-border-color;
-                    font-size: $wbu-title-font-size-sm  ;
-                    text-decoration: none;
-                    font-weight: 400;
-                    position: relative;
-                    
-                    
-                }
-            }
-        }
-    }
+  .section-title {
+    text-align: center;
+    font-size: $wbu-h1-font-size;
+    font-weight: lighter;
+    margin-bottom: $space_bottom * 0.5;
+  }
+  .all-products-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

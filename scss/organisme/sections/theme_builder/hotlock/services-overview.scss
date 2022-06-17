@@ -1,158 +1,46 @@
-@use  "../../../../_variables.scss";
+@use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../atome/typography/default";
-
-
-.services-overview-section-handler{
+@use "./molecule/single-service-card.scss";
+.services-overview-section-handler {
+  padding: $space-top 0;
+  .service-description {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+    @include media-max(SM) {
+      max-width: 80rem;
+    }
+    &::before {
+      content: "";
+      width: 50px;
+      height: 3px;
+      display: block;
+      background: $wbu-color-primary;
+    }
+  }
+  .head-title {
+    margin-top: $wbu-margin;
+    font-size: $wbu-h2-font-size-sm;
+    font-weight: 400 !important ;
+  }
+  .subtitle {
+    margin-top: $space_inner_top;
+    font-size: $wbu-h1-font-size;
+  }
+  .description {
     margin-top: $space-top;
-   .service-description{
-       max-width: 50rem;
-       margin-left: auto;
-       margin-right: auto;
-       padding: 4rem 2rem;
-       @include media-max(SM){
-           max-width: 80rem;
-       }
-    &::before{
-        content: "";
-        width: 50px;
-        height: 3px;
-        display: block;
-        background: $wbu-color-primary;
-    }
-   }
-    .head-title{
-        margin-top: $wbu-margin ;
-        font-size: $wbu-h2-font-size-sm ;
-        font-weight: 400 !important ;
-    }
-    .subtitle{
-        margin-top: $space_inner_top;
-        font-size: $wbu-h1-font-size ;
-    }
-    .description{
-        margin-top: $space-top;
-        font-size: $wbu-default-font-size;
-    }
-    .read-btn{
-        background: $wbu-background;
-        padding: 1.5rem 4rem;
-        display: inline-block;
-        text-align: center;
-        margin-top: $space-top ;
-        position: relative;
-        &:hover{
-            
-            .link{
-                transition: all 0.4S;
-                color: $wbu-background;
-                z-index: 1;
-            }
-        }
-        &::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: $wbu-color-primary;
-            transition: transform 0.5s;
-            transform-origin: 0 0;
-            transition-timing-function: cubic-bezier(0.5,1.6,0.4);
-            
-        }
-        &::before{
-            transform: scaleX(0);
-        }
-        &:hover::before{
-            
-            transform: scaleX(1);
-        }
-        .link{
-            color: $wbu-border-color;
-            font-size: $wbu-default-font-size  ;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1;
-            position: relative;
-            
-            
-        }
-    }
+    font-size: $wbu-default-font-size;
+  }
+  .htl-btn {
+    margin-top: $space-top;
+  }
 
-    .services-elements{
-        position: relative;
-        .card-handler{
-            width: 70vw;
-        }
-        .middle{
-            position: relative;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-
-        }
-        .card{
-            cursor: pointer;
-            height: 260px;
-            overflow: hidden;
-            background: $wbu-background;
-            border: none;
-            border-right: 1px solid rgba($wbu-border-color, 0.2);
-            border-bottom: 1px solid rgba($wbu-border-color, 0.2);
-           
-            :is(.front, .back){
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                backface-visibility: hidden;
-                position: absolute;
-                transition: transform 0.5s ease;
-                
-            }
-            .front{
-                transform: perspective(600px) rotateY(0deg);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                .icon{
-                   color: $wbu-color-primary;
-                }
-                .title{
-                    color: $wbu-border-color;
-                    margin-top: $wbu-margin;
-                    text-align: center;
-                    font-size: $wbu-title-font-size-sm;
-                }
-            }
-            .back{
-                background: $wbu-color-primary;
-                transform: perspective(600px) rotateY(180deg);
-                
-                .back-content{
-                    color: $wbu-background;
-                    background: $wbu-color-primary;
-                    text-align: center;
-                    padding: 1rem;
-                    .title{
-                        color: $wbu-background;
-                        font-weight: bold;
-                        font-size: $wbu-h2-font-size-sm;
-                    }
-                    .description{
-                        margin-top: $wbu-margin * 0.5;
-                    }
-                }
-            }
-            &:hover > .front {
-                transform: perspective(600px) rotateY(-180deg);
-            }
-            &:hover > .back {
-                transform: perspective(600px) rotateY(0deg);
-            }
-        }
+  .services-elements {
+    position: relative;
+    .card-handler {
+      width: 70vw;
     }
+  }
 }
-

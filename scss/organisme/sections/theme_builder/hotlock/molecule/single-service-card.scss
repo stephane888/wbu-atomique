@@ -1,0 +1,69 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../atome/typography/default";
+.single-service-card {
+  .middle {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .card {
+    cursor: pointer;
+    height: 260px;
+    overflow: hidden;
+    background: $wbu-background;
+    border: none;
+    border-right: 1px solid rgba(white, 0.2);
+    border-bottom: 1px solid rgba(white, 0.2);
+
+    :is(.front, .back) {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+      transition: transform 0.5s ease;
+    }
+    .front {
+      transform: perspective(600px) rotateY(0deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .icon {
+        color: $wbu-color-primary;
+      }
+      .title {
+        color: white;
+        margin-top: $wbu-margin;
+        text-align: center;
+        font-size: $wbu-title-font-size-sm;
+      }
+    }
+    .back {
+      background: $wbu-color-primary;
+      transform: perspective(600px) rotateY(180deg);
+
+      .back-content {
+        color: $wbu-background;
+        background: $wbu-color-primary;
+        text-align: center;
+        padding: 1rem;
+        .title {
+          color: $wbu-background;
+          font-weight: bold;
+          font-size: $wbu-h2-font-size-sm;
+        }
+        .description {
+          margin-top: $wbu-margin * 0.5;
+        }
+      }
+    }
+    &:hover > .front {
+      transform: perspective(600px) rotateY(-180deg);
+    }
+    &:hover > .back {
+      transform: perspective(600px) rotateY(0deg);
+    }
+  }
+}
