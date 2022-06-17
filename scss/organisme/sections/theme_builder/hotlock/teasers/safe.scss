@@ -11,8 +11,7 @@
   overflow: hidden;
   padding-bottom: $wbu-margin * 1.5;
   padding-top: $space_inner_top;
-  .to-end {
-  }
+
   .handler {
     position: relative;
     margin-top: $wbu-margin;
@@ -52,7 +51,7 @@
       padding-top: $wbu-margin * 0.5;
       &::before {
         content: "\2022";
-        color: $wbu-color-secondary;
+        color: $wbu-color-primary;
         display: flex;
         padding-right: $wbu-margin;
       }
@@ -60,7 +59,7 @@
   }
 }
 .call-info {
-  background: $wbu-color-secondary;
+  background: $wbu-color-primary;
   overflow: hidden;
   display: flex;
   flex-direction: column;
