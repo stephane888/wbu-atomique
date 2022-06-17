@@ -34,3 +34,10 @@
 .text-theme {
   color: $wbu-color-primary;
 }
+// definie les container de lecture.
+.with-phone {
+  max-width: $with_phone;
+}
+.with-tablet {
+  max-width: $with_tablet;
+}

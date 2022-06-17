@@ -1,6 +1,6 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../atome/typography/default";
-.btn-carre {
+.clothing-four-btn .btn-carre {
   width: 3.5rem;
   height: 3.5rem;
   display: flex;
@@ -11,6 +11,7 @@
   transition: all 0.3s ease-out 0s;
   position: relative;
   cursor: pointer;
+  padding: 0 0;
   svg {
     width: 1.6rem;
     height: 2rem;

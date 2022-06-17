@@ -18,13 +18,19 @@
     margin-bottom: 8px;
     font-size: $wbu-title-font-size;
     color: $wbu-color-boder;
+    a {
+      color: inherit;
+    }
   }
   .title {
     text-transform: uppercase;
     margin-bottom: 8px;
     color: $wbu-color-boder;
     font-size: $wbu-h1-font-size;
-    font-weight: bold;
+    font-weight: 400;
+    a {
+      color: inherit;
+    }
     @include media-max(XS) {
       font-size: $wbu-h1-font-size-md;
     }
@@ -34,7 +40,7 @@
     margin-bottom: 8px;
     color: white;
     font-weight: bold;
-    font-size: $wbu-h1-font-size * 0.85;
+    font-size: $wbu-titre-big;
   }
   .desc {
     text-transform: capitalize;

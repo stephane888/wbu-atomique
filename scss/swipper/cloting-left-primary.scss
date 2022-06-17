@@ -1,7 +1,7 @@
 @use "../wbu-ressources-clean.scss" as *;
 @use "../variables" as *;
 .swiper {
-  &.clothing--left {
+  &.clothing--left--primary {
     .swiper-pagination {
       top: 50%;
       bottom: auto;
@@ -19,22 +19,29 @@
       width: $wbu-margin * 0.5;
       height: $wbu-margin * 0.5;
       margin-bottom: $wbu-margin * 1.2;
+      opacity: 0.5;
       &::before {
-        border: 4px solid #ccc;
+        border: 4px solid darken($wbu-color-primary, 30%);
         width: $wbu-margin * 0.8;
         height: $wbu-margin * 0.8;
         content: "";
         position: absolute;
         left: 0;
       }
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
       &.swiper-pagination-bullet-active::after {
         content: "";
         position: absolute;
         left: $wbu-margin * 2;
-        background: #ccc;
+        background: $wbu-color-primary;
         height: 2px;
         width: 40px;
         margin-top: $wbu-margin * 0.4;
+      }
+      &.swiper-pagination-bullet-active::before {
+        border-color: $wbu-color-primary;
       }
     }
   }

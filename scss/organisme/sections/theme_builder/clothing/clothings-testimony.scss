@@ -1,0 +1,31 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+.clothing-testimonial {
+  &__img {
+    margin-right: $wbu-margin * 1.75;
+    img {
+      min-width: 120px;
+    }
+  }
+  &__text {
+    font-size: $wbu-title-font-size;
+    .header {
+      position: relative;
+      margin-bottom: $wbu-margin * 1.25;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -$wbu-margin * 0.8;
+        right: auto;
+        width: 4px;
+        background-color: lighten($wbu-background, 40);
+        opacity: 0.25;
+      }
+      .name {
+        font-size: $wbu-h3-font-size;
+      }
+    }
+  }
+}

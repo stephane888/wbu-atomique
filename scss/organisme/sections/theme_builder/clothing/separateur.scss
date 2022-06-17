@@ -1,11 +1,16 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
-@mixin hr_separation($bottom: $wbu-margin, $height: 5px, $width: 60px) {
+@mixin hr_separation(
+  $bottom: $wbu-margin,
+  $height: 5px,
+  $width: 60px,
+  $color: "#fff"
+) {
   position: relative;
   z-index: 1;
   &::after,
   &::before {
-    background-color: #fff;
+    background-color: $color;
     bottom: -$wbu-margin;
     content: "";
     height: $height;
