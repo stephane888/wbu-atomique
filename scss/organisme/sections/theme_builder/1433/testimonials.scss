@@ -1,67 +1,65 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../atome/typography/default";
+
 @use "./variables.scss" as *;
 
-.testimonials-section-handler{
-    .single-card-testimonials{
-        margin-top: $space_inner_top;
-        margin-bottom: $space-bottom;
-        height: 85%;
-        //padding-bottom: 30px;
-        border-bottom: 1px solid $wbu-color-boder;
-    }   
-    .testimony{
-        font-size: $wbu-title-font-size;
-        font-weight: 500  !important;
-        line-height: 2.2rem;
+.testimonials-section-handler {
+  .single-card-testimonials {
+    margin-top: $space_inner_top;
+    margin-bottom: $space-bottom;
+    height: 85%;
+    //padding-bottom: 30px;
+    border-bottom: 1px solid $wbu-color-boder;
+  }
+  .testimony {
+    font-size: $wbu-title-font-size;
+    font-weight: 500 !important;
+    line-height: 2.2rem;
+    color: $wbu-brand-color;
+  }
+  .icon {
+    color: $wbu-color-boder;
+    display: block;
+    margin-bottom: $wbu-margin * 0.7;
+  }
+  .img-profiles {
+    position: relative;
+    .img-link {
+      .__img {
+        border-radius: 100%;
+      }
+      &::before {
+        content: "";
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        width: 130px;
+        border-radius: 100%;
+        background: $wbu-color-primary;
+        position: absolute;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+      }
+      &:hover::before {
+        opacity: 0.5;
+      }
+    }
+  }
+  .testimony-info {
+    .info {
+      .name-link {
         color: $wbu-brand-color;
-    }
-    .icon{
-        color: $wbu-color-boder;
-        display: block;
-        margin-bottom: $wbu-margin * 0.7;
-    }
-    .img-profiles {
-        position: relative;
-        .img-link{
-          
-            .__img{
-               border-radius: 100%; 
-            }
-            &::before{
-                content: "";
-                top: 0;
-                height: 100%;
-                opacity: 0;
-                width: 130px;
-                border-radius: 100%; 
-                background: $wbu-color-primary;
-                position: absolute;
-                transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
-
-            }
-            &:hover::before{
-               opacity: 0.5;
-            }
+        margin-top: $wbu-margin;
+        text-decoration: none;
+        border-bottom: 1px solid $wbu-color-secondary;
+        font-size: $wbu-p-font-size;
+        padding-bottom: $wbu-margin * 0.02;
+        transition: all 0.5s;
+        &:hover {
+          border-bottom: 0;
         }
+      }
+      .role {
+        margin-top: $wbu-margin * 0.2;
+      }
     }
-    .testimony-info{
-        .info{
-            .name-link{
-                color: $wbu-brand-color;
-                margin-top: $wbu-margin;
-                text-decoration: none;
-                border-bottom: 1px solid $wbu-color-secondary;
-                font-size: $wbu-p-font-size;
-                padding-bottom: $wbu-margin * 0.02;
-                transition: all 0.5s;
-                &:hover{
-                    border-bottom: 0;
-                }
-            }
-            .role{
-                margin-top: $wbu-margin * 0.2;
-            }
-        }
-    }
+  }
 }

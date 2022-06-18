@@ -1,6 +1,6 @@
 @use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../atome/typography/default";
+
 @use "./molecule/single-service-card.scss";
 .services-overview-section-handler {
   padding: $space-top 0;

@@ -1,115 +1,110 @@
-
 @use "../wbu-atomique/scss/wbu-ressources-clean.scss" as *;
-@use "../../../../atome/typography/default";
- 
-.post-proposition-section-handler{
-    overflow: hidden;
-    margin-top: $space_top * 0.5;
-    .latest-post-title{
-        font-size: $wbu-titre-big-sm;
-        font-weight: bolder;
-        padding-left: $wbu-btn-padding-x-sm;
-        margin-top: $space_inner_top;
-        margin-left: $wbu-margin * 1.99;
-    }
-    .all-single-latest-post{
-        margin-left: $wbu-margin;
-        .single-post{
-            margin-left: $wbu-margin * 1.4;
-            margin-bottom: $space_bottom * 0.3;
-            .post-img-handler{
-                margin-right: $wbu-margin;
-                .link{
-                    
-                    position: relative;
-                    &::before{
-                        content: "";
-                        top: -33;
-                        height: 80px;
-                        z-index: 1;
-                        opacity: 0.2;
-                        width: 100%;
-                        background: $wbu-color-secondary;
-                        display: none;
-                        position: absolute;
 
-                    }
-                    &:hover::before{
-                        transition: cubic-bezier(0.19, 1, 0.22, 1);
-                        display: block;
-                    }
-                }
-            }
-            .post-link{
-                font-size: $wbu-titre-big * 0.5;
-                .post-link{
-                    font-weight: bolder;
-                }
-            }
-            .posted-date{
-                margin-top: $space_top * 0.4;
-                margin-left: $wbu-margin * 0.3;
-                font-size: $wbu-title-font-size;
-            }
+.post-proposition-section-handler {
+  overflow: hidden;
+  margin-top: $space_top * 0.5;
+  .latest-post-title {
+    font-size: $wbu-titre-big-sm;
+    font-weight: bolder;
+    padding-left: $wbu-btn-padding-x-sm;
+    margin-top: $space_inner_top;
+    margin-left: $wbu-margin * 1.99;
+  }
+  .all-single-latest-post {
+    margin-left: $wbu-margin;
+    .single-post {
+      margin-left: $wbu-margin * 1.4;
+      margin-bottom: $space_bottom * 0.3;
+      .post-img-handler {
+        margin-right: $wbu-margin;
+        .link {
+          position: relative;
+          &::before {
+            content: "";
+            top: -33;
+            height: 80px;
+            z-index: 1;
+            opacity: 0.2;
+            width: 100%;
+            background: $wbu-color-secondary;
+            display: none;
+            position: absolute;
+          }
+          &:hover::before {
+            transition: cubic-bezier(0.19, 1, 0.22, 1);
+            display: block;
+          }
         }
+      }
+      .post-link {
+        font-size: $wbu-titre-big * 0.5;
+        .post-link {
+          font-weight: bolder;
+        }
+      }
+      .posted-date {
+        margin-top: $space_top * 0.4;
+        margin-left: $wbu-margin * 0.3;
+        font-size: $wbu-title-font-size;
+      }
     }
-    .most-read-section{
-        margin-left: auto;
-        .most-read-title{
-            font-size: $wbu-titre-big-sm;
-            font-weight: bolder;
-            padding-left: $wbu-btn-padding-x-sm;
-            margin-top: $space_inner_top;
-            margin-left: $wbu-margin * 1.99;
-        }
-        .single-card{
-            .pub-info{
-                font-size: $wbu-title-font-size;
-            }
-            .img-handler{
-                position: relative;
-                .img-sup{
-                    height: 100%;
-                    width: 100%;
-                    &::before{
-                        content: "";
-                        top: -1;
-                        height: 100%;
-                        opacity: 0.4;
-                        width: 100%;
-                        background: $wbu-color-secondary;
-                        display: none;
-                        position: absolute;
-        
-                    }
-                    &:hover::before{
-                        transition: cubic-bezier(0.19, 1, 0.22, 1);
-                        display: block;
-                    }
-                }
-            }
-            .card-text-descriptor{
-                font-size: $wbu-titre-big-sm;
-                .link{
-                    color: $wbu-background;
-                    font-weight: bolder;
-                    text-decoration: none;
-                    &:hover{
-                        color: $wbu-color-teal;
-                    }
-                }
-            }
-            .role{
-                font-size: $wbu-title-font-size;
-            }
-        }
-        .more-link{
-            font-size: $wbu-title-font-size;
-            
-            .link{
-                text-decoration: none;
-                border-bottom: 0.15rem solid dodgerblue;
-            }
-        }
+  }
+  .most-read-section {
+    margin-left: auto;
+    .most-read-title {
+      font-size: $wbu-titre-big-sm;
+      font-weight: bolder;
+      padding-left: $wbu-btn-padding-x-sm;
+      margin-top: $space_inner_top;
+      margin-left: $wbu-margin * 1.99;
     }
+    .single-card {
+      .pub-info {
+        font-size: $wbu-title-font-size;
+      }
+      .img-handler {
+        position: relative;
+        .img-sup {
+          height: 100%;
+          width: 100%;
+          &::before {
+            content: "";
+            top: -1;
+            height: 100%;
+            opacity: 0.4;
+            width: 100%;
+            background: $wbu-color-secondary;
+            display: none;
+            position: absolute;
+          }
+          &:hover::before {
+            transition: cubic-bezier(0.19, 1, 0.22, 1);
+            display: block;
+          }
+        }
+      }
+      .card-text-descriptor {
+        font-size: $wbu-titre-big-sm;
+        .link {
+          color: $wbu-background;
+          font-weight: bolder;
+          text-decoration: none;
+          &:hover {
+            color: $wbu-color-teal;
+          }
+        }
+      }
+      .role {
+        font-size: $wbu-title-font-size;
+      }
+    }
+    .more-link {
+      font-size: $wbu-title-font-size;
+
+      .link {
+        text-decoration: none;
+        border-bottom: 0.15rem solid dodgerblue;
+      }
+    }
+  }
 }

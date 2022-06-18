@@ -1,5 +1,4 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../../atome/typography/default";
 @use "../atome/hotlock-btn.scss";
 
 .hotlock-hero {
@@ -44,7 +43,6 @@
     }
 
     .title {
-      font-size: $wbu-h2-font-size;
       margin-bottom: $wbu-margin;
       color: darken($color: $wbu-color-boder, $amount: 5);
       max-width: 40rem;

@@ -1,50 +1,45 @@
-@use  "../../../../_variables.scss";
+@use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../atome/typography/default";
 
-.security-info-handler{
-    overflow: hidden;
-    
- 
-    .safety-text{
-        min-height: 60vh;
-        height: 80%;
-        background: url("https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_cta2.jpg");
-        background-position: center !important;
-        background-repeat: no-repeat;
-        background-size: cover !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+.security-info-handler {
+  overflow: hidden;
 
-        .icon{
-            color: $wbu-color-secondary;
+  .safety-text {
+    min-height: 60vh;
+    height: 80%;
+    background: url("https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_cta2.jpg");
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-            i{
+    .icon {
+      color: $wbu-color-secondary;
 
-                svg{
-                    margin-top: $space-top;
-                    fill: $wbu-color-primary;
-                    color: $wbu-color-primary;
-                }
-            }
+      i {
+        svg {
+          margin-top: $space-top;
+          fill: $wbu-color-primary;
+          color: $wbu-color-primary;
         }
-        .text-title{
-            color: $wbu-border-color;
-            font-size: $wbu-titre-biggest;
-            font-weight: lighter;
-            margin: $wbu-margin*2 0;
-        }
-        .text-paragraph{
-            color: $wbu-border-color;
-            font-size: $wbu-h2-font-size ;
-            font-weight: lighter;
-            margin-bottom: $wbu-margin*2;
-            max-width: 70rem;
-            line-height: 1.5;
-        }
-
-        
+      }
     }
+    .text-title {
+      color: $wbu-border-color;
+      font-size: $wbu-titre-biggest;
+      font-weight: lighter;
+      margin: $wbu-margin * 2 0;
+    }
+    .text-paragraph {
+      color: $wbu-border-color;
+      font-size: $wbu-h2-font-size;
+      font-weight: lighter;
+      margin-bottom: $wbu-margin * 2;
+      max-width: 70rem;
+      line-height: 1.5;
+    }
+  }
 }

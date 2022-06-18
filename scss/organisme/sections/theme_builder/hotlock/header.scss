@@ -1,8 +1,7 @@
-@use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../atome/typography/default";
 @use "./molecule/hotlock-hero.scss";
 @use "./molecule/service-items.scss";
+@use "../../../../_variables.scss" as *;
 
 .header-section-handler {
   overflow: hidden;
@@ -131,7 +130,6 @@
 
   .header-back-slide {
     background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
     margin: 0;
@@ -438,5 +436,4 @@
       }
     }
   }
-
 }

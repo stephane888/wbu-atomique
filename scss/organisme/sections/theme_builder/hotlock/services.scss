@@ -1,6 +1,6 @@
 @use "../../../../_variables.scss";
 @use "../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../atome/typography/default";
+
 @use "./molecule/single-service-items.scss";
 .our-services-handler {
   margin-top: $space-top;
