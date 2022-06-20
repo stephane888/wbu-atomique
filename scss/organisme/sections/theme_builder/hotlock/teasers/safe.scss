@@ -1,4 +1,4 @@
-@use "../../../../../variables";
+@use "../../../../../variables" as *;
 @use "../../../../../wbu-ressources-clean.scss" as *;
 
 .safety-handler {
@@ -22,16 +22,20 @@
   }
   .icon {
     position: absolute;
-    top: 65;
-    left: -250;
+    top: 65px;
+    left: -130px;
     opacity: 0.6;
     color: $wbu-color-thirdly;
+    svg {
+      width: 330px;
+      height: 330px;
+    }
   }
   .head-title {
     font-size: $wbu-h1-font-size;
     font-weight: bold;
     text-align: left;
-    margin-top: $space-top;
+    margin-top: $space-inner-top;
     display: inline-block;
   }
 }
@@ -71,14 +75,18 @@
 
   .icon {
     position: absolute;
-    top: 65;
-    right: -150;
+    top: 65px;
+    right: -150px;
     opacity: 0.6;
     color: rgba($wbu-border-color, 0.5);
+    svg {
+      width: 330px;
+      height: 330px;
+    }
   }
   .head-title {
     display: flex;
-    font-size: $wbu-titre-suppra;
+    font-size: $wbu-h1-font-size;
     align-items: flex-start;
     justify-content: start;
   }

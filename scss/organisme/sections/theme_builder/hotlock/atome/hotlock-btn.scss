@@ -37,6 +37,9 @@
   cursor: pointer;
   text-transform: uppercase;
   overflow: hidden;
+  .nav-link {
+    padding: 0;
+  }
   &,
   a {
     text-decoration: none;
