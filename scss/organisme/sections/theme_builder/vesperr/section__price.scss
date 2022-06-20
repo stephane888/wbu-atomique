@@ -4,10 +4,9 @@
 @use "./atome/section-title.scss";
 
 .pricing {
-  padding: $space_top 0;
-
+  padding: $space_bottom 0;
   .box {
-    padding: 20px;
+    padding: 25px;
     background: lighten($wbu-color-boder, 9);
     text-align: center;
     border-radius: 8px;
@@ -22,20 +21,48 @@
       //transform: scale(1.02);
       box-shadow: 0px 05px 10px rgba(gray, 0.2);
     }
+    .illustration {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0 0;
+      .icon {
+        width: 11rem;
+        height: 11rem;
+        background-color: $wbu-background;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        svg {
+          width: 5rem;
+          height: 5rem;
+          fill: white;
+        }
+      }
+    }
     h3 {
       padding: 15px;
-      margin: 2rem 0;
-      font-size: $wbu-h3-font-size;
+      margin: 2rem 0 0;
+      font-size: $wbu-h2-font-size;
       font-weight: 600;
       color: #222222;
       letter-spacing: 1px;
+    }
+    .desc {
+      font-size: $wbu-default-font-size;
+      color: $wbu-color-text;
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
     }
 
     h4 {
       font-size: 4.2rem;
       color: $wbu-color-primary;
       font-weight: $wbu-title-font-weight - 200;
-      margin-bottom: 20px;
+      margin: 25px 0;
 
       sup {
         font-size: 20px;
