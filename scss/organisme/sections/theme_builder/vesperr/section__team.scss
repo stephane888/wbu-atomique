@@ -40,6 +40,9 @@
         svg {
           line-height: 0;
         }
+        &:hover {
+          color: $wbu-color-primary;
+        }
       }
 
       svg {
@@ -50,6 +53,11 @@
 
     .member-info {
       padding: 25px 15px;
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
 
       h4 {
         font-weight: 700;

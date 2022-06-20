@@ -8,17 +8,17 @@
 
   .box {
     padding: 20px;
-    background: lighten($wbu-color-boder, 11);
+    background: lighten($wbu-color-boder, 9);
     text-align: center;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-    border: 2px solid lighten($wbu-color-boder, 10);
+    border: 2px solid lighten($wbu-color-boder, 9);
     transform: scale(1);
     transition: ease 0.4s;
     transform-origin: 160px;
     &:hover {
-      transform: perspective(523px) rotateX(5deg) scale(1.03);
+      transform: perspective(523px) rotateX(3deg) scale(1.03);
       //transform: scale(1.02);
       box-shadow: 0px 05px 10px rgba(gray, 0.2);
     }
@@ -66,6 +66,7 @@
         align-items: center;
         margin-bottom: 16px;
         padding-left: 2.5rem;
+        padding-right: 2.5rem;
         position: relative;
         a {
           &:hover {

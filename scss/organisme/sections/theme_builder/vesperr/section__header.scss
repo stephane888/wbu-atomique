@@ -2,10 +2,12 @@
 @use "../../../../variables" as *;
 
 #header {
+  position: sticky;
   z-index: 997;
   transition: all 0.5s;
   padding: 2.2rem 0;
   background: #fff;
+  top: 0;
   //border-bottom: 1rem solid black;
 
   .navbar-mobile {
@@ -106,7 +108,7 @@
       transition: 0.3s;
 
       &:hover {
-        color: #3498db;
+        color: $wbu-color-primary;
       }
 
       i {
@@ -160,14 +162,14 @@
       }
     }
     .getstarted {
-      background: #3498db;
+      background: $wbu-color-primary;
       padding: 0.8rem 2.5rem;
       margin-left: 3rem;
       border-radius: 5rem;
       color: #fff;
 
       &:hover {
-        background: rgba($color: #3498db, $alpha: 0.8);
+        background: rgba($color: $wbu-color-primary, $alpha: 0.8);
         color: white;
       }
     }

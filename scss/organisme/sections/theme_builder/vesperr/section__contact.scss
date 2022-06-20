@@ -28,7 +28,7 @@
       font-size: $wbu-default-font-size + 0.2;
       display: inline-block;
       background: #fff;
-      color: #3498db;
+      color: $wbu-color-primary;
       line-height: 1;
       padding: 8px 0;
       margin-right: 4px;
@@ -37,15 +37,15 @@
       width: 36px;
       height: 36px;
       transition: 0.3s;
-      border: 1px solid #3498db;
+      border: 1px solid $wbu-color-primary;
       text-decoration: none;
 
       i {
-        color: #3498db;
+        color: $wbu-color-primary;
       }
 
       &:hover {
-        background: #3498db;
+        background: $wbu-color-primary;
       }
 
       &:hover i {
@@ -59,7 +59,7 @@
 
     svg {
       font-size: $wbu-default-font-size + 1.8;
-      color: #3498db;
+      color: $wbu-color-primary;
       float: left;
       line-height: 1;
     }
@@ -110,7 +110,7 @@
     }
 
     button[type="submit"] {
-      background: #3498db;
+      background: $wbu-color-primary;
       border: 0;
       padding: 10px 24px;
       color: #fff;
@@ -118,7 +118,7 @@
       border-radius: 50px;
 
       &:hover {
-        background: #2383c4;
+        background: $wbu-color-secondary;
       }
     }
   }

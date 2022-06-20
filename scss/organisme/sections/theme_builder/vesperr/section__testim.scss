@@ -1,6 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
-
+@use "./molecule/testimonial-item.scss";
 .testimonials {
   padding: $space_top 0;
   .testimonials-slider {
@@ -43,60 +43,6 @@
     //border:1px solid black;
   }
 
-  .testimonial-item {
-    box-sizing: content-box;
-    padding: 30px 30px 30px 60px;
-    margin: 30px 15px;
-    min-height: 200px;
-    box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
-    position: relative;
-    background: #fff;
-
-    .testimonial-img {
-      width: 90px;
-      border-radius: 10px;
-      border: 6px solid #fff;
-      position: absolute;
-      left: -45px;
-      //border: 1px solid red;
-    }
-
-    h3 {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 10px 0 5px 0;
-      color: #111;
-    }
-
-    h4 {
-      font-size: 14px;
-      color: #999;
-      margin: 0;
-    }
-
-    p {
-      font-style: italic;
-      margin: 15px auto 15px auto;
-    }
-
-    .quote-icon-left {
-      display: inline-block;
-      left: -5px;
-      position: relative;
-      color: #e1f0fa;
-      font-size: 26px;
-    }
-
-    .quote-icon-right {
-      display: inline-block;
-      right: -5px;
-      top: 10px;
-      position: relative;
-      color: #e1f0fa;
-      font-size: 26px;
-    }
-  }
-
   .swiper-pagination {
     margin-top: 20px;
     display: block;
@@ -114,7 +60,7 @@
       height: 12px;
       background-color: #fff;
       opacity: 1;
-      border: 1px solid #3498db;
+      border: 1px solid $wbu-color-primary;
       padding: 7px;
       margin-left: 5px;
       border-radius: 50%;
@@ -122,7 +68,7 @@
     }
 
     .swiper-pagination-bullet-active {
-      background: #3498db;
+      background: $wbu-color-primary;
     }
 
     .swiper-pagination-clickable .swiper-pagination-bullet {
