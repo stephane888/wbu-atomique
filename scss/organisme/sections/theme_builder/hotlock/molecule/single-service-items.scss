@@ -80,13 +80,12 @@
     .item-title {
       padding-bottom: $wbu-margin;
 
-      h4 {
-        a {
-          color: $wbu-background;
-          font-weight: 300;
-          font-size: $wbu-h2-font-size;
-          text-decoration: none;
-        }
+      a,
+      & {
+        color: $wbu-background;
+        font-weight: 500;
+        font-size: $wbu-h2-font-size;
+        text-decoration: none;
       }
     }
     .descriptor-item {

@@ -1,4 +1,4 @@
-@use "../../../../_variables.scss";
+@use "../../../../_variables.scss" as *;
 @use "../../../../wbu-ressources-clean.scss" as *;
 
 .lock-smithing-service-handler {
@@ -61,7 +61,7 @@
           //margin-top: $wbu-margin * 0.5;
           display: flex;
           align-items: center;
-          margin-bottom: $wbu-margin;
+          margin-bottom: $wbu-margin * 0.8;
           font-size: $wbu-title-font-size;
           &::before {
             content: "\2022";
