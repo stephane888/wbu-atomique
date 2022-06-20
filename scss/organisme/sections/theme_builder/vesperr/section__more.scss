@@ -1,86 +1,84 @@
-@use "../../../../wbu-ressources-clean.scss";
-@import "../../../../variables";
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+@use "./atome/section-title.scss";
 
 .more-services {
+  .card {
+    border: 0;
+    padding: 160px 20px 20px 20px;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
-    .card {
-
-        border: 0;
-        padding: 160px 20px 20px 20px;
-        position: relative;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-
-        &:hover .card-body{
-
-            background:#3498db;
-
-        }
-
-        &:hover .card-title a{
-
-            color:#fff;
-
-        }
-
-        &:hover .card-text {
-
-            color: #fff;
-
-        }
-
-        &:hover .read-more a {
-
-            color:#fff;
-
-        }
-
+    &:hover .card-body {
+      background: $wbu-color-primary;
     }
 
-    .card-body {
-
-        z-index: 10;
-        background: rgba(255,255,255,0.9);
-        padding: 15px 30px;
-        box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
-        transition: ease-in-out 0.4s;
-        border-radius: 5px;
-
+    &:hover .card-title a {
+      color: #fff;
     }
 
-    .card-title {
-
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 15px;
-        font-size: 1.25rem;
-
-        a {
-
-            color: #222222;
-            text-decoration: none;
-
-        }
-
+    &:hover .card-text {
+      color: #fff;
     }
 
-    .card-text {
-
-        color: #5e5e5e;
-
+    &:hover {
+      .read-more a,
+      svg {
+        color: #fff;
+      }
     }
+  }
 
-    .read-more a {
+  .card-body {
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem 3rem;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 20%);
+    transition: ease-in-out 0.4s;
+    border-radius: 5px;
+  }
 
-        color: #777777;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1.2rem;
-        transition: 0.4s;
-        text-decoration: none;
+  .card-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: $wbu-h2-font-size-sm;
 
+    a {
+      color: #222222;
+      text-decoration: none;
     }
+  }
 
+  .card-text {
+    color: #5e5e5e;
+    font-size: $wbu-title-font-size;
+    margin-bottom: 1.5rem;
+  }
+
+  .read-more {
+    display: flex;
+    align-items: center;
+    color: $wbu-color-text;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      transition: 0.4s;
+      margin-right: 5px;
+    }
+    a {
+      color: $wbu-color-text;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.2rem;
+      transition: 0.4s;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+  }
 }

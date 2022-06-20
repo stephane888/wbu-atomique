@@ -1,5 +1,5 @@
-@use "../../../../wbu-ressources-clean.scss";
-@import "../../../../variables";
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
 
 .vesperr_hero {
   .title {

@@ -1,161 +1,125 @@
-@use "../../../../wbu-ressources-clean.scss";
-@import "../../../../variables";
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
 
 .contact {
-
-    .contact-about {
-    
-        h3 {
-
-            font-size: $wbu-h3-font-size + 1;
-            margin: 0 0 10px 0;
-            padding: 0;
-            line-height: 1;
-            font-weight: $wbu-title-font-weight + 1;
-            letter-spacing: 1px;
-            color: #222222;
-
-        }
-
-        p {
-
-            font-size: $wbu-default-font-size;
-            line-height: 24px;
-            color: #888;
-
-        }
-
+  padding: $space_top 0;
+  .contact-about {
+    h3 {
+      font-size: $wbu-h3-font-size + 1;
+      margin: 0 0 10px 0;
+      padding: 0;
+      line-height: 1;
+      font-weight: $wbu-title-font-weight + 1;
+      letter-spacing: 1px;
+      color: #222222;
     }
 
-    .social-links {
+    p {
+      font-size: $wbu-default-font-size;
+      line-height: 24px;
+      color: #888;
+    }
+  }
 
-        padding-bottom: 20px;
+  .social-links {
+    padding-bottom: 20px;
 
-        a {
+    a {
+      font-size: $wbu-default-font-size + 0.2;
+      display: inline-block;
+      background: #fff;
+      color: #3498db;
+      line-height: 1;
+      padding: 8px 0;
+      margin-right: 4px;
+      border-radius: 50%;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+      border: 1px solid #3498db;
+      text-decoration: none;
 
-            font-size: $wbu-default-font-size + 0.2;
-            display: inline-block;
-            background: #fff;
-            color: #3498db;
-            line-height: 1;
-            padding: 8px 0;
-            margin-right: 4px;
-            border-radius: 50%;
-            text-align: center;
-            width: 36px;
-            height: 36px;
-            transition: 0.3s;
-            border: 1px solid #3498db;
-            text-decoration: none;
+      i {
+        color: #3498db;
+      }
 
-            i {
+      &:hover {
+        background: #3498db;
+      }
 
-                color: #3498db;
+      &:hover i {
+        color: #fff;
+      }
+    }
+  }
 
-            }
+  .info {
+    color: #444444;
 
-            &:hover {
-
-                background: #3498db;
-
-            }
-
-            &:hover i {
-
-                color: #fff;
-
-            }
-        }
-
+    svg {
+      font-size: $wbu-default-font-size + 1.8;
+      color: #3498db;
+      float: left;
+      line-height: 1;
     }
 
-    .info {
+    p {
+      padding: 0 0 10px 42px;
+      line-height: 28px;
+      font-size: 14px;
+    }
+  }
 
-        color: #444444;
-
-        svg {
-
-            font-size: $wbu-default-font-size + 1.8;
-            color: #3498db;
-            float: left;
-            line-height: 1;
-
-        }
-
-        p {
-
-            padding: 0 0 10px 42px;
-            line-height: 28px;
-            font-size: 14px;
-
-        }
-
+  .php-email-form {
+    .form-group {
+      margin-bottom: 20px;
     }
 
-    .php-email-form {
-        
-        .form-group {
-
-        margin-bottom: 20px;
-
-        }
-
-        input , textarea {
-
-            border-radius: 0;
-            box-shadow: none;
-            font-size: $wbu-default-font-size;
-            padding: 10px 15px;
-
-        }
-
-        .loading {
-
-            display: none;
-            background: #fff;
-            text-align: center;
-            padding: 15px;
-
-        }
-
-        .error-message {
-
-            display: none;
-            color: #fff;
-            background: #ed3c0d;
-            text-align: left;
-            padding: 15px;
-            font-weight: $wbu-title-font-weight;
-            
-        }
-
-        .sent-message {
-
-            display: none;
-            color: #fff;
-            background: #18d26e;
-            text-align: center;
-            padding: 15px;
-            font-weight: $wbu-title-font-weight;
-
-        }
-
-        button[type=submit] {
-
-            background: #3498db;
-            border: 0;
-            padding: 10px 24px;
-            color: #fff;
-            transition: 0.4s;
-            border-radius: 50px;
-
-            &:hover {
-
-                background: #2383c4;
-
-            }
-        }
-
+    input,
+    textarea {
+      border-radius: 0;
+      box-shadow: none;
+      font-size: $wbu-default-font-size;
+      padding: 10px 15px;
     }
 
+    .loading {
+      display: none;
+      background: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .error-message {
+      display: none;
+      color: #fff;
+      background: #ed3c0d;
+      text-align: left;
+      padding: 15px;
+      font-weight: $wbu-title-font-weight;
+    }
+
+    .sent-message {
+      display: none;
+      color: #fff;
+      background: #18d26e;
+      text-align: center;
+      padding: 15px;
+      font-weight: $wbu-title-font-weight;
+    }
+
+    button[type="submit"] {
+      background: #3498db;
+      border: 0;
+      padding: 10px 24px;
+      color: #fff;
+      transition: 0.4s;
+      border-radius: 50px;
+
+      &:hover {
+        background: #2383c4;
+      }
+    }
+  }
 }

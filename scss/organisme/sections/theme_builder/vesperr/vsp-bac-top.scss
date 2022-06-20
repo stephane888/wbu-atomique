@@ -1,0 +1,29 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+// back to top btn
+
+.vsp-bac-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 45px;
+  bottom: 35px;
+  z-index: 996;
+  background: $wbu-color-primary;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+  cursor: pointer;
+  &:hover {
+    background: lighten($wbu-color-primary, 20);
+    color: white;
+  }
+
+  svg {
+    font-size: 2.8rem;
+    color: white;
+    line-height: 0;
+  }
+}

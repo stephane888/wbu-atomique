@@ -1,0 +1,41 @@
+@use "../../../../../wbu-ressources-clean.scss";
+@use "../../../../../variables" as *;
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+  //background:black;
+
+  p {
+    margin: 15px 0 0 0;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    color: #222222;
+
+    &::before {
+      content: "";
+      margin: 0 15px 10px 0;
+      width: 50px;
+      height: 2px;
+      background: $wbu-color-primary;
+      display: inline-block;
+    }
+
+    &::after {
+      content: "";
+      margin: 0 0 10px 15px;
+      width: 50px;
+      height: 2px;
+      background: $wbu-color-primary;
+      display: inline-block;
+    }
+  }
+}
+
+.section-bg {
+  background: lighten($wbu-color-boder, 8);
+}
