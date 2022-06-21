@@ -3,6 +3,9 @@
 
 .features {
   padding: $space_top 0;
+  p {
+    margin: 0;
+  }
   .icon-box {
     display: flex;
     align-items: center;
