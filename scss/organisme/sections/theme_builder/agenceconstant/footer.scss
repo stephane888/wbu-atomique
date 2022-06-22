@@ -2,25 +2,12 @@
 @use "../../../../variables" as *;
 @use "./molecule/fac-menu.scss";
 
-@media screen and (max-width: 480px) {
-  .img {
-    margin-left: 50px;
-  }
-}
-
-@media only screen and (max-width: 1160) {
-  .bgvideo {
-    display: none;
-    width: 0;
-    height: 0;
-  }
-}
 .footer-agence-constant {
   padding: $wbu-margin * 1.5 0;
   position: relative;
-  .fac-content {
-    //z-index: 1;
-  }
+  //   .fac-content {
+  //z-index: 1;
+  //   }
   &::before {
     content: "";
     position: absolute;
