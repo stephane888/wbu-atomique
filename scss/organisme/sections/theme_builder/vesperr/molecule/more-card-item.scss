@@ -64,6 +64,10 @@
     color: #5e5e5e;
     font-size: $wbu-title-font-size;
     margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
   }
 
   .read-more {
