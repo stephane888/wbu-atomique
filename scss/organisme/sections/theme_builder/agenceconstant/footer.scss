@@ -36,7 +36,7 @@
     padding: $wbu-margin * 3.5 0;
     border: 2px solid transparent;
     border-top-color: #ffffff1c;
-    border-bottom-color: #ffffff1c;
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -106,9 +106,11 @@
     }
   }
   .last-content {
+    border-top: 2px solid #ffffff1c;
     padding: $wbu-margin 0 0;
     .copyright {
-      font-size: $wbu-default-font-size;
+      font-size: $wbu-default-font-size * 1.2;
+      color: white;
     }
     .list-menu {
       display: flex;
