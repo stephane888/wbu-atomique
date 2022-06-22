@@ -1,0 +1,46 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.fac-menu {
+  margin-bottom: $wbu-margin;
+  @include media-max(XS) {
+    text-align: center;
+  }
+  .fac-title {
+    font-size: $wbu-h2-font-size;
+    font-weight: bold;
+    color: $wbu-color-primary;
+    text-transform: capitalize;
+    margin-bottom: $wbu-margin * 1.2;
+  }
+  .fac-ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    //gap: 1.5rem;
+    padding: 0;
+    &-li {
+      display: inline-block;
+      font-size: $wbu-title-font-size;
+      text-transform: capitalize;
+      margin-bottom: $wbu-margin * 0.8;
+      color: white;
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: white;
+        margin-right: 8px;
+      }
+      a {
+        color: white;
+        transition: ease 0.3s;
+        //line-height: $wbu-default-line-height * 1.8;
+        text-decoration: none;
+        line-height: 1;
+        &:hover {
+          color: $wbu-color-primary;
+        }
+      }
+    }
+  }
+}
