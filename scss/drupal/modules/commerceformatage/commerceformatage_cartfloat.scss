@@ -1,0 +1,102 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../variables" as *;
+.administrator .commerceformatage_cart_habeuk {
+  //on va deduire en js.
+  padding-top: 80px;
+  .commerceformatage_cart_habeuk_close {
+    top: 79px;
+  }
+}
+//
+.commerceformatage_cart_habeuk_cover {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+// traitement des icones.
+.commerceformatage-button-add-to-cart {
+  i {
+    width: auto !important;
+    height: auto !important;
+  }
+}
+.commerceformatage_cart_habeuk {
+  position: fixed;
+  right: -500px;
+  left: auto;
+  top: 0;
+  bottom: 0;
+  width: 450px;
+  z-index: 1000;
+  box-shadow: 0px 0px 10px 0px #3c3b3b;
+  background-color: #fff;
+  @include WBUtransition($temps: 0.8s);
+  .commerceformatage_cart_habeuk_close {
+    font-size: 3rem;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 15px;
+    color: darken($color: $wbu-color-primary, $amount: 30%);
+    cursor: pointer;
+    @include WBUtransition();
+    &:hover {
+      color: $wbu-color-primary;
+    }
+  }
+  &.show {
+    right: 0;
+    &::before {
+      content: "";
+    }
+  }
+  .commerceformatage_cart_habeuk_click {
+    display: none;
+  }
+  .block-title {
+    padding: $wbu-margin 0 $wbu-margin * 0.5 $wbu-margin;
+  }
+
+  .table-responsive {
+    padding: 0;
+    padding-right: $wbu-margin * 0.5;
+    tbody {
+      tr:first-child td {
+        border-top: none;
+      }
+      tr {
+        td {
+          vertical-align: baseline;
+          img {
+            max-width: 82px;
+            max-height: 82px;
+            width: auto;
+            height: auto;
+          }
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-left: $wbu-margin * 0.5;
+          }
+        }
+      }
+    }
+
+    .views-field-total-price__number {
+      text-align: right;
+      font-weight: 600;
+    }
+  }
+  .field--name-total-price {
+    background: #e9e7e7;
+    padding: 15px 0;
+    .order-total-line.mb-5 {
+      margin-bottom: 0 !important;
+    }
+  }
+}
