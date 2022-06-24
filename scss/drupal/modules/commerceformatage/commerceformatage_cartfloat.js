@@ -65,6 +65,33 @@
     });
   }
 
+  function removeItem(orderId, itemId) {
+    return new Promise((resolv, reject) => {
+      httpRequest = new XMLHttpRequest();
+      if (!httpRequest) {
+        alert(
+          "Svp, veillez mettre à jour votre navigateur ou contactez notre support technique"
+        );
+        return false;
+      }
+      httpRequest.onreadystatechange = () => {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (httpRequest.status === 200) {
+            resolv(true);
+          } else {
+            reject(false);
+          }
+        }
+      };
+      httpRequest.open(
+        "delete",
+        "/cart/" + orderId + "/items/" + itemId + "?_format=json"
+      );
+      httpRequest.setRequestHeader("Content-Type", "application/json");
+      httpRequest.send();
+    });
+  }
+
   /**
    * --
    * @param {*} context
@@ -73,30 +100,47 @@
     context
       .querySelectorAll(".commerceformatage-button-add-to-cart")
       .forEach((item) => {
-        console.log(" item : ", item);
         item.addEventListener("click", (event) => {
           event.preventDefault();
           item.querySelector(".loading").classList.add("fa-spin");
           item.querySelector(".loading").classList.remove("d-none");
           item.disabled = true;
           const form = item.closest("form");
-          const formData = new FormData(form);
-          const formProps = Object.fromEntries(formData);
-          const cartItem = [
-            {
-              purchased_entity_type: "commerce_product_variation",
-              purchased_entity_id: formProps.commerce_product_variation_id,
-              quantity: 1,
-              combine: true,
-            },
-          ];
-          makeRequest(cartItem).then(() => {
-            openCartPopup();
-            ManageCover();
-            item.querySelector(".loading").classList.remove("fa-spin");
-            item.querySelector(".loading").classList.add("d-none");
-            item.disabled = false;
-          });
+          var cartItem = false;
+          if (form) {
+            const formData = new FormData(form);
+            const formProps = Object.fromEntries(formData);
+            cartItem = [
+              {
+                purchased_entity_type: "commerce_product_variation",
+                purchased_entity_id: formProps.commerce_product_variation_id,
+                quantity: 1,
+                combine: true,
+              },
+            ];
+          } else {
+            var id = item.getAttribute("data-procuct-variant-id");
+            console.log("id", id);
+            if (id) {
+              cartItem = [
+                {
+                  purchased_entity_type: "commerce_product_variation",
+                  purchased_entity_id: id,
+                  quantity: 1,
+                  combine: true,
+                },
+              ];
+            }
+          }
+
+          if (cartItem)
+            makeRequest(cartItem).then(() => {
+              openCartPopup();
+              ManageCover();
+              item.querySelector(".loading").classList.remove("fa-spin");
+              item.querySelector(".loading").classList.add("d-none");
+              item.disabled = false;
+            });
           //
         });
       });
@@ -116,6 +160,40 @@
     }
   }
 
+  // open cart popup
+  function initOpenCart(context) {
+    var cl =
+      context && context.querySelector
+        ? context.querySelector(".commerceformatage_cart_habeuk_open")
+        : null;
+    if (cl) {
+      cl.addEventListener("click", () => {
+        openCartPopup();
+        ManageCover();
+      });
+    }
+  }
+
+  // Remove items to cart
+  function initRemoveItems(context) {
+    var cl =
+      context && context.querySelectorAll
+        ? context.querySelectorAll(".commerceformatage_cart_habeuk_remove")
+        : null;
+    if (cl) {
+      cl.forEach((item) => {
+        item.addEventListener("click", () => {
+          removeItem(
+            item.getAttribute("data-order-id"),
+            item.getAttribute("data-cart-id")
+          ).then(() => {
+            reloadBloc();
+          });
+        });
+      });
+    }
+  }
+
   /**
    *
    */
@@ -123,6 +201,8 @@
     attach: function (context, settings) {
       initAddTocart(context);
       initCloseCary(context);
+      initOpenCart(context);
+      initRemoveItems(context);
     },
   };
 })(jQuery, Drupal);

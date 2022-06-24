@@ -7,6 +7,43 @@
     top: 79px;
   }
 }
+.commerceformatage_cart_habeuk_open {
+  margin-right: $wbu-margin;
+  cursor: pointer;
+}
+// permet de centrer verticalment les elements su tableau.
+.table-td-align-middle {
+  tbody tr td {
+    vertical-align: initial;
+  }
+}
+.cart-form {
+  .table {
+    margin-bottom: $wbu-margin * 2;
+    margin-top: $wbu-margin * 2;
+    th {
+      border-top: none;
+      font-size: $wbu-title-font-size;
+    }
+  }
+  .delete-order-item {
+    background: transparent;
+    color: #878787;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    font-size: 2rem;
+    padding-left: 2rem;
+    &:hover {
+      color: $wbu-color-primary;
+    }
+  }
+  .quantity-edit-input {
+    width: 100%;
+    max-width: 100px;
+    padding-right: $wbu-margin * 0.25;
+  }
+}
 //
 .commerceformatage_cart_habeuk_cover {
   background-color: rgba($color: #000000, $alpha: 0.5);
