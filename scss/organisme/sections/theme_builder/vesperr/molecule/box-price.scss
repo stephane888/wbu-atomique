@@ -1,0 +1,172 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+.box {
+  padding: 25px;
+
+  background: lighten($wbu-color-boder, 9);
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid lighten($wbu-color-boder, 9);
+  transform: scale(1);
+  transition: ease 0.4s;
+  transform-origin: 160px;
+
+  @include media-max(XS) {
+    margin: 1rem;
+    margin-bottom: 4rem;
+  }
+  margin-bottom: 4rem;
+  &:hover {
+    transform: perspective(523px) rotateX(3deg) scale(1.03);
+    //transform: scale(1.02);
+    box-shadow: 0px 05px 10px rgba(gray, 0.2);
+  }
+  .illustration {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 0;
+    .icon {
+      width: 11rem;
+      height: 11rem;
+      background-color: $wbu-background;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      svg {
+        width: 5rem;
+        height: 5rem;
+        fill: white;
+      }
+    }
+  }
+  h3 {
+    padding: 15px 0;
+    margin: 2rem 0 0;
+    font-size: $wbu-h1-font-size-md;
+    font-weight: 600;
+    color: #222222;
+    letter-spacing: 1px;
+  }
+  .desc {
+    font-size: $wbu-default-font-size;
+    color: $wbu-color-text;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: 4.2rem;
+    color: $wbu-color-primary;
+    font-weight: $wbu-title-font-weight - 200;
+    margin: 25px 0;
+
+    sup {
+      font-size: 20px;
+      top: -15px;
+      left: -3px;
+    }
+
+    span {
+      color: #bababa;
+      font-size: 1.6rem;
+      font-weight: $wbu-title-font-weight - 400;
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    color: #222222;
+    text-align: center;
+    line-height: 20px;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      position: relative;
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        transition: ease 0.3s;
+        transform: translate(-50%, -50%);
+        margin-left: 5px;
+        left: 0;
+        top: 50%;
+        display: inline-block;
+        @include wbu__check($wbu-color-primary, 15);
+      }
+    }
+
+    .na {
+      color: #ccc;
+      text-decoration: line-through;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        transition: ease 0.3s;
+        transform: translate(-50%, -50%);
+        margin-left: 5px;
+        left: 0;
+        top: 50%;
+        display: inline-block;
+        @include wbu-close(gray, 15);
+      }
+    }
+  }
+
+  .btn-wrap {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .btn-buy {
+    display: inline-block;
+    padding: 10px 40px 12px 40px;
+    border-radius: 50px;
+    border: 2px solid $wbu-color-primary;
+    color: $wbu-color-primary;
+    font-size: $wbu-default-font-size;
+    font-weight: $wbu-title-font-weight;
+    transition: 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      background: $wbu-color-primary;
+      color: white;
+    }
+  }
+  &--recommended {
+    border-color: $wbu-color-primary;
+    &:hover {
+      box-shadow: 0px 05px 10px rgba($wbu-color-primary, 0.2);
+      border-color: lighten($wbu-color-boder, 10);
+    }
+
+    .btn-buy {
+      background: $wbu-color-primary;
+      color: #fff;
+    }
+  }
+}

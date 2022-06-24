@@ -5,16 +5,13 @@
   padding-bottom: 3.5rem;
   //background:black;
 
-  p {
-    margin: 15px 0 0 0;
-  }
-
   h2 {
-    font-size: 32px;
+    font-size: $wbu-titre-big-md;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
-    color: #222222;
+    color: black;
+    margin-bottom: 1.5rem;
 
     &::before {
       content: "";
@@ -33,6 +30,9 @@
       background: $wbu-color-primary;
       display: inline-block;
     }
+  }
+  .desc {
+    font-size: $wbu-default-font-size;
   }
 }
 
