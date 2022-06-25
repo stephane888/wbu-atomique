@@ -1,5 +1,5 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
-
+@use "../../../../atome/f_news/load-more.scss";
 @use "./molecule/teaser/teaser-incase.scss";
 @use "./variables.scss" as *;
 .in-case-fnews {

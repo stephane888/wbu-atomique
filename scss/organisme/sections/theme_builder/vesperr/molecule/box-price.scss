@@ -2,7 +2,6 @@
 @use "../../../../../variables" as *;
 .box {
   padding: 25px;
-
   background: lighten($wbu-color-boder, 9);
   text-align: center;
   border-radius: 8px;
@@ -19,7 +18,7 @@
   }
   margin-bottom: 4rem;
   &:hover {
-    transform: perspective(523px) rotateX(3deg) scale(1.03);
+    transform: perspective(523px) rotateX(3deg) scale(1.03) !important;
     //transform: scale(1.02);
     box-shadow: 0px 05px 10px rgba(gray, 0.2);
   }
