@@ -6,6 +6,7 @@
   padding: $wbu-margin * 2 0;
   max-width: fit-content;
   margin: 0 auto;
+
   .bloc-img {
     position: relative;
     .images {
@@ -28,7 +29,13 @@
       height: auto;
     }
     .img-2 {
-      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      @include WBUtransition($temps: 0.8s);
     }
   }
   .badge {
@@ -117,11 +124,8 @@
         opacity: 0.5;
       }
     }
-    .img-1 {
-      display: none;
-    }
     .img-2 {
-      display: block;
+      opacity: 1;
     }
     .clothing-four-btn {
       .btn-carre {

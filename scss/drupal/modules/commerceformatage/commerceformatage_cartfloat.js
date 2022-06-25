@@ -79,13 +79,14 @@
           if (httpRequest.status === 200) {
             resolv(true);
           } else {
+            console.log();
             reject(false);
           }
         }
       };
       httpRequest.open(
-        "delete",
-        "/cart/" + orderId + "/items/" + itemId + "?_format=json"
+        "get",
+        "/commerceformatage/remove-product/" + orderId + "/" + itemId
       );
       httpRequest.setRequestHeader("Content-Type", "application/json");
       httpRequest.send();
