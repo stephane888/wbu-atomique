@@ -32,6 +32,8 @@
     }
   }
   .desc {
+    max-width: 70rem;
+    margin: 0 auto;
     font-size: $wbu-default-font-size;
   }
 }
