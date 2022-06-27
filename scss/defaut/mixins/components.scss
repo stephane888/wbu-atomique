@@ -195,6 +195,8 @@
 }
 /**
  *  Mixin for multiline limit text css
+ * @depreciated move before 2x, 
+ * @use ellipseText
  */
 @mixin multiLineEllipsis(
   $lineHeight: 1.2em,
@@ -240,6 +242,17 @@
     margin-right: $ellipsis-margin-right;
   }
 }
+
+/**
+ * @stane faire la desciption.
+ */
+@mixin ellipseText($ligne: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $ligne;
+  overflow: hidden;
+}
+
 //https://codepen.io/wabeshew/pen/XdbBdM
 @mixin waitingboule() {
   $width: 15px;

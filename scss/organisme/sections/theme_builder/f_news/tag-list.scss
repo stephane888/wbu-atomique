@@ -12,12 +12,12 @@
     margin-right: 1rem;
     .link-btn {
       padding: $wbu-margin * 0.5 $wbu-margin * 1.2;
-      border: 1px solid $bg-gray;
+      border: 1px solid lighten($wbu-color-text, 60);
 
       display: inline-block;
       text-transform: capitalize;
       font-size: $wbu-default-font-size * 1.05;
-      background-color: $bg-gray;
+      background-color: lighten($wbu-color-text, 60);
 
       cursor: pointer;
       a,
@@ -32,7 +32,7 @@
     }
     &__active {
       .link-btn {
-        background-color: $bg-black;
+        background-color: $wbu-background;
 
         cursor: pointer;
         a,
@@ -40,7 +40,7 @@
           color: white;
         }
         &:hover {
-          background-color: $bg-black;
+          background-color: $wbu-background;
         }
       }
     }

@@ -19,8 +19,8 @@
     color: black;
   }
   &__desc {
-    font-size: $wbu-p-font-size;
-    color: $color-p-single;
+    font-size: $wbu-h3-font-size-sm;
+    color: rgba($wbu-background, 0.92);
     margin: 0;
   }
   .ibi__img {

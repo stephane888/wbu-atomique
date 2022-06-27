@@ -9,8 +9,8 @@
     width: 66.5%;
     padding-bottom: $wbu-margin;
     font-weight: bold;
-    color: $wbu-brand-color;
-    font-size: $wbu-p-font-size;
+    color: rgba($wbu-background, 0.9);
+    font-size: $wbu-h3-font-size-sm;
   }
   .all-comments {
     .single-comment {
@@ -19,15 +19,15 @@
       padding-bottom: $wbu-btn-padding-y-sm;
       margin-bottom: $wbu-margin;
       .reaction {
-        color: $wbu-brand-color;
+        color: rgba($wbu-background, 0.9);
         font-size: $wbu-h5-font-size;
         font-weight: bold;
         margin-bottom: $wbu-margin * 0.5;
       }
       .comment-content {
-        font-size: $wbu-p-font-size;
+        font-size: $wbu-h3-font-size-sm;
         margin-bottom: $wbu-margin;
-        color: $wbu-brand-color;
+        color: rgba($wbu-background, 0.9);
       }
       .comment-detail {
         .img-comment {

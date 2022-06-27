@@ -2,3 +2,6 @@
 @forward "./defaut/model/custom_bp.scss";
 @forward "./defaut/mixins/typography.scss";
 @forward "./defaut/mixins/components.scss";
+// se rassurer que la surchage bootstrap functionne, sinon, on cree un autre fichier.
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";

@@ -6,7 +6,7 @@
 @use "./molecule/footer/footer-last.scss";
 @use "./variables.scss" as *;
 .footer-fnews {
-  background-color: $bg-black;
+  background-color: $wbu-background;
   color: $wbu-color-boder;
 
   a {

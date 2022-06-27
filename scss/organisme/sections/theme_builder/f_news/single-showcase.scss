@@ -110,12 +110,12 @@
   }
   .ssf-paragraph,
   p {
-    font-size: $wbu-p-font-size;
+    font-size: $wbu-h3-font-size-sm;
     padding: $wbu-margin 0;
-    color: darken($color: $color-p-single, $amount: 8);
+    color: darken($color: rgba($wbu-background, 0.92), $amount: 8);
     margin: 0;
     span {
-      font-size: $wbu-p-font-size;
+      font-size: $wbu-h3-font-size-sm;
     }
     @include media-max(XX) {
       font-size: $wbu-h6-font-size;
@@ -125,9 +125,9 @@
   .ssf-bq {
     margin: $wbu-margin 0;
     padding-left: $wbu-margin * 2;
-    font-size: $wbu-p-font-size;
+    font-size: $wbu-h3-font-size-sm;
     position: relative;
-    color: $color-p-single;
+    color: rgba($wbu-background, 0.92);
     @include media-max(XX) {
       font-size: $wbu-h6-font-size;
     }

@@ -3,7 +3,7 @@
 @use "./variables.scss" as *;
 
 .hero-blog-fnews {
-  background-color: $bg-black;
+  background-color: $wbu-background;
   .hbf-content {
     padding: $wbu-margin * 11 0 $space-top * 0.7;
     @include media-max(MD) {

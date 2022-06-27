@@ -71,7 +71,7 @@
   .node-price {
     color: $wbu-color-text;
     font-weight: bold;
-    font-size: $wbu-p-font-size;
+    font-size: $wbu-h3-font-size-sm;
     padding: $wbu-margin;
     padding-right: 0;
   }
@@ -146,7 +146,7 @@
   }
   .blog-preview {
     margin-bottom: $wbu-margin * 1.2;
-    font-size: $wbu-p-font-size;
+    font-size: $wbu-h3-font-size-sm;
     color: black;
     @include ellipseText(3);
     p {
@@ -160,7 +160,7 @@
       color: $wbu-color-secondary;
     }
     .read-more-btn {
-      font-size: $wbu-p-font-size;
+      font-size: $wbu-h3-font-size-sm;
       margin-right: $wbu-margin * 2;
       padding: 0 0 8px;
       margin-bottom: 5px;
@@ -203,7 +203,7 @@
     }
     .link-comment {
       margin-right: $wbu-margin * 0.2;
-      font-size: $wbu-p-font-size;
+      font-size: $wbu-h3-font-size-sm;
       &,
       a {
         color: $wbu-color-secondary;

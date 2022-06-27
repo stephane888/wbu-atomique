@@ -5,8 +5,8 @@
 .single-card-testimony {
   padding-bottom: $space_inner_top * 2;
   .testimony {
-    font-size: $wbu-p-font-size;
-    color: $color-p-text;
+    font-size: $wbu-h3-font-size-sm;
+    color: rgba($wbu-background, 0.85);
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     p {

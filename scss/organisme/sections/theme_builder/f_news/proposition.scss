@@ -7,7 +7,7 @@
 .post-proposition-section-handler {
   overflow: hidden;
   padding: $space_top 0;
-  background: $bg-gray;
+  background: lighten($wbu-color-text, 60);
   .latest-post-title {
     font-size: $wbu-h5-font-size;
     font-weight: bolder;

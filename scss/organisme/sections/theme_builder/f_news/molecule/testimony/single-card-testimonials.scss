@@ -12,7 +12,7 @@
     font-size: $wbu-default-font-size * 1.1;
     font-weight: 500 !important;
     line-height: 2.2rem;
-    color: $wbu-brand-color;
+    color: rgba($wbu-background, 0.9);
     padding: $wbu-margin * 2 0 $wbu-margin;
     margin: 0;
     position: relative;
@@ -68,10 +68,10 @@
   .testimony-info {
     .info {
       .name-link {
-        color: $wbu-brand-color;
+        color: rgba($wbu-background, 0.9);
         text-decoration: none;
         border-bottom: 1px solid $wbu-color-secondary;
-        font-size: $wbu-p-font-size;
+        font-size: $wbu-h3-font-size-sm;
         padding-bottom: $wbu-margin * 0.2;
         transition: all 0.2s;
         display: inline-block;

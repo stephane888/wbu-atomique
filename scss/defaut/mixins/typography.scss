@@ -37,9 +37,9 @@
  *  Breack point h1.
  */
 @mixin bp_h2() {
-  font-size: $wbu-h2-font-size;
+  font-size: $wbu-h2-font-size-sm;
   @include media-min(DD) {
-    font-size: $wbu-h2-font-size-sm;
+    font-size: $wbu-h2-font-size;
   }
 }
 
@@ -47,7 +47,7 @@
  *  Breack point h1.
  */
 @mixin bp_h3() {
-  font-size: $wbu-title-font-size;
+  font-size: $wbu-h3-font-size-sm;
   @include media-min(DD) {
     font-size: $wbu-h3-font-size;
   }

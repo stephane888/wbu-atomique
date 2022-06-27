@@ -62,7 +62,7 @@
   }
 
   .member-role {
-    font-size: $wbu-p-font-size;
+    font-size: $wbu-h3-font-size-sm;
     color: $wbu-color-text;
     color: white;
     text-align: right;
@@ -75,7 +75,7 @@
     display: flex;
     align-items: center;
     .name {
-      color: $wbu-brand-color;
+      color: rgba($wbu-background, 0.9);
       font-weight: $wbu-title-font-weight;
       font-size: $wbu-h3-font-size * 0.8;
       text-decoration: none;

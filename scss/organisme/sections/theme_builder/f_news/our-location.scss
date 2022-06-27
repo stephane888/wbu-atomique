@@ -3,7 +3,7 @@
 @use "./variables.scss" as *;
 .our-location-fnews {
   padding: $space-top 0;
-  background: $bg-gray;
+  background: lighten($wbu-color-text, 60);
   .olf-title {
     color: black;
     font-weight: bold;

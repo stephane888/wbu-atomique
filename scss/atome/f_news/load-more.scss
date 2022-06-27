@@ -1,5 +1,6 @@
 @use "../../wbu-ressources-clean.scss" as *;
 @use "../../variables" as *;
+
 .load-more-button {
   margin: $wbu-margin 0;
   background-color: $wbu-color-primary;
@@ -38,7 +39,7 @@
   }
 
   &:hover {
-    color: black;
+    color: color-yiq($wbu-color-primary);
     text-decoration: none;
     background-color: darken($color: $wbu-color-primary, $amount: 2.5);
     .btn-angle-right::after {
@@ -50,9 +51,9 @@
 }
 .lmb-full {
   margin: $wbu-margin 0;
-  background-color: $wbu-color-primary;
+  background-color: $wbu-background;
   font-size: $wbu-default-font-size;
-
+  color: color-yiq($wbu-background);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -65,7 +66,7 @@
 
   &,
   a {
-    color: black;
+    color: color-yiq($wbu-background);
     transition: ease-in-out 0.3s;
     text-decoration: none;
     line-height: 1;

@@ -45,7 +45,7 @@
         position: absolute;
         right: -1.5rem;
         top: 0;
-        font-size: $wbu-p-font-size;
+        font-size: $wbu-h3-font-size-sm;
         color: red;
       }
     }
@@ -79,7 +79,7 @@
     }
     .ibl-item {
       display: flex;
-      font-size: $wbu-p-font-size;
+      font-size: $wbu-h3-font-size-sm;
       align-items: start;
       @include media-max(XS) {
         font-size: $wbu-h6-font-size;

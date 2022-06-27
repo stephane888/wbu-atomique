@@ -1,17 +1,17 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 /*
-$wbu-brand-color: rgba($wbu-background, 0.9);
-$bg-black: $wbu-background;
-$bg-gray: lighten($wbu-color-text, 60);
-$color-p-text: rgba($wbu-background, 0.85);
-$color-p-single: rgba($wbu-background, 0.92);
+rgba($wbu-background, 0.9): rgba($wbu-background, 0.9);
+$wbu-background: $wbu-background;
+lighten($wbu-color-text, 60): lighten($wbu-color-text, 60);
+rgba($wbu-background, 0.85): rgba($wbu-background, 0.85);
+rgba($wbu-background, 0.92): rgba($wbu-background, 0.92);
 $btn-color: white;
 $wbu-h2-font-size: $wbu-titre-biggest;
 $wbu-h3-font-size: $wbu-titre-big;
 $wbu-h4-font-size: $wbu-h1-font-size-sm * 1.4;
 $wbu-h5-font-size: $wbu-default-font-size * 1.6;
 $wbu-h6-font-size: $wbu-default-font-size * 1.15;
-$wbu-p-font-size: $wbu-default-font-size * 1.29;
+$wbu-h3-font-size-sm: $wbu-default-font-size * 1.29;
 
 @mixin ellipseText($ligne: 2) {
   display: -webkit-box;

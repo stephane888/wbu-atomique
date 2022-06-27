@@ -11,9 +11,9 @@
     font-weight: bold;
   }
   .dff-paragraph {
-    font-size: $wbu-p-font-size;
+    font-size: $wbu-h3-font-size-sm;
     padding: $wbu-margin * 0.7 0 $wbu-margin * 0.4;
-    color: $color-p-single;
+    color: rgba($wbu-background, 0.92);
     margin: 0;
     @include media-max(XX) {
       font-size: $wbu-h6-font-size;

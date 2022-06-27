@@ -9,7 +9,7 @@
     }
   }
   .filter-title {
-    font-size: $wbu-p-font-size;
+    font-size: $wbu-h3-font-size-sm;
     font-weight: bold;
     text-align: left;
     color: black;
@@ -43,7 +43,7 @@
   .apply-btn {
     margin-top: $wbu-margin;
     padding: $wbu-margin * 0.5 $wbu-margin * 2;
-    font-size: $wbu-p-font-size;
+    font-size: $wbu-h3-font-size-sm;
     text-transform: capitalize;
     background-color: $wbu-color-primary;
   }

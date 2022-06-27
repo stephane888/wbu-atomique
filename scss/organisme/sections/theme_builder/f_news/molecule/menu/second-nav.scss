@@ -46,7 +46,7 @@
     }
     &:hover {
       text-decoration: none;
-      // color: rgba($color: $wbu-brand-color, $alpha: 0.9);
+      // color: rgba($color: rgba($wbu-background, 0.9), $alpha: 0.9);
       color: rgba($color: $wbu-color-primary, $alpha: 0.9);
     }
   }

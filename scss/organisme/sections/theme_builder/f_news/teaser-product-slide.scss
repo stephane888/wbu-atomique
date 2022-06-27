@@ -103,7 +103,7 @@
         top: 6rem;
       }
       .nb-price {
-        font-size: $wbu-p-font-size;
+        font-size: $wbu-h3-font-size-sm;
         display: flex;
         width: 100%;
         &__price {
@@ -127,8 +127,8 @@
         display: inline-block;
       }
       .node-desc {
-        font-size: $wbu-p-font-size;
-        color: $color-p-single;
+        font-size: $wbu-h3-font-size-sm;
+        color: rgba($wbu-background, 0.92);
         padding-bottom: $wbu-margin * 0.8;
         margin-bottom: $wbu-margin;
         a {

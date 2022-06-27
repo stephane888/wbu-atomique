@@ -40,7 +40,7 @@
   }
   .member-name {
     .name {
-      color: $wbu-brand-color;
+      color: rgba($wbu-background, 0.9);
       font-weight: $wbu-title-font-weight;
       font-size: $wbu-h4-font-size;
       text-decoration: none;
