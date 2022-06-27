@@ -49,10 +49,11 @@
     color: lighten($wbu-color-text, 30);
     font-size: $wbu-title-font-size;
     text-align: left;
+    padding-bottom: $wbu-margin;
     .element {
       list-style-type: disc;
       display: flex;
-      // padding-top: $wbu-margin * 0.5;
+      padding-top: $wbu-margin * 0.5;
       &::before {
         content: "\2022";
         color: $wbu-color-primary;

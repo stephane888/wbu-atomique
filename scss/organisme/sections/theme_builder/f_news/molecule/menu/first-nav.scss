@@ -1,6 +1,8 @@
 @use "../../../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../../../atome/typography/default";
-@use "../.././variables.scss" as *;
+// on ne doit non plus integrer les la typography à ce niveau.
+// // la typography est externe :
+// Mauvaise construction, les variables surcharger ne doivent pas etre inclut dans les fichiers cela se fait en dehors de wb-atomique.
+//// les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
 
 .first-nav {
   background-color: rgba($wbu-color-boder, 0.5);
@@ -267,7 +269,8 @@
     &__brand {
       padding-left: 3rem;
       display: block;
-      color: $wbu-brand-color;
+      //color: $wbu-brand-color; ( svp, utilisez les varibles predefinit ).
+      color: $wbu-color-primary;
     }
     .menu-icons {
       margin-right: 3rem;

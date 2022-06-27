@@ -1,5 +1,5 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
-
+/*
 $wbu-brand-color: rgba($wbu-background, 0.9);
 $bg-black: $wbu-background;
 $bg-gray: lighten($wbu-color-text, 60);
@@ -19,3 +19,4 @@ $wbu-p-font-size: $wbu-default-font-size * 1.29;
   -webkit-line-clamp: $ligne;
   overflow: hidden;
 }
+/**/

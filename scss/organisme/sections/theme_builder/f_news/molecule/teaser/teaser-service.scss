@@ -1,6 +1,6 @@
 @use "../../../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../../../atome/typography/default";
-@use "../.././variables.scss" as *;
+// la typography est externe : ... ypography/default
+// les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
 
 .teaser-service {
   padding-bottom: $wbu-margin * 1.8;

@@ -1,6 +1,6 @@
 @use "../../../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../../../atome/typography/default";
-@use "../.././variables.scss" as *;
+// la typography est externe : ... ypography/default
+// les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
 
 .second-nav {
   & > .content {
@@ -46,7 +46,8 @@
     }
     &:hover {
       text-decoration: none;
-      color: rgba($color: $wbu-brand-color, $alpha: 0.9);
+      // color: rgba($color: $wbu-brand-color, $alpha: 0.9);
+      color: rgba($color: $wbu-color-primary, $alpha: 0.9);
     }
   }
   ul li {

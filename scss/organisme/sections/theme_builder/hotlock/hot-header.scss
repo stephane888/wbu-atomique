@@ -9,6 +9,9 @@
     padding-left: $wbu-margin;
     padding-top: $wbu-margin * 0.5;
     padding-bottom: $wbu-margin * 0.5;
+    .navbar-brand {
+      padding: 0;
+    }
 
     .nav-links {
       margin-left: auto;
