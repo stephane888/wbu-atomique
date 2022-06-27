@@ -48,11 +48,17 @@
   }
   .btn-carre {
     border-color: darken($wbu-color-boder, 60);
+    i {
+      color: darken($wbu-color-boder, 60);
+    }
     svg {
       fill: darken($wbu-color-boder, 60);
     }
     &:hover {
       border-color: white;
+      i {
+        color: white;
+      }
       svg {
         fill: white;
       }
