@@ -52,10 +52,10 @@
       width: 100%;
       position: relative;
       color: #ffffff;
-      font-size: $wbu-titre-suppra;
+      font-size: $wbu-titre-big;
       font-weight: 800;
       @include media-max(XS) {
-        font-size: $wbu-titre-biggest;
+        font-size: $wbu-titre-big-sm;
       }
     }
 

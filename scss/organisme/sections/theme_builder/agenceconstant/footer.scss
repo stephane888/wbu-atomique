@@ -109,7 +109,7 @@
     border-top: 2px solid #ffffff1c;
     padding: $wbu-margin 0 0;
     .copyright {
-      font-size: $wbu-default-font-size * 1.2;
+      font-size: $wbu-default-font-size;
       color: white;
     }
     .list-menu {
@@ -120,7 +120,7 @@
       padding: 0;
       flex-wrap: wrap;
       &-item {
-        font-size: $wbu-default-font-size * 1.2;
+        font-size: $wbu-default-font-size;
         margin: 1rem;
         a {
           transition: 0.2s;
