@@ -12,6 +12,11 @@
   position: relative;
   cursor: pointer;
   padding: 0 0;
+  font-size: $wbu-h6-font-size;
+  i {
+    color: white;
+    transition: all 0.3s ease-out 0s;
+  }
   svg {
     width: 1.6rem;
     height: 2rem;
@@ -20,6 +25,9 @@
   &:hover {
     background-color: $wbu-color-primary;
     border-color: $wbu-color-primary;
+    i {
+      color: $wbu-color-primary;
+    }
     .bc-tooltip {
       top: -55px;
       opacity: 1;

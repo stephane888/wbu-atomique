@@ -29,15 +29,18 @@
       text-align: center;
       &:first-child {
         color: black;
-        font-size: $wbu-h3-font-size * 1.2;
+        font-size: $wbu-h5-font-size;
         font-weight: bold;
         @include media-max(XS) {
-          font-size: $wbu-default-font-size * 1.2;
+          font-size: $wbu-default-font-size;
         }
       }
       &:last-child {
         display: inline;
-
+        font-size: $wbu-default-font-size;
+        @include media-max(XS) {
+          font-size: $wbu-h6-font-size;
+        }
         padding-top: 4px;
         border-top: 1px solid rgba(190, 190, 190, 0.671);
       }

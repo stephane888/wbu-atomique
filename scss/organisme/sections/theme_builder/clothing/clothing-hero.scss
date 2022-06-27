@@ -48,6 +48,11 @@
       margin-bottom: $wbu-margin * 3;
       @include hr_separation();
     }
+    .button {
+      a:hover {
+        text-decoration: none;
+      }
+    }
   }
   &.right {
     justify-content: end;

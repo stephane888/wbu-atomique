@@ -15,8 +15,8 @@
   }
   .sm-text {
     text-transform: capitalize;
-    margin-bottom: 8px;
-    font-size: $wbu-title-font-size;
+    margin-bottom: 1rem;
+    font-size: $wbu-default-font-size;
     color: $wbu-color-boder;
     a {
       color: inherit;
@@ -24,12 +24,15 @@
   }
   .title {
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 1rem;
     color: $wbu-color-boder;
-    font-size: $wbu-h1-font-size;
+    font-size: $wbu-h3-font-size;
     font-weight: 400;
     a {
       color: inherit;
+      &:hover {
+        text-decoration: none;
+      }
     }
     @include media-max(XS) {
       font-size: $wbu-h1-font-size-md;
@@ -37,16 +40,16 @@
   }
   .price {
     text-transform: capitalize;
-    margin-bottom: 8px;
+    margin-bottom: 1rem;
     color: white;
     font-weight: bold;
-    font-size: $wbu-titre-big;
+    font-size: $wbu-h3-font-size-sm;
   }
   .desc {
     text-transform: capitalize;
     margin-bottom: $wbu-margin * 0.8;
     color: $wbu-color-boder;
-    font-size: $wbu-default-font-size;
+    font-size: $wbu-h6-font-size;
     line-height: 1.7;
   }
   ul {
