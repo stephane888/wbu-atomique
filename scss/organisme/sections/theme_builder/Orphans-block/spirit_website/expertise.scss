@@ -1,5 +1,5 @@
-@use '../../../../../variables' as *;
-@use '../../../../../defaut/mixins/typography.scss';
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
 .expertise-section-handler{
     margin-top: $space_top;
     .text-descs{
@@ -31,7 +31,8 @@
         }
         .content{
             line-height: 1.45;
-            @mixin bp_h2()
+            @include bp_h2(); 
+        
         }
             
     }
