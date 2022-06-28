@@ -84,7 +84,7 @@
       & {
         color: $wbu-background;
         font-weight: 500;
-        font-size: $wbu-h2-font-size;
+        font-size: $wbu-h4-font-size;
         text-decoration: none;
       }
     }
@@ -93,6 +93,7 @@
     }
     .htl-btn {
       margin-top: $wbu-margin * 1.5;
+      font-size: $wbu-h6-font-size;
     }
   }
 }

@@ -32,7 +32,7 @@
     }
   }
   .head-title {
-    font-size: $wbu-h1-font-size;
+    font-size: $wbu-h3-font-size;
     font-weight: bold;
     text-align: left;
     margin-top: $space-inner-top;
@@ -87,7 +87,7 @@
   }
   .head-title {
     display: flex;
-    font-size: $wbu-h1-font-size;
+    font-size: $wbu-h3-font-size;
     align-items: flex-start;
     justify-content: start;
   }
@@ -95,6 +95,7 @@
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    font-size: $wbu-titre-biggest;
+    font-size: $wbu-h1-font-size;
+    font-weight: bold;
   }
 }
