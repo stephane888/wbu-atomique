@@ -31,7 +31,7 @@
         }
         .content{
             line-height: 1.45;
-            @include bp_h2(); 
+            @include bp_h3(); 
         
         }
             
@@ -41,6 +41,6 @@
         justify-content: center;
     }
     .lutin{
-        height: 70vh;
+        height: 65vh;
     }
 }
