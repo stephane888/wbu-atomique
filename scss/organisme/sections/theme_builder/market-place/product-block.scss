@@ -1,2 +1,20 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "./mollecules/product-ban.scss";
+@use "./atomes/product-tag.scss";
+@use "./atomes/product-love-icon.scss";
+@use "./mollecules/product-gallery.scss";
+.product-block {
+    border: 1px solid red;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    .product-content {
+        border: 1px solid green;
+        .product-tager {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+    }
+}

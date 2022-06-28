@@ -1,6 +1,8 @@
-.produc-ban {
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.product-ban {
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: $wbu-background;
+    position: relative;
 }
