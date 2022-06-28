@@ -1,4 +1,5 @@
 @use '../../../../../variables' as *;
+@use '../../../../../defaut/mixins/typography.scss';
 .expertise-section-handler{
     margin-top: $space_top;
     .text-descs{
@@ -25,13 +26,14 @@
         }
         .brief-desc{
             font-weight: $wbu-title-font-weight;
-            font-size: calc($wbu-titre-biggest + 0.16rem);
+            font-size: $wbu-h1-font-size;
             margin-bottom: $wbu-margin * 1.5;
         }
         .content{
             line-height: 1.45;
-            font-size: $wbu-h2-font-size;
+            @mixin bp_h2()
         }
+            
     }
     ._img-handler{
         display: flex;
