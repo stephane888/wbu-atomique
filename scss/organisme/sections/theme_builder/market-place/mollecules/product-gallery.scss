@@ -5,12 +5,17 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    border: 1px solid black;
+    img {
+        cursor: url(https://www.nocibe.fr/res/fr_FR/images/products/viewer.svg?frz-v=4385) 15 15,pointer;
+    }
     &__image {
         width: 100%;
         display: flex;
         padding: 2rem;
         position: relative;
+        &_img {
+            width: 100%;
+        }
         img {
             width: 100%;
         }
@@ -21,7 +26,6 @@
         align-items: center;
         justify-content: space-between;
         img {
-            border: 1px solid green;
             width: 50%;
             padding: 2rem;
         }

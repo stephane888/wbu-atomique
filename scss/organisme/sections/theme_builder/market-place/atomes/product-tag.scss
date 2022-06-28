@@ -1,9 +1,9 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 .product-tag {
-    color: $wbu-background;
+    color: $wbu-color-secondary;;
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 1.4rem;
-    border: 1px solid $wbu-background;
+    border: 1px solid  $wbu-color-secondary;
     border-radius: 4rem;
     &__content {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
