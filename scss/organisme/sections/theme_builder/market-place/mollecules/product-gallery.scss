@@ -1,0 +1,29 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border: 1px solid black;
+    &__image {
+        width: 100%;
+        display: flex;
+        padding: 2rem;
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    &__two_image {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            border: 1px solid green;
+            width: 50%;
+            padding: 2rem;
+        }
+    }
+}

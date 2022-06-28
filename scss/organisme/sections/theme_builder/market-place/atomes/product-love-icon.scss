@@ -1,0 +1,10 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.product-love-icon {
+    cursor: pointer;
+    .icon {
+        fill: #fff;
+        &:hover {
+            fill: #000;
+        }
+    }
+}
