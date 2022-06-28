@@ -48,8 +48,9 @@
     a,
     & {
       text-align: center;
-      font-size: $wbu-h2-font-size-sm;
+      font-size: $wbu-h5-font-size;
       color: $wbu-background;
+      font-weight: bold;
     }
     &:hover,
     a:hover {
@@ -61,7 +62,10 @@
   .prod-amount {
     margin-top: $space_inner_top;
     text-align: center;
-    font-size: $wbu-title-font-size-sm;
+    
+    &,p {
+      font-size: $wbu-h5-font-size;
+    }
   }
   .htl-btn {
     margin: $wbu-margin 0;

@@ -27,12 +27,12 @@
       margin-bottom: $space_bottom * 0.2;
     }
     .title {
-      font-size: $wbu-title-font-size;
+      font-size: $wbu-h5-font-size;
       font-weight: bold;
       margin-bottom: $wbu-margin * 1.5;
     }
     .description {
-      font-size: $wbu-h1-font-size;
+      @include bp_h3();
       display: flex;
       flex-direction: column;
       text-align: start;
@@ -61,7 +61,7 @@
           //margin-top: $wbu-margin * 0.5;
           display: flex;
           align-items: center;
-          margin-bottom: $wbu-margin * 0.8;
+          margin-bottom: $wbu-margin * 0.5;
           font-size: $wbu-title-font-size;
           &::before {
             content: "\2022";

@@ -37,7 +37,8 @@
         color: white;
         margin-top: $wbu-margin;
         text-align: center;
-        font-size: $wbu-title-font-size-sm;
+        font-size: $wbu-default-font-size;
+        font-weight: bold;
       }
     }
     .back {
@@ -52,7 +53,7 @@
         .title {
           color: $wbu-background;
           font-weight: bold;
-          font-size: $wbu-h2-font-size-sm;
+          font-size: $wbu-h5-font-size;
         }
         .description {
           margin-top: $wbu-margin * 0.5;

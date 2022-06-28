@@ -22,12 +22,12 @@
   }
   .head-title {
     margin-top: $wbu-margin;
-    font-size: $wbu-h2-font-size-sm;
+    font-size: $wbu-h5-font-size;
     font-weight: 400 !important ;
   }
   .subtitle {
     margin-top: $space_inner_top;
-    font-size: $wbu-h1-font-size;
+    @include bp_h3();
   }
   .description {
     margin-top: $space-top;
