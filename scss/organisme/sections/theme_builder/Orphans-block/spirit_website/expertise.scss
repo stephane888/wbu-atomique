@@ -1,0 +1,43 @@
+@use '../../../../../variables' as *;
+.expertise-section-handler{
+    margin-top: $space_top;
+    .text-descs{
+        justify-content: space-between;
+        align-items: center;
+        .info{
+            margin-right: $wbu-margin;
+        }
+        .subtitle{
+            font-weight: $wbu-title-font-weight;
+            font-size: $wbu-title-font-size;
+            text-transform: uppercase;
+            margin-bottom: $wbu-margin * 2;
+            &::before{
+                content: '';
+                width: 2rem;
+                height: 0.2rem;
+                display: inline-block;
+                margin-right: $wbu-margin * 0.2;
+                vertical-align: middle;
+                background: $wbu-background;
+                box-sizing: inherit;
+            }
+        }
+        .brief-desc{
+            font-weight: $wbu-title-font-weight;
+            font-size: calc($wbu-titre-biggest + 0.16rem);
+            margin-bottom: $wbu-margin * 1.5;
+        }
+        .content{
+            line-height: 1.45;
+            font-size: $wbu-h2-font-size;
+        }
+    }
+    ._img-handler{
+        display: flex;
+        justify-content: center;
+    }
+    .lutin{
+        height: 70vh;
+    }
+}
