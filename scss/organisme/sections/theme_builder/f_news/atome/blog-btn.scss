@@ -4,6 +4,7 @@
 .blog-btn {
   //margin: $wbu-margin * 0.6 0 0.5rem;
   margin-right: 1rem;
+  font-size: $wbu-h6-font-size;
   .link-btn {
     padding: $wbu-margin * 0.5 $wbu-margin * 1.2;
     border: 1px solid $wbu-color-secondary;
@@ -22,6 +23,7 @@
       color: white;
       a {
         color: white;
+        text-decoration: none;
       }
     }
   }

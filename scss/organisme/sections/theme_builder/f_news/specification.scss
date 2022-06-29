@@ -24,12 +24,12 @@
     padding: $wbu-margin * 0.5;
     align-items: center;
     .si-titre {
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-h5-font-size;
       color: black;
       font-weight: bold;
     }
     .si-desc {
-      font-size: $wbu-h3-font-size-sm;
+      font-size:$wbu-h5-font-size;
       color: rgba(black, 0.8);
     }
   }

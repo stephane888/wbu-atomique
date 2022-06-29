@@ -110,27 +110,27 @@
   }
   .ssf-paragraph,
   p {
-    font-size: $wbu-h3-font-size-sm;
+    font-size: $wbu-h5-font-size;
     padding: $wbu-margin 0;
     color: darken($color: rgba($wbu-background, 0.92), $amount: 8);
     margin: 0;
     span {
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-default-font-size;
     }
-    @include media-max(XX) {
-      font-size: $wbu-h6-font-size;
-    }
+    // @include media-max(XX) {
+    //   font-size: $wbu-h6-font-size;
+    // }
   }
 
   .ssf-bq {
     margin: $wbu-margin 0;
     padding-left: $wbu-margin * 2;
-    font-size: $wbu-h3-font-size-sm;
+    font-size: $wbu-h5-font-size;
     position: relative;
     color: rgba($wbu-background, 0.92);
-    @include media-max(XX) {
-      font-size: $wbu-h6-font-size;
-    }
+    // @include media-max(XX) {
+    //   font-size: $wbu-h6-font-size;
+    // }
     &::before {
       content: "";
       position: absolute;
@@ -149,7 +149,7 @@
   .ss-two-bloc {
     padding: $wbu-margin 0;
     .ssf-h4 {
-      font-size: $wbu-h4-font-size;
+      font-size:$wbu-h4-font-size;
       color: black;
       font-weight: bold;
       text-align: left;

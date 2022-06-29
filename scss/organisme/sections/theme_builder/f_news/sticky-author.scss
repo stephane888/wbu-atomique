@@ -28,7 +28,7 @@
     }
     &__title {
       font-weight: bold;
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-h5-font-size;
       color: black;
       font-weight: bold;
       a {
@@ -54,14 +54,14 @@
       color: $wbu-color-text;
     }
     &__title {
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-h5-font-size;
       color: black;
     }
   }
   .saf-btn {
     &__btn {
       display: block;
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-h5-font-size;
       color: $wbu-color-secondary;
       border: none;
       background-color: transparent;

@@ -48,7 +48,7 @@
   .nav-item {
     display: block;
     font-weight: bold;
-    font-size: 1.35rem;
+    font-size: $wbu-h6-font-size;
     text-transform: capitalize;
 
     .nav-link {
@@ -364,7 +364,7 @@
     }
 
     .nav-item {
-      font-size: 1.5rem;
+      font-size: $wbu-default-font-size;
       display: block;
       width: 100%;
       position: relative;

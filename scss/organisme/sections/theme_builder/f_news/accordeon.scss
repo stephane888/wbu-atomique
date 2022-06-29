@@ -35,7 +35,7 @@
       }
     }
     .aci-title {
-      font-size: $wbu-h6-font-size;
+      font-size: $wbu-h5-font-size;
       text-transform: uppercase;
       color: black;
       font-weight: bold;
@@ -51,7 +51,7 @@
       width: 100%;
       &::after {
         content: "+";
-        font-size: $wbu-h5-font-size;
+        font-size: $wbu-h4-font-size;
         color: black;
         font-weight: bold;
         position: absolute;
@@ -62,7 +62,7 @@
       }
     }
     .aci-desc {
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-h5-font-size;
       color: rgba($wbu-background, 0.92);
       color: black;
       margin: 0;

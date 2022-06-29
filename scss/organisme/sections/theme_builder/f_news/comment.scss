@@ -10,7 +10,7 @@
     padding-bottom: $wbu-margin;
     font-weight: bold;
     color: rgba($wbu-background, 0.9);
-    font-size: $wbu-h3-font-size-sm;
+    font-size: $wbu-h5-font-size;
   }
   .all-comments {
     .single-comment {
@@ -20,12 +20,12 @@
       margin-bottom: $wbu-margin;
       .reaction {
         color: rgba($wbu-background, 0.9);
-        font-size: $wbu-h5-font-size;
+        font-size: $wbu-h6-font-size;
         font-weight: bold;
         margin-bottom: $wbu-margin * 0.5;
       }
       .comment-content {
-        font-size: $wbu-h3-font-size-sm;
+        font-size: $wbu-default-font-size;
         margin-bottom: $wbu-margin;
         color: rgba($wbu-background, 0.9);
       }

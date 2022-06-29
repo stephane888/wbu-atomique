@@ -4,7 +4,7 @@
 .delivery-option-fnews {
   padding: $wbu-margin * 1.5 0;
   .del-title {
-    font-size: $wbu-h4-font-size;
+    font-size: $wbu-h5-font-size;
     text-transform: uppercase;
     color: black;
     margin-bottom: 1rem;
@@ -22,7 +22,7 @@
     padding: $wbu-margin * 0.2 0;
     align-items: center;
     .si-titre {
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-default-font-size;
       color: black;
       padding-left: $wbu-margin * 0.8;
       position: relative;

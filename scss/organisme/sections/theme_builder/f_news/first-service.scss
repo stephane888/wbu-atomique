@@ -120,17 +120,17 @@
         }
       }
       .node-title {
-        font-size: $wbu-h3-font-size;
+        font-size: $wbu-h1-font-size-md;
         font-weight: bold;
 
         margin-bottom: $wbu-margin;
         display: inline-block;
         cursor: pointer;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
+        @include ellipseText(2);
         color: black;
+        @include media-max(XS) {
+          font-size:$wbu-h2-font-size-sm;
+        }
         a,
         & {
           color: black;
@@ -143,7 +143,7 @@
         }
       }
       .node-desc {
-        font-size: $wbu-h3-font-size-sm;
+        font-size: $wbu-h5-font-size;
         color: black;
 
         margin-bottom: $wbu-margin * 1.6;
@@ -153,10 +153,8 @@
         }
       }
       .node-readmore {
-        font-size: $wbu-h3-font-size-sm;
-
+        font-size: $wbu-h5-font-size;
         text-align: center;
-
         position: relative;
         display: inline-block;
         transition: all 0.5s;
