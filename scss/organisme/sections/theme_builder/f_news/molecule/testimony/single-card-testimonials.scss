@@ -9,7 +9,7 @@
   //padding-bottom: 30px;
   border-bottom: 1px solid $wbu-color-boder;
   .testimony {
-    font-size: $wbu-default-font-size * 1.1;
+    font-size: $wbu-default-font-size ;
     font-weight: 500 !important;
     line-height: 2.2rem;
     color: rgba($wbu-background, 0.9);
@@ -71,7 +71,7 @@
         color: rgba($wbu-background, 0.9);
         text-decoration: none;
         border-bottom: 1px solid $wbu-color-secondary;
-        font-size: $wbu-h3-font-size-sm;
+        font-size: $wbu-h5-font-size;
         padding-bottom: $wbu-margin * 0.2;
         transition: all 0.2s;
         display: inline-block;
@@ -82,7 +82,7 @@
       }
       .role {
         margin-top: $wbu-margin * 0.22;
-        font-size: $wbu-default-font-size * 0.8;
+        font-size: $wbu-h6-font-size *0.9;
         text-transform: uppercase;
       }
     }
