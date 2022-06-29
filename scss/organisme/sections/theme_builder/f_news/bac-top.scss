@@ -27,6 +27,11 @@
     &:hover {
       background-color: $wbu-color-primary;
       border-color: $wbu-color-primary;
+      .wbu-angles-up{
+        &::after {
+          @include wbu__angles-up(color-yiq($wbu-color-primary), 20);
+        }
+      }
     }
     .wbu-angles-up {
       &::after {
