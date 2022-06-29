@@ -62,10 +62,10 @@
     }
     .post-link {
       @include media-max(XS) {
-        font-size: $wbu-h5-font-size;
+        font-size: $wbu-h5-font-size 0.8;
       }
       @include media-max(SM) {
-        font-size: $wbu-h5-font-size * 0.8;
+        font-size: $wbu-h5-font-size * 0.7;
       }
     }
     .post-img-handler {
