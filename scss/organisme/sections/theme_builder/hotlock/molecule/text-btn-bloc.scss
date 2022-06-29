@@ -29,7 +29,7 @@
       @include media-min(SM) {
         max-width: 55rem;
       }
-      font-size: $wbu-h1-font-size;
+      @include bp_h3();
       color: $wbu-border-color;
       font-weight: 400;
       strong {

@@ -1,0 +1,23 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.product-vote {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    //justify-content: space-between;
+    padding:2rem 0 2rem;
+    &__stars {
+        svg {
+            fill: $wbu-color-secondary;
+        }
+    }
+    &__rate {
+        margin-left: 2rem;
+        font-size: $wbu-default-font-size;
+        vertical-align: middle;
+    }
+    &__text {
+        margin-left: 2rem;
+        font-size: $wbu-default-font-size;
+        color: $wbu-color-secondary !important;
+    }
+}

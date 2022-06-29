@@ -18,13 +18,17 @@
       }
       .icon {
         font-size: $wbu-titre-big;
+        color: $wbu-background;
       }
       .number {
         margin-top: $wbu-margin * 0.2;
         font-size: $wbu-titre-big;
+        color: $wbu-background;
       }
       .title {
-        font-size: $wbu-h3-font-size;
+        font-size: $wbu-h5-font-size;
+        color: $wbu-background;
+        font-weight: bold;
       }
     }
   }
@@ -45,8 +49,9 @@
       }
     }
     .title {
-      color: $wbu-border-color;
-      font-size: $wbu-h2-font-size;
+      color: white;
+      font-size: $wbu-h5-font-size;
+      font-weight: bold;
     }
     .slider-container {
       position: relative;
@@ -55,16 +60,16 @@
 
       .speech {
         padding-right: $wbu-margin;
-        line-height: 6rem;
-        color: $wbu-border-color;
-        font-size: $wbu-titre-big;
+        line-height: 5rem;
+        color: white;
+        @include bp_h3();
       }
       .info {
         display: flex;
         margin-top: $wbu-margin;
         align-items: center;
         .author {
-          font-size: $wbu-h3-font-size;
+          font-size: $wbu-h5-font-size;
           color: $wbu-border-color;
         }
         .company-name {
