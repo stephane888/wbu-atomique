@@ -23,6 +23,7 @@
         text-decoration: none;
         background-color: $wbu-color-primary;
         border-color: $wbu-color-primary;
+        color: color-yiq( $wbu-color-primary);
       }
     }
     &--active {

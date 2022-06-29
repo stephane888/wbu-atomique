@@ -1,5 +1,6 @@
 @use "../../wbu-ressources-clean.scss" as *;
 @use "../../variables" as *;
+$darken-primary: darken($color: $wbu-color-primary, $amount: 2.5);
 
 .load-more-button {
   margin: $wbu-margin 0;
@@ -16,7 +17,7 @@
 
   &,
   a {
-    color: black;
+    color: color-yiq($wbu-color-primary);
     transition: ease-in-out 0.3s;
     text-decoration: none;
     line-height: 3;
@@ -34,7 +35,7 @@
       opacity: 0;
       transform: translateX(8px);
       transition: ease-in-out 0.2s;
-      @include wbu__angle-right(black, 15);
+      @include wbu__angle-right(color-yiq($wbu-color-primary), 15);
     }
   }
 
@@ -51,9 +52,9 @@
 }
 .lmb-full {
   margin: $wbu-margin 0;
-  background-color: $wbu-background;
+  background-color: $wbu-color-primary;
   font-size: $wbu-default-font-size;
-  color: color-yiq($wbu-background);
+  color: color-yiq($wbu-color-primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +67,7 @@
 
   &,
   a {
-    color: color-yiq($wbu-background);
+    color: color-yiq($wbu-color-primary);
     transition: ease-in-out 0.3s;
     text-decoration: none;
     line-height: 1;
@@ -89,18 +90,19 @@
       opacity: 0;
       transform: translateX(8px);
       transition: ease-in-out 0.2s;
-      @include wbu__angle-right(black, 15);
+      @include wbu__angle-right(color-yiq($wbu-color-primary), 15);
     }
   }
   &:hover,
   &:hover a {
-    color: black;
+    color: color-yiq($darken-primary);
     text-decoration: none;
-    background-color: darken($color: $wbu-color-primary, $amount: 2.5);
+    background-color: $darken-primary;
     .btn-angle-right::after {
       position: relative;
       opacity: 1;
       width: 2rem;
+      @include wbu__angle-right(color-yiq($darken-primary), 15)
     }
   }
 }

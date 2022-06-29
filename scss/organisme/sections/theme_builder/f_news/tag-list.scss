@@ -28,6 +28,9 @@
       }
       &:hover {
         background: $wbu-color-primary;
+        a,&{
+          color: color-yiq( $wbu-color-primary);
+        }
       }
     }
     &__active {

@@ -63,6 +63,7 @@
       color: black;
       &:hover {
         background-color: $wbu-color-primary;
+         color: color-yiq( $wbu-color-primary);
       }
     }
   }
@@ -85,6 +86,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    .wbu-search::before {
+      @include wbu-search(color-yiq( $wbu-color-primary), 18);
+    }
     span {
       display: block;
       height: 1.8rem;

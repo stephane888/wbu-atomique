@@ -103,7 +103,7 @@
       background-color: $wbu-color-text;
       .link-btn {
         border: 1px solid $wbu-color-text;
-        color: white;
+        color: color-yiq($wbu-color-text);
         cursor: text;
         a {
           color: white;
@@ -146,7 +146,7 @@
   }
   .blog-preview {
     margin-bottom: $wbu-margin * 1.2;
-    font-size: $wbu-h3-font-size-sm;
+    font-size: $wbu-h5-font-size;
     color: black;
     @include ellipseText(3);
     p {
@@ -160,7 +160,7 @@
       color: $wbu-color-secondary;
     }
     .read-more-btn {
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-h5-font-size;
       margin-right: $wbu-margin * 2;
       padding: 0 0 8px;
       margin-bottom: 5px;
@@ -203,7 +203,7 @@
     }
     .link-comment {
       margin-right: $wbu-margin * 0.2;
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-h5-font-size;
       &,
       a {
         color: $wbu-color-secondary;
