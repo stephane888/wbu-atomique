@@ -1,0 +1,20 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.product-card__plus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    background-color: #f4f4f4;
+    &__subtitle {
+        //display: flex;
+        //flex-direction: row;
+        //align-items: center;
+        border: 1px solid red;
+        font-size: $wbu-default-font-size;
+        font-weight: 600;
+        color: $wbu-color-secondary;
+        padding-bottom: 1.6rem;
+        padding-top: 1.6rem;
+    }
+}

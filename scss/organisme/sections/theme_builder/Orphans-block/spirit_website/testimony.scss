@@ -1,0 +1,124 @@
+@use "../../../../../_variables.scss" as *;
+
+.testimony-section-handler{
+    margin-top: $space_top;
+    padding-top: $space_inner_top;
+    padding-bottom: $space-bottom;
+    background: $wbu-background;
+    color: $wbu-border-color;
+    overflow: hidden;
+
+    .subtitle{
+        font-weight: $wbu-title-font-weight;
+        font-size: $wbu-title-font-size;
+        text-transform: uppercase;
+        margin-bottom: $wbu-margin * 2;
+        &::before{
+            content: '';
+            width: 2rem;
+            height: 0.2rem;
+            display: inline-block;
+            margin-right: $wbu-margin * 0.2;
+            vertical-align: middle;
+            background: $wbu-border-color;
+            box-sizing: inherit;
+        }
+    }
+    .content{
+        font-size: $wbu-titre-big;
+        font-weight: $wbu-title-font-weight;
+    }
+    .swipe-handler{
+        display: inline-block;
+        justify-content: center;
+    }
+    .swiper-wrapper{
+        height: 370px;
+        width: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        left: $wbu-margin;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            min-height: 350px;
+            width: 10px;
+            border-radius: 10px;
+            background: $wbu-color-primary;
+        }
+    }
+  .swiper{
+    display: flex;
+    justify-content: space-evenly;
+    .arrow{
+        margin-top: $space_top;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background: $wbu-color-primary;
+    }
+    .swiper-slide{
+        //width: 710px;
+        height: fit-content;
+        margin-left: $wbu-margin *2;
+        padding-bottom: $wbu-margin *2 ;
+        line-height: 4rem;
+        .testimony{
+            font-size: $wbu-h4-font-size;
+            font-weight: $wbu-title-font-weight;
+        }
+        .author{
+            margin-top: $space_top;
+            font-weight: bolder;
+        }
+        .role{
+
+        }
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+.slider-handler{
+        
+        background: teal;
+        .slide{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background: #000;
+        }
+        .box-view{
+            width: 578px;
+            display: block;
+            overflow: hidden;
+            background: purple;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    */
