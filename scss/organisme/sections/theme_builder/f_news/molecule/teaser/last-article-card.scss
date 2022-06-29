@@ -49,7 +49,7 @@
     }
     .parent-desc {
       max-width: 65%;
-      font-size: $wbu-default-font-size;
+      font-size: $wbu-h6-font-size;
       line-height: 1.5;
       text-decoration: none;
       cursor: text;
@@ -70,7 +70,7 @@
   .card-body {
     padding: $wbu-margin 0;
     .card-title {
-      font-size: $wbu-h2-font-size;
+      @include bp_h1();
       font-weight: bold;
       line-height: $wbu-default-line-height * 0.9;
       margin-bottom: $wbu-margin * 0.8;
@@ -79,12 +79,12 @@
       a {
         color: $wbu-color-secondary;
       }
-      @include media-max(SM) {
-        font-size: $wbu-h2-font-size * 0.9;
-      }
+      // @include media-max(SM) {
+      //   font-size: $wbu-h2-font-size * 0.9;
+      // }
     }
     .card-text {
-      font-size: $wbu-h3-font-size-sm;
+      font-size: $wbu-default-font-size;
       text-decoration: none;
       margin: 0;
       @include ellipseText(3);

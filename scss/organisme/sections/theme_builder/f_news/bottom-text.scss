@@ -4,26 +4,31 @@
 .home-bottom-text {
   padding: $space-top 0;
   .teaser-title {
-    font-size: $wbu-h3-font-size;
+    @include bp_h2();
+    margin: 0 auto ;
     color: black;
     font-weight: bold;
-    @include media-max(XS) {
-      font-size: $wbu-h4-font-size;
-    }
+    max-width: 90rem;
+  
   }
   .teaser-desc {
-    font-size: $wbu-h3-font-size-sm;
+    margin: 0 auto ;
+    font-size: $wbu-h5-font-size;
     padding: $wbu-btn-padding-x-sm;
     color: black;
+    max-width: 100rem;
   }
   .teaser-note {
+    margin: 0 auto ;
     margin-top: $wbu-margin * 2.5;
-    font-size: $wbu-h3-font-size-sm;
+    font-size: $wbu-h5-font-size;
     color: black;
     display: flex;
     justify-content: center;
-    p {
+   
+
+
       max-width: 60rem;
-    }
+   
   }
 }
