@@ -6,6 +6,10 @@
 @use "./mollecules/product-description.scss";
 @use "./mollecules/product-vote.scss";
 @use "./mollecules/product-pricer__item.scss";
+@use "./mollecules/product-price__quality.scss";
+@use "./mollecules/product-disponibility.scss";
+@use "./mollecules/product-zone__collect.scss";
+@use "./mollecules/product-card__plus.scss";
 .product-block {
     border: 1px solid red;
     padding-left: 4rem;
@@ -28,7 +32,22 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
+        }
+        .product-price__quality {
+            position: relative;
+        }
+        .product-disponibility {
+            position: relative;
+        }
+        .product-zone {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            //justify-content: space-between;
+            align-items: center;
+        }
+        .product-card__plus {
+            position: relative;
         }
     }
 }

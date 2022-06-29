@@ -1,0 +1,13 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.product-disponibility {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    &__text {
+        font-size:$wbu-default-font-size;
+        font-weight: 700;
+        margin-right: 2rem;
+        text-transform: capitalize;
+    }
+}
