@@ -9,7 +9,7 @@
     }
   }
   .filter-title {
-    font-size: $wbu-h3-font-size-sm;
+    font-size: $wbu-h5-font-size;
     font-weight: bold;
     text-align: left;
     color: black;
@@ -43,17 +43,21 @@
   .apply-btn {
     margin-top: $wbu-margin;
     padding: $wbu-margin * 0.5 $wbu-margin * 2;
-    font-size: $wbu-h3-font-size-sm;
+    font-size: $wbu-h5-font-size;
     text-transform: capitalize;
     background-color: $wbu-color-primary;
+    color: color-yiq($wbu-color-primary);
+    &:hover {
+      background-color: darken($wbu-color-primary,8);
+    }
   }
 }
 .filter-button {
   display: none;
   margin: $wbu-margin 0;
   background-color: $wbu-color-primary;
-  font-size: $wbu-h6-font-size;
-  color: black;
+  font-size: $wbu-default-font-size;
+  color: color-yiq($wbu-color-primary);
 
   text-transform: capitalize;
 
@@ -72,6 +76,7 @@
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 1rem;
+    fill: color-yiq($wbu-color-primary);
   }
   .btn-angle-right {
     &::after {
@@ -85,7 +90,7 @@
       opacity: 0;
       transform: translateX(8px);
       transition: ease-in-out 0.2s;
-      @include wbu__angle-right(black, 15);
+      @include wbu__angle-right( color-yiq($wbu-color-primary), 15);
     }
   }
 
@@ -148,6 +153,7 @@
     svg {
       width: 3rem;
       height: 3rem;
+      fill: color-yiq($wbu-color-primary);
     }
   }
 }

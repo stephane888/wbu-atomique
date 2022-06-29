@@ -1,12 +1,12 @@
 @use "../../wbu-ressources-clean.scss" as *;
 @use "../../variables" as *;
-$darken-primary: darken($color: $wbu-color-primary, $amount: 2.5);
+$darken-primary: darken($color: $wbu-color-primary, $amount: 2);
 
 .load-more-button {
   margin: $wbu-margin 0;
   background-color: $wbu-color-primary;
-  font-size: $wbu-default-font-size;
-
+  font-size: $wbu-h6-font-size;
+  font-weight: bold;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -61,7 +61,8 @@ $darken-primary: darken($color: $wbu-color-primary, $amount: 2.5);
   line-height: 1;
   position: relative;
   text-transform: capitalize;
-  font-size: $wbu-default-font-size * 1.2;
+  font-size: $wbu-default-font-size;
+  font-weight: bold;
   width: 100%;
   height: 4.9rem;
 

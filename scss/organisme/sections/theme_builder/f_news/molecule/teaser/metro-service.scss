@@ -59,7 +59,7 @@
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: start;
-      font-size: $wbu-h3-font-size-sm * 1.1;
+      font-size: $wbu-default-font-size ;
       align-items: center;
       padding: 0;
       list-style: none;
@@ -119,7 +119,7 @@
       }
     }
     .node-title {
-      font-size: $wbu-h4-font-size * 1.1;
+      font-size: $wbu-h3-font-size-sm;
       font-weight: bold;
       margin-bottom: $wbu-margin * 0.5;
       display: inline-block;
