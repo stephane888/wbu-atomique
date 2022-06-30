@@ -6,7 +6,7 @@
     padding-bottom: $space-bottom;
     background: $wbu-background;
     color: $wbu-border-color;
-    overflow: hidden;
+    //overflow: hidden;
 
     .subtitle{
         font-weight: $wbu-title-font-weight;
@@ -32,29 +32,31 @@
         display: inline-block;
         justify-content: center;
     }
-    .swiper-wrapper{
-        height: 370px;
-        width: 750px;
+    .swipers-wrapper{
+        height: 335px;
+        width: 795px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        //flex-direction: column;
         overflow: hidden;
+        //justify-content: space-between;
         left: $wbu-margin;
         position: relative;
         &::before{
             content: '';
             display: block;
             position: absolute;
-            min-height: 350px;
+            min-height: 320px;
             width: 10px;
             border-radius: 10px;
             background: $wbu-color-primary;
         }
     }
-  .swiper{
+  .element{
     display: flex;
     justify-content: space-evenly;
     .arrow{
+        cursor: pointer;
+        position: relative;
         margin-top: $space_top;
         height: 60px;
         width: 60px;
@@ -64,24 +66,30 @@
         border-radius: 100%;
         background: $wbu-color-primary;
     }
-    .swiper-slide{
-        //width: 710px;
-        height: fit-content;
-        margin-left: $wbu-margin *2;
+    .slide-handler{
+        width: 100%;
+        position: absolute;
+        transition: ease-in-out 2s;
+        margin-left: $wbu-margin ;
         padding-bottom: $wbu-margin *2 ;
         line-height: 4rem;
+    }
+    .swiper-slide{
+        display: inline;
+        width: 91%;
+        height: 378px;
+        
         .testimony{
             font-size: $wbu-h4-font-size;
             font-weight: $wbu-title-font-weight;
         }
         .author{
-            margin-top: $space_top;
+            margin-top: $space_top * 0.5;
             font-weight: bolder;
         }
         .role{
-
+            margin-bottom: $space_top  ;
         }
-
     }
   }
 }
