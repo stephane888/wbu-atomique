@@ -40,10 +40,11 @@
   }
   .ssf__img {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
     position: relative;
     img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
       object-fit: cover;
     }
