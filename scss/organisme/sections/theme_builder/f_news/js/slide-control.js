@@ -38,6 +38,7 @@
     slidesPerGroup: 1
   });
   if (pausePlay) {
+    console.log("Slider controls lancé");
     let pause = pausePlay.querySelector(".wbu-pause");
     let play = pausePlay.querySelector(".wbu-play");
     play.style.display = "none";
