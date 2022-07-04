@@ -16,6 +16,12 @@
   .icone {
     color: $wbu-color-primary;
     @include bp_h3();
+    * {
+      margin: 0;
+    }
+    img {
+      max-width: 40px;
+    }
   }
   .nombre {
     @include bp_h3();

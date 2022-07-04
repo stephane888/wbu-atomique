@@ -72,8 +72,9 @@
       display: inline-block;
       margin: $wbu-margin * 1.5 0;
       position: relative;
+      display: flex;
+      justify-content: center;
       img {
-        width: 100%;
         height: auto;
       }
       &::before {
@@ -151,7 +152,7 @@
   .ss-two-bloc {
     padding: $wbu-margin 0;
     .ssf-h4 {
-      font-size:$wbu-h4-font-size;
+      font-size: $wbu-h4-font-size;
       color: black;
       font-weight: bold;
       text-align: left;
