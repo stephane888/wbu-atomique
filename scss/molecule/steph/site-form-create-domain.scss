@@ -15,6 +15,7 @@ $width_checkbox: 300px;
     padding-bottom: 0;
     max-width: $with_tablet;
   }
+
   &--title {
     font-size: $wbu-h1-font-size-sm;
     margin-bottom: $wbu-margin;
@@ -303,6 +304,12 @@ $width_checkbox: 300px;
     }
     .active {
       background-color: $wbu-color-primary;
+    }
+  }
+  //
+  .last-stepe {
+    .step-donneesite--label {
+      @include bp_h2();
     }
   }
 }
