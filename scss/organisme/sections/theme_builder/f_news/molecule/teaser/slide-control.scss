@@ -55,6 +55,15 @@
 }
 .slide-control {
   background-color: rgba($wbu-color-boder, 0.5);
+  .swiper-sc {
+    margin-left: 2rem;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+  }
   .slc-content {
     display: flex;
     align-items: center;
@@ -66,7 +75,7 @@
     }
   }
   .sc-title {
-    font-size: $wbu-h6-font-size;
+    font-size: $wbu-default-font-size;
     color: $wbu-color-text;
     margin: 0;
     margin-left: 2rem;
@@ -92,17 +101,17 @@
     font-weight: bold;
     font-size: $wbu-default-font-size;
     background-color: transparent;
-    .wbu-pause {
-      display: none;
-    }
-    &:active,
-    &:focus {
-      .wbu-pause {
-        display: block;
-      }
-      .wbu-play {
-        display: none;
-      }
-    }
+    //.wbu-play {
+      //display: none;
+  //  }
+    // &:active,
+    // &:focus {
+    //   .wbu-pause {
+    //     display: block;
+    //   }
+    //   .wbu-play {
+    //     display: none;
+    //   }
+    // }
   }
 }

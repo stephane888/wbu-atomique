@@ -2,6 +2,7 @@
 
 .services-testimony {
   margin: 0;
+
   .done {
     background: $wbu-color-primary;
   }
@@ -39,6 +40,8 @@
     justify-content: center;
     .testimony {
       padding: $wbu-margin * 1.5 $wbu-margin;
+      max-width: 100%;
+      width: 100%;
       &::before {
         content: "";
         height: 2px;
@@ -56,7 +59,9 @@
     .slider-container {
       position: relative;
       margin-top: $space-top;
-      display: flex;
+      display: block;
+      max-width: 100%;
+      width: 100%;
 
       .speech {
         padding-right: $wbu-margin;

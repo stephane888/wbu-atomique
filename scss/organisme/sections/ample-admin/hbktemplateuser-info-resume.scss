@@ -1,0 +1,23 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+
+.hbktemplateuser-info-resume {
+  background-color: #fff;
+  padding: $wbu-margin * 1.25;
+  box-shadow: 0px 3px 12px 0 rgb(0 0 0 / 10%);
+  @include WBUtransition();
+  &:hover {
+    box-shadow: 0px 8px 12px 0 rgb(0 0 0 / 10%);
+  }
+  .title {
+    a {
+      color: inherit;
+    }
+  }
+  .icone {
+    color: $wbu-color-primary;
+    @include bp_h3();
+  }
+  .nombre {
+    @include bp_h3();
+  }
+}
