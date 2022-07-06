@@ -17,11 +17,10 @@
     flex-direction: column;
 
     .icon {
-      color: $wbu-color-secondary;
+      color: $wbu-color-primary;
 
       i {
         svg {
-          margin-top: $space-top;
           fill: $wbu-color-primary;
           color: $wbu-color-primary;
         }
