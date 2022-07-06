@@ -11,24 +11,23 @@
     border-radius: 0.3rem;
     &__product {
         border: 1px solid red;
-        padding: 0;
-        display: inline-block;
+        padding: 1.6rem;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        align-items: flex-start;
+        justify-content: center;
         &__icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0.5rem;
-            text-align: center;
+            padding: 0.1rem;
+            margin-top: 30%;
             border-radius: 50%;
+            border: 1px solid pink;
+            height: auto;
             background: #ddd;
         }
         &__item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             margin: 0 16px;
             border: 1px solid black;
-            justify-content: space-between;
             &_img {
                 background-color: #fff;
                 min-height: 100px;
@@ -84,15 +83,6 @@
         font-weight: 600;
         color: $wbu-color-secondary;
         padding: 1.6rem 0 1.6rem 0;
-    }
-    &__product {
-        padding: 1.6rem;
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
     }
     &__icon {
         background: #ddd;
