@@ -1,0 +1,11 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../variables" as *;
+
+
+.banner-teaser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    background: whitesmoke;
+}

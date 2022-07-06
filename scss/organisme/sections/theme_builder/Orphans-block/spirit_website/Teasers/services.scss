@@ -1,0 +1,84 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../variables" as *;
+
+
+.services-teaser-handler{
+    .single-service{
+        padding: 0 $wbu-margin * 2 ;
+        margin-top: $space_top;
+        @include media-max(SM){
+            padding: 0;
+            margin-left: 0;
+        }
+        .png_desc{
+            display: flex;
+            justify-content: start;
+            //padding: 0 $wbu-margin * 2 ;
+            @include media-max(SM){
+                display: flex;
+                justify-content: center;
+            }
+        }
+        ._png{
+            margin-top: $wbu-margin * 0.2;
+            width: 9rem;
+            margin-bottom: $wbu-margin ;
+        }
+        .service-title{
+            display: flex;
+            //padding: 0 $wbu-margin * 2 ;
+            justify-content: start;
+            font-weight: bold;
+            font-size: $wbu-h4-font-size;
+            margin-bottom: $wbu-margin ;
+
+            @include media-max(SM){
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .service-desc{
+            display: flex;
+            justify-content: start;
+            //padding: 0 $wbu-margin * 2.5 ;
+            .list{
+                .list-element{
+
+                list-style-type: none;
+                }
+            }
+
+            @include media-max(SM){
+                display: flex;
+                justify-content: center;;
+            }
+        }
+        .read-more{
+            color: $wbu-color-thirdly;
+            display: flex;
+            justify-content: start;
+            word
+            .svg{
+                margin-top: $wbu-margin * 0.2;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: $wbu-margin *0.5;
+            }
+            @include media-max(SM){
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .more-link{
+            display: block;
+            justify-content: center;
+            color: $wbu-color-thirdly;
+            margin-bottom: $wbu-margin * 0.4;
+            border-bottom: 2px solid $wbu-color-teal;
+            &:hover{
+                text-decoration: none;
+            }
+            
+        }
+    }
+}
