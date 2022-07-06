@@ -1,0 +1,49 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.product-btn-action {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    &__button {
+        &__mag {
+            &_link {
+                color: $wbu-color-secondary;
+                text-decoration: underline;
+                &:hover {
+                    color: $wbu-color-secondary;
+                }
+            }
+        }
+        &__add {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                vertical-align: middle;
+                background-color: $wbu-background;
+                color: $wbu-color-boder;
+                font-size: $wbu-default-font-size;
+                font-weight: 600;
+                cursor: pointer;
+                text-transform: capitalize;
+                padding: 1rem;
+                border: 1px solid black;
+            &_text {
+                border: 1px solid black;
+            }
+            &_added {
+                display: none; /* change this to display: flex; to make awesome */
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: 600;
+                text-transform: capitalize;
+                &_icon {
+                    border: 0.1rem solid $wbu-color-boder;
+                    border-radius: 50%;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
