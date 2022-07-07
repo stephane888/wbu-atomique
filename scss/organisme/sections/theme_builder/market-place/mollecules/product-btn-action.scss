@@ -12,6 +12,7 @@
     }
     &__button {
         &__mag {
+            width: 100%;
             &_link {
                 color: $wbu-color-secondary;
                 text-decoration: underline;
@@ -28,6 +29,7 @@
         }
         &__add {
                 display: flex;
+                width: 100%;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
