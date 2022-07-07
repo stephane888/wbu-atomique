@@ -1,7 +1,7 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 .product-gallery__bullets{
-    //display: none;
-    display: flex;
+    display: none;
+    //display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;

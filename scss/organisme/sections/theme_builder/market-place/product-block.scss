@@ -8,9 +8,10 @@
 @use "./mollecules/product-pricer__item.scss";
 @use "./mollecules/product-price__quality.scss";
 @use "./mollecules/product-disponibility.scss";
-@use "./mollecules/product-zone__collect.scss";
+@use "./mollecules/product-zone.scss";
 @use "./mollecules/product-card__plus.scss";
 @use "./mollecules/product-btn-action.scss";
+@use "./mollecules/product-gift.scss";
 .product-block {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -50,10 +51,6 @@
         }
         .product-zone {
             position: relative;
-            display: flex;
-            flex-direction: row;
-            //justify-content: space-between;
-            align-items: center;
         }
         .product-card__plus {
             position: relative;

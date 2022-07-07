@@ -1,0 +1,52 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.product-zone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    @include media-max(MD) {
+        flex-direction: column;
+    }
+    &__collect {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: 0.3rem solid $wbu-background;
+        //justify-content: space-between;
+        border-radius: 0.3rem;
+        position: relative;
+        margin-left: 1rem;
+        margin-top: 2rem;
+        width: 100%;
+        cursor: pointer;
+        align-self: stretch; //combined to flex: 1; for having the same size
+        padding: 2rem 0 2rem 2rem;
+        @include media-max(MD) {
+            margin-left: 0rem;
+            padding-left: 0rem;
+        }
+        &_item {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding-top: 1rem;
+            padding-right: 1rem;
+            flex: 1;
+            @include media-max(MD) {
+                flex: 0;
+            }
+            &__text {
+                margin-left: 1rem;
+                font-size: $wbu-default-font-size-sm;
+            }
+            &__icon_two {
+                //position: absolute;
+                //right: 0;
+                align-items: flex-end;
+            }
+        }
+    }
+}

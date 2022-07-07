@@ -4,6 +4,12 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    @include media-max(MD) {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
     &__button {
         &__mag {
             &_link {
@@ -12,6 +18,12 @@
                 &:hover {
                     color: $wbu-color-secondary;
                 }
+            }
+            @include media-max(MD) {
+                width: 100%;
+                text-align: center;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
             }
         }
         &__add {
@@ -27,7 +39,9 @@
                 cursor: pointer;
                 text-transform: capitalize;
                 padding: 1rem;
-                border: 1px solid black;
+                @include media-max(MD) {
+                    width: 100%;
+                }
             &_text {
                 border: 1px solid black;
             }

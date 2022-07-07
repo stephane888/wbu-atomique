@@ -1,0 +1,22 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.product-gift {
+    border: 0.3rem solid $wbu-background;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &__infos {
+        padding: 1rem;
+        &_title {
+            font-size: $wbu-h4-font-size;
+            font-weight: 700;
+            color: $wbu-color-secondary;
+        }
+        &_text {
+            font-size: $wbu-default-font-size-sm;
+        }
+    }
+}

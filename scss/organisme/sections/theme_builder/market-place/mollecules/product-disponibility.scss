@@ -4,8 +4,12 @@
     align-items: flex-end;
     justify-content: space-between;
     flex-direction: column;
+    @include media-max(MD) {
+        align-items: flex-start;
+    }
     &__text {
         font-size:$wbu-default-font-size;
+        padding: 1rem;
         font-weight: 700;
         margin-right: 2rem;
         text-transform: capitalize;
