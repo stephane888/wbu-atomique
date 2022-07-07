@@ -1,0 +1,24 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+
+.ressources-section-handler{
+    margin-top: $space-top;
+    .section-title{
+        font-size: $wbu-titre-big;
+        font-weight: $wbu-title-font-weight;
+    }
+    .btn-handler{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .say-more-btn{
+        color: $wbu-color-thirdly;
+        font-size: $wbu-h5-font-size;
+        font-weight: $wbu-title-font-weight;
+        border: 2px solid $wbu-color-thirdly;
+        padding: $wbu-btn-padding-x-sm*1.5 $wbu-btn-padding-y-sm;
+        border-radius: 50px;
+    }
+}
