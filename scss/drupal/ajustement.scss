@@ -8,3 +8,12 @@
 .btn.field a {
   color: inherit;
 }
+/**
+ * Correction drupal/token
+ */
+// sur le tableau affichant la selection des tokens, on ne peut pas derouler(l'icone est cache)
+table.treetable tbody > tr.token-group {
+  > td:first-child {
+    padding-left: 20px;
+  }
+}
