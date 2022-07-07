@@ -5,16 +5,16 @@
 .in-case-fnews {
   padding: $space-top 0;
   .icf-title {
-    font-size: $wbu-h3-font-size;
+    font-size: $wbu-h2-font-size;
     font-weight: bold;
     text-align: center;
     color: black;
     margin: 0 0 $space-top;
     @include media-max(SM) {
-      font-size: $wbu-h3-font-size * 0.8;
+      font-size: $wbu-h2-font-size * 0.8;
     }
     @include media-max(XS) {
-      font-size: $wbu-h3-font-size * 0.7;
+      font-size: $wbu-h2-font-size * 0.7;
     }
   }
   .icf-more {
