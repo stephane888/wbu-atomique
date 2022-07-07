@@ -1,4 +1,5 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
+@use "./product-gallery__bullets.scss";
 .product-gallery {
     display: flex;
     flex-direction: column;
@@ -8,13 +9,19 @@
     img {
         cursor: url(https://www.nocibe.fr/res/fr_FR/images/products/viewer.svg?frz-v=4385) 15 15,pointer;
     }
+    @include media-max(MD) {
+        flex-direction: row;
+    }
     &__image {
         width: 100%;
         display: flex;
         padding: 2rem;
         position: relative;
-        &_img {
+        &_vids {
             width: 100%;
+            @include media-max(MD) {
+                display: none;
+            }
         }
         img {
             width: 100%;
@@ -29,5 +36,13 @@
             width: 50%;
             padding: 2rem;
         }
+        @include media-max(MD) {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .product-gallery__bullets { 
+        position: relative;
     }
 }
