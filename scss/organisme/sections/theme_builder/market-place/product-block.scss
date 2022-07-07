@@ -12,15 +12,23 @@
 @use "./mollecules/product-card__plus.scss";
 @use "./mollecules/product-btn-action.scss";
 .product-block {
-    border: 1px solid red;
     padding-left: 3rem;
     padding-right: 3rem;
+    position: relative;
     .product-content {
-        border: 1px solid green;
-        width: 100%;
-        display: block;
-        .col-md-6 {
-            border: 1px solid black;
+        width: auto;
+        height: auto;
+        display: flex;
+        position: relative;
+        .image-content {
+            overflow: auto;
+            position: sticky;
+        }
+        .desc-content {
+            overflow: hidden;
+            position: sticky;
+            top: 1rem;
+            align-self: flex-start;
         }
         .product-tager {
             display: flex;

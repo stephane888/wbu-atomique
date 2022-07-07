@@ -6,12 +6,18 @@
   //background:black;
 
   h2 {
-    font-size: $wbu-titre-big-md;
+    font-size: $wbu-h2-font-size;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
     color: black;
     margin-bottom: 1.5rem;
+    @include media-max(SM) {
+      font-size: $wbu-h2-font-size * 0.8;
+    }
+    @include media-max(XS) {
+      font-size: $wbu-h2-font-size * 0.7;
+    }
 
     &::before {
       content: "";
