@@ -1,14 +1,13 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 .product-gallery__bullets{
-    display: none;
+    //display: none;
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 2rem;
-    border: 1px solid black;
-    &__active {
-        background: $wbu-background;
-    }
+    //border: 1px solid black;
+    
     &_item {
         background: gray;
         display: block;
@@ -17,6 +16,13 @@
         margin: 0 1rem 0 1rem;
         height: 0.5rem;
         width: 3rem;
+        &_selected {
+            background: $wbu-background;
+        }
+        &:hover {
+            background: $wbu-background;
+            cursor: pointer;
+        }
     }
     @include media-max(MD) {
         display: flex;

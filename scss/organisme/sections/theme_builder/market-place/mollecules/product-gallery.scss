@@ -10,13 +10,19 @@
         cursor: url(https://www.nocibe.fr/res/fr_FR/images/products/viewer.svg?frz-v=4385) 15 15,pointer;
     }
     @include media-max(MD) {
-        flex-direction: row;
+        //flex-direction: row;
     }
     &__image {
         width: 100%;
         display: flex;
         padding: 2rem;
         position: relative;
+        @include media-max(MD) {
+            display: none;
+            &_selected {
+                display: flex;
+            }
+        }
         &_vids {
             width: 100%;
             @include media-max(MD) {
@@ -32,6 +38,12 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        @include media-max(MD) {
+            display: none;
+        }
+        &_selected {
+            display: flex;
+        }
         img {
             width: 50%;
             padding: 2rem;

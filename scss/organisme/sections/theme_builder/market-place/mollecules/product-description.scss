@@ -5,6 +5,9 @@
     align-items: left;
     justify-content: space-between;
     color: $wbu-color-secondary;
+    @include media-max(MD) {
+        align-items: center;
+    }
     &__name {
         font-size: $wbu-h3-font-size;
         font-weight: 600;
