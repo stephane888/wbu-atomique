@@ -1,0 +1,22 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+@use "./molecule/single-service-items.scss";
+.our-services-handler {
+  padding: $space-top 0 $space-bottom;
+  background-color: lighten($wbu-color-boder, 10);
+  position: initial;
+}
+@media only screen and (max-width: 700px) {
+  .single-service-items {
+    .descriptor-item {
+      display: none;
+    }
+    .htl-btn {
+      display: none;
+    }
+    .info-items {
+      padding-bottom: 0;
+    }
+  }
+}

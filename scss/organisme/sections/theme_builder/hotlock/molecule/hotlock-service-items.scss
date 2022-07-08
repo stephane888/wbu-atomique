@@ -1,0 +1,5 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "./service-items.scss";
+.hotlock-service-items {
+  background: $wbu-background;
+}

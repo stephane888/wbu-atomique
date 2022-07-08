@@ -1,6 +1,6 @@
 @use "../../../../_variables.scss" as *;
 @use "../../../../wbu-ressources-clean.scss" as *;
-
+@use "./atome/section-title.scss";
 @use "./molecule/single-service-card.scss";
 .services-overview-section-handler {
   padding: $space-top 0;
@@ -12,19 +12,8 @@
     @include media-max(SM) {
       max-width: 80rem;
     }
-    &::before {
-      content: "";
-      width: 50px;
-      height: 3px;
-      display: block;
-      background: $wbu-color-primary;
-    }
   }
-  .head-title {
-    margin-top: $wbu-margin;
-    font-size: $wbu-h5-font-size;
-    font-weight: 400 !important ;
-  }
+
   .subtitle {
     margin-top: $space_inner_top;
     @include bp_h3();
