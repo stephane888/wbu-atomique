@@ -25,8 +25,8 @@
     }
   }
   /*  */
-  function openShare() {
-    let host = window.location.origin + window.location.pathname;
+  function openShare(host) {
+    console.log("href:", host);
     FB.ui(
       {
         method: "share",
@@ -42,8 +42,9 @@
     if (facebookButton) {
       initFacebookShare();
       facebookButton.addEventListener("click", function (e) {
+        let host = window.location.origin + window.location.pathname;
         e.preventDefault();
-        openShare();
+        openShare(host);
       });
     } else {
       console.log(
