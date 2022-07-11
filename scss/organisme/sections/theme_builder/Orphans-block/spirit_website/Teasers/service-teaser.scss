@@ -1,0 +1,60 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../_variables" as *;
+
+.single-offer-teaser{
+    background: $wbu-color-text;
+    padding: $wbu-btn-padding-y-sm * 0.5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow: hidden;
+    margin: 50;
+    &::before{
+        display: block;
+        content: "";
+        width: 3.6rem;
+        left: -1rem;
+        top: 18rem;
+        bottom: 0;
+        background: $wbu-color-secondary;
+        position: absolute;
+        height: 20rem;
+        transform: rotate(42deg);
+    }
+    .card-info{
+        color: $wbu-color-boder;
+        &:hover{
+            color: $wbu-color-boder;
+            text-decoration: none;
+        }
+    }
+    .card-title{
+        font-weight: $wbu-title-font-weight;
+        font-size: $wbu-h3-font-size;
+    }
+    .small-desc{
+        margin-top: $wbu-margin ;
+        font-size: $wbu-h4-font-size;
+    }
+    .btn{
+        display: flex;
+        justify-content: end;
+        margin-top: $space_bottom;
+        
+        .arrow{
+            padding: $wbu-margin*0.4 $wbu-margin*0.7 $wbu-margin*0.4;
+            border-radius: 100%;
+            border: 2px solid $wbu-color-boder;
+            fill: $wbu-color-thirdly;
+            color: $wbu-color-boder;
+            transition: all 1s;
+            &:hover{
+                text-decoration: none;
+                color: $wbu-border-color;
+                background: $wbu-color-thirdly;
+                border: 2px solid $wbu-color-thirdly;
+            }
+        }
+    }
+}

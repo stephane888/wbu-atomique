@@ -4,8 +4,24 @@
 
 .ressources-section-handler{
     margin-top: $space-top;
+    .section-name{
+        font-weight: $wbu-title-font-weight;
+        font-size: $wbu-title-font-size;
+        text-transform: uppercase;
+        margin-bottom: $wbu-margin * 2;
+        &::before{
+            content: '';
+            width: 2rem;
+            height: 0.2rem;
+            display: inline-block;
+            margin-right: $wbu-margin * 0.2;
+            vertical-align: middle;
+            background: $wbu-background;
+            box-sizing: inherit;
+        }
+    }
     .section-title{
-        font-size: $wbu-titre-big;
+        font-size: $wbu-titre-big-md;
         font-weight: $wbu-title-font-weight;
     }
     .btn-handler{
@@ -20,5 +36,86 @@
         border: 2px solid $wbu-color-thirdly;
         padding: $wbu-btn-padding-x-sm*1.5 $wbu-btn-padding-y-sm;
         border-radius: 50px;
+        transition: all 1s;
+        &:hover{
+            text-decoration: none;
+            color: $wbu-border-color;
+            background: $wbu-color-thirdly;
+        }
+    }
+    .ressources-list{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: $space-top;
+        .single-ressource{
+            border: 2px solid $wbu-border-color;
+            padding: $wbu-margin*2 $wbu-margin*1.75  ;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: $wbu-margin *1.5;
+            .list-handler{
+                width: 100%;
+                display: inline-flex;
+                flex-wrap: wrap;
+                justify-content: start;
+                list-style-type: none;
+                margin-left: -4rem;
+                .element{
+                    margin-right: $wbu-margin;
+
+                    .linker{
+                        color: $wbu-color-thirdly;
+                        text-transform: uppercase;
+                        font-size: $wbu-h6-font-size;
+                        font-weight: $wbu-title-font-weight;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            .link-content{
+                font-size: $wbu-h3-font-size-sm;
+                font-weight: $wbu-title-font-weight;
+                color: $wbu-color-text;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            .view-btn{
+                display: flex;
+                justify-content: end;
+
+                .view{
+                    padding: $wbu-margin*0.4 $wbu-margin*0.7 $wbu-margin*0.4;
+                    border-radius: 100%;
+                    border: 2px solid $wbu-color-thirdly;
+                    fill: $wbu-color-thirdly;
+                    transition: all 1s;
+                    &:hover{
+                        text-decoration: none;
+                        color: $wbu-border-color;
+                        background: $wbu-color-thirdly;
+                    }
+                }
+            }
+            .info{
+                display: flex;
+                font-size: $wbu-h6-font-size;
+                .post-date{
+                    margin-right: $wbu-margin *0.2;
+                }
+                .author{
+                    margin-left: $wbu-margin *0.2;
+                }
+                .author-link{
+                    color: $wbu-color-thirdly;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
 }
