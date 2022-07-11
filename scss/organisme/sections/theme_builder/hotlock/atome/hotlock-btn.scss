@@ -3,7 +3,7 @@
 @mixin fade-blac() {
   background: $wbu-color-primary;
   a {
-    color: black;
+    color: color-yiq($wbu-color-primary);
   }
 }
 @mixin fade-white() {
@@ -104,7 +104,7 @@
         transform: scaleX(1);
       }
       a {
-        color: black;
+        color: color-yiq($wbu-color-primary);
       }
     }
   }

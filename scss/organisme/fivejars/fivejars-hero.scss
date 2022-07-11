@@ -1,0 +1,37 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables" as *;
+
+.fivejar-hero {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  padding: $space_bottom 0;
+  header,
+  .btn {
+    position: relative;
+    z-index: 2;
+  }
+  .layout-region {
+    &.svg {
+      position: absolute;
+      top: 0;
+      left: auto;
+      right: 0;
+      bottom: auto;
+      opacity: 0.7;
+      z-index: 0;
+    }
+    &.title {
+      @include bp_hero();
+      font-weight: 600;
+      margin-bottom: $wbu-margin;
+      @include media-min(DD) {
+        margin-bottom: $wbu-margin * 2;
+      }
+    }
+    &.sub_title {
+      @include bp_h4();
+      margin-bottom: $wbu-margin * 4;
+    }
+  }
+}

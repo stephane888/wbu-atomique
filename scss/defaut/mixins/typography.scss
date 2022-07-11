@@ -44,11 +44,20 @@
 }
 
 /**
- *  Breack point h1.
+ *  Breack point h3.
  */
 @mixin bp_h3() {
-  font-size: $wbu-h3-font-size;
+  font-size: $wbu-h3-font-size-sm;
   @include media-min(DD) {
-    font-size: $wbu-h3-font-size-sm;
+    font-size: $wbu-h3-font-size;
+  }
+}
+
+/**
+ *  Breack point h4.
+ */
+@mixin bp_h4() {
+  @include media-min(DD) {
+    font-size: $wbu-h4-font-size;
   }
 }

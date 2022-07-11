@@ -6,6 +6,21 @@
 
 .header-section-handler {
   overflow: hidden;
+  &.mn-fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 99;
+    background-color: rgba($wbu-background, 0.2);
+    @include WBUtransition($temps: 0.7s);
+  }
+  img.logo {
+    max-height: 100px;
+    max-width: 150px;
+    @include WBUtransition($temps: 0.7s);
+  }
   .header-nav {
     padding-left: $wbu-margin;
     padding-top: $wbu-margin * 0.5;
@@ -438,6 +453,18 @@
         color: $wbu-border-color;
         display: none;
       }
+    }
+  }
+}
+
+/**
+ * definie un style en function du strol
+ */
+.scrolled .header-section-handler {
+  &.mn-fixed-top {
+    background-color: rgba($wbu-background, 0.88);
+    img.logo {
+      max-height: 50px;
     }
   }
 }

@@ -1,0 +1,39 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.owl-f-news {
+  .owl-nav {
+    position: absolute;
+    left: auto;
+    right: 0;
+    font-size: 9rem;
+    bottom: -18px;
+    top: auto;
+    line-height: 0.5;
+    > button {
+      background: transparent !important;
+      &:hover {
+        color: $wbu-color-primary !important;
+      }
+      &.owl-prev {
+        margin-right: $wbu-margin * 0.5;
+      }
+    }
+  }
+  .owl-dots {
+    width: calc(100% - 100px);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $wbu-margin * 1.25;
+    .owl-dot {
+      width: 3.5rem;
+      height: 0.8rem;
+      border: 1px solid $wbu-background;
+      margin-right: $wbu-margin;
+      &.active {
+        background-color: $wbu-color-primary;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}
