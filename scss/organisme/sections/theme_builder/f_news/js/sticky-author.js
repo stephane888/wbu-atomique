@@ -115,7 +115,7 @@
       console.error("no linkedin el");
     }
   };
-https://twitter.com/intent/tweet?text=Barom%C3%A8tre%20Mercer%20sur%20l%E2%80%99absent%C3%A9isme%20en%20France%20%3A%20la%20dur%C3%A9e%20moyenne%20des%20arr%C3%AAts%20maladies%20en%20augmentation%20entre%202019%20et%202021%20%7C%20StorizBorn&original_referer=http%3A%2F%2Fstoribon.kksaundefined&url=http%3A%2F%2Fstoribon.kksaundefined  
+
   let TwitterShare = function () {
     let twitter = document.querySelector(".twitterShare");
     if (twitter) {
