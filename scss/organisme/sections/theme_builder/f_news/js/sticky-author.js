@@ -1,6 +1,17 @@
-(function () {
-  "use-strict";
+function shareOnFacebook() {
+  ("use-strict");
 
+  /* Chargement du sdk */
+  /* chargement du js sdk */
+  (function (d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, "script", "facebook-jssdk");
   /*  */
   function initFacebookShare() {
     if (window.FB) {
@@ -17,7 +28,7 @@
   }
   /*  */
   function openShare(host) {
-    console.log("href:", host);
+    // console.log("href:", host);
     FB.ui(
       {
         method: "share",
@@ -28,17 +39,8 @@
       }
     );
   }
+  /* pour fonctionner recherche un element html avec la classe "facebookShare" */
   window.addEventListener("load", () => {
-    /* chargement du js sdk */
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
     var facebookButton = document.querySelector(".facebookShare");
     if (facebookButton) {
       initFacebookShare();
@@ -48,9 +50,14 @@
         openShare(host);
       });
     } else {
-      console.log(
+      console.error(
         'le bouton de partage facebook avec la classe ("facebookShare") est absent sur cette page'
       );
     }
   });
-})();
+}
+try {
+  shareOnFacebook();
+} catch (er) {
+  console.error("er share : ", er);
+}

@@ -16,7 +16,7 @@ try {
       }
     }
     const pausePlay = document.querySelector(".play-pause");
-    const slideControl = new Swipere(".swiper-sc", {
+    const slideControl = new Swiper(".swiper-sc", {
       // Optional parameters
       direction: "horizontal",
       loop: true,

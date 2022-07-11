@@ -3,7 +3,7 @@ function firstNav() {
   let fnewsHeader = document.querySelector(".fnews-header");
   let firstNavUl = fnewsHeader.querySelector(".first-nav > ul");
   let liList = fnewsHeader.querySelectorAll(".first-nav  ul li");
-  let toggleSM = fnewsHeader.querySelector(".menu-iconse");
+  let toggleSM = fnewsHeader.querySelector(".menu-icons");
   let activeLi = Array.from(fnewsHeader.querySelectorAll(".nav-item--active"));
   window.addEventListener("load", () => {
     // enabledHover(true);
