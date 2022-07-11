@@ -90,7 +90,7 @@
     if (facebook) {
       facebook.addEventListener("click", function (e) {
         e.preventDefault();
-        var url = window.location.origin + window.pathname;
+        var url = window.location.origin + window.location.pathname;
         var shareUrl =
           "https://www.facebook.com/sharer/sharer.php?u=" +
           encodeURIComponent(url);
@@ -105,7 +105,7 @@
     if (linkedin) {
       linkedin.addEventListener("click", function (e) {
         e.preventDefault();
-        var url = window.location.origin + window.pathname;
+        var url = window.location.origin + window.location.pathname;
         var shareUrl =
           "https://www.linkedin.com/shareArticle?url=" +
           encodeURIComponent(url);
@@ -138,7 +138,7 @@
   let EmailShare = function () {
     let emailShare = document.querySelector(".emailShare");
     if (emailShare) {
-      let url = window.location.origin + window.pathname;
+      let url = window.location.origin + window.location.pathname;
       let shareUrl = "mailto:?body=" + encodeURIComponent(url);
       emailShare.setAttribute("href", shareUrl);
     } else {
