@@ -1,61 +1,61 @@
-function shareOnFacebook() {
-  ("use-strict");
+// function shareOnFacebook() {
+//   ("use-strict");
 
-  /* Chargement du sdk */
-  /* chargement du js sdk */
-  (function (d, s, id) {
-    var js,
-      fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, "script", "facebook-jssdk");
-  /*  */
-  function initFacebookShare() {
-    if (window.FB) {
-      FB.init({
-        appId: "327735579426150",
-        xfbml: true,
-        version: "v3.0"
-      });
-      console.log("sdk init");
-    } else {
-      setTimeout(initFacebookShare, 1000);
-      console.log("Le sdk js n'est pas chargé");
-    }
-  }
-  /*  */
-  function openShare(host) {
-    // console.log("href:", host);
-    FB.ui(
-      {
-        method: "share",
-        href: host
-      },
-      function (response) {
-        console.log("reponse", response);
-      }
-    );
-  }
-  /* pour fonctionner recherche un element html avec la classe "facebookShare" */
-  window.addEventListener("load", () => {
-    var facebookButton = document.querySelector(".facebookShare");
-    if (facebookButton) {
-      initFacebookShare();
-      facebookButton.addEventListener("click", function (e) {
-        let host = window.location.origin + window.location.pathname;
-        e.preventDefault();
-        openShare(host);
-      });
-    } else {
-      console.error(
-        'le bouton de partage facebook avec la classe ("facebookShare") est absent sur cette page'
-      );
-    }
-  });
-}
+//   /* Chargement du sdk */
+//   /* chargement du js sdk */
+//   (function (d, s, id) {
+//     var js,
+//       fjs = d.getElementsByTagName(s)[0];
+//     if (d.getElementById(id)) return;
+//     js = d.createElement(s);
+//     js.id = id;
+//     js.src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0";
+//     fjs.parentNode.insertBefore(js, fjs);
+//   })(document, "script", "facebook-jssdk");
+//   /*  */
+//   function initFacebookShare() {
+//     if (window.FB) {
+//       FB.init({
+//         appId: "327735579426150",
+//         xfbml: true,
+//         version: "v3.0"
+//       });
+//       console.log("sdk init");
+//     } else {
+//       setTimeout(initFacebookShare, 1000);
+//       console.log("Le sdk js n'est pas chargé");
+//     }
+//   }
+//   /*  */
+//   function openShare(host) {
+//     // console.log("href:", host);
+//     FB.ui(
+//       {
+//         method: "share",
+//         href: host
+//       },
+//       function (response) {
+//         console.log("reponse", response);
+//       }
+//     );
+//   }
+//   /* pour fonctionner recherche un element html avec la classe "facebookShare" */
+//   window.addEventListener("load", () => {
+//     var facebookButton = document.querySelector(".facebookShare");
+//     if (facebookButton) {
+//       initFacebookShare();
+//       facebookButton.addEventListener("click", function (e) {
+//         let host = window.location.origin + window.location.pathname;
+//         e.preventDefault();
+//         openShare(host);
+//       });
+//     } else {
+//       console.error(
+//         'le bouton de partage facebook avec la classe ("facebookShare") est absent sur cette page'
+//       );
+//     }
+//   });
+// }
 
 /* Cette fonction gère la partage sur différent réseau sociaux */
 (function () {
@@ -115,13 +115,13 @@ function shareOnFacebook() {
       console.error("no linkedin el");
     }
   };
-
+https://twitter.com/intent/tweet?text=Barom%C3%A8tre%20Mercer%20sur%20l%E2%80%99absent%C3%A9isme%20en%20France%20%3A%20la%20dur%C3%A9e%20moyenne%20des%20arr%C3%AAts%20maladies%20en%20augmentation%20entre%202019%20et%202021%20%7C%20StorizBorn&original_referer=http%3A%2F%2Fstoribon.kksaundefined&url=http%3A%2F%2Fstoribon.kksaundefined  
   let TwitterShare = function () {
     let twitter = document.querySelector(".twitterShare");
     if (twitter) {
       twitter.addEventListener("click", function (e) {
         e.preventDefault();
-        var url = window.location.origin + window.pathname;
+        var url = window.location.origin + window.location.pathname;
         var shareUrl =
           "https://twitter.com/intent/tweet?text=" +
           encodeURIComponent(document.title) +
