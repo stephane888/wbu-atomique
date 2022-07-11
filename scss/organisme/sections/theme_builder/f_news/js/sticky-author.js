@@ -56,8 +56,110 @@ function shareOnFacebook() {
     }
   });
 }
-try {
-  shareOnFacebook();
-} catch (er) {
-  console.error("er share : ", er);
-}
+
+/* Cette fonction gère la partage sur différent réseau sociaux */
+(function () {
+  var popupCenter = function (url, title, width, height) {
+    var popupWidth = width || 640;
+    var popupHeight = height || 320;
+    var windowLeft = window.screenLeft || window.screenX;
+    var windowTop = window.screenTop || window.screenY;
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+    var windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+    var popupLeft = windowLeft + windowWidth / 2 - popupWidth / 2;
+    var popupTop = windowTop + windowHeight / 2 - popupHeight / 2;
+    var popup = window.open(
+      url,
+      title,
+      "scrollbars=yes, width=" +
+        popupWidth +
+        ", height=" +
+        popupHeight +
+        ", top=" +
+        popupTop +
+        ", left=" +
+        popupLeft
+    );
+    popup.focus();
+    return true;
+  };
+
+  let FacebookShare = function () {
+    let facebook = document.querySelector(".facebookShare");
+    if (facebook) {
+      facebook.addEventListener("click", function (e) {
+        e.preventDefault();
+        var url = window.location.origin + window.pathname;
+        var shareUrl =
+          "https://www.facebook.com/sharer/sharer.php?u=" +
+          encodeURIComponent(url);
+        popupCenter(shareUrl, "Partager sur facebook");
+      });
+    } else {
+      console.error("no facebook el");
+    }
+  };
+  let linkedinShare = function () {
+    let linkedin = document.querySelector(".linkedinShare");
+    if (linkedin) {
+      linkedin.addEventListener("click", function (e) {
+        e.preventDefault();
+        var url = window.location.origin + window.pathname;
+        var shareUrl =
+          "https://www.linkedin.com/shareArticle?url=" +
+          encodeURIComponent(url);
+        popupCenter(shareUrl, "Partager sur linkedin");
+      });
+    } else {
+      console.error("no linkedin el");
+    }
+  };
+
+  let TwitterShare = function () {
+    let twitter = document.querySelector(".twitterShare");
+    if (twitter) {
+      twitter.addEventListener("click", function (e) {
+        e.preventDefault();
+        var url = window.location.origin + window.pathname;
+        var shareUrl =
+          "https://twitter.com/intent/tweet?text=" +
+          encodeURIComponent(document.title) +
+          "&original_referer=" +
+          encodeURIComponent(url) +
+          "&url=" +
+          encodeURIComponent(url);
+        popupCenter(shareUrl, "Partager sur Twitter");
+      });
+    } else {
+      console.error("no twitter el ");
+    }
+  };
+  let EmailShare = function () {
+    let emailShare = document.querySelector(".emailShare");
+    if (emailShare) {
+      let url = window.location.origin + window.pathname;
+      let shareUrl = "mailto:?body=" + encodeURIComponent(url);
+      emailShare.setAttribute("href", shareUrl);
+    } else {
+      console.error("no Email el ");
+    }
+  };
+  let PrintButton = function () {
+    let print = document.querySelector(".printButton");
+    if (print) {
+      print.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.print();
+      });
+    } else {
+      console.error("no print el");
+    }
+  };
+  /* execution */
+  FacebookShare();
+  linkedinShare();
+  TwitterShare();
+  EmailShare();
+  PrintButton();
+})();
