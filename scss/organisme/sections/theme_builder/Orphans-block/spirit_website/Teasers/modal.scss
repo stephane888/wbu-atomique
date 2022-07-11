@@ -1,0 +1,84 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../_variables" as *;
+
+
+.modal-teaser-handler{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 14;
+    
+    .modal-teaser-container{
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        width: 80%;
+        max-width: 100rem;
+        max-height: 100vh;
+        box-sizing: border-box;
+        transform: translate(-50%,-50%);
+        padding: 1rem 1rem 25vh;
+        //overflow: hidden;
+
+        .modal-wrapper{
+           
+           position: relative;
+           height: 75vh;
+           background: #fff;
+           .modal-left{
+                    //position: absolute;
+            .img_handler{
+                ._img{
+                    //position: absolute;
+                    z-index: 1;
+                    left: 50%;
+                    //top: 50%;
+                    height: 100%;
+                    width: 100%;
+                    //opacity: 0.1;
+                }
+            }
+           }
+           .right-modal{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: $wbu-margin * 2;
+            background: $wbu-color-boder ;
+               .modal-title{
+                margin-top: $wbu-margin ;
+                font-weight: $wbu-title-font-weight;
+                font-size: $wbu-h3-font-size;
+                text-align: center;
+               }
+               .modal-date{
+                margin-top: $wbu-margin * 0.5;
+                font-size: $wbu-h4-font-size;
+                text-align: center;
+               }
+               .modal-btn{
+                margin-top: $wbu-margin * 2;
+                color: $wbu-color-boder;
+                font-weight: $wbu-title-font-weight;
+                background: $wbu-color-thirdly;
+                border-radius: 50px;
+                cursor: pointer;
+                padding: $wbu-btn-padding-x-sm *2 $wbu-btn-padding-y-sm;
+                &:hover{
+                    color: $wbu-color-boder;
+                    text-decoration: none;
+                }
+
+               }
+           }
+        }
+        
+    }
+}
