@@ -1,4 +1,4 @@
-(function () {
+function bacTop() {
   "use-strict";
   let bacTop = document.querySelector(".bac-top-fnews");
   bacTop.addEventListener("click", scrollUp);
@@ -24,4 +24,9 @@
       behavior: "smooth"
     });
   }
-})();
+}
+try {
+  bacTop();
+} catch (er) {
+  console.error("Erreur sur le script bac-top");
+}

@@ -1,9 +1,9 @@
-(function () {
+function firstNav() {
   "use-strict";
   let fnewsHeader = document.querySelector(".fnews-header");
   let firstNavUl = fnewsHeader.querySelector(".first-nav > ul");
   let liList = fnewsHeader.querySelectorAll(".first-nav  ul li");
-  let toggleSM = fnewsHeader.querySelector(".menu-icons");
+  let toggleSM = fnewsHeader.querySelector(".menu-iconse");
   let activeLi = Array.from(fnewsHeader.querySelectorAll(".nav-item--active"));
   window.addEventListener("load", () => {
     // enabledHover(true);
@@ -198,4 +198,10 @@
       }
     }
   }
-})();
+}
+
+try {
+  firstNav();
+} catch (er) {
+  console.log("error script first-nav", er);
+}
