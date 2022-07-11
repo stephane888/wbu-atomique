@@ -1,0 +1,88 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables" as *;
+
+@keyframes card-subtitle {
+  0% {
+    font-size: 0;
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    font-size: $wbu-h5-font-size;
+  }
+  to {
+    opacity: 1;
+    font-size: $wbu-h5-font-size;
+  }
+}
+.fivejars-w-card {
+  aspect-ratio: 380/330;
+  margin: $wbu-margin * 0.35;
+  flex: 1 0 30%;
+  background: $wbu-background;
+  border-radius: $wbu-margin * 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $wbu-margin;
+  color: color-yiq($wbu-background);
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  .layout-region {
+    &.icone {
+      @include bp_h3();
+      width: $wbu-margin * 2.5;
+      height: $wbu-margin * 2.5;
+      padding: $wbu-margin * 0.5;
+      line-height: 0;
+      margin-bottom: $wbu-margin;
+      border-radius: 50%;
+      background: $wbu-color-primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg,
+      i {
+        max-height: 100%;
+        max-width: 100%;
+        color: color-yiq($wbu-color-primary);
+        fill: color-yiq($wbu-color-primary);
+        box-shadow: 0 0 30px rgba($wbu-color-primary, 0.3);
+        width: 100%;
+        height: auto;
+      }
+    }
+    .titre {
+      margin-bottom: $wbu-margin;
+    }
+    &.description {
+      text-align: center;
+      font-size: 0;
+      opacity: 0;
+      font-weight: 400;
+      transition: opacity 0.1s ease-in-out, font-size 0.2s ease-in-out 0.1s;
+      will-change: auto;
+    }
+  }
+  &:hover {
+    background: $wbu-color-primary;
+    color: color-yiq($wbu-color-primary);
+    box-shadow: 5px 10px 20px #30303066;
+    .layout-region {
+      &.description {
+        opacity: 1;
+        font-size: $wbu-h5-font-size;
+        animation: card-subtitle 0.4s ease-in-out;
+      }
+      &.icone {
+        background: $wbu-background;
+        svg,
+        i {
+          color: color-yiq($wbu-background);
+          fill: color-yiq($wbu-background);
+        }
+      }
+    }
+  }
+}

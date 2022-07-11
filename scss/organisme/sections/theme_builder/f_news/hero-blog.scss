@@ -29,6 +29,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       @include media-max(SM) {
         font-size: $wbu-default-font-size * 0.9;
       }
