@@ -27,7 +27,7 @@
     &:hover {
       background-color: $wbu-color-primary;
       border-color: $wbu-color-primary;
-      .wbu-angles-up{
+      .wbu-angles-up {
         &::after {
           @include wbu__angles-up(color-yiq($wbu-color-primary), 20);
         }
@@ -43,6 +43,32 @@
         left: 50%;
         transform: translate(-50%, -50%);
         @include wbu__angles-up(black, 20);
+      }
+    }
+  }
+}
+
+@media print {
+  body {
+    .nav {
+      display: none;
+    }
+    .hero-blog-fnews,
+    section,
+    header {
+      display: none;
+    }
+    .hero-blog-fnews {
+      display: none;
+    }
+
+    .single-showcase_fnews {
+      display: block;
+      .row {
+        justify-content: center;
+      }
+      .row .d-flex {
+        display: none;
       }
     }
   }
