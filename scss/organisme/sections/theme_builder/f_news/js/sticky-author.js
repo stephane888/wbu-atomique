@@ -84,13 +84,22 @@
     popup.focus();
     return true;
   };
+  let canonicalUrl = document.querySelector("[rel=canonical]");
+  let urlToUse = canonicalUrl
+    ? canonicalUrl.href
+    : window.location.origin + window.location.pathname;
+  let metaTitle = document.head.querySelector("[property='og:title']")
+    ? document.head.querySelector("[property='og:title']").content
+    : document.title;
+  console.log("canonicalLink: ", canonicalUrl);
+  console.log("urlToUse: ", urlToUse, "metaTitle: ", metaTitle);
 
   let FacebookShare = function () {
     let facebook = document.querySelector(".facebookShare");
     if (facebook) {
       facebook.addEventListener("click", function (e) {
         e.preventDefault();
-        var url = window.location.origin + window.location.pathname;
+        var url = urlToUse;
         var shareUrl =
           "https://www.facebook.com/sharer/sharer.php?u=" +
           encodeURIComponent(url);
@@ -105,7 +114,7 @@
     if (linkedin) {
       linkedin.addEventListener("click", function (e) {
         e.preventDefault();
-        var url = window.location.origin + window.location.pathname;
+        var url = urlToUse;
         var shareUrl =
           "https://www.linkedin.com/shareArticle?url=" +
           encodeURIComponent(url);
@@ -121,10 +130,10 @@
     if (twitter) {
       twitter.addEventListener("click", function (e) {
         e.preventDefault();
-        var url = window.location.origin + window.location.pathname;
+        var url = urlToUse;
         var shareUrl =
           "https://twitter.com/intent/tweet?text=" +
-          encodeURIComponent(document.title) +
+          encodeURIComponent(metaTitle) +
           "&original_referer=" +
           encodeURIComponent(url) +
           "&url=" +
@@ -138,7 +147,7 @@
   let EmailShare = function () {
     let emailShare = document.querySelector(".emailShare");
     if (emailShare) {
-      let url = window.location.origin + window.location.pathname;
+      var url = urlToUse;
       let shareUrl = "mailto:?body=" + encodeURIComponent(url);
       emailShare.setAttribute("href", shareUrl);
     } else {
