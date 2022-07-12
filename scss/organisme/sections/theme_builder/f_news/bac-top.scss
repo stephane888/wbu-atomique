@@ -58,6 +58,10 @@
     header {
       display: none;
     }
+    .second-nav,
+    first-nav {
+      display: none;
+    }
     .hero-blog-fnews {
       display: none;
     }
@@ -68,7 +72,7 @@
         justify-content: center;
       }
       .row .d-flex {
-        display: none;
+        display: none !important;
       }
     }
   }
