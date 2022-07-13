@@ -16,7 +16,8 @@
     console.error("desoler pas de div pour la recherche");
   }
 
-  function activeSearch() {
+  function activeSearch(e) {
+    // e.preventDefault();
     blocSearch.classList.toggle("sn-search-popup--show");
   }
 })();

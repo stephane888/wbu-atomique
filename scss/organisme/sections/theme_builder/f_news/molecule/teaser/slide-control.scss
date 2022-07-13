@@ -63,6 +63,9 @@
     list-style: none;
     padding: 0;
     z-index: 1;
+    .swiper-wrapper {
+      align-items: center;
+    }
   }
   .slc-content {
     display: flex;

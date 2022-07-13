@@ -25,8 +25,10 @@
     min-width: 0;
     a {
       color: black;
+      transition: 0.3s;
       &:hover {
         text-decoration: none;
+        color: lighten(black, 50);
       }
     }
 
@@ -82,7 +84,7 @@
     //height: 100%;
     background-color: $wbu-color-primary;
     transition: 0.3s;
-    padding: 3.4rem 2.9rem;
+    padding: 3rem 2.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
