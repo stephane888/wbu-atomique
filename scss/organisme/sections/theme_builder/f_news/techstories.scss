@@ -4,12 +4,12 @@
 @use "./molecule/teaser/finance-teaser.scss";
 @use "./variables.scss" as *;
 .tech-stories-section-handler {
-  padding: $space_top 0;
+  padding-bottom: $space_top;
   .section-title {
     font-size: $wbu-h2-font-size;
     font-weight: bold;
-    color: black;
-    padding-bottom: $wbu-margin * 3;
+    //color: black;
+    padding-bottom: $wbu-margin * 2;
     text-transform: capitalize;
     @include media-max(XX) {
       font-size: $wbu-h4-font-size;

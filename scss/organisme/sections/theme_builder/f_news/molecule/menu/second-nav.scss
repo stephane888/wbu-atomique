@@ -53,7 +53,7 @@
   ul li {
     font-size: $wbu-h6-font-size;
     a {
-      padding: 5rem 2rem;
+      padding: 3.4rem 2rem;
       @include media-max(MD) {
         padding: 4rem 2rem;
       }
@@ -63,7 +63,7 @@
       color: black;
       &:hover {
         background-color: $wbu-color-primary;
-         color: color-yiq( $wbu-color-primary);
+        color: color-yiq($wbu-color-primary);
       }
     }
   }
@@ -82,12 +82,12 @@
     //height: 100%;
     background-color: $wbu-color-primary;
     transition: 0.3s;
-    padding: 4rem 3.5rem;
+    padding: 3.4rem 2.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
     .wbu-search::before {
-      @include wbu-search(color-yiq( $wbu-color-primary), 18);
+      @include wbu-search(color-yiq($wbu-color-primary), 18);
     }
     span {
       display: block;

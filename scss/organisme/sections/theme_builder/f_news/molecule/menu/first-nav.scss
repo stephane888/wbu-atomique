@@ -75,7 +75,7 @@
         height: 1.5rem;
         content: "";
         position: absolute;
-        @include wbu__angle-right(black, 12);
+        @include wbu__angle-right(black, 10);
         transform: rotate(90deg);
         background-position: center;
         display: inline-block;
@@ -84,7 +84,7 @@
       }
       &:hover {
         &::after {
-          @include wbu__angle-right(color-yiq($wbu-color-primary), 12);
+          @include wbu__angle-right(color-yiq($wbu-color-primary), 10);
         }
         &::before {
           color: color-yiq($wbu-color-primary);
@@ -94,7 +94,7 @@
     &.nav-item--active {
       & > .nav-link {
         &::after {
-          @include wbu__angle-right(color-yiq($wbu-color-primary), 12);
+          @include wbu__angle-right(color-yiq($wbu-color-primary), 10);
         }
         &::before {
           color: color-yiq($wbu-color-primary);
@@ -105,7 +105,7 @@
       & > .nav-link {
         color: color-yiq($wbu-color-primary);
         &::after {
-          @include wbu__angle-right(color-yiq($wbu-color-primary), 12);
+          @include wbu__angle-right(color-yiq($wbu-color-primary), 10);
         }
         &::before {
           color: color-yiq($wbu-color-primary);

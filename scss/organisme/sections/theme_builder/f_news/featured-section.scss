@@ -5,7 +5,8 @@
 @use "./variables.scss" as *;
 
 .featured-section-handler {
-  padding: $space-top 0;
+  //padding: $space-top 0;
+  padding-bottom: $space_top;
   overflow: hidden;
   position: relative;
   .section-title {
@@ -21,7 +22,7 @@
     text-align: center;
     margin-bottom: $wbu-margin;
     font-size: $wbu-h5-font-size;
-    color: black;
+    //color: black;
     font-weight: lighter;
     @include media-max(XX) {
       font-size: $wbu-h6-font-size;
