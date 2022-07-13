@@ -8,7 +8,7 @@
   .section-title {
     font-size: $wbu-h2-font-size;
     font-weight: bold;
-    //color: black;
+    color: black;
     padding-bottom: $wbu-margin * 2;
     text-transform: capitalize;
     @include media-max(XX) {
