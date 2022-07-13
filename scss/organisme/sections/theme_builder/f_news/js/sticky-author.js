@@ -94,73 +94,88 @@
   console.log("canonicalLink: ", canonicalUrl);
   console.log("urlToUse: ", urlToUse, "metaTitle: ", metaTitle);
 
+  function findAllElement(element) {
+    let talbe = Array.from(document.querySelectorAll(element));
+    return talbe;
+  }
+
   let FacebookShare = function () {
-    let facebook = document.querySelector(".facebookShare");
-    if (facebook) {
-      facebook.addEventListener("click", function (e) {
-        e.preventDefault();
-        var url = urlToUse;
-        var shareUrl =
-          "https://www.facebook.com/sharer/sharer.php?u=" +
-          encodeURIComponent(url);
-        popupCenter(shareUrl, "Partager sur facebook");
-      });
+    let facebook = findAllElement(".facebookShare");
+    if (facebook && facebook.length) {
+      for (let el of facebook) {
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+          var url = urlToUse;
+          var shareUrl =
+            "https://www.facebook.com/sharer/sharer.php?u=" +
+            encodeURIComponent(url);
+          popupCenter(shareUrl, "Partager sur facebook");
+        });
+      }
     } else {
       console.error("no facebook el");
     }
   };
   let linkedinShare = function () {
-    let linkedin = document.querySelector(".linkedinShare");
-    if (linkedin) {
-      linkedin.addEventListener("click", function (e) {
-        e.preventDefault();
-        var url = urlToUse;
-        var shareUrl =
-          "https://www.linkedin.com/shareArticle?url=" +
-          encodeURIComponent(url);
-        popupCenter(shareUrl, "Partager sur linkedin");
-      });
+    let linkedin = findAllElement(".linkedinShare");
+    if (linkedin && linkedin.length) {
+      for (let el of linkedin) {
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+          var url = urlToUse;
+          var shareUrl =
+            "https://www.linkedin.com/shareArticle?url=" +
+            encodeURIComponent(url);
+          popupCenter(shareUrl, "Partager sur linkedin");
+        });
+      }
     } else {
       console.error("no linkedin el");
     }
   };
 
   let TwitterShare = function () {
-    let twitter = document.querySelector(".twitterShare");
-    if (twitter) {
-      twitter.addEventListener("click", function (e) {
-        e.preventDefault();
-        var url = urlToUse;
-        var shareUrl =
-          "https://twitter.com/intent/tweet?text=" +
-          encodeURIComponent(metaTitle) +
-          "&original_referer=" +
-          encodeURIComponent(url) +
-          "&url=" +
-          encodeURIComponent(url);
-        popupCenter(shareUrl, "Partager sur Twitter");
-      });
+    let twitter = findAllElement(".twitterShare");
+    if (twitter && twitter.length) {
+      for (let el of twitter) {
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+          var url = urlToUse;
+          var shareUrl =
+            "https://twitter.com/intent/tweet?text=" +
+            encodeURIComponent(metaTitle) +
+            "&original_referer=" +
+            encodeURIComponent(url) +
+            "&url=" +
+            encodeURIComponent(url);
+          popupCenter(shareUrl, "Partager sur Twitter");
+        });
+      }
     } else {
       console.error("no twitter el ");
     }
   };
   let EmailShare = function () {
-    let emailShare = document.querySelector(".emailShare");
-    if (emailShare) {
+    let emailShare = findAllElement(".emailShare");
+    if (emailShare && emailShare.length) {
       var url = urlToUse;
       let shareUrl = "mailto:?body=" + encodeURIComponent(url);
-      emailShare.setAttribute("href", shareUrl);
+      for (let el of emailShare) {
+        el.setAttribute("href", shareUrl);
+      }
     } else {
       console.error("no Email el ");
     }
   };
   let PrintButton = function () {
-    let print = document.querySelector(".printButton");
-    if (print) {
-      print.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.print();
-      });
+    let print = findAllElement(".printButton");
+    if (print && print.length) {
+      for (let el of print) {
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+          window.print();
+        });
+      }
     } else {
       console.error("no print el");
     }
