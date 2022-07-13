@@ -53,7 +53,7 @@
   }
   .single-post {
     margin-bottom: 0;
-    color: $wbu-color-primary;
+
     a {
       color: $wbu-color-primary;
     }
@@ -65,6 +65,7 @@
       // @include media-max(XS) {
       //   font-size: $wbu-h5-font-size 0.9;
       // }
+      color: $wbu-color-primary;
       @include media-max(SM) {
         font-size: $wbu-h5-font-size;
       }
