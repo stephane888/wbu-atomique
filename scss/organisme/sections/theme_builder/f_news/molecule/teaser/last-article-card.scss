@@ -49,7 +49,7 @@
     }
     .parent-desc {
       max-width: 65%;
-      font-size: $wbu-h6-font-size;
+      font-size: $wbu-default-font-size;
       line-height: 1.5;
       text-decoration: none;
       cursor: text;
@@ -89,7 +89,7 @@
       margin: 0;
       @include ellipseText(3);
       //padding-bottom: $wbu-margin;
-      color: black;
+      color: #000000c7;
     }
   }
 }

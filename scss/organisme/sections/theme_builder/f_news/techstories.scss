@@ -9,7 +9,7 @@
     font-size: $wbu-h2-font-size;
     font-weight: bold;
     color: black;
-    padding-bottom: $wbu-margin * 2;
+    padding-bottom: $space_inner_top;
     text-transform: capitalize;
     @include media-max(XX) {
       font-size: $wbu-h4-font-size;

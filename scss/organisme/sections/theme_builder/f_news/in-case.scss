@@ -9,7 +9,7 @@
     font-weight: bold;
     text-align: center;
     color: black;
-    margin: 0 0 $space-top;
+    margin: 0 0 $space_inner_top;
     @include media-max(SM) {
       font-size: $wbu-h2-font-size * 0.8;
     }

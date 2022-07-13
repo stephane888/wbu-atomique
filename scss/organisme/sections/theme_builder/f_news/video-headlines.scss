@@ -13,7 +13,7 @@
       font-weight: bold;
       font-size: $wbu-h2-font-size;
       text-align: center;
-      padding-bottom: $wbu-margin * 2;
+      padding-bottom: $space_inner_top;
       @include media-max(XX) {
         font-size: $wbu-h4-font-size;
       }

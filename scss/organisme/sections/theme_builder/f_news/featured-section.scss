@@ -22,8 +22,8 @@
     text-align: center;
     margin-bottom: $wbu-margin;
     font-size: $wbu-h5-font-size;
-    //color: black;
-    font-weight: lighter;
+    font-weight: 400;
+    color: black;
     @include media-max(XX) {
       font-size: $wbu-h6-font-size;
     }

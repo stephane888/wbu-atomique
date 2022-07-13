@@ -63,10 +63,10 @@
     color: $wbu-color-secondary;
   }
   .fhh-content {
-    background-color: $wbu-color-boder;
+    background-color: lighten($wbu-border-color, 4);
     padding: $space-top 0;
   }
-  .slide-latest {
-    padding-bottom: $wbu-margin * 2;
-  }
+  // .slide-latest {
+  // padding-bottom: $wbu-margin * 2;
+  // }
 }
