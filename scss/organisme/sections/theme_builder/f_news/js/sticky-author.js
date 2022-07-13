@@ -161,7 +161,10 @@
       var url = urlToUse;
       let shareUrl = "mailto:?body=" + encodeURIComponent(url);
       for (let el of emailShare) {
-        el.setAttribute("href", shareUrl);
+        console.log("elEmailShare:", el);
+        (function (element) {
+          element.setAttribute("href", shareUrl);
+        })(el);
       }
     } else {
       console.error("no Email el ");
