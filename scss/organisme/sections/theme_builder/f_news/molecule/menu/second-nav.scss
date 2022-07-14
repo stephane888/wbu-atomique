@@ -3,15 +3,32 @@
 // les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
 
 .second-nav {
+  // min-height: 8rem;
   & > .content {
     display: flex;
     align-items: center;
     justify-content: end;
     flex-wrap: wrap;
+    z-index: 10;
+    transition: ease-in-out 0.6s;
     @include media-max(DD) {
       flex-wrap: wrap;
     }
   }
+
+  &--static {
+    & > .content {
+      @include media-min(SM) {
+        position: fixed;
+        opacity: 1;
+        transition: top ease-in 0.4s, position ease-in 0.4s,
+          opacity ease-in-out 0.3s;
+        top: 0;
+        background: rgba(255, 255, 255, 0.904);
+      }
+    }
+  }
+
   &__brand {
     margin-right: auto;
     font-size: calc(1rem + 2.5vw);
@@ -54,10 +71,12 @@
   }
   ul li {
     font-size: $wbu-default-font-size;
+  }
+  .nav-item {
     a {
       padding: 3.4rem 2rem;
       @include media-max(MD) {
-        padding: 4rem 2rem;
+        padding: 2.5rem 2rem;
       }
       text-transform: capitalize;
       font-weight: bold;
@@ -65,6 +84,12 @@
       color: black;
       &:hover {
         background-color: $wbu-color-primary;
+        color: color-yiq($wbu-color-primary);
+      }
+    }
+    &--active {
+      background-color: $wbu-color-primary;
+      a {
         color: color-yiq($wbu-color-primary);
       }
     }
