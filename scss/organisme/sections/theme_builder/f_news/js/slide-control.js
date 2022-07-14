@@ -1,3 +1,14 @@
+import Swiper, {
+  Navigation,
+  Pagination,
+  Parallax,
+  Autoplay,
+  EffectFade,
+} from "swiper";
+// configure Swiper to use modules
+Swiper.use([Navigation, Pagination, Parallax, Autoplay, EffectFade]);
+// import Swiper styles
+import "swiper/css/bundle";
 try {
   (function () {
     "use-strict";
@@ -18,25 +29,24 @@ try {
     const pausePlay = document.querySelector(".play-pause");
     const slideControl = new Swiper(".swiper-sc", {
       // Optional parameters
-      direction: "horizontal",
       loop: true,
       speed: 800,
+      effect: "fade",
       navigation: {
         nextEl: ".button-next",
-        prevEl: ".button-prev"
+        prevEl: ".button-prev",
       },
       allowTouchMove: false,
-      effect: "fade",
       fadeEffect: {
-        crossFade: true
+        crossFade: true,
       },
       autoplay: {
         delay: 3000,
-        disableOnInteraction: true
+        disableOnInteraction: true,
         // pauseOnMouseEnter: true
       },
       slidesPerView: "auto",
-      slidesPerGroup: 1
+      slidesPerGroup: 1,
     });
     if (pausePlay) {
       console.log("Slider controls lancé");

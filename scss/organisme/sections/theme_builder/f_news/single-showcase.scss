@@ -5,7 +5,11 @@
 @use "./variables.scss" as *;
 .single-showcase_fnews {
   padding: $space-top * 0.5 0 $space-top;
-  font-size: $wbu-default-font-size;
+  font-size: $wbu-h5-font-size;
+  h3,
+  h2 {
+    font-weight: 400;
+  }
   img {
     //width: auto;
     object-fit: contain;
@@ -116,7 +120,6 @@
   p {
     //font-size: $wbu-default-font-size;
     padding: $wbu-margin 0;
-    color: darken($color: rgba($wbu-background, 0.92), $amount: 8);
     margin: 0;
     //span {
     //font-size: $wbu-default-font-size;
