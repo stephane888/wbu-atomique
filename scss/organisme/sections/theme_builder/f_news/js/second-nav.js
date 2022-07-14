@@ -18,7 +18,7 @@
       let secondNavContent = document.querySelector(
         ".second-nav--fixed .content"
       );
-      let secondNavHeight = secondNav.scrollHeight;
+      let secondNavHeight = secondNav.scrollHeight + "px";
       let secondNavWindowPosition = getTruePosition(secondNav);
       let limitToStatic = secondNavWindowPosition;
 
