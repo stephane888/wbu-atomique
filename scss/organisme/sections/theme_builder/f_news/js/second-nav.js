@@ -18,11 +18,19 @@
       let secondNavContent = document.querySelector(
         ".second-nav--fixed .content"
       );
-      let secondNavHeight = secondNav.scrollHeight;
+      let secondNavHeight = secondNavContent.scrollHeight;
       let secondNavWindowPosition = getTruePosition(secondNav);
       let limitToStatic = secondNavWindowPosition + 30;
-
       secondNav.style.minHeight = secondNavHeight + "px";
+      this.window.addEventListener("resize", function () {
+        this.clearTimeout(callTime);
+        callTime = setTimeout(function () {
+          //console.log("this");
+          secondNavHeight = secondNavContent.scrollHeight;
+          secondNav.style.minHeight = secondNavHeight + "px";
+        }, 50);
+      });
+
       // console.log("limit", limitToStatic, "----", lastscroll);
       window.addEventListener("scroll", () => {
         // clearTimeout(callTime);

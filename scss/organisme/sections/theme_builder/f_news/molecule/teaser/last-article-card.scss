@@ -6,6 +6,7 @@
   border: none;
   background-color: transparent;
   overflow: hidden;
+
   &__img {
     position: relative;
     // height: 50rem;
@@ -59,7 +60,7 @@
       position: absolute;
       margin: 0;
       bottom: 0rem;
-      z-index: 14;
+      z-index: 8;
       right: 0;
 
       @include media-max(SM) {

@@ -76,6 +76,10 @@ $bg_color: lighten($wbu-color-boder, 9);
     padding-left: $wbu-margin * 2.5;
     @include media-max(SM) {
       flex-wrap: wrap;
+      padding-left: $wbu-margin;
+      .swiper-sc {
+        margin: 0;
+      }
     }
   }
   .sc-title {

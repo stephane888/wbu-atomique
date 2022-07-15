@@ -13,6 +13,7 @@
 }
 .second-nav {
   // min-height: 8rem;
+  transition: min-height 0.3s;
   & > .content {
     display: flex;
     align-items: center;

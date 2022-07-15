@@ -65,6 +65,11 @@
   .fhh-content {
     background-color: lighten($wbu-border-color, 4);
     padding: $space-top 0;
+    .slide-latest {
+      @include media-max(SM) {
+        padding-bottom: $wbu-margin * 1.4;
+      }
+    }
   }
   // .slide-latest {
   // padding-bottom: $wbu-margin * 2;
