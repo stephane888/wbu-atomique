@@ -22,7 +22,7 @@
       let secondNavWindowPosition = getTruePosition(secondNav);
       let limitToStatic = secondNavWindowPosition + 30;
 
-      secondNav.style.minHeight = secondNavHeight;
+      secondNav.style.minHeight = secondNavHeight + "px";
       // console.log("limit", limitToStatic, "----", lastscroll);
       window.addEventListener("scroll", () => {
         // clearTimeout(callTime);
@@ -37,13 +37,13 @@
           if (!secondNav.classList.contains("second-nav--static")) {
             onStaticNav();
           }
-          console.log("position", limitToStatic, "----", currentScroll);
+          //   console.log("position", limitToStatic, "----", currentScroll);
         } else if (
           lastscroll < currentScroll &&
           limitToStatic < currentScroll &&
           secondNav.classList.contains("second-nav--static") == true
         ) {
-          console.log("retire", limitToStatic, "----", currentScroll);
+          //  console.log("retire", limitToStatic, "----", currentScroll);
           if (!secondNavContent.style.opacity) {
             secondNavContent.style.opacity = 0;
           }
@@ -63,7 +63,7 @@
           if (secondNav.classList.contains("second-nav--static")) {
             offStaticNav();
           }
-          console.log("do nothing", limitToStatic, "----", currentScroll);
+          //   console.log("do nothing", limitToStatic, "----", currentScroll);
         }
 
         lastscroll = currentScroll;
