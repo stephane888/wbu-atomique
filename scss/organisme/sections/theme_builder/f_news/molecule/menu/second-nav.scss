@@ -1,17 +1,52 @@
 @use "../../../../../../wbu-ressources-clean.scss" as *;
 // la typography est externe : ... ypography/default
 // les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
-
+@keyframes fadeOut {
+  from {
+    position: absolute;
+    opacity: 1;
+  }
+  to {
+    position: absolute;
+    opacity: 0;
+  }
+}
 .second-nav {
+  // min-height: 8rem;
+  transition: min-height 0.3s;
   & > .content {
     display: flex;
     align-items: center;
     justify-content: end;
     flex-wrap: wrap;
+    z-index: 10;
+    transition: top ease-in 0.4s, position ease-in 0.4s,
+      opacity ease-in-out 0.3s;
     @include media-max(DD) {
       flex-wrap: wrap;
     }
   }
+
+  &--static {
+    & > .content {
+      @include media-min(SM) {
+        position: fixed;
+        opacity: 1;
+        transition: top ease-in 0.4s, position ease-in 0.4s,
+          opacity ease-in-out 0.3s;
+        top: 0;
+        background: rgba(255, 255, 255, 0.904);
+      }
+    }
+  }
+  &--fade {
+    > .content {
+      @include media-min(SM) {
+        animation: ease-out fadeOut 0.4s;
+      }
+    }
+  }
+
   &__brand {
     margin-right: auto;
     font-size: calc(1rem + 2.5vw);
@@ -25,8 +60,10 @@
     min-width: 0;
     a {
       color: black;
+      transition: 0.3s;
       &:hover {
         text-decoration: none;
+        color: lighten(black, 50);
       }
     }
 
@@ -51,11 +88,13 @@
     }
   }
   ul li {
-    font-size: $wbu-h6-font-size;
+    font-size: $wbu-default-font-size;
+  }
+  .nav-item {
     a {
-      padding: 5rem 2rem;
+      padding: 3.4rem 2rem;
       @include media-max(MD) {
-        padding: 4rem 2rem;
+        padding: 2.5rem 2rem;
       }
       text-transform: capitalize;
       font-weight: bold;
@@ -63,7 +102,13 @@
       color: black;
       &:hover {
         background-color: $wbu-color-primary;
-         color: color-yiq( $wbu-color-primary);
+        color: color-yiq($wbu-color-primary);
+      }
+    }
+    &--active {
+      background-color: $wbu-color-primary;
+      a {
+        color: color-yiq($wbu-color-primary);
       }
     }
   }
@@ -82,12 +127,12 @@
     //height: 100%;
     background-color: $wbu-color-primary;
     transition: 0.3s;
-    padding: 4rem 3.5rem;
+    padding: 3rem 2.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
     .wbu-search::before {
-      @include wbu-search(color-yiq( $wbu-color-primary), 18);
+      @include wbu-search(color-yiq($wbu-color-primary), 18);
     }
     span {
       display: block;

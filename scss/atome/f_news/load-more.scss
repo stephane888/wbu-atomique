@@ -1,6 +1,9 @@
 @use "../../wbu-ressources-clean.scss" as *;
 @use "../../variables" as *;
-$darken-primary: darken($color: $wbu-color-primary, $amount: 2);
+$darken-primary: darken(
+  $color: $wbu-color-primary,
+  $amount: 2
+);
 
 .load-more-button {
   margin: $wbu-margin 0;
@@ -103,7 +106,7 @@ $darken-primary: darken($color: $wbu-color-primary, $amount: 2);
       position: relative;
       opacity: 1;
       width: 2rem;
-      @include wbu__angle-right(color-yiq($darken-primary), 15)
+      @include wbu__angle-right(color-yiq($darken-primary), 15);
     }
   }
 }
@@ -112,7 +115,7 @@ $darken-primary: darken($color: $wbu-color-primary, $amount: 2);
   font-weight: bold;
   text-align: center;
 
-  margin: $wbu-margin auto;
+  margin: $wbu-margin * 0.7 auto;
   .link {
     padding: 0.8rem;
     //border-bottom: 1px solid $wbu-color-secondary;

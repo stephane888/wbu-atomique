@@ -39,14 +39,17 @@
     font-size: $wbu-h5-font-size;
     color: black;
     font-weight: 500;
+    line-height: 1.4;
     .story-text,
     p {
       margin: 0;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
-      overflow: hidden;
-      max-height: 12rem;
+      // display: -webkit-box;
+      // -webkit-box-orient: vertical;
+      // -webkit-line-clamp: 1;
+      // overflow: hidden;
+      // max-height: 12rem;
+      @include ellipseText(3);
+      max-height: 8rem;
     }
   }
   .pub-info {

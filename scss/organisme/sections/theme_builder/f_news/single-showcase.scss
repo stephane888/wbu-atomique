@@ -5,6 +5,11 @@
 @use "./variables.scss" as *;
 .single-showcase_fnews {
   padding: $space-top * 0.5 0 $space-top;
+  font-size: $wbu-h5-font-size;
+  h3,
+  h2 {
+    font-weight: 400;
+  }
   img {
     //width: auto;
     object-fit: contain;
@@ -113,13 +118,12 @@
   }
   .ssf-paragraph,
   p {
-    font-size: $wbu-h5-font-size;
+    //font-size: $wbu-default-font-size;
     padding: $wbu-margin 0;
-    color: darken($color: rgba($wbu-background, 0.92), $amount: 8);
     margin: 0;
-    span {
-      font-size: $wbu-default-font-size;
-    }
+    //span {
+    //font-size: $wbu-default-font-size;
+    //}
     // @include media-max(XX) {
     //   font-size: $wbu-h6-font-size;
     // }
@@ -128,7 +132,7 @@
   .ssf-bq {
     margin: $wbu-margin 0;
     padding-left: $wbu-margin * 2;
-    font-size: $wbu-h5-font-size;
+    //font-size: $wbu-h5-font-size;
     position: relative;
     color: rgba($wbu-background, 0.92);
     // @include media-max(XX) {

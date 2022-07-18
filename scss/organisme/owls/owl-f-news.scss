@@ -10,11 +10,42 @@
     line-height: 0.5;
     > button {
       background: transparent !important;
+      position: relative;
+      width: 3rem;
+      height: 3rem;
+      span {
+        display: none;
+      }
       &:hover {
-        color: $wbu-color-primary !important;
+        color: black !important;
       }
       &.owl-prev {
-        margin-right: $wbu-margin * 0.5;
+        // margin-right: $wbu-margin * 0.9;
+        position: relative;
+        &::before {
+          width: 3rem;
+          height: 3rem;
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 50%;
+          transition: ease 0.3s;
+          transform: translate(-50%, -50%) rotate(180deg);
+          @include wbu__angle-right(black, 25);
+        }
+      }
+      &.owl-next {
+        &::before {
+          width: 3rem;
+          height: 3rem;
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 50%;
+          transition: ease 0.3s;
+          transform: translate(-50%, -52%);
+          @include wbu__angle-right(black, 25);
+        }
       }
     }
   }
@@ -22,14 +53,14 @@
     width: calc(100% - 100px);
     display: flex;
     flex-wrap: wrap;
-    margin-top: $wbu-margin * 1.25;
+    //margin-top: $wbu-margin * 1.25;
     .owl-dot {
       width: 3.5rem;
       height: 0.8rem;
       border: 1px solid $wbu-background;
       margin-right: $wbu-margin;
       &.active {
-        background-color: $wbu-color-primary;
+        background-color: black;
       }
       span {
         display: none;

@@ -6,6 +6,7 @@
   border: none;
   background-color: transparent;
   overflow: hidden;
+
   &__img {
     position: relative;
     // height: 50rem;
@@ -49,7 +50,7 @@
     }
     .parent-desc {
       max-width: 65%;
-      font-size: $wbu-h6-font-size;
+      font-size: $wbu-default-font-size;
       line-height: 1.5;
       text-decoration: none;
       cursor: text;
@@ -59,7 +60,7 @@
       position: absolute;
       margin: 0;
       bottom: 0rem;
-      z-index: 14;
+      z-index: 8;
       right: 0;
 
       @include media-max(SM) {
@@ -84,12 +85,12 @@
       // }
     }
     .card-text {
-      font-size: $wbu-default-font-size;
+      font-size: $wbu-h5-font-size;
       text-decoration: none;
       margin: 0;
       @include ellipseText(3);
       //padding-bottom: $wbu-margin;
-      color: black;
+      color: #000000c7;
     }
   }
 }

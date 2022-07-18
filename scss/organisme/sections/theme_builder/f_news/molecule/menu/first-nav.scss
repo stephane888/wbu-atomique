@@ -5,7 +5,7 @@
 //// les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
 
 .first-nav {
-  background-color: rgba($wbu-color-boder, 0.5);
+  background-color: lighten($wbu-color-boder, 6);
   display: flex;
   justify-content: start;
   padding: 0 4.5rem;
@@ -48,12 +48,12 @@
   .nav-item {
     display: block;
     font-weight: bold;
-    font-size: $wbu-h6-font-size;
+    font-size: $wbu-default-font-size;
     text-transform: capitalize;
-
+    color: black;
     .nav-link {
       color: inherit;
-      padding: 1rem 2rem;
+      padding: 1rem 1rem;
 
       &:hover {
         background-color: $wbu-color-primary;
@@ -75,7 +75,7 @@
         height: 1.5rem;
         content: "";
         position: absolute;
-        @include wbu__angle-right(black, 12);
+        @include wbu__angle-right(black, 10);
         transform: rotate(90deg);
         background-position: center;
         display: inline-block;
@@ -84,7 +84,7 @@
       }
       &:hover {
         &::after {
-          @include wbu__angle-right(color-yiq($wbu-color-primary), 12);
+          @include wbu__angle-right(color-yiq($wbu-color-primary), 10);
         }
         &::before {
           color: color-yiq($wbu-color-primary);
@@ -94,7 +94,7 @@
     &.nav-item--active {
       & > .nav-link {
         &::after {
-          @include wbu__angle-right(color-yiq($wbu-color-primary), 12);
+          @include wbu__angle-right(color-yiq($wbu-color-primary), 10);
         }
         &::before {
           color: color-yiq($wbu-color-primary);
@@ -105,7 +105,7 @@
       & > .nav-link {
         color: color-yiq($wbu-color-primary);
         &::after {
-          @include wbu__angle-right(color-yiq($wbu-color-primary), 12);
+          @include wbu__angle-right(color-yiq($wbu-color-primary), 10);
         }
         &::before {
           color: color-yiq($wbu-color-primary);
@@ -212,7 +212,7 @@
         & > ul {
           display: inherit;
           max-height: 30rem;
-          padding: 2rem 0;
+          padding: 1rem 0;
           opacity: 1;
           z-index: 15;
           overflow: visible;
@@ -224,7 +224,7 @@
     .sub-menu {
       max-height: 0;
       position: absolute;
-      top: 3.7rem;
+      top: 3.6rem;
       left: 0;
       overflow: hidden;
       opacity: 5;
@@ -252,7 +252,7 @@
       }
 
       & ul {
-        top: -2.4rem;
+        top: -1.4rem;
         left: 25rem;
         & ul {
           left: -25rem;

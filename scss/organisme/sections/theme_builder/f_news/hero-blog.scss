@@ -51,6 +51,7 @@
       }
       &:last-child {
         //padding-left: 0;
+        color: white;
         a {
           color: white;
           cursor: text;
@@ -140,8 +141,10 @@
           @include wbu-tags($wbu-color-primary, 20);
         }
       }
+      &:nth-child(2),
       &:last-child {
         //padding-left: 0;
+        color: white;
         a {
           color: white;
           pointer-events: none;
