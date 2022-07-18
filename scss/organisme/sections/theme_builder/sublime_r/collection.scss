@@ -90,12 +90,12 @@
                     @include media-max(XS){
                         margin-top: $space_top;
                         position: relative;
-                        left: -140;
-                        top: 65px;
+                        left: -120;
+                        top: 40px;
                     }
                     @include media-max(MD){
-                        bottom: 60px;
-                        right: 0;
+                        bottom: 40px;
+                        right: -12;
                         width: 120px;
                     }
                 }
