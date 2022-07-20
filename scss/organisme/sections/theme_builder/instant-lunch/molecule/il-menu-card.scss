@@ -24,6 +24,13 @@ $dark-color: darken($wbu-color-primary, 30);
   }
   .ilc-title {
     font-size: $wbu-h3-font-size-sm;
+    a {
+      color: $dark-color;
+      &:hover {
+        color: $dark-color;
+        text-decoration: none;
+      }
+    }
   }
   .ilc-price {
     font-size: $wbu-h3-font-size-sm * 0.85;
