@@ -1,0 +1,128 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../atome/il-action-card.scss";
+$dark-color: darken($wbu-color-primary, 30);
+.il-hori-menu-card {
+  padding-bottom: $wbu-margin;
+
+  .img-card {
+    width: 100%;
+    position: relative;
+    &:hover {
+      .detail-card {
+        transform: translateY(0);
+        z-index: 1;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .detail-card {
+      padding: 1rem;
+      background-color: rgba(#000000, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: white;
+      transform: translateY(42px);
+      z-index: 1;
+      transition: transform 0.4s;
+      .text {
+        line-height: 1;
+        a {
+          color: white;
+        }
+        &:hover {
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+      svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: white;
+        margin-right: 1rem;
+      }
+    }
+  }
+  .ilm-content {
+    background-color: lighten($wbu-color-primary, 40);
+    padding: $wbu-margin;
+    padding-bottom: 0;
+    text-align: center;
+    color: $dark-color;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+  }
+  .ilc-title,
+  .ilc-price {
+    font-family: "Bebas Neue", Sans-serif;
+    text-transform: uppercase;
+  }
+  .ilc-title {
+    font-size: $wbu-h4-font-size;
+    padding-bottom: 1rem;
+    a {
+      color: $dark-color;
+      &:hover {
+        color: $dark-color;
+        text-decoration: none;
+      }
+    }
+  }
+  .ilc-price {
+    font-size: $wbu-h4-font-size;
+    padding-bottom: 2rem;
+    color: black;
+  }
+  .desc-content {
+    padding: 1rem 0;
+  }
+  .ilc-desc {
+    &__title {
+      font-size: $wbu-default-font-size;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding: 1rem 0;
+    }
+  }
+  .ilc-img-illustration {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+      max-width: 9rem;
+      padding: 0 1rem;
+    }
+  }
+  .card-btn--sm {
+    margin: 0.9rem 0;
+  }
+  .ilc-ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      fill: $dark-color;
+      margin-right: 1rem;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0 0.8rem;
+    }
+  }
+}
