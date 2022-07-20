@@ -1,3 +1,11 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 @use "./atome/il-section-title.scss";
+
+.il-top-img-section {
+  background-repeat: no-repeat;
+  background-position: right;
+  .container .col-md-9 {
+    background-color: rgba(#fff, 0.7);
+  }
+}

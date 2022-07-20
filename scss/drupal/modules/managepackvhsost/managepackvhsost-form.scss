@@ -30,14 +30,29 @@
         padding: 5rem 5rem;
         position: relative;
         margin-top: 4rem;
+        background-color: rgba($wbu-color-primary, 0.1);
+        margin-right: 0.2rem;
       }
       input {
         position: absolute;
         top: 1.5rem;
       }
+      label {
+        text-align: center;
+        cursor: pointer;
+        span {
+          font-weight: 300;
+          margin: 1rem 0;
+          display: block;
+          color: $wbu-color-primary;
+        }
+      }
     }
     .actions-buttons {
       margin-top: $space_top;
+    }
+    .form-actions {
+      margin-bottom: 0 !important;
     }
   }
 }
