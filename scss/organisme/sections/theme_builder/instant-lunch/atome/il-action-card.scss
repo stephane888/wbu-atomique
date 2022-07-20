@@ -1,0 +1,56 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "./il-card-btn.scss";
+
+.il-action-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: inline-block;
+    fill: white;
+  }
+  .ilac-btn {
+    background-color: darken($wbu-color-primary, 30);
+    border: none;
+    border-radius: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    transform: scale(1);
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .bouton-quantity-card {
+    display: flex;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    input {
+      background: transparent;
+      border: 1px solid transparent;
+      width: 3rem;
+      text-align: center;
+      padding: 0;
+      &:focus {
+        border-color: rgba(190, 190, 190, 0.705);
+        outline: none;
+      }
+    }
+  }
+}

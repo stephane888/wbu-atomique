@@ -1,0 +1,68 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.il-section-title {
+  margin-bottom: 3.5rem;
+  p {
+    margin: 0;
+  }
+  .ils-title {
+    color: black;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", Sans-serif;
+    margin-bottom: 0;
+    line-height: 1;
+    @include bp_h1();
+  }
+  .ils-title-big {
+    text-transform: uppercase;
+    font-family: "Bebas Neue", Sans-serif;
+    font-size: $wbu-titre-biggest;
+    margin-bottom: 2rem;
+    @include media-max(MD) {
+      font-size: $wbu-titre-biggest;
+    }
+    @include media-max(SM) {
+      font-size: $wbu-titre-big;
+    }
+    @include media-max(XS) {
+      font-size: $wbu-titre-big-md;
+    }
+  }
+  .ils-desc {
+    font-size: $wbu-default-font-size;
+  }
+}
+.il-big-title {
+  color: black;
+  font-weight: 400;
+  font-family: "Bebas Neue", Sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  @include bp_h1();
+  p {
+    margin: 0;
+  }
+}
+.il-colored {
+  color: $wbu-color-primary;
+}
+.day-desc {
+  color: black;
+  font-size: $wbu-h4-font-size;
+  font-weight: bold;
+  padding: 2rem 0 0;
+}
+.text-side {
+  font-size: $wbu-default-font-size;
+  line-height: 1.6;
+  strong {
+    color: black;
+  }
+}
+.img-side {
+  height: 100%;
+  width: 100%;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 96% auto;
+}
