@@ -1,0 +1,23 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./atome/il-section-title.scss";
+.il-text-description {
+  margin: $space_top 0;
+  background-color: $wbu-color-boder;
+  padding: $wbu-margin * 1.2;
+  .il-big-title {
+    margin: 0;
+    padding: 0;
+    @include media-max(SM) {
+      padding-bottom: 2rem;
+    }
+  }
+  a {
+    color: black;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

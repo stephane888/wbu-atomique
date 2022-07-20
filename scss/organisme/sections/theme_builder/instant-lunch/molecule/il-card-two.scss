@@ -1,0 +1,47 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../atome/il-action-card.scss";
+$dark-color: darken($wbu-color-primary, 30);
+.il-card-two {
+  padding-bottom: $wbu-margin;
+  display: flex;
+  .img-card {
+    position: relative;
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    &:hover {
+      .ilm-content {
+        height: 100%;
+      }
+    }
+  }
+  .ilm-content {
+    background-color: $wbu-background;
+    // padding: $wbu-margin;
+    text-align: center;
+    color: $dark-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    height: 20%;
+    overflow: hidden;
+    transition: height 0.5s;
+    pointer-events: none;
+  }
+
+  .ict-title {
+    font-family: "Bebas Neue", Sans-serif;
+    text-transform: uppercase;
+    font-size: $wbu-h5-font-size;
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+}

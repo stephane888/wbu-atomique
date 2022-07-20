@@ -27,9 +27,10 @@
     .content{
         font-size: $wbu-titre-big;
         font-weight: $wbu-title-font-weight;
+        margin-left: $wbu-margin ;
     }
     .swipe-handler{
-        display: inline-block;
+        display: flex;
         justify-content: center;
     }
     .swipers-wrapper{
@@ -57,7 +58,7 @@
     .arrow{
         cursor: pointer;
         position: relative;
-        margin-top: $space_top;
+        margin: $space_top;
         height: 60px;
         width: 60px;
         display: flex;
