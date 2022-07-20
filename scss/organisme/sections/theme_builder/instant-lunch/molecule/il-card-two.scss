@@ -43,5 +43,12 @@ $dark-color: darken($wbu-color-primary, 30);
     position: absolute;
     text-align: center;
     transform: translate(-50%, -50%);
+    a {
+      color: $dark-color;
+      &:hover {
+        color: $dark-color;
+        text-decoration: none;
+      }
+    }
   }
 }
