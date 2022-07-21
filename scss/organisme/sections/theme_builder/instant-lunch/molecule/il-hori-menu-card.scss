@@ -29,9 +29,12 @@ $dark-color: darken($wbu-color-primary, 30);
       left: 0;
       width: 100%;
       color: white;
-      transform: translateY(42px);
+      transform: translateY(50px);
       z-index: 1;
       transition: transform 0.4s;
+      p {
+        margin: 0;
+      }
       .text {
         line-height: 1;
         a {
