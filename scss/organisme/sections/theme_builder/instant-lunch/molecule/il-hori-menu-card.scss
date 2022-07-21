@@ -32,6 +32,7 @@ $dark-color: darken($wbu-color-primary, 30);
       transform: translateY(50px);
       z-index: 1;
       transition: transform 0.4s;
+      pointer-events: none;
       p {
         margin: 0;
       }
@@ -67,7 +68,6 @@ $dark-color: darken($wbu-color-primary, 30);
   }
   .ilc-title,
   .ilc-price {
-    font-family: "Bebas Neue", Sans-serif;
     text-transform: uppercase;
   }
   .ilc-title {
