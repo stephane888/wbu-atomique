@@ -1,0 +1,80 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../variables" as *;
+.packvhsost-blocks {
+  background: rgba($wbu-background, 5%);
+  box-shadow: -3px -2px 8px 0px #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: $wbu-margin * 2;
+  &:hover {
+    box-shadow: -3px -2px 21px 0px #ccc;
+  }
+  .thumbnail-container {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .thumbnail {
+    position: relative;
+    -ms-zoom: 20%;
+    -moz-transform: scale(20%);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(20%);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(20%);
+    -webkit-transform-origin: 0 0;
+
+    iframe {
+      border: 0px solid black;
+      width: 1580px;
+      height: 1655px;
+    }
+  }
+  /**
+   * --
+   */
+  .content-text {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    //padding-right: 2rem;
+    > * {
+      margin-bottom: $wbu-margin * 0.5;
+      > i {
+        font-size: 110%;
+        margin-right: $wbu-margin * 0.75;
+        margin-left: $wbu-margin * 0.25;
+        color: $wbu-color-primary;
+      }
+    }
+    a {
+      color: inherit;
+    }
+    .souscription {
+      color: color-yiq($wbu-background);
+      background-color: rgba($wbu-background, 85%);
+      padding: $wbu-margin * 0.5;
+      .text-souscription {
+        font-weight: 600;
+        font-size: 115%;
+        margin-bottom: $wbu-margin * 0.5;
+      }
+      form {
+        display: flex;
+        width: 100%;
+        .form-item-type-pack {
+          width: calc(100% - 52px);
+        }
+      }
+    }
+  }
+}

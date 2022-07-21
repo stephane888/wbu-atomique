@@ -196,7 +196,7 @@
   }
 
   /**
-   *
+   * --
    */
   Drupal.behaviors.commerceformatage = {
     attach: function (context, settings) {
