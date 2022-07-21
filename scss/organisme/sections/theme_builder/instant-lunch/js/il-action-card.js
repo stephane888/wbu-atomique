@@ -1,4 +1,5 @@
 (function () {
+  console.log("il-action-card chargée");
   function selectAllElement() {
     let table = document.querySelectorAll(".bouton-quantity-card");
     if (table) {
