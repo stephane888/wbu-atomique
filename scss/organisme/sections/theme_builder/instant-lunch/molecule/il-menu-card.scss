@@ -2,7 +2,7 @@
 @use "../atome/il-action-card.scss";
 $dark-color: darken($wbu-color-primary, 30);
 .il-menu-card {
-  padding-bottom: $wbu-margin;
+  padding-bottom: $wbu-margin * 2;
   display: flex;
   p {
     margin: 0;
@@ -27,7 +27,6 @@ $dark-color: darken($wbu-color-primary, 30);
   }
   .ilc-title,
   .ilc-price {
-    font-family: "Bebas Neue", Sans-serif;
     text-transform: uppercase;
   }
   .ilc-title {
