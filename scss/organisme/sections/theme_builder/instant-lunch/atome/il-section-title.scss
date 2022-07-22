@@ -8,14 +8,12 @@
   .ils-title {
     color: black;
     text-transform: uppercase;
-    font-family: "Bebas Neue", Sans-serif;
     margin-bottom: 0;
     line-height: 1;
     @include bp_h1();
   }
   .ils-title-big {
     text-transform: uppercase;
-    font-family: "Bebas Neue", Sans-serif;
     font-size: $wbu-titre-biggest;
     margin-bottom: 2rem;
     @include media-max(MD) {
@@ -35,7 +33,6 @@
 .il-big-title {
   color: black;
   font-weight: 400;
-  font-family: "Bebas Neue", Sans-serif;
   text-transform: uppercase;
   padding-bottom: 1rem;
   @include bp_h1();
