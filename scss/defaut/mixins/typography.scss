@@ -57,6 +57,7 @@
  *  Breack point h4.
  */
 @mixin bp_h4() {
+  font-size: $wbu-default-font-size;
   @include media-min(DD) {
     font-size: $wbu-h4-font-size;
   }
