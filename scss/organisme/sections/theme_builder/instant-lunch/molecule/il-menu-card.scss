@@ -14,7 +14,10 @@ $dark-color: darken($wbu-color-primary, 30);
       max-width: 100%;
       height: 100%;
       object-fit: cover;
-      position: absolute;
+      position: relative;
+      @include media-min(SM) {
+        position: absolute;
+      }
       top: 0;
       left: 0;
     }
