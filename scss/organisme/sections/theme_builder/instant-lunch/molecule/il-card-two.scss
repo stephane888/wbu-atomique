@@ -6,10 +6,12 @@ $dark-color: darken($wbu-color-primary, 30);
   display: flex;
   .img-card {
     position: relative;
+    width: 100%;
     img {
       max-width: 100%;
       height: auto;
       object-fit: cover;
+      width: 100%;
     }
     &:hover {
       .ilm-content {
@@ -34,7 +36,6 @@ $dark-color: darken($wbu-color-primary, 30);
   }
 
   .ict-title {
-    font-family: "Bebas Neue", Sans-serif;
     text-transform: uppercase;
     font-size: $wbu-h5-font-size;
     color: white;
@@ -43,5 +44,15 @@ $dark-color: darken($wbu-color-primary, 30);
     position: absolute;
     text-align: center;
     transform: translate(-50%, -50%);
+    p {
+      margin: 0;
+    }
+    a {
+      color: $dark-color;
+      &:hover {
+        color: $dark-color;
+        text-decoration: none;
+      }
+    }
   }
 }

@@ -16,11 +16,15 @@
   padding-top: $space_top;
   padding-bottom: $space_bottom;
 }
+.space-inner-padding {
+  padding-top: $space_inner_top;
+  padding-bottom: $space_inner_top;
+}
 .space-inner-bottom {
   margin-bottom: $space_inner_top;
 }
 .space-inner-top {
-  margin-bottom: $space_inner_top;
+  margin-top: $space_inner_top;
 }
 .padding-top {
   padding-top: $space_top;
@@ -38,10 +42,12 @@
   color: $wbu-color-primary;
 }
 // definie les container de lecture.
-.with-phone {
+.with-phone, // @depreciate
+.width-phone {
   max-width: $with_phone;
 }
-.with-tablet {
+.with-tablet, // @depreciate
+.width-tablet {
   max-width: $with_tablet;
 }
 // typography

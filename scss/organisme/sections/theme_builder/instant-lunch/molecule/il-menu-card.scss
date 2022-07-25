@@ -2,13 +2,24 @@
 @use "../atome/il-action-card.scss";
 $dark-color: darken($wbu-color-primary, 30);
 .il-menu-card {
-  padding-bottom: $wbu-margin;
+  padding-bottom: $wbu-margin * 2;
   display: flex;
+  p {
+    margin: 0;
+  }
   .ilm-img {
+    position: relative;
+    overflow: hidden;
     img {
       max-width: 100%;
       height: 100%;
       object-fit: cover;
+      position: relative;
+      @include media-min(SM) {
+        position: absolute;
+      }
+      top: 0;
+      left: 0;
     }
   }
   .ilm-content {
@@ -19,11 +30,17 @@ $dark-color: darken($wbu-color-primary, 30);
   }
   .ilc-title,
   .ilc-price {
-    font-family: "Bebas Neue", Sans-serif;
     text-transform: uppercase;
   }
   .ilc-title {
     font-size: $wbu-h3-font-size-sm;
+    a {
+      color: $dark-color;
+      &:hover {
+        color: $dark-color;
+        text-decoration: none;
+      }
+    }
   }
   .ilc-price {
     font-size: $wbu-h3-font-size-sm * 0.85;

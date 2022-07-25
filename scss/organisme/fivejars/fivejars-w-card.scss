@@ -32,9 +32,9 @@
   .layout-region {
     &.icone {
       @include bp_h3();
-      width: $wbu-margin * 2.5;
-      height: $wbu-margin * 2.5;
-      padding: $wbu-margin * 0.5;
+      width: $wbu-margin * 3.5;
+      height: $wbu-margin * 3.5;
+      padding: $wbu-margin;
       line-height: 0;
       margin-bottom: $wbu-margin;
       border-radius: 50%;
