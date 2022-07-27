@@ -59,8 +59,8 @@
   }
   &.right_cover{
     justify-content: end;
-    border: 1px solid red;
     .clothings_hero__desc {
+      padding: $wbu-margin * 2;
       background-color: rgba(255, 255, 255, 0.1);
     }
   }
