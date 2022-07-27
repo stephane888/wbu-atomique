@@ -55,8 +55,10 @@
     }
   }
   &.right {
-    justify-content: end;
-    &__cover::before {
+    justify-content: start;
+  }
+  &.right__cover::before {
+      justify-content: start;
       content: "";
       position: absolute;
       top: 0;
@@ -64,5 +66,4 @@
       background-color: black;
       border: 1px solid red;
     }
-  }
 }
