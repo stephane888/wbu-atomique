@@ -58,11 +58,11 @@
     justify-content: end;
   }
   &.right_cover{
-    &::after {
+    border: 1px solid red;
+    &:after {
       content: "";
       justify-content: end;
       background-color: black;
-      border: 1px solid red;
     }
   }
   
