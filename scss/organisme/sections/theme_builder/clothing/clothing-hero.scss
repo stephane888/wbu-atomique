@@ -58,7 +58,7 @@
     justify-content: start;
   }
   &.right__cover::before {
-      justify-content: start;
+      justify-content: end;
       content: "";
       position: absolute;
       top: 0;
