@@ -1,13 +1,13 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 .product-tag {
-    color: $wbu-color-secondary;;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    font-size: 1.4rem;
-    border: 1px solid  $wbu-color-secondary;
-    text-align: center;
-    border-radius: 4rem;
-    &__content {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: 400;
-    }
+  color: $wbu-color-secondary;
+  padding: $wbu-margin * 0.25 $wbu-margin * 0.5;
+  font-size: $wbu-default-font-size;
+  border: 1px solid $wbu-color-secondary;
+  text-align: center;
+  border-radius: $wbu-margin;
+  &__content {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+  }
 }

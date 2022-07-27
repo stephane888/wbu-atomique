@@ -13,47 +13,58 @@
 @use "./mollecules/product-btn-action.scss";
 @use "./mollecules/product-gift.scss";
 .product-block {
-    padding-left: 3rem;
-    padding-right: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  position: relative;
+  .product-content {
+    // width: auto;
+    // height: auto;
+    // display: flex;
     position: relative;
-    .product-content {
-        width: auto;
-        height: auto;
-        display: flex;
-        position: relative;
-        .image-content {
-            overflow: auto;
-            position: sticky;
-        }
-        .desc-content {
-            overflow: hidden;
-            position: sticky;
-            top: 1rem;
-            align-self: flex-start;
-        }
-        .product-tager {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-        }
-        .product-pricer {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        .product-price__quality {
-            position: relative;
-        }
-        .product-disponibility {
-            position: relative;
-        }
-        .product-zone {
-            position: relative;
-        }
-        .product-card__plus {
-            position: relative;
-        }
+    .image-content {
+      overflow: auto;
+      position: sticky;
     }
+    .desc-content {
+      overflow: hidden;
+      position: sticky;
+      top: 1rem;
+      align-self: flex-start;
+    }
+    .product-tager {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      .product-tags,
+      .product-love-icons {
+        max-width: 50%;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .product-tag {
+        margin-bottom: $wbu-margin * 0.5;
+        margin-right: $wbu-margin * 0.5;
+      }
+    }
+    .product-pricer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .product-price__quality {
+      position: relative;
+    }
+    .product-disponibility {
+      position: relative;
+    }
+    .product-zone {
+      position: relative;
+    }
+    .product-card__plus {
+      position: relative;
+    }
+  }
 }
