@@ -56,8 +56,12 @@
   }
   &.right {
     justify-content: end;
-    &_cover {
-      background-color: black;
+    &_cover::after {
+      justify-content: end;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(black,0.2);
       border: 3px solid red;
     }
   }
