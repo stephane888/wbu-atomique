@@ -56,9 +56,9 @@
   }
   &.right {
     justify-content: end;
+    border: 3px solid red;
     &__cover {
       background-color: black;
-      border: 3px solid red;
     }
   }
   
