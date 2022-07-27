@@ -56,5 +56,13 @@
   }
   &.right {
     justify-content: end;
+    &__cover::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: black;
+      border: 1px solid red;
+    }
   }
 }
