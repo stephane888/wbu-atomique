@@ -56,14 +56,14 @@
   }
   &.right {
     justify-content: end;
-    &_cover::after {
-      justify-content: end;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: rgba(black,0.2);
-      border: 3px solid red;
-    }
+  }
+  &.right_cover{
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(black,0.2);
+    border: 1px solid red;
   }
   
 }
