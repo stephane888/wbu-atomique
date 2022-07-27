@@ -56,14 +56,10 @@
   }
   &.right {
     justify-content: end;
-  }
-  &.right__cover::before {
-      justify-content: end;
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
+    &__cover {
       background-color: black;
-      border: 1px solid red;
+      border: 3px solid red;
     }
+  }
+  
 }
