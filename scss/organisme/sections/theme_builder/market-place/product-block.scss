@@ -1,4 +1,5 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
 @use "./mollecules/product-ban.scss";
 @use "./atomes/product-tag.scss";
 @use "./atomes/product-love-icon.scss";
@@ -53,6 +54,32 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      flex-wrap: wrap;
+      margin-left: -$wbu-margin * 0.5;
+      margin-right: -$wbu-margin * 0.5;
+      margin-top: $wbu-margin;
+      .form-check {
+        padding: 0;
+        margin: 0 $wbu-margin/2 $wbu-margin $wbu-margin/2;
+      }
+      input {
+        border: 0;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute !important;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        opacity: 0;
+      }
+      input:checked ~ label .product-pricer__item {
+        border-color: $wbu-color-primary;
+      }
+      .ajax-progress {
+        position: absolute;
+        bottom: -$wbu-margin;
+        font-size: $wbu-default-font-size * 0.8;
+      }
     }
     .product-price__quality {
       position: relative;
@@ -66,5 +93,6 @@
     .product-card__plus {
       position: relative;
     }
+    //
   }
 }

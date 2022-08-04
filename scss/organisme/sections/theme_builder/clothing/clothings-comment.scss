@@ -1,0 +1,36 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+.clothing-review {
+  padding: $wbu-margin * 1.25 0 $wbu-margin;
+  margin: 0 10px;
+  border-top: 1px solid rgba($wbu-background, 0.15);
+  .review-header {
+    margin-bottom: $wbu-margin * 0.6;
+    display: flex;
+    align-items: center;
+    .user_name {
+      font-weight: 600;
+    }
+    .user_status {
+      font-weight: 400;
+      font-style: italic;
+      padding-left: $wbu-margin * 0.5;
+      font-size: $wbu-default-font-size-sm;
+    }
+  }
+  .user {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($wbu-background, 0.45);
+    border-radius: 50%;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: $wbu-h4-font-size;
+    line-height: 0;
+    margin-right: $wbu-margin * 0.5;
+  }
+}
