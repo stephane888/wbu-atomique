@@ -1,0 +1,33 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+$p-color: darken($wbu-border-color, 10);
+.achievments-counter {
+  padding: 3rem 2rem;
+  margin-top: 2.5rem;
+  background-color: $wbu-background;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  @include media-max(XS) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: $p-color;
+    margin-right: 1.2rem;
+    margin-top: 2px;
+    margin-bottom: 8px;
+  }
+  .number {
+    font-size: $wbu-h3-font-size;
+    font-weight: bold;
+    color: white;
+  }
+  .desc {
+    font-size: $wbu-default-font-size;
+    color: $p-color;
+  }
+}

@@ -1,0 +1,108 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../atome/mitor-btn.scss";
+@use "./achievments-counter.scss";
+.mitor-card {
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  .mc-title {
+    color: #222;
+    margin: 0 auto 20px;
+    font-weight: 600;
+    width: 100%;
+    word-break: break-word;
+    line-height: 1.4;
+    @include bp_h3();
+  }
+  .mc-description {
+    font-size: $wbu-default-font-size;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    word-break: break-word;
+    color: darken($wbu-border-color, 50);
+    ul {
+      list-style: none;
+      margin-top: 2rem;
+      @include media-max(XS) {
+        padding: 5px;
+      }
+      li {
+        position: relative;
+        display: flex;
+        align-items: start;
+        margin-bottom: 1rem;
+      }
+      li::before {
+        content: "";
+        @include wbu__svg-dd-puce-check(#000, 45);
+        position: relative;
+        width: 6rem;
+        height: 2rem;
+        display: inline-block;
+        margin-right: 1.5rem;
+        margin-top: 5px;
+      }
+    }
+  }
+  &__body {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__img {
+    position: relative;
+    z-index: 2;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  .img-bloc {
+    padding: 20px 0;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-max(XS) {
+      padding: 10px 0;
+      margin: 10px 0;
+    }
+  }
+  &--left {
+    .mitor-card__img {
+      &::after {
+        content: "";
+        position: absolute;
+        left: -25px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        z-index: -1;
+        background-color: #000000;
+      }
+    }
+  }
+  &--right {
+    .mitor-card__img {
+      order: 2;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -25px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        z-index: -1;
+        background-color: #000000;
+      }
+    }
+  }
+
+  .mitor-btn {
+    margin-top: 2.5em;
+  }
+}
