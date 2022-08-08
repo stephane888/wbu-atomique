@@ -1,0 +1,120 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+@use "../hotlock/molecule/single-service-card.scss";
+
+
+.section1-handler{
+    margin-top: $space_top;
+    .cabinet-desc{
+        .desc-title{
+            font-size: $wbu-h5-font-size;
+            font-weight: $wbu-title-font-weight;
+            color: $wbu-color-text;
+            opacity: 0.8;
+            :is(.link1, .link2){
+                color: $wbu-color-teal;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        :is(.presentation1, .presentation2){
+            margin-top: $space_inner_top;
+            font-size: $wbu-h5-font-size;
+            color: $wbu-color-text;
+            opacity: 0.7;
+        }
+        .presentation3{
+            font-size: $wbu-h5-font-size;
+            font-weight: $wbu-title-font-weight;
+            color: $wbu-color-text;
+            opacity: 0.8;
+            margin-bottom: $space_bottom;
+            .link3{
+                color: $wbu-color-teal;
+                text-decoration: none;
+            }
+        }
+       :is(.description, .description1){
+            margin-top: $space_inner_top;
+            font-size: $wbu-h5-font-size;
+            color: $wbu-color-text;
+            opacity: 0.7;
+        }
+    }
+    .competences{
+        .service-description {
+            max-width: 50rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 4rem 2rem;
+            @include media-max(SM) {
+              max-width: 80rem;
+            }
+          }
+          .card{
+            background: $wbu-border-color;
+
+                .lutin_image{
+                width: 100%;
+                }
+          }
+          .back{
+            background: $wbu-background;
+            
+            .back-content{
+                background: $wbu-background;
+                .lutin-name{
+                    color: $wbu-border-color;
+                    font-size: $wbu-h4-font-size;
+                    font-weight: lighter;
+                  }
+                  .location {
+                    margin-top: $wbu-margin * 0.5;
+                    color: $wbu-border-color;
+                    font-size: $wbu-default-font-size;
+                  }
+                  .town{
+                    color: $wbu-border-color;
+                  }
+                  .contact{
+                    color: $wbu-border-color;
+                  }
+                  .contactme{
+                    color: $wbu-border-color;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                  }
+                .card-logo{
+                    width: 20%;
+                }
+            }
+          }
+          .services-elements {
+            position: relative;
+            .card-handler {
+              width: 70vw;
+            }
+          }
+        
+        .competences-element{
+            margin-top: $space_inner_top * 0.5;
+            background: $wbu-background;
+            padding: $wbu-margin;
+            display: flex;
+            height: fit-content;
+            justify-content: space-evenly;
+            align-items: center;
+            color: $wbu-border-color;
+            &:hover{
+                text-decoration: none;
+            }
+            .comp-desc{
+                text-transform: uppercase;
+                text-align: center;
+                font-size: $wbu-h5-font-size;
+            }
+        }
+    }
+}
