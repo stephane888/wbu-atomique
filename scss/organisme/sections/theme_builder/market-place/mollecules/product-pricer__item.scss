@@ -1,126 +1,125 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 .product-pricer__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: space-between;
+  position: relative;
+  padding: 0 $wbu-margin * 0.5;
+  cursor: pointer;
+  border: 0.2rem solid rgba($wbu-background, 0.33);
+  border-radius: 0.5rem;
+  &__active {
+    border-color: $wbu-background;
+  }
+  &:hover {
+    border: 0.2rem solid $wbu-background;
+    text-decoration: none;
+    outline: 0;
+  }
+  &_price {
+    text-align: center;
+    font-size: $wbu-h3-font-size;
+    margin: 2rem 0 0 0;
+    &_text {
+      font-weight: 700;
+      color: inherit;
+    }
+  }
+  &_content {
+    font-size: $wbu-default-font-size-sm; //$wbu-default-font-size;
+    font-weight: 500;
+    padding: 0 1rem 0 1rem;
+    margin: 1rem 0 0 0;
+    color: $wbu-background;
+  }
+  &_red {
+    margin: 1rem 0 0 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    //justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
-    padding: 0 2rem 0 2rem;
-    margin-left: 2rem;
     cursor: pointer;
-    border: 0.1rem solid $wbu-background;
-    border-radius: 0.5rem;
-    &__active {
-        border: 0.2rem solid $wbu-background;
+    &_text {
+      &::before {
+        content: "";
+        font-size: 1rem; // $wbu-defaul-font-size
+        background: $wbu-color-secondary;
+        border: 1px solid $wbu-color-secondary;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        margin-right: 0rem;
+        vertical-align: middle;
+        display: inline-flex;
+      }
     }
-    &:hover {
-        border: 0.2rem solid $wbu-background;
-        text-decoration: none;
-        outline: 0;
-    }
-    &_price {
-        text-align: center;
-        font-size: $wbu-h3-font-size;
-        margin: 2rem 0 0 0;
-        &_text {
-            font-weight: 700;
-            color: $wbu-color-secondary;
-            padding: 0 1rem 0 1rem;
-        }
-    }
-    &_content {
-        font-size: $wbu-default-font-size-sm; //$wbu-default-font-size;
-        font-weight: 500;
-        padding: 0 1rem 0 1rem;
-        margin: 1rem 0 0 0;
-        color: $wbu-background;
-    }
-    &_red {
-        margin: 1rem 0 0 0;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        cursor: pointer;
-        &_text {          
-            &::before {
-                content: "";
-                font-size: 1rem; // $wbu-defaul-font-size
-                background: $wbu-color-secondary;
-                border: 1px solid $wbu-color-secondary;
-                height: 1rem;
-                width: 1rem;
-                border-radius: 50%;
-                margin-right: 0rem;
-                vertical-align: middle;
-                display: inline-flex;
-            }
-        }
-        &_bubble {
-            //border : 1px solid black;
-            box-shadow: 0 2px 5px 0 $wbu-background;
-            opacity: 0;
-            background: #fff;
-            padding: 1rem;
-            visibility: hidden;
-            text-align: center;
-            display: inline-block;
-            width: auto;
-            top: calc(60% + 1rem);
-            font-size: $wbu-default-font-size-sm;
-            position: absolute;
-            border-radius: 3px;
-            transition: all .2s ease;
-            white-space: nowrap;
-            right: auto;
-            z-index: 10;
-            &::before {
-                content: "";
-                width: 0; 
-                height: 0; 
-                border-left: 5px solid transparent;
-                border-right: 5px solid transparent;
-                border-bottom: 5px solid black;
-                //height: 10px;
-                //width: 10px;
-                left: 50%;
-                top: -7px;
-                display: block;
-                position: absolute;
-                z-index: 0;
-            }
-        }
-        &:hover &_text {
-            text-decoration: underline;
-        }
-        &:hover &_bubble {
-            visibility: visible;
-            font-weight: 500;
-            opacity: 10;
-        }
-    }
-    &_size {
-        margin: 1rem 0 1rem 0;
-        border : 0.1rem solid black;
-        padding: 1rem;
-        border-radius: 2rem;
-    }
-    &_image {
-        margin: 1rem 0 0 1rem;
+    &_bubble {
+      //border : 1px solid black;
+      box-shadow: 0 2px 5px 0 $wbu-background;
+      opacity: 0;
+      background: #fff;
+      padding: 1rem;
+      visibility: hidden;
+      text-align: center;
+      display: inline-block;
+      width: auto;
+      top: calc(60% + 1rem);
+      font-size: $wbu-default-font-size-sm;
+      position: absolute;
+      border-radius: 3px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      right: auto;
+      z-index: 10;
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid black;
+        //height: 10px;
+        //width: 10px;
+        left: 50%;
+        top: -7px;
+        display: block;
         position: absolute;
-        left: 0;
-        right: 0;
-        top: -20%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-            max-width: 4.2rem;
-            background-color: #fff;
-            border-right: 5px solid #fff;
-            border-left: 5px solid #fff;
-        }
+        z-index: 0;
+      }
     }
+    &:hover &_text {
+      text-decoration: underline;
+    }
+    &:hover &_bubble {
+      visibility: visible;
+      font-weight: 500;
+      opacity: 10;
+    }
+  }
+  &_size {
+    margin: 1rem 0 1rem 0;
+    border: 0.1rem solid black;
+    padding: 1rem;
+    border-radius: 2rem;
+  }
+  &_image {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    .text {
+      max-width: 4.2rem;
+      background-color: #fff;
+      border-right: 5px solid #fff;
+      border-left: 5px solid #fff;
+    }
+  }
 }
