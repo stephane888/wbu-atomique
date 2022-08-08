@@ -1,4 +1,5 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
 @use "./mollecules/product-ban.scss";
 @use "./atomes/product-tag.scss";
 @use "./atomes/product-love-icon.scss";
@@ -13,47 +14,85 @@
 @use "./mollecules/product-btn-action.scss";
 @use "./mollecules/product-gift.scss";
 .product-block {
-    padding-left: 3rem;
-    padding-right: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  position: relative;
+  .product-content {
+    // width: auto;
+    // height: auto;
+    // display: flex;
     position: relative;
-    .product-content {
-        width: auto;
-        height: auto;
-        display: flex;
-        position: relative;
-        .image-content {
-            overflow: auto;
-            position: sticky;
-        }
-        .desc-content {
-            overflow: hidden;
-            position: sticky;
-            top: 1rem;
-            align-self: flex-start;
-        }
-        .product-tager {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-        }
-        .product-pricer {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        .product-price__quality {
-            position: relative;
-        }
-        .product-disponibility {
-            position: relative;
-        }
-        .product-zone {
-            position: relative;
-        }
-        .product-card__plus {
-            position: relative;
-        }
+    .image-content {
+      overflow: auto;
+      position: sticky;
     }
+    .desc-content {
+      overflow: hidden;
+      position: sticky;
+      top: 1rem;
+      align-self: flex-start;
+    }
+    .product-tager {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      .product-tags,
+      .product-love-icons {
+        max-width: 50%;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .product-tag {
+        margin-bottom: $wbu-margin * 0.5;
+        margin-right: $wbu-margin * 0.5;
+      }
+    }
+    .product-pricer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: -$wbu-margin * 0.5;
+      margin-right: -$wbu-margin * 0.5;
+      margin-top: $wbu-margin;
+      .form-check {
+        padding: 0;
+        margin: 0 $wbu-margin/2 $wbu-margin $wbu-margin/2;
+      }
+      input {
+        border: 0;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute !important;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        opacity: 0;
+      }
+      input:checked ~ label .product-pricer__item {
+        border-color: $wbu-color-primary;
+      }
+      .ajax-progress {
+        position: absolute;
+        bottom: -$wbu-margin;
+        font-size: $wbu-default-font-size * 0.8;
+      }
+    }
+    .product-price__quality {
+      position: relative;
+    }
+    .product-disponibility {
+      position: relative;
+    }
+    .product-zone {
+      position: relative;
+    }
+    .product-card__plus {
+      position: relative;
+    }
+    //
+  }
 }

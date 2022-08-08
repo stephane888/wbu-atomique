@@ -1,0 +1,27 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.carrousel-nav {
+  margin: 2rem auto 2rem;
+  display: flex;
+  align-items: center;
+  .csl-nav {
+    margin: 0 5px;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    width: 15px ;
+    height: 15px;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: 0.3s;
+    color: transparent;
+    &--active {
+        width: 35px;
+            height: 7px;
+            border-radius: 10px;
+            opacity: 1;
+    }
+  }
+}

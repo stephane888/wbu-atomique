@@ -57,4 +57,18 @@
   &.right {
     justify-content: end;
   }
+  &.left_cover {
+    .clothings_hero__desc {
+      padding: $wbu-margin * 2;
+      background: rgba(0, 0, 0, 0.63);
+    }
+  }
+  &.right_cover{
+    justify-content: end;
+    .clothings_hero__desc {
+      padding: $wbu-margin * 2;
+      background: rgba(0, 0, 0, 0.63);
+    }
+  }
+  
 }

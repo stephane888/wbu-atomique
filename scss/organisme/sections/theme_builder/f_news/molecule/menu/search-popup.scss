@@ -111,6 +111,26 @@
       display: block;
     }
   }
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ul li {
+    position: relative;
+  }
+  .wbu-close {
+    &::before {
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      transition: ease 0.3s;
+      content: "";
+      transform: translate(-50%, -50%);
+      @include wbu-close(black, 28);
+    }
+  }
 }
 
 .wbu-search {
@@ -126,25 +146,5 @@
     transform: translate(-50%, -50%);
     content: "";
     @include wbu-search(black, 18);
-  }
-}
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-ul li {
-  position: relative;
-}
-.wbu-close {
-  &::before {
-    width: 2rem;
-    height: 2rem;
-    position: absolute;
-    transition: ease 0.3s;
-    content: "";
-    transform: translate(-50%, -50%);
-    @include wbu-close(black, 28);
   }
 }

@@ -1,0 +1,25 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../variables" as *;
+.comment-nutribe {
+  padding: $wbu-margin;
+  background-color: rgba($wbu-background, 0.05);
+  border: 1px solid rgba($wbu-background, 0.2);
+  &__comments {
+    margin-bottom: $wbu-margin;
+  }
+  .js-filter-wrapper {
+    display: none;
+  }
+  .form-actions {
+    display: flex;
+    justify-content: end;
+    input {
+      display: inline-block;
+      width: auto;
+      & + input {
+        background: transparent;
+        color: #000;
+      }
+    }
+  }
+}

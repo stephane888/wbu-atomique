@@ -1,0 +1,39 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./molecule/mitor-card-img.scss";
+
+.mitor-bloc-img {
+  padding: $space-bottom 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: initial;
+  &--achievement {
+    position: relative;
+    z-index: 2;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: black;
+      opacity: 0.8;
+    }
+    .mitor-card {
+      position: relative;
+      z-index: 2;
+
+      .mc-title {
+        color: white;
+      }
+      .mc-description {
+        color: $wbu-color-boder;
+        li::before {
+          @include wbu__svg-dd-puce-check(#fff, 30);
+        }
+      }
+    }
+  }
+}

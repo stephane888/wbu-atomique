@@ -1,0 +1,58 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../variables" as *;
+.voting-text {
+  font-size: $wbu-default-font-size;
+  padding: 0 $wbu-margin * 0.5;
+  cursor: pointer;
+}
+.form-votings-renders {
+  .svg-icones {
+    .fieldset-wrapper {
+      display: inline-flex;
+      .radio {
+        display: flex;
+        flex-flow: row-reverse;
+        .form-check {
+          padding: 0;
+        }
+        input {
+          border: 0;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          position: absolute !important;
+          clip: rect(1px 1px 1px 1px);
+          clip: rect(1px, 1px, 1px, 1px);
+          opacity: 0;
+        }
+
+        label {
+          position: relative;
+          float: right;
+          color: #c8c8c8;
+          cursor: pointer;
+        }
+        label:before {
+          margin: 5px 0px 0 2px;
+          content: "\f005";
+          font-family: FontAwesome;
+          display: inline-block;
+          font-size: 1em;
+          color: #ccc;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        input:checked ~ label:before {
+          color: $wbu-color-primary;
+        }
+        label:hover ~ label:before {
+          color: $wbu-color-primary;
+        }
+        label:hover:before {
+          color: $wbu-color-primary;
+        }
+      }
+    }
+  }
+}
