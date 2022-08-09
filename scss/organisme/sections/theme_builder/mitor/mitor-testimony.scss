@@ -1,0 +1,89 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+.mitor-testimony-section-handler{
+    overflow: hidden;
+    .single-testimonial{
+        position: relative;
+        float: left;
+        min-height: 1px;
+        height: 78%;
+        @include media-max(MD){
+            width: 100%;
+            height: fit-content;
+            .testimony-handler{
+                left: 0;
+                margin-left: $wbu-margin;
+                margin-right: $wbu-margin;
+                position: absolute;
+                width: 90%;
+            }
+        }
+        .img-handler{
+            margin: $wbu-margin * 0.6 0;
+        }
+    }
+    &.owl-carousel{
+        overflow: hidden;
+        padding: 0 10px;
+        margin: 0 -40px;
+        padding-right: 40px;
+    }
+    .owl-carousel .owl-stage-outer{
+        padding: 20px 40px;
+        width: calc(100% + 90px);
+    }
+    .testimony-handler{
+        padding: $wbu-margin * 0.8;
+        position: absolute;
+        bottom: 50px;
+        left: 80px;
+        width: 100%;
+        margin-right: 50px;
+        background: $wbu-color-boder;
+        opacity: 0.8;
+        .nom{
+            font-size: $wbu-h5-font-size;
+            color: $wbu-background;
+            font-weight: 600;
+        }
+        .role{
+            color: $wbu-background;
+        }
+        .text-content{
+            margin-top: $wbu-margin;
+        }
+        .stars{
+            margin-top: $wbu-margin * 0.5;
+            margin-bottom: $wbu-margin * 0.5;
+            color: $wbu-color-secondary;
+            opacity: 1;
+            fill: $wbu-color-secondary;
+        }
+
+        .svg{
+            position: absolute;
+            right: 20px;
+            top: -20px;
+            font-size: $wbu-h2-font-size-sm;
+            color: $wbu-color-secondary;
+            opacity: 0.7;
+        }
+    }
+    .owl-dots button{
+        background: rgb(43, 31, 31) !important;
+        width: 15px;
+        height: 15px;
+        position: relative;
+        border-radius: 26px;
+        margin: 0 5px;
+        transition: 0.3s;
+    }
+    .owl-dots{
+        text-align: center;
+        margin-top: $wbu-margin;
+    }
+    .owl-dots button.active{
+        width: 30px;
+    }
+}
