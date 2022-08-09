@@ -1,0 +1,83 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+
+.services-section-handler{
+        margin-top: $wbu-margin * 4;
+    .service-header{
+        max-width: 700px;
+        margin: 0 auto;
+        word-break: break-all;
+        text-align: center;
+        margin-bottom: $wbu-margin;
+        .title-question{
+            font-weight: $wbu-default-font-size;
+            font-size: $wbu-h2-font-size;
+            text-align: center;
+            color: $wbu-background;
+        }
+        .small-desc{
+            margin-top: $wbu-margin ;
+            text-align: center;
+        }
+    }
+    .services-list{
+        margin-top: $wbu-margin * 3;
+        .icon{
+            box-sizing: border-box;
+            position: relative;
+            .bg-icon::before{
+                //content: '';
+                position: absolute;
+                top: -30px;
+                left: 5px;
+                z-index: -1;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+            }
+            .bg-icon1::before{
+                content: '';
+                background: $wbu-color-teal;
+                opacity: 0.1;
+            }
+            
+            .bg-icon2::before{
+                content: '';
+                background: $wbu-color-secondary;
+                opacity: 0.1;
+            }
+            .bg-icon3::before{
+                content: '';
+                background: $wbu-color-thirdly;
+                opacity: 0.1;
+            }
+            .icon-flat::before{
+                content: '';
+            }
+        }
+        .service-body{
+            margin-top: $wbu-margin ;
+            .service-title{
+                font-weight: 600;
+                color: $wbu-background;
+            }
+            .single-service-description{
+                margin-top: $wbu-margin;
+            }
+            .more-link{
+                margin-top: $wbu-margin * 2;
+                .link{
+                    color: $wbu-background;
+                    transition:  1s;
+                    font-weight: 600 !important;
+                    &:hover{
+                        left: 2;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    
+}
