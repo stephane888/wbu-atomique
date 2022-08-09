@@ -1,0 +1,69 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+
+.contact-us-section-handler{
+    margin-top: $space_top * 2;
+    .left-contact-block{
+        .title{
+            font-weight: $wbu-default-font-size;
+            font-size: $wbu-h2-font-size;
+            color: $wbu-background;
+        }
+        .short-description{
+            margin-top: $wbu-margin;
+            margin-bottom: $wbu-margin;
+        }
+        .list-handler{
+            list-style-type: none;
+            .list-element{
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: $wbu-margin ;
+                .content{
+                    margin-left: $wbu-margin * 0.5;
+                }
+            }
+        }
+        .contact-btn{
+            margin-top: $space_bottom;
+            .link-us{
+                color: $wbu-color-boder;
+                background: $wbu-background;
+                padding: $wbu-btn-padding-x-sm * 1.5 $wbu-btn-padding-y-sm;
+                border-radius: 50px;
+                box-shadow: 0 0 12px $wbu-color-text;
+            }
+        }
+    }
+    .right-contact-block{
+        &::after{
+            content: '';
+            position: absolute;
+            right: -25;
+            width: 250px;
+            height: 100%;
+            z-index: -1;
+            background: $wbu-background;
+        }
+        @include media-max(MS){
+
+            margin-top: $wbu-margin * 2;
+            &::after{
+                left: 0;
+            }
+        }
+        .contact-lutin{
+            max-width: 100%;
+            width: auto;
+            padding: $wbu-margin;
+            height: auto;
+            object-fit: cover;
+            vertical-align: middle;
+            @include media-max(MS){
+                width: 100%;
+            }
+        }
+        
+    }
+}
