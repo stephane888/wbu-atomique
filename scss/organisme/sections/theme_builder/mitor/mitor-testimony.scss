@@ -3,6 +3,27 @@
 
 .mitor-testimony-section-handler{
     overflow: hidden;
+    .testimony-header{
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: calc($wbu-margin + 18px);
+        word-break: break-all;
+        .testimony-title{
+            text-transform: capitalize;
+            color: $wbu-background;
+            font-weight: 600;
+            margin: 0 auto $wbu-margin ;
+            width: 100%;
+            line-height: 1.4;
+        }
+        .small-desc{
+            line-height: $wbu-margin;
+            font-weight: normal;
+            word-break: break-all;
+        }
+    }
+    
     .single-testimonial{
         position: relative;
         float: left;
