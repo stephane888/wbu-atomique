@@ -6,7 +6,7 @@
   padding: $space-bottom 0;
   background-repeat: no-repeat;
   background-size: cover;
-  :not(&--achievement) {
+  &:not(&--achievement) {
     background-image: initial !important;
   }
   &--achievement {

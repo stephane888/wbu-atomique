@@ -1,0 +1,71 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.single-testimonial {
+  position: relative;
+  width: 100%;
+  margin-bottom: $wbu-margin * 1.5;
+  @include media-max(MD) {
+    .testimony-handler {
+      left: 0;
+      margin-left: $wbu-margin;
+      margin-right: $wbu-margin;
+      position: absolute;
+      width: 90%;
+    }
+  }
+  .img-handler {
+    position: relative;
+    img {
+      max-height: 60rem;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  .testimony-handler {
+    padding: $wbu-margin * 0.8;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    width: 90%;
+    //margin-right: 50px;
+    background: rgba(white, 0.9);
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    //opacity: 0.8;
+    .nom {
+      font-size: $wbu-h5-font-size;
+      color: $wbu-background;
+      font-weight: 600;
+    }
+    .role {
+      color: $wbu-background;
+    }
+    .text-content {
+      margin-top: $wbu-margin;
+    }
+    .stars {
+      margin-top: $wbu-margin;
+      margin-bottom: $wbu-margin;
+      color: #ffce31;
+      opacity: 1;
+      fill: #ffce31;
+      svg {
+        fill: #ffce31;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .svg {
+      position: absolute;
+      right: 20px;
+      top: -20px;
+      font-size: $wbu-h2-font-size-sm;
+      color: rgba($wbu-color-primary, 0.3);
+      opacity: 0.7;
+      svg {
+        width: 4.5rem;
+        height: 4.5rem;
+        fill: rgba($wbu-color-primary, 0.3);
+      }
+    }
+  }
+}
