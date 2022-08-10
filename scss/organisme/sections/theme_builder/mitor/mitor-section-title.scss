@@ -3,6 +3,7 @@
 
 .mitor-section-title {
   padding: $space-bottom 0;
+  position: relative;
   .section-header {
     max-width: 800px;
     margin: 0 auto;
@@ -20,7 +21,49 @@
     .section-desc {
       text-align: center;
       margin: 0 auto;
-      font-weight: $wbu-default-font-size;
+      font-size: $wbu-default-font-size;
+      line-height: 30px;
+    }
+  }
+  &--bg {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 75%;
+      height: 100%;
+      left: 10%;
+      right: 10%;
+      margin: 0 auto;
+      z-index: -1;
+      background-image: url("./img/map2.png");
+      background-size: cover;
+      background-position: center;
+      padding: 0 30px;
+      opacity: 0.8;
+      // background-color: red;
+    }
+    .section-header {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column-reverse;
+      .section-title {
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+      .section-desc {
+        font-weight: bold;
+      }
+    }
+  }
+  &--bottom-black {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 310px;
+      width: 100%;
+      background-color: $wbu-background;
     }
   }
 }

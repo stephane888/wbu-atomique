@@ -1,128 +1,12 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../atome/mitor-btn.scss";
 @use "./achievments-counter.scss";
+@use "../atome/mitor-card__img.scss";
+@use "../atome/mitor-card__body.scss";
 .mitor-card {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  .mc-title {
-    color: #222;
-    margin: 0 auto 20px;
-    font-weight: 600;
-    width: 100%;
-    word-break: break-word;
-    line-height: 1.4;
-    @include bp_h3();
-  }
-  .mc-description {
-    font-size: $wbu-default-font-size;
-    line-height: 30px;
-    margin-bottom: 15px;
-    font-weight: normal;
-    word-break: break-word;
-    color: darken($wbu-border-color, 50);
-    ul {
-      list-style: none;
-      margin-top: 2rem;
-      @include media-max(XS) {
-        padding: 5px;
-      }
-      li {
-        position: relative;
-        display: flex;
-        align-items: start;
-        margin-bottom: 1rem;
-      }
-      li::before {
-        content: "";
-        @include wbu__svg-dd-puce-check(#000, 45);
-        position: relative;
-        width: 6rem;
-        height: 2rem;
-        display: inline-block;
-        margin-right: 1.5rem;
-        margin-top: 5px;
-      }
-    }
-  }
-  &__body {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  &__img {
-    position: relative;
-    z-index: 2;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    img {
-      max-width: 100%;
-      width: auto;
-      height: auto;
-      object-fit: cover;
-    }
-  }
-  .img-bloc {
-    padding: 20px 0;
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include media-max(XS) {
-      padding: 10px 0;
-      margin: 10px 0;
-    }
-  }
-  .mitor-play-btn {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    pointer-events: none;
-    .mtb-play {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      left: 50%;
-      top: 50%;
-      cursor: pointer;
-      transform: translate(-50%, -50%);
-      width: 9rem;
-      height: 9rem;
-      border-radius: 50%;
-      background-color: #fff;
-      transition: height 0.25s ease, width 0.25s ease;
-      box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
-      &:hover {
-        &::after,
-        &::before {
-          animation: none;
-        }
-      }
-      &::after,
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-      }
-
-      &::after {
-        animation: ripple 2s linear 1s infinite;
-      }
-      &::before {
-        animation: ripple 2s linear infinite;
-      }
-    }
-    svg {
-      width: 2rem;
-      height: 2rem;
-    }
-  }
   &--left {
     .mitor-card__img {
       &::after {
@@ -133,13 +17,13 @@
         width: 250px;
         height: 100%;
         z-index: -1;
-        background-color: #000000;
+        background-color: $wbu-background;
       }
     }
   }
   &--right {
     .mitor-card__img {
-      order: 2;
+      //order: 2;
       &::after {
         content: "";
         position: absolute;
@@ -148,27 +32,43 @@
         width: 250px;
         height: 100%;
         z-index: -1;
-        background-color: #000000;
+        background-color: $wbu-background;
       }
     }
   }
-
-  .mitor-btn {
-    margin-top: 2.5em;
+  &--reverse {
+    .mitor-card__img {
+      order: 2;
+    }
   }
-}
-@keyframes ripple {
-  0% {
-    transform: scale(1);
-  }
-
-  75% {
-    transform: scale(1.75);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(2);
-    opacity: 0;
+  &--triangle {
+    .mitor-card__img {
+      &::after {
+        content: "";
+        position: absolute;
+        left: -25px;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        border-bottom: 300px solid $wbu-background;
+        border-right: 300px solid transparent;
+      }
+    }
+    &-right {
+      .mitor-card__img {
+        &::after {
+          content: "";
+          position: absolute;
+          right: -25px;
+          bottom: 0;
+          width: 0;
+          height: 0;
+          z-index: -1;
+          border-bottom: 300px solid $wbu-background;
+          border-left: 300px solid transparent;
+        }
+      }
+    }
   }
 }

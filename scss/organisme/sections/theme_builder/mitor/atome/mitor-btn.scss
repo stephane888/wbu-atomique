@@ -14,11 +14,15 @@
   padding: 1.3rem 3rem;
   display: inline-block;
   border-radius: 50px;
-  transition: 0.3s;
+  transition: background-color ease-in-out 0.4s, border-color 0.3s,
+    transform ease-in-out 0.3s;
   text-transform: capitalize;
   &:hover {
     color: white;
     text-decoration: none;
+    background-color: lighten($wbu-background, 20);
+    border-color: lighten($wbu-background, 20);
+    transform: scale(1.05);
   }
 }
 p {

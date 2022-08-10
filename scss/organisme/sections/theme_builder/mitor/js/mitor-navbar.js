@@ -136,7 +136,7 @@ function initSearch() {
   }
 }
 
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
   initNavbar();
   initSearch();
 });
