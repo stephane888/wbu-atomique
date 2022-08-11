@@ -1,6 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
-
+@use "./atome/mitor-btn.scss";
 .mitor-section-title {
   padding: $space-bottom 0;
   position: relative;

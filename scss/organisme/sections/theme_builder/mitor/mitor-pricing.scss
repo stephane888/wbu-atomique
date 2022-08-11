@@ -1,89 +1,32 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 @use "./molecule/mitor-pricing-card.scss";
-.mitor-pricing-section-handler{
-    .pricing-header{
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-        word-break: break-all;
-        padding-bottom: calc($wbu-margin + 18px);
-        .pricing-title{
-            text-transform: capitalize;
-            color: $wbu-background;
-            font-weight: 600;
-            margin: 0 auto $wbu-margin ;
-            width: 100%;
-            line-height: 1.4;
-        }
-        .small-desc{
-            line-height: $wbu-margin;
-            font-weight: normal;
-            word-break: break-all;
-        }
+@use "./atome/bundle-selection.scss";
+.mitor-pricing-section-handler {
+  .pricing-header {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    word-break: break-all;
+    padding-bottom: calc($wbu-margin + 18px);
+    .pricing-title {
+      text-transform: capitalize;
+      color: $wbu-background;
+      font-weight: 600;
+      margin: 0 auto $wbu-margin;
+      width: 100%;
+      line-height: 1.4;
     }
-    .bundle-selection{
-        display: flex;
-        justify-content: center;
-        margin: $wbu-margin;
-        .plan-handler{
-            display: flex;
-            justify-content: space-between;
-            list-style-type: none;
-            padding: $wbu-margin * 0.5;
-            .plan{
-                
-                transition: all 200ms linear;
-                
-                :is(.plan1, .plan2){
-                    color: $wbu-color-boder;
-                    text-transform: capitalize;
-                    position: relative;
-                    border-radius: 50px;
-                    transition: all 200ms linear;
-                    text-align: center;
-                    background: $wbu-background;
-                    padding: $wbu-btn-padding-y-sm * 0.3 $wbu-btn-padding-x-sm *3 ;
-                    &:hover{
-                        text-decoration: none;
-                    }
-                }
-                .target{
-                    color: $wbu-color-boder;
-                    background: $wbu-background;
-                    z-index: 2;
-                }
-                .untarget{
-                    text-align: center;
-                    color: $wbu-background;
-                    background: transparent;
-                    padding: $wbu-btn-padding-y-sm *0.6 $wbu-btn-padding-x-sm  ;
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        padding: $wbu-margin;
-                        width: 150px;
-                        height: 100%;
-                        border: 1px $wbu-border-color solid;
-                        left: -40;
-                        z-index: 1;
-                        text-align: center;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border-radius: 50px;
-                    }
-                }
-            }
+    .small-desc {
+      line-height: $wbu-margin;
+      font-weight: normal;
+      word-break: break-all;
+    }
+  }
+}
 
-            
-        }
-    }
-    .pricing-card-handler{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    
+.pricing-card-handler {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

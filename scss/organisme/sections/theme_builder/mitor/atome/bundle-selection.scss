@@ -1,0 +1,56 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.bundle-selection {
+  display: flex;
+  justify-content: center;
+  margin: $wbu-margin;
+  .plan-handler {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: $wbu-margin * 0.5;
+    .plan {
+      transition: all 200ms linear;
+      :is(.plan1, .plan2) {
+        color: white;
+        text-transform: capitalize;
+        position: relative;
+        border-radius: 50px;
+        transition: all 200ms linear;
+        text-align: center;
+        background: $wbu-background;
+        padding: $wbu-btn-padding-y-sm * 0.3 $wbu-btn-padding-x-sm * 3;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .target {
+        color: white;
+        background: $wbu-background;
+        z-index: 2;
+      }
+      .untarget {
+        text-align: center;
+        color: $wbu-background;
+        background: transparent;
+        padding: $wbu-btn-padding-y-sm * 0.6 $wbu-btn-padding-x-sm;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          padding: $wbu-margin;
+          width: 200px;
+          height: 100%;
+          border: 1px $wbu-border-color solid;
+          left: -40;
+          z-index: 1;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+}

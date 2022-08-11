@@ -17,6 +17,9 @@
   transition: background-color ease-in-out 0.4s, border-color 0.3s,
     transform ease-in-out 0.3s;
   text-transform: capitalize;
+  p {
+    margin: 0;
+  }
   &:hover {
     color: white;
     text-decoration: none;
@@ -25,10 +28,57 @@
     transform: scale(1.05);
   }
 }
-p {
-  margin: 0;
-}
 
+.mitor-play-btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  .mtb-play {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: height 0.25s ease, width 0.25s ease;
+    box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+    &:hover {
+      &::after,
+      &::before {
+        animation: none;
+      }
+    }
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &::after {
+      animation: ripple 2s linear 1s infinite;
+    }
+    &::before {
+      animation: ripple 2s linear infinite;
+    }
+  }
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
 @include media-max(MS) {
 }
 @include media-max(SM) {
