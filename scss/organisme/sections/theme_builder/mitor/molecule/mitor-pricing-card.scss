@@ -72,6 +72,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: .5s;
+            &:hover{
+                text-decoration: none;
+                background: $wbu-background;
+                color: $wbu-border-color;
+                .svg{
+                    background: $wbu-color-secondary;
+                    color: $wbu-border-color;
+                }
+            }
             .link-text{
                 margin-left: auto;
                 margin-right: auto;
