@@ -1,0 +1,90 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.simple-card {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  transition: ease-in-out 0.3s;
+  &:hover {
+    transform: scale(1.02);
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &__body {
+    padding: 3rem;
+  }
+  .sc-title {
+    font-weight: 600;
+    color: black;
+    font-size: $wbu-h5-font-size;
+    margin-bottom: 1rem;
+  }
+  .sc-desc {
+    font-size: $wbu-default-font-size;
+    margin-bottom: 1.5rem;
+    line-height: 30px;
+    color: darken($wbu-border-color, 50);
+    @include ellipseText(4);
+  }
+  .sc-link {
+    color: black;
+    font-size: $wbu-default-font-size;
+    text-decoration: none;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 0;
+    transform: scale(1);
+    transition: 0.3s;
+    &::after {
+      position: relative;
+      content: "";
+      width: 2rem;
+      height: 2rem;
+      transition: 0.3s;
+      //top: 1;
+      @include wbu__angle-right(black, 11);
+    }
+    &:hover {
+      font-weight: 600;
+      &::after {
+        @include wbu__angle-right(black, 12);
+      }
+    }
+  }
+  .sc-icon {
+    display: flex;
+
+    margin-bottom: 4rem;
+    svg {
+      width: 4.5rem;
+      height: 4.5rem;
+      fill: $wbu-background;
+    }
+  }
+
+  /* modificateur */
+  &--no-img {
+    text-align: center;
+    &:hover {
+      transform: translateY(5%);
+    }
+    .simple-card__img {
+    }
+    .sc-link {
+      display: flex;
+      justify-content: center;
+      display: none;
+    }
+    .sc-icon {
+      justify-content: center;
+    }
+  }
+}

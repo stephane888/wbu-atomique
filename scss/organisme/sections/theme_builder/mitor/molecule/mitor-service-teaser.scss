@@ -52,6 +52,8 @@
     }
     .single-service-description {
       margin-top: $wbu-margin;
+      font-size: $wbu-default-font-size;
+      line-height: 3rem;
     }
     .more-link {
       margin-top: $wbu-margin * 2;
@@ -62,7 +64,7 @@
         padding: 2rem;
         padding-left: 0;
 
-        transition: padding 0.8s;
+        transition: padding 0.4s;
         &:hover {
           padding-left: 2rem;
           text-decoration: none;
