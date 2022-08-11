@@ -6,7 +6,7 @@
   box-shadow: 0 0 10px rgb(0 0 0 / 10%);
   transition: ease-in-out 0.3s;
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
   &__img {
     width: 100%;
@@ -24,13 +24,14 @@
     color: black;
     font-size: $wbu-h5-font-size;
     margin-bottom: 1rem;
+    @include ellipseText(2);
   }
   .sc-desc {
     font-size: $wbu-default-font-size;
     margin-bottom: 1.5rem;
     line-height: 30px;
     color: darken($wbu-border-color, 50);
-    @include ellipseText(4);
+    @include ellipseText(2);
   }
   .sc-link {
     color: black;
@@ -62,11 +63,39 @@
   .sc-icon {
     display: flex;
 
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
     svg {
       width: 4.5rem;
       height: 4.5rem;
       fill: $wbu-background;
+    }
+  }
+  .sc-user-info {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    .img-bloc {
+      margin-right: 2rem;
+
+      img {
+        width: 5.5rem;
+        height: 5.5rem;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .user-title {
+      font-weight: 600;
+      color: black;
+      font-size: $wbu-h5-font-size * 0.9;
+      line-height: 30px;
+      @include ellipseText(1);
+    }
+    .user-desc {
+      font-size: $wbu-default-font-size;
+      color: darken($wbu-border-color, 50);
+      text-transform: capitalize;
+      white-space: nowwrap;
     }
   }
 
@@ -74,7 +103,7 @@
   &--no-img {
     text-align: center;
     &:hover {
-      transform: translateY(5%);
+      transform: translateY(3%);
     }
 
     .sc-link {
@@ -83,6 +112,9 @@
     }
     .sc-icon {
       justify-content: center;
+    }
+    .sc-desc {
+      @include ellipseText(4);
     }
   }
 }

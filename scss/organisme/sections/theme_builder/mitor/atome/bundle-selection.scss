@@ -3,53 +3,51 @@
 .bundle-selection {
   display: flex;
   justify-content: center;
-  margin: $wbu-margin;
-  .plan-handler {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: $wbu-margin * 0.5;
-    .plan {
-      transition: all 200ms linear;
-      :is(.plan1, .plan2) {
-        color: white;
-        text-transform: capitalize;
-        position: relative;
-        border-radius: 50px;
-        transition: all 200ms linear;
-        text-align: center;
-        background: $wbu-background;
-        padding: $wbu-btn-padding-y-sm * 0.3 $wbu-btn-padding-x-sm * 3;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-      .target {
-        color: white;
-        background: $wbu-background;
-        z-index: 2;
-      }
-      .untarget {
-        text-align: center;
-        color: $wbu-background;
-        background: transparent;
-        padding: $wbu-btn-padding-y-sm * 0.6 $wbu-btn-padding-x-sm;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          padding: $wbu-margin;
-          width: 200px;
-          height: 100%;
-          border: 1px $wbu-border-color solid;
-          left: -40;
-          z-index: 1;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50px;
-        }
+  //padding-top: 2rem;
+  margin-bottom: 8rem;
+
+  .nav-link {
+    padding: 13px 40px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: $wbu-default-font-size;
+    margin: 0;
+    transition: padding 0.2s;
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: 500;
+    color: black;
+    position: relative;
+    &:hover {
+      text-decoration: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 200px;
+      height: 65px;
+      border: 1px solid silver;
+      left: -40px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      transform: translateY(-50%);
+    }
+    &.active {
+      position: relative;
+      padding: 13px 30px;
+
+      background-color: $wbu-background;
+      box-shadow: 0 0 12px rgb(120 113 105 / 60%);
+      border: 1px solid $wbu-background;
+      transition: padding ease-in 0.3s;
+      z-index: 2;
+      &::before {
+        border: 1px solid transparent;
+        width: 0;
       }
     }
   }
