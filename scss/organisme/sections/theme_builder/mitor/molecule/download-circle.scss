@@ -1,7 +1,7 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 .download-circle {
-  width: 590px;
-  height: 590px;
+  width: 530px;
+  height: 530px;
   border-radius: 50%;
 
   background-color: $wbu-color-boder;
@@ -9,13 +9,22 @@
   position: relative;
   margin: 0 auto;
   @include media-max(SM) {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
   }
   @include media-max(XS) {
     width: 300px;
     height: 300px;
   }
+  @include media-min(DD) {
+    width: 450px;
+    height: 450px;
+  }
+  @include media-min(M) {
+    width: 590px;
+    height: 590px;
+  }
+
   img {
     max-width: 100%;
     width: auto;

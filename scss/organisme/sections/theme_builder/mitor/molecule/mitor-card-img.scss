@@ -7,6 +7,9 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  .mitor-play-btn {
+    display: none;
+  }
   &--left {
     .mitor-card__img {
       &::after {
@@ -69,6 +72,11 @@
           border-left: 300px solid transparent;
         }
       }
+    }
+  }
+  &--video {
+    .mitor-play-btn {
+      display: block;
     }
   }
 }
