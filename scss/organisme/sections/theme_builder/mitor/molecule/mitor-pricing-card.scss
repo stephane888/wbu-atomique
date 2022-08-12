@@ -1,0 +1,158 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables.scss" as *;
+
+.single-pricing-card {
+  text-align: center;
+  position: relative;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 10%);
+  border-radius: 10px;
+  padding: calc($wbu-margin - 12px);
+  transition: 0.3s;
+  margin: calc($wbu-margin - 12px) 0;
+  //background-color: white;
+  &:hover {
+    box-shadow: 0 0 30px rgb(0 0 0 / 20%);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -71px;
+    left: 65px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 150px solid $wbu-background;
+    transform: rotate(88deg);
+    border-radius: 50px;
+    z-index: 2;
+  }
+  .back-svg{
+    display: none;
+  }
+  .head {
+    padding: $wbu-btn-padding-y-sm * 0.5;
+    .head-svg{
+        display: none;
+    }
+    .title {
+      color: $wbu-background;
+      text-transform: capitalize;
+      margin: 0 auto $wbu-margin;
+      font-weight: 600;
+      width: 100%;
+      word-break: break-all;
+      line-height: $wbu-h3-line-height;
+    }
+    .price {
+      color: $wbu-background;
+      font-size: $wbu-titre-big-md;
+    }
+  }
+  .card-middle {
+    padding: $wbu-margin;
+    border-top: 1px solid rgba(0, 0, 0, 10%);
+    margin-bottom: $wbu-margin;
+    .elements {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      .element {
+        text-transform: capitalize;
+        margin: $wbu-margin 0;
+        padding: $wbu-margin*0.5;
+      }
+    }
+  }
+  .card-bottom {
+    margin-bottom: $wbu-margin * 0.3;
+    display: flex;
+    justify-content: center;
+    .choose {
+      width: 60%;
+      line-height: 40px;
+      text-align: center;
+      padding: $wbu-btn-padding-x-sm;
+      border: 1px solid $wbu-background;
+      color: black;
+      font-weight: 600;
+      border-radius: 50px;
+      margin: calc($wbu-margin - 12px) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.3s;
+      &:hover {
+        text-decoration: none;
+        background: $wbu-background;
+        color: $white;
+        .svg {
+          background: $wbu-color-secondary;
+          color: $wbu-border-color;
+        }
+      }
+      .link-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .svg {
+        float: right;
+        padding: calc($wbu-margin - 10px);
+        background: $wbu-color-boder;
+        border-radius: 50%;
+        color: $wbu-background;
+      }
+    }
+  }
+  //modifier start
+  &--svg-flat{
+    //background: teal;
+    
+    &::before{
+        display: none;
+    }
+    .back-svg{
+        display: block;
+        position: absolute;
+        opacity: 0.2;
+    }
+    .head{
+        .head-svg{
+            padding: $wbu-margin;
+            display: block;
+            svg{
+                fill: $wbu-background;
+            }
+        }
+        .title{
+            font-size: $wbu-h3-font-size;
+            font-weight: 600;
+        }
+        .price{
+            font-size:  $wbu-titre-big-md * 0.5;
+            font-weight: 700;
+            &::after{
+                content: "/year";
+                font-size:  $wbu-titre-big-md * 0.3;
+            }
+        }
+    }
+    .card-middle {
+        border: 0;
+        margin: 0;
+            .elements {
+                border: 0;
+                margin: 0;
+              .element {
+                &:first-child{
+                    border-top: 1px solid $wbu-color-boder;    
+                }
+                margin: 0;
+                border-bottom: 1px solid $wbu-color-boder;
+                padding: $wbu-margin;
+              }
+            }
+        }
+  }
+}

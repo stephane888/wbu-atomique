@@ -1,0 +1,42 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../atome/mitor-btn.scss";
+
+.mitor-card__img {
+  position: relative;
+  z-index: 2;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .img-bloc {
+    padding: 20px 0;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media-max(XS) {
+      padding: 10px 0;
+      margin: 10px 0;
+    }
+  }
+}
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.75);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

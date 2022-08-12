@@ -11,17 +11,22 @@
     cursor: pointer;
     border-radius: 50%;
     border: none;
-    width: 15px ;
+    width: 15px;
     height: 15px;
     background-color: #fff;
     opacity: 0.5;
     transition: 0.3s;
     color: transparent;
     &--active {
-        width: 35px;
-            height: 7px;
-            border-radius: 10px;
-            opacity: 1;
+      width: 35px;
+      height: 7px;
+      border-radius: 10px;
+      opacity: 1;
+    }
+  }
+  &--black {
+    .csl-nav {
+      background-color: #000;
     }
   }
 }

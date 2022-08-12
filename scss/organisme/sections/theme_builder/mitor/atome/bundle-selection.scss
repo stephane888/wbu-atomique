@@ -1,0 +1,54 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.bundle-selection {
+  display: flex;
+  justify-content: center;
+  //padding-top: 2rem;
+  margin-bottom: 8rem;
+
+  .nav-link {
+    padding: 13px 40px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: $wbu-default-font-size;
+    margin: 0;
+    transition: padding 0.2s;
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: 500;
+    color: black;
+    position: relative;
+    &:hover {
+      text-decoration: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 200px;
+      height: 65px;
+      border: 1px solid silver;
+      left: -40px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      transform: translateY(-50%);
+    }
+    &.active {
+      position: relative;
+      padding: 13px 30px;
+
+      background-color: $wbu-background;
+      box-shadow: 0 0 12px rgb(120 113 105 / 60%);
+      border: 1px solid $wbu-background;
+      transition: padding ease-in 0.3s;
+      z-index: 2;
+      &::before {
+        border: 1px solid transparent;
+        width: 0;
+      }
+    }
+  }
+}

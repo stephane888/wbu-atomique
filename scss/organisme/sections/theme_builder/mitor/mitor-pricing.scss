@@ -1,0 +1,10 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./molecule/mitor-pricing-card.scss";
+@use "./atome/bundle-selection.scss";
+
+.pricing-card-handler {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

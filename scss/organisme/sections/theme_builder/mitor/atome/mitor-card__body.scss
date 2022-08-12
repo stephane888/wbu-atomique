@@ -1,0 +1,95 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "./mitor-btn.scss";
+.mitor-card__body {
+  margin: 1rem 0;
+  .mc-title {
+    color: #222;
+    margin: 0 auto 20px;
+    font-weight: 600;
+    width: 100%;
+    word-break: break-word;
+    line-height: 1.4;
+    @include bp_h3();
+  }
+  .mc-small {
+    margin-bottom: 1.5rem;
+    font-size: $wbu-default-font-size;
+    color: black;
+  }
+  .mc-description {
+    font-size: $wbu-default-font-size;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    color: darken($wbu-border-color, 50);
+    ul {
+      list-style: none;
+      margin-top: 2rem;
+      padding-left: 1rem;
+      @include media-max(XS) {
+        padding: 5px;
+      }
+      li {
+        position: relative;
+        display: flex;
+        align-items: start;
+        margin-bottom: 1rem;
+      }
+      li::before {
+        content: "";
+        @include wbu__svg-dd-puce-check(#000, 45);
+        position: relative;
+        width: 6rem;
+        height: 2rem;
+        display: inline-block;
+        margin-right: 1.5rem;
+        margin-top: 5px;
+      }
+    }
+    ol {
+      margin-top: 2rem;
+      counter-reset: section;
+      padding-left: 1rem;
+      @include media-max(XS) {
+        padding: 5px;
+      }
+      h3,
+      h6,
+      h4,
+      h5 {
+        font-weight: bold;
+        color: black;
+        font-size: $wbu-default-font-size;
+      }
+      li {
+        position: relative;
+        display: flex;
+        align-items: start;
+        margin-bottom: 2rem;
+
+        &::before {
+          counter-increment: section;
+          content: counter(section);
+          display: inline-block;
+          background-color: $wbu-background;
+          line-height: 1;
+          margin-right: 2rem;
+          margin-top: 5px;
+          font-size: $wbu-default-font-size;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          padding: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+        }
+      }
+    }
+  }
+  .mitor-btn {
+    margin-top: 2.5em;
+  }
+}

@@ -1,0 +1,62 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+.mitor-project-tab {
+  .mpt-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+  }
+  .expo-tabs {
+    padding: 0 3rem;
+    border: 1px solid #eee;
+    border-radius: 50px;
+    color: black;
+    a {
+      color: black;
+
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .nav-item {
+      position: relative;
+      transition: all 200ms linear;
+    }
+
+    .nav-link {
+      display: block;
+      border-bottom: 3px solid transparent;
+      transition: 0.3s;
+      &.active {
+        background-color: inherit;
+        color: #000000;
+        border-color: $wbu-background;
+      }
+    }
+    li {
+      a {
+        padding: 15px 20px;
+        border-radius: 0;
+        transition: 0.3s;
+      }
+    }
+  }
+  .mpt-img {
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-height: 35rem;
+    }
+    &--active {
+      img {
+        min-height: 50rem;
+      }
+    }
+  }
+}

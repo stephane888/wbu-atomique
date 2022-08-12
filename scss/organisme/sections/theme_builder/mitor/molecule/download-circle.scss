@@ -1,0 +1,40 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.download-circle {
+  width: 590px;
+  height: 590px;
+  border-radius: 50%;
+
+  background-color: $wbu-color-boder;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  @include media-max(SM) {
+    width: 400px;
+    height: 400px;
+  }
+  @include media-max(XS) {
+    width: 300px;
+    height: 300px;
+  }
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+  .dc-img {
+    &1 {
+      transform: translateY(150px) translateX(20px);
+      z-index: 2;
+      position: absolute;
+      box-sizing: border-box;
+    }
+    &2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(20px);
+      z-index: 1;
+    }
+  }
+}

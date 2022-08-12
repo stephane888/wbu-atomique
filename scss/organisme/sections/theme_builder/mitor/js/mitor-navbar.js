@@ -116,18 +116,27 @@ function initNavbar() {
   });
   /* fin function */
 }
+/* manage search */
 function initSearch() {
   let searcBtn = document.querySelector(".search");
   let searcBloc = document.querySelector(".search-nav");
   if (searcBtn && searcBloc) {
     searcBtn.addEventListener("click", function (e) {
       e.preventDefault();
+      e.stopPropagation();
       searcBloc.classList.toggle("search-nav--active");
+    });
+    document.addEventListener("click", function (ev) {
+      let current = searcBloc.contains(ev.target);
+      if (searcBloc.classList.contains("search-nav--active") && !current) {
+        searcBloc.classList.remove("search-nav--active");
+      }
+      // console.log("stapps", ev.target, "--", current);
     });
   }
 }
 
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
   initNavbar();
   initSearch();
 });

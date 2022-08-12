@@ -1,0 +1,120 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.simple-card {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  transition: ease-in-out 0.3s;
+  &:hover {
+    transform: scale(1.01);
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &__body {
+    padding: 3rem;
+  }
+  .sc-title {
+    font-weight: 600;
+    color: black;
+    font-size: $wbu-h5-font-size;
+    margin-bottom: 1rem;
+    @include ellipseText(2);
+  }
+  .sc-desc {
+    font-size: $wbu-default-font-size;
+    margin-bottom: 1.5rem;
+    line-height: 30px;
+    color: darken($wbu-border-color, 50);
+    @include ellipseText(2);
+  }
+  .sc-link {
+    color: black;
+    font-size: $wbu-default-font-size;
+    text-decoration: none;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 0;
+    transform: scale(1);
+    transition: 0.3s;
+    &::after {
+      position: relative;
+      content: "";
+      width: 2rem;
+      height: 2rem;
+      transition: 0.3s;
+      //top: 1;
+      @include wbu__angle-right(black, 11);
+    }
+    &:hover {
+      font-weight: 600;
+      &::after {
+        @include wbu__angle-right(black, 12);
+      }
+    }
+  }
+  .sc-icon {
+    display: flex;
+
+    padding-bottom: 4rem;
+    svg {
+      width: 4.5rem;
+      height: 4.5rem;
+      fill: $wbu-background;
+    }
+  }
+  .sc-user-info {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    .img-bloc {
+      margin-right: 2rem;
+
+      img {
+        width: 5.5rem;
+        height: 5.5rem;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .user-title {
+      font-weight: 600;
+      color: black;
+      font-size: $wbu-h5-font-size * 0.9;
+      line-height: 30px;
+      @include ellipseText(1);
+    }
+    .user-desc {
+      font-size: $wbu-default-font-size;
+      color: darken($wbu-border-color, 50);
+      text-transform: capitalize;
+      white-space: nowwrap;
+    }
+  }
+
+  /* modificateur */
+  &--no-img {
+    text-align: center;
+    &:hover {
+      transform: translateY(3%);
+    }
+
+    .sc-link {
+      display: flex;
+      justify-content: center;
+    }
+    .sc-icon {
+      justify-content: center;
+    }
+    .sc-desc {
+      @include ellipseText(4);
+    }
+  }
+}

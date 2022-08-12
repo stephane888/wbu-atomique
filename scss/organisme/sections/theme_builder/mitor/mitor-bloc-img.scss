@@ -6,7 +6,7 @@
   padding: $space-bottom 0;
   background-repeat: no-repeat;
   background-size: cover;
-  :not(&--achievement) {
+  &:not(&--achievement) {
     background-image: initial !important;
   }
   &--achievement {
@@ -21,7 +21,8 @@
       height: 100%;
       z-index: 1;
       background-color: black;
-      opacity: 0.8;
+      opacity: 0.85;
+      pointer-events: none;
     }
     .mitor-card {
       position: relative;

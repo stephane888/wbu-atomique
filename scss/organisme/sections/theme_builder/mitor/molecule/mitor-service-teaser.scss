@@ -1,0 +1,75 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.services-list {
+  margin-bottom: $wbu-margin * 3;
+  padding: $wbu-margin 0;
+
+  .icon {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+
+    svg {
+      margin-top: 1rem;
+      width: 4rem;
+      height: 4rem;
+    }
+    .bg-icon::before {
+      position: absolute;
+      top: 40%;
+      z-index: -1;
+      width: 70px;
+      transform: translateY(-50%);
+      height: 70px;
+      border-radius: 50%;
+      content: "";
+      opacity: 0.1;
+      background: $wbu-color-secondary;
+    }
+    .bg-icon1::before {
+      background: $wbu-color-teal;
+      opacity: 0.1;
+    }
+
+    .bg-icon2::before {
+      content: "";
+      background: $wbu-color-secondary;
+      opacity: 0.1;
+    }
+    .bg-icon3::before {
+      content: "";
+      background: $wbu-color-thirdly;
+      opacity: 0.1;
+    }
+    .icon-flat::before {
+      content: "";
+    }
+  }
+  .service-body {
+    margin-top: $wbu-margin;
+    .service-title {
+      font-weight: 600;
+      color: $wbu-background;
+    }
+    .single-service-description {
+      margin-top: $wbu-margin;
+      font-size: $wbu-default-font-size;
+      line-height: 3rem;
+    }
+    .more-link {
+      margin-top: $wbu-margin * 2;
+      .link {
+        color: $wbu-background;
+        font-weight: 600 !important;
+        position: relative;
+        padding: 2rem;
+        padding-left: 0;
+
+        transition: padding 0.4s;
+        &:hover {
+          padding-left: 2rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
