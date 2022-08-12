@@ -10,11 +10,12 @@
 }
 .manomano__product {
   &--title {
-    font-size: $wbu-h3-font-size;
+    @include bp_h1();
   }
   &--images {
     text-align: center;
     @include block();
+    margin-bottom: 0;
   }
   &--block {
     @include block();
@@ -35,6 +36,13 @@
   }
   &--header {
     margin-bottom: $space_inner_top;
+  }
+  .container-left {
+    position: relative;
+  }
+  .block-left {
+    position: sticky;
+    top: 0;
   }
   .titleblock {
     font-size: $wbu-title-font-size;

@@ -10,30 +10,27 @@
 @use "../../defaut/model/custom_bp.scss";
 
 .block__whoAreWe {
-	display: block;
-	//border:1px solid black;
-	text-align: center;
-	margin: 0 auto;
-	width: 100%;
+  display: block;
+  //border:1px solid black;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
 
-	box-sizing: border-box;
+  box-sizing: border-box;
 
-	font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 
-	h2 {
-		color: black;
-		text-transform: uppercase;
-		line-height: 1.2;
-		@include media-max(XS) {
-			font-size: 3.1rem;
-		}
-	}
+  h2 {
+    color: black;
+    text-transform: uppercase;
+    line-height: 1.2;
+    @include media-max(XS) {
+      font-size: 3.1rem;
+    }
+  }
 
-	.subDescription {
-		text-align: center;
-		padding: 5px;
-	}
-	@include media-max(XS) {
-		width: 90%;
-	}
+  .subDescription {
+    text-align: center;
+    padding: 5px;
+  }
 }

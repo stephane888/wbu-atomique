@@ -10,7 +10,7 @@
   padding: calc($wbu-margin - 12px);
   transition: 0.3s;
   margin: calc($wbu-margin - 12px) 0;
-  background-color: white;
+  //background-color: white;
   &:hover {
     box-shadow: 0 0 30px rgb(0 0 0 / 20%);
   }
@@ -28,8 +28,14 @@
     border-radius: 50px;
     z-index: 2;
   }
+  .back-svg{
+    display: none;
+  }
   .head {
     padding: $wbu-btn-padding-y-sm * 0.5;
+    .head-svg{
+        display: none;
+    }
     .title {
       color: $wbu-background;
       text-transform: capitalize;
@@ -55,6 +61,7 @@
       .element {
         text-transform: capitalize;
         margin: $wbu-margin 0;
+        padding: $wbu-margin*0.5;
       }
     }
   }
@@ -97,5 +104,55 @@
         color: $wbu-background;
       }
     }
+  }
+  //modifier start
+  &--svg-flat{
+    //background: teal;
+    
+    &::before{
+        display: none;
+    }
+    .back-svg{
+        display: block;
+        position: absolute;
+        opacity: 0.2;
+    }
+    .head{
+        .head-svg{
+            padding: $wbu-margin;
+            display: block;
+            svg{
+                fill: $wbu-background;
+            }
+        }
+        .title{
+            font-size: $wbu-h3-font-size;
+            font-weight: 600;
+        }
+        .price{
+            font-size:  $wbu-titre-big-md * 0.5;
+            font-weight: 700;
+            &::after{
+                content: "/year";
+                font-size:  $wbu-titre-big-md * 0.3;
+            }
+        }
+    }
+    .card-middle {
+        border: 0;
+        margin: 0;
+            .elements {
+                border: 0;
+                margin: 0;
+              .element {
+                &:first-child{
+                    border-top: 1px solid $wbu-color-boder;    
+                }
+                margin: 0;
+                border-bottom: 1px solid $wbu-color-boder;
+                padding: $wbu-margin;
+              }
+            }
+        }
   }
 }
