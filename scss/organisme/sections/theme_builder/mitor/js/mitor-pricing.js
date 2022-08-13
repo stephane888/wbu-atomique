@@ -31,3 +31,18 @@ yearly.onclick = () => {
         monthly.classList.add('untarget')
     }
 }
+
+// click count function for pricing derived
+
+let addBtn = $('#increment')
+let removeBtn = $('#decrement')
+let counter = $('#counterValue').value
+
+addBtn.onclick = () => {
+    counter ++
+}
+
+
+removeBtn.onclick = () => {
+    counter --
+}

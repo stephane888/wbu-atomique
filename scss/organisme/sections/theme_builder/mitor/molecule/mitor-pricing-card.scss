@@ -105,7 +105,7 @@
       }
     }
   }
-  //modifier start
+  //modifier start for svg-flat
   &--svg-flat{
     //background: teal;
     
@@ -154,5 +154,36 @@
               }
             }
         }
+  }
+  //modifier for pricing with counter
+  &--plan-counter{
+    &::before{
+        display: none;
+    }
+    .counter-handler{
+        //background: seagreen;
+        width: 60%;
+        border: 1px solid $wbu-color-boder;
+        border-radius: 5px;
+        margin: $wbu-margin auto;
+        display: flex;
+        justify-content: center;
+            //background: tomato;
+            display: flex;
+            .ctrlBtn{
+                padding: $wbu-margin * 0.5 $wbu-margin ;
+                border: none;
+                background: inherit;
+            }
+            #counterValue{
+                transition:border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            }
+
+    }
+    .card-middle{
+        border-top: 0;
+        padding-top: $wbu-margin * 0.1;
+    }
+    
   }
 }
