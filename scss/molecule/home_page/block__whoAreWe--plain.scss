@@ -1,16 +1,18 @@
-/** @format */
-
+@use "../../wbu-ressources-clean.scss" as *;
 @use "../../molecule/home_page/block__whoAreWe.scss";
 
-@use "../../variables" as *;
 .block__whoAreWe--plain {
-	background-color: #f1f1f1;
-	text-align: center;
-	//margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	padding: 2.75 * $wbu-margin;
-	.block__whoAreWe {
-		max-width: 800px;
-	}
+  background-color: #f1f1f1;
+  text-align: center;
+  //margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: $wbu-margin;
+  @include media-min(DD) {
+    padding: $space_inner_top;
+  }
+
+  .block__whoAreWe {
+    max-width: 800px;
+  }
 }
