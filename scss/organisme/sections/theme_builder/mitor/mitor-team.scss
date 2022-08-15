@@ -1,0 +1,140 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+.mitor-team-section-handler{
+    .single-lutin{
+        box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+        border-radius: 10px;
+        margin: $wbu-margin / 0.5 0;
+        .lutin-img{
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }        
+        }
+        .lutin-content{
+            padding: $wbu-margin;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            width: 100%;
+            text-align: center;
+            .lutin-name{
+                margin-bottom: $wbu-margin * 0.6;
+                color: $wbu-background;
+                width: 100%;
+                word-break: break-all;
+                line-height: 1.4;
+                font-weight: 600;
+            }
+        }
+        //team img glass ui
+        &--glassmorphism{
+            border-radius: 10px;
+            overflow: hidden;
+            &:hover{
+                img{
+                    filter: blur(3px);
+                }
+                .lutin-content{
+                    opacity: 1;
+                    transform: translateY(0px);
+                    bottom: 30;
+                }
+            }
+            .lutin-img{
+                overflow: hidden;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 80%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }        
+            }
+            .lutin-content{
+                text-align: center;
+                background-color: #fff;
+                box-shadow: 2px 2px 20px rgb(0 0 0 / 10%);
+                padding: 30px 0;
+                position: absolute;
+                width: 90%;
+                @include media-max(MD){
+                    width: 91.5%;
+                }
+                @include media-max(XS){
+                    width: 95%;
+                }
+                bottom: 0;
+                z-index: 2;
+                transform: translateY(0px);
+                transition: .3s;
+                opacity: 0;
+                border: 1px solid $wbu-color-boder;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+        //end glassmorphism
+
+        //card skeumorphism
+        &--skeurmorphism{
+            border: 1px solid $wbu-border-color;
+            box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+            border-radius: 10px;
+            margin:  $wbu-margin * 0.5 0;
+            padding: $wbu-margin;
+            .lutin-img{
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    border-radius: 100%;
+                    vertical-align: middle;
+                }
+            }
+            .lutin-content{
+                .media-list{
+                    padding-top: $wbu-margin * 0.3;
+                    list-style-type: none;
+                    margin-left: 0;
+                    padding-left: 0;
+                    display: inline-flex;
+                    .element{
+                        list-style-type: none;
+                        .link{
+                            text-decoration: none;
+                            color: $wbu-background;
+                            width: 36px;
+                            height: 36px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            margin: $wbu-margin * 0.4 $wbu-margin * 0.2;
+                            border: 1px solid $wbu-color-secondary;
+                            &:hover{
+                                background: $wbu-background;
+                                text-decoration: none;
+                                border: none;
+                                i{
+                                    svg{
+                                        fill: $wbu-border-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.flat{
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
