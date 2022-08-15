@@ -1,5 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
+@use "./atome/mitor-btn.scss";
 .lg-backdrop {
   background-color: rgb(0 0 0 / 90%) !important;
 }

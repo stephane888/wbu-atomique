@@ -1,0 +1,30 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.mitor-form-inline {
+  margin-top: 6rem;
+  .form-control {
+    border: 1px solid #a7a7ad;
+    background-color: inherit;
+    padding: 10px 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: white;
+    margin-right: 2rem;
+    transition: 0.3s;
+    min-width: 15rem;
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($wbu-color-primary, 0.25);
+
+      outline: 0;
+    }
+  }
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.5; /* Firefox */
+  }
+  .btn-mitor-black {
+    background-color: $wbu-background;
+    color: color-yiq($wbu-background);
+  }
+}
