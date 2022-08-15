@@ -1,0 +1,89 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables.scss" as *;
+.blog-card{
+    border: 1px solid $wbu-color-boder;
+    margin-bottom: calc($wbu-margin + 8px);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 7px;
+    text-align: left;
+    margin: 0 auto $wbu-margin;
+    .blog-card-head{
+        .blog-date{
+            width: 80px;
+            height: 80px;
+            padding: calc($wbu-btn-padding-x-sm + 2.2px) calc($wbu-btn-padding-x-sm - 2.8px);
+            position: absolute;
+            right: 0;
+            background: $wbu-background;
+            color: $wbu-border-color;
+            text-align: center;
+            .date{
+                display: block;
+                font-size: $wbu-h4-font-size;
+            }
+        }
+    }
+    .blog-card-body{
+        padding: $wbu-margin;
+        .posted-date{
+            display: none;
+        }
+        .blog-title{
+            color: $wbu-background;
+            font-weight: 600;
+            transition: 0.3s;
+            cursor: pointer;
+            word-break: break-word;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        .small-blog-content{
+            margin-top: $wbu-margin;
+            line-height: 30px;
+        }
+        .lnk{
+            width: 16%;
+        }
+        .more-lnk{
+            color: $wbu-background;
+            text-transform: capitalize;
+            font-weight: 600;
+            transition: 0.3s;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &--flex-minimize{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid $wbu-border-color;
+        .blog-date{
+            display: none;
+        }
+        .blog-card-body{
+            .posted-date{
+                color: $wbu-color-text;
+                opacity: 0.7;
+                margin-top: $wbu-margin * 0.8;
+                display: block;
+            }
+            .blog-title{
+                font-size: $wbu-h5-font-size;
+                text-transform: capitalize;
+            }
+            .small-blog-content{
+                display: none;
+            }
+        }
+        .lnk{
+            display: none;
+        }
+    }
+}
