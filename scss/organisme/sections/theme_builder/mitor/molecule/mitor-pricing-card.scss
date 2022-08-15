@@ -32,7 +32,7 @@
     display: none;
   }
   .counter-handler{
-    display: none;
+    visibility: hidden;
   }
   .head {
     padding: $wbu-btn-padding-y-sm * 0.5;
@@ -174,7 +174,7 @@
       display: flex;
       justify-content: center;
       //background: tomato;
-      display: flex;
+      visibility: visible;
       .ctrlBtn {
         padding: $wbu-margin * 0.5 $wbu-margin;
         border: none;
