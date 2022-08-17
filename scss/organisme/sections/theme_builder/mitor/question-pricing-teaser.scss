@@ -1,0 +1,57 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+
+.pricing-question{
+    background: url("https://slidesigma.com/themes/html/mitor/assets/img/homepage-4/check-faq.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-top: $space-top;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: $wbu-margin;
+    z-index: 1;
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        opacity: 0.9;
+        z-index: -1;
+        position: absolute;
+        background: $wbu-color-teal;
+    }
+    .wrapper{
+        padding: $wbu-margin;
+        .title{
+            text-transform: capitalize;
+            color: $wbu-border-color;
+            font-size: $wbu-h4-font-size;
+        }
+        .qtext{
+            margin-top: $wbu-margin;
+            color: $wbu-border-color;
+            font-weight: lighter;
+            line-height: 30px;
+            word-break: break-word;
+        }
+    }
+    .faqLink{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $wbu-margin;
+        .link{
+            display: inline-block;
+            text-transform: capitalize;
+            color: $wbu-border-color;
+            font-size: $wbu-h4-font-size;
+            border: 2px solid $wbu-border-color;
+            border-radius: 50px;
+            padding:  $wbu-btn-padding-y-sm * 0.5 $wbu-btn-padding-y-sm;
+        }
+    }
+}

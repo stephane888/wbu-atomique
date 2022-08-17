@@ -1,0 +1,53 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+.mitor-contact-hero{
+    background: url("http://slidesigma.com/themes/html/mitor/assets/img/coming-soon/banner-3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 100%;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background: $wbu-background;
+        opacity: 0.8;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .titles-handler{
+        position: relative;
+        z-index: 3;
+        color: $wbu-border-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .title{
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: $wbu-h2-font-size;
+        }
+        .title-desc{
+            .currentroute{
+                color: $wbu-color-text;
+                font-size: $wbu-h5-font-size;
+                opacity: 1;
+                &::before{
+                    content: ".";
+                    font-size: $wbu-h2-font-size;
+                    color: $wbu-border-color;
+                    padding: 0 $wbu-margin * 0.5;
+                    
+                }
+            }
+        }
+
+    }
+}
