@@ -1,0 +1,84 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.sd-tarifs-card {
+  background: #fafafa;
+  padding: 10px 6px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 19%), 0px 0px 2px rgb(0 0 0 / 9%),
+    inset 0 1px 2px transparent;
+  margin-bottom: 3rem;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  padding: 10px 3px;
+  text-align: center;
+  &:hover {
+    .description {
+      max-height: 10rem;
+      opacity: 1;
+    }
+    .dots {
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+  small {
+  }
+  .dots {
+    max-height: 2rem;
+    overflow: hidden;
+    font-size: $wbu-h5-font-size;
+    transition: 0.5s;
+  }
+  .title-content {
+    padding: 0 0 5px;
+  }
+  .title {
+    padding: 0 7px 5px;
+    transition: height 0s ease 0.2s;
+    margin: 0;
+    color: #666;
+    white-space: normal;
+    font-size: $wbu-default-font-size;
+  }
+  .description {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0.5;
+    transition: 0.7s;
+  }
+  .tarif-bloc {
+    padding: 10px 7px 0;
+    border-top: 1px solid #d6d6d6;
+    min-height: 50px;
+    .element-price {
+      text-align: center;
+      padding: 5px;
+      font-size: $wbu-h6-font-size;
+      color: #adadad;
+      .price {
+        float: right;
+        color: $wbu-color-primary;
+      }
+    }
+  }
+}
+.stc--large {
+  background-color: $wbu-color-primary;
+  color: white;
+  .title {
+    color: white;
+  }
+  .dots,
+  .description {
+    display: none;
+  }
+  .tarif-bloc {
+    margin-top: 1rem;
+    border-color: transparent;
+    .element-price {
+      color: black;
+      .price {
+        color: white;
+      }
+    }
+  }
+}

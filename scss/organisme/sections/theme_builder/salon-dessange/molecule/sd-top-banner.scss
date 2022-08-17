@@ -1,0 +1,24 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.sd-top-banner {
+  color: #fff;
+  background-color: $wbu-background;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+
+  .text-content {
+    text-align: center;
+    font-size: $wbu-h6-font-size * 0.9;
+  }
+  a {
+    color: $wbu-color-secondary;
+    text-decoration: none;
+
+    transition: 0.3s;
+    &:hover {
+      text-decoration: nonen;
+      color: darken($wbu-color-secondary, 10);
+    }
+  }
+}
