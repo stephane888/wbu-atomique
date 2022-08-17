@@ -1,0 +1,45 @@
+@use "../../../../../wbu-ressources-clean.scss" as *; 
+ 
+.sd-nav-header  {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  .sd-nav__brand {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    max-width: 15rem;
+    height: auto;
+  }
+  .menu__shop{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-wrap: nowrap; 
+  }
+  .menu-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    align-items: center; 
+  }
+  .menu-item{ 
+    margin-left: 2rem;
+    &--border {
+      border: 1px solid black;
+    }
+    a {
+      padding: 1rem 2rem;
+      display: inline-block;
+    }
+  }
+}
+ 

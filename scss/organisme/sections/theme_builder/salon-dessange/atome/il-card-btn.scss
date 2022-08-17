@@ -1,0 +1,66 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+@mixin scale-up() {
+  transform: scale(1.15);
+}
+
+@mixin scale-down() {
+  transform: scale(0.85);
+}
+
+.card-btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  font-size: $wbu-h5-font-size;
+  transition: transform ease 0.4s;
+  background-color: darken($wbu-color-primary, 30);
+  .fa-cart-plus {
+    display: none;
+  }
+
+  &,
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a {
+    padding: 1.8rem 4rem;
+    display: inline-block;
+  }
+  p {
+    margin: 0;
+  }
+
+  &--scale-up {
+    &:hover {
+      @include scale-up();
+    }
+  }
+
+  &--scale-down {
+    &:hover {
+      @include scale-down();
+    }
+  }
+  &--sm {
+    font-size: $wbu-default-font-size;
+    border-radius: 3px;
+    a {
+      padding: 5px 1.5rem;
+    }
+  }
+  &--nm {
+    font-size: $wbu-default-font-size;
+
+    a {
+      padding: 1rem 1.8rem;
+    }
+  }
+}
+@include media-max(MS) {
+}
+@include media-max(SM) {
+}
+@include media-max(XS) {
+}
