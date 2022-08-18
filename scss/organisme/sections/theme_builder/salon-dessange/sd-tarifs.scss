@@ -4,7 +4,7 @@
 
 .sd-tarifs-section {
   padding: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: $space_bottom;
   .sdt-title {
     margin: 0 0 30px;
     @include bp_h2();
@@ -19,6 +19,7 @@
     padding: 0;
     display: flex;
     gap: 1.5rem;
+    margin-bottom: 3.5rem;
     .nav-link {
       padding: 0;
     }
@@ -52,6 +53,18 @@
           left: 4%;
         }
       }
+    }
+  }
+  .all-prestation {
+    margin-top: 2rem;
+    text-transform: uppercase;
+    color: $wbu-color-primary;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: $wbu-default-font-size;
+    &:hover {
+      text-decoration: none;
+      color: $wbu-color-primary;
     }
   }
 }

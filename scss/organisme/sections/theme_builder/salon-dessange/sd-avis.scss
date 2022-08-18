@@ -1,0 +1,36 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./molecule/note-avis.scss";
+@use "./atome/avis-toggle-btn.scss";
+@use "./molecule/sd-card-message.scss";
+
+.sd-avis-section {
+  padding: 2rem 0;
+  .sdt-title {
+    margin: 0 0 4rem;
+    @include bp_h2();
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 5px;
+  }
+  .bloc-message {
+    background-color: #fff;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
+    margin: 4rem 0;
+  }
+  .put-avis {
+    padding: 15px 30px;
+    margin: 50px 0;
+    background-color: $wbu-background;
+    border-radius: 9999px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}

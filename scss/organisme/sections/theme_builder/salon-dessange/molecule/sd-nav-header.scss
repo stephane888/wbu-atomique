@@ -1,9 +1,10 @@
-@use "../../../../../wbu-ressources-clean.scss" as *; 
- 
-.sd-nav-header  {
-  height: 75px;
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.sd-nav-header {
+  padding: 1.8rem 0;
   display: flex;
   align-items: center;
+  background-color: white;
   a {
     color: black;
     &:hover {
@@ -14,25 +15,43 @@
   .sd-nav__brand {
     display: flex;
     align-items: center;
+    padding: 1rem 0;
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .menu__shop {
+      margin-left: auto;
+    }
   }
   img {
     max-width: 15rem;
     height: auto;
   }
-  .menu__shop{
+  .menu__shop {
     display: flex;
     align-items: center;
     justify-content: end;
-    flex-wrap: nowrap; 
+    flex-wrap: wrap;
   }
   .menu-list {
     list-style: none;
     display: flex;
     margin: 0;
-    align-items: center; 
+    padding: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
-  .menu-item{ 
-    margin-left: 2rem;
+  .menu-item {
+    white-space: nowrap;
     &--border {
       border: 1px solid black;
     }
@@ -42,4 +61,3 @@
     }
   }
 }
- 

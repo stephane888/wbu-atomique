@@ -1,0 +1,47 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+.sd-footer {
+  padding: $space_top 0 4rem;
+  background-color: $wbu-background;
+  a {
+    color: $wbu-color-boder;
+    transition: 0.3s;
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+    svg {
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: $wbu-color-boder;
+      transition: 0.3s;
+    }
+    a {
+      padding: 1rem;
+      &:hover {
+        svg {
+          transform: scale(1.2);
+          fill: white;
+        }
+      }
+    }
+  }
+  .footer-link {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: $wbu-h6-font-size;
+  }
+}

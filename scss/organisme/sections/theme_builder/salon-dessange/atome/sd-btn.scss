@@ -1,0 +1,49 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.sd-btn {
+  padding: 1.2rem 3rem;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: 0.3s;
+  display: inline-block;
+  margin: 5px 0;
+  font-size: $wbu-default-font-size;
+  &:hover {
+    background-color: $wbu-background;
+    color: white;
+    text-decoration: none;
+  }
+  &--small {
+    font-size: $wbu-h6-font-size;
+    padding: 6px 1.5rem;
+    &:hover {
+      color: rgba(black, 0.5);
+      border-color: rgba(black, 0.5);
+      background-color: transparent;
+    }
+  }
+  &--primary {
+    color: white;
+    background-color: $wbu-color-primary;
+    border-color: $wbu-color-primary;
+    border-radius: 50px;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      background-color: $wbu-color-primary;
+      border-color: $wbu-color-primary;
+    }
+  }
+
+  &--active {
+    background-color: $wbu-background;
+    color: white;
+  }
+}
+@include media-max(MS) {
+}
+@include media-max(SM) {
+}
+@include media-max(XS) {
+}
