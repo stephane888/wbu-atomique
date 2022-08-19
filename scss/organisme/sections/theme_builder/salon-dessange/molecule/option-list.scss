@@ -1,0 +1,43 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../atome/sd-btn.scss";
+.option-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.4rem 1.1rem;
+  border-bottom: 1px solid black;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  cursor: pointer;
+  .title {
+    font-size: 14px;
+    line-height: 1.29;
+    padding-right: 10px;
+    color: black;
+  }
+  .option-info {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+  .text {
+  }
+  .desc {
+    font-size: $wbu-h6-font-size;
+    color: darken($wbu-color-boder, 30);
+  }
+  .info-price {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+
+    .price {
+      font-size: $wbu-h6-font-size;
+    }
+    .time {
+      color: darken($wbu-color-boder, 25);
+      font-size: $wbu-h6-font-size * 0.95;
+    }
+  }
+}

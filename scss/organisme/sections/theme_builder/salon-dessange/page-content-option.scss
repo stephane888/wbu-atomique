@@ -1,0 +1,9 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./atome/sd-btn.scss";
+@use "./molecule/sd-option-list.scss";
+.page-content-option {
+  .button-bloc {
+    margin-bottom: 4rem;
+  }
+}

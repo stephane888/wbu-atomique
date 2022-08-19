@@ -1,0 +1,29 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.note-avis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  .note-item {
+    width: 120px;
+    padding: 1.6rem 0;
+    border-right: 2px solid rgba(0, 0, 0, 0.226);
+    text-align: center;
+    &:last-child {
+      border: none;
+    }
+  }
+  .origin {
+    text-transform: uppercase;
+    color: darken($wbu-color-boder, 25);
+    font-size: $wbu-h6-font-size;
+    margin-bottom: 3rem;
+  }
+  .value {
+    font-size: $wbu-h3-font-size;
+    font-weight: bold;
+    color: black;
+    line-height: 1;
+  }
+}

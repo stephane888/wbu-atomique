@@ -1,0 +1,14 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./molecule/sd-nav-header.scss";
+@use "./molecule/sd-top-banner.scss";
+
+.sd-header {
+  &--sticky {
+    box-shadow: 0 3px 16px rgb(0 0 0 / 20%);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}

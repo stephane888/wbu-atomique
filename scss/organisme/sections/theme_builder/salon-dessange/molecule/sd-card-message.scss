@@ -1,0 +1,32 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.sd-card-message {
+  padding: 3.2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  .message-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 1.8rem;
+  }
+  .svg-avis {
+    margin-right: 1.5rem;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: $wbu-color-primary;
+    }
+  }
+  .date-pub {
+    strong {
+      font-size: $wbu-h6-font-size;
+    }
+  }
+  .origin {
+    text-transform: capitalize;
+    color: darken($wbu-color-boder, 25);
+    font-size: $wbu-h6-font-size;
+    margin-left: 3rem;
+  }
+}

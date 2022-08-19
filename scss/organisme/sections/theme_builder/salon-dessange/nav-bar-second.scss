@@ -1,0 +1,52 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+.nav-bar-second {
+  padding: 3rem 0;
+  background-color: $wbu-background;
+  a {
+    color: $wbu-color-boder;
+    transition: 0.3s;
+    &:hover {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .input-select {
+    select {
+      color: white;
+      background-color: transparent;
+      width: 7rem;
+      font-size: $wbu-h6-font-size;
+      padding: 1rem;
+      border: 1px solid transparent;
+      line-height: 1.3em;
+      outline: none;
+      transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+      &:focus {
+        border: 1px solid #8a8a8a;
+        box-shadow: 0 0 5px #cacaca;
+      }
+      option {
+        color: #000;
+      }
+    }
+  }
+  .nav-content {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 130rem;
+    margin: 0 auto;
+  }
+  .footer-link {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: $wbu-h6-font-size;
+  }
+}
