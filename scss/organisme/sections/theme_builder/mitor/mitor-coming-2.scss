@@ -1,0 +1,130 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+
+.mitor-coming-soon-1-section-handler{
+    background: url("http://slidesigma.com/themes/html/mitor/assets/img/coming-soon/banner-1.jpg");
+    background-position: center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    @include media-max(MD){min-height: 150vh;}
+    @include media-max(SM){min-height: 150vh;}
+    @include media-max(XS){min-height: 250vh;}
+    position: relative;
+    padding: $wbu-margin * 4;
+    z-index: 1;
+    color: #fff;
+    box-sizing: border-box;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        left: 0;
+        background-color: rgb(42 44 46 / 90%);
+    }
+    .elements{
+        
+        .logo-link{
+            text-align: center;
+            margin-bottom: $wbu-margin * 2.8;
+        }
+        .section-title{
+            //margin: 0 auto;
+            width: 700px;
+            word-break: break-word;
+            .title{
+                font-size: $wbu-h1-font-size;
+                font-weight: 700;
+                line-height: 1.2;
+            }
+            .subline{
+                text-decoration: underline;
+            }
+            .description{
+                margin: $wbu-margin  * 0.5;
+                word-break: break-word;
+                opacity: 0.8;
+            }
+        }
+        .countdown{
+            margin-top: $space_top;
+            display: flex;
+            justify-content: start;
+            .single-counter{
+                text-align: center;
+                margin-right: $wbu-margin;
+                .count-value{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 50px;
+                    width: 50px;
+                    background: $wbu-color-teal;
+                    border-bottom-left-radius: 45%;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 45%;
+                    border-bottom-right-radius: 5px
+                }
+            }
+        }
+        .form-container{
+            margin-top: $wbu-margin;
+            .field{
+                padding: 15px;
+                width: 360px;
+                margin-right: 10px;
+                color: $wbu-border-color;
+                border: 1px solid $wbu-color-boder;
+                border-bottom-left-radius: 30px;
+                background: transparent;
+                outline: none;
+            }
+            .subfield{
+                padding: 15px;
+                width: 160px;
+                border: none;
+                margin-right: 10px;
+                color: $wbu-border-color;
+                border-top-right-radius: 30px;
+                background: #000000;
+                outline: none;
+                &:hover{
+                    background: rgba(#000000, 0.3);
+                }
+            }
+        }
+        .social-link{
+            margin-top: $space_top *2;
+            display: flex;
+            justify-content: start;
+            align-items: end;
+            .link-list{
+                list-style-type: none;
+                .element{
+                    display: inline-block;
+                    margin-right: $wbu-margin;
+                    .link{
+                        width: 45px;
+                        height: 45px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: rgba(0,0,0,0.2 );
+                        margin-right: calc($wbu-margin - 28px);
+                        color: #b6c0d1;
+                        border-radius: 5px;
+                        &:hover{
+                            background: #000000;
+                            color: $wbu-border-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
