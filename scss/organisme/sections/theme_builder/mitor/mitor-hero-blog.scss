@@ -1,53 +1,76 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 
-.mitor-contact-hero{
-    background: url("http://slidesigma.com/themes/html/mitor/assets/img/coming-soon/banner-3.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 80%;
+.mitor-contact-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 65vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    content: "";
+    position: absolute;
+    background: $wbu-background;
+    opacity: 0.8;
+    z-index: 1;
+    height: 100%;
     width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .titles-handler {
     position: relative;
-    &::before{
-        content: "";
-        position: absolute;
-        background: $wbu-background;
-        opacity: 0.8;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
+    z-index: 3;
+    color: $wbu-border-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+      text-transform: capitalize;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: white;
+      font-size: $wbu-h2-font-size;
     }
-    .titles-handler{
-        position: relative;
-        z-index: 3;
-        color: $wbu-border-color;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        .title{
-            text-transform: capitalize;
-            font-weight: 600;
-            font-size: $wbu-h2-font-size;
-        }
-        .title-desc{
-            .currentroute{
-                color: $wbu-color-text;
-                font-size: $wbu-h5-font-size;
-                opacity: 1;
-                &::before{
-                    content: ".";
-                    font-size: $wbu-h2-font-size;
-                    color: $wbu-border-color;
-                    padding: 0 $wbu-margin * 0.5;
-                    
-                }
-            }
-        }
-
+    .title-desc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: initial;
+      padding: 0;
+      gap: 2rem;
     }
+    .parent-route {
+      font-size: $wbu-default-font-size;
+      color: white;
+      text-transform: capitalize;
+      padding: 1rem 0;
+      margin: 0 1rem;
+      a {
+        display: inline-block;
+        color: white;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &:last-child {
+        pointer-events: none;
+        a {
+          color: black;
+          pointer-events: none;
+        }
+      }
+      &:first-child {
+        list-style: none;
+      }
+    }
+  }
 }

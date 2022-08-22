@@ -5,6 +5,7 @@
   margin-bottom: 4rem;
   box-shadow: 0 0 10px rgb(0 0 0 / 10%);
   transition: ease-in-out 0.3s;
+  position: relative;
   &:hover {
     transform: scale(1.01);
   }
@@ -44,6 +45,8 @@
     padding-left: 0;
     transform: scale(1);
     transition: 0.3s;
+    font-weight: 600;
+    text-transform: capitalize;
     &::after {
       position: relative;
       content: "";
@@ -52,11 +55,11 @@
       transition: 0.3s;
       //top: 1;
       @include wbu__angle-right(black, 11);
+      background-position: center center;
     }
     &:hover {
-      font-weight: 600;
       &::after {
-        @include wbu__angle-right(black, 12);
+        //@include wbu__angle-right(black, 12);
       }
     }
   }
@@ -67,6 +70,23 @@
       width: 4.5rem;
       height: 4.5rem;
       fill: $wbu-background;
+    }
+  }
+  .blog-date {
+    display: none;
+    width: 80px;
+    height: 80px;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: $wbu-background;
+    color: $wbu-border-color;
+    text-align: center;
+    pointer-events: none;
+    .date {
+      display: block;
+      font-size: $wbu-h4-font-size;
     }
   }
   .sc-user-info {
@@ -119,6 +139,11 @@
     }
     .sc-desc {
       @include ellipseText(4);
+    }
+  }
+  &--dateshow {
+    .blog-date {
+      display: block;
     }
   }
   /* modificateur */
