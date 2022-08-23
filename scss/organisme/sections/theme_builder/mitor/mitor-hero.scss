@@ -14,6 +14,7 @@
   justify-content: center;
   position: relative;
   .mitor-card {
+    width: 100%;
     .mc-title {
       color: white;
     }
@@ -33,7 +34,28 @@
   &--un {
     border-radius: 0;
     border-bottom-left-radius: 8%;
-
+    .owl-carousel{
+      display: block;
+    
+      .slider-handler{
+        overflow: hidden;
+      }
+      .owl-dots button{
+        background: #fff !important;
+        width: 15px;
+        height: 15px;
+        border-radius: 26px;
+        margin: 0 5px;
+        transition: 0.3s;
+    }
+    .owl-dots{
+      margin-top: $wbu-margin * 2;
+        text-align: left;
+    }
+    .owl-dots button.active{
+        width: 30px;
+    }
+    }
     .svg-1 {
       svg {
         display: block;
