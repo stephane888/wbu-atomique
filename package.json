@@ -56,7 +56,7 @@
     "imagemin": "^7.0.1",
     "lightgallery": "^2.5.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^7.0.8",
+    "swiper": "^8.3.2",
     "zurb-twentytwenty": "^0.1.1"
   }
 }

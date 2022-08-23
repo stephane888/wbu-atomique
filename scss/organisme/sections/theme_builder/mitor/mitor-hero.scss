@@ -2,7 +2,9 @@
 @use "../../../../_variables.scss" as *;
 @use "./molecule/mitor-card-img.scss";
 @use "./atome/carrousel-nav.scss";
+
 .mitor-hero {
+  width: 100%;
   padding: $space_bottom 0;
   background-color: $wbu-background;
   border-bottom-left-radius: 120px;
@@ -14,7 +16,6 @@
   justify-content: center;
   position: relative;
   .mitor-card {
-    width: 100%;
     .mc-title {
       color: white;
     }
@@ -25,6 +26,9 @@
       }
     }
   }
+  .carousel-hero {
+    padding: 3rem 0;
+  }
 
   .svg-2,
   .svg-3 {
@@ -34,27 +38,27 @@
   &--un {
     border-radius: 0;
     border-bottom-left-radius: 8%;
-    .owl-carousel{
+    .owl-carousel {
       display: block;
-    
-      .slider-handler{
+
+      .slider-handler {
         overflow: hidden;
       }
-      .owl-dots button{
+      .owl-dots button {
         background: #fff !important;
         width: 15px;
         height: 15px;
         border-radius: 26px;
         margin: 0 5px;
         transition: 0.3s;
-    }
-    .owl-dots{
-      margin-top: $wbu-margin * 2;
+      }
+      .owl-dots {
+        margin-top: $wbu-margin * 2;
         text-align: left;
-    }
-    .owl-dots button.active{
+      }
+      .owl-dots button.active {
         width: 30px;
-    }
+      }
     }
     .svg-1 {
       svg {

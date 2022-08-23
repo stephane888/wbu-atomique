@@ -1,23 +1,14 @@
+import Swiper, { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel';
-import 'jquery'
-$(document).ready(function(){
-    $('.slider-handler').owlCarousel({
-        loop: true,
-        margin: 5,
-        nav: true,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000:{
-                items: 2
-            }
-        }
-    })
-})     
+const swiper_un = new Swiper(".carousel-hero", {
+  modules: [Pagination, Navigation],
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  direction: "horizontal",
+  loop: true
+});
+console.log("swiper on", swiper_un);
