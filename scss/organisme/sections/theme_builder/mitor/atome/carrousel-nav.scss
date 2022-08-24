@@ -1,6 +1,6 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 
-.swiper-pagination {
+.carousel-nav {
   display: inline-flex;
   align-items: center;
   position: absolute;
@@ -26,5 +26,14 @@
       border-radius: 10px;
       opacity: 1;
     }
+  }
+  &--right {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10% !important;
+    left: initial !important;
+    right: 30% !important;
+    width: auto !important;
   }
 }
