@@ -1,6 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
-@use "./atome/carrousel-nav.scss";
+@use "./molecule/mitor-footer-last.scss";
 $p-color: darken($wbu-border-color, 10);
 .mitor-footer {
   background: $wbu-background;
@@ -214,35 +214,9 @@ $p-color: darken($wbu-border-color, 10);
   }
 }
 
-.copyright {
-  padding-top: $wbu-margin * 7;
-  display: flex;
-  align-items: center;
-
-  p {
-    margin: 0;
-  }
-
-  .elements {
-    color: white;
-    font-size: $wbu-title-font-size;
-
-    a {
-      color: $wbu-color-boder;
-      text-decoration: none;
-      font-weight: bold;
-
-      &:hover {
-        transition: all 0.3s;
-        color: $wbu-color-primary;
-      }
-    }
-  }
-}
-
 // mitor footer flat design start
 
-.mitor-footer--flat-3{
+.mitor-footer--flat-3 {
   color: #000000;
   padding: $space-bottom 0 $wbu-margin;
 
@@ -254,7 +228,6 @@ $p-color: darken($wbu-border-color, 10);
   }
   .footer-column {
     padding-bottom: 2rem;
-    
   }
   .mc-description {
     font-size: $wbu-default-font-size;
@@ -312,15 +285,15 @@ $p-color: darken($wbu-border-color, 10);
     margin: 0;
   }
 
-  .contact-elements{
+  .contact-elements {
     margin-left: $wbu-margin * -2;
-    
-    .element{
+
+    .element {
       margin-top: $wbu-margin * 0.5;
-     .el{
-      margin-left: $wbu-margin * 0.5;
-      color: rgba($color: #000000, $alpha: 0.6);
-     }
+      .el {
+        margin-left: $wbu-margin * 0.5;
+        color: rgba($color: #000000, $alpha: 0.6);
+      }
     }
   }
   .element {
@@ -467,7 +440,7 @@ $p-color: darken($wbu-border-color, 10);
 }
 
 .copyright {
-  padding: $wbu-margin ;
+  padding: $wbu-margin;
   display: flex;
   align-items: center;
   background: #000000;

@@ -1,6 +1,5 @@
 import Swiper, { Controller, Navigation, Pagination, Thumbs } from "swiper";
 import "swiper/css";
-import "swiper/css/pagination";
 
 const swiper_un = new Swiper(".carousel-hero", {
   modules: [Pagination, Navigation],

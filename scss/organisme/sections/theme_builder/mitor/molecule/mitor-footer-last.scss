@@ -1,0 +1,30 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.mitor-footer-last {
+  background-color: transparent;
+  .copyright {
+    padding-top: $wbu-margin * 7;
+    display: flex;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    .elements {
+      color: white;
+      font-size: $wbu-title-font-size;
+
+      a {
+        color: $wbu-color-boder;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          transition: all 0.3s;
+          color: $wbu-color-primary;
+        }
+      }
+    }
+  }
+}

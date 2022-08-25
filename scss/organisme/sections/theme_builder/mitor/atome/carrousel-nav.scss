@@ -1,5 +1,5 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
-
+@use "swiper/css/pagination";
 .carousel-nav {
   display: inline-flex;
   align-items: center;
