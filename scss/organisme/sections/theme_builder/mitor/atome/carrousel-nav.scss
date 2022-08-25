@@ -1,10 +1,13 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 
-.carrousel-nav {
-  margin: 3rem auto 2rem;
-  display: flex;
+.carousel-nav {
+  display: inline-flex;
   align-items: center;
-  .csl-nav {
+  position: absolute;
+  // bottom: 0%;
+  // z-index: 10;
+  // left: 0;
+  .swiper-pagination-bullet {
     margin: 0 5px;
     display: inline-block;
     margin: 0 5px;
@@ -17,16 +20,20 @@
     opacity: 0.5;
     transition: 0.3s;
     color: transparent;
-    &--active {
+    &-active {
       width: 35px;
       height: 7px;
       border-radius: 10px;
       opacity: 1;
     }
   }
-  &--black {
-    .csl-nav {
-      background-color: #000;
-    }
+  &--right {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10% !important;
+    left: initial !important;
+    right: 30% !important;
+    width: auto !important;
   }
 }

@@ -4,7 +4,9 @@
 @use "./atome/carrousel-nav.scss";
 @use "./atome/mitor-btn.scss";
 @use "./atome/mitor-form-inline.scss";
+
 .mitor-hero-2 {
+  width: 100%;
   padding: $space_bottom * 1.2 0;
   min-height: 100vh;
   display: flex;
@@ -295,6 +297,64 @@
     &::before {
       background-color: $wbu-color-thirdly;
     }
+  }
+}
+.thumbnail-slide {
+  bottom: 8%;
+  right: 0;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .carousel-nav {
+    position: relative;
+    width: auto;
+    margin-right: 2rem;
+    bottom: 0;
+  }
+  img {
+    width: 100%;
+    // max-height: 100%;
+    object-fit: cover;
+    //height: 100%;
+    border-radius: 10px;
+    object-position: center;
+    cursor: pointer;
+  }
+  .thumbnail-swiper {
+    //background-color: red;
+    width: 100%;
+    max-height: 100px;
+    display: none;
+    .swiper-wrapper {
+      height: auto;
+    }
+    .swiper-slide {
+      opacity: 0.6;
+      height: auto;
+    }
+    .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+  @include media-min(DD) {
+    width: 50%;
+    right: 2%;
+    bottom: 5%;
+    justify-content: space-between;
+    .thumbnail-swiper {
+      display: block;
+    }
+  }
+  @include media-min(M) {
+    width: 45%;
+  }
+  @include media-min(L) {
+    width: 35%;
   }
 }
 @keyframes wave {
