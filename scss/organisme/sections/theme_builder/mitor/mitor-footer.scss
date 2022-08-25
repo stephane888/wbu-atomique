@@ -1,11 +1,14 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 @use "./molecule/mitor-footer-last.scss";
+@use "./atome/mitor-btn.scss";
 $p-color: darken($wbu-border-color, 10);
+$color-dark: lighten($wbu-background, 35);
 .mitor-footer {
-  background: $wbu-background;
-  padding: $space-bottom 0 $wbu-margin;
-  display: none;
+  .footer-first {
+    background: $wbu-background;
+    padding: $space-bottom 0;
+  }
 
   .img-logo {
     margin-bottom: 1.5rem;
@@ -23,6 +26,7 @@ $p-color: darken($wbu-border-color, 10);
     font-weight: normal;
     word-break: break-word;
     color: $p-color;
+    letter-spacing: 0.5px;
   }
   .social-bloc {
     display: flex;
@@ -49,25 +53,7 @@ $p-color: darken($wbu-border-color, 10);
       }
     }
   }
-  .inline-link {
-    list-style: none;
-    display: flex;
-    margin-left: auto;
-    padding: 0;
-    font-size: $wbu-default-font-size;
-    flex-wrap: wrap;
-    a {
-      color: white;
-      transition: 0.3s;
-      &:hover {
-        text-decoration: none;
-        color: $wbu-color-primary;
-      }
-    }
-    li {
-      padding: 1rem;
-    }
-  }
+
   p {
     margin: 0;
   }
@@ -117,6 +103,8 @@ $p-color: darken($wbu-border-color, 10);
     & {
       transition: all 0.5s;
       color: $p-color;
+      letter-spacing: 0.5px;
+      padding-bottom: $wbu-margin * 0.8;
     }
 
     &:hover,
@@ -131,15 +119,12 @@ $p-color: darken($wbu-border-color, 10);
     color: white;
     font-weight: bold;
     font-size: $wbu-h5-font-size;
+    text-transform: capitalize;
   }
 
   .links {
     display: block;
     margin-top: $wbu-margin;
-
-    .link {
-      padding-bottom: $wbu-margin * 0.8;
-    }
   }
 
   .description {
@@ -217,8 +202,9 @@ $p-color: darken($wbu-border-color, 10);
 // mitor footer flat design start
 
 .mitor-footer--flat-3 {
-  color: #000000;
-  padding: $space-bottom 0 $wbu-margin;
+  .footer-first {
+    background-color: #ffffff;
+  }
 
   .img-logo {
     margin-bottom: 1.5rem;
@@ -230,11 +216,7 @@ $p-color: darken($wbu-border-color, 10);
     padding-bottom: 2rem;
   }
   .mc-description {
-    font-size: $wbu-default-font-size;
-    line-height: 30px;
-    margin-bottom: 15px;
-    font-weight: normal;
-    word-break: break-word;
+    color: $color-dark;
   }
   .social-bloc {
     display: flex;
@@ -262,25 +244,7 @@ $p-color: darken($wbu-border-color, 10);
       }
     }
   }
-  .inline-link {
-    list-style: none;
-    display: flex;
-    margin-left: auto;
-    padding: 0;
-    font-size: $wbu-default-font-size;
-    flex-wrap: wrap;
-    a {
-      color: white;
-      transition: 0.3s;
-      &:hover {
-        text-decoration: none;
-        color: $wbu-color-primary;
-      }
-    }
-    li {
-      padding: 1rem;
-    }
-  }
+
   p {
     margin: 0;
   }
@@ -351,20 +315,7 @@ $p-color: darken($wbu-border-color, 10);
   }
 
   .head-element {
-    margin-bottom: 2.5rem;
     color: #000000;
-    font-weight: bold;
-    text-transform: capitalize;
-    font-size: $wbu-h5-font-size;
-  }
-
-  .links {
-    display: block;
-    margin-top: $wbu-margin;
-
-    .link {
-      padding-bottom: $wbu-margin * 0.8;
-    }
   }
 
   .description {
@@ -434,33 +385,6 @@ $p-color: darken($wbu-border-color, 10);
         }
 
         color: white;
-      }
-    }
-  }
-}
-
-.copyright {
-  padding: $wbu-margin;
-  display: flex;
-  align-items: center;
-  background: #000000;
-
-  p {
-    margin: 0;
-  }
-
-  .elements {
-    color: white;
-    font-size: $wbu-title-font-size;
-
-    a {
-      color: $wbu-color-boder;
-      text-decoration: none;
-      font-weight: bold;
-
-      &:hover {
-        transition: all 0.3s;
-        color: $wbu-color-primary;
       }
     }
   }
