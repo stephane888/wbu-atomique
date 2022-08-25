@@ -5,6 +5,7 @@ $p-color: darken($wbu-border-color, 10);
 .mitor-footer {
   background: $wbu-background;
   padding: $space-bottom 0 $wbu-margin;
+  display: none;
 
   .img-logo {
     margin-bottom: 1.5rem;
@@ -217,6 +218,259 @@ $p-color: darken($wbu-border-color, 10);
   padding-top: $wbu-margin * 7;
   display: flex;
   align-items: center;
+
+  p {
+    margin: 0;
+  }
+
+  .elements {
+    color: white;
+    font-size: $wbu-title-font-size;
+
+    a {
+      color: $wbu-color-boder;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        transition: all 0.3s;
+        color: $wbu-color-primary;
+      }
+    }
+  }
+}
+
+// mitor footer flat design start
+
+.mitor-footer--flat-3{
+  color: #000000;
+  padding: $space-bottom 0 $wbu-margin;
+
+  .img-logo {
+    margin-bottom: 1.5rem;
+    img {
+      max-width: 100%;
+    }
+  }
+  .footer-column {
+    padding-bottom: 2rem;
+    
+  }
+  .mc-description {
+    font-size: $wbu-default-font-size;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    word-break: break-word;
+  }
+  .social-bloc {
+    display: flex;
+    margin-top: 1.5rem;
+    display: none;
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      fill: $p-color;
+      transition: 0.3s;
+      transform: scale(1);
+    }
+    a {
+      display: inline-block;
+      padding: 1rem;
+      margin-right: 5px;
+      transition: 0.3s;
+      color: $p-color;
+      &:hover {
+        color: white;
+        svg {
+          fill: white;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .inline-link {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    font-size: $wbu-default-font-size;
+    flex-wrap: wrap;
+    a {
+      color: white;
+      transition: 0.3s;
+      &:hover {
+        text-decoration: none;
+        color: $wbu-color-primary;
+      }
+    }
+    li {
+      padding: 1rem;
+    }
+  }
+  p {
+    margin: 0;
+  }
+
+  .contact-elements{
+    margin-left: $wbu-margin * -2;
+    
+    .element{
+      margin-top: $wbu-margin * 0.5;
+     .el{
+      margin-left: $wbu-margin * 0.5;
+      color: rgba($color: #000000, $alpha: 0.6);
+     }
+    }
+  }
+  .element {
+    display: flex;
+    align-items: center;
+    padding-bottom: $wbu-margin * 0.8;
+
+    .icon {
+      border: 2px soliid tomato;
+      color: $wbu-color-primary;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: $wbu-color-primary;
+      fill: #000000;
+    }
+
+    .location {
+      color: white;
+      margin-left: $wbu-margin * 0.8;
+    }
+
+    .email {
+      color: white;
+      margin-left: $wbu-margin * 0.5;
+    }
+
+    a {
+      transition: all 0.5s;
+      color: white;
+      &:hover {
+        text-decoration: none;
+        color: $wbu-color-primary;
+      }
+    }
+  }
+
+  .link {
+    color: rgba($color: #000000, $alpha: 0.6);
+    text-transform: capitalize;
+    margin-top: $wbu-margin * 0.43;
+    a,
+    & {
+      transition: all 0.5s;
+      color: rgba($color: #000000, $alpha: 0.6);
+    }
+
+    &:hover,
+    a:hover {
+      text-decoration: none;
+      color: $wbu-color-primary;
+    }
+  }
+
+  .head-element {
+    margin-bottom: 2.5rem;
+    color: #000000;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: $wbu-h5-font-size;
+  }
+
+  .links {
+    display: block;
+    margin-top: $wbu-margin;
+
+    .link {
+      padding-bottom: $wbu-margin * 0.8;
+    }
+  }
+
+  .description {
+    margin-top: $space_inner_top * 0.6;
+    color: white;
+  }
+
+  .email-form {
+    margin-top: $space_top * 0.5;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+
+    .mail {
+      width: 100%;
+      height: 6rem;
+      border-radius: 60px;
+
+      &:focus {
+        box-shadow: none;
+        border-color: $wbu-color-primary;
+      }
+    }
+    .mitor-btn {
+      margin: 1rem;
+      margin-left: auto;
+    }
+
+    .send {
+      position: relative;
+      height: 60px;
+      background: $wbu-color-primary;
+      margin-left: $wbu-margin * -0.2;
+      border: none;
+      color: black;
+      letter-spacing: 0.5;
+      z-index: 1;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-left: $wbu-margin * 0.3;
+      //white-space: nowrap;
+      padding-right: $wbu-margin * 0.3;
+      //transform: scaleX(1);
+      width: 40%;
+      transition: ease-in-out 0.3s;
+
+      &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: scaleX(0);
+        z-index: -1;
+        position: absolute;
+        background: $wbu-background;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
+      }
+
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+
+        color: white;
+      }
+    }
+  }
+}
+
+.copyright {
+  padding: $wbu-margin ;
+  display: flex;
+  align-items: center;
+  background: #000000;
 
   p {
     margin: 0;
