@@ -46,12 +46,19 @@
   .mpt-img {
     margin-right: 2rem;
     margin-bottom: 2rem;
+    position: relative;
+    transition: 0.3s transform;
 
+    flex-shrink: 0;
+    a {
+      pointer-events: none;
+    }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       max-height: 35rem;
+      transition: 0.3s;
     }
     &--active {
       img {

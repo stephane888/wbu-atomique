@@ -19,7 +19,7 @@
       max-width: 100%;
       object-fit: cover;
     }
-    .social-link{
+    .social-link {
       visibility: hidden;
     }
   }
@@ -89,7 +89,7 @@
         width: 100%;
         object-position: top;
       }
-      .social-link{
+      .social-link {
         visibility: hidden;
       }
     }
@@ -100,16 +100,16 @@
       position: initial;
       background: transparent;
       box-shadow: none;
-      .text-content{
+      .text-content {
         text-align: center;
-        font-style: italic;     
+        font-style: italic;
       }
-      .lutin-info{
-        margin-left: $wbu-margin  * 0.2;
-        .nom{
+      .lutin-info {
+        margin-left: $wbu-margin * 0.2;
+        .nom {
           display: flex;
-          &::before{
-            content: '';
+          &::before {
+            content: "";
             width: 100px;
             height: 3px;
             margin-right: $wbu-margin;
@@ -117,8 +117,7 @@
             background: $wbu-background;
           }
         }
-        .role{
-
+        .role {
           margin-left: $wbu-margin * 6;
         }
       }
@@ -139,7 +138,7 @@
   }
   //class modifier end
   //modifier to skeumorphisme twitter link
-  &--skeumorphisme{
+  &--skeumorphisme {
     justify-content: center;
     align-items: center;
     background: rgba(white, 0.9);
@@ -149,14 +148,14 @@
     .img-handler {
       display: flex;
       justify-content: center;
-      
+
       img {
         object-fit: cover;
         height: 30%;
         border-radius: 50%;
         object-position: top;
       }
-      .social-link{
+      .social-link {
         visibility: visible;
         position: absolute;
         bottom: 0;
@@ -168,14 +167,14 @@
         align-items: center;
         border-radius: 30px;
         background: $wbu-color-thirdly;
-        svg{
+        svg {
           fill: $wbu-border-color;
         }
       }
     }
     .testimony-handler {
       text-align: center;
-      .svg{
+      .svg {
         display: none;
       }
     }
@@ -184,17 +183,17 @@
       background: transparent;
       box-shadow: none;
       width: 100%;
-      .text-content{
+      .text-content {
         text-align: center;
         font-style: italic;
         padding: 0 $wbu-margin;
-        line-height: 30px;     
+        line-height: 30px;
       }
-      .lutin-info{
+      .lutin-info {
         text-align: center;
-       .role{
-        margin-top: $wbu-margin;
-       }
+        .role {
+          margin-top: $wbu-margin;
+        }
       }
       .svg {
         position: absolute;
