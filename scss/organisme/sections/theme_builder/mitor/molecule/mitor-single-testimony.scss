@@ -3,6 +3,7 @@
 .single-testimonial {
   position: relative;
   width: 100%;
+  margin: 0 auto;
   margin-bottom: $wbu-margin * 1.5;
   @include media-max(MD) {
     .testimony-handler {
@@ -82,6 +83,9 @@
     box-shadow: 0 0 10px rgb(0 0 0 / 10%);
     padding: 3rem 2rem;
     border-radius: 10px;
+    @include media-max(XS) {
+      flex-wrap: wrap;
+    }
     .img-handler {
       padding-right: 2rem;
       img {
@@ -116,6 +120,11 @@
             margin-right: $wbu-margin;
             margin-top: $wbu-margin * 0.5;
             background: $wbu-background;
+          }
+          @include media-max(XS) {
+            &::before {
+              display: nonee;
+            }
           }
         }
         .role {
@@ -152,9 +161,10 @@
 
       img {
         object-fit: cover;
-        height: 30%;
         border-radius: 50%;
         object-position: top;
+        max-width: 150px;
+        width: 100%;
       }
       .social-link {
         visibility: visible;
@@ -187,7 +197,6 @@
       .text-content {
         text-align: center;
         font-style: italic;
-        padding: 0 $wbu-margin;
         line-height: 30px;
       }
       .lutin-info {
