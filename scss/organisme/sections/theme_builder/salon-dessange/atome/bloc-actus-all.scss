@@ -1,0 +1,32 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.avis-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  border-radius: 50px;
+  background-color: lighten($wbu-color-boder, 8);
+  .avis-btn {
+    padding: 2rem 3.5rem;
+    min-width: 14rem;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.3s;
+    color: darken($wbu-color-boder, 30);
+    &--active {
+      background-color: white;
+      border-radius: 50px;
+      color: $wbu-color-primary;
+
+      box-shadow: 0 0 10px rgb(0 0 0 / 7%);
+    }
+  }
+}
+@include media-max(MS) {
+}
+@include media-max(SM) {
+}
+@include media-max(XS) {
+}
