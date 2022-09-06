@@ -1,32 +1,33 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
-
-.avis-toggle-btn {
-  display: inline-flex;
+.bloc-actus-all {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 1rem 0;
-  border-radius: 50px;
-  background-color: lighten($wbu-color-boder, 8);
-  .avis-btn {
-    padding: 2rem 3.5rem;
-    min-width: 14rem;
-    cursor: pointer;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.3s;
-    color: darken($wbu-color-boder, 30);
-    &--active {
-      background-color: white;
-      border-radius: 50px;
-      color: $wbu-color-primary;
-
-      box-shadow: 0 0 10px rgb(0 0 0 / 7%);
-    }
+  justify-content: end;
+  max-width: 46rem;
+  margin: 0 auto;
+  font-size: $wbu-h5-font-size;
+}
+.actus__all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+  padding: 20px 0;
+  color: initial;
+  font-size: $wbu-h5-font-size;
+  border-top: 1px solid hsla(0, 0%, 43.9%, 0.3);
+  text-transform: uppercase;
+  line-height: 30px;
+  @include media-max(SM) {
+    display: none;
   }
-}
-@include media-max(MS) {
-}
-@include media-max(SM) {
-}
-@include media-max(XS) {
+  &:hover {
+    text-decoration: none;
+  }
+  .angle-long-right {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    @include wbu__direction-right(black, 20);
+  }
 }

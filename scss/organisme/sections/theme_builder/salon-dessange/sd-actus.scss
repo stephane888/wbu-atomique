@@ -2,6 +2,7 @@
 @use "../../../../_variables.scss" as *;
 @use "./molecule/note-avis.scss";
 @use "./molecule/sd-card-actu.scss";
+@use "./atome/bloc-actus-all.scss";
 
 .sd-actus-section {
   padding: 2rem 0;
@@ -12,36 +13,5 @@
     text-transform: uppercase;
     color: black;
     letter-spacing: 5px;
-  }
-  .bloc-actus-all {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    max-width: 46rem;
-    margin: 0 auto;
-  }
-  .actus__all {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 320px;
-    padding: 20px 0;
-    color: initial;
-    font-size: $wbu-h5-font-size;
-    border-top: 1px solid hsla(0, 0%, 43.9%, 0.3);
-    text-transform: uppercase;
-    line-height: 30px;
-    @include media-max(SM) {
-      display: none;
-    }
-    &:hover {
-      text-decoration: none;
-    }
-    .angle-long-right {
-      content: "";
-      width: 2rem;
-      height: 2rem;
-      @include wbu__direction-right(black, 20);
-    }
   }
 }
