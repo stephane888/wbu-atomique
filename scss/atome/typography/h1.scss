@@ -1,13 +1,9 @@
 // variable;
-@use "../../wbu-ressources.scss" as *;
+@use "../../wbu-ressources-clean.scss" as *;
 @use "./title";
 
 h1 {
-  font-size  : $wbu-h1-font-size;
-  margin     : 0 0 $wbu-h1-margin;
-  line-height: $wbu-h1-line-height;
-  @include media-min('DD') {
-    font-size: $wbu-h1-font-size *1.24;
-  }
+  margin: 0 0 $wbu-h1-margin;
+  @include bp_h1();
 }
 //@debug "****************************************************************************************************** \n : #{$wbu-h1-font-size}";

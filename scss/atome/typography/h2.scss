@@ -1,6 +1,6 @@
-@use "../../wbu-ressources.scss" as *;
+@use "../../wbu-ressources-clean.scss" as *;
 @use "./title";
 
 h2 {
-  font-size: $wbu-h2-font-size;
+  @include bp_h2();
 }

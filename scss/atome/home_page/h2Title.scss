@@ -1,20 +1,17 @@
 /** @format */
-
-@use "../../atome/typography/h2.scss";
-@use "../../defaut/model/custom_bp.scss";
+@use "../../wbu-ressources-clean.scss" as *;
 
 .h2Title {
-	opacity: 1;
-	line-height: 1;
-	//font-weight: bold;
-	text-align: center;
-	font-size: 4.1rem;
+  opacity: 1;
+  line-height: 1;
+  //font-weight: bold;
+  text-align: center;
+  @include bp_h2();
 
-	@media only screen and (max-width: 480px) {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-	}
-	// @include media-min(XS) {
-	//     color:blue;
-	//}
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 1rem;
+  }
+  // @include media-min(XS) {
+  //     color:blue;
+  //}
 }

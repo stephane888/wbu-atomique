@@ -1,0 +1,49 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.mitor-footer-last {
+  background-color: $wbu-background;
+  .copyright {
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    .elements {
+      color: white;
+      font-size: $wbu-title-font-size;
+
+      a {
+        color: $wbu-color-boder;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          transition: all 0.3s;
+          color: $wbu-color-primary;
+        }
+      }
+    }
+    .inline-link {
+      list-style: none;
+      display: flex;
+      margin-left: auto;
+      padding: 0;
+      font-size: $wbu-default-font-size;
+      flex-wrap: wrap;
+      a {
+        color: white;
+        transition: 0.3s;
+        &:hover {
+          text-decoration: none;
+          color: $wbu-color-primary;
+        }
+      }
+      li {
+        padding: 1rem;
+      }
+    }
+  }
+}

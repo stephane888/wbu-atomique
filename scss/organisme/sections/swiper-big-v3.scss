@@ -194,8 +194,8 @@ $d_button: $d_description + 0.2;
         }
         .cover-img {
           img {
-            transform: translateY(40%);
-            margin-top: -40%;
+           // transform: translateY(40%);
+           // margin-top: -40%;
             left: auto;
             right: 0;
           }

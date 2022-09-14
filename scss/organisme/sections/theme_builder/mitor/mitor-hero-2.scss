@@ -41,7 +41,7 @@
 
   .mitor-card__body {
     text-align: center;
-    margin: 1rem auto;
+    margin: 0 auto;
     .mc-title {
       color: white;
       @include bp_h2();
@@ -56,7 +56,14 @@
       margin-top: 6.5rem;
     }
   }
-
+  .swiper {
+    padding: 10rem 0;
+  }
+  .carousel-nav {
+    left: 10%;
+    right: initial;
+    bottom: 0%;
+  }
   .text-black {
     color: black;
   }
