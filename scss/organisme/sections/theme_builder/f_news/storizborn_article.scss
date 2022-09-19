@@ -1,0 +1,53 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "./variables.scss" as *;
+@use "./st_block.scss";
+.st_article {
+    &__authored {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        &__name {
+            color: $wbu-background ;
+        }
+    }
+    &__title {
+        font-size: $wbu-h4-font-size;
+        padding: $wbu-margin;
+        padding-left: 0;
+    }
+    &__content {
+        padding-left: 0;
+        padding: $wbu-margin;
+        &__it {
+            text-decoration: none;
+            display: flex;
+            align-items: flex-start;
+            list-style-type: none;
+        }
+        &_menu {
+            margin-left: 0;
+            padding: 0;
+        }
+    }
+    &__more {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_icon {
+            color: $wbu-background;
+            display: block;
+            height: auto;
+            width: auto;
+            font-size: $wbu-h5-font-size;
+        }
+        &_link {
+            text-decoration: none;
+            color: $wbu-background;
+            font-size: $wbu-h5-font-size;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
