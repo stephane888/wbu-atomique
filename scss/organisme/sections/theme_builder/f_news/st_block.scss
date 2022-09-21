@@ -9,6 +9,8 @@
     }
     &__items {
         margin-top: $wbu-margin;
+        text-decoration: none;
+        list-style-type: none;
         &_menu {
             margin-left: 0;
             padding: 0;
