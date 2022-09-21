@@ -4,6 +4,7 @@
     &__title {
         margin-top: $wbu-margin;
         font-size: $wbu-h3-font-size;
+        text-transform: uppercase;
         border-bottom:1px solid $wbu-background;
     }
     &__items {

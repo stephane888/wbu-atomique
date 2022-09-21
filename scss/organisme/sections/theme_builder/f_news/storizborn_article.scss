@@ -7,27 +7,36 @@
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
+        padding-bottom: $wbu-margin;
         &__name {
             color: $wbu-background ;
+        }
+        &__space {
+            &::after {
+                content: '\00a0';
+            }
+            &::before {
+                content: '\00a0';
+            }
         }
     }
     &__title {
         font-size: $wbu-h4-font-size;
-        padding: $wbu-margin;
-        padding-left: 0;
+        padding-bottom: $wbu-margin;
     }
     &__content {
-        padding-left: 0;
-        padding: $wbu-margin;
-        &__it {
-            text-decoration: none;
-            display: flex;
-            align-items: flex-start;
-            list-style-type: none;
-        }
-        &_menu {
+        padding-bottom: $wbu-margin;
+        text-align: justify;
+        &__menu {
             margin-left: 0;
+            text-align: justify;
             padding: 0;
+            &_it {
+                text-decoration: none;
+                display: flex;
+                align-items: flex-start;
+                list-style-type: none;
+            }
         }
     }
     &__more {
