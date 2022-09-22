@@ -13,10 +13,10 @@
         }
         &__space {
             &::after {
-                content: '\00a0';
+                //content: '\00a0';
             }
             &::before {
-                content: '\00a0';
+                //content: '\00a0';
             }
         }
     }
@@ -27,6 +27,7 @@
     &__content {
         padding-bottom: $wbu-margin;
         text-align: justify;
+        border: 1px solid black;
         &__menu {
             margin-left: 0;
             text-align: justify;
