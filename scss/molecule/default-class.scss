@@ -7,6 +7,11 @@
 @use "./steph/puce-check.scss";
 @use "./steph/puce-dd-check.scss";
 @use "./steph/puce-step-vertical.scss";
+@use "../atome/typography/title.scss";
+@use "../atome/typography/h1.scss";
+@use "../atome/typography/h2.scss";
+@use "../atome/typography/h3.scss";
+@use "../atome/typography/h4.scss";
 
 .space_bottom,
 .space-bottom {
@@ -51,12 +56,3 @@
   max-width: $with_tablet;
 }
 // typography
-.h1 {
-  @include bp_h1();
-}
-.h2 {
-  @include bp_h2();
-}
-.h3 {
-  @include bp_h3();
-}

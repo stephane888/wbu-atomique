@@ -17,7 +17,7 @@
   .co-title {
     color: black;
     line-height: 1;
-    @include bp_h3();
+    @include bp_h1();
     margin-bottom: 1.5rem;
     max-width: 35rem;
     .text-black {
