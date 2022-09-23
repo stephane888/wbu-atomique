@@ -1,8 +1,8 @@
 // variable;
 @use "../../wbu-ressources-clean.scss" as *;
-@use "./title";
 
-h1 {
+h1,
+.h1 {
   margin: 0 0 $wbu-h1-margin;
   @include bp_h1();
 }
