@@ -2,7 +2,6 @@
 @use "./variables.scss" as *;
 @use "./st_block.scss";
 .st_article {
-    border: 1px solid red;
     &__authored {
         display: flex;
         flex-direction: row;
@@ -28,7 +27,6 @@
     &__content {
         padding-bottom: $wbu-margin;
         text-align: justify;
-        border: 1px solid black;
         &__menu {
             margin-left: 0;
             text-align: justify;
