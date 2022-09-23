@@ -2,6 +2,7 @@
 @use "./variables.scss" as *;
 @use "./st_block.scss";
 .st_article {
+    border: 1px solid red;
     &__authored {
         display: flex;
         flex-direction: row;
