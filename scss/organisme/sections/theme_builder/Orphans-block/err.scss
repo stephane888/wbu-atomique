@@ -1,0 +1,25 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.err-section-handler{
+    display: flex;
+    flex-direction: column;
+    background-color: #a9a9a9;
+    min-height: 100vh;
+    .element{
+        background-image: url('https://static.blackfire.io/assets/v788bef4ad0/bundles/blackfire/img/error-400s.png');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: #fff;
+        min-height: 700px;
+    }
+    :is(.err-text, .err-code){
+        margin-left: auto;
+        width: 800px;
+        font-weight: bold;
+        font-size: $wbu-h1-font-size;
+        position: relative;
+        text-transform: capitalize;
+    }
+}
