@@ -1,6 +1,6 @@
 @use "../../wbu-ressources-clean.scss" as *;
-@use "./title";
 
-h3 {
-  @include bp_h1();
+h3,
+.h3 {
+  @include bp_h3();
 }
