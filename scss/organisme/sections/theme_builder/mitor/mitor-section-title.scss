@@ -14,9 +14,9 @@
     .section-title {
       max-width: 700px;
       font-weight: bold;
+      text-transform: capitalize;
       @include bp_h2();
       text-align: center;
-      color: black;
       margin: 0 auto;
       margin-bottom: $wbu-margin;
     }
@@ -55,6 +55,31 @@
       }
       .section-desc {
         font-weight: bold;
+      }
+    }
+  }
+  &--overflowable{
+    overflow: visible;
+    padding: $space-bottom 0;
+    .section-header {
+      max-width: 800px;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 7rem;
+      .section-title {
+        max-width: 700px;
+        font-weight: bold;
+        text-transform: capitalize;
+        @include bp_h2();
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: $wbu-margin;
+      }
+      .section-desc {
+        text-align: center;
+        margin: 0 auto;
+        font-size: $wbu-default-font-size;
+        line-height: 30px;
       }
     }
   }
