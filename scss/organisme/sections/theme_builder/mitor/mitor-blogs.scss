@@ -4,6 +4,12 @@
 
 
 .mitor-blogs-section-handler{
+    .initial{
+        display: none;
+    }
+    .reverse{
+        display: block;
+    }
     .sidebar-widget{
         padding: $wbu-margin 0 0 0 ;
         overflow: hidden;
