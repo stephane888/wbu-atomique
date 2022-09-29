@@ -8,6 +8,9 @@
   align-items: center;
   position: relative;
   justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   &::before {
     content: "";
     position: absolute;

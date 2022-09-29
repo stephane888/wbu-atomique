@@ -81,9 +81,18 @@
     height: 2rem;
   }
 }
-@include media-max(MS) {
-}
-@include media-max(SM) {
-}
-@include media-max(XS) {
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.75);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }

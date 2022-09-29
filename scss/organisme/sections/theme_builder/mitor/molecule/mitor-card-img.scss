@@ -3,6 +3,7 @@
 @use "./achievments-counter.scss";
 @use "../atome/mitor-card__img.scss";
 @use "../atome/mitor-card__body.scss";
+
 .mitor-card {
   justify-content: center;
   align-items: center;
@@ -70,6 +71,62 @@
           z-index: -1;
           border-bottom: 300px solid $wbu-background;
           border-left: 300px solid transparent;
+        }
+      }
+    }
+  }
+  &--carree {
+    .mitor-card__img {
+      &::after {
+        content: "";
+        position: absolute;
+        left: -25px;
+        bottom: 0;
+        width: 250px;
+        height: 50%;
+        z-index: -1;
+        background: $wbu-background;
+      }
+    }
+    &-up {
+      .mitor-card__img {
+        &::after {
+          content: "";
+          position: absolute;
+          left: -25px;
+          top: 0;
+          width: 250px;
+          height: 50%;
+          z-index: -1;
+          background: $wbu-background;
+        }
+      }
+    }
+    &-right {
+      .mitor-card__img {
+        &::after {
+          content: "";
+          position: absolute;
+          right: -25px;
+          bottom: 0;
+          width: 250px;
+          height: 50%;
+          z-index: -1;
+          background: $wbu-background;
+        }
+      }
+      &-up {
+        .mitor-card__img {
+          &::after {
+            content: "";
+            position: absolute;
+            right: -25px;
+            top: 0;
+            width: 250px;
+            height: 50%;
+            z-index: -1;
+            background: $wbu-background;
+          }
         }
       }
     }

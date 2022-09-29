@@ -47,6 +47,9 @@
     transition: 0.3s;
     font-weight: 600;
     text-transform: capitalize;
+    a {
+      color: black;
+    }
     &::after {
       position: relative;
       content: "";
@@ -58,6 +61,9 @@
       background-position: center center;
     }
     &:hover {
+      a {
+        text-decoration: none;
+      }
       &::after {
         //@include wbu__angle-right(black, 12);
       }
@@ -294,6 +300,9 @@
       padding: 2rem;
       padding-left: 0;
       transition: padding 0.4s;
+      a {
+        color: $wbu-background;
+      }
       &::after {
         margin-left: 1rem;
         @include wbu__direction-right(black, 18);
@@ -301,6 +310,9 @@
       &:hover {
         padding-left: 2rem;
         text-decoration: none;
+        a {
+          text-decoration: none;
+        }
         &::after {
           @include wbu__direction-right(black, 18);
         }
@@ -343,6 +355,7 @@
     box-shadow: 0 0 30px rgb(0 0 0 / 10%);
     &:hover {
       transform: initial;
+
       .sc-link {
         &::before {
           border-color: $wbu-background;
@@ -361,13 +374,19 @@
       padding: 2rem;
       padding-left: 0;
       transition: padding 0.4s;
+      a {
+        color: $wbu-background;
+      }
       &::after {
         margin-left: 1rem;
         @include wbu__direction-right(black, 18);
       }
       &:hover {
         padding-left: 2rem;
-        text-decoration: none;
+
+        a {
+          text-decoration: none;
+        }
         &::after {
           @include wbu__direction-right(black, 18);
         }
