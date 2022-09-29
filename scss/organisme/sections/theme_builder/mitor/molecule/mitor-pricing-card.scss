@@ -113,7 +113,7 @@
  
   &--svg-flat {
     //background: teal;
-
+    display: none;
     &::before {
       display: none;
     }
@@ -160,8 +160,79 @@
       }
     }
   }
+  //modifying svg bold start
+  &--svg-bold {
+    //background: teal;
+    
+    &::before {
+      display: none;
+    }
+    .back-svg {
+      display: none;
+      position: absolute;
+      opacity: 0.2;
+    }
+    .head {
+      .head-svg {
+        padding: $wbu-margin;
+        display: block;
+        margin: 0 0 $wbu-margin 0;
+        svg {
+          height: $wbu-titre-big-md;
+          opacity: 0.5;
+          fill: $wbu-background;
+        }
+      }
+      .title {
+        font-size: $wbu-h4-font-size;
+        font-weight: 600;
+      }
+     
+    }
+    .card-bottom{
+      flex-direction: column;
+      .choose{
+        margin: 0 auto;
+        inset: 1;
+        .svg{
+          display: none;
+        }
+      }
+      .price {
+        color: #000000;
+        font-size: $wbu-titre-big-md * 0.5;
+        font-weight: 700;
+        margin: $wbu-margin;  
+      }
+    }
+    .card-middle {
+      border: 0;
+      margin: 0;
+      .elements {
+        border-top: 1px solid $wbu-color-boder ;
+        border-bottom: 1px solid $wbu-color-boder ;
+        padding: $wbu-margin 0 $wbu-margin 0;
+        margin: 0;
+        .element {
+          border: none;
+          &:first-child{
+            //padding: $wbu-margin  ;
+            //border-top: 1px solid $wbu-color-boder;
+          }
+          &:last-child{
+            //border-bottom: 1px solid $wbu-color-boder;
+          }
+          margin: 0;
+          
+          padding: $wbu-margin;
+        }
+      }
+    }
+  }
+  //modifying svg bold end
   //modifier for pricing with counter
   &--plan-counter {
+    display: none;
     &::before {
       display: none;
     }
