@@ -5,17 +5,17 @@ const swiper_un = new Swiper(".carousel-hero", {
   modules: [Pagination, Navigation],
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   direction: "horizontal",
-  loop: true
+  loop: true,
 });
 
 const project_tabs = new Swiper(".project-tabs", {
   modules: [Pagination],
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   slideClass: "mpt-img",
   slideActiveClass: "mpt-img--active",
@@ -28,12 +28,12 @@ const project_tabs = new Swiper(".project-tabs", {
   breakpoints: {
     769: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 20,
     },
     1200: {
-      slidesPerView: 3
-    }
-  }
+      slidesPerView: 3,
+    },
+  },
 });
 
 const thumbs = new Swiper(".thumbnail-swiper", {
@@ -42,19 +42,19 @@ const thumbs = new Swiper(".thumbnail-swiper", {
   spaceBetween: 5,
   slidesPerView: 3,
   slidesPerScroll: 5,
-  slideToClickedSlide: true
+  slideToClickedSlide: true,
 });
 var thum_swiper = new Swiper(".thumbs-carousel", {
   modules: [Pagination, Controller, Thumbs],
   loop: true,
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   thumbs: {
     swiper: thumbs,
-    autoScrollOffset: 1
-  }
+    autoScrollOffset: 1,
+  },
 });
 
 /**
@@ -64,7 +64,7 @@ const carousel_testy = new Swiper(".carousel-testy", {
   modules: [Pagination],
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   loopedSlides: 4,
   spaceBetween: 20,
@@ -74,19 +74,19 @@ const carousel_testy = new Swiper(".carousel-testy", {
   breakpoints: {
     993: {
       slidesPerView: 2,
-      spaceBetween: 30
-    }
-  }
+      spaceBetween: 30,
+    },
+  },
 });
 const carousel_testy_nav = new Swiper(".carousel-testy-nav", {
   modules: [Pagination, Navigation],
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    prevEl: ".swiper-button-prev",
   },
   loopedSlides: 4,
   spaceBetween: 10,
@@ -97,19 +97,19 @@ const carousel_testy_nav = new Swiper(".carousel-testy-nav", {
     1200: {
       centeredSlides: true,
       slidesPerView: 2,
-      spaceBetween: 40
-    }
-  }
+      spaceBetween: 40,
+    },
+  },
 });
 const carousel_testy_nav_ronded = new Swiper(".carousel-testy-nav-rond", {
   modules: [Pagination, Navigation],
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    prevEl: ".swiper-button-prev",
   },
   loopedSlides: 4,
   spaceBetween: 20,
@@ -119,12 +119,12 @@ const carousel_testy_nav_ronded = new Swiper(".carousel-testy-nav-rond", {
   breakpoints: {
     992: {
       slidesPerView: 2,
-      spaceBetween: 40
+      spaceBetween: 40,
     },
     1200: {
       slidesPerView: 3,
-      spaceBetween: 40
-    }
-  }
+      spaceBetween: 40,
+    },
+  },
 });
-console.log("swiper on", swiper_un);
+console.log("swiper on : ", swiper_un);
