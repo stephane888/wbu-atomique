@@ -1,44 +1,32 @@
 body {
-  color: $text_normal;  
+  color: $text_normal;
 }
 
 h1,
 .h1 {
-  font-size: 1.8em;
-  @include media-min(MD) {
-  	font-size: 2.5em;
-  }
+  @include bp_h1();
 }
 
 h2,
 .h2 {
-  font-size: 1.4em;
-  @include media-min(MD) {
-  	font-size: 2em;
-  }
+  @include bp_h2();
 }
 
 h3,
 .h3 {
-  font-size: 1.2em;
-  @include media-min(MD) {
-  	font-size: 1.75em;
-  }
+  @include bp_h3();
 }
 
 h4,
 .h4 {
-  font-size: 1em;
-  @include media-min(MD) {
-  	font-size: 1.5em;
-  }
+  @include bp_h4();
 }
 
 h5,
 .h5 {
   font-size: 1em;
   @include media-min(MD) {
-  	font-size: 1.25em;
+    font-size: 1.25em;
   }
 }
 
@@ -46,26 +34,27 @@ h6,
 .h6 {
   font-size: 1em;
 }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-	margin-bottom: 0.4em;	
-}
-
-/**
- * Boutons
- */
-.btn{
-	font-size: 1em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 0.4em;
 }
 
 /**
  * form col-auto.
  */
-form{
-	.js-form-item.col-auto{
-		padding-right: 0;
-		padding-left: 0;
-	}	
+form {
+  .js-form-item.col-auto {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
-
-
-
