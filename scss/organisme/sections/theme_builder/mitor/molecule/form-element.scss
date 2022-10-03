@@ -1,0 +1,21 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.form-handler{
+    margin-top: $wbu-margin * 2;
+    .input-field-handler{
+        margin-bottom: $wbu-margin;
+        .field{
+            padding: $wbu-margin ;
+            width: 100%;
+            border-radius: 50px;
+            margin: calc($wbu-margin - 22px) 0;
+            border: 1px solid $wbu-border-color;
+            outline: none;
+            transition: box-shadow .3s ease-in;
+            &:focus{
+                border: 0;
+                box-shadow: 0 0 20px rgb(0 0 0 /10%);
+            }
+        }
+    }
+}
