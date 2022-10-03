@@ -31,13 +31,21 @@
     .posted-date {
       display: none;
     }
-    .blog-title {
+    a {
+      color: black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .blog-title,
+    a {
       color: black;
       font-weight: 600;
       transition: 0.3s;
       cursor: pointer;
       word-break: break-word;
-      &:hover {
+      &:hover,
+      a:hover {
         text-decoration: none;
       }
     }
@@ -81,6 +89,13 @@
       }
       .small-blog-content {
         display: none;
+      }
+    }
+    .img-handler {
+      img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
       }
     }
     .lnk {
