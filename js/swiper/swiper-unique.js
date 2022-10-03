@@ -8,7 +8,7 @@ var mySwiper = new Swiper(".swiper-unique", {
   direction: "horizontal",
   loop: true,
   pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
-  //grabCursor: true,
+  // grabCursor: true,
   speed: 1000,
   parallax: true,
   // effect: "slide",
@@ -16,5 +16,5 @@ var mySwiper = new Swiper(".swiper-unique", {
   autoplay: {
     delay: 12000,
   },
-  //autoplay: false,
+  // autoplay: false,
 });

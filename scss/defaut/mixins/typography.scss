@@ -62,3 +62,17 @@
     font-size: $wbu-h4-font-size;
   }
 }
+
+/**
+ *  Breack point h4.
+ */
+@mixin bp_h5() {
+  font-size: $wbu-h5-font-size;
+}
+
+/**
+ *  Breack point h4.
+ */
+@mixin bp_h6() {
+  font-size: $wbu-h6-font-size;
+}
