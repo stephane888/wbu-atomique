@@ -15,7 +15,6 @@
       max-width: 700px;
       font-weight: bold;
       text-transform: capitalize;
-      @include bp_h2();
       text-align: center;
       margin: 0 auto;
       margin-bottom: $wbu-margin;
@@ -70,7 +69,6 @@
         max-width: 700px;
         font-weight: bold;
         text-transform: capitalize;
-        @include bp_h2();
         text-align: center;
         margin: 0 auto;
         margin-bottom: $wbu-margin;

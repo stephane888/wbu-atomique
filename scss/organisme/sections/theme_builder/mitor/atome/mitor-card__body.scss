@@ -9,11 +9,9 @@
     width: 100%;
     word-break: break-word;
     line-height: 1.4;
-    @include bp_h3();
   }
   .mc-small {
     margin-bottom: 1.5rem;
-    font-size: $wbu-default-font-size;
     color: black;
   }
   .mc-description {
