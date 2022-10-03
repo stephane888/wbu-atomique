@@ -127,6 +127,7 @@
         background: $wbu-color-boder;
         border-radius: 50%;
         color: $wbu-background;
+        display: inline-flex;
         svg {
           width: 1.5rem;
           height: 1.7rem;
@@ -239,13 +240,13 @@
         margin: 0;
         .element {
           border: none;
-          &:first-child {
-            //padding: $wbu-margin  ;
-            //border-top: 1px solid $wbu-color-boder;
-          }
-          &:last-child {
-            //border-bottom: 1px solid $wbu-color-boder;
-          }
+          // &:first-child {
+          //padding: $wbu-margin  ;
+          //border-top: 1px solid $wbu-color-boder;
+          // }
+          //  &:last-child {
+          //border-bottom: 1px solid $wbu-color-boder;
+          // }
           margin: 0;
 
           padding: $wbu-margin;
