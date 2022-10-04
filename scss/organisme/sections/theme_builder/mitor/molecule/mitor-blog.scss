@@ -26,6 +26,13 @@
       }
     }
   }
+  .img-handler {
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
   .blog-card-body {
     padding: $wbu-margin;
     .posted-date {
@@ -49,13 +56,22 @@
         text-decoration: none;
       }
     }
+    .blog-title {
+      @include ellipseText(3);
+    }
     .small-blog-content {
       margin-top: $wbu-margin;
       line-height: 30px;
+      @include ellipseText(3);
     }
     .lnk {
-      width: 16%;
+      display: flex;
+      gap: 1.5rem;
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
+
     .more-lnk {
       color: black;
       text-transform: capitalize;
@@ -90,16 +106,17 @@
       .small-blog-content {
         display: none;
       }
+      .lnk {
+        display: none;
+      }
     }
     .img-handler {
       img {
         width: 70px;
         height: 70px;
         object-fit: cover;
+        max-width: initial;
       }
-    }
-    .lnk {
-      display: none;
     }
   }
 }
