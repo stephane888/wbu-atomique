@@ -1,0 +1,28 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.mitor-category-tag {
+  list-style-type: none;
+  padding: $wbu-margin * 0.5 0;
+  border-bottom: 1px solid $wbu-background;
+
+  .link-element {
+    color: $wbu-background;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .category-name {
+    text-transform: capitalize;
+    font-weight: 500;
+    @include cover-link();
+  }
+  a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .category {
+    text-transform: capitalize;
+  }
+}

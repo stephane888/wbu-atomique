@@ -47,7 +47,7 @@
     .blog-title,
     a {
       color: black;
-      font-weight: 600;
+      font-weight: 500;
       transition: 0.3s;
       cursor: pointer;
       word-break: break-word;
@@ -57,6 +57,7 @@
       }
     }
     .blog-title {
+      color: black;
       @include ellipseText(3);
     }
     .small-blog-content {
@@ -75,11 +76,22 @@
     .more-lnk {
       color: black;
       text-transform: capitalize;
-      font-weight: 600;
+      font-weight: 500;
       transition: 0.3s;
       background: transparent;
       display: flex;
       justify-content: space-between;
+      gap: 0.9rem;
+      &::after {
+        content: "";
+        position: relative;
+        height: 2.2rem;
+        width: 2.3rem;
+        transition: transform ease 0.3s, background-image ease 0.3s;
+        top: -1px;
+        @include wbu__angle-right(black, 12);
+        background-position: center;
+      }
     }
   }
   &--flex-minimize {

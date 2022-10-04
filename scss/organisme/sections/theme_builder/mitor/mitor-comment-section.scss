@@ -1,0 +1,15 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+.mitor-comment-section {
+  padding: 0 0 $wbu-margin * 0.5 0;
+  overflow: hidden;
+  margin-bottom: $wbu-margin * 3;
+  border-bottom: 1px solid #eee;
+  .mcs-title {
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0 auto 4rem;
+    font-weight: 500;
+    color: black;
+  }
+}
