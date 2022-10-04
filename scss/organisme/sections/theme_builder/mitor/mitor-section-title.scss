@@ -90,4 +90,12 @@
       background-color: $wbu-background;
     }
   }
+  &--item-midle-border {
+    .items {
+      .item:nth-child(2) {
+        border-left: 1px solid $wbu-color-boder;
+        border-right: 1px solid $wbu-color-boder;
+      }
+    }
+  }
 }

@@ -1,26 +1,33 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
-.proposition{
-    display: flex;
-    padding: $wbu-margin;
-    margin-top: $wbu-margin ;
-    box-shadow: 0 0 20px rgb(0 0 0 /10%);
-    .svg-handler{
-        margin-right: $wbu-margin;
-        .svg{
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $wbu-border-color;
-            background: linear-gradient(to left, #000000, $wbu-background);
-        }
+.proposition {
+  display: flex;
+  padding: $wbu-margin;
+  margin-top: $wbu-margin;
+  box-shadow: 0 0 20px rgb(0 0 0 /10%);
+  gap: 2rem;
+  @include media-max(XS) {
+    flex-wrap: wrap;
+  }
+  p {
+    margin: 0;
+  }
+  .svg-handler {
+    //margin-right: $wbu-margin;
+    .svg {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $wbu-border-color;
+      background: linear-gradient(to left, #000000, $wbu-background);
     }
-    .service-proposition{
-        line-height: 30px;
-        font-weight: normal;
-        word-break: break-word;
-    }
+  }
+  .service-proposition {
+    line-height: 30px;
+    font-weight: normal;
+    word-break: break-word;
+  }
 }
