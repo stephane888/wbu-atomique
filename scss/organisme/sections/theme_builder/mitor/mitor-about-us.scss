@@ -1,0 +1,88 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+.mitor-about-us-section-handler{
+    img{
+            margin: $wbu-margin*1.5 auto;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .about-quote{
+            background: #fff;
+            position: absolute;
+            bottom: 40px;
+            right: 100px;
+            padding: $wbu-margin*2;
+            max-width: 450px;
+            box-shadow: 0 0 20px rgb(0 0 0 /10%);
+            .small-title{
+                margin-left: $wbu-margin*2;
+                margin-top: $wbu-margin ;
+                color: #000000;
+                text-transform: capitalize;
+            }
+            .shape{
+                width: 40px;
+                height: 2px;
+                position: absolute;
+                bottom: 57;
+                left: 30;
+                background: #000000;
+            }
+            .qicon{
+                color: rgb(0 0 0 /30%);
+            }
+            .quote{
+                font-weight: bold;
+                color: #000000;
+                margin-bottom: $wbu-margin * 0.5;
+            }
+        }
+        .about{
+            margin-top: $wbu-margin * 2;
+        }
+    .about-content{
+       
+        .shape{
+            width: 40px;
+            height: 2px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background: #000000;
+        }
+        .small-title{
+            margin-left: $wbu-margin*2;
+            margin-top: $wbu-margin * 0.25;
+            color: #000000;
+            text-transform: capitalize;
+        }
+        .about-title{
+            color: #222;
+            margin: 0 auto $wbu-margin ;
+            width: 100%;
+            word-break: break-word;
+            line-height: 1.4;
+            font-weight: bold;
+        }
+        :is(.first-p, .second-p){
+            line-height: 30px;
+            margin-top: $wbu-margin;
+            margin-bottom: $wbu-margin * 0.5;
+            word-break: break-word;
+        }
+        .btn-learn-more{
+            color: #fff;
+            background: #000000;
+            border-color: #000000;
+            box-shadow: 0 0 12px rgb(120 113 105 / 60%);
+            display: inline-block;
+            padding: $wbu-btn-border-radius * 0.3 $wbu-btn-border-radius;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: capitalize;
+            margin-top: $wbu-margin*2;
+            transition: .3s;
+        }
+    }
+}

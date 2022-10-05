@@ -4,5 +4,27 @@
 .mitor-core-value-section-handler{
     background: #000000;
     color: #fff;
+    display: none;
+
+    &--bg-img{
+        color: #fff;
+        height: 100vh;
+        background: url(https://ludoviccreative.com/storage/2022/05/3-450x328.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        &::before{
+            content: '';
+            top: 0;
+            position: absolute;
+            z-index: 0.5;
+            background-color: rgb(42 44 46 / 90%);
+            width: 100%;
+            height: 100vh;
+        }
+        .section-header{
+         position: relative;
+        }
+    }
 
 }
