@@ -24,9 +24,15 @@
   .sc-title {
     font-weight: 500;
     color: black;
-    font-size: $wbu-h5-font-size;
+    // font-size: $wbu-h5-font-size;
     margin-bottom: 1rem;
     @include ellipseText(2);
+    a,
+    & {
+      font-weight: 500;
+      color: black;
+      text-decoration: none;
+    }
   }
   .sc-desc {
     font-size: $wbu-default-font-size;
@@ -44,12 +50,18 @@
     align-items: center;
     padding: 1rem;
     padding-left: 0;
-    transform: scale(1);
-    transition: 0.3s;
-    font-weight: 500;
+    position: relative;
     text-transform: capitalize;
+    &,
     a {
+      transform: scale(1);
+      transition: 0.3s;
+      font-weight: 500;
       color: black;
+    }
+    a {
+      @include cover-link();
+      line-height: 1.5;
     }
     &::after {
       position: relative;
