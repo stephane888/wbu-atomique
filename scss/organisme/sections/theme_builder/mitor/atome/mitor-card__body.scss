@@ -13,6 +13,17 @@
   .mc-small {
     margin-bottom: 1.5rem;
     color: black;
+    &--line {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      &::before {
+        content: "";
+        position: relative;
+        width: 55px;
+        border: 1px solid black;
+      }
+    }
   }
   .mc-description {
     font-size: $wbu-default-font-size;
