@@ -11,8 +11,9 @@ $color-dark: lighten($wbu-background, 35);
   }
   .footer-middle {
     margin-bottom: -2rem;
+    margin-top: 2rem;
     .fm-content {
-      border-top: 1px solid gray;
+      border-top: 1px solid rgba($wbu-color-boder, 0.25);
       padding-top: $space-bottom;
     }
   }

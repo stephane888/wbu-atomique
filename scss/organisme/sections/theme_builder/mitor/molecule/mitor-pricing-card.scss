@@ -51,7 +51,7 @@
       color: $wbu-background;
       text-transform: capitalize;
       margin: 0 auto $wbu-margin;
-      font-weight: 500;
+      font-weight: 600;
       width: 100%;
       word-break: break-all;
       line-height: $wbu-h3-line-height;
@@ -96,7 +96,7 @@
       padding: $wbu-btn-padding-x-sm;
       border: 1px solid $wbu-background;
       color: black;
-      font-weight: 500;
+      font-weight: 600;
       border-radius: 50px;
       margin: calc($wbu-margin - 12px) 0;
       display: flex;
@@ -182,7 +182,7 @@
       }
       .title {
         //font-size: $wbu-h3-font-size;
-        font-weight: 500;
+        font-weight: 600;
       }
       .price {
         // font-size: $wbu-h1-font-size-md;
