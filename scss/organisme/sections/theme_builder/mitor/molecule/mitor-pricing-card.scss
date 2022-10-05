@@ -32,7 +32,7 @@
     display: none;
   }
   .counter-handler {
-    visibility: hidden;
+    display: none;
   }
   p {
     margin: 0;
@@ -59,14 +59,17 @@
     .price {
       color: $wbu-background;
       //font-size: $wbu-titre-big-md;
+      text-align: center;
     }
     .price-duration {
+      margin-left: 4px;
       display: none;
       font-size: $wbu-h5-font-size;
       font-weight: 400;
       color: lighten($wbu-background, 30);
     }
   }
+
   .card-middle {
     padding: $wbu-margin;
     border-top: 1px solid rgba(0, 0, 0, 10%);
@@ -187,6 +190,10 @@
       .price {
         // font-size: $wbu-h1-font-size-md;
         font-weight: 700;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .price-duration {
         display: inline-block;
