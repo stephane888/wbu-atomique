@@ -201,6 +201,9 @@
         font-weight: 400;
         color: lighten($wbu-background, 30);
       }
+      .first-price {
+        display: none;
+      }
     }
     .card-middle {
       border: 0;
