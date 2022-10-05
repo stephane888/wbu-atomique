@@ -99,4 +99,29 @@
       }
     }
   }
+  &--color-middle {
+    .items {
+      .item:nth-child(2) {
+        .services-list {
+          .bg-icon::before {
+            background-color: $wbu-color-secondary;
+          }
+        }
+      }
+      .item:nth-child(5) {
+        .services-list {
+          .bg-icon::before {
+            background-color: $wbu-color-secondary;
+          }
+        }
+      }
+      .item:nth-child(3) {
+        .services-list {
+          .bg-icon::before {
+            background-color: $wbu-color-thirdly;
+          }
+        }
+      }
+    }
+  }
 }
