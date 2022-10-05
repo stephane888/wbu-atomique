@@ -7,7 +7,17 @@ $color-dark: lighten($wbu-background, 35);
 .mitor-footer {
   .footer-first {
     background: $wbu-background;
-    padding: $space-bottom 0;
+    padding: $space-bottom 0 $space-bottom * 0.8;
+  }
+  .footer-middle {
+    margin-bottom: -2rem;
+    .fm-content {
+      border-top: 1px solid gray;
+      padding-top: $space-bottom;
+    }
+  }
+  .ff-content {
+    padding-bottom: 2rem;
   }
 
   .img-logo {
@@ -57,7 +67,17 @@ $color-dark: lighten($wbu-background, 35);
   p {
     margin: 0;
   }
+  .gallery-img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 
+    img {
+      width: 7rem;
+      height: 7rem;
+      object-fit: cover;
+    }
+  }
   .element {
     display: flex;
     align-items: center;
@@ -95,7 +115,9 @@ $color-dark: lighten($wbu-background, 35);
       }
     }
   }
-
+  a {
+    color: $p-color;
+  }
   .link {
     color: $p-color;
 

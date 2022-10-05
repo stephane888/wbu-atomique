@@ -111,11 +111,23 @@
       .item:nth-child(5) {
         .services-list {
           .bg-icon::before {
-            background-color: $wbu-color-secondary;
+            background-color: $wbu-color-primary;
+          }
+          .icon {
+            svg {
+              fill: $wbu-color-teal;
+            }
           }
         }
       }
       .item:nth-child(3) {
+        .services-list {
+          .bg-icon::before {
+            background-color: $wbu-color-thirdly;
+          }
+        }
+      }
+      .item:nth-child(7) {
         .services-list {
           .bg-icon::before {
             background-color: $wbu-color-thirdly;

@@ -330,6 +330,9 @@
       }
       .first-price {
         display: block;
+        .price {
+          display: block;
+        }
       }
     }
     .card-middle {
