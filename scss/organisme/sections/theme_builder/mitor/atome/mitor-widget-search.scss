@@ -1,0 +1,33 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.search-widget {
+  display: flex;
+  box-shadow: 0 0 10px $wbu-color-boder;
+  padding: $wbu-btn-padding-y-sm * 0.2;
+  border: 1px solid $wbu-color-boder;
+  border-radius: 5px;
+  margin-bottom: $wbu-margin * 2;
+  .mycustom {
+    padding: calc($wbu-btn-padding-x-sm - 7px);
+
+    .input {
+      border: none;
+      outline: 0;
+      &:focus,
+      &:active {
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .btn-primary {
+    box-shadow: none;
+    border-radius: 5px;
+    background: $wbu-background;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 2;
+    border: 1px solid transparent;
+    color: white;
+  }
+}

@@ -244,13 +244,24 @@
 }
 
 /**
- * @stane faire la desciption.
+ * Permet de definir le nombre de ligne max a afficher
  */
 @mixin ellipseText($ligne: 2) {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: $ligne;
   overflow: hidden;
+}
+
+@mixin cover-link() {
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 //https://codepen.io/wabeshew/pen/XdbBdM

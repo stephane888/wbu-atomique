@@ -1,0 +1,76 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.mitor-media-link {
+  display: flex;
+  align-items: center;
+  padding: $wbu-margin;
+  border-bottom: 1px solid #eee;
+  margin-bottom: $wbu-margin * 2;
+  .caption {
+    font-weight: 800;
+    margin-right: $wbu-margin;
+    text-transform: capitalize;
+    font-size: $wbu-h5-font-size;
+  }
+  .elements {
+    .element {
+      list-style-type: none;
+      display: inline-block;
+    }
+    .fb {
+      .link {
+        background: #3b5999;
+        height: 20px;
+        width: 20px;
+        line-height: $wbu-margin * 2;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+    }
+    .tter {
+      .link {
+        background: #399fed;
+        height: 20px;
+        width: 20px;
+        line-height: $wbu-margin * 2;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+    }
+    .msenger {
+      .link {
+        background: #0084ff;
+        height: 20px;
+        width: 20px;
+        line-height: $wbu-margin * 2;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+    }
+    .prest {
+      .link {
+        background: #bd081c;
+        height: 20px;
+        width: 20px;
+        line-height: $wbu-margin * 2;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+    }
+    .wtsap {
+      .link {
+        background: #25d366;
+        height: 20px;
+        width: 20px;
+        line-height: $wbu-margin * 2;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+    }
+  }
+}

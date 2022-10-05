@@ -13,7 +13,6 @@
     margin-bottom: 7rem;
     .section-title {
       max-width: 700px;
-      font-weight: bold;
       text-transform: capitalize;
       text-align: center;
       margin: 0 auto;
@@ -57,7 +56,7 @@
       }
     }
   }
-  &--overflowable{
+  &--overflowable {
     overflow: visible;
     padding: $space-bottom 0;
     .section-header {
@@ -89,6 +88,14 @@
       height: 310px;
       width: 100%;
       background-color: $wbu-background;
+    }
+  }
+  &--item-midle-border {
+    .items {
+      .item:nth-child(2) {
+        border-left: 1px solid $wbu-color-boder;
+        border-right: 1px solid $wbu-color-boder;
+      }
     }
   }
 }

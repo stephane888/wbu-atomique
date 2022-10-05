@@ -1,0 +1,14 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+.sidebar-widget {
+  padding: 0 0 $wbu-margin 0;
+  overflow: hidden;
+  margin-bottom: $wbu-margin * 0.5;
+  .widget-title {
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0 auto 2rem;
+    font-weight: 500;
+    color: black;
+  }
+}

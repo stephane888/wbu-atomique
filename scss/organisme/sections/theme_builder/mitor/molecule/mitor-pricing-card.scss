@@ -9,7 +9,7 @@
   border-radius: 10px;
   padding: calc($wbu-margin - 12px);
   transition: 0.3s;
-  margin: calc($wbu-margin - 12px) 0;
+  margin-bottom: 3rem;
   //background-color: white;
   &:hover {
     box-shadow: 0 0 30px rgb(0 0 0 / 20%);
@@ -34,8 +34,16 @@
   .counter-handler {
     visibility: hidden;
   }
+  p {
+    margin: 0;
+  }
   .head {
     padding: $wbu-btn-padding-y-sm * 0.5;
+    .first-price {
+      padding-top: 1rem;
+      margin-bottom: 1.5rem;
+      display: none;
+    }
     .head-svg {
       display: none;
     }
@@ -50,7 +58,13 @@
     }
     .price {
       color: $wbu-background;
-      font-size: $wbu-titre-big-md;
+      //font-size: $wbu-titre-big-md;
+    }
+    .price-duration {
+      display: none;
+      font-size: $wbu-h5-font-size;
+      font-weight: 400;
+      color: lighten($wbu-background, 30);
     }
   }
   .card-middle {
@@ -72,8 +86,11 @@
     margin-bottom: $wbu-margin * 0.3;
     display: flex;
     justify-content: center;
+    .price {
+      display: none;
+    }
     .choose {
-      width: 60%;
+      min-width: 60%;
       line-height: 40px;
       text-align: center;
       padding: $wbu-btn-padding-x-sm;
@@ -147,6 +164,11 @@
       display: block;
       position: absolute;
       opacity: 0.2;
+      svg {
+        fill: $wbu-background;
+        width: 10rem;
+        height: 10rem;
+      }
     }
     .head {
       .head-svg {
@@ -154,19 +176,23 @@
         display: block;
         svg {
           fill: $wbu-background;
+          width: 4.5rem;
+          height: 4.5rem;
         }
       }
       .title {
-        font-size: $wbu-h3-font-size;
+        //font-size: $wbu-h3-font-size;
         font-weight: 600;
       }
       .price {
-        font-size: $wbu-titre-big-md * 0.5;
+        // font-size: $wbu-h1-font-size-md;
         font-weight: 700;
-        &::after {
-          content: "/year";
-          font-size: $wbu-titre-big-md * 0.3;
-        }
+      }
+      .price-duration {
+        display: inline-block;
+        font-size: $wbu-h5-font-size;
+        font-weight: 400;
+        color: lighten($wbu-background, 30);
       }
     }
     .card-middle {
@@ -182,6 +208,18 @@
           margin: 0;
           border-bottom: 1px solid $wbu-color-boder;
           padding: $wbu-margin;
+        }
+      }
+    }
+    .card-bottom {
+      .choose {
+        &:hover {
+          text-decoration: none;
+          background: $wbu-background;
+          color: $white;
+          .svg {
+            background: $wbu-background;
+          }
         }
       }
     }
@@ -204,14 +242,14 @@
         display: block;
         margin: 0 0 $wbu-margin 0;
         svg {
-          height: $wbu-titre-big-md;
+          height: 6rem;
+          width: 6rem;
           opacity: 0.5;
           fill: $wbu-background;
         }
       }
-      .title {
-        font-size: $wbu-h4-font-size;
-        font-weight: 600;
+      .price {
+        display: none;
       }
     }
     .card-bottom {
@@ -224,6 +262,7 @@
         }
       }
       .price {
+        display: block;
         color: #000000;
         font-size: $wbu-titre-big-md * 0.5;
         font-weight: 700;
@@ -257,7 +296,12 @@
   //modifying svg bold end
   //modifier for pricing with counter
   &--plan-counter {
-    display: none;
+    box-shadow: unset;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &:hover {
+      box-shadow: unset;
+    }
     &::before {
       display: none;
     }
@@ -280,9 +324,30 @@
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       }
     }
+    .head {
+      .price {
+        display: none;
+      }
+      .first-price {
+        display: block;
+      }
+    }
     .card-middle {
       border-top: 0;
       padding-top: $wbu-margin * 0.1;
+    }
+    .card-bottom {
+      .choose {
+        border-radius: 10px;
+        .svg {
+          background-color: transparent;
+        }
+        &:hover {
+          .svg {
+            background-color: #000000;
+          }
+        }
+      }
     }
   }
 }
