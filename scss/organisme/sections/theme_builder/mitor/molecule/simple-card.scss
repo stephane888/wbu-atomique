@@ -62,6 +62,7 @@
     a {
       @include cover-link();
       line-height: 1.5;
+      font-weight: bold;
     }
     &::after {
       position: relative;
@@ -74,6 +75,7 @@
       background-position: center center;
     }
     &:hover {
+      text-decoration: none;
       a {
         text-decoration: none;
       }
@@ -133,7 +135,10 @@
       font-size: $wbu-default-font-size;
       color: lighten($wbu-color-text, 20);
       text-transform: capitalize;
-      white-space: nowwrap;
+      white-space: nowrap;
+      a {
+        color: lighten($wbu-color-text, 20);
+      }
     }
   }
 

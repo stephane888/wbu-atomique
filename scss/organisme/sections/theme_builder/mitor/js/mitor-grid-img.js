@@ -7,7 +7,7 @@ import Thum from "lightgallery/plugins/thumbnail";
 
 lightGallery(document.getElementById("mitor-top-project"), {
   plugins: [lgZoom, Thum],
-  selector: ".grid-img",
+  selector: ".grid-item a",
   hideControlOnEnd: true,
   backdropDuration: 100,
   speed: 500,
