@@ -1,77 +1,77 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 
-.contact-card-handler{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid $wbu-border-color;
-    width: 70%;
-    height: 76%;
-    padding: $wbu-margin calc($wbu-margin * 2.8);
-    margin: 0 auto;
-    border-radius: 20px;
-    .contact-info{
-        .icon-info{
-            margin-bottom: $wbu-margin;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: $wbu-h2-font-size;
-            color: #000000;
-            border: 1px  solid #000000;
-            border-radius: 50%;
-        }
-        .info-title{
-            color: #000000;
-            text-transform: capitalize;
-            font-weight: 600;
-            margin-bottom: $wbu-margin;
-        }
-        .location{
-            text-transform: capitalize;
-            line-height: 30px;
-            margin-bottom: $wbu-margin;
-        }
-        .phone-number-handler{
-            margin-bottom: $wbu-margin;
-        }
-        .mail-handler{
-            margin-bottom: $wbu-margin;
-        }
+.contact-card-handler {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid $wbu-border-color;
+  width: 70%;
+  height: 76%;
+  padding: $wbu-margin calc($wbu-margin * 2.8);
+  margin: 0 auto;
+  border-radius: 20px;
+  .contact-info {
+    .icon-info {
+      margin-bottom: $wbu-margin;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $wbu-h2-font-size;
+      color: #000000;
+      border: 1px solid #000000;
+      border-radius: 50%;
     }
-    .media-list {
-        padding-top: $wbu-margin * 0.3;
-        list-style-type: none;
-        margin-left: 0;
-        padding-left: 0;
-        display: inline-flex;
-        .element {
-          list-style-type: none;
-          .link {
-            text-decoration: none;
-            color: $wbu-background;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            margin: $wbu-margin * 0.4 $wbu-margin * 0.2;
-            border: 1px solid $wbu-color-secondary;
-            &:hover {
-              background: $wbu-background;
-              text-decoration: none;
-              border: none;
-              i {
-                svg {
-                  fill: $wbu-border-color;
-                }
-              }
+    .info-title {
+      color: #000000;
+      text-transform: capitalize;
+      font-weight: 500;
+      margin-bottom: $wbu-margin;
+    }
+    .location {
+      text-transform: capitalize;
+      line-height: 30px;
+      margin-bottom: $wbu-margin;
+    }
+    .phone-number-handler {
+      margin-bottom: $wbu-margin;
+    }
+    .mail-handler {
+      margin-bottom: $wbu-margin;
+    }
+  }
+  .media-list {
+    padding-top: $wbu-margin * 0.3;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline-flex;
+    .element {
+      list-style-type: none;
+      .link {
+        text-decoration: none;
+        color: $wbu-background;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: $wbu-margin * 0.4 $wbu-margin * 0.2;
+        border: 1px solid $wbu-color-secondary;
+        &:hover {
+          background: $wbu-background;
+          text-decoration: none;
+          border: none;
+          i {
+            svg {
+              fill: $wbu-border-color;
             }
           }
         }
       }
+    }
+  }
 }

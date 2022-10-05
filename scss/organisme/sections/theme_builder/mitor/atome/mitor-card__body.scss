@@ -19,7 +19,7 @@
     line-height: 30px;
     margin-bottom: 15px;
     font-weight: normal;
-    color: darken($wbu-border-color, 50);
+    color: lighten($wbu-color-text, 20);
     ul {
       list-style: none;
       margin-top: 2rem;
@@ -57,7 +57,7 @@
       h5 {
         font-weight: bold;
         color: black;
-        font-size: $wbu-default-font-size;
+        //font-size: $wbu-default-font-size;
       }
       li {
         position: relative;

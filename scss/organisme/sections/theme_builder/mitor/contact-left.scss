@@ -1,36 +1,36 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 @use "./atome/mitor-btn.scss";
-.mitor-right-contact{
-    box-sizing: border-box;
-    .contact-head{
-        //padding: $wbu-margin * 2;
-        .title{
-            font-weight: 600;
-            color: #000000;
-            line-height: 4rem;
-        }
-        .description{
-            margin-top: $wbu-margin;
-        }
+.mitor-right-contact {
+  box-sizing: border-box;
+  .contact-head {
+    //padding: $wbu-margin * 2;
+    .title {
+      font-weight: 500;
+      color: #000000;
+      line-height: 4rem;
     }
-    .form-handler{
-        margin-top: $wbu-margin * 2;
-        .input-field-handler{
-            margin-bottom: $wbu-margin;
-            .field{
-                padding: $wbu-margin ;
-                width: 100%;
-                border-radius: 50px;
-                margin: calc($wbu-margin - 22px) 0;
-                border: 1px solid $wbu-border-color;
-                outline: none;
-                transition: box-shadow .3s ease-in;
-                &:focus{
-                    border: 0;
-                    box-shadow: 0 0 20px rgb(0 0 0 /10%);
-                }
-            }
-        }
+    .description {
+      margin-top: $wbu-margin;
     }
+  }
+  .form-handler {
+    margin-top: $wbu-margin * 2;
+    .input-field-handler {
+      margin-bottom: $wbu-margin;
+      .field {
+        padding: $wbu-margin;
+        width: 100%;
+        border-radius: 50px;
+        margin: calc($wbu-margin - 22px) 0;
+        border: 1px solid $wbu-border-color;
+        outline: none;
+        transition: box-shadow 0.3s ease-in;
+        &:focus {
+          border: 0;
+          box-shadow: 0 0 20px rgb(0 0 0 /10%);
+        }
+      }
+    }
+  }
 }
