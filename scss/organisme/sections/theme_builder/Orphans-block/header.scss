@@ -1,0 +1,15 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.top-header-teaser{
+    background-color: $wbu-background;
+    color: $wbu-color-boder;
+    padding: $wbu-margin*0.2 $wbu-margin*2 ;
+    .linker{
+        color: $wbu-color-boder;
+        font-size: $wbu-h6-font-size;
+    }
+    :is(.location, .phone){
+        color: $wbu-color-thirdly;
+    }
+}
