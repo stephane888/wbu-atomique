@@ -1,13 +1,13 @@
 /** @format */
 
-@use "../../wbu-ressources.scss";
+@use "../../wbu-ressources-clean.scss" as *;
 
 .subDescription {
-	display: block;
-	margin-top: 2rem;
-	font-size: 1.4rem;
-	color: #585858;
-	margin-bottom: 0;
-	line-height: 1.6;
-	font-weight: 300;
+  display: block;
+  margin-top: $wbu-margin;
+  //font-size: 1.4rem;
+  color: #585858;
+  margin-bottom: 0;
+  line-height: 1.6;
+  //font-weight: 300;
 }
