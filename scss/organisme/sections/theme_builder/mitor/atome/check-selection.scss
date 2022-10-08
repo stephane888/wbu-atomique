@@ -1,0 +1,66 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.check-selection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  //padding-top: 2rem;
+  margin-bottom: 7rem;
+  .nav-pills {
+    height: 30px;
+    border: 1px solid $wbu-background;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    position: relative;
+  }
+  .tab-switch-tex {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    font-size: $wbu-h5-font-size;
+    gap: 1rem;
+    .item-text,
+    .tab-pane {
+      display: inline-block;
+    }
+    .item-txt.active {
+      font-weight: bold;
+      color: black;
+    }
+  }
+  .separateur {
+    padding: 5px 10px;
+    vertical-align: middle;
+    font-size: 22px;
+    color: gray;
+  }
+  .nav-link {
+    position: relative;
+    transition: all 200ms linear;
+    list-style: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-top: -4px;
+    color: rgba(0, 0, 0, 0);
+    z-index: 2;
+    &:hover {
+      text-decoration: none;
+    }
+    &.active {
+      position: relative;
+      background-color: $wbu-background;
+      box-shadow: 0 0 12px rgb(120 113 105 / 60%);
+      border: 1px solid $wbu-background;
+      transition: padding ease-in 0.3s;
+      z-index: 2;
+      &::before {
+        border: 1px solid transparent;
+        width: 0;
+      }
+    }
+  }
+}
