@@ -9,7 +9,46 @@
         color: $wbu-color-boder;
         font-size: $wbu-h6-font-size;
     }
+    .appName{
+        color: $wbu-color-boder;
+    }
     :is(.location, .phone){
         color: $wbu-color-thirdly;
+    }
+    .joinBtn{
+        color: $wbu-color-boder;
+        background: $wbu-color-teal;
+        padding: $wbu-margin * 0.5;
+        text-align: center;
+    }
+    .social-links{
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        align-items: center;
+        .link{
+            color: $wbu-color-boder;
+
+            &:hover{
+                color: $wbu-color-boder;
+            }
+        }
+    }
+    .right-link{
+        display: flex;
+        width: auto;
+        justify-content: space-between;
+    }
+    .page-linker{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .linker{
+            color: $wbu-color-boder;
+            &:hover{
+                color: $wbu-color-boder;
+            }
+            font-size: $wbu-h5-font-size;
+        }
     }
 }
