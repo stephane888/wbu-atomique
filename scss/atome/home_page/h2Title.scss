@@ -1,17 +1,17 @@
-/** @format */
-@use "../../wbu-ressources-clean.scss" as *;
+// /** @format */
+// @use "../../wbu-ressources-clean.scss" as *;
 
-.h2Title {
-  opacity: 1;
-  line-height: 1;
-  //font-weight: bold;
-  text-align: center;
-  @include bp_h2();
+// .h2Title {
+//   opacity: 1;
+//   line-height: 1;
+//   //font-weight: bold;
+//   text-align: center;
+//   @include bp_h2();
 
-  @media only screen and (max-width: 480px) {
-    margin-bottom: 1rem;
-  }
-  // @include media-min(XS) {
-  //     color:blue;
-  //}
-}
+//   @media only screen and (max-width: 480px) {
+//     margin-bottom: 1rem;
+//   }
+//   // @include media-min(XS) {
+//   //     color:blue;
+//   //}
+// }

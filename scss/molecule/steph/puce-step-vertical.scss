@@ -1,19 +1,21 @@
 @use "../../wbu-ressources-clean.scss" as *;
+$puce_width: 30px;
 .puce-step-vertical {
   > li {
     margin-bottom: $wbu-margin;
     list-style-type: none;
     counter-increment: repas; /* on incrémente le compteur à chaque nouveau li */
-    display: flex;
-    align-items: baseline;
+    //display: flex;
+    //align-items: baseline;
     position: relative;
+    padding-left: $puce_width * 2;
     &::before {
       content: counter(repas); /* on affiche le compteur */
       background-color: $wbu-color-primary;
       color: #fff;
       display: inline-flex;
-      width: 30px;
-      height: 30px;
+      width: $puce_width;
+      height: $puce_width;
       justify-content: center;
       align-items: center;
       line-height: 100%;
@@ -23,15 +25,16 @@
       border: 3px solid #fff;
       z-index: 5;
       position: relative;
+      margin-left: -$puce_width * 2;
     }
     &::after {
       content: "";
-      height: 100%;
+      height: calc(100% + #{$wbu-margin});
       width: 3px;
       background-color: $wbu-color-primary;
       position: absolute;
-      left: 15px;
-      top: 80%;
+      left: $puce_width * 0.5;
+      top: 25%;
       z-index: 2;
     }
     &:last-child::after {

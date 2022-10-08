@@ -1,54 +1,59 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables" as *;
 
-.pub-teaser-handler{
+.pub-sublime-section {
+  background: url("https://preview.colorlib.com/theme/sublime/images/xavds_xl.jpg.pagespeed.ic.hPLCuIxgvV.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  .pub-teaser-handler {
     width: 100%;
-    height: 354px;
-    overflow: hidden;
-    padding: $wbu-margin;
-    .pub{
-        background: url("https://preview.colorlib.com/theme/sublime/images/xavds_xl.jpg.pagespeed.ic.hPLCuIxgvV.webp");
-        padding: $wbu-margin;
-        position: absolute;
-        top: 0;
-        //left: 0;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+    min-height: 360px;
+    //overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    //padding: $wbu-margin;
+    .pub {
+      //padding: $wbu-margin;
+      //position: absolute;
+      //top: 0;
+      //left: 0;
+      //width: 100%;
+      //height: 100%;
     }
-    .banner{
-        display: flex;
-        justify-content: end;
-        padding: $wbu-margin;
+    .banner {
+      display: flex;
+      justify-content: end;
+      padding: $wbu-margin;
     }
-    .content{
-        background: $wbu-color-primary;
-        width: 40rem;
-        padding: $wbu-margin;
-        overflow: hidden;
-        .title{
-            color: $wbu-border-color;
-            font-weight: $wbu-title-font-weight;
-            font-size: $wbu-h2-font-size;
-            padding-left: $wbu-margin ;
-            padding-bottom: $wbu-margin ;
+    .content {
+      background: $wbu-color-primary;
+      width: 40rem;
+      padding: $wbu-margin;
+      overflow: hidden;
+      .title {
+        color: $wbu-border-color;
+        font-weight: $wbu-title-font-weight;
+        font-size: $wbu-h2-font-size;
+        padding-left: $wbu-margin;
+        padding-bottom: $wbu-margin;
+      }
+      .text {
+        color: $wbu-border-color;
+        padding-left: $wbu-margin;
+        line-height: 2.5rem;
+      }
+      .more {
+        margin-top: $wbu-margin * 0.7;
+        width: fit-content;
+        margin-left: $wbu-margin;
+        border-bottom: 1px solid $wbu-border-color;
+        .link {
+          //margin-left: $wbu-margin;
+          color: $wbu-border-color;
         }
-        .text{
-            color: $wbu-border-color;
-            padding-left: $wbu-margin;
-            line-height: 2.5rem;
-        }
-        .more{
-            margin-top: $wbu-margin * 0.7;
-            width: fit-content;
-            margin-left: $wbu-margin;
-            border-bottom: 1px solid $wbu-border-color;
-            .link{
-                //margin-left: $wbu-margin;
-                color: $wbu-border-color;
-            }
-        }
+      }
     }
+  }
 }

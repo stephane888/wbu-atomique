@@ -1,11 +1,11 @@
-@use "../../wbu-ressources.scss" as *;
+@use "../../wbu-ressources-clean.scss" as *;
 
 .socials-items {
   align-items: center;
 
   .socials-item {
-    color    : inherit;
-    padding  : 0 $wbu-margin/2;
+    color: inherit;
+    padding: 0 $wbu-margin/2;
     font-size: $wbu-default-font-size + 0.1rem;
   }
 }

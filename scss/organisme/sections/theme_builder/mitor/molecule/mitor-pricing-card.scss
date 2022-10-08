@@ -17,7 +17,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -71px;
+    top: -72px;
     left: 65px;
     width: 0;
     height: 0;
@@ -60,9 +60,9 @@
       color: $wbu-background;
       //font-size: $wbu-titre-big-md;
       text-align: center;
+      font-weight: 600;
     }
     .price-duration {
-      margin-left: 4px;
       display: none;
       font-size: $wbu-h5-font-size;
       font-weight: 400;
@@ -91,6 +91,7 @@
     justify-content: center;
     .price {
       display: none;
+      font-weight: 600;
     }
     .choose {
       min-width: 60%;
@@ -307,8 +308,7 @@
   //modifier for pricing with counter
   &--plan-counter {
     box-shadow: unset;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 0;
     &:hover {
       box-shadow: unset;
     }
@@ -316,15 +316,12 @@
       display: none;
     }
     .counter-handler {
-      //background: seagreen;
       width: 60%;
       border: 1px solid $wbu-color-boder;
       border-radius: 5px;
       margin: $wbu-margin auto;
       display: flex;
       justify-content: center;
-      //background: tomato;
-      visibility: visible;
       .ctrlBtn {
         padding: $wbu-margin * 0.5 $wbu-margin;
         border: none;
@@ -350,6 +347,95 @@
       padding-top: $wbu-margin * 0.1;
     }
     .card-bottom {
+      .choose {
+        border-radius: 10px;
+        .svg {
+          background-color: transparent;
+        }
+        &:hover {
+          .svg {
+            background-color: #000000;
+          }
+        }
+      }
+    }
+  }
+  &--plan-option {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      display: none;
+    }
+    .counter-handler {
+      display: none;
+    }
+    .head {
+      padding-top: 0;
+      .price {
+        display: block;
+        color: inherit;
+        font-weight: bold;
+      }
+      .first-price {
+        display: none;
+      }
+      .price-duration {
+        display: inline-block;
+      }
+      .head-svg {
+        padding: 2rem;
+        display: block;
+        svg {
+          width: 5rem;
+          height: 5rem;
+          fill: #000000;
+        }
+      }
+    }
+    .card-middle {
+      order: 3;
+      border-top: 0;
+      padding-top: $wbu-margin * 0.1;
+      margin-bottom: 0;
+      .elements .element {
+        margin: 0;
+        padding: 2rem;
+      }
+    }
+
+    .element {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border-top: 1px solid #f4f4f4;
+      min-height: 5rem;
+      line-height: 1.5;
+      &::before {
+        content: "";
+        position: relative;
+        margin-right: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 1;
+        fill: black;
+        border-radius: 50%;
+        @include wbu__svg-puce-check(#000000, 25);
+        background-position: center;
+      }
+      &--disable {
+        text-decoration: line-through;
+        color: darken($wbu-border-color, 15);
+        &::before {
+          box-shadow: 0 0 2px $wbu-color-primary;
+          @include wbu-close($wbu-color-primary, 16);
+        }
+      }
+    }
+    .card-bottom {
+      order: 2;
+      margin: 2rem 0 2.5rem;
       .choose {
         border-radius: 10px;
         .svg {

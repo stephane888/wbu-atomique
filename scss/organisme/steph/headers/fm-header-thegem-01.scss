@@ -6,7 +6,7 @@ $wbu-default-font-size-head: $wbu-default-font-size - 0.1rem;
   font-size: $wbu-default-font-size-head;
 
   .item {
-    margin-top   : $wbu-margin/1.7;
+    margin-top: $wbu-margin/1.7;
     margin-bottom: $wbu-margin/1.7;
   }
 
@@ -27,10 +27,10 @@ $wbu-default-font-size-head: $wbu-default-font-size - 0.1rem;
     .angle-right {
       &::before {
         @include wbu__angle-right();
-        content     : "";
-        display     : inline-block;
-        width       : $wbu-default-font-size-head - 0.45rem;
-        height      : $wbu-default-font-size-head - 0.45rem;
+        content: "";
+        display: inline-block;
+        width: $wbu-default-font-size-head - 0.45rem;
+        height: $wbu-default-font-size-head - 0.45rem;
         margin-right: 0.3rem;
       }
     }
