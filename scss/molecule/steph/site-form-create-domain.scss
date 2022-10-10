@@ -265,7 +265,7 @@ $width_checkbox: 300px;
     max-width: 500px;
     .puce-step-vertical.step-build {
       font-weight: 600;
-      @include bp_h3();
+      @include bp_h4();
       margin-bottom: $space_top;
       margin-top: $space_top;
       padding-left: 0;
