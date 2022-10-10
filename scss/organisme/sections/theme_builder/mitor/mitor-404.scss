@@ -2,12 +2,16 @@
 @use "../../../../_variables.scss" as *;
 @use "./atome/mitor-btn.scss";
 .mitor-404-section-handler{
-    background: url("http://slidesigma.com/themes/html/mitor/assets/img/coming-soon/banner-3.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    img{
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
     &::before{
         content: "";
         position: absolute;
@@ -21,13 +25,27 @@
     }
     .msg-404{
         height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
         position: relative;
-        z-index: 3;
+        .img-404-handler{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                margin-top: $wbu-margin;
+                position: relative;
+                z-index: 3;
+                width: 80%;
+            }
+            
+        }
+        
+    }
+       
         .content{
+            text-align: center;
+            position: relative;
+            z-index: 3;
             .title{
                 margin-top: $wbu-margin * 2;
                 color: $wbu-border-color;
@@ -43,5 +61,5 @@
             margin-top: $wbu-margin * 2;
             text-align: center;
         }
-    }
+    
 }
