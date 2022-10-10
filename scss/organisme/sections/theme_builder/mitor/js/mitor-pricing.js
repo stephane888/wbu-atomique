@@ -1,48 +1,52 @@
-const $ = (selector) => { return document.querySelector(selector) }
-let monthly = $('#monthly')
-let yearly = $('#yearly')
-
-monthly.onclick = () => {
-    if (monthly.classList[1] == 'target') {
-        monthly.classList.remove("target")
-        monthly.classList.add('untarget')
-        yearly.classList.remove('untarget')  
-        yearly.classList.add('target')
+(function () {
+  console.log("pricing-increment chargée");
+  function selectAllElement() {
+    let table = document.querySelectorAll(".er-handler");
+    if (table) {
+      return Array.from(table);
     }
-     if(monthly.classList[1] == 'untarget') {
-        monthly.classList.remove("untarget")
-        monthly.classList.add('target')    
-        yearly.classList.remove('target')  
-        yearly.classList.add('untarget')
+    return [];
+  }
+  function setInputIncrement(el) {
+    let input = el.querySelector('input[data-input="quantity"');
+    input.setAttribute("min", 1);
+    input.setAttribute("max", 10);
+
+    let value = parseInt(input.value, 10);
+    const minVal = parseInt(input.min, 10);
+    const maxVal = parseInt(input.max, 10);
+    let increment = el.querySelector('[data-type="plus"]');
+    let decrement = el.querySelector('[data-type="minus"]');
+    if (input && increment && decrement) {
+      increment.addEventListener("click", function (e) {
+        e.preventDefault();
+        //if(input.val)
+        // if (input.value)
+        let realVal = parseInt(input.value, 10);
+        if (realVal + 1 <= maxVal) {
+          input.value++;
+        } else {
+          input.value = minVal;
+        }
+      });
+      decrement.addEventListener("click", function (e) {
+        e.preventDefault();
+        let realVal = parseInt(input.value, 10);
+        if (realVal - 1 > minVal) {
+          input.value--;
+        } else {
+          input.value = minVal;
+        }
+      });
     }
-}
+  }
 
-yearly.onclick = () => {
-    if (yearly.classList[1] == 'target') {
-        yearly.classList.remove("target")
-        yearly.classList.add('untarget')
-        monthly.classList.remove('untarget')  
-        monthly.classList.add('target')
-    } 
-     if(yearly.classList[1] == 'untarget') {
-        yearly.classList.remove("untarget")
-        yearly.classList.add('target')    
-        monthly.classList.remove('target')  
-        monthly.classList.add('untarget')
+  window.addEventListener("load", function () {
+    const allInput = selectAllElement();
+    if (allInput.length) {
+      for (let input of allInput) {
+        setInputIncrement(input);
+      }
     }
-}
-
-// click count function for pricing derived
-
-let addBtn = $('#increment')
-let removeBtn = $('#decrement')
-let counter = $('#counterValue').value
-
-addBtn.onclick = () => {
-    counter ++
-}
-
-
-removeBtn.onclick = () => {
-    counter --
-}
+  });
+})();
