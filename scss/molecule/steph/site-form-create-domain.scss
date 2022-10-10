@@ -309,7 +309,7 @@ $width_checkbox: 300px;
   //
   .last-stepe {
     .step-donneesite--label {
-      @include bp_h2();
+      @include bp_h3();
     }
   }
 }
