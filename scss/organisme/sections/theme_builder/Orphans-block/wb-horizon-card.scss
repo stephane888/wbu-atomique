@@ -1,0 +1,22 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+.card-teaser-handler{
+    .all-cards-wrap{
+        background: rgba(0, 0, 0, 0.27);
+        height: 400px;
+        padding: $wbu-margin;
+        .single-card{
+            max-width: 30rem;
+            max-height: 100%;
+            img{
+                height: 15rem;
+            }
+            .card-text{
+                width: fit-content;
+                height: 15rem;
+                overflow: hidden;
+            }
+        }
+    }
+}
