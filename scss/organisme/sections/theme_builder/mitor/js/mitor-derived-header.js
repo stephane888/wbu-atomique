@@ -23,7 +23,6 @@ const swiper_blog = new Swiper(".blog-carousel", {
   spaceBetween: 20,
   slidesPerView: 1,
   grabCursor: true,
-  watchSlidesVisibility: true,
   breakpoints: {
     769: {
       slidesPerView: 2,
@@ -31,6 +30,27 @@ const swiper_blog = new Swiper(".blog-carousel", {
     },
     1300: {
       slidesPerView: 3
+    }
+  }
+});
+const project_card = new Swiper(".project-card", {
+  direction: "horizontal",
+  loopedSlides: 10,
+  loop: true,
+  spaceBetween: 20,
+  slidesPerView: 1,
+  grabCursor: true,
+  breakpoints: {
+    769: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1300: {
+      slidesPerView: 4
     }
   }
 });

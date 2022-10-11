@@ -1,5 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
+@use "./atome/mitor-mpt-image.scss";
 
 .mitor-project-tab {
   position: relative;
@@ -8,9 +9,7 @@
 
     @include media-min();
   }
-  .swiper {
-    // overflow: initial;
-  }
+
   .col-12 {
     @include media-min(MD) {
       position: absolute;
@@ -58,29 +57,6 @@
         padding: 15px 20px;
         border-radius: 0;
         transition: 0.3s;
-      }
-    }
-  }
-  .mpt-img {
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    position: relative;
-    transition: 0.3s transform;
-
-    flex-shrink: 0;
-    a {
-      pointer-events: none;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      max-height: 38rem;
-      transition: 0.3s;
-    }
-    &--active {
-      img {
-        min-height: 55rem;
       }
     }
   }

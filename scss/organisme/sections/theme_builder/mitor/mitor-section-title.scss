@@ -139,6 +139,25 @@
   &--absolute-content {
     padding: $space-bottom * 1.8 0;
   }
+  &--text-left {
+    .section-header {
+      margin: 0;
+      display: block;
+      margin-bottom: 7rem;
+      .section-title {
+        text-align: left;
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+      .section-desc {
+        text-align: left;
+      }
+    }
+    .mitor-project-tab {
+      .mpt-tabs {
+      }
+    }
+  }
   .tree-card-carousel {
     .tcc-content {
       @include media-min(DD) {
