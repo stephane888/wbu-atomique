@@ -79,7 +79,7 @@
 
     position: absolute;
     bottom: 17%;
-    left: 10%;
+
     display: flex;
     justify-content: center;
     @include media-max(SM) {
@@ -88,6 +88,9 @@
       margin: 3rem;
       width: auto;
       left: initial;
+    }
+    @include media-max(MD) {
+      left: 20%;
     }
   }
 }
@@ -297,4 +300,12 @@
 }
 .bloc-carousel {
   position: relative;
+}
+.carousel-rond {
+  .swiper-pagination-bullet {
+    background-color: $wbu-color-primary;
+    &-active {
+      opacity: 1;
+    }
+  }
 }

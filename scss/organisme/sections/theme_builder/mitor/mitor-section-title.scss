@@ -136,4 +136,51 @@
       }
     }
   }
+  &--absolute-content {
+    padding: $space-bottom * 1.8 0;
+  }
+  .tree-card-carousel {
+    .tcc-content {
+      @include media-min(DD) {
+        padding-left: 4rem !important;
+      }
+    }
+    .blog-carousel {
+      @include media-min(DD) {
+        margin-left: 4rem !important;
+      }
+    }
+    @include media-min(DD) {
+      position: absolute;
+      width: 100%;
+      right: 0;
+      padding-left: 0 !important;
+      .tcc-content {
+        padding-left: 0rem !important;
+      }
+    }
+    @include media-min(M) {
+      right: -20px;
+      padding-left: 0 !important;
+    }
+    @include media-min(LM) {
+      right: -50px;
+      padding-left: 4rem !important;
+      .tcc-content {
+        padding-left: 4rem !important;
+      }
+    }
+    @include media-min(L) {
+      right: -70px;
+      padding-left: 6rem !important;
+      .tcc-content {
+        padding-left: 6rem !important;
+      }
+    }
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
 }
