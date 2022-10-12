@@ -3,19 +3,54 @@
 
 .card-teaser-handler{
     .all-cards-wrap{
-        background: rgba(0, 0, 0, 0.27);
         height: 400px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         padding: $wbu-margin;
         .single-card{
             max-width: 30rem;
             max-height: 100%;
+            margin: $wbu-margin;
             img{
-                height: 15rem;
+                height: 50%;
             }
+            .card-title{
+                font-weight: bold;
+            }
+            .sticker{
+                background: purple;
+                position: relative;
+                display: flex;
+                justify-content: end;
+                // left: auto;
+                // right: -5;
+                //  margin-top: $wbu-margin*-2;
+                //  display: flex;
+                //  justify-content: end;
+                 .icon{
+                    position: absolute;
+                    margin-right: $wbu-margin;
+                margin-top: $wbu-margin*-2;
+                      background: $wbu-color-text;
+                      padding: $wbu-margin;
+                 }
+                 svg{
+                     color: $wbu-color-boder;
+                     
+                 }
+             }
+             
+            .card-body{
+                height: 50%;
+                
+            }
+            
             .card-text{
                 width: fit-content;
                 height: 15rem;
                 overflow: hidden;
+                font-size: $wbu-h6-font-size;
             }
         }
     }
