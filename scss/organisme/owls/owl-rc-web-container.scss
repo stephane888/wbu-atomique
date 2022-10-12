@@ -2,17 +2,23 @@
 
 .owl-rc-web-container {
   $width-button: $wbu-margin * 4;
-  .owl-carousel {
-    max-width: $with_container;
-  }
   overflow: hidden;
   position: relative;
-
   width: 100%;
   .owl-carousel {
+    max-width: $with_container;
     margin-left: auto;
     margin-right: auto;
     position: unset;
+    .owl-stage {
+      display: flex;
+      align-items: stretch;
+      .owl-item {
+        > div {
+          height: 100%;
+        }
+      }
+    }
   }
   .owl-stage-outer {
     padding-top: $wbu-margin * 0.5;
