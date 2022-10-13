@@ -70,17 +70,17 @@
           text-align: right;
           h4 {
             cursor: pointer;
-            font-size: 1.3rem;
+            //font-size: 1.3rem;
             font-weight: 700;
-            line-height: 22px;
+            //line-height: 22px;
             -webkit-transition: all 0.2s linear;
             -moz-transition: all 0.2s linear;
             -o-transition: all 0.2s linear;
             transition: all 0.2s linear;
           }
           .description {
-            font-size: $wbu-default-font-size;
-            line-height: $wbu-default-line-height;
+            //font-size: $wbu-default-font-size;
+            //line-height: $wbu-default-line-height;
           }
         }
       }
@@ -137,19 +137,16 @@
             }
           }
           .text {
+            font-size: $wbu-default-font-size-sm;
             h4 {
               cursor: pointer;
-              font-size: $wbu-title-font-size;
+              //font-size: $wbu-title-font-size;
               font-weight: 700;
               line-height: 22px;
               -webkit-transition: all 0.2s linear;
               -moz-transition: all 0.2s linear;
               -o-transition: all 0.2s linear;
               transition: all 0.2s linear;
-            }
-            p {
-              font-size: 14px;
-              line-height: 26px;
             }
           }
         }
