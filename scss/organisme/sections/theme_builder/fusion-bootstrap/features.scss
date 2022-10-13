@@ -68,6 +68,7 @@
         }
         .text {
           text-align: right;
+          font-size: $wbu-default-font-size-sm;
           h4 {
             cursor: pointer;
             //font-size: 1.3rem;
@@ -77,10 +78,6 @@
             -moz-transition: all 0.2s linear;
             -o-transition: all 0.2s linear;
             transition: all 0.2s linear;
-          }
-          .description {
-            //font-size: $wbu-default-font-size;
-            //line-height: $wbu-default-line-height;
           }
         }
       }
