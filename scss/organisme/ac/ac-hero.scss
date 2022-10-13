@@ -57,8 +57,9 @@
       left: 0;
       width: auto;
       height: auto;
-      max-width: 500px;
+      max-width: 1900px;
       max-height: 1900px;
+      min-height: 100%;
       @include media-min("MD") {
         max-width: 700px;
       }
