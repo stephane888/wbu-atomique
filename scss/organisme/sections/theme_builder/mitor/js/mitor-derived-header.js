@@ -51,6 +51,12 @@ const project_card = new Swiper(".project-card", {
     },
     1300: {
       slidesPerView: 4
+    },
+    1600: {
+      slidesPerView: 5
+    },
+    2000: {
+      slidesPerView: 7
     }
   }
 });
