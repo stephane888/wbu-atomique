@@ -2,6 +2,7 @@
 @use "../../../../_variables.scss" as *;
 @use "./molecule/mitor-footer-last.scss";
 @use "./atome/mitor-btn.scss";
+@use "./atome/mitor-element-icon.scss";
 $p-color: darken($wbu-border-color, 10);
 $color-dark: lighten($wbu-background, 35);
 .mitor-footer {
@@ -12,6 +13,7 @@ $color-dark: lighten($wbu-background, 35);
   .footer-middle {
     margin-bottom: -2rem;
     margin-top: 2rem;
+    display: none;
     .fm-content {
       border-top: 1px solid rgba($wbu-color-boder, 0.25);
       padding-top: $space-bottom;
@@ -222,7 +224,8 @@ $color-dark: lighten($wbu-background, 35);
   .contact-elements {
     padding: 0;
 
-    .element {
+    .element,
+    .mitor-element-icon {
       margin-top: $wbu-margin * 0.5;
       .el {
         margin-left: $wbu-margin * 0.5;
@@ -233,11 +236,11 @@ $color-dark: lighten($wbu-background, 35);
       }
     }
   }
-  .element {
+  .element,
+  .mitor-element-icon {
     display: flex;
     align-items: center;
     padding-bottom: $wbu-margin * 0.8;
-
     .icon {
       color: $p-color;
     }
@@ -268,16 +271,16 @@ $color-dark: lighten($wbu-background, 35);
       }
     }
   }
-  &--no-middle {
+  &--middle {
     .footer-middle {
-      display: none;
+      display: block;
     }
   }
   &--only-first {
     .footer-first {
-      display: none;
+      display: block;
     }
-    .footer-middle {
+    .mitor-footer-last {
       display: none;
     }
   }
@@ -334,7 +337,8 @@ $color-dark: lighten($wbu-background, 35);
   }
 
   .contact-elements {
-    .element {
+    .element,
+    .mitor-element-icon {
       .el {
         color: rgba($color: #000000, $alpha: 0.6);
       }
@@ -343,23 +347,15 @@ $color-dark: lighten($wbu-background, 35);
       }
     }
   }
-  .element {
+  .element,
+  .mitor-element-icon {
     .icon {
       border: 2px soliid tomato;
       color: $wbu-color-primary;
     }
-
     svg {
       color: $wbu-color-primary;
       fill: #000000;
-    }
-
-    .location {
-      color: white;
-    }
-
-    .email {
-      color: white;
     }
 
     a {
