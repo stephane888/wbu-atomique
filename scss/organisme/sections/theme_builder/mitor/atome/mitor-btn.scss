@@ -7,20 +7,24 @@
   background-color: $wbu-background;
   box-shadow: 0 0 12px rgb(120 113 105 / 60%);
   border: 1px solid $wbu-background;
-  padding: 1.4rem 3rem;
+  padding: 1.3rem 3rem;
   display: inline-block;
   border-radius: 50px;
-  transition: background-color ease-in-out 0.4s, border-color 0.3s,
+  transition: background-color ease-in-out 0.3s, border-color 0.28s,
     transform ease-in-out 0.3s;
   text-transform: capitalize;
   margin-right: 1rem;
   margin-left: 1rem;
+  position: relative;
   &,
   a {
     font-weight: 600;
     text-align: center;
     color: white;
     text-decoration: none;
+  }
+  a {
+    @include cover-link();
   }
   p {
     margin: 0;

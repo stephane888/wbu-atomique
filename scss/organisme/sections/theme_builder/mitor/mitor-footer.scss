@@ -268,6 +268,19 @@ $color-dark: lighten($wbu-background, 35);
       }
     }
   }
+  &--no-middle {
+    .footer-middle {
+      display: none;
+    }
+  }
+  &--only-first {
+    .footer-first {
+      display: none;
+    }
+    .footer-middle {
+      display: none;
+    }
+  }
 }
 
 // mitor footer flat design start
