@@ -380,6 +380,49 @@
       }
     }
   }
+  &--no-counter {
+    box-shadow: unset;
+    padding: 0;
+    &:hover {
+      box-shadow: unset;
+    }
+    &::before {
+      display: none;
+    }
+    .counter-handler {
+      display: none;
+    }
+    .head {
+      .price {
+        display: none;
+      }
+      .first-price {
+        display: block;
+        .price {
+          display: block;
+        }
+      }
+    }
+    .card-middle {
+      border-top: 0;
+      padding-top: $wbu-margin * 0.1;
+      .elements {
+        border-top: 1px solid #dee2e6;
+      }
+    }
+    .card-bottom {
+      .choose {
+        .svg {
+          background-color: transparent;
+        }
+        &:hover {
+          .svg {
+            background-color: #000000;
+          }
+        }
+      }
+    }
+  }
   &--plan-option {
     padding-bottom: 30px;
     display: flex;
