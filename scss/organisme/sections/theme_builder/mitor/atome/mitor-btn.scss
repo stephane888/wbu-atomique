@@ -2,23 +2,30 @@
 
 .mitor-btn {
   display: inline-block;
-  font-weight: 600;
-  text-align: center;
+
   font-size: $wbu-default-font-size;
   background-color: $wbu-background;
   box-shadow: 0 0 12px rgb(120 113 105 / 60%);
   border: 1px solid $wbu-background;
-  text-decoration: none;
-  color: white;
   padding: 1.3rem 3rem;
   display: inline-block;
   border-radius: 50px;
-  transition: background-color ease-in-out 0.4s, border-color 0.3s,
+  transition: background-color ease-in-out 0.3s, border-color 0.28s,
     transform ease-in-out 0.3s;
   text-transform: capitalize;
   margin-right: 1rem;
   margin-left: 1rem;
-
+  position: relative;
+  &,
+  a {
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+  }
+  a {
+    @include cover-link();
+  }
   p {
     margin: 0;
   }
@@ -28,6 +35,10 @@
     background-color: lighten($wbu-background, 20);
     border-color: lighten($wbu-background, 20);
     // transform: scale(1.01);
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 

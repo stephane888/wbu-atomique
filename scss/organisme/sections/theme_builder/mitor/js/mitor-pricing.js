@@ -1,7 +1,7 @@
 (function () {
   console.log("pricing-increment chargée");
   function selectAllElement() {
-    let table = document.querySelectorAll(".er-handler");
+    let table = document.querySelectorAll(".counter-handler");
     if (table) {
       return Array.from(table);
     }
@@ -9,7 +9,8 @@
   }
   function setInputIncrement(el) {
     let input = el.querySelector('input[data-input="quantity"');
-    input.setAttribute("min", 1);
+    if (input) {
+      input.setAttribute("min", 1);
     input.setAttribute("max", 10);
 
     let value = parseInt(input.value, 10);
@@ -38,6 +39,7 @@
           input.value = minVal;
         }
       });
+    }
     }
   }
 
