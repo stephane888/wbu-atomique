@@ -1,0 +1,20 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.mitor-element-icon {
+  display: flex;
+  align-items: center;
+  padding-bottom: $wbu-margin * 0.8;
+  .el {
+    margin-left: $wbu-margin * 0.5;
+    color: white;
+  }
+  .icon {
+    color: white;
+  }
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: $wbu-color-primary;
+    fill: white;
+  }
+}
