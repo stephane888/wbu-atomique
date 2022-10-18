@@ -14,7 +14,11 @@ import "../../scss/swipper/swipper.scss";
 
 (function () {
   document.querySelectorAll(".swiper-full-options").forEach((item) => {
-    const settings = JSON.parse(item.getAttribute("data-swiper"));
-    new Swiper(item, settings);
+    try {
+      const settings = JSON.parse(item.getAttribute("data-swiper"));
+      new Swiper(item, settings);
+    } catch (error) {
+      console.log("Error swiper slide : ", error, " \n Element : ", item);
+    }
   });
 })();
