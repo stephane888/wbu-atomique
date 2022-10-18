@@ -1,0 +1,42 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+.vixon-entete-teaser-handler{
+    .heading{
+        padding-left: $wbu-margin * 2;
+    }
+    .stroked-text{
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $wbu-color-boder;
+        font-size: $wbu-titre-big-md;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+    .head-title{
+        margin-top: $wbu-margin *0.5;
+        font-size: $wbu-h4-font-size;
+        color: #111111;
+        font-weight: 700;
+        margin-left: $wbu-margin * 6.5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        box-sizing: border-box;
+        &::before{
+            content: "";
+            position: absolute;
+            left: -130px;
+            //top: 20px;
+            width: 100px;
+            height: 3px;
+            background: #ff007a;
+        }
+    }
+    .title-description{
+        width:300px;
+        margin-top: $wbu-margin;
+        margin-left: $wbu-margin * 6.5;
+    }
+}
