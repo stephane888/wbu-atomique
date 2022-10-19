@@ -1,0 +1,106 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+@use "./molecule/heading.scss";
+
+.vixon-sponsor-section-handler{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: $wbu-margin *2;
+    color: #fff;
+    background: url("https://demo.themefisher.com/vixcon/images/bg/cta-bg.jpg") no-repeat fixed 50% 50%;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: 0.97);
+    }
+    .text-mini-title{
+        font-size: $wbu-h6-font-size;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2;
+        margin: $wbu-margin*2 0;
+    }
+    .question{
+        margin: $wbu-margin*2.7 0 $wbu-margin*1.7;
+        font-size: $wbu-h3-font-size;
+        font-weight: 700;
+
+    }
+    .element{
+        flex-wrap: wrap;
+    }
+    .btn-hero{
+        background: #ff007a;
+        color: #ffffff;
+        border: #ff007a;
+        border-radius: 60px;
+        line-height: 1;
+        padding: $wbu-margin*0.7 $wbu-margin*2;
+        transition: all .2s ease-in-out;
+        will-change: box-shadow;
+        font-size: 13px;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        border: 2px solid transparent;
+        font-weight: 700;
+    }
+    .client-item{
+        float: left;
+        width: 15%;
+        height: 115px;
+        border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+        padding: calc($wbu-margin + 5px);
+        text-align: center;
+        opacity: .7;
+        transition: all .45s ease-in-out;
+        &:hover{
+            background: rgba($color: #ffffff, $alpha: 0.19);
+        }
+        .link-img{
+            transition: all .3s;
+            text-decoration: none;
+            outline: 0;
+            img{
+                max-width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+        }
+    }
+    .heading{
+        margin-top: $wbu-margin * 3;
+        .title{
+            color: #fff;
+        }
+        margin-bottom: $wbu-margin;
+    }
+
+    @media only screen and (max-width: 767px){
+        
+        .client-item{
+            width: 30%;
+        }
+    }
+    @media only screen and (max-width: 991px){
+        .client-item{
+            width: 20%;
+        }
+    }
+
+    @media only screen and (max-width: 560px){
+        .stroked-text{
+            font-size: $wbu-h1-font-size;
+        }
+        .head-title{
+            margin-left: 0;
+            // &::before{
+            //     display: none;
+            // }
+        }
+        .title-description{
+            margin: 0;
+        }
+    }
+}
