@@ -1,0 +1,60 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+@use "./molecule/vixon-heading.scss";
+
+.vixon-section-title {
+  overflow: hidden;
+  padding: $space_bottom 0;
+  background-repeat: no-repeat;
+  background-position: 65% 50%;
+  background-size: cover;
+  position: relative;
+  .question {
+    margin: $wbu-margin * 2.7 0 $wbu-margin * 1.7;
+    font-size: $wbu-h3-font-size;
+    font-weight: 700;
+  }
+  .element {
+    flex-wrap: wrap;
+  }
+  .btn-hero {
+    background: $wbu-color-primary;
+    color: color-yiq($wbu-color-primary);
+    border: $wbu-color-primary;
+    border-radius: 60px;
+    line-height: 1;
+    border: 1px solid $wbu-color-primary;
+    padding: $wbu-margin * 0.7 $wbu-margin * 2;
+    transition: all 0.2s ease-in-out;
+    will-change: box-shadow;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    a {
+      color: color-yiq($wbu-color-primary);
+    }
+    &:hover {
+      background-color: $wbu-background;
+      a {
+        text-decoration: none;
+        color: color-yiq($wbu-background);
+      }
+      text-decoration: none;
+      color: color-yiq($wbu-background);
+    }
+  }
+  &--black {
+    color: white;
+    background-color: $wbu-background;
+  }
+  &--bg {
+    color: white;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(#000, 0.9);
+    }
+  }
+}

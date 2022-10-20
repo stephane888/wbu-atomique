@@ -1,0 +1,12 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables" as *;
+
+.sponsor-item {
+  margin-bottom: $wbu-margin;
+  .sb-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2;
+    margin: $wbu-margin * 2 0;
+  }
+}

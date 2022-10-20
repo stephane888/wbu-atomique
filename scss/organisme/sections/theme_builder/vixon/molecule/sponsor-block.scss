@@ -1,0 +1,41 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables" as *;
+.sponsor-bloc {
+  margin-bottom: $wbu-margin;
+  .sb-title {
+    font-size: $wbu-h6-font-size;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2;
+    margin: $wbu-margin * 2 0;
+  }
+  .sponsor-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sponsor-item {
+    float: left;
+    height: 115px;
+    width: 15%;
+    min-width: 120px;
+    border: 1px solid rgba($color: #ffffff, $alpha: 0.18);
+    padding: calc($wbu-margin + 5px);
+    text-align: center;
+    opacity: 0.7;
+    transition: all 0.45s ease-in-out;
+    &:hover {
+      background: rgba($color: #ffffff, $alpha: 0.19);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+    @media only screen and (max-width: 767px) {
+      width: 30%;
+    }
+    @media only screen and (max-width: 991px) {
+      width: 20%;
+    }
+  }
+}

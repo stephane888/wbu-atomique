@@ -1,20 +1,18 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables" as *;
-@use "./molecule/heading.scss";
+@use "./molecule/vixon-heading.scss";
 
-
-.vixon-entete-teaser-handler{
-    overflow: hidden;
-    @media only screen and (max-width: 460px){
-        .head-title{
-            margin-left: 0;
-            // &::before{
-            //     display: none;
-            // }
-        }
-        .title-description{
-            margin: 0;
-        }
+.vixon-entete-teaser-handler {
+  overflow: hidden;
+  @media only screen and (max-width: 460px) {
+    .head-title {
+      margin-left: 0;
+      // &::before{
+      //     display: none;
+      // }
     }
-    
+    .title-description {
+      margin: 0;
+    }
+  }
 }
