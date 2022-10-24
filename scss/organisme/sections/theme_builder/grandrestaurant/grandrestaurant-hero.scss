@@ -1,0 +1,44 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./grandrestaurant.scss" as *;
+.grandrestaurant-hero {
+    background-color: black;
+    background-image: url("https://themes-themegoods.b-cdn.net/grandrestaurantv6/wp-content/uploads/2020/12/eiliv-sonas-aceron-cWqxHoa3zXk-unsplash-768x1152.jpg") ;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top:$space_bottom * 2;
+    padding-bottom:$space_bottom * 2;
+    &__subtitle {
+        font-family: 'Kristi', cursive ;
+        color: $wbu-color-secondary;
+        font-size: $wbu-titre-big;
+        @include media-min(MD) {
+            font-size:$wbu-h1-font-size-md;
+        }
+    }
+    &__title {
+        font-family: 'Lato' , sans-serif;
+        font-size: $wbu-titre-big;
+        font-weight: $wbu-title-font-weight;
+        text-transform: uppercase;
+        color: $wbu-border-color;
+        @include media-min(MD) {
+            font-size: $wbu-h2-font-size-sm;
+        }
+    }
+    &__description {
+        text-transform: uppercase;
+        color: $wbu-border-color;
+        font-size: $wbu-default-font-size;
+        font-weight: 400;
+    }
+    &__svg {
+        transform: rotate(180deg);
+        position:absolute;
+        display: block;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}
