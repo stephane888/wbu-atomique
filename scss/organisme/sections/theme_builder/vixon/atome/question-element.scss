@@ -1,0 +1,18 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables" as *;
+
+.question-item {
+  margin-bottom: 2.5rem;
+  &__title {
+    font-weight: bold;
+    color: black;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $wbu-color-boder;
+  }
+  &__desc {
+    line-height: 28px;
+    margin-bottom: 1rem;
+  }
+}

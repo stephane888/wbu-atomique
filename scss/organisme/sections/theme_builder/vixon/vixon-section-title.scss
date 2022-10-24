@@ -47,9 +47,19 @@
   &--black {
     color: white;
     background-color: $wbu-background;
+    .vixon-heading {
+      .head-title {
+        color: white;
+      }
+    }
   }
   &--bg {
     color: white;
+    .vixon-heading {
+      .head-title {
+        color: white;
+      }
+    }
     &::before {
       content: "";
       position: absolute;
