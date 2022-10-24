@@ -1,0 +1,54 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+@use "./molecule/vixon-heading.scss";
+
+.vixon-event-section {
+  padding: $space_bottom 0;
+  .vixon-heading {
+    .head-title {
+      &::before {
+        display: none;
+      }
+      @include media-max(MD) {
+        margin-left: 0;
+      }
+    }
+    @include media-max(MD) {
+      .title-description {
+        margin-left: 0;
+      }
+    }
+  }
+  .about-img {
+    position: relative;
+    box-shadow: 0 15px 38px 0 rgba(0, 0, 0, 0.1);
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .img-block {
+      position: absolute;
+      content: "";
+      bottom: -70px;
+      right: 0px;
+      left: 30%;
+      width: 100%;
+      border: 10px solid white;
+
+      @include media-max(MD) {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        bottom: -20px;
+      }
+    }
+  }
+  .question-block {
+    margin-top: 6rem;
+    margin-left: $wbu-margin * 6.5;
+    @include media-max(MD) {
+      margin-left: 0;
+    }
+  }
+}

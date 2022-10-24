@@ -11,7 +11,6 @@
   position: relative;
   .question {
     margin: $wbu-margin * 2.7 0 $wbu-margin * 1.7;
-    font-size: $wbu-h3-font-size;
     font-weight: 700;
   }
   .element {
@@ -47,9 +46,22 @@
   &--black {
     color: white;
     background-color: $wbu-background;
+    .vixon-heading {
+      .head-title {
+        color: white;
+      }
+    }
+    .question-block .question {
+      color: white;
+    }
   }
   &--bg {
     color: white;
+    .vixon-heading {
+      .head-title {
+        color: white;
+      }
+    }
     &::before {
       content: "";
       position: absolute;
