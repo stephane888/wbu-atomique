@@ -1,0 +1,61 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables.scss" as *;
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: $wbu-margin * 2;
+    padding-left: $wbu-margin;
+    padding-right: $wbu-margin;
+    overflow: hidden;
+    &__logo {
+        padding: $wbu-margin;
+        padding-left:0;
+        font-size: $wbu-h5-font-size;
+    }
+    &__description {
+        margin-bottom: $wbu-margin;
+        font-size: $wbu-default-font-size;
+    }
+    &__socials {
+        margin-bottom: $wbu-margin;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &_link {
+            text-decoration: none;
+        }
+    }
+    &__links {
+        ul {
+            padding-left: 0;
+        }
+        .element {
+            display: flex;
+            flex-direction: column;
+            color: $wbu-color-boder;
+            text-decoration: none;
+            margin-bottom: $wbu-margin / 2;
+            &__link {
+                text-decoration: none;
+                display: flex;
+                justify-content: justify;
+                flex-direction: flex-start;
+                color: $wbu-color-boder;
+                &:hover {
+                    color: $wbu-color-boder;
+                }
+                &_svg {
+                    align-items: start;
+                    width: inherit;
+                }
+                &_item {
+                    text-decoration: none;
+                    margin-left: $wbu-margin / 2;
+                    align-items: flex-end;
+                }
+            }
+        }
+    }
+}

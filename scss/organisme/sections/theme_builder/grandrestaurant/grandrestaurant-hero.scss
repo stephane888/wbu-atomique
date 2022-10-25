@@ -6,10 +6,22 @@
     display: flex;
     width: 100%;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     position: relative;
-    padding-top:$space_bottom * 2;
-    padding-bottom:$space_bottom * 2;
+    background-size: cover;
+    padding-top:$space_bottom * 1.5;
+    padding-bottom:$space_bottom * 1.5;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+    }
     @keyframes slideInFromLeft {
         0% {
           transform: translateY(100%);
@@ -27,28 +39,39 @@
         width: 100%;
         position: relative;
         animation: 1s ease-out 0s 1 slideInFromLeft;
-        @include media-min(XX) {
+        @include media-max(XX) {
             font-size:$wbu-h1-font-size-md;
+            transition: 1s ease-in-out;
         }
+        @include media-max(MD) {
+            font-size:$wbu-h1-font-size-md;
+            transition: 1s ease-in-out;
+        }
+    }
+    &__subtitle_cont {
+        overflow: hidden;
     }
     &__title {
         font-family: 'Lato' , sans-serif;
-        display: flex;
+        position: relative;
         width: 100%;
         font-size: $wbu-titre-big;
         font-weight: $wbu-title-font-weight;
         text-transform: uppercase;
         color: $wbu-border-color;
-        position: relative;
         animation: 1.5s ease-out 1s 1 slideInFromLeft;
-        @include media-min(XX) {
+        @include media-max(XX) {
             font-size: $wbu-h2-font-size-sm;
+            transition: 1s ease-in-out;
+        }
+        @include media-max(MD) {
+            font-size: $wbu-h2-font-size-sm;
+            transition: 1s ease-in-out;
         }
     }
     &__description {
         text-transform: uppercase;
         width: 100%;
-        display: flex;
         color: $wbu-border-color;
         font-size: $wbu-default-font-size;
         position: relative;
@@ -62,5 +85,23 @@
         right: 0;
         bottom: 0;
         width: 100%;
+        svg {
+            position: relative;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &--top {
+        .grandrestaurant-hero__svg {
+            transform: rotate(360deg);
+            position:absolute;
+            display: block;
+            right: 0;
+            top: 0;
+            width: 100%;
+        }
     }
 }
