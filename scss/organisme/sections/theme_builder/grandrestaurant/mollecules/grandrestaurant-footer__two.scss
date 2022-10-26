@@ -1,5 +1,6 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../_variables.scss" as *;
+@use "../mollecules/footer-col.scss";
 .grandrestaurant-footer__two {
     display: flex;
     flex-direction: column;
@@ -42,6 +43,12 @@
         width: 100%;
         //padding: $wbu-margin;
         ul {
+            padding-left: 0;
+        }
+        .elements {
+            ul {
+                padding-left: 0;
+            }
             list-style: none;
             margin: $wbu-margin;
             display: flex;
@@ -58,8 +65,13 @@
                 margin-top: $wbu-margin;
                 margin-left: 0;
             }
-            .element {
+            li {
                 margin-left: $wbu-margin / 2;
+                a {
+                    text-decoration: none;
+                    padding: 0;
+                    color: $wbu-color-boder; 
+                }
                 &__link {
                     text-decoration: none;
                     color: $wbu-color-boder;

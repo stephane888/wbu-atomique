@@ -11,33 +11,51 @@
     &__logo {
         padding: $wbu-margin;
         padding-left:0;
-        font-size: $wbu-h5-font-size;
+        text-transform: uppercase;
+        font-size: $wbu-default-font-size;
+        img {
+            max-width: 100%;
+        }
     }
     &__description {
         margin-bottom: $wbu-margin;
+        text-align: justify;
         font-size: $wbu-default-font-size;
     }
-    &__socials {
+    .footer-col__socials {
         margin-bottom: $wbu-margin;
         display: flex;
+        width: 100%;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        &_link {
-            text-decoration: none;
+        a {
+            display: inline-block;
+            margin-right: $wbu-margin / 2;
         }
     }
     &__links {
         ul {
             padding-left: 0;
         }
-        .element {
+        .elements {
+            padding-left: 0;
+            ul {
+                padding-left: 0;
+            }
+        }
+        li {
+            a {
+                padding: 0;
+                color: $wbu-color-boder;
+                margin-bottom: $wbu-margin / 2;
+            }
             display: flex;
-            flex-direction: column;
+            //flex-direction: column;
             color: $wbu-color-boder;
             text-decoration: none;
             margin-bottom: $wbu-margin / 2;
-            &__link {
+            .element__link {
                 text-decoration: none;
                 display: flex;
                 justify-content: justify;
