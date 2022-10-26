@@ -1,0 +1,93 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+
+.vixcon-footer-section-handler{
+    padding: $wbu-margin*2 0;
+    .footer-title{
+        color: $wbu-border-color !important;
+    }
+    .footer-description{
+        color: $wbu-color-boder !important;
+        opacity: 0.7;
+        line-height: 28px;
+    }
+    .suscribe-form{
+        margin: $wbu-margin 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .field{
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            width: 60%;
+            height: 50px;
+            outline: none;
+            border: none;
+            padding: $wbu-margin*0.5 ;
+        }
+        .suscribe-btn{
+            font-weight: bold;
+            color: $wbu-border-color;
+            background: $wbu-color-thirdly;
+            display: flex;
+            align-items: center;
+            padding: $wbu-margin*0.75 $wbu-margin*1.5;
+            word-spacing: 2;
+            letter-spacing: 1.5;
+            text-transform: uppercase;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            transition: all .2s ease-in-out;
+            box-shadow: 0 11px 22px rgb(34 34 34 / 20%);
+            will-change: box-shadow;
+            text-decoration: none;
+            border: 2px solid transparent;
+            &:hover{
+                background: $wbu-background;
+                border-color: $wbu-color-thirdly;
+            }
+        }
+    }
+    .short-text{
+        color: $wbu-color-boder !important;
+       opacity: 0.7;
+        line-height: 28px;
+        margin-top: $wbu-margin;
+    }
+    .copy{
+        color: $wbu-border-color;
+        border-top: 1px solid rgba($color: $wbu-border-color, $alpha: 0.3);
+        padding-top: $wbu-margin*1.2;
+    }
+    .socials{
+        padding-left: 0;
+        list-style: none;
+        margin-top: $wbu-margin;
+        margin-bottom: $wbu-margin *0.5;
+        .item{
+            display: inline-block;
+            margin-right: $wbu-margin*0.05;
+            .link-social{
+                padding: 0 10px;
+                color: $wbu-border-color;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1200px){
+        .suscribe-form{
+            
+            .field{
+                border-radius: 5px;
+                width: 80%;
+            }
+            .suscribe-btn{
+                margin-top: $wbu-margin;
+                border-radius: 5px;
+            }
+        }
+    }
+}

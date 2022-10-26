@@ -7,7 +7,7 @@
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $wbu-color-boder;
-    font-size: $wbu-titre-suppra;
+    //font-size: $wbu-titre-suppra;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1;
@@ -37,11 +37,11 @@
     line-height: 1.5;
     margin-top: $wbu-margin;
     margin-left: $wbu-margin * 6.5;
-    font-size: $wbu-h5-font-size;
+    //font-size: $wbu-h5-font-size;
   }
   @media only screen and (max-width: 560px) {
     .stroked-text {
-      font-size: $wbu-h1-font-size;
+      //font-size: $wbu-h1-font-size;
     }
     .head-title {
       margin-left: 0;
