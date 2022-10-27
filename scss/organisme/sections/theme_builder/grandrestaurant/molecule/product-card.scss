@@ -1,13 +1,56 @@
 @use "../../../../../_variables" as *;
 
-.single-product-teaser{
+.grandrestaurant-single-product-teaser{
     .icone{
+        display: inline-block;
+        background-color: rgba($color: $wbu-color-text, $alpha: 1);
+        color: $wbu-color-boder;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
         position: absolute;
-        top: 43%;
-        left: 25%;
-        background: $wbu-color-boder;
-        height: 30px;
-        width: 30px;
+        top: 37%;
+        left: 44%;
         border-radius: 100%;
+        transform: translateY(15%);
+        transition: .6s;
+        opacity: 0;
+        
+        .linker{
+            color: $wbu-color-boder;
+            display: flex;
+            height: 44px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .product-img{
+        img{
+            height: 360px;
+            width: 360px;
+            border-radius: 8px;
+        }
+        &:hover{
+            .icone{
+                opacity: 1;
+            }
+        }
+    }
+    .product-info{
+        margin-top: $wbu-margin;
+        color: #000000;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        .product-name{
+            font-weight: 600;
+        }
+        .product-price{
+            font-weight: 600;
+        }
+    }
+    .product-composition{
+        margin-top: $wbu-margin*0.3;
+        margin-bottom: $wbu-margin ;
     }
 }
