@@ -1,0 +1,39 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables" as *;
+
+.question-block {
+  margin-bottom: $wbu-margin;
+  .question {
+    margin: $wbu-margin * 2.7 0;
+    font-weight: 700;
+    color: black;
+  }
+  .btn-hero {
+    background: $wbu-color-primary;
+    color: color-yiq($wbu-color-primary);
+    border: $wbu-color-primary;
+    border-radius: 60px;
+    line-height: 1;
+    border: 1px solid $wbu-color-primary;
+    padding: $wbu-margin * 0.7 $wbu-margin * 2;
+    transition: all 0.3s ease-in-out;
+    will-change: box-shadow;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    a {
+      color: color-yiq($wbu-color-primary);
+    }
+    &:hover {
+      background-color: $wbu-background;
+      border-color: $wbu-background;
+      a {
+        text-decoration: none;
+        color: color-yiq($wbu-background);
+      }
+      text-decoration: none;
+      color: color-yiq($wbu-background);
+    }
+  }
+}

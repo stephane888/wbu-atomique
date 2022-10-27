@@ -1,0 +1,36 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+@use "./atome/question-and-boutton.scss";
+@use "./atome/question-element.scss";
+.vixon-faq-section {
+  padding: $space_bottom 0;
+  p {
+    margin: 0;
+  }
+  .vf-heading {
+    margin-bottom: 5rem;
+  }
+  .vf-big-title {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $wbu-color-boder;
+    font-size: $wbu-titre-suppra * 1.2;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    @include media-max(XS) {
+      font-size: $wbu-titre-biggest;
+    }
+  }
+  .vf-title {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 1.5rem;
+  }
+  .vf-description {
+    line-height: 28px;
+  }
+  .list-question {
+    margin: 2rem 0 3rem;
+  }
+}

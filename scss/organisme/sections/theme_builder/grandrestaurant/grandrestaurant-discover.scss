@@ -1,0 +1,30 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+.grandrestaurant-discover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    padding-top:$space_bottom * 2;
+    padding-bottom:$space_bottom * 2;
+    &__title {
+        font-family: 'Lato' , sans-serif;
+        font-size: $wbu-h3-font-size;
+        font-weight: $wbu-title-font-weight;
+        margin-bottom: $wbu-margin;
+        width: 100%;
+    }
+    &__subtitle {
+        font-family: 'Lato' , sans-serif;
+        margin-bottom: $wbu-margin;
+        font-size: $wbu-h4-font-size;
+        width: 100%;
+    }
+    &__author {
+        font-family: 'Kristi' , cursive;
+        margin-bottom: $wbu-margin;
+        font-size: $wbu-h3-font-size;
+    }
+}

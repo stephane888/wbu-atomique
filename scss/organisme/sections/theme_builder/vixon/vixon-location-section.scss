@@ -1,0 +1,52 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+
+.vixon-location-section {
+  padding: $space_bottom 0;
+  .img-full {
+    position: relative;
+    img {
+      max-width: 100%;
+      height: auto;
+      min-height: 25vh;
+    }
+  }
+  .contact-info {
+    box-shadow: 0 15px 38px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 40px;
+    bottom: -90px;
+    background: #ffffff;
+    padding: 60px 50px;
+    @include media-max(XS) {
+      left: 0;
+      right: 0;
+      position: relative;
+      bottom: 0;
+      padding: 20px;
+    }
+  }
+  .contact-location {
+    letter-spacing: 2px;
+    color: blac;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  .contact-date {
+    color: $wbu-color-primary;
+    margin-bottom: 1rem;
+  }
+  .contact-lead {
+    margin-bottom: 1rem;
+    line-height: 35px;
+  }
+  .link-location {
+    color: black;
+    font-size: $wbu-h6-font-size * 0.9;
+    &:hover {
+      text-decoration: none;
+      color: $wbu-color-primary;
+    }
+  }
+}

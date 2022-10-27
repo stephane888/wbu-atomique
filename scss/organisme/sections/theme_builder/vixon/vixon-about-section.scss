@@ -1,0 +1,26 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+
+.vixon-about-section {
+  padding: $space_bottom 0;
+
+  .img-full {
+    margin-bottom: 3rem;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .color-theme {
+    color: $wbu-color-primary;
+  }
+  .vas-title {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .vas-desc {
+    padding-top: 1rem;
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,36 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./grandrestaurant.scss" as *;
+@use "./mollecules/footer-col.scss";
+@use "./mollecules/grandrestaurant-footer__two.scss";
+.grandrestaurant-footer {
+    background-color: $wbu-background;
+    position: absolute;
+    //bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    color: $wbu-color-boder;
+    padding-top:$space_bottom;
+    padding-bottom:$space_bottom;
+    &--no-svg {
+        .grandrestaurant-footer__svg {
+            display: none;
+        }
+    }
+    &__svg {
+        position: absolute;
+        display: block;
+        top: 0;
+        width: 100%;
+        left: 0;
+    }
+    &__two {
+        position: absolute;
+        margin-top: $wbu-margin;
+        bottom: 0;
+        left: 0;
+        @include media-max(MD) {
+            margin-top: $wbu-margin * 2;
+        }
+    }
+}

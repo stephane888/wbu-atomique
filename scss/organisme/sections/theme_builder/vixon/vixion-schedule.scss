@@ -1,0 +1,64 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+.vixion-schedule {
+  .nav-pills {
+    margin-bottom: $wbu-margin * 2;
+    .nav-item {
+      border-radius: 8px;
+      position: relative;
+      padding: $wbu-margin $wbu-margin * 1.5;
+      transition: all 0.45s ease;
+      color: inherit;
+      .tab-title {
+        font-weight: bold;
+      }
+      &.active {
+        color: color-yiq($wbu-color-primary);
+        &::before {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: $wbu-margin * 0.85 $wbu-margin 0;
+          border-color: #000 transparent transparent;
+          content: "";
+          position: absolute;
+          bottom: -18px;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          transition: 0.3s;
+          left: 80px;
+          margin: auto;
+          z-index: -1;
+          border-color: $wbu-color-primary transparent transparent;
+        }
+      }
+    }
+  }
+  .time-table {
+    .time-item {
+      box-shadow: 0 15px 38px 0 rgb(0 0 0 / 10%);
+      margin-bottom: $wbu-margin * 0.85;
+      padding: $wbu-margin * 1.25;
+    }
+    .time {
+      font-weight: bold;
+      flex-basis: 20%;
+    }
+    .content {
+      flex-basis: 60%;
+    }
+    .content-img {
+      flex-basis: 20%;
+      img {
+        max-width: 100%;
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+      }
+    }
+    .time-title {
+      font-weight: 600;
+      margin-bottom: $wbu-margin * 1.5;
+    }
+  }
+}
