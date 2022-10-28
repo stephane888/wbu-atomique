@@ -323,11 +323,12 @@
     .mitor-card__body {
       margin-left: 0;
       text-align: left;
-    }
-    .mc-title {
-      color: $wbu-color-text;
-      @include media-min(DD) {
-        width: 55%;
+      .mc-title {
+        color: $wbu-color-text;
+        margin-left: 0;
+        @include media-min(DD) {
+          width: 55%;
+        }
       }
     }
   }
