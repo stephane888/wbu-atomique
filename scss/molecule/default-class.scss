@@ -43,7 +43,8 @@
 .bg-theme {
   background-color: $wbu-background !important;
 }
-.text-theme, .color-primary-theme {
+.text-theme,
+.color-primary-theme {
   color: $wbu-color-primary;
 }
 // definie les container de lecture.
@@ -55,7 +56,11 @@
 .width-tablet {
   max-width: $with_tablet;
 }
+
 // typography
+.wbu-titre-suppra {
+  @include wbu-titre-suppra();
+}
 
 h1,
 .h1 {

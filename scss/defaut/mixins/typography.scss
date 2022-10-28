@@ -20,6 +20,22 @@
   }
 }
 
+@mixin wbu-titre-suppra() {
+  font-size: $wbu-titre-big-sm;
+  @include media-min(SM) {
+    font-size: $wbu-titre-big-md;
+  }
+  @include media-min(DD) {
+    font-size: $wbu-titre-big;
+  }
+  @include media-min(M) {
+    font-size: $wbu-titre-biggest;
+  }
+  @include media-min(LM) {
+    font-size: $wbu-titre-suppra;
+  }
+}
+
 /**
  *  Breack point h1.
  */
