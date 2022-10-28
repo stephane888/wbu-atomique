@@ -1,0 +1,9 @@
+// MODELE NON terminée, à supprimer -->
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+.grandrestaurant-itemtext {
+  padding: $wbu-margin * 2 $wbu-margin;
+  @include media-min(DD) {
+    padding: $wbu-margin * 4 $wbu-margin * 2;
+  }
+}
