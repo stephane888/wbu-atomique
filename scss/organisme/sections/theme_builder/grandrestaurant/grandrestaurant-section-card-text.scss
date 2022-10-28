@@ -1,0 +1,21 @@
+// MODELE NON terminée, à supprimer -->
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+.grandrestaurant-section-card-text {
+  .items-img {
+    margin-left: -$grid-gutter-width * 0.25;
+    margin-right: -$grid-gutter-width * 0.25;
+    .item {
+      padding-left: $grid-gutter-width * 0.25;
+      padding-right: $grid-gutter-width * 0.25;
+    }
+  }
+  .anime-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .grandrestaurant-itemtext {
+    }
+  }
+}

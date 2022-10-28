@@ -1,0 +1,7 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables.scss" as *;
+@use "./footer-col.scss";
+.grandrestaurant-footer__one {
+    display: flex;
+    margin-bottom: $space_bottom;
+}
