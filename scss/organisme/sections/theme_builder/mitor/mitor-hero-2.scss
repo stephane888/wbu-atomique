@@ -315,6 +315,13 @@
       background-color: $wbu-color-thirdly;
     }
   }
+  &--text-left {
+    .mc-title {
+      @include media-min(DD) {
+        width: 55%;
+      }
+    }
+  }
 }
 .thumbnail-slide {
   bottom: 8%;
