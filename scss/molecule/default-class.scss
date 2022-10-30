@@ -123,3 +123,27 @@ form {
     top: 0;
   }
 }
+.cover-bg-theme {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $wbu-background;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+.opacity-07 {
+  opacity: 0.7;
+}
+
+.opacity-088 {
+  opacity: 0.88;
+}
+
+.opacity-055 {
+  opacity: 0.55;
+}
