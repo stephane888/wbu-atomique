@@ -61,6 +61,9 @@
 .wbu-titre-suppra {
   @include wbu-titre-suppra();
 }
+.bp_hero {
+  @include bp_hero();
+}
 
 h1,
 .h1 {
@@ -171,6 +174,20 @@ form {
     opacity: 0.15;
   }
 }
-.video-content {
-  position: relative;
+
+.background-local-video {
+  video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+  }
+  .video-content {
+    position: relative;
+    z-index: 3;
+  }
 }
