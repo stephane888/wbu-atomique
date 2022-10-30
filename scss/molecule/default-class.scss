@@ -136,6 +136,12 @@ form {
     top: 0;
     bottom: 0;
   }
+  .cover-bg-theme {
+    &::before {
+      content: "";
+      display: no;
+    }
+  }
 }
 .opacity-before-07 {
   &::before {
