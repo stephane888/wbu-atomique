@@ -134,6 +134,10 @@ form {
     position: absolute;
     background-color: $wbu-background;
     z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
   .cover-bg-theme {
     &::before {
@@ -172,15 +176,21 @@ form {
 }
 
 .background-local-video {
+  overflow: hidden;
+  position: relative;
   video {
     position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
   }
   .video-content {
     position: relative;
