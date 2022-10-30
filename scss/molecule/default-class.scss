@@ -154,3 +154,14 @@ form {
     opacity: 0.55;
   }
 }
+
+.opacity-before-03 {
+  &::before {
+    opacity: 0.3;
+  }
+}
+.opacity-before-015 {
+  &::before {
+    opacity: 0.15;
+  }
+}
