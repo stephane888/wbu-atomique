@@ -136,14 +136,20 @@ form {
     bottom: 0;
   }
 }
-.opacity-07 {
-  opacity: 0.7;
+.opacity-before-07 {
+  &::before {
+    opacity: 0.7;
+  }
 }
 
-.opacity-088 {
-  opacity: 0.88;
+.opacity-before-088 {
+  &::before {
+    opacity: 0.88;
+  }
 }
 
-.opacity-055 {
-  opacity: 0.55;
+.opacity-before-055 {
+  &::before {
+    opacity: 0.55;
+  }
 }
