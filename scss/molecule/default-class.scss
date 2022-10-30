@@ -125,11 +125,12 @@ form {
 }
 .cover-bg-theme {
   position: relative;
+  z-index: 0;
   &::before {
     content: "";
     position: absolute;
     background-color: $wbu-background;
-
+    z-index: 2;
     left: 0;
     right: 0;
     top: 0;
