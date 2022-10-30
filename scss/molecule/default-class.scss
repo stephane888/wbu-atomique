@@ -130,7 +130,7 @@ form {
     content: "";
     position: absolute;
     background-color: $wbu-background;
-    z-index: 2;
+    z-index: 1;
     left: 0;
     right: 0;
     top: 0;
@@ -139,7 +139,7 @@ form {
   .cover-bg-theme {
     &::before {
       content: "";
-      display: no;
+      display: none;
     }
   }
 }
@@ -170,4 +170,7 @@ form {
   &::before {
     opacity: 0.15;
   }
+}
+.video-content {
+  position: relative;
 }
