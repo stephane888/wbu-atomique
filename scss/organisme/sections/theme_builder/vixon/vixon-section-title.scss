@@ -6,6 +6,7 @@
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: 65% 50%;
+  padding: 0 10rem 0 0;
   background-size: cover;
   position: relative;
   .question {
@@ -44,6 +45,7 @@
     }
   }
   &--black {
+    padding: 10rem 0;
     color: white;
     background-color: $wbu-background;
     .vixon-heading {
@@ -56,6 +58,7 @@
     }
   }
   &--bg {
+    padding: 10rem 0;
     color: white;
     .vixon-heading {
       .head-title {
