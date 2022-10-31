@@ -25,16 +25,44 @@
     padding-left: $wbu-margin;
     padding-top: $wbu-margin * 0.5;
     padding-bottom: $wbu-margin * 0.5;
+    .navbar-collapse {
+      align-items: stretch;
+    }
     .navbar-brand {
       padding: 0;
     }
 
     .nav-links {
       margin-left: auto;
-
+      color: $wbu-color-text;
+      .nav-item {
+        display: flex;
+        align-items: center;
+      }
       .nav-link {
         margin-right: 12px;
-        &:last-child {
+        font-weight: 600;
+        text-transform: capitalize;
+        &:hover {
+          background-color: $wbu-color-primary;
+          color: color-yiq($wbu-color-primary);
+        }
+        &.is-active {
+          position: relative;
+          margin-bottom: $wbu-margin * 0.5;
+          @include media-min(DD) {
+            margin-bottom: 0;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background-color: $wbu-color-primary;
+            top: auto;
+            bottom: 0;
+            left: $navbar-nav-link-padding-x;
+            right: $navbar-nav-link-padding-x;
+          }
         }
       }
       .colored {
