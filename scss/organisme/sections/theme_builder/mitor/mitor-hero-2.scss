@@ -317,7 +317,7 @@
   }
   &--text-left {
     min-height: 30vh;
-    .svg {
+    .svg, .svg-2, .svg-3{
       display: none;
     }
     &::before {
