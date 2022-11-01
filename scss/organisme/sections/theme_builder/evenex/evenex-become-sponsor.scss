@@ -1,0 +1,61 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.evenex-become-sponsor-section-handler{
+    padding: $wbu-margin*4 0;
+    .left-element{
+        .head-text{
+            color: #101010;
+            font-weight: 700;
+            line-height: 52px;
+            letter-spacing: 1px;
+        }
+        .sponsor-text-descriptor{
+            margin-top: $wbu-margin;
+        }
+        .btn{
+            display: inline-block;
+            margin: $wbu-margin 0 0 $wbu-margin*-1;
+        }
+        .sponsor-btn{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 500;
+            color: $wbu-color-boder;
+            padding: $wbu-margin*0.7 $wbu-margin*1.3;
+            background: linear-gradient(90deg, #f94843 0%, #ff7a49 100%);
+            border-radius: 5px;
+            vertical-align: middle;
+            text-decoration: none;
+            box-shadow: 0 15px 25px 0 rgb(249 71 67 / 30%);
+            transition: background 2s ;
+            &:hover{
+                background: linear-gradient(90deg, #ff7a49 0%, #f94843 100%);
+            
+            }
+            .link-icon{
+                margin-left: $wbu-margin;
+            }
+        }
+    }
+    .right-element{
+        .logo-sponsors{
+            display: flex;
+            flex-wrap: wrap;
+            .single-logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 32%;
+                padding: $wbu-margin*1.3 $wbu-margin*2.5 ;
+                box-shadow: 0 3px 6px rgb(0 0 0 /8%);
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+
+    }
+}
