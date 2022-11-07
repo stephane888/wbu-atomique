@@ -1,0 +1,62 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+.grandrestaurant-price-card{
+    position: relative;
+    &__image{
+        position: relative;
+        &_icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transition: .6s;
+            opacity: 0;
+            &_linker {
+                background-color: rgba($color: $wbu-background, $alpha: 0.7);
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: ($wbu-margin/2);
+                border-radius: 50%;
+                svg{
+                    fill: $wbu-color-boder;
+                }
+            }
+        }
+        img{
+            max-height: 36rem;
+            width: 100%;
+        }
+        &:hover{
+            .grandrestaurant-price-card__image_icon {
+                opacity: 1;
+            }
+        }
+    }
+    &__info{
+        padding: ($wbu-margin/2);
+        padding-bottom: 0;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        color: $wbu-color-text;
+        &_title{
+            font-weight: 600;
+            font-size: $wbu-h5-font-size;
+        }
+        &_price{
+            font-weight: 600;
+        }
+    }
+    &__composition{
+        padding: ($wbu-margin/2);
+        padding-top: 0;
+        font-size: $wbu-title-font-size;
+    }
+}
