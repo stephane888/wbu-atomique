@@ -21,7 +21,7 @@
         margin-bottom: ($wbu-margin/2);
         text-transform: uppercase;
         color: $wbu-color-text;
-        font-size: $wbu-default-font-size;
+        font-size: ($wbu-default-font-size/1.4);
     }
     &__name {
         margin-bottom: ($wbu-margin/2);
@@ -33,6 +33,35 @@
         font-size: $wbu-default-font-size;
         font-weight: 450;
     }
+    &__signature {
+        display: none;
+        margin-bottom: ($wbu-margin/2);
+        font-size: $wbu-h3-font-size;
+        font-weight: $wbu-title-font-weight;
+    }
+    &--no-img {
+        .grandrestaurant-chief-card__title {
+            text-transform: uppercase;
+            &::before {
+                content: "\"";
+            }
+            &::after {
+                content: "\"";
+            }
+        }
+        .grandrestaurant-chief-card__signature {
+            display: block;
+        }
+        .grandrestaurant-chief-card__img {
+            display: none;
+        }
+        .grandrestaurant-chief-card__post {
+            display: none;
+        }
+        .grandrestaurant-chief-card__name {
+            display: none;
+        }
+    }
     &--hover {
         .grandrestaurant-chief-card__title {
             display: none;
@@ -40,9 +69,6 @@
         .grandrestaurant-chief-card__img {
             position: relative;
             overflow: hidden;
-            img {
-                border-radius: 0;
-            }
         }
         &:hover {
             .grandrestaurant-chief-card__img {
