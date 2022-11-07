@@ -2,7 +2,7 @@
 .lgb-left-right {
   text-align: center;
   .title {
-    font-size: $wbu-h1-font-size;
+    // font-size: $wbu-h1-font-size;
     margin-bottom: $wbu-margin;
   }
   &--image {
@@ -10,7 +10,7 @@
     overflow: hidden;
     img {
       position: absolute;
-      height: 100%;
+      min-height: 100%;
       width: auto;
       max-width: 2000px;
       left: 0;
@@ -24,7 +24,6 @@
     box-shadow: 10px 8px 10px 3px #0000001a;
     @include media-min(DD) {
       padding: $wbu-margin;
-      font-size: $wbu-h3-font-size;
     }
     .description {
       background: rgba($color: $wbu-background, $alpha: 0.051);
