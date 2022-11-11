@@ -1,0 +1,80 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+@use "./evenex-theme-color.scss" as *;
+
+
+.evenex-countdown-section-handler{
+    .countdown-teaser{
+        margin-top: $wbu-margin * 2.5;
+        .counterdown{
+            position: relative;
+            margin-top: $wbu-margin*1.7;
+            border-radius: 8px;
+            padding: $wbu-margin $wbu-margin*2;
+            box-shadow: 0 3px 6px 0 rgb(248 56 56 / 42%);
+            //background-image: linear-gradient(100deg, $evenex-orange-color 0%, $evenex-orange-200 100%);
+            &::before{
+                content: "";
+                position: absolute;
+                background: $wbu-border-color;
+                top: 40%;
+                height: 23px;
+                left: -14;
+                width: 23px;
+                border-radius: 50%;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                background: $wbu-border-color;
+                top: 40%;
+                height: 23px;
+                right: -14;
+                width: 23px;
+                border-radius: 50%;
+            }
+            .banner-handler{
+                .single-count{
+                    text-align: center;
+                    color: $wbu-border-color;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        height: 80%;
+                        background: $wbu-color-secondary;
+                        width: 1px;
+                        top: auto;
+                        bottom: 10;
+                        right: 0;
+                        opacity: 0.2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:last-child{
+                            display: none;
+                        }
+                    }
+                    // &:last-child{
+                    //     &::after{
+                    //         content: "";
+                    //         visibility: hidden;
+                    //     }
+                    //     }
+                    @include media-max(MD){
+                        &::after{
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+                    
+                    .count-number{
+                        font-weight: bold;
+                    }
+                    .count-name{
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}
