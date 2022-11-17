@@ -1,0 +1,38 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+.grandrestaurant-grid-gallery {
+    position: relative;
+    background-color: $wbu-background;
+    padding-top:10px;
+    display: grid;
+    gap: 10px 10px;
+    //grid-template-columns: repeat(6, minmax(auto, 100rem));
+    grid-template-rows: repeat( 3, 0.8fr 0.8fr 0.8fr) 1.5fr;
+    grid-template-columns: repeat(3, 2fr) repeat(2, 1fr) 2fr;
+    .grid-item:nth-child(7),
+    .grid-item:nth-child(8),
+    .grid-item:nth-child(9),
+    .grid-item:nth-child(11),
+    .grid-item:nth-child(12) {
+        border: 1px solid red;
+        grid-template-rows: 2fr;
+    }
+    .grid-item {
+        border: 2px solid black;
+        border-radius: $wbu-margin/3;
+        overflow: hidden;
+        width: 100%;
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        &:hover{
+            img {
+                transition: all 2s;
+                transform: scale(1.2);
+            }
+        }
+    }
+}

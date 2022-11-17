@@ -1,0 +1,262 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+
+.grandrestaurant-price-card{
+    position: relative;
+    &__image{
+        position: relative;
+        &_icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transition: .6s;
+            opacity: 0;
+            &_linker {
+                background-color: rgba($color: $wbu-background, $alpha: 0.7);
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: ($wbu-margin/2);
+                border-radius: 50%;
+                svg{
+                    fill: $wbu-color-boder;
+                }
+            }
+        }
+        img{
+            max-height: 36rem;
+            width: 100%;
+        }
+        &:hover{
+            .grandrestaurant-price-card__image_icon {
+                opacity: 1;
+            }
+        }
+    }
+    &__info{
+        padding: ($wbu-margin/2);
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $wbu-color-text;
+        &_generic {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &_title{
+                font-weight: $wbu-title-font-weight;
+                font-size: $wbu-h5-font-size;
+            }
+            &_compo{
+                position: relative;
+                //font-size: $wbu-title-font-size;
+            }
+        }
+        &_price{
+            font-weight: $wbu-title-font-weight;
+            font-size: $wbu-h5-font-size;
+        }
+    }
+    &--blog {
+        border: 1px solid green;
+        overflow: hidden;
+        &:hover {
+            .grandrestaurant-price-card__link {
+                &_text {
+                    &::before {
+                        display: block;
+                        margin-left: -3rem;
+                        transition: all 1s;
+                    }
+                    &::after {
+                        margin-left: 1rem;
+                        display: block;
+                        transition: all 1s;
+                    }
+                }
+                &_icon {
+                    display: block;
+                    margin-left: -1rem;
+                    transition: all 2s;
+                }
+            }
+        }
+        .grandrestaurant-price-card__image {
+            overflow: hidden;
+            border-radius: ($wbu-margin/3);
+            position: relative;
+            &_cross {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                border: 1px solid red;
+                right: 0;
+                top: O;
+                left: 0;
+                bottom: 0;
+                background-color: black;
+                &::before, &::after {
+                    position: absolute;
+                    left: 0;
+                    content: ' ';
+                    height: 0.1rem;
+                    width: 7rem;
+                    background-color: white;
+                }
+                &::after {
+                    top: 0;
+                }
+                &::before {
+                    transform: rotate(90deg);
+                    left: 0;
+                }
+            }
+            img {
+                border-radius: ($wbu-margin/3);
+                &:hover{
+                    transition: all 2s;
+                    transform: scale(1.1);
+                }
+            }
+            &_date {
+                position: absolute;
+                z-index: 5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                top: 0;
+                left: 0;
+                width: auto;
+                padding-top: 0;
+                padding: ($wbu-margin/2);
+                color: $wbu-color-boder;
+                &_day {
+                    font-size: $wbu-h3-font-size;
+                    font-weight: $wbu-title-font-weight;
+                    flex: 1;
+                }
+                &_month {
+                    font-size: $wbu-default-font-size;
+                    text-transform: uppercase;
+                    flex: 1;
+                    letter-spacing: 0.2rem;
+                }
+            }
+        }
+        .grandrestaurant-price-card__info {
+            &_generic {
+                &_title {
+                    margin-bottom: $wbu-margin;
+                }
+                &_desc {
+                    margin-bottom: $wbu-margin;
+                }
+            }
+        }
+        .grandrestaurant-price-card__link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: $wbu-margin;
+            padding: ($wbu-margin/2);
+            &_text {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: $wbu-default-font-size;
+                color: $wbu-color-primary;
+                text-decoration: none;
+                &::before {
+                    content: "";
+                    display: block;
+                    margin-right: ($wbu-margin/2);
+                    height: 2px;
+                    background: $wbu-color-primary;
+                    border-color: $wbu-color-primary;
+                    width: 2rem;
+                }
+                &::after {
+                    content: "";
+                    display: none;
+                    margin-left: -$wbu-margin;
+                    height: 2px;
+                    background: $wbu-color-primary;
+                    border-color: $wbu-color-primary;
+                    width: 2rem;
+                }
+            }
+            &_icon {
+                position: relative;
+                display: none;
+                margin-left: 1rem;
+                svg {
+                    stroke: $wbu-color-primary;
+                }
+            }
+        }
+        .grandrestaurant-price-card__image_icon,
+        .grandrestaurant-price-card__info_generic_compo,
+        .grandrestaurant-price-card__info_price {
+            display: none;
+        }
+    }
+    &--hover {
+        @keyframes topit {
+            0% {
+              top: 9;
+            }
+            100% {
+              top: 0;
+            }
+        }
+        .grandrestaurant-price-card__image_icon {
+            display: none;
+        }
+        .grandrestaurant-price-card__info {
+            border: 0.1rem solid $wbu-color-boder;
+            padding: $wbu-margin;
+            margin: $wbu-margin;
+            position: absolute;
+            display: none;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            left: 0;
+            color: $wbu-color-boder;
+            &_price {
+                margin-top: $wbu-margin;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            display: none;
+            background-color: rgba($color: $wbu-background, $alpha: 0.5);
+        }
+        &:hover {
+            &::after {
+                display: block;
+                animation: 1s ease-out 0s 1 topit;
+                z-index: 2;
+            }
+            .grandrestaurant-price-card__info {
+                display: block;
+                z-index: 3;
+            }
+        }
+    }
+}

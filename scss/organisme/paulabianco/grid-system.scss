@@ -18,19 +18,6 @@
   .featured {
     grid-column: span 2;
   }
-  p {
-    font-size: 16.4px;
-    color: #6d6d6d;
-  }
-
-  h1 {
-    margin: 3rem 0;
-    text-align: center;
-    font-size: clamp(2rem, 1rem + 3vw, 6rem);
-    font-weight: 300;
-    line-height: 1;
-    opacity: 0.2;
-  }
 
   .flow > * + * {
     margin-top: var(--flow-space, var(--spacer));

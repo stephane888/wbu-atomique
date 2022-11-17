@@ -163,7 +163,61 @@
       @include ellipseText(4);
     }
   }
-
+  &--icon-left-no-bg {
+    border-radius: 0;
+    text-align: left;
+    .simple-card__img {
+      display: none;
+    }
+    .sc-link {
+      display: none;
+    }
+    .sc-user-info {
+      display: none;
+    }
+    .sc-title {
+      &--bottom-line {
+        display: block;
+        width: 4.5rem;
+        border: 0.3rem solid $wbu-color-primary;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .sc-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 2rem;
+      padding: 0;
+      svg {
+        fill: $wbu-color-text;
+        width: 60px;
+        position: relative;
+        height: 60px;
+      }
+    }
+    .sc-desc {
+      @include ellipseText(4);
+    }
+    &:hover {
+      background: $wbu-color-primary;
+      .sc-desc,.sc-title {
+        color: color-yiq($wbu-color-primary);
+      }
+      .sc-title {
+        &--bottom-line {
+          border-color: color-yiq($wbu-color-primary);
+        }
+      } 
+      svg {
+        fill: color-yiq($wbu-color-primary);
+      }
+    }
+  }
   &--icon-left-black {
     text-align: left;
     .simple-card__img {

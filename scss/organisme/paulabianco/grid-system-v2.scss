@@ -1,0 +1,56 @@
+@use "../../wbu-ressources.scss" as *;
+
+.vlf-grid-v2 {
+  :root {
+    --ff-primary: basic-sans, sans-serif;
+    --clr-primary: #ee6352;
+    --clr-body: #333;
+    --clr-bg: #ddd;
+    --spacer: 1rem;
+  }
+  --gap: 0.4rem;
+  --columns: 4;
+  margin: 0 auto;
+  display: column;
+  columns: var(--columns);
+  gap: var(--gap);
+
+  .featured {
+    grid-column: span 2;
+  }
+
+  .flow > * + * {
+    margin-top: var(--flow-space, var(--spacer));
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.vlf-grid-v2 > * {
+  break-inside: avoid;
+  margin-bottom: var(--gap);
+}
+
+@supports (grid-template-rows: masonry) {
+  .vlf-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: masonry;
+    grid-auto-flow: dense;
+    /* align-tracks: stretch; */
+  }
+
+  .vlf-grid-v2 > * {
+    margin-bottom: 0em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .vlf-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
+  }
+}

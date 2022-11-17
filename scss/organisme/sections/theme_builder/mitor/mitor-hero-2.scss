@@ -317,6 +317,27 @@
   }
   &--text-left {
     min-height: 30vh;
+    .hole {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      opacity: 0.9;
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-width: 70%;
+        bottom: 0;
+        right: 0;
+        fill: $wbu-color-primary;
+        @include media-max(MD) {
+          display: none;
+        }
+      }
+    }
     .svg, .svg-2, .svg-3{
       display: none;
     }
@@ -327,7 +348,7 @@
       margin-left: 0;
       text-align: left;
       .mc-title {
-        color: $wbu-color-text;
+        color: color-yiq($wbu-color-primary);
         margin-left: 0;
         @include media-min(DD) {
           width: 55%;

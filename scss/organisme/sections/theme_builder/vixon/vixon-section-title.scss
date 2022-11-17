@@ -6,7 +6,6 @@
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: 65% 50%;
-  padding: 0 10rem 0 0;
   background-size: cover;
   position: relative;
   .question {
@@ -69,7 +68,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background-color: rgba(#000, 0.9);
+      background-color: rgba(#000, 0.1);
     }
   }
 }
