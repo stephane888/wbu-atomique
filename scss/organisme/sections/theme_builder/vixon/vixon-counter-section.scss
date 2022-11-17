@@ -1,17 +1,22 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables" as *;
+
 .moove-up {
   margin-top: -70px;
 }
+
 .vixon-counter-section {
   padding: 2rem 0 3rem;
   overflow: hidden;
+
   .counter-inner {
     padding: 50px;
     position: relative;
+
     @include media-max(XS) {
       padding: 50px 20px;
     }
+
     &:before {
       position: absolute;
       content: "";
@@ -27,14 +32,43 @@
     .counter-stat {
       margin-bottom: 1rem;
       color: black;
+
       .cs-light {
         font-weight: 300;
       }
+
       .cs-bold {
         font-weight: bold;
       }
+
       .cs-desc {
         margin-top: 1rem;
+      }
+    }
+
+
+    .counter-circle {
+      min-height: 80px;
+      min-width: 80px;
+      font-size: 3.5rem;
+      border-radius: 50%;
+      color: white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .counter-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-direction: column;
+      .text {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: black;
+        font-weight: bold;
       }
     }
 
@@ -44,14 +78,18 @@
       padding-left: 2rem;
     }
   }
+
   &--simple {
     padding: $space_bottom 0;
     margin: 0;
+
     .counter-inner {
       padding: 2rem;
+
       &::before {
         display: none;
       }
+
       .counter-stat {
         .cs-bold {
           color: $wbu-color-primary;
