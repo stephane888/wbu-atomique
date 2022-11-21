@@ -1,145 +1,51 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
-@use "./evenex-theme-color.scss" as *;
+@use "./teasers/evenex-countdown-banner.scss";
+.evenex-countdown-section {
+  padding-top: 4rem;
+  .ecs-title {
+    color: black;
+    font-weight: 700;
+    line-height: 54px;
+  }
+  .ecs-description {
+    padding-bottom: 4rem;
+    font-size: $wbu-default-font-size;
+    line-height: 25px;
+  }
+  .ecs-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 
-
-.evenex-countdown-section-handler {
-
-    .container-fluid {
-        max-width: 1140px;
+    @include media-max(SM) {
+      margin-bottom: 2rem;
     }
-
-    .countdown-teaser {
-        margin-top: $wbu-margin * 2.5;
-
-        .title {
-            margin-bottom: 4rem;
+    .detail-info {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      &__icon {
+        display: flex;
+        align-items: center;
+        svg {
+          height: 1.5rem;
+          padding-right: 1rem;
+          fill: $wbu-color-primary;
         }
+      }
 
-        h2 {
-            color: $wbu-color-secondary;
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 54px;
-            letter-spacing: -1.2px;
-        }
-
-        .counter-desc {
-            padding-bottom: 1.5rem;
-            font-size: 1.6rem;
-        }
-
-        .counterdown {
-            position: relative;
-            margin-top: $wbu-margin*1.7;
-            border-radius: 8px;
-            padding: $wbu-margin $wbu-margin*2;
-            box-shadow: 0 3px 6px 0 rgb(248 56 56 / 42%);
-            background-color: transparent;
-
-
-            background-image: linear-gradient(100deg, $wbu-color-primary 0%, $wbu-color-thirdly 100%);
-            &::before {
-                content: "";
-                position: absolute;
-                background: $wbu-border-color;
-                top: 40%;
-                height: 23px;
-                left: -14;
-                width: 23px;
-                border-radius: 50%;
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                background: $wbu-border-color;
-                top: 40%;
-                height: 23px;
-                right: -14;
-                width: 23px;
-                border-radius: 50%;
-            }
-
-            .banner-handler {
-                border: .1rem dashed $wbu-border-color;
-                .single-count {
-                    text-align: center;
-                    color: $wbu-border-color;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        height: 80%;
-                        background: $wbu-color-secondary;
-                        width: 1px;
-                        top: auto;
-                        bottom: 10;
-                        right: 0;
-                        opacity: 0.2;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        &:last-child {
-                            display: none;
-                        }
-                    }
-
-                     &:last-child{
-                         &::after{
-                             content: "";
-                             visibility: hidden;
-                         }
-                         }
-                    @include media-max(MD) {
-                        &::after {
-                            display: none;
-                            visibility: hidden;
-                        }
-                    }
-
-                    .count-number {
-                        font-weight: bold;
-                    }
-
-                    .count-name {
-                        text-transform: capitalize;
-                    }
-
-                }
-
-            }
-
-        }
-
-        .informations {
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-
-            .information {
-                display: flex;
-                justify-content: start;
-                align-items: center;
-                padding-bottom: 1.5rem;
-
-                .icon svg {
-                    height: 1.5rem;
-                    padding-right: 1rem !important;
-                    fill: $wbu-color-primary;
-                }
-
-                .question {
-                    font-weight: bolder;
-                    padding-right: 1rem !important;
-                }
-
-                .text {
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-            }
-        }
+      .text {
+        font-size: 16px;
+        font-weight: 500;
+      }
     }
+    .question {
+      font-weight: bolder;
+      padding-right: 1rem;
+    }
+  }
 }
