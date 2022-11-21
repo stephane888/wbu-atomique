@@ -65,7 +65,6 @@
         }
     }
     &--blog {
-        border: 1px solid green;
         overflow: hidden;
         &:hover {
             .grandrestaurant-price-card__link {
@@ -92,30 +91,28 @@
             overflow: hidden;
             border-radius: ($wbu-margin/3);
             position: relative;
-            &_cross {
-                position: absolute;
-                display: flex;
-                align-items: center;
-                border: 1px solid red;
-                right: 0;
-                top: O;
-                left: 0;
-                bottom: 0;
-                background-color: black;
+            &::before {
+                width: 60px;
+                height: 1px;
+                left: 100%;
+            }
+            &::after {
+                height: 60px;
+                width: 1px;
+                top: 0%;   
+            }
+            &:hover {
+                cursor: pointer;
                 &::before, &::after {
+                    content: '';
+                    background-color: $wbu-color-primary;
                     position: absolute;
-                    left: 0;
-                    content: ' ';
-                    height: 0.1rem;
-                    width: 7rem;
-                    background-color: white;
-                }
-                &::after {
-                    top: 0;
-                }
-                &::before {
-                    transform: rotate(90deg);
-                    left: 0;
+                    z-index: 7;
+                    top: 50%;
+                    left: 50%;
+                    opacity: 1;
+                    -webkit-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
                 }
             }
             img {
