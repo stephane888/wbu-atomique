@@ -55,6 +55,10 @@
             color: color-yiq($wbu-color-primary);
             vertical-align: baseline;
             line-height: 2;
+            a {
+                text-decoration: none;
+                font-weight: $wbu-title-font-weight;
+            }
         }
         &_link{
             margin-top: $wbu-margin;
