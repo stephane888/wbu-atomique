@@ -1,0 +1,63 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+
+.evenex-suscribe-form-teaser-handler{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: $wbu-margin*4.2 0 $wbu-margin*4;
+
+    .banner-content{
+        display: flex;
+        flex-wrap: wrap;
+        .text-indicator{
+            width: 50%;
+            font-weight: bold;
+            color: $wbu-color-boder;
+        }
+        .form{
+            width: 50%;
+        }
+        .form-element{
+            display: flex;
+            flex-wrap: wrap;
+            .emailField{
+                border: none;
+                max-width: 75%;
+                background: transparent;
+                outline: none;
+                height: 100%;
+                color: $wbu-color-boder;
+                border: 1px solid $wbu-color-boder;
+                border-radius: 3px 0 0 3px;
+                padding: $wbu-margin $wbu-margin $wbu-margin $wbu-margin*1.95;
+            }
+            .submitField{
+                height: 65px;
+                padding: $wbu-margin $wbu-margin;
+                background: $wbu-color-boder;
+                border: 1px solid $wbu-color-boder;
+                margin-left: $wbu-margin*-0.2;
+                border-radius: 0 3px 3px 0;
+                color: #f94743;
+                transition: 2s;
+                &:hover{
+                    color: $wbu-color-boder;
+                    background: #f94743;
+                }
+                .btn-content{
+                    font-weight: 500;
+                    margin: 0;
+                    line-height: 0;
+                    display: flex;
+                    align-items: center;
+                    
+                    svg {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
