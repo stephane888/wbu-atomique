@@ -1,0 +1,122 @@
+@use "../../../../variables" as *;
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.evenex-last-year {
+    display: flex;
+    flex-wrap: wrap;
+
+    .container-fluid {
+        max-width: 1140px;
+    }
+
+    @include media-max(XS) {
+        .col-lg-7.col-md-6 {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .col-lg-5.col-md-6 {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    .video {
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 150px;
+    }
+
+    &__video {
+        text-align: center;
+
+        svg {
+            height: 100px;
+            width: 100px;
+            transition: all .4s ease;
+        }
+
+        .play-btn {
+            color: white;
+            background-color: transparent;
+            border: none;
+            padding: 10px;
+            fill: white;
+            transition: all .3s ease;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: #fff;
+                fill: $wbu-color-primary;
+            }
+        }
+    }
+
+    .text {
+        background: #172070;
+        padding: 62px;
+        text-align: left;
+        border-radius: 5px;
+        margin-left: -5rem;
+        margin-top: 3rem;
+        @include media-max(XS) {
+            margin-top: 0px;
+            border-radius: 0px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        color: #fff;
+    }
+
+    &__description {
+        color: #c1c3d8;
+        margin-top: 10px;
+    }
+
+    &__call-to-action {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 19px 34px 20px;
+        font-family: rubik, Sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: transparent;
+        background-image: linear-gradient(90deg, #F94843 0%, #FF7A49 100%);
+        border-style: none;
+        border-radius: 5px 5px 5px 5px;
+        box-shadow: 0 15px 25px 0 rgb(249 71 67 / 30%);
+        margin: 2rem auto 0 auto;
+        position: relative;
+
+        &:hover::after {
+            opacity: 1;
+        }
+
+        &:hover {
+            background-image: linear-gradient(90deg, #FF7A49 0%, #F94843 100%);
+        }
+
+
+
+        svg {
+            fill: white;
+            width: 2rem;
+            height: 2rem;
+            margin-left: 20px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+
+            &::before {
+                position: absolute;
+                inset: 0;
+                content: "";
+            }
+        }
+    }
+}
