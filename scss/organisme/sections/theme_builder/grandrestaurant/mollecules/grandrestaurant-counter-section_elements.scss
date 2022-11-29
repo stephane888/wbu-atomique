@@ -16,7 +16,7 @@
     }
     &_text {
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: $wbu-title-font-weight;
         margin-top: $wbu-margin;
     }
 }
