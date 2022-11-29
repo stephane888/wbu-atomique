@@ -1,0 +1,22 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables.scss" as *;
+
+.grandrestaurant-counter-section_elements {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: $wbu-margin;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    &_count {
+        font-size: $wbu-h1-font-size;
+        font-weight: $wbu-title-font-weight;
+        margin-top: $wbu-margin;
+    }
+    &_text {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-top: $wbu-margin;
+    }
+}
