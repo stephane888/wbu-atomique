@@ -69,23 +69,27 @@ h1,
 .h1 {
   @include bp_h1();
   margin-bottom: 1.5rem;
+  line-height: $wbu-h1-line-height;
 }
 
 h2,
 .h2 {
   @include bp_h2();
   margin-bottom: 1rem;
+  line-height: $wbu-h2-line-height;
 }
 
 h3,
 .h3 {
   @include bp_h3();
   margin-bottom: 0.6rem;
+  line-height: $wbu-h3-line-height;
 }
 
 h4,
 .h4 {
   @include bp_h4();
+  line-height: $wbu-h4-line-height;
 }
 
 h5,
