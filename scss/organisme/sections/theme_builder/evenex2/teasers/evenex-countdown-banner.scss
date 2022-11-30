@@ -1,0 +1,90 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.evenex-countdown-banner {
+  position: relative;
+  border-radius: 8px;
+  padding: $wbu-margin $wbu-margin * 2;
+  box-shadow: 0 3px 6px 0 rgb(248 56 56 / 42%);
+  background-color: transparent;
+  padding-bottom: 2rem;
+  background-image: linear-gradient(
+    100deg,
+    $wbu-color-primary 0%,
+    $wbu-color-thirdly 100%
+  );
+  &::before {
+    content: "";
+    position: absolute;
+    background: $wbu-border-color;
+    top: 40%;
+    height: 23px;
+    left: -14;
+    width: 23px;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: $wbu-border-color;
+    top: 40%;
+    height: 23px;
+    right: -14;
+    width: 23px;
+    border-radius: 50%;
+  }
+
+  .banner-handler {
+    border: 0.1rem dashed $wbu-border-color;
+    .single-count {
+      text-align: center;
+      color: $wbu-border-color;
+      min-width: 10rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 80%;
+        background: $wbu-color-secondary;
+        width: 2px;
+        top: auto;
+        bottom: 10;
+        right: 0;
+        opacity: 0.2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:last-child {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        &::after {
+          content: "";
+          visibility: hidden;
+        }
+      }
+      @include media-max(XS) {
+        min-width: 17rem;
+        &::after {
+          display: none;
+          visibility: hidden;
+        }
+      }
+      @include media-max(XX) {
+        min-width: 10rem;
+      }
+
+      .count-number {
+        font-weight: bold;
+      }
+
+      .count-name {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

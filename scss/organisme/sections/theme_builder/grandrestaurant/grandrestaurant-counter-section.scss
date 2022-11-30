@@ -1,0 +1,13 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;
+@use "./mollecules/grandrestaurant-counter-section_elements.scss" as *;
+
+.grandrestaurant-counter-section {
+    position: relative;
+    display: flex;
+    padding-top: $space-bottom;
+    padding-bottom: $space-bottom;
+    &_elements {
+        position: relative;
+    }
+}
