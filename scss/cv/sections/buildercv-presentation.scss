@@ -1,0 +1,51 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.buildercv-presentation {
+  @include media-min("DD") {
+    padding: $wbu-margin * 2;
+  }
+  .subtitle {
+    > .block + .block {
+      padding-left: $wbu-margin * 0.45;
+    }
+  }
+  .listes {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: calc(100% + 20px);
+      width: 1px;
+      background: #fff;
+      top: -10px;
+      left: 0;
+      right: auto;
+    }
+    .field {
+      display: flex;
+      line-height: $wbu-h3-line-height;
+      .field__label {
+        font-weight: 600;
+        padding-right: $wbu-margin * 0.6;
+        position: relative;
+        &::before {
+          content: " : ";
+          position: absolute;
+          bottom: 0;
+          right: $wbu-margin * 0.3;
+          left: auto;
+          top: auto;
+        }
+      }
+    }
+  }
+  .title {
+    font-weight: 600;
+  }
+  .image {
+    img {
+      border-radius: 50%;
+      max-width: 150px;
+      height: auto;
+    }
+  }
+}

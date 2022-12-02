@@ -42,18 +42,15 @@
     &--no-img {
         .grandrestaurant-chief-card__title {
             text-transform: uppercase;
-            &::before {
-                content: "\"";
-            }
-            &::after {
-                content: "\"";
-            }
         }
         .grandrestaurant-chief-card__signature {
             display: block;
         }
         .grandrestaurant-chief-card__img {
             display: none;
+            img {
+                display: none;
+            }
         }
         .grandrestaurant-chief-card__post {
             display: none;
