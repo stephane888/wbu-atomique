@@ -1,0 +1,89 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.about-venue-info {
+    min-width: 35%;
+    background-color: #172070;
+    position: relative;
+
+    @include media-max(DD) {
+        min-width: 100%;
+    }
+
+    &__image-overlay {
+        background-image: url(https://demo.xpeedstudio.com/evenex/conference/wp-content/uploads/sites/2/2020/02/home-2-map-shape.png);
+        background-position: -3px -17px;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .wrapper {
+        padding: 100px 40px 0px 40px;
+        top: -10px;
+        margin-bottom: 40px;
+    }
+
+    .info {
+        display: flex;
+    }
+
+    &__title {
+        color: white;
+        font-weight: 700;
+        letter-spacing: -1.2px;
+    }
+
+    &__icon {
+        svg {
+            width: 3rem;
+            height: 3rem;
+            fill: white;
+        }
+    }
+
+    &__sub-title {
+        color: white;
+    }
+
+    &__location {
+        color: #A6AACB;
+        font-size: 16px;
+        line-height: 3.2rem;
+        margin-top: -7px;
+    }
+
+    .schedules {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .schedule {
+        min-width: 7rem;
+    }
+
+    .col-lg-5.col-md-5 {
+        padding-left: 0px;
+    }
+
+    .col-lg-7.col-md-7 {
+        padding-left: 0px;
+    }
+
+
+    &__text {
+        color: #A6AACB;
+        font-size: 16px;
+    }
+
+    &--hour {
+        color: white;
+    }
+
+
+
+}
