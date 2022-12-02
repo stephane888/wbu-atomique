@@ -52,6 +52,7 @@
     "bootstrap": "^4.6.0",
     "core-js": "^3.26.0",
     "glider-js": "^1.7.7",
+    "html2pdf.js": "^0.10.1",
     "image-webpack-loader": "^8.1.0",
     "imagemin": "^7.0.1",
     "lightgallery": "^2.5.0",
