@@ -43,15 +43,16 @@
       text-align: center;
       color: $wbu-border-color;
       min-width: 10rem;
+      position: relative;
 
       &::after {
         content: "";
         position: absolute;
         height: 80%;
-        background: $wbu-color-secondary;
+        background: darken($color: $wbu-color-secondary, $amount: 50%);
         width: 2px;
         top: auto;
-        bottom: 10;
+        bottom: 10px;
         right: 0;
         opacity: 0.2;
         display: flex;
