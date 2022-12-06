@@ -13,6 +13,7 @@
         max-height: 50rem;
         img {
             width: 100%;
+            object-fit: cover;
             border-radius: ($wbu-margin/2);
         }
     }

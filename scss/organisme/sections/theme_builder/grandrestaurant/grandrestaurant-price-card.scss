@@ -31,6 +31,7 @@
         }
         img{
             max-height: 36rem;
+            object-fit: cover;
             height: 36rem;
             width: 100%;
         }
@@ -115,6 +116,7 @@
             }
             img {
                 border-radius: ($wbu-margin/3);
+                object-fit: cover;
                 &:hover{
                     transition: all 2s;
                     transform: scale(1.1);
