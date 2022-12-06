@@ -1,98 +1,75 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
 
-.evenex-footer-section-handler{
-   overflow: visible;
-   padding: calc($wbu-margin * 4) 0 0;
-   .bg-bottom{
-        width: 100%;
-        height: 70%;
-        position: absolute;
-        background: url("https://demo.xpeedstudio.com/evenex/conference/wp-content/uploads/sites/2/2020/01/contact_page_footer_buildings.png");
-        background-position: bottom center;
-        background-repeat: repeat-x;
-        background-size: 30% auto;
-        opacity: .64;
-        top: 0;
-        box-sizing: border-box;
-        left: 0;
-        transition: background .3s,border-radius .3s, opacity .3s;
-   }
-   .footer-container{
-        height: 100%;
-        position: relative;
-        .footer-content{
-            padding: $wbu-margin*2 0 0 0;
+.footer {
+    &__logo {
+        margin: 0px 0px 46px 0px;
+        text-align: center;
+
+    }
+
+    &__description {
+        color: #666666;
+        font-family: "Rubik", Sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6em;
+        text-align: center;
+        margin: 0px 0px 45px 0px;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        margin: 0px 0px 46px 0px;
+
+        &__link {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .footer-text{
-                width: 60%;
-                margin-top: $wbu-margin*2;
-                text-align: center;
-            }
-            .copyright{
-                margin-top: $wbu-margin*2;
-                text-transform: capitalize;
-                .company-link{
-                    color: #f94743;
-                    text-decoration: underline;
-                }
-            }
-        }
-        .social-links{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+            margin: 0px 3px 0px -1px;
             text-align: center;
-            .social{
+            text-decoration: none;
+            border-radius: 10% 10% 10% 10%;
+            padding: 0px 0px 0px 0px;
+            width: 45px;
+            height: 45px;
+            line-height: 44px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 15px 40px 0px rgb(0 0 0 / 10%);
+            justify-content: center;
+
+            svg {
+                width: 1.8rem;
+                height: 1.8rem;
+                vertical-align: middle;
                 display: inline-block;
-                margin-top: $wbu-margin*2;
-                .linker{
-                    text-align: center;
-                    text-decoration: none;
-                    border-radius: 10% 10% 10% 10%;
-                    padding: $wbu-margin*0.7;
-                    width: 45px;
-                    height: 45px;
-                    line-height: 44px;
-                    transition: all .5s;
-                    box-shadow: 0 15px 40px 0 rgb( 0 0 0 /10%);
-                }
-                .facebook{
-                   &:hover{
-                       color: #3b5998;
-                   }
-                }
-                .twitter{
-                    &:hover{
-                        color: #00acee;
-                    }
-                }   
-                .whatsapp{
-                    &:hover{
-                        color: #25d366;
-                    }
-                }
-                .linkedin{
-                    &:hover{
-                        color: #0e76a8;
-                    }
-                }
-                .youtube{
-                    &:hover{
-                        color: #e13832;
-                    }
-                }
-                .spotify{
-                    &:hover{
-                        color: #1db954;
-                    }
-                }
+                fill: #222222;
+                margin-top: auto;
+                margin-bottom: auto;
             }
         }
     }
-    
+
+    &__copywrigth {
+        text-align: center;
+        a {
+            color: $wbu-color-primary;
+            text-decoration: underline;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 11rem;
+        background-position: bottom center;
+        background-repeat: repeat-x;
+        background-size: 50% auto;
+        opacity: 0.9;
+        box-sizing: border-box;
+        transition: background .3s,border-radius .3s, opacity .3s;
+        @include media-min(MD) {
+            background-size: 40% auto;
+        }
+    }
 }
