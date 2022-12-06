@@ -1,0 +1,26 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.detail-info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    &__icon {
+        display: flex;
+
+        svg {
+            height: 1.5rem;
+            padding-right: 1rem;
+            fill: $wbu-color-primary;
+        }
+    }
+
+    .question {
+        font-weight: bolder;
+        padding-right: 1rem;
+    }
+}

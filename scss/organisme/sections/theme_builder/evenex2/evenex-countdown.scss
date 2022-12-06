@@ -1,50 +1,20 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
 @use "./teasers/evenex-countdown-banner.scss";
+
 .evenex-countdown-section {
   padding-top: 4rem;
+
   .ecs-title {
     color: black;
     font-weight: 700;
     line-height: 54px;
   }
+
   .ecs-description {
     padding-bottom: 4rem;
     font-size: $wbu-default-font-size;
     line-height: 25px;
   }
-  .ecs-detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
 
-    @include media-max(SM) {
-      margin-bottom: 2rem;
-    }
-    .detail-info {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      padding-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 1rem;
-      &__icon {
-        display: flex;
-        svg {
-          height: 1.5rem;
-          padding-right: 1rem;
-          fill: $wbu-color-primary;
-        }
-      }
-
-      .text {
-        font-size: 16px;
-        font-weight: 500;
-      }
-    }
-    .question {
-      font-weight: bolder;
-      padding-right: 1rem;
-    }
-  }
 }
