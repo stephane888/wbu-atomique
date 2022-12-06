@@ -5,6 +5,8 @@
     position: relative;
     background-color: $wbu-background;
     padding-top: ($wbu-margin/2);
+    padding-left: ($wbu-margin/2);
+    padding-right: ($wbu-margin/2);
     display: grid;
     gap: ($wbu-margin/2) ($wbu-margin/2);
     grid-template-columns: repeat(3, 2fr) repeat(2, 1fr) 2fr;
