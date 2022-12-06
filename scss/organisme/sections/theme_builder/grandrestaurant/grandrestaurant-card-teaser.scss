@@ -38,12 +38,10 @@
             &_first{
                 color: color-yiq($wbu-color-primary);
                 font-weight: lighter;
-                font-size: $wbu-h3-font-size;
                 //margin-bottom: $wbu-margin;
             }
             &_second{
                 text-transform: uppercase;
-                font-size: $wbu-h2-font-size;
                 font-weight: 700;
                 color: color-yiq($wbu-color-primary);
                 margin-bottom: $wbu-margin;
@@ -69,7 +67,6 @@
             .linker{
                 text-transform: capitalize;
                 color: #cfa670;
-                font-size: $wbu-h5-font-size;
                 font-weight: 600;
                 fill: #cfa670;
                 border-style: solid;

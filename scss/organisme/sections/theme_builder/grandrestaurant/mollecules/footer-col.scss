@@ -12,7 +12,6 @@
         padding: $wbu-margin;
         padding-left:0;
         text-transform: uppercase;
-        font-size: $wbu-default-font-size;
         img {
             max-width: 100%;
         }
@@ -20,7 +19,6 @@
     &__description {
         margin-bottom: $wbu-margin;
         text-align: justify;
-        font-size: $wbu-default-font-size;
     }
     .footer-col__socials {
         margin-bottom: $wbu-margin;

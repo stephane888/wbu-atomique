@@ -12,7 +12,6 @@
         position: relative;
         text-align: center;
         width: 100%;
-        font-size: $wbu-h1-font-size;
         font-weight: $wbu-title-font-weight;
         text-transform: uppercase;
         padding-left: $wbu-margin * 2;
@@ -20,12 +19,10 @@
         margin-bottom: $wbu-margin;
         color: $wbu-color-text;
         @include media-max(XX) {
-            font-size: $wbu-h1-font-size-sm;
             padding: 0;
             transition: 1s ease-in-out;
         }
         @include media-max(MD) {
-            font-size: $wbu-h3-font-size-sm;
             transition: 1s ease-in-out;
             padding: 0;
         };
@@ -35,19 +32,16 @@
         text-align: center;
         color: $wbu-color-text;
         text-transform: uppercase;
-        font-size: $wbu-h3-font-size;
         margin-bottom: $wbu-margin;
         padding-left: $wbu-margin * 2;
         padding-right: $wbu-margin * 2;
         width: 100%;
         position: relative;
         @include media-max(XX) {
-            font-size:$wbu-h3-font-size-sm;
             padding: 0;
             transition: 1s ease-in-out;
         }
         @include media-max(MD) {
-            font-size:$wbu-title-font-size;
             transition: 1s ease-in-out;
             padding: 0;
         }
@@ -56,19 +50,16 @@
         font-family: 'Kristi', cursive ;
         text-align: center;
         color: $wbu-color-text;
-        font-size: $wbu-h2-font-size;
         margin-bottom: $wbu-margin;
         padding-left: $wbu-margin * 2;
         padding-right: $wbu-margin * 2;
         width: 100%;
         position: relative;
         @include media-max(XX) {
-            font-size:$wbu-h2-font-size-sm;
             padding: 0;
             transition: 1s ease-in-out;
         }
         @include media-max(MD) {
-            font-size:$wbu-h2-font-size-sm;
             padding: 0;
             transition: 1s ease-in-out;
         }
