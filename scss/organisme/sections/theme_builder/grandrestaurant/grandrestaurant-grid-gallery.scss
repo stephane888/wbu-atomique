@@ -4,19 +4,20 @@
 .grandrestaurant-grid-gallery {
     position: relative;
     background-color: $wbu-background;
-    padding-top:10px;
+    padding-top: ($wbu-margin/2);
     display: grid;
-    gap: 10px 10px;
-    //grid-template-columns: repeat(6, minmax(auto, 100rem));
-    grid-template-rows: repeat( 3, 0.8fr 0.8fr 0.8fr) 1.5fr;
+    gap: ($wbu-margin/2) ($wbu-margin/2);
     grid-template-columns: repeat(3, 2fr) repeat(2, 1fr) 2fr;
-    .grid-item:nth-child(7),
-    .grid-item:nth-child(8),
-    .grid-item:nth-child(9),
-    .grid-item:nth-child(11),
-    .grid-item:nth-child(12) {
-        border: 1px solid red;
-        grid-template-rows: 2fr;
+    grid-auto-rows: 300px;
+    // customisation : 
+    /*grid-template-columns: repeat(6, 2fr);
+    grid-auto-rows: 300px;
+    grid-template-rows: 200px 200px 200px 480px;*/
+    @include media-max(XS) {
+        grid-template-columns: 2fr;
+    }
+    @include media-max(MD) {
+        grid-template-columns: 1fr;
     }
     .grid-item {
         border: 2px solid black;
@@ -25,14 +26,41 @@
         width: 100%;
         img {
             position: relative;
-            width: 100%;
+            background-position: center center;
             height: 100%;
+            width: 100%;
         }
         &:hover{
             img {
                 transition: all 2s;
                 transform: scale(1.2);
+                background-position: center center;
             }
+        }
+    }
+    &--type-one {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr) repeat(1, 1fr) repeat(2, 2fr);
+        grid-auto-rows: 300px;
+        @include media-max(XS) {
+            grid-template-columns: 2fr;
+        }
+    }
+    &--type-two {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) repeat(3, 2fr) repeat(1, 1fr) repeat(1, 2fr);
+        grid-auto-rows: 300px;
+        @include media-max(XS) {
+            grid-template-columns: 2fr;
+        }
+    }
+    &--type-three {
+        display: grid;
+        padding-bottom: ($wbu-margin/4);
+        grid-template-columns: repeat(1, 3fr) repeat(2, 1.5fr);
+        grid-auto-rows: 480px;
+        @include media-max(XS) {
+            grid-template-columns: 2fr;
         }
     }
 }
