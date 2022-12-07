@@ -31,6 +31,7 @@
         }
         img{
             max-height: 36rem;
+            object-fit: cover;
             height: 36rem;
             width: 100%;
         }
@@ -53,16 +54,13 @@
             justify-content: space-between;
             &_title{
                 font-weight: $wbu-title-font-weight;
-                font-size: $wbu-h5-font-size;
             }
             &_compo{
                 position: relative;
-                //font-size: $wbu-title-font-size;
             }
         }
         &_price{
             font-weight: $wbu-title-font-weight;
-            font-size: $wbu-h5-font-size;
         }
     }
     &--blog {
@@ -118,6 +116,7 @@
             }
             img {
                 border-radius: ($wbu-margin/3);
+                object-fit: cover;
                 &:hover{
                     transition: all 2s;
                     transform: scale(1.1);
@@ -137,12 +136,10 @@
                 padding: ($wbu-margin/2);
                 color: $wbu-color-boder;
                 &_day {
-                    font-size: $wbu-h3-font-size;
                     font-weight: $wbu-title-font-weight;
                     flex: 1;
                 }
                 &_month {
-                    font-size: $wbu-default-font-size;
                     text-transform: uppercase;
                     flex: 1;
                     letter-spacing: 0.2rem;
@@ -170,7 +167,6 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                font-size: $wbu-default-font-size;
                 color: $wbu-color-primary;
                 text-decoration: none;
                 &::before {

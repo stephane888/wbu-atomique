@@ -6,7 +6,6 @@
     &__title {
         margin-bottom: ($wbu-margin/2);
         font-weight: $wbu-title-font-weight;
-        font-size:$wbu-h3-font-size;
     }
     &__img {
         margin-bottom: $wbu-margin;
@@ -14,6 +13,7 @@
         max-height: 50rem;
         img {
             width: 100%;
+            object-fit: cover;
             border-radius: ($wbu-margin/2);
         }
     }
@@ -21,22 +21,18 @@
         margin-bottom: ($wbu-margin/2);
         text-transform: uppercase;
         color: $wbu-color-text;
-        font-size: ($wbu-default-font-size/1.4);
     }
     &__name {
         margin-bottom: ($wbu-margin/2);
-        font-size: $wbu-h4-font-size;
         font-weight: $wbu-title-font-weight;
     }
     &__desc {
         margin-bottom: ($wbu-margin/2);
-        font-size: $wbu-default-font-size;
         font-weight: 450;
     }
     &__signature {
         display: none;
         margin-bottom: ($wbu-margin/2);
-        font-size: $wbu-h3-font-size;
         font-weight: $wbu-title-font-weight;
     }
     &--no-img {
