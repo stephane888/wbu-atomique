@@ -1,0 +1,84 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.evenex-session {
+    position: relative;
+    padding-top: 66px;
+    padding-bottom: 66px;
+    padding-left: 66px;
+    border: none;
+    border-radius: 1.3125rem;
+    box-shadow: 0 1px 50px 0 rgb(0 0 0 / 6%);
+    margin-bottom: 3rem;
+    border-radius: 0.650rem;
+
+
+    &.active {
+        background-color: transparent;
+        background-image: linear-gradient(138deg, $wbu-color-primary 0%, $wbu-color-secondary 100%);
+        box-shadow: 0 25px rgb(249 76 67 / 53%);
+
+        @include media-min(XS) {
+            box-shadow: 0 8px 25px 0 rgb(249 76 67 / 53%);
+            border-radius: 0.650rem;
+        }
+
+        .evenex-session__day {
+            color: white;
+        }
+
+        .evenex-session__date {
+            color: white;
+        }
+
+        .evenex-session__place {
+            color: white;
+        }
+
+        .evenex-session__location {
+            color: white;
+        }
+    }
+
+    &__icon {
+        left: 24px;
+        top: 28px;
+        z-index: 0;
+        position: absolute;
+
+        svg {
+            width: 7rem;
+            height: 7rem;
+            fill: #972f28;
+            opacity: 0.28;
+        }
+    }
+
+    .info {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__day {
+        font-weight: 600;
+        margin-bottom: 4px;
+        line-height: 1;
+        color: #101010;
+    }
+
+    &__date {
+        font-weight: 600;
+        color: #101010;
+    }
+
+    &__place {
+        font-weight: 500;
+        font-size: 16px;
+        font-family: 'Roboto';
+        color: #041A57;
+    }
+
+    &__location {
+        color: #999999;
+    }
+}
