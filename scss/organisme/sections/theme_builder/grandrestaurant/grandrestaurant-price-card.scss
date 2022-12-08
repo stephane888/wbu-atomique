@@ -204,12 +204,18 @@
         }
     }
     &--hover {
+        height: 100%;
         @keyframes topit {
             0% {
-              top: 9;
+              top: 35;
             }
             100% {
               top: 0;
+            }
+        }
+        .grandrestaurant-price-card__image {
+            img {
+                height: 100%;
             }
         }
         .grandrestaurant-price-card__image_icon {
@@ -221,7 +227,7 @@
             margin: $wbu-margin;
             position: absolute;
             display: none;
-            top: 0;
+            top: 10;
             right: 0;
             left: 0;
             bottom: 0;
@@ -231,13 +237,16 @@
                 margin-top: $wbu-margin;
             }
         }
+        .grandrestaurant-price-card__link {
+            display: none;
+        }
         &::after {
             content: "";
             position: absolute;
             left: 0;
             bottom: 0;
             right: 0;
-            top: 0;
+            top: 10;
             display: none;
             background-color: rgba($color: $wbu-background, $alpha: 0.5);
         }
@@ -245,10 +254,13 @@
             &::after {
                 display: block;
                 animation: 1s ease-out 0s 1 topit;
+                top: 0;
                 z-index: 2;
             }
             .grandrestaurant-price-card__info {
                 display: block;
+                animation: 1s ease-out 0s 1 topit;
+                top: 0;
                 z-index: 3;
             }
         }
