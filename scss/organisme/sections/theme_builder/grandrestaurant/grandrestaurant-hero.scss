@@ -69,7 +69,6 @@
     }
     &__subtitle {
         font-family: 'Kristi', cursive ;
-        color: $wbu-color-secondary;
         width: 100%;
         position: relative;
         animation: 1s ease-out 0s 1 slideInFromLeft;
@@ -89,7 +88,6 @@
         width: 100%;
         font-weight: $wbu-title-font-weight;
         text-transform: uppercase;
-        color: $wbu-border-color;
         animation: 1.5s ease-out 1s 1 slideInFromLeft;
         @include media-max(XX) {
             transition: 1s ease-in-out;
