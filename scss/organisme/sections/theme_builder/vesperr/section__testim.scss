@@ -1,8 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
 @use "./molecule/testimonial-item.scss";
-.testimonials {
-  padding: $space_top 0;
+.spaker_mod_testimonials {
   .testimonials-slider {
     overflow: hidden;
   }

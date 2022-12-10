@@ -1,8 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
 
-.contact {
-  padding: $space_top 0;
+.spaker_mod_contact {
   .contact-about {
     h3 {
       font-size: $wbu-h3-font-size + 1;
