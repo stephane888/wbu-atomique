@@ -2,3 +2,167 @@
 @use "../../../../variables" as *;
 
 
+.evenex-pricing {
+    padding: 85px 0px 50px 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &__over-image1 {
+        left: 0%;
+        top: 0%;
+        opacity: 1;
+        z-index: 2;
+        position: absolute;
+        pointer-events: none;
+        transform: translateX(-27.85px);
+
+        img {
+            transform: rotate(0deg);
+            filter: blur(0px);
+            width: 100%;
+            height: auto;
+            overflow: visible;
+        }
+    }
+
+    &__over-image2 {
+        right: -2%;
+        bottom: 0%;
+        opacity: 1;
+        z-index: 2;
+        position: absolute;
+        pointer-events: none;
+        transform: translateX(-27.85px);
+
+        img {
+            transform: rotate(0deg);
+            filter: blur(0px);
+            width: 100%;
+            height: auto;
+            overflow: visible;
+        }
+    }
+
+    &__background-overlay {
+        background-color: #172070;
+        opacity: 0.91;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    &__title {
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        padding: 0px 0px 0px 0px;
+        z-index: 2;
+        position: relative;
+    }
+
+    &__text {
+        position: relative;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        margin-top: 3rem;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        span {
+            transition: all .8s ease;
+        }
+    }
+
+    .wrapper {
+        padding: 15px;
+        overflow: hidden;
+
+
+
+
+        &:nth-child(even) {
+            .single-pricing {
+                background-image: linear-gradient(90deg, $wbu-color-primary 0%, $wbu-color-secondary 100%);
+
+                &__price {
+                    color: white;
+
+                    &::after {
+                        background: #fd9f90;
+                    }
+                }
+
+                &__main-benefit {
+                    color: white;
+                }
+
+                &__benefit {
+                    color: white;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+
+
+            &:hover {
+
+
+                .single-pricing {
+                    &::before {
+                        scale: (11);
+                        z-index: 0;
+                        opacity: 1;
+                    }
+
+                    &__main-benefit {
+                        color: white;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    &__benefit {
+                        position: relative;
+                        z-index: 1;
+                        color: white;
+                    }
+
+                    &__price {
+                        color: white;
+
+                        &::after {
+                            background: #fd9f90;
+                        }
+                    }
+
+                    &__main-benefit {
+                        color: white;
+                    }
+
+                    &__benefit {
+                        color: white;
+                    }
+
+                    &__link {
+                        a {
+                            color: $wbu-color-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
