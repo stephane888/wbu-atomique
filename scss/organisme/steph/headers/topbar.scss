@@ -53,6 +53,10 @@ $height_bg: 32px;
   .form-item-lang-dropdown-select {
     margin-bottom: 0 !important;
   }
+  form.lang-dropdown-form {
+    display: flex;
+    align-items: center;
+  }
   .language-icon {
     min-width: 28px;
   }

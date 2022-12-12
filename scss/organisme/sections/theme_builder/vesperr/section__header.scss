@@ -1,7 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
 
-#header {
+.spaker_mod_header {
   position: sticky;
   z-index: 997;
   transition: all 0.5s;

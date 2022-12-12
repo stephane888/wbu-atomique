@@ -3,8 +3,7 @@
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.rc-contact {
-  padding: $space_top 0 $space_bottom;
+.spaker_mod_rc-contact {
   text-align: center;
   @include media-max(SM) {
     padding: 100px 60px;
