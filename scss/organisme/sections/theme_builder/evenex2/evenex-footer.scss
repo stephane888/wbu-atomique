@@ -51,6 +51,7 @@
 
     &__copywrigth {
         text-align: center;
+
         a {
             color: $wbu-color-primary;
             text-decoration: underline;
@@ -67,9 +68,40 @@
         background-size: 50% auto;
         opacity: 0.9;
         box-sizing: border-box;
-        transition: background .3s,border-radius .3s, opacity .3s;
+        transition: background .3s, border-radius .3s, opacity .3s;
+
         @include media-min(MD) {
             background-size: 40% auto;
         }
     }
+
+    .evenex-info__inner {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    &--shadow {
+        position: relative;
+        padding: 200px 0px 100px 0px;
+        margin-top: -12.875rem;
+        .overlay {
+            opacity: 0.5;
+            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: #F0F3F6;
+            background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/02/footer-four-bg-image.png);
+            background-position: bottom center;
+            background-repeat: repeat-x;
+            background-size: auto;
+            padding: 200px 0px 100px 0px;
+            overflow: visible;
+        }
+    }
+
 }
