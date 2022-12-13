@@ -7,7 +7,12 @@
   padding: 30px 0;
   color: #222222;
   font-size: 14px;
-
+  .copyright {
+    position: inherit;
+    strong {
+      font-weight: 500;
+    }
+  }
   .credits {
     padding-top: 5px;
     color: #222222;
@@ -20,5 +25,38 @@
   .footer-links a {
     padding-left: 15px;
     text-decoration: none;
+  }
+}
+.vesperr_footer {
+  background: #fff;
+  box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 10%);
+  padding: 30px 0;
+  color: #222222;
+  font-size: 14px;
+  .copyright {
+    position: inherit;
+    strong {
+      font-weight: 500;
+    }
+  }
+  .credits {
+    font-size: 1.3rem;
+    padding-top: 5px;
+    color: #222222;
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+  }
+
+  .footer-links a {
+    color: #222222;
+    padding-left: 15px;
+    text-decoration: none;
+
+    &:hover {
+      color: #3498db;
+    }
   }
 }
