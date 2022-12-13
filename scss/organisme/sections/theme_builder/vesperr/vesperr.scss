@@ -1,57 +1,56 @@
-@use "../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../atome/typography/_default.scss";
-@use "../../../../variables";
+// @use "../../../../wbu-ressources-clean.scss" as *;
+// @use "../../../../atome/typography/_default.scss";
+// @use "../../../../variables";
 
+// // style par défaut des sections :
 
-// style par défaut des sections : 
+// section {
+//   padding: 60px 0;
+//   overflow: hidden;
+// }
 
-section {
-  padding: 60px 0;
-  overflow: hidden;
-}
+// .section-bg {
 
-.section-bg {
+//   background: #f7fbfe;
 
-  background: #f7fbfe;
+// }
 
-}
+// // back to top btn
 
-// back to top btn 
+// .back-to-top {
 
-.back-to-top {
+//     position:fixed;
+//     visibility: hidden;
+//     opacity: 0;
+//     right: 15px;
+//     bottom: 15px;
+//     z-index: 996;
+//     background: #3498db;
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 4px;
+//     transition: all 0.4s;
 
-    position:fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 996;
-    background: #3498db;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    transition: all 0.4s;
+//     &:hover {
 
-    &:hover {
+//       background: #57aae1;
+//       color: white;
 
-      background: #57aae1;
-      color: white;
+//     }
 
-    }
+//     svg {
 
-    svg {
+//       font-size: 2.8rem;
+//       color: white;
+//       line-height: 0;
 
-      font-size: 2.8rem;
-      color: white;
-      line-height: 0;
+//     }
 
-    }
+// }
 
-}
+// .back-to-top.active {
 
-.back-to-top.active {
+//     visibility: visible;
+//     opacity: 1;
 
-    visibility: visible;
-    opacity: 1;
-
-}
+// }

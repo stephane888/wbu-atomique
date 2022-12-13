@@ -1,8 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
 
-.faq {
-  padding: $space_top 0;
+.spaker_mod_faq {
   .faq-item {
     margin: 20px 0;
     padding: 20px 0;
@@ -21,10 +20,6 @@
       line-height: 26px;
       font-weight: $wbu-title-font-weight - 100;
       margin: 0 0 10px 32px;
-    }
-
-    p {
-      font-size: $wbu-default-font-size + 0.1;
     }
   }
 }

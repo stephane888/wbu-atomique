@@ -1,0 +1,225 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.evenex-info {
+    vertical-align: middle;
+
+    @include media-min(DD) {
+        margin-top: 50px;
+    }
+    &__tag {
+        color: #FF4070;
+        font-family: "Poppins", Sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 25px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    &__title {
+        margin: 15px 0px 20px 0px;
+        color: #101010;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    &__text {
+        margin: 0px 0px 20px 0px;
+        color: #666666;
+        font-family: "Rubik", Sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+    }
+
+    &__subtitle {
+        margin: 0px 0px 10px 0px;
+        padding: 0px 0px 0px 0px;
+        color: #101010;
+        font-family: "Poppins", Sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 25px;
+    }
+
+    &__link {
+        transition: all 0.4s ease;
+        text-align: center;
+        padding: 19px 22px 19px 22px;
+        font-family: "Rubik", Sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #1016D7;
+        box-shadow: 20px 0px 40px 0px rgb(9 71 255 / 10%);
+        border-style: none;
+        border-radius: 5px 5px 5px 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+        position: relative;
+        margin-bottom: 20px;
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            &::before {
+                position: absolute;
+                inset: 0;
+                content: "";
+            }
+        }
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            fill: white;
+            margin-right: 5px;
+        }
+
+        &:hover {
+            background: linear-gradient(100deg,
+                    $wbu-color-thirdly 0%,
+                    $wbu-color-primary 100%);
+        }
+    }
+
+    &__imagetwo {
+        img {
+            max-width: 100%;
+            height: auto;
+            @include media-min(MD) {
+                //width: 80%;
+            }
+
+            @include media-min(DD) {
+                //width: 100%;
+                height: 70%;
+            }
+        }
+        @include media-min(DD) {
+            display: flex;
+            justify-content: end;
+        }
+        
+    }
+
+    &__imageone {
+        display: none;
+
+        @include media-min(XS) {
+            display: block;
+            left: -7px;
+            text-align: left;
+            width: auto;
+            bottom: -50px;
+            position: absolute;
+        }
+
+        @include media-min(MD) {
+            left: -28px;
+            bottom: 28%;
+        }
+
+        @include media-min(DD) {
+            bottom: -13%;
+        }
+    }
+
+    &__icon {
+        display: none;
+        cursor: pointer;
+
+        @include media-min(XS) {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #FF4070;
+            padding: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+                content: " ";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: #FF4070;
+                border-radius: 50%;
+                box-shadow: 0 0 0 0 #FF4070;
+                animation: button-ripple 3s infinite;
+                opacity: .6;
+                z-index: -1;
+            }
+
+            svg {
+                width: 2.1rem;
+                height: 2.1rem;
+                position: relative;
+                fill: white;
+                &::after {
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    color: #FF4070;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 0 #FF4070;
+                    animation: button-ripple 3s infinite;
+                    opacity: .6;
+                    z-index: -1;
+                }
+            }
+        }
+
+        @include media-min(MD) {
+            top: 21%;
+            left: 30%;
+        }
+
+        @include media-min(DD) {
+            top: 36%;
+            left: 14%;
+        }
+    }
+
+    .video {
+        @include media-min(XS) {
+            position: relative;
+            z-index: 0;
+        }
+
+        @include media-min(DD) {
+            top: -8%;
+        }
+    }
+}
+
+@keyframes button-ripple {
+    70% {
+
+        box-shadow: 0 0 0 15px $wbu-color-primary;
+        opacity: 0
+    }
+
+    100% {
+
+        box-shadow: 0 0 0 0 $wbu-color-primary;
+        opacity: 0
+    }
+}

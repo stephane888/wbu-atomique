@@ -1,0 +1,17 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.evenex-schedule {
+    .nav-item:not(:last-child) {
+        margin-bottom: 1.5625rem;
+    }
+
+    &__title {
+        color: #101010;
+        font-weight: 700;
+        line-height: 54px;
+        letter-spacing: -1.2px;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+}
