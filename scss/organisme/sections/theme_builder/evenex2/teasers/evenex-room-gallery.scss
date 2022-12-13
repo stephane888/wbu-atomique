@@ -1,0 +1,15 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.evenex-gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    &:hover {
+        img {
+            scale: 0.9;
+        }
+    }
+    img {
+        transition: all 0.4s ease;
+    }
+}
