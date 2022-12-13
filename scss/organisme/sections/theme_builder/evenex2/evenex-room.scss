@@ -1,0 +1,83 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.evenex-room {
+    .wrapper {
+        @include media-min(XS) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+    &__title {
+        width: 300px;
+        max-width: 317px;
+        margin: 0px 0px 30px 0px;
+        text-align: left;
+        color: #101010;
+        font-family: "Poppins", Sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 30px;
+        @include media-min(XS) {
+            width: 248px;
+            max-width: 248px;
+        }
+    }
+
+    &__description {
+        column-gap: 0px;
+        text-align: left;
+        color: #666666;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        max-width: 364px;
+        margin-bottom: 25px;
+        @include media-min(XS) {
+            width: 364px;
+            max-width: 364px;
+        }
+    }
+
+    &__link {
+        padding: 17px 35px 17px 35px;
+        font-family: "Rubik", Sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        background-color: #1016D7;
+        border-style: none;
+        box-shadow: 20px 0px 40px 0px rgb(16 22 215 / 10%);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        max-width: 225px;
+        margin-left: auto;
+        margin-right: auto;
+        @include media-min(XS) {
+            width: 250px;
+            max-width: 250px;
+        }
+
+        svg {
+            height: 18px;
+            width: 18px;
+            margin-right: 5px;
+            fill: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+            }
+        }
+    }
+}
