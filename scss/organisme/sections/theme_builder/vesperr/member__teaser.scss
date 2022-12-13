@@ -1,0 +1,77 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+.member {
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+
+    .member-img {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 40px;
+      opacity: 0;
+      transition: ease-in-out 0.3s;
+      background: rgba(255, 255, 255, 0.85);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        transition: color 0.3s;
+        color: #222222;
+        margin: 0 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          line-height: 0;
+        }
+        &:hover {
+          color: $wbu-color-primary;
+        }
+      }
+
+      svg {
+        font-size: 1.8rem;
+        margin: 0 2px;
+      }
+    }
+
+    .member-info {
+      padding: 25px 15px;
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      h4 {
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 18px;
+        color: #222222;
+      }
+
+      span {
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+        color: #aaaaaa;
+      }
+    }
+
+    &:hover .social {
+      opacity: 1;
+    }
+}
