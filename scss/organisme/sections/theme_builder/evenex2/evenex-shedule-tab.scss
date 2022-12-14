@@ -1,0 +1,20 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+@use "./atome/evenex-selection.scss";
+@use "./teasers/evenex-shedule-card.scss";
+
+.evenex-shedule-tab {
+  margin-bottom: $space_top;
+  z-index: 5;
+  position: relative;
+  .tabs-content {
+    border-top: none;
+  }
+  .content-tab {
+    border: 1px dashed #e5e5e5;
+  }
+  @include media-min(DD) {
+    margin-top: -20rem;
+  }
+}
