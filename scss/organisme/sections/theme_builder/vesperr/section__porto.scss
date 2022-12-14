@@ -3,29 +3,25 @@
 
 .spaker_mod_portfolio {
   .portfolio-flters {
-    padding: 0;
-    margin: 0 auto 20px auto;
     list-style: none;
     text-align: center;
 
     li {
       cursor: pointer;
       display: inline-block;
-      padding: 8px 15px 10px 15px;
       font-size: 14px;
       font-weight: 600;
       line-height: 1;
       text-transform: uppercase;
       color: #222222;
-      margin-bottom: 5px;
       transition: all 0.3s ease-in-out;
       border-radius: 3px;
     }
 
     li:hover,
     li.filter-active {
-      color: #fff;
-      background: #3498db;
+      color: color_yiq($wbu-background);
+      background: $wbu-background;
     }
   }
 
