@@ -1,0 +1,171 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.evenex-header {
+    background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/02/home3-overlay.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -100px;
+    margin-bottom: 0px;
+    padding: 150px 15px 100px 15px;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    z-index: 0;
+    overflow: hidden;
+    animation-duration: 2s;
+    position: relative;
+
+    @include media-min(XS) {
+        padding: 266px 0px 358px 0px;
+    }
+
+    .overlay {
+        background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/02/banner_shape_white.png);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: 100vw auto;
+        opacity: 1;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    &__title {
+        margin: 0px 0px 25px 0px;
+        line-height: 1.2em;
+        color: #FFFFFF;
+        font-family: "Poppins", Sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @include media-min(XS) {
+            max-width: 50%;
+        }
+    }
+
+    &__date {
+        margin: 0px 0px 4px 0px;
+        color: #FFFFFF;
+        font-family: "Rubik", Sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.1em;
+        border-left: 1px solid white;
+        padding-left: 20px;
+    }
+
+    &__location {
+        margin: 0px 0px 20px 20px;
+        color: #FFFFFF;
+        font-family: "Rubik", Sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+
+        @include media-min(XS) {
+            border-left: 1px solid white;
+            padding-left: 20px;
+            margin-left: 0px;
+            margin-top: -4px;
+        }
+    }
+
+    &__call2action {
+        margin: 0px 0px 10px 0px;
+        text-align: center;
+        color: #FFFFFF;
+        font-family: "Rubik", Sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 26px;
+        border-radius: 5px 5px 5px 5px;
+        background-color: #FF4070;
+        padding: 18px 18px 18px 18px;
+        cursor: pointer;
+        display: inline-block;
+        z-index: 1;
+        position: relative;
+
+        @include media-min(XS) {
+            margin-right: 20px;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            fill: white;
+        }
+
+        a {
+            color: white;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+            }
+        }
+    }
+
+    &__calender {
+        margin: 0px 0px 10px 0px;
+        color: #FFFFFF;
+        font-family: "Rubik", Sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 26px;
+        background-color: rgba(159, 49, 49, 0);
+        padding: 0px 0px 0px 0px;
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            fill: white;
+        }
+
+        a {
+            color: #FFFFFF;
+
+            &::before {
+                position: absolute;
+                content: "";
+                inset: 0;
+            }
+        }
+    }
+
+    .wrapper {
+        @include media-min(XS) {
+            display: flex;
+            align-items: center;
+            max-width: 50%;
+
+        }
+    }
+
+    &__image {
+        display: none;
+        @include media-min(MD) {
+            display: block;
+            right: 12px;
+            bottom: 187px;
+            width: auto;
+            position: absolute;
+
+            img {
+                width: 450px;
+                height: auto;
+            }
+        }
+    }
+}
