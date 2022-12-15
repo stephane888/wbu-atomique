@@ -1,40 +1,12 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
-
-.spaker_mod_portfolio {
-  .portfolio-flters {
-    list-style: none;
-    text-align: center;
-
-    li {
-      cursor: pointer;
-      display: inline-block;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1;
-      text-transform: uppercase;
-      color: #222222;
-      transition: all 0.3s ease-in-out;
-      border-radius: 3px;
-    }
-
-    li:hover,
-    li.filter-active {
-      color: color_yiq($wbu-background);
-      background: $wbu-background;
-    }
-  }
-
-  .portfolio-item {
-    margin-bottom: 30px;
-  }
-
-  .portfolio-wrap {
+.portfolio-wrap {
     transition: 0.3s;
     position: relative;
+    margin-bottom: $wbu-margin;
     overflow: hidden;
     z-index: 1;
-    background: rgba(34, 34, 34, 0.6);
+    background: rgba($wbu-background, $alpha: 0.6);
 
     img {
       transition: all ease-in-out 0.3s;
@@ -56,12 +28,10 @@
       padding: 20px;
 
       h4 {
-        font-size: 20px;
         font-weight: 600;
       }
 
       p {
-        font-size: 14px;
         text-transform: uppercase;
         padding: 0;
         margin: 0;
@@ -98,5 +68,4 @@
       z-index: 2;
       opacity: 0;
     }
-  }
 }

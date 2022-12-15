@@ -1,0 +1,246 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables" as *;
+
+.vixon-plane-slide {
+  padding: 4rem 0;
+  height: 100%;
+  position: relative;
+  max-height: 34vh;
+  overflow: hidden;
+  width: 100%;
+  background-color: #f8f9fa;
+  .nuage {
+    max-width: 50%;
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+  .nuage-inverse {
+    transform: rotateX(-45deg);
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+  .nuage-deux {
+    transform: rotateX(-45deg);
+    position: absolute;
+    bottom: 10%;
+    right: 2%;
+  }
+  .plane {
+    object-fit: contain;
+    position: absolute;
+    max-height: 11rem;
+    overflow: hidden;
+    top: 50%;
+    // right: -25%;
+    transform: translate(calc(0vw), -50%);
+    animation: plane-slide 15s linear infinite;
+    transition: transform 1s linear;
+    display: flex;
+    align-items: center;
+    @include media-max(SM) {
+      animation: plane-slide-sm 10s linear infinite;
+    }
+    &-img {
+      img {
+        max-width: 100%;
+        width: auto;
+        height: 10rem;
+        object-fit: contain;
+      }
+    }
+  }
+  .banner-img {
+    background-color: rgb(199, 199, 199);
+    margin-left: 1rem;
+    padding: 2rem 3rem 2rem 6rem;
+    min-width: 45rem;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    .bi-rond {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      border: 2px solid black;
+      background-color: white;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+    .bi-corde {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      border: 2px solid black;
+      background-color: white;
+      width: 11rem;
+      height: 0rem;
+
+      border-radius: 50%;
+      transform: translate(-100px, -50%) rotate3d(1, 7, 1, 360deg);
+    }
+    .bi-title {
+      margin-bottom: 1rem;
+      font-size: $wbu-h5-font-size;
+      color: black;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+    }
+    img {
+      max-width: 28rem;
+    }
+    @include media-max(SM) {
+      min-width: 40rem;
+      .bi-title {
+        font-size: $wbu-default-font-size;
+      }
+      img {
+        max-width: 20rem;
+      }
+    }
+  }
+  .nuage-content {
+    animation: nuage-slide 50s linear infinite;
+    height: 100%;
+    display: flex;
+    &-2 {
+      display: flex;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      animation: nuage-slide-2 50s linear infinite;
+      transition: opacity 0.6s ease;
+    }
+    &-3 {
+      display: flex;
+      // background-color: red;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      animation: nuage-opacity 10s linear 2s infinite;
+      transition: opacity 0.6s ease;
+    }
+  }
+}
+
+@keyframes plane-slide {
+  0% {
+    transform: translate(calc(100vw), -50%);
+    opacity: 1;
+  }
+
+  90% {
+    transform: translate(calc(-20vw - 600px), -50%);
+    opacity: 1;
+  }
+  95% {
+    transform: translate(calc(-25vw - 600px), -50%);
+    visibility: hidden;
+    // opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    // opacity: 1;
+    transform: translate(calc(100vw), -50%);
+  }
+}
+@keyframes plane-slide-sm {
+  0% {
+    transform: translate(calc(100vw), -50%);
+    opacity: 1;
+  }
+
+  90% {
+    transform: translate(calc(-200% + 500px), -50%);
+    opacity: 1;
+  }
+  95% {
+    transform: translate(calc(-200% + 500px), -50%);
+    visibility: hidden;
+    // opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    // opacity: 1;
+    transform: translate(calc(100vw), -50%);
+  }
+}
+@keyframes nuage-opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes nuage-slide {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(120%);
+    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
+  }
+  45% {
+    transform: translateX(-120%);
+    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-120%);
+    opacity: 1;
+  }
+
+  90% {
+    // transform: translateX(-1%);
+    opacity: 1;
+  }
+  95% {
+    //transform: translateX(-120%);
+    //visibility: hidden;
+    //opacity: 0;
+  }
+  100% {
+    //: hidden;
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes nuage-slide-2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+
+  90% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(150%);
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 1;
+    transform: translateX(-150%);
+  }
+}

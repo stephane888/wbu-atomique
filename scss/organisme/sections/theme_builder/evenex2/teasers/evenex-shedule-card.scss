@@ -1,0 +1,87 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.evenex-shedule-card {
+  border-bottom: 1px dashed #e5e5e5;
+  padding: 8rem 0;
+  .esc-speaker {
+    text-align: center;
+    &__img {
+      img {
+        max-width: 7rem;
+        border-radius: 50%;
+        margin-bottom: 0.8125rem;
+      }
+    }
+    &__name {
+      color: black;
+      font-weight: 600;
+      line-height: 30px;
+      a {
+        color: black;
+        @include cover-link();
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &__designation {
+      font-size: $wbu-h5-font-size;
+      text-transform: uppercase;
+      margin-bottom: 0px;
+    }
+  }
+  .shedule-desc {
+    padding: 0 2rem;
+    text-align: left;
+    @include media-max(SM) {
+      text-align: center;
+    }
+    &::before {
+      content: "";
+      height: 87px;
+      border-left: 1px dashed #e5e5e5;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    &__title {
+      text-transform: none;
+      color: #101010;
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      line-height: 1.625;
+      @include media-max(SM) {
+        margin: 2rem 0;
+      }
+    }
+    &__meta-info {
+      margin-bottom: 1.5rem;
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: $wbu-color-secondary;
+        margin-right: 5px;
+      }
+    }
+    &__description {
+      color: #666666;
+      font-size: $wbu-h5-font-size;
+      @include media-max(SM) {
+        font-size: $wbu-default-font-size;
+      }
+    }
+    .schedule-time {
+      color: #101010;
+      font-size: $wbu-default-font-size;
+      font-weight: 500;
+    }
+    .room {
+      margin-right: 1.5rem;
+    }
+  }
+}
