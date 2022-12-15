@@ -3,9 +3,10 @@
 .portfolio-wrap {
     transition: 0.3s;
     position: relative;
+    margin-bottom: $wbu-margin;
     overflow: hidden;
     z-index: 1;
-    background: rgba(34, 34, 34, 0.6);
+    background: rgba($wbu-background, $alpha: 0.6);
 
     img {
       transition: all ease-in-out 0.3s;
@@ -27,14 +28,10 @@
       padding: 20px;
 
       h4 {
-        font-size: 20px;
-        color: #fff;
         font-weight: 600;
       }
 
       p {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 14px;
         text-transform: uppercase;
         padding: 0;
         margin: 0;
@@ -48,7 +45,6 @@
 
       a {
         text-decoration: none;
-        color: #fff;
         margin: 0 5px 0 0;
         font-size: 28px;
         display: inline-block;
@@ -62,7 +58,7 @@
 
     &::before {
       content: "";
-      background: rgba(34, 34, 34, 0.6);
+      background: rgba($wbu-background, $alpha: 0.6);
       position: absolute;
       left: 0;
       right: 0;
