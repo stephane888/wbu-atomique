@@ -1,0 +1,53 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+@use "./evenex-shedule-tab.scss";
+@use "./atome/evenex-btn.scss";
+
+.evenex-shedule-section {
+  position: relative;
+
+  .ess-header {
+    position: relative;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.8;
+      background-color: $wbu-color-secondary;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+    }
+    &__title {
+      color: #ffffff;
+      margin: 10px 0 35px 0;
+      font-weight: 700;
+      line-height: 26px;
+    }
+    &__desc {
+      color: color-yiq($wbu-color-primary);
+      font-size: $wbu-h5-font-size;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0.21px;
+      margin: 0px auto 0 auto;
+      max-width: 80rem;
+    }
+  }
+
+  @include media-min(DD) {
+    .ess-header {
+      padding-bottom: 20rem;
+      &__desc {
+        margin-bottom: $space_bottom;
+      }
+    }
+  }
+}
