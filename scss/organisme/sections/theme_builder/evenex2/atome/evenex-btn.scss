@@ -1,0 +1,35 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+.evenex-btn {
+  padding: 2rem 3.3rem;
+  font-weight: 500;
+  background-color: $wbu-color-secondary;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 20px 0px 40px 0px rgb(9 71 255 / 10%);
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  user-select: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  transition: all 0.4s ease;
+  text-transform: capitalize;
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 10px;
+  }
+  a {
+    color: #fff;
+    @include cover-link();
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  div {
+    display: inline-block;
+}
+}
+
