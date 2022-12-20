@@ -69,7 +69,7 @@
             border-left: 1px solid white;
             padding-left: 20px;
             margin-left: 0px;
-            margin-top: -4px;
+            margin-top: -10px;
         }
     }
 
@@ -110,6 +110,10 @@
                 inset: 0;
             }
         }
+
+        div {
+            display: inline-block;
+        }
     }
 
     &__calender {
@@ -141,6 +145,9 @@
                 content: "";
                 inset: 0;
             }
+        }
+        div {
+            display: inline-block;
         }
     }
 

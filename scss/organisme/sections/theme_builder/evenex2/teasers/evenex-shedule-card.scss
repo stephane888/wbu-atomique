@@ -27,7 +27,6 @@
     }
     &__designation {
       font-size: $wbu-h5-font-size;
-      text-transform: uppercase;
       margin-bottom: 0px;
     }
   }
@@ -79,6 +78,9 @@
       color: #101010;
       font-size: $wbu-default-font-size;
       font-weight: 500;
+      div {
+        display: inline-block;
+    }
     }
     .room {
       margin-right: 1.5rem;
