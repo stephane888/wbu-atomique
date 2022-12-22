@@ -1,0 +1,67 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.evenex-conference {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px 50px 0px;
+    position: relative;
+
+    &__parallax {
+        left: 0%;
+        top: 0%;
+        animation-name: ekit-fade;
+        opacity: 1;
+        animation-duration: 5s;
+        animation-iteration-count: unset;
+        animation-direction: normal;
+        z-index: 2;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &__inner {
+        position: relative;
+    }
+
+    &__overlay {
+        background-color: #2F0063BF;
+        background-image: url('./images/overlay2.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    &__subtitle {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__title-shap-light {
+        background-image: url('./images/title_shape_light.png');
+        max-width: 100%;
+        height: 5px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        color: #FFFFFF;
+        margin: 18px 0px 0px 0px;
+        text-align: center;
+        font-weight: 700;
+    }
+}
