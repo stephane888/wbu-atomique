@@ -31,7 +31,6 @@
     }
   }
   .pub-info {
-    font-size: $wbu-default-font-size;
     padding: 0;
     color: $wbu-color-text;
     text-align: center;
@@ -47,7 +46,6 @@
     }
   }
   .card-text-descriptor {
-    font-size: $wbu-h3-font-size-sm;
     font-weight: bold;
     text-align: center;
     margin: 1rem 0;
@@ -56,13 +54,6 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
     max-height: 12rem;
-
-    @include media-max(MD) {
-      font-size: $wbu-h4-font-size * 0.8;
-    }
-    @include media-max(SM) {
-      font-size: $wbu-h4-font-size;
-    }
     a {
       color: black;
       transition: ease 0.5s;
@@ -77,7 +68,6 @@
     }
   }
   .role {
-    font-size: $wbu-default-font-size;
     color: $wbu-color-text;
     text-align: center;
     a {
