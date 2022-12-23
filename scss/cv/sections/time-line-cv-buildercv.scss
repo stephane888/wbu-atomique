@@ -11,7 +11,12 @@
   }
   .time-line {
     .left {
-      min-width: 250px;
+      width: 100%;
+      @include media-min("DD") {
+        min-width: 250px;
+        width: auto;
+      }
+
       margin-left: $wbu-margin;
       margin-bottom: $wbu-margin * 0.5;
       @include media-min("DD") {
@@ -21,6 +26,7 @@
     .right {
       padding: 0 $wbu-margin;
       position: relative;
+      width: 100%;
       @include media-min("DD") {
         padding-bottom: $wbu-margin * 2;
         width: 75%;
