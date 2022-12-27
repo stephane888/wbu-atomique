@@ -5,7 +5,8 @@
     background: #000000;
     color: #fff;
     display: flex;
-
+    padding-top: $space-bottom;
+    padding-bottom: $space-bottom;
     &--bg-img{
         color: #fff;
         height: 100vh;
@@ -23,7 +24,17 @@
             height: 100vh;
         }
         .section-header{
-         position: relative;
+            position: relative;
+            .section-title {
+                padding-top: $wbu-margin;
+                padding-bottom: $wbu-margin;
+                text-align: center;
+            }
+            .section-desc {
+                padding-top: $wbu-margin;
+                text-align: center;
+                padding-bottom: $wbu-margin;
+            }
         }
     }
 
