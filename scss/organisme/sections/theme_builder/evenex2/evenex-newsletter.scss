@@ -1,0 +1,79 @@
+@use "../../../../variables" as *;
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+.evenex-newsletter {
+    background-image: url("./images/cta_bg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 10px 50px 10px;
+
+    &__content {
+        max-width: 550px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    &__form {
+        @include media-min(SM) {
+            display: flex;
+        }
+        &__input {
+            color: #fff;
+            border-radius: 5px 5px 5px 5px;
+            font-family: "Rubik", Sans-serif;
+            font-size: 16px;
+            background-color: rgba(2, 1, 1, 0);
+            border-style: solid;
+            border-width: 1.2px 1.2px 1.2px 1.2px;
+            border-color: #F7F7F7;
+            padding: 15px 150px 17px 30px;
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 42px;
+            font-weight: 400;
+            line-height: 1.5;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+
+            @include media-min(SM) {
+                border-radius: 5px 0px 0px 5px;
+                border-color: #FFFFFF;
+            }
+        }
+
+        &__button {
+            border-radius: 5px 5px 5px 5px;
+            width: 100%;
+            margin: 10px 0px 0px 0px;
+            font-family: "Rubik", Sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 15px 11px 15px 11px;
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+            border-color: #FFFFFF;
+            color: #F94743;
+            background-color: #FFFFFF;
+            line-height: 26px;
+            @include media-min(SM) {
+                right: 0;
+                top: 0;
+                border-color: transparent;
+                border-radius: 0 5px 5px 0;
+                margin: 0px;
+                border-radius: 0px 5px 5px 0px;
+            }
+        }
+    }
+}
