@@ -5,7 +5,16 @@
     background: #000000;
     color: #fff;
     display: flex;
-
+    padding-top: $space-bottom;
+    padding-bottom: $space-bottom;
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $wbu-background;
+        border: 1px solid red;
+    }
     &--bg-img{
         color: #fff;
         height: 100vh;
@@ -23,7 +32,19 @@
             height: 100vh;
         }
         .section-header{
-         position: relative;
+            position: relative;
+            .section-title {
+                padding-top: $wbu-margin;
+                padding-bottom: $wbu-margin;
+                text-align: center;
+                border: 1px solid red;
+            }
+            .section-desc {
+                padding-top: $wbu-margin;
+                text-align: center;
+                padding-bottom: $wbu-margin;
+                border: 1px solid red;
+            }
         }
     }
 
