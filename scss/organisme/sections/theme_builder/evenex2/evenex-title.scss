@@ -1,0 +1,71 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.evenex-title {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    padding: 0px 0px 0px 0px;
+    overflow: visible;
+    width: 100%;
+    padding: 0px 0px 115px 0px;
+
+    &__title {
+        display: none;
+        @include media-min(SM) {
+            display: block;
+            font-size: 120px;
+            letter-spacing: 0px;
+            color: #F7F7F7;
+            margin: 0px 0px 0px 0px;
+            font-weight: 600;
+            &__inner {
+                text-align: center;
+                width: 100%;
+                position: relative;
+            }
+        }
+
+        @include media-min(MD) {
+            font-size: 150px;
+    letter-spacing: -9px;
+        }
+    }
+
+    &__text {
+        z-index: 2;
+        width: 100%;
+        position: relative;
+        margin: 0px 0px 15px 0px;
+        text-align: center;
+        @include media-min(SM) {
+            top: -99px;
+            width: 100%;
+        }
+
+        &__tag {
+            color: #F94743;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0px 0px 0px 0px;
+            text-align: center;
+        }
+
+        &__subtitle {
+            font-weight: 700;
+            color: #101010;
+            margin: 0px 0px 6px 0px;
+            @include media-min(SM) {
+                font-size: 48px;
+                line-height: 5.2rem;
+            }
+        }
+    }
+
+    &.evenex-title--background {
+        background-color: #F3F3F4;
+        .evenex-title__title {
+            color: #FFFFFF;
+        }
+    }
+
+}
