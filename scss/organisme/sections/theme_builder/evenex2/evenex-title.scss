@@ -38,8 +38,11 @@
         margin: 0px 0px 15px 0px;
         text-align: center;
         @include media-min(SM) {
-            top: -99px;
+            top: -70px;
             width: 100%;
+        }
+        @include media-min(MD) {
+            top: -99px;
         }
 
         &__tag {
@@ -57,6 +60,9 @@
             @include media-min(SM) {
                 font-size: 48px;
                 line-height: 5.2rem;
+            }
+            @include media-min(MD) {
+                line-height: 7.2rem;
             }
         }
     }
