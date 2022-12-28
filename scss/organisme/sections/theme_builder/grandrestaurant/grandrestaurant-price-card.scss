@@ -63,6 +63,14 @@
             font-weight: $wbu-title-font-weight;
         }
     }
+    &--only-icon-hover {
+       .grandrestaurant-price-card__info {
+            display: none;
+       } 
+       .grandrestaurant-price-card__link {
+            display: none;
+       }
+    }
     &--blog {
         overflow: hidden;
         &:hover {

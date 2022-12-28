@@ -2,29 +2,44 @@
 @use "../../../../_variables.scss" as *;
 
 .mitor-core-value-section-handler{
-    background: #000000;
-    color: #fff;
+    background: $wbu-background;
     display: flex;
-
+    padding-top: $space-bottom;
+    padding-bottom: $space-bottom;
+    position: relative;
     &--bg-img{
-        color: #fff;
         height: 100vh;
         background: url(https://ludoviccreative.com/storage/2022/05/3-450x328.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        &::before{
-            content: '';
-            top: 0;
-            position: absolute;
-            z-index: 0.5;
-            background-color: rgb(42 44 46 / 90%);
-            width: 100%;
-            height: 100vh;
+    }
+    &::after{
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        z-index: 4;
+        background-color: rgba($wbu-background, 0.4);
+    }
+    .section-header{
+        position: relative;
+        z-index: 5;
+        .section-title {
+            padding-top: $wbu-margin;
+            padding-bottom: $wbu-margin;
+            text-align: center;
         }
-        .section-header{
-         position: relative;
+        .section-desc {
+            padding-top: $wbu-margin;
+            text-align: center;
+            padding-bottom: $wbu-margin;
         }
     }
-
+    .value-list {
+        position: relative;
+        z-index: 5;
+    }
 }

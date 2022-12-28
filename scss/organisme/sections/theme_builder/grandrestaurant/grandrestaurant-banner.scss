@@ -6,7 +6,8 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-    padding-bottom:$space_bottom * 2;
+    padding-bottom:$space_bottom;
+    padding-top:$space_bottom;
     &__title {
         font-family: 'Lato' , sans-serif;
         position: relative;

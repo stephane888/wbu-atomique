@@ -7,6 +7,8 @@
     margin-bottom: 0px;
     padding: 50px 0px 50px 0px;
     position: relative;
+    overflow: visible;
+
     @include media-min(XS) {
         padding: 100px 0px 92px 0px;
     }
@@ -14,6 +16,7 @@
     .wrapper {
         padding: 10px;
         margin-bottom: 20px;
+
         @include media-min(XS) {
             padding: 0px;
         }
@@ -21,7 +24,7 @@
 
     .overlay {
         transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-        background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/02/home3-overlay.png);
+        background-image: url("./images/home3-overlay.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -36,5 +39,12 @@
     .content {
         display: flex;
         justify-content: center;
+    }
+
+    &.evenex-stat-banner--purple {
+        .overlay {
+            background-image: url("./images/overlay.png");
+            opacity: 0.9;
+        }
     }
 }
