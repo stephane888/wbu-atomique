@@ -127,18 +127,15 @@
         display: inline-block;
         cursor: pointer;
         @include ellipseText(2);
-        color: black;
         @include media-max(XS) {
           font-size:$wbu-h2-font-size-sm;
         }
         a,
         & {
-          color: black;
           transition: ease-in-out 0.3s;
         }
         &:hover,
         &:hover a {
-          color: $wbu-color-secondary;
           text-decoration: none;
         }
       }
@@ -162,7 +159,7 @@
         &,
         a,
         a:hover {
-          color: $wbu-color-secondary;
+          //color: $wbu-color-secondary;
           padding: 0 0 8px;
           text-decoration: none;
         }
