@@ -2,17 +2,23 @@
 
 .services-testimony {
   margin: 0;
-
+  position: relative;
   .done {
     background: $wbu-color-primary;
+    position: relative;
   }
   .all-single-services {
-    padding: $wbu-margin * 4 $wbu-margin;
-
+    //padding: $wbu-margin * 4 $wbu-margin; #if you need to change it just check the layout
+    // i close it cose i will want to add some image that take all the layout size
+    // thanks : tmc @ habeuk
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+      display: flex;
+      height: 100%;
+    }
     .services {
       &:first-child {
         margin-left: $wbu-margin * -1;
@@ -27,7 +33,6 @@
         color: $wbu-background;
       }
       .title {
-        font-size: $wbu-h5-font-size;
         color: $wbu-background;
         font-weight: bold;
       }
@@ -53,12 +58,11 @@
     }
     .title {
       color: white;
-      font-size: $wbu-h5-font-size;
       font-weight: bold;
     }
     .slider-container {
       position: relative;
-      margin-top: $space-top;
+      margin-top: $wbu-margin;
       display: block;
       max-width: 100%;
       width: 100%;
@@ -74,13 +78,11 @@
         margin-top: $wbu-margin;
         align-items: center;
         .author {
-          font-size: $wbu-h5-font-size;
           color: $wbu-border-color;
         }
         .company-name {
           padding: 0 0 0 $wbu-margin * 0.5;
           color: rgba($color: $wbu-color-boder, $alpha: 0.5);
-          font-size: $wbu-default-font-size;
         }
       }
     }
