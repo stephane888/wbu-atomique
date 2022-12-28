@@ -1,0 +1,75 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.evenex-article {
+    position: relative;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 30px 0px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 0%);
+    border-radius: 5px 5px 5px 5px;
+
+    &__image {
+        z-index: -1;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__body {
+        margin-left: 30px;
+        background: #fff;
+        padding: 10px 15px 30px 15px;
+        position: relative;
+
+        bottom: 40px;
+    }
+
+    &__title {
+        text-align: left;
+        margin-bottom: 28px;
+        font-family: Poppins, sans-serif;
+        color: #05103C;
+        font-weight: 700;
+        letter-spacing: -0.4px;
+        word-break: break-word;
+        line-height: 1.25;
+    }
+
+    &__text {
+        margin: 0px 0px 9px 0px;
+        position: relative;
+    }
+
+    &__date {
+        color: #666666;
+        transition: all .4s ease;
+        cursor: pointer;
+        margin-bottom: 3px;
+    }
+
+    &__category {
+        position: static;
+        transform: rotate(0deg);
+        left: 0px;
+        top: 0px;
+        color: #666666;
+        transition: all .4s ease;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        @include media-min(XS) {
+            display: none;
+        }
+        @include media-min(MD) {
+            display: block;
+            position: absolute;
+            transform: rotate(-90deg) translateX(-50%);
+            left: -73px;
+            top: -13px;
+            margin: -8px 0px 0px 0px;        
+        }
+    }
+}
