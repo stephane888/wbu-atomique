@@ -5,7 +5,6 @@
 .in-case-fnews {
   padding: $space-top 0;
   .icf-title {
-    font-size: $wbu-h2-font-size;
     font-weight: bold;
     text-align: center;
     color: black;
@@ -21,12 +20,10 @@
     font-size: $wbu-h3-font-size-sm;
     font-weight: bold;
     text-align: center;
-
     margin: $wbu-margin * 2 auto;
     a {
-      color: $wbu-color-secondary;
       padding: 0.8rem;
-      border-bottom: 1px solid $wbu-color-secondary;
+      border-bottom: 1px solid $wbu-background;
       text-decoration: none;
     }
   }
