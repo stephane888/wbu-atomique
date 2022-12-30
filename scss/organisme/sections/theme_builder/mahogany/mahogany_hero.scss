@@ -38,7 +38,7 @@
             padding-top: $wbu-margin;
             padding-bottom: $wbu-margin;
             margin-bottom: $wbu-margin;
-            text-transform: uppercase;
+            text-transform: capitalize;
             width: auto;
             text-align: center;
         }
@@ -46,6 +46,7 @@
             margin-bottom: $wbu-margin;
             a {
                 text-decoration: none;
+                text-transform: capitalize;
             }
         }
     }
