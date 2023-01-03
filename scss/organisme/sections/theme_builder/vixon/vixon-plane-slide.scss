@@ -2,7 +2,7 @@
 @use "../../../../_variables" as *;
 
 .vixon-plane-slide {
-  padding: 4rem 0;
+  padding: 6rem 0;
   height: 100%;
   position: relative;
   max-height: 34vh;
@@ -40,9 +40,6 @@
     transition: transform 1s linear;
     display: flex;
     align-items: center;
-    @include media-max(SM) {
-      animation: plane-slide-sm 10s linear infinite;
-    }
     &-img {
       img {
         max-width: 100%;
@@ -51,11 +48,19 @@
         object-fit: contain;
       }
     }
+    @include media-max(SM) {
+      animation: plane-slide-sm 10s linear infinite;
+      &-img {
+        img {
+          max-width: 32rem;
+        }
+      }
+    }
   }
   .banner-img {
     background-color: rgb(199, 199, 199);
     margin-left: 1rem;
-    padding: 2rem 3rem 2rem 6rem;
+    padding: 1.5rem 3rem 1.5rem 6rem;
     min-width: 45rem;
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
@@ -94,6 +99,7 @@
     }
     img {
       max-width: 28rem;
+      max-height: 3rem;
     }
     @include media-max(SM) {
       min-width: 40rem;
