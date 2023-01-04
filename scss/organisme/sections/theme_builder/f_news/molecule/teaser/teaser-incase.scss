@@ -4,8 +4,6 @@
 
 .bloc-img {
   width: 100%;
-  padding-bottom: $wbu-margin * 1.5;
-
   &-content {
     position: relative;
     &::before {
@@ -51,7 +49,6 @@
     max-width: 90%;
     transform: translateY(0px);
     transition: ease 0.4s;
-    color: white;
     z-index: 5;
     opacity: 0;
     transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
@@ -59,8 +56,6 @@
       left: 5%;
     }
     .bib-title {
-      font-size: $wbu-h3-font-size-sm;
-      color: white;
       font-weight: bold;
       margin-bottom: 0.9rem;
       max-height: 12rem;
@@ -70,7 +65,7 @@
       overflow: hidden;
       a,
       a:hover {
-        color: white;
+        text-decoration: none;
       }
       @include media-max(SM) {
         font-size: $wbu-h4-font-size * 0.8;
@@ -84,7 +79,7 @@
       text-transform: capitalize;
       display: flex;
       a {
-        color: white;
+        text-decoration: none;
       }
     }
   }
@@ -92,7 +87,7 @@
     &,
     a,
     a:hover {
-      color: white;
+      text-decoration: none;
     }
     font-size: $wbu-default-font-size;
     text-transform: uppercase;

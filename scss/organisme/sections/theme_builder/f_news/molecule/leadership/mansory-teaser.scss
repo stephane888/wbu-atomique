@@ -7,7 +7,6 @@
   align-items: center;
   display: flex;
   overflow: hidden;
-
   //position: relative;
   &:hover {
     .smc-body {
@@ -133,7 +132,6 @@
       right: 3rem;
     }
   }
-
   .load-more-button {
     margin: $wbu-margin 0;
     background-color: $wbu-color-primary;
@@ -152,7 +150,6 @@
         content: "";
         position: relative;
         width: 0;
-
         height: 2rem;
         top: -2px;
         display: inline-block;
@@ -162,7 +159,6 @@
         @include wbu__angle-right(black, 15);
       }
     }
-
     &:hover {
       text-decoration: none;
       .btn-angle-right::after {

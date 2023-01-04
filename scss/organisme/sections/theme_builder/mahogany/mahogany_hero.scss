@@ -1,0 +1,53 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@import "../../../../variables";
+
+.mhgy-hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: auto;
+    overflow: hidden;
+    height: 100vh;
+    background: url(https://ludoviccreative.com/storage/2022/05/3-450x328.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba($wbu-background, $alpha: 1);
+    &::before {
+        content: "";
+        background-color: rgba($wbu-background, $alpha: 0.2);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .slider-content {
+        display: flex;
+        position: relative;
+        z-index: 10;
+        padding: $wbu-margin;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        .slider-title {
+            font-weight: $wbu-title-font-weight;
+            padding-top: $wbu-margin;
+            padding-bottom: $wbu-margin;
+            margin-bottom: $wbu-margin;
+            text-transform: capitalize;
+            width: auto;
+            text-align: center;
+        }
+        .slider-link {
+            margin-bottom: $wbu-margin;
+            a {
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

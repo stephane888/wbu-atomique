@@ -136,11 +136,8 @@
   }
 }
 .copyright {
-  padding-top: $wbu-margin * 3;
-  p {
-    margin: 0;
-  }
-
+  padding-top: $wbu-margin;
+  padding-bottom: $wbu-margin;
   .elements {
     color: white;
     font-size: $wbu-title-font-size;
