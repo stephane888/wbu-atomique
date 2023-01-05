@@ -67,15 +67,8 @@
       a:hover {
         text-decoration: none;
       }
-      @include media-max(SM) {
-        font-size: $wbu-h4-font-size * 0.8;
-      }
-      @include media-max(MD) {
-        font-size: $wbu-h4-font-size * 0.9;
-      }
     }
     .bib-date {
-      font-size: $wbu-default-font-size;
       text-transform: capitalize;
       display: flex;
       a {
@@ -89,7 +82,6 @@
     a:hover {
       text-decoration: none;
     }
-    font-size: $wbu-default-font-size;
     text-transform: uppercase;
     position: absolute;
     left: 10%;
