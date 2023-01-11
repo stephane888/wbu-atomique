@@ -1,0 +1,65 @@
+@use "../../../../../variables" as *; 
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../atome/general.scss" as *;
+
+
+/*--------------------------------------------------------------
+# Hero Section teaser block
+--------------------------------------------------------------*/
+.icon-boxes {
+    padding-bottom: 60px;
+    @media (min-width: 1200px) {
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: calc(50% + 20px);
+            background-color: #fff;
+        }
+    }
+    .icon-box {
+        padding: 60px 30px;
+        position: relative;
+        overflow: hidden;
+        background: #008d7d;
+        box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease-in-out;
+        border-radius: 8px;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        .title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #fff!important;
+            transition: 0.3s;
+            a{
+                color:#fff;
+            }
+        }
+        .icon {
+            // padding-top: 10px;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            height: 48px;
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 20px;
+            svg{
+                display: inherit;
+                height: 48px;
+                width: 65px;
+            }
+        }
+        &:hover {
+             background: #009786;
+            .title , .icon{
+                color: #fff;
+            }
+        }
+    }
+}

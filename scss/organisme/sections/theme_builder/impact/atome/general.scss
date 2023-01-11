@@ -1,0 +1,34 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+$color-primary: #008374;
+$font-primary: "Montserrat", sans-serif;
+$font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$color-default: #222222;
+
+.element{
+    body {
+        font-family: $font-default;
+        color: $color-default;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-primary);
+    }
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+  
+  
+  
+  
