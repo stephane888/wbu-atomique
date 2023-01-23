@@ -1,0 +1,88 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *; 
+@use "atome/general.scss" as *;
+@use "teasers/hero-teaser.scss";
+// @use "@stephane888/wbu-atomique/scss/organisme/gp/lib/aos/aos.css";
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.impact-hero {
+	@extend .element;
+    width: 100%;
+    position: relative;
+    background: $color-primary;
+    padding: 60px 0 0 0;
+	.container{
+		max-width: 1320!important;
+	}
+	@media (min-width: 1365px) {
+		background-attachment: fixed;
+	}
+
+	.impact-hero-title, .impact-hero-title h2 {
+		text-align: left;
+	  	font-size: 48px;
+	  	font-weight: 700;
+	  	margin-bottom: 20px;
+	  	color: #fff;
+		@media (max-width: 640px) {
+			font-size: 36px;
+		}
+	}
+	.impact-hero-description p{
+		text-align: left;
+	  	color: rgba(255, 255, 255, 0.6);
+	  	font-weight: 400;
+	  	margin-bottom: 30px;
+	}
+	.btn-get-started {
+	  	a{
+			font-family: $font-primary;
+			font-weight: 500;
+			font-size: 15px;
+			letter-spacing: 1px;
+			display: inline-block;
+			padding: 14px 40px;
+			border-radius: 50px;
+			transition: 0.3s;
+			color: #fff !important;
+			background: rgba(255, 255, 255, 0.1);
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+			border: 2px solid rgba(255, 255, 255, 0.1);
+			&:hover {
+				border-color: rgba(255, 255, 255, 0.5);
+			}
+		}
+	}
+	.btn-watch-video {
+		margin-left: 25px;
+		a{
+			transition: 0.5s;
+			color: #fff;
+			font-weight: 600;
+			font-size: 16px;
+		}		
+		svg {
+			color: rgba(255, 255, 255, 0.5);
+			width: 32px;
+			transition: 0.3s;
+			margin-right: 4px;
+			line-height: 0;
+		}
+		&:hover{
+			svg{
+				margin-right: 8px;
+				color: #fff;
+			}
+		}
+	}
+	.btn-get-started, .btn-watch-video{
+		@media (max-width: 640px) {
+			font-size: 14px;
+		}
+	}
+	.icon-boxes-impact{
+		@extend .icon-boxes;
+	}
+}
