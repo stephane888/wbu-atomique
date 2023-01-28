@@ -1,7 +1,8 @@
 (function () {
   console.log("il-action-card chargée");
   function selectAllElement() {
-    let table = document.querySelectorAll(".bouton-quantity-card");
+    //let table = document.querySelectorAll(".bouton-quantity-card");
+    let table = document.querySelectorAll(".il-action-card");
     if (table) {
       return Array.from(table);
     }
@@ -14,6 +15,7 @@
     const maxVal = parseInt(input.max, 10);
     let increment = el.querySelector('[data-type="plus"]');
     let decrement = el.querySelector('[data-type="minus"]');
+    let buttonAdd = el.querySelector(".commerceformatage-button-add-to-cart");
     if (input && increment && decrement) {
       increment.addEventListener("click", function (e) {
         e.preventDefault();
@@ -41,6 +43,7 @@
         } else {
           input.valueAsNumber = 0;
         }
+        buttonAdd.setAttribute("data-qty", input.valueAsNumber);
       });
       decrement.addEventListener("click", function (e) {
         e.preventDefault();
@@ -59,6 +62,7 @@
         } else {
           input.valueAsNumber = 0;
         }
+        buttonAdd.setAttribute("data-qty", input.valueAsNumber);
       });
     }
   }
