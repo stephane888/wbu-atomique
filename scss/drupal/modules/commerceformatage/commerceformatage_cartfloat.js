@@ -1,20 +1,35 @@
+// Cette fonction a été deplacer ici: modules/custom/layoutscommerce/js/layoutscommerce-add-to-cart.js
+// en attendant une correction de :: Uncaught ReferenceError: once is not defined
+// @see https://git.drupalcode.org/project/drupal/-/blob/9.4.x/core/themes/claro/claro.libraries.yml#L213
+// @see use-ajax link => https://drupaloutsourcing.com/blog/ajax-api-creating-custom-ajax-command-drupal-8
+// autre expiration => https://drupal.stackexchange.com/questions/121361/use-ajax-class-for-ajax-link-not-working-in-dynamic-content-load
 (function ($, Drupal) {
   var httpRequest;
 
-  function reloadBloc() {
-    document.querySelector(".commerceformatage_cart_habeuk_click").click();
+  /**
+   * Cette fonction require core/drupal.ajax
+   * ( cela est deja acivé dans le module commerceformatage,
+   * si vous decidez de l'utiliser ailleurs rassurer vus que la libraie core/drupal.ajax est presente ).
+   * @param {*} context
+   */
+  function reloadBloc(context) {
+    once(
+      "commerceformatage",
+      ".commerceformatage_cart_habeuk_click.use-ajax",
+      context
+    ).forEach((item) => {
+      item.click();
+    });
   }
 
-  function ManageCover(action = true) {
-    console.log("ManageCover");
+  function ManageCover(action, context) {
     var div;
     if (action) {
       div = document.createElement("div");
       div.classList.add("commerceformatage_cart_habeuk_cover");
       document.body.appendChild(div);
       div.addEventListener("click", () => {
-        console.log("close pop-up");
-        openCartPopup(false);
+        openCartPopup(false, context);
         div.remove();
       });
     } else {
@@ -27,13 +42,12 @@
    * Ouvre le popup
    * @param {*} open
    */
-  function openCartPopup(open = true) {
-    console.log("openCartPopup");
+  function openCartPopup(open, context) {
     if (open) {
       document
         .querySelector(".commerceformatage_cart_habeuk")
         .classList.add("show");
-      reloadBloc();
+      reloadBloc(context);
     } else
       document
         .querySelector(".commerceformatage_cart_habeuk")
@@ -147,8 +161,8 @@
 
         if (cartItem)
           makeRequest(cartItem).then(() => {
-            openCartPopup();
-            ManageCover();
+            openCartPopup(true, context);
+            ManageCover(true, context);
             item.querySelector(".loading").classList.remove("fa-spin");
             item.querySelector(".loading").classList.add("d-none");
             item.disabled = false;
@@ -170,8 +184,8 @@
         context
       ).forEach((item) => {
         item.addEventListener("click", () => {
-          openCartPopup(false);
-          ManageCover(false);
+          openCartPopup(false, context);
+          ManageCover(false, context);
         });
       });
     }
@@ -190,8 +204,8 @@
         context
       ).forEach((item) => {
         item.addEventListener("click", () => {
-          openCartPopup();
-          ManageCover();
+          openCartPopup(true, context);
+          ManageCover(true, context);
           console.log("initOpenCart");
         });
       });
@@ -215,7 +229,7 @@
             item.getAttribute("data-order-id"),
             item.getAttribute("data-cart-id")
           ).then(() => {
-            reloadBloc();
+            reloadBloc(context);
           });
         });
       });
