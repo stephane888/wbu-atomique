@@ -36,7 +36,21 @@
         height: 20px;
         background: none;
         padding: 20px 0px;
-
+        &::after {
+          position: absolute;
+          content: "";
+          height: 1.1em;
+          width: 1.1em;
+          vertical-align: middle;
+          display: inline-block;
+          margin-top: 0.6em;
+          background: rgb(202, 202, 202);
+          //background: linear-gradient(to top left, #1489ca 50%, #1a72cf 50%);
+          transform: rotate(45deg);
+          transform-origin: center right;
+          right: 18.7%;
+          z-index: 1;
+        }
         .progress-bar {
           //margin: 0 30px;
           height: 20px;
