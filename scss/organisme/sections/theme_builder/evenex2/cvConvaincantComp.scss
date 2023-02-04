@@ -1,0 +1,202 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.cvConvaincant-comp {
+  overflow: hidden;
+  background-color: rgb(241, 241, 241);
+  .cvConvaincant-comp-container {
+    .interet {
+      padding-right: 0;
+      .desc {
+        width: 353px;
+        clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0 100%);
+        background-color: rgba(23, 23, 29, 0.897);
+        div {
+          position: relative;
+          left: 60px;
+          width: 360px;
+          text-align: center;
+          color: white;
+          font-size: 40px;
+          font-weight: 20px;
+        }
+      }
+      .list1 {
+        padding-left: 15px;
+        margin-top: 20px;
+
+        .svg1 {
+          clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0 100%);
+          padding: 10px;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 0px solid white;
+          background-color: rgba(23, 23, 29, 0.897);
+        }
+        .svg2 {
+          clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0 100%);
+          padding: 10px;
+          display: flex;
+          margin-bottom: 10px;
+          align-items: center;
+          justify-content: center;
+          border: 0px solid white;
+          background-color: rgba(23, 23, 29, 0.897);
+        }
+        .svg3 {
+          margin-bottom: 10px;
+          clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0 100%);
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 0px solid white;
+          background-color: rgba(23, 23, 29, 0.897);
+        }
+      }
+      .list2 {
+        padding-right: 10;
+        .svg1 {
+          clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 0px solid white;
+          background-color: rgba(23, 23, 29, 0.897);
+        }
+        .svg2 {
+          clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 0px solid white;
+          background-color: rgba(23, 23, 29, 0.897);
+        }
+        .svg3 {
+          clip-path: polygon(8% 0, 100% 0%, 92% 100%, 0 100%);
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 0px solid white;
+          background-color: rgba(23, 23, 29, 0.897);
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 360px;
+        width: 80px;
+        height: 100%;
+        border-top: 400px solid #d3cfcf;
+        border-bottom: 0px solid #d3cfcf;
+        transform: rotate(8deg);
+      }
+    }
+    .competences {
+      padding-left: 0px;
+      .desc {
+        clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0 100%);
+        background-color: rgba(23, 23, 29, 0.897);
+        div {
+          position: relative;
+          left: 70px;
+          width: 355px;
+          text-align: center;
+          color: white;
+          font-size: 40px;
+          font-weight: 20px;
+        }
+      }
+      .contenu1 {
+        padding-left: 120px;
+        margin-top: 20px;
+        .text1 {
+          font-size: 22px;
+          font-weight: bold;
+        }
+        .bar1 {
+        }
+        .progress-bar {
+          clip-path: polygon(0% 0, 100% 0%, 95% 100%, 0 100%);
+          background-color: black;
+        }
+      }
+      .contenu2 {
+        margin-top: 20px;
+        padding-left: 110px;
+        .text2 {
+          font-size: 22px;
+          font-weight: bold;
+        }
+        .bar2 {
+        }
+        .progress-bar {
+          clip-path: polygon(0% 0, 100% 0%, 95% 100%, 0 100%);
+          background-color: black;
+        }
+      }
+      .contenu3 {
+        padding-left: 100px;
+        margin-top: 20px;
+        .text3 {
+          font-size: 22px;
+          font-weight: bold;
+        }
+        .bar3 {
+        }
+        .progress-bar {
+          clip-path: polygon(0% 0, 100% 0%, 95% 100%, 0 100%);
+          background-color: black;
+        }
+      }
+      .contenu4 {
+        padding-left: 90px;
+        margin-top: 20px;
+        .text4 {
+          font-size: 22px;
+          font-weight: bold;
+        }
+        .bar4 {
+        }
+        .progress-bar {
+          clip-path: polygon(0% 0, 100% 0%, 95% 100%, 0 100%);
+          background-color: black;
+        }
+      }
+      .contenu5 {
+        padding-left: 80px;
+        margin-top: 20px;
+        .text5 {
+          font-size: 22px;
+          font-weight: bold;
+        }
+        .bar5 {
+        }
+        .progress-bar {
+          clip-path: polygon(0% 0, 100% 0%, 95% 100%, 0 100%);
+          background-color: black;
+        }
+      }
+      .contenu6 {
+        padding-left: 70px;
+        margin-top: 20px;
+        .text6 {
+          font-size: 22px;
+          font-weight: bold;
+        }
+        .bar6 {
+        }
+        .progress-bar {
+          clip-path: polygon(0% 0, 100% 0%, 95% 100%, 0 100%);
+          background-color: black;
+        }
+      }
+    }
+  }
+}

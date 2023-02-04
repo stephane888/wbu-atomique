@@ -1,0 +1,94 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.cvConvaincantHero {
+  margin-top: 50px;
+  background-color: rgb(241, 241, 241);
+  .cvConvaincantHero-container {
+    .port1 {
+      .profil {
+        .information-image {
+          img {
+            width: 250px;
+            height: 250px;
+            background-size: 100%;
+            border-radius: 50%;
+            margin-top: 50px;
+            border: 3px solid rgba(0, 0, 0, 0.479);
+          }
+        }
+        .infos {
+          h1 {
+          }
+          h5 {
+            font-size: 30px;
+            font-weight: bold;
+          }
+          h6 {
+            font-size: 22px;
+            font-weight: bold;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 498px;
+          width: 80px;
+          height: 100%;
+          border-top: 670px solid #d3cfcf;
+          border-bottom: 0px solid #d3cfcf;
+          transform: rotate(8deg);
+        }
+      }
+      .formation {
+        height: auto;
+        width: auto;
+        margin: 100px 0;
+        padding-left: 0;
+        .desc {
+          position: relative;
+          right: 15px;
+          clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0 100%);
+          background-color: rgba(23, 23, 29, 0.897);
+          div {
+            position: relative;
+            right: 50px;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            font-weight: 20px;
+          }
+        }
+        .form1 {
+          margin-top: 30px;
+          padding-left: 75px;
+          h3 {
+            font-size: 25px;
+            font-weight: bold;
+          }
+          p {
+            font-size: 20px;
+          }
+          h4 {
+            font-weight: bold;
+          }
+        }
+        .form2 {
+          padding-left: 55px;
+          margin-top: 30px;
+          h3 {
+            font-size: 25px;
+            font-weight: bold;
+          }
+          p {
+            font-size: 20px;
+          }
+          h4 {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

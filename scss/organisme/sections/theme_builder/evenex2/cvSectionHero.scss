@@ -1,0 +1,40 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.cv-section-hero {
+  background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionHero/images/monfond.webp");
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+
+  .cv-Section-hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .cv-section-hero-information {
+      padding: 40px;
+      text-align: end;
+      .information-name {
+        //text-align: center;
+        font-size: 50px;
+        color: black;
+      }
+      .information-post {
+        //text-align: center;
+        color: black;
+        font-size: 30px;
+      }
+    }
+    .information-image {
+      img {
+        width: 250px;
+        height: 250px;
+        background-size: 100%;
+        border-radius: 50%;
+        margin-top: 50px;
+        border: 3px solid black;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+.ssl-section {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/sslSectionHero/partie-machine-coudre-vintage-vetement_77190-2630.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .ssl-section-hero {
+    position: relative;
+    margin: 52px 247px 26px;
+    justify-self: start;
+    align-self: start;
+    line-height: 1.1em;
+    text-align: center;
+    font-size: 60px;
+    .ssl-section-hero-title {
+      color: white;
+    }
+    .ssl-section-hero-subtitle {
+      color: white;
+    }
+    .ssl-section-hero-country {
+      color: rgb(209, 66, 66);
+    }
+    .ssl-section-hero-arrow {
+      position: relative;
+      top: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

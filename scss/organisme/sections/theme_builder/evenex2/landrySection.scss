@@ -1,0 +1,87 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.landry-section-hero {
+  background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/landrySection/monim.jpg");
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .landry-section-container {
+    .landry-section-title {
+      padding: 6px 10px;
+      background-color: #bb2649;
+      margin-right: 863px;
+      .my-title {
+        color: aliceblue;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 1em;
+        letter-spacing: 2px;
+      }
+    }
+    .landry-section-subtitle {
+      margin: 20px 0;
+      .subtitle {
+        color: #d72952;
+        font-family: abril fatface, Sans-serif;
+        font-size: 100px;
+        font-weight: 400;
+        line-height: 1.1em;
+      }
+    }
+    .landry-section-description {
+      .description {
+        color: cyan;
+        font-family: abril fatface, Sans-serif;
+        font-size: 100px;
+        font-weight: 400;
+        line-height: 1.1em;
+      }
+    }
+    .landry-section-text {
+      margin: 50px 0;
+      font-size: 24px;
+      font-weight: 400;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 1.6em;
+      width: var(--container-widget-width, 750px);
+      max-width: 750px;
+      .text {
+        color: whitesmoke;
+        a {
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .landry-section-btn {
+      color: white;
+      .first {
+        padding: 16px 36px;
+        margin-right: 31px;
+        color: white;
+        &:hover {
+          border: 0.5px solid white;
+          background: none;
+        }
+      }
+      .second {
+        padding: 16px 36px;
+        border: 0.5px solid white;
+        &:hover {
+          border: 0.5px solid #dc3545;
+          background-color: #dc3545;
+          color: white;
+        }
+      }
+    }
+  }
+}

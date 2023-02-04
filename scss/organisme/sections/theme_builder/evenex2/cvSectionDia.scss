@@ -1,0 +1,102 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.cvSectionDia {
+  background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionDia/monfond.webp");
+  background-size: cover;
+  height: auto;
+  .cvSectionDia-container {
+    padding: 50px 30px;
+    .first {
+      .port1 {
+        border-bottom: 2px solid black;
+        padding: 20px 0px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 10%;
+      }
+      .image {
+        background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionDia/DiagrammeCirculaire.png");
+        background-size: 90%;
+        background-repeat: no-repeat;
+        //background-size: contain;
+        height: 100%;
+        margin: 20px;
+      }
+    }
+    .second {
+      .port2 {
+        margin-left: 10%;
+        border-bottom: 2px solid black;
+        padding: 20px 0px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .formation {
+        margin-left: 10%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .form1 {
+          margin: 10px 0;
+          .date1 {
+            background-color: rgb(199, 193, 193);
+            height: 40%;
+          }
+          .text1 {
+            .title1 {
+              .dip {
+                font-size: 15px;
+                font-weight: bold;
+              }
+              .sch {
+                margin-left: 20px;
+              }
+            }
+            .par1 {
+            }
+          }
+        }
+        .form2 {
+          margin: 10px 0;
+          .date2 {
+            background-color: rgb(199, 193, 193);
+            height: 40%;
+          }
+          .text2 {
+            .title2 {
+              .dip {
+                font-size: 15px;
+                font-weight: bold;
+              }
+              .sch {
+                margin-left: 20px;
+              }
+            }
+            .par2 {
+            }
+          }
+        }
+        .form3 {
+          margin: 10px 0;
+          .date3 {
+            background-color: rgb(199, 193, 193);
+            height: 40%;
+          }
+          .text3 {
+            .title3 {
+              .dip {
+                font-size: 15px;
+                font-weight: bold;
+              }
+              .sch {
+                margin-left: 20px;
+              }
+            }
+            .par3 {
+            }
+          }
+        }
+      }
+    }
+  }
+}

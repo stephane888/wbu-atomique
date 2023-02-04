@@ -1,0 +1,117 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.cvConvaincantExp {
+  background-color: rgb(241, 241, 241);
+  .cvConvaincantExp-container {
+    .port1 {
+      .profil {
+        .information {
+          .text {
+            margin: 0px 0;
+            font-size: 24px;
+            padding-right: 20px;
+          }
+          .coordonnées {
+            margin-top: 40px;
+            .infos1 {
+              margin-top: 10px;
+              .svg1 {
+                margin-right: 10px;
+              }
+              .contact {
+                font-size: 20px;
+                font-weight: bold;
+              }
+            }
+            .infos2 {
+              margin-top: 10px;
+              .svg2 {
+                margin-right: 10px;
+              }
+              .email {
+                font-size: 20px;
+                font-weight: bold;
+              }
+            }
+            .infos3 {
+              margin-top: 10px;
+              .svg3 {
+                margin-right: 10px;
+              }
+              .location {
+                font-size: 20px;
+                font-weight: bold;
+              }
+            }
+            .infos4 {
+              margin-top: 10px;
+              .svg4 {
+                margin-right: 10px;
+              }
+              .nation {
+                font-size: 20px;
+                font-weight: bold;
+              }
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 420px;
+            width: 80px;
+            height: 100%;
+            border-top: 514px solid #d3cfcf;
+            border-bottom: 0px solid #d3cfcf;
+            transform: rotate(8deg);
+          }
+        }
+      }
+      .experience {
+        padding-left: 0;
+        .desc {
+          clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0 100%);
+          background-color: rgba(23, 23, 29, 0.897);
+          div {
+            position: relative;
+            left: 70px;
+            width: 353px;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            font-weight: 20px;
+          }
+        }
+        .form1 {
+          padding-left: 90px;
+          margin-top: 30px;
+          h3 {
+            font-size: 25px;
+            font-weight: bold;
+          }
+          p {
+            font-size: 20px;
+          }
+          h4 {
+            font-weight: bold;
+          }
+        }
+        .form2 {
+          padding-left: 60px;
+          margin-top: 30px;
+          h3 {
+            font-size: 25px;
+            font-weight: bold;
+          }
+          p {
+            font-size: 20px;
+          }
+          h4 {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

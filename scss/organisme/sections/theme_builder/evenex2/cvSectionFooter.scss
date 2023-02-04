@@ -1,0 +1,84 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.cvSectionFooter {
+  background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionFooter/monfond.webp");
+  background-size: cover;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 0px;
+  padding-bottom: 30px;
+  .cvSectionFooter-container {
+    padding: 50px 0px;
+    border-bottom: 2px solid black;
+    h1 {
+      border-bottom: 2px solid black;
+      padding: 20px 0px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .infoS {
+      .adress1 {
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        .svg1 {
+          margin: 0 20px;
+        }
+        .contact {
+          font-size: 15px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .adress2 {
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        .svg2 {
+          margin: 0 20px;
+        }
+        .numero {
+          font-size: 15px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .adress3 {
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+
+        .svg3 {
+          margin: 0 20px;
+        }
+        .email {
+          font-size: 15px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .adress4 {
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        .svg4 {
+          margin: 0 20px;
+        }
+        .facebook {
+          font-size: 15px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
