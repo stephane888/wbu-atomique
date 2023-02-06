@@ -2,10 +2,12 @@
 @use "../../../../variables" as *;
 
 .cvConvaincant-comp {
+  margin-bottom: 50px;
   overflow: hidden;
   background-color: rgb(241, 241, 241);
   .cvConvaincant-comp-container {
     .interet {
+      margin-bottom: 85px;
       padding-right: 0;
       .desc {
         width: 353px;
@@ -90,15 +92,16 @@
         content: "";
         position: absolute;
         top: 0;
-        left: 360px;
+        left: 353px;
         width: 80px;
         height: 100%;
-        border-top: 400px solid #d3cfcf;
-        border-bottom: 0px solid #d3cfcf;
+        border-top: 453px solid #d3cfcf;
         transform: rotate(8deg);
       }
     }
     .competences {
+      margin-bottom: 85px;
+      padding-right: 169px;
       padding-left: 0px;
       .desc {
         clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0 100%);

@@ -6,6 +6,7 @@
   .cvConvaincantExp-container {
     .port1 {
       .profil {
+        margin-bottom: 50px;
         .information {
           .text {
             margin: 0px 0;
@@ -62,14 +63,16 @@
             left: 420px;
             width: 80px;
             height: 100%;
-            border-top: 514px solid #d3cfcf;
+            border-top: 584px solid #d3cfcf;
             border-bottom: 0px solid #d3cfcf;
             transform: rotate(8deg);
           }
         }
       }
       .experience {
+        margin-bottom: 50px;
         padding-left: 0;
+        padding-right: 100px;
         .desc {
           clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0 100%);
           background-color: rgba(23, 23, 29, 0.897);
@@ -84,6 +87,7 @@
           }
         }
         .form1 {
+          padding-right: 50px;
           padding-left: 90px;
           margin-top: 30px;
           h3 {
@@ -98,6 +102,7 @@
           }
         }
         .form2 {
+          padding-right: 125px;
           padding-left: 60px;
           margin-top: 30px;
           h3 {
