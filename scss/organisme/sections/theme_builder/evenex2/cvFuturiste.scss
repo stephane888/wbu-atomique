@@ -20,8 +20,8 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          box-shadow: 0 0 0 10px #ffffff, inset 0 5px 0 rgb(0 0 0 / 5%),
-            0 8px 0 0px rgb(0 0 0 / 5%);
+          box-shadow: 0 0 0 10px #ffffff, inset 8px 0px 10px rgb(0 0 0 / 30%),
+            6px 6px 10px 5px rgb(0 0 0 / 50%);
           &::before {
             content: "";
             position: absolute;
@@ -35,9 +35,9 @@
           &::after {
             content: "";
             position: absolute;
-            top: 7px;
-            left: 260px;
-            height: 280px;
+            top: 9px;
+            left: 255px;
+            height: 262px;
             width: 1px;
             background: #000000;
             transform: rotate(140deg);
@@ -50,6 +50,9 @@
             font-weight: bold;
           }
           .paragraph {
+            height: 50%;
+            font-size: 50%;
+            overflow-wrap: break-word;
           }
         }
       }
@@ -67,6 +70,7 @@
               margin-right: 10px;
             }
             .email {
+              overflow-wrap: break-word;
             }
           }
           .port2 {
@@ -75,6 +79,7 @@
               margin-right: 10px;
             }
             .number {
+              overflow-wrap: break-word;
             }
           }
         }
@@ -85,6 +90,7 @@
               margin-right: 10px;
             }
             .location {
+              overflow-wrap: break-word;
             }
           }
           .port4 {
@@ -92,6 +98,7 @@
               margin-right: 10px;
             }
             .web {
+              overflow-wrap: break-word;
             }
           }
         }
@@ -141,8 +148,8 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          box-shadow: 0 0 0 10px #ffffff, inset 0 5px 0 rgb(0 0 0 / 5%),
-            0 8px 0 0px rgb(0 0 0 / 5%);
+          box-shadow: 0 0 0 10px #ffffff, inset 8px 0px 10px rgb(0 0 0 / 30%),
+            6px 6px 10px 5px rgb(0 0 0 / 50%);
           &::before {
             content: "";
             position: absolute;
@@ -157,20 +164,24 @@
             content: "";
             position: absolute;
             top: 92px;
-            right: 295px;
-            height: 277px;
+            right: 282px;
+            height: 228px;
             width: 1px;
             background: #000000;
             transform: rotate(30deg);
           }
         }
         .formation {
+          position: relative;
+          right: 30px;
           .text {
+            overflow-wrap: break-word;
             padding: 10px;
             font-size: 25px;
             font-weight: bold;
           }
           .titre1 {
+            overflow-wrap: break-word;
             margin-right: 20px;
             margin-bottom: 10px;
             .dip1 {
@@ -179,6 +190,7 @@
               width: max-content;
             }
             .content {
+              overflow-wrap: break-word;
               margin: 10px 0;
             }
             .date {
@@ -186,12 +198,14 @@
             }
           }
           .titre2 {
+            overflow-wrap: break-word;
             .dip2 {
               font-size: 17px;
               font-weight: bold;
               width: max-content;
             }
             .content {
+              overflow-wrap: break-word;
               margin: 10px 0;
             }
             .date {
@@ -203,9 +217,12 @@
     }
     .bloc4 {
       .competences {
+        position: relative;
+        bottom: 50px;
+        height: 50%;
         .svg1 {
           position: relative;
-          bottom: 100px;
+          bottom: 30px;
           width: 80px;
           height: 80px;
           background: #5976e1;
@@ -213,8 +230,8 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          box-shadow: 0 0 0 10px #ffffff, inset 0 5px 0 rgb(0 0 0 / 5%),
-            0 8px 0 0px rgb(0 0 0 / 5%);
+          box-shadow: 0 0 0 10px #ffffff, inset 8px 0px 10px rgb(0 0 0 / 30%),
+            6px 6px 10px 5px rgb(0 0 0 / 50%);
           &::before {
             content: "";
             position: absolute;
@@ -234,6 +251,7 @@
           }
         }
         .contenu1 {
+          margin: 5px 0;
           .text1 {
           }
           .bar1 {
@@ -242,6 +260,7 @@
           }
         }
         .contenu2 {
+          margin: 5px 0;
           .text2 {
           }
           .bar2 {
@@ -250,6 +269,7 @@
           }
         }
         .contenu3 {
+          margin: 5px 0;
           .text3 {
           }
           .bar3 {
@@ -258,6 +278,7 @@
           }
         }
         .contenu4 {
+          margin: 5px 0;
           .text4 {
           }
           .bar4 {
@@ -266,6 +287,7 @@
           }
         }
         .contenu5 {
+          margin: 5px 0;
           .text5 {
           }
           .bar5 {
@@ -274,6 +296,7 @@
           }
         }
         .contenu6 {
+          margin: 5px 0;
           .text6 {
           }
           .bar6 {
@@ -288,24 +311,27 @@
         left: 40px;
         img {
           margin: 50px;
-          width: 300px;
-          height: 300px;
+          width: 350px;
+          height: 350px;
           border-radius: 50%;
           display: flex;
           align-items: center;
-          box-shadow: 0 0 0 15px rgb(240, 240, 247),
-            inset 0 4px 0 rgb(0 0 0 / 8%), 0 3px 0 4px rgb(0 0 0 / 5%);
+          box-shadow: 0 0 0 20px rgb(223 223 228),
+            inset 8px 0px 10px rgb(0 0 0 / 20%),
+            6px 6px 10px 20px rgb(0 0 0 / 50%);
           overflow: hidden;
         }
         .nom {
+          overflow-wrap: break-word;
           font-size: 40px;
           font-weight: bold;
         }
         .prenom {
+          overflow-wrap: break-word;
         }
       }
       .bloc5 {
-        margin-left: 74px;
+        margin-left: 41px;
         margin-top: 52px;
         .svg1 {
           margin-left: 120px;
@@ -316,36 +342,56 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          box-shadow: 0 0 0 10px #ffffff, inset 0 5px 0 rgb(0 0 0 / 5%),
-            0 8px 0 0px rgb(0 0 0 / 5%);
+          box-shadow: 0 0 0 10px #ffffff, inset 8px 0px 10px rgb(0 0 0 / 30%),
+            6px 6px 10px 5px rgb(0 0 0 / 50%);
+          &::after {
+            content: "";
+            position: absolute;
+
+            left: 29px;
+            height: 191px;
+            width: 1px;
+            background: #000000;
+            transform: rotate(90deg);
+          }
         }
         .profil {
+          position: relative;
+          right: 30px;
+          bottom: 30px;
           .text {
+            overflow-wrap: break-word;
             margin-top: 30px;
             padding: 10px;
             font-size: 25px;
             font-weight: bold;
           }
           .titre1 {
+            overflow-wrap: break-word;
             .post1 {
+              overflow-wrap: break-word;
               font-size: 17px;
               font-weight: bold;
               width: max-content;
             }
             .content {
+              overflow-wrap: break-word;
               margin: 10px 0;
             }
             .date {
             }
           }
           .titre2 {
+            overflow-wrap: break-word;
             .post2 {
+              overflow-wrap: break-word;
               margin-top: 10px;
               font-size: 17px;
               font-weight: bold;
               width: max-content;
             }
             .content {
+              overflow-wrap: break-word;
               margin: 10px 0;
             }
             .date {
@@ -356,7 +402,7 @@
     }
     .svg5 {
       position: relative;
-      bottom: 117px;
+      bottom: 200px;
       margin-left: 20px;
       width: 80px;
       height: 80px;
@@ -365,8 +411,28 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 0 10px #ffffff, inset 0 5px 0 rgb(0 0 0 / 5%),
-        0 8px 0 0px rgb(0 0 0 / 5%);
+      box-shadow: 0 0 0 10px #ffffff, inset 8px 0px 10px rgb(0 0 0 / 30%),
+        6px 6px 10px 5px rgb(0 0 0 / 50%);
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 130px;
+        height: 100%;
+        width: 1px;
+        background: #000000;
+        transform: rotate(90deg);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        left: 259px;
+        height: 312px;
+        width: 1px;
+        background: #000000;
+        transform: rotate(35deg);
+      }
     }
   }
 }
