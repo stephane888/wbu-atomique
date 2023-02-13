@@ -7,7 +7,7 @@
   margin-bottom: 50px;
   background-color: rgb(223 223 228);
   .cvFuturist-container {
-    height: 1246px;
+    height: 1352px;
     .header {
       .bloc1 {
         .svg1 {
@@ -52,8 +52,9 @@
           }
           .paragraph {
             font-size: 20px;
-            height: 50%;
+            height: 319px;
             overflow-wrap: break-word;
+            max-height: 319px;
           }
         }
         .gauche {
@@ -229,141 +230,156 @@
     .bloc4 {
       .competences {
         position: relative;
-        bottom: 50px;
-        height: 50%;
-        .svg1 {
+        bottom: 102px;
+        height: 411px;
+
+        .comp {
+          height: 350px;
           position: relative;
-          bottom: 30px;
-          width: 80px;
-          height: 80px;
-          background: #5976e1;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          box-shadow: 0 0 0 10px #ffffff, inset 8px 0px 10px rgb(0 0 0 / 30%),
-            6px 6px 10px 5px rgb(0 0 0 / 50%);
-          &::before {
-            content: "";
-            position: absolute;
-            left: 187px;
-            height: 194px;
-            width: 1px;
-            background: #000000;
-            transform: rotate(90deg);
-          }
-        }
-        .desc {
-          .titre {
-            padding: 10px;
-            font-size: 25px;
-            font-weight: bold;
-            margin-bottom: 20px;
-          }
-        }
-        .contenu1 {
-          margin: 5px 0;
-          .text1 {
-            overflow-wrap: break-word;
-          }
-          .bar1 {
-            padding: 0;
-            .pb {
+          max-height: 350px;
+          top: 49px;
+          .svg1 {
+            position: relative;
+            bottom: 30px;
+            width: 80px;
+            left: 10px;
+            height: 80px;
+            background: #5976e1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 10px #ffffff, inset 8px 0px 10px rgb(0 0 0 / 30%),
+              6px 6px 10px 5px rgb(0 0 0 / 50%);
+            &::before {
+              content: "";
+              position: absolute;
+              left: 180px;
+              height: 178px;
+              width: 1px;
+              background: #000000;
+              transform: rotate(90deg);
             }
           }
-          .progress-bar {
-            background: #5976e1;
-          }
-        }
-        .contenu2 {
-          margin: 5px 0;
-          .text2 {
-            overflow-wrap: break-word;
-          }
-          .bar2 {
-            padding: 0;
-            .pb {
+          .madiv {
+            height: 290px;
+            max-height: 290px;
+            overflow: hidden;
+            .desc {
+              .titre {
+                padding: 10px;
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 20px;
+              }
+            }
+            .contenu1 {
+              margin: 5px 0;
+              .text1 {
+                overflow-wrap: break-word;
+              }
+              .bar1 {
+                padding: 0;
+                .pb {
+                }
+              }
+              .progress-bar {
+                background: #5976e1;
+              }
+            }
+            .contenu2 {
+              margin: 5px 0;
+              .text2 {
+                overflow-wrap: break-word;
+              }
+              .bar2 {
+                padding: 0;
+                .pb {
+                }
+              }
+              .progress-bar {
+                background: #5976e1;
+              }
+            }
+            .contenu3 {
+              margin: 5px 0;
+              .text3 {
+                overflow-wrap: break-word;
+              }
+              .bar3 {
+                padding: 0;
+                .pb {
+                }
+              }
+              .progress-bar {
+                background: #5976e1;
+              }
+            }
+            .contenu4 {
+              margin: 5px 0;
+              .text4 {
+                overflow-wrap: break-word;
+              }
+              .bar4 {
+                padding: 0;
+                .pb {
+                }
+              }
+              .progress-bar {
+                background: #5976e1;
+              }
+            }
+            .contenu5 {
+              margin: 5px 0;
+              .text5 {
+                overflow-wrap: break-word;
+              }
+              .bar5 {
+                padding: 0;
+                .pb {
+                }
+              }
+              .progress-bar {
+                background: #5976e1;
+              }
+            }
+            .contenu6 {
+              margin: 5px 0;
+              .text6 {
+                overflow-wrap: break-word;
+              }
+              .bar6 {
+                padding: 0;
+                .pb {
+                }
+              }
+              .progress-bar {
+                background: #5976e1;
+              }
             }
           }
-          .progress-bar {
-            background: #5976e1;
-          }
         }
-        .contenu3 {
-          margin: 5px 0;
-          .text3 {
-            overflow-wrap: break-word;
-          }
-          .bar3 {
-            padding: 0;
-            .pb {
-            }
-          }
-          .progress-bar {
-            background: #5976e1;
-          }
-        }
-        .contenu4 {
-          margin: 5px 0;
-          .text4 {
-            overflow-wrap: break-word;
-          }
-          .bar4 {
-            padding: 0;
-            .pb {
-            }
-          }
-          .progress-bar {
-            background: #5976e1;
-          }
-        }
-        .contenu5 {
-          margin: 5px 0;
-          .text5 {
-            overflow-wrap: break-word;
-          }
-          .bar5 {
-            padding: 0;
-            .pb {
-            }
-          }
-          .progress-bar {
-            background: #5976e1;
-          }
-        }
-        .contenu6 {
-          margin: 5px 0;
-          .text6 {
-            overflow-wrap: break-word;
-          }
-          .bar6 {
-            padding: 0;
-            .pb {
-            }
-          }
-          .progress-bar {
-            background: #5976e1;
-          }
-        }
+
         .one {
           position: relative;
-          bottom: 208px;
+          bottom: 179px;
           left: 281px;
           transform: rotate(deg);
           transform: rotate(262deg);
         }
         .two {
           position: relative;
-          bottom: 380px;
-          left: 154px;
-          transform: rotate(deg);
-          transform: rotate(306deg);
+          bottom: 355px;
+          left: 149px;
+          transform: rotate(311deg);
         }
       }
       .image {
         position: relative;
         bottom: 280px;
         left: 40px;
+        height: 600px;
+        max-height: 600px;
         img {
           margin: 50px;
           width: 350px;
@@ -380,10 +396,21 @@
           overflow-wrap: break-word;
           font-size: 40px;
           font-weight: bold;
+          height: 100px;
+          padding-left: 43px;
+          max-height: 100px;
+          overflow: hidden;
+          width: 382px;
+          max-width: 469px;
         }
         .prenom {
           overflow-wrap: break-word;
           font-weight: bold;
+          width: 382px;
+          max-width: 469px;
+          height: 50px;
+          max-height: 50px;
+          overflow: hidden;
         }
       }
       .bloc5 {
@@ -429,6 +456,9 @@
             .content {
               overflow-wrap: break-word;
               margin: 10px 0;
+              height: 58px;
+              max-height: 58px;
+              overflow: hidden;
             }
             .date {
             }
@@ -444,6 +474,9 @@
             .content {
               overflow-wrap: break-word;
               margin: 10px 0;
+              height: 58px;
+              max-height: 58px;
+              overflow: hidden;
             }
             .date {
             }
@@ -453,7 +486,7 @@
     }
     .svg5 {
       position: relative;
-      bottom: 200px;
+      bottom: 278px;
       margin-left: 20px;
       width: 80px;
       height: 80px;
@@ -487,22 +520,24 @@
     }
     .droite {
       position: relative;
-      bottom: 963px;
+      bottom: 1040px;
       left: 627px;
       transform: rotate(72deg);
     }
     .bas {
       position: relative;
-      bottom: 554px;
-      left: 677px;
-      transform: rotate(deg);
-      transform: rotate(160deg);
+      bottom: 588px;
+      left: 640px;
+      transform: rotate(170deg);
     }
     .footer {
       position: relative;
       bottom: 300px;
       .port {
         .langue {
+          height: 200px;
+          max-height: 200px;
+          overflow: hidden;
           .text {
             overflow-wrap: break-word;
             margin-top: 30px;
@@ -542,6 +577,9 @@
           }
         }
         .passion {
+          height: 200px;
+          max-height: 200px;
+          overflow: hidden;
           .text {
             overflow-wrap: break-word;
             margin-top: 30px;
@@ -586,6 +624,9 @@
           }
         }
         .reference {
+          height: 200px;
+          max-height: 200px;
+          overflow: hidden;
           .text {
             overflow-wrap: break-word;
             margin-top: 30px;
