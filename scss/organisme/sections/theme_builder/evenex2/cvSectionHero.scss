@@ -2,7 +2,8 @@
 @use "../../../../variables" as *;
 
 .cv-section-hero {
-  background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionHero/images/monfond.webp");
+  // Voir pouquoi wbu-atomique-theme ne charge pas l'image or theme-builder charge.
+  // background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionHero/images/monfond.webp");
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +14,7 @@
     align-items: center;
     justify-content: center;
     .cv-section-hero-information {
-      padding: 40px;
+      padding: $wbu-margin * 2;
       text-align: end;
       .information-name {
         //text-align: center;
