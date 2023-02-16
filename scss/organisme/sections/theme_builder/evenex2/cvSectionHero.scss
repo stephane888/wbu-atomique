@@ -18,13 +18,11 @@
       text-align: end;
       .information-name {
         //text-align: center;
-        font-size: 50px;
         color: black;
       }
       .information-post {
         //text-align: center;
         color: black;
-        font-size: 30px;
       }
     }
     .information-image {
@@ -33,7 +31,7 @@
         height: 250px;
         background-size: 100%;
         border-radius: 50%;
-        margin-top: 50px;
+        margin-top: $wbu-margin * 2.5;
         border: 3px solid black;
       }
     }
