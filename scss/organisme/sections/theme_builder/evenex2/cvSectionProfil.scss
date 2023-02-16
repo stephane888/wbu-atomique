@@ -1,3 +1,5 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
 .cv-section-profil-hero {
   background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionProfil/monfond copy.webp");
   background-size: cover;

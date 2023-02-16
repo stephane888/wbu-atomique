@@ -1,0 +1,144 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.exper {
+  .formation {
+    width: auto;
+    margin: 100px 0;
+    padding-left: 0;
+    height: 402px;
+    max-height: 402px;
+    .desc {
+      clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0 100%);
+      background-color: rgba(23, 23, 29, 0.897);
+      div {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        font-weight: 20px;
+      }
+    }
+    .form1 {
+      padding-right: 105px;
+      margin-top: 30px;
+      padding-left: 75px;
+      height: 212px;
+      max-height: 212px;
+      overflow: hidden h3 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 20px;
+        font-size: 20px;
+        height: 60px;
+        max-height: 60px;
+        overflow: hidden;
+      }
+      h4 {
+        font-weight: bold;
+      }
+    }
+    .form2 {
+      padding-right: 116px;
+      padding-left: 55px;
+      margin-top: 30px;
+      height: 166px;
+      max-height: 166px;
+      h3 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 20px;
+        font-size: 20px;
+        height: 77px;
+        max-height: 77px;
+        overflow: hidden;
+      }
+      h4 {
+        font-weight: bold;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 547px;
+      width: 80px;
+      height: 100%;
+      border-top: 670px solid #d3cfcf;
+      border-bottom: 0px solid #d3cfcf;
+      transform: rotate(8deg);
+
+      z-index: -1;
+    }
+  }
+  .experience {
+    margin-bottom: 50px;
+    padding-left: 0;
+    padding-right: 100px;
+    .desc {
+      clip-path: polygon(1% 0, 100% 0%, 99% 100%, 0 100%);
+      background-color: rgba(23, 23, 29, 0.897);
+      div {
+        position: relative;
+        left: 70px;
+        width: 353px;
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        font-weight: 20px;
+      }
+    }
+    .form1 {
+      padding-right: 50px;
+      padding-left: 90px;
+      margin-top: 30px;
+      h3 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      p {
+        height: 102px;
+        max-height: 102px;
+        overflow: hidden;
+        font-size: 20px;
+      }
+      h4 {
+        font-weight: bold;
+      }
+    }
+    .form2 {
+      padding-right: 125px;
+      padding-left: 60px;
+      margin-top: 30px;
+      h3 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      p {
+        height: 102px;
+        max-height: 102px;
+        overflow: hidden;
+        font-size: 20px;
+      }
+      h4 {
+        font-weight: bold;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 602px;
+      width: 80px;
+      right: 631px;
+      height: 100%;
+      border-top: 670px solid #d3cfcf;
+      border-bottom: 0px solid #d3cfcf;
+      transform: rotate(8deg);
+
+      z-index: -1;
+    }
+  }
+}

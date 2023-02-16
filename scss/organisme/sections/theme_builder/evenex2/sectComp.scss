@@ -1,0 +1,85 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.presentation {
+  .profil {
+    .information-image {
+      img {
+        width: 250px;
+        height: 250px;
+        background-size: 100%;
+        border-radius: 50%;
+        margin-top: 50px;
+        border: 3px solid rgba(0, 0, 0, 0.479);
+      }
+    }
+    .infos {
+      h1 {
+      }
+      h5 {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      h6 {
+        font-size: 22px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .profil {
+    margin-bottom: 50px;
+    .information {
+      .text {
+        margin: 0px 0;
+        font-size: 24px;
+        padding-right: 88px;
+        max-height: 350px;
+        overflow: hidden;
+      }
+      .coordonnées {
+        margin-top: 40px;
+        .infos1 {
+          margin-top: 10px;
+          .svg1 {
+            margin-right: 10px;
+          }
+          .contact {
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+        .infos2 {
+          margin-top: 10px;
+          .svg2 {
+            margin-right: 10px;
+          }
+          .email {
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+        .infos3 {
+          margin-top: 10px;
+          .svg3 {
+            margin-right: 10px;
+          }
+          .location {
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+        .infos4 {
+          margin-top: 10px;
+          .svg4 {
+            margin-right: 10px;
+          }
+          .nation {
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

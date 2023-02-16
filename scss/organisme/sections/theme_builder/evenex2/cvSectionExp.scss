@@ -29,6 +29,17 @@
           p {
             margin-left: 10px;
             margin-right: 10px;
+            min-height: 83px;
+          }
+          .bloc1 {
+            margin: 2px 0px;
+            background-color: rgb(204, 204, 212);
+            height: 70px;
+            //width: 140px;
+            text-align: center;
+            color: white;
+            justify-content: center;
+            align-items: center;
           }
         }
         .cvSectionExp-content2 {
@@ -43,6 +54,17 @@
           p {
             margin-left: 10px;
             margin-right: 10px;
+            min-height: 83px;
+          }
+          .bloc2 {
+            margin: 2px 0px;
+            background-color: rgb(176, 176, 206);
+            height: 70px;
+            // width: 258px;
+            text-align: center;
+            color: white;
+            justify-content: center;
+            align-items: center;
           }
         }
         .cvSectionExp-content3 {
@@ -57,6 +79,17 @@
           p {
             margin-left: 10px;
             margin-right: 10px;
+            min-height: 83px;
+          }
+          .bloc3 {
+            margin: 2px 0px;
+            background-color: rgb(153, 153, 206);
+            height: 70px;
+            //width: 304px;
+            text-align: center;
+            color: white;
+            justify-content: center;
+            align-items: center;
           }
         }
         .cvSectionExp-content4 {
@@ -71,140 +104,20 @@
           p {
             margin-left: 10px;
             margin-right: 10px;
+            min-height: 83px;
+          }
+          .bloc4 {
+            margin: 2px 0px;
+            background-color: rgb(125, 125, 211);
+            height: 70px;
+            //width: 304px;
+            text-align: center;
+            color: white;
+            justify-content: center;
+            align-items: center;
           }
         }
       }
     }
-    .content1 {
-      padding: 0;
-      .bloc1 {
-        margin: 2px 0px;
-        background-color: rgb(204, 204, 212);
-        height: 70px;
-        //width: 140px;
-        text-align: center;
-        color: white;
-        justify-content: center;
-        align-items: center;
-      }
-      /*.contenu1 {
-        .date1 {
-          padding: 1px;
-          margin-right: 1px;
-          text-align: center;
-        }
-        .date2 {
-          padding: 0;
-          text-align: center;
-        }
-      }*/
-    }
-    .content2 {
-      padding: 0 2px;
-      .bloc2 {
-        margin: 2px 0px;
-        background-color: rgb(176, 176, 206);
-        height: 70px;
-        // width: 258px;
-        text-align: center;
-        color: white;
-        justify-content: center;
-        align-items: center;
-      }
-      /*.contenu2 {
-        .date3 {
-          padding: 1px;
-          margin-right: 1px;
-          text-align: center;
-        }
-        .date4 {
-          padding: 0;
-          text-align: center;
-          margin-right: 1px;
-        }
-        .date5 {
-          padding: 0;
-          text-align: center;
-          margin-right: 1px;
-        }
-      }*/
-    }
-    .content3 {
-      padding: 0;
-      .bloc3 {
-        margin: 2px 0px;
-        background-color: rgb(153, 153, 206);
-        height: 70px;
-        //width: 304px;
-        text-align: center;
-        color: white;
-        justify-content: center;
-        align-items: center;
-      }
-      /* .contenu3 {
-        .date6 {
-          padding: 1px;
-          margin-right: 1px;
-          margin-left: 1px;
-          text-align: center;
-          width: 50px;
-        }
-        .date7 {
-          padding: 0;
-          text-align: center;
-          margin-right: 1px;
-        }
-        .date8 {
-          padding: 0;
-          text-align: center;
-          margin-right: 1px;
-        }
-      }*/
-    }
-
-    .content4 {
-      padding: 0 2px;
-      .bloc4 {
-        margin: 2px 0px;
-        background-color: rgb(125, 125, 211);
-        height: 70px;
-        //width: 393px;
-        text-align: center;
-        color: white;
-        justify-content: center;
-        align-items: center;
-      }
-      /* .contenu4 {
-        .date9 {
-          padding: 0px;
-          margin-right: 1px;
-          text-align: center;
-        }
-        .date10 {
-          padding: 0;
-          text-align: center;
-          margin-right: 1px;
-        }
-        .date11 {
-          padding: 0;
-          text-align: center;
-          margin-right: 1px;
-        }
-        .date12 {
-          padding: 0;
-          text-align: center;
-          margin-right: 1px;
-        }
-      }*/
-    }
-    /*.bloc4 {
-      background-color: rgb(125, 125, 211);
-      height: 70px;
-      //width: 393px;
-      text-align: center;
-      color: white;
-      justify-content: center;
-      align-items: center;
-    }*/
   }
 }
