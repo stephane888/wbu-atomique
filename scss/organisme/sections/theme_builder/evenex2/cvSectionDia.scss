@@ -3,7 +3,7 @@
 
 .cvSectionDia {
   //background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionDia/monfond.webp");
-  //background-size: cover;
+  background-size: cover;
   height: auto;
   .cvSectionDia-container {
     padding: $wbu-margin * 2.5 $wbu-margin * 1.5;
@@ -15,7 +15,7 @@
         margin-right: 10%;
       }
       .image {
-        background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionDia/DiagrammeCirculaire.png");
+        //background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionDia/DiagrammeCirculaire.png");
         background-size: 90%;
         background-repeat: no-repeat;
         //background-size: contain;
