@@ -6,12 +6,11 @@
   background-size: cover;
   height: auto;
   .cvSectionDia-container {
-    padding: 50px 30px;
+    padding: $wbu-margin * 2.5 $wbu-margin * 1.5;
     .first {
       .port1 {
         border-bottom: 2px solid black;
-        padding: 20px 0px;
-        font-size: 20px;
+        padding: $wbu-margin 0px;
         font-weight: bold;
         margin-right: 10%;
       }
@@ -21,23 +20,22 @@
         background-repeat: no-repeat;
         //background-size: contain;
         height: 100%;
-        margin: 20px;
+        margin: $wbu-margin;
       }
     }
     .second {
       .port2 {
         margin-left: 10%;
         border-bottom: 2px solid black;
-        padding: 20px 0px;
-        font-size: 20px;
+        padding: $wbu-margin 0px;
         font-weight: bold;
       }
       .formation {
         margin-left: 10%;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: $wbu-margin * 1.5;
+        margin-bottom: $wbu-margin * 1.5;
         .form1 {
-          margin: 10px 0;
+          margin: $wbu-margin * 0.5 0;
           .date1 {
             background-color: rgb(199, 193, 193);
             height: 40%;
@@ -45,11 +43,10 @@
           .text1 {
             .title1 {
               .dip {
-                font-size: 15px;
                 font-weight: bold;
               }
               .sch {
-                margin-left: 20px;
+                margin-left: $wbu-margin;
               }
             }
             .par1 {
@@ -57,7 +54,7 @@
           }
         }
         .form2 {
-          margin: 10px 0;
+          margin: $wbu-margin * 0.5 0;
           .date2 {
             background-color: rgb(199, 193, 193);
             height: 40%;
@@ -65,11 +62,10 @@
           .text2 {
             .title2 {
               .dip {
-                font-size: 15px;
                 font-weight: bold;
               }
               .sch {
-                margin-left: 20px;
+                margin-left: $wbu-margin;
               }
             }
             .par2 {
@@ -77,7 +73,7 @@
           }
         }
         .form3 {
-          margin: 10px 0;
+          margin: $wbu-margin * 0.5 0;
           .date3 {
             background-color: rgb(199, 193, 193);
             height: 40%;
@@ -85,11 +81,10 @@
           .text3 {
             .title3 {
               .dip {
-                font-size: 15px;
                 font-weight: bold;
               }
               .sch {
-                margin-left: 20px;
+                margin-left: $wbu-margin;
               }
             }
             .par3 {

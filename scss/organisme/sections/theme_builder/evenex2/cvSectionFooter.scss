@@ -4,29 +4,27 @@
 .cvSectionFooter {
   background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionFooter/monfond.webp");
   background-size: cover;
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: $wbu-margin * 2.75;
+  padding-right: $wbu-margin * 2.75;
   padding-top: 0px;
-  padding-bottom: 30px;
+  padding-bottom: $wbu-margin * 1.5;
   .cvSectionFooter-container {
-    padding: 50px 0px;
+    padding: $wbu-margin * 2.5 0px;
     border-bottom: 2px solid black;
     h1 {
       border-bottom: 2px solid black;
-      padding: 20px 0px;
-      font-size: 20px;
+      padding: $wbu-margin * 0px;
       font-weight: bold;
     }
     .infoS {
       .adress1 {
-        margin-top: 20px;
+        margin-top: $wbu-margin;
         align-items: center;
         justify-content: center;
         .svg1 {
-          margin: 0 20px;
+          margin: 0 $wbu-margin;
         }
         .contact {
-          font-size: 15px;
           font-weight: bold;
           display: flex;
           align-items: center;
@@ -34,14 +32,13 @@
         }
       }
       .adress2 {
-        margin-top: 20px;
+        margin-top: $wbu-margin;
         align-items: center;
         justify-content: center;
         .svg2 {
-          margin: 0 20px;
+          margin: 0 $wbu-margin;
         }
         .numero {
-          font-size: 15px;
           font-weight: bold;
           display: flex;
           align-items: center;
@@ -49,15 +46,14 @@
         }
       }
       .adress3 {
-        margin-top: 20px;
+        margin-top: $wbu-margin;
         align-items: center;
         justify-content: center;
 
         .svg3 {
-          margin: 0 20px;
+          margin: 0 $wbu-margin;
         }
         .email {
-          font-size: 15px;
           font-weight: bold;
           display: flex;
           align-items: center;
@@ -65,14 +61,13 @@
         }
       }
       .adress4 {
-        margin-top: 20px;
+        margin-top: $wbu-margin;
         align-items: center;
         justify-content: center;
         .svg4 {
-          margin: 0 20px;
+          margin: 0 $wbu-margin;
         }
         .facebook {
-          font-size: 15px;
           font-weight: bold;
           display: flex;
           align-items: center;

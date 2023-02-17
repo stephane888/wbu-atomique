@@ -7,45 +7,40 @@
     background-size: cover;
     display: flex;
     .cv-section-profil-hero-container {
-      padding: 10px 40px;
+      padding: $wbu-margin * 0.5 $wbu-margin * 2;
       .title {
-        font-size: 20px;
-
         font-weight: bold;
         border-bottom: 2px solid black;
         width: 462px;
-        padding: 20px 0px;
-        font-size: 20px;
+        padding: $wbu-margin 0px;
         font-weight: bold;
       }
       .mytexte {
-        padding: 20px 0px;
+        padding: $wbu-margin 0px;
       }
     }
     .competence {
-      padding: 10px 40px;
+      padding: $wbu-margin * 0.5 $wbu-margin * 2;
       .subtitle {
-        font-size: 20px;
-
         font-weight: bold;
         border-bottom: 2px solid black;
         width: 462px;
-        padding: 20px 0px;
-        font-size: 20px;
+        padding: $wbu-margin 0px;
         font-weight: bold;
       }
       .progress {
         height: 20px;
         background: none;
-        padding: 20px 0px;
+        padding: $wbu-margin 0px;
 
         .progress-bar {
           //margin: 0 30px;
           height: 20px;
         }
         .bar0 {
+          padding-left: 0;
           background-color: rgb(202, 202, 202);
-
+          padding-right: 51px;
           .icon1 {
             position: relative;
             z-index: 2;
@@ -54,6 +49,8 @@
           }
         }
         .bar {
+          padding-right: 51px;
+          padding-left: 0;
           background-color: rgb(202, 202, 202);
 
           .icon2 {
@@ -64,6 +61,8 @@
           }
         }
         .bar1 {
+          padding-right: 51px;
+          padding-left: 0;
           background-color: rgb(202, 202, 202);
           .icon3 {
             position: relative;
@@ -72,6 +71,8 @@
           }
         }
         .bar2 {
+          padding-right: 51px;
+          padding-left: 0;
           background-color: rgb(202, 202, 202);
           .icon4 {
             position: relative;
@@ -80,6 +81,8 @@
           }
         }
         .bar3 {
+          padding-right: 51px;
+          padding-left: 0;
           background-color: rgb(202, 202, 202);
           position: relative;
           .icon5 {
@@ -90,13 +93,11 @@
         }
         .t1 {
           position: relative;
-          font-size: 15px;
           line-height: 1.65;
           bottom: 1px;
         }
         .t2 {
           position: relative;
-          font-size: 15px;
           line-height: 1.65;
           bottom: 1px;
         }

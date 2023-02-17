@@ -2,8 +2,8 @@
 @use "../../../../variables" as *;
 
 .cvFuturist {
-  padding: 50px;
-  margin-top: 50px;
+  padding: $wbu-margin * 2.5;
+  margin-top: $wbu-margin * 2.5;
   margin-bottom: 50px;
   background-color: rgb(223 223 228);
   .cvFuturist-container {
@@ -11,8 +11,8 @@
     .header {
       .bloc1 {
         .svg1 {
-          margin: 75px 0;
-          margin-bottom: 30px;
+          margin: $wbu-margin * 3.75 0;
+          margin-bottom: $wbu-margin * 1.5;
           width: 80px;
           position: relative;
           height: 80px;
@@ -46,7 +46,7 @@
         }
         .profil {
           .text {
-            margin-bottom: 10px;
+            margin-bottom: $wbu-margin * 0.5;
             font-size: 25px;
             font-weight: bold;
           }
@@ -72,10 +72,10 @@
           font-weight: bold;
         }
         .contenu1 {
-          margin: 30px;
+          margin: $wbu-margin * 1.5;
           .port1 {
             .svg1 {
-              margin-right: 10px;
+              margin-right: $wbu-margin * 0.5;
             }
             .email {
               overflow-wrap: break-word;
@@ -84,7 +84,7 @@
           .port2 {
             justify-content: center;
             .svg2 {
-              margin-right: 10px;
+              margin-right: $wbu-margin * 0.5;
             }
             .number {
               overflow-wrap: break-word;
@@ -92,10 +92,10 @@
           }
         }
         .contenu2 {
-          margin: 30px;
+          margin: $wbu-margin * 1.5;
           .port3 {
             .svg3 {
-              margin-right: 10px;
+              margin-right: $wbu-margin * 1.5;
             }
             .location {
               overflow-wrap: break-word;
@@ -103,7 +103,7 @@
           }
           .port4 {
             .svg4 {
-              margin-right: 10px;
+              margin-right: $wbu-margin * 0.5;
             }
             .web {
               overflow-wrap: break-word;
@@ -111,7 +111,7 @@
           }
         }
         .reseau {
-          margin: 30px;
+          margin: $wbu-margin * 1.5;
           justify-content: center;
           align-items: center;
           .insta {
@@ -124,7 +124,7 @@
               0 3px 0 4px rgb(0 0 0 / 5%);
           }
           .twitter {
-            margin: 0px 30px;
+            margin: 0 $wbu-margin * 1.5;
             background: #5976e1;
             border-radius: 50%;
             display: flex;
@@ -146,9 +146,9 @@
       }
       .bloc3 {
         .svg1 {
-          margin-left: 110px;
-          margin-top: 75px;
-          margin-bottom: 45px;
+          margin-left: $wbu-margin * 5.5;
+          margin-top: $wbu-margin * 3.75;
+          margin-bottom: $wbu-margin * 2.25;
           width: 80px;
           height: 80px;
           background: #010202;
@@ -190,15 +190,15 @@
           }
           .titre1 {
             overflow-wrap: break-word;
-            margin-right: 20px;
-            margin-bottom: 10px;
+            margin-right: $wbu-margin;
+            margin-bottom: $wbu-margin * 0.5;
             .dip1 {
               font-size: 17px;
               font-weight: bold;
             }
             .content {
               overflow-wrap: break-word;
-              margin: 5px 0;
+              margin: $wbu-margin * 0.25 0;
               max-height: 100px;
               height: 100px;
               overflow: hidden;
@@ -215,7 +215,7 @@
             }
             .content {
               overflow-wrap: break-word;
-              margin: 5px 0;
+              margin: $wbu-margin * 0.25 0;
               max-height: 100px;
               height: 100px;
               overflow: hidden;
@@ -270,7 +270,7 @@
                 padding: 10px;
                 font-size: 25px;
                 font-weight: bold;
-                margin-bottom: 20px;
+                margin-bottom: $wbu-margin;
               }
             }
             .contenu1 {
@@ -316,7 +316,7 @@
               }
             }
             .contenu4 {
-              margin: 5px 0;
+              margin: $wbu-margin * 0.25 0;
               .text4 {
                 overflow-wrap: break-word;
               }
@@ -344,7 +344,7 @@
               }
             }
             .contenu6 {
-              margin: 5px 0;
+              margin: $wbu-margin * 0.25 0;
               .text6 {
                 overflow-wrap: break-word;
               }
@@ -381,7 +381,7 @@
         height: 600px;
         max-height: 600px;
         img {
-          margin: 50px;
+          margin: $wbu-margin * 2.5;
           width: 350px;
           height: 350px;
           border-radius: 50%;
@@ -414,10 +414,10 @@
         }
       }
       .bloc5 {
-        margin-left: 41px;
-        margin-top: 52px;
+        margin-left: 2.05;
+        margin-top: $wbu-margin * 2.6;
         .svg1 {
-          margin-left: 120px;
+          margin-left: $wbu-margin * 6;
           width: 80px;
           height: 80px;
           background: #748deb;
@@ -441,7 +441,7 @@
         .profil {
           .text {
             overflow-wrap: break-word;
-            margin-top: 30px;
+            margin-top: $wbu-margin * 1.5;
             padding: 10px;
             font-size: 25px;
             font-weight: bold;
@@ -455,7 +455,7 @@
             }
             .content {
               overflow-wrap: break-word;
-              margin: 10px 0;
+              margin: $wbu-margin * 0.5 0;
               height: 58px;
               max-height: 58px;
               overflow: hidden;
@@ -467,13 +467,13 @@
             overflow-wrap: break-word;
             .post2 {
               overflow-wrap: break-word;
-              margin-top: 10px;
+              margin-top: $wbu-margin * 0.5;
               font-size: 17px;
               font-weight: bold;
             }
             .content {
               overflow-wrap: break-word;
-              margin: 10px 0;
+              margin: $wbu-margin * 0.5 0;
               height: 58px;
               max-height: 58px;
               overflow: hidden;
@@ -487,7 +487,7 @@
     .svg5 {
       position: relative;
       bottom: 278px;
-      margin-left: 20px;
+      margin-left: $wbu-margin;
       width: 80px;
       height: 80px;
       background: #ecde11d0;
@@ -540,7 +540,7 @@
           overflow: hidden;
           .text {
             overflow-wrap: break-word;
-            margin-top: 30px;
+            margin-top: $wbu-margin * 1.5;
             padding: 10px;
             font-size: 25px;
             font-weight: bold;
@@ -582,7 +582,7 @@
           overflow: hidden;
           .text {
             overflow-wrap: break-word;
-            margin-top: 30px;
+            margin-top: $wbu-margin * 1.5;
             padding: 10px;
             font-size: 25px;
             font-weight: bold;
@@ -593,7 +593,7 @@
               }
               h6 {
                 overflow-wrap: break-word;
-                margin-top: 10px;
+                margin-top: $wbu-margin * 0.5;
                 font-size: 17px;
                 font-weight: bold;
                 width: max-content;
@@ -604,7 +604,7 @@
               }
               h6 {
                 overflow-wrap: break-word;
-                margin-top: 10px;
+                margin-top: $wbu-margin * 0.5;
                 font-size: 17px;
                 font-weight: bold;
                 width: max-content;
@@ -615,7 +615,7 @@
               }
               h6 {
                 overflow-wrap: break-word;
-                margin-top: 10px;
+                margin-top: $wbu-margin * 0.5;
                 font-size: 17px;
                 font-weight: bold;
                 width: max-content;
@@ -629,7 +629,7 @@
           overflow: hidden;
           .text {
             overflow-wrap: break-word;
-            margin-top: 30px;
+            margin-top: $wbu-margin * 1.5;
             padding: 10px;
             font-size: 25px;
             font-weight: bold;
@@ -638,7 +638,7 @@
             .contenu1 {
               h6 {
                 overflow-wrap: break-word;
-                margin-top: 10px;
+                margin-top: $wbu-margin * 0.5;
                 font-size: 17px;
                 font-weight: bold;
               }
@@ -646,7 +646,7 @@
             .contenu2 {
               h6 {
                 overflow-wrap: break-word;
-                margin-top: 10px;
+                margin-top: $wbu-margin * 0.5;
                 font-size: 17px;
                 font-weight: bold;
               }
@@ -654,7 +654,7 @@
             .contenu3 {
               h6 {
                 overflow-wrap: break-word;
-                margin-top: 10px;
+                margin-top: $wbu-margin * 0.5;
                 font-size: 17px;
                 font-weight: bold;
               }
@@ -667,17 +667,17 @@
 }
 @media screen and (max-width: 1200px) {
   .cvFuturist {
-    padding: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding: $wbu-margin * 2.5;
+    margin-top: $wbu-margin * 2.5;
+    margin-bottom: $wbu-margin * 2.5;
     background-color: rgb(223 223 228);
     .cvFuturist-container {
       height: 1280px;
       .header {
         .bloc1 {
           .svg1 {
-            margin: 75px 0;
-            margin-bottom: 30px;
+            margin: $wbu-margin * 3.75 0;
+            margin-bottom: $wbu-margin * 1.5;
             width: 80px;
             position: relative;
             height: 80px;
@@ -711,7 +711,7 @@
           }
           .profil {
             .text {
-              margin-bottom: 10px;
+              margin-bottom: $wbu-margin * 0.5;
               font-size: 25px;
               font-weight: bold;
             }
@@ -737,11 +737,11 @@
             font-weight: bold;
           }
           .contenu1 {
-            margin: 30px;
+            margin: $wbu-margin * 1.5;
             .port1 {
               display: inline;
               .svg1 {
-                margin-right: 10px;
+                margin-right: $wbu-margin * 0.5;
               }
               .email {
                 overflow-wrap: break-word;
@@ -751,7 +751,7 @@
               display: inline;
               justify-content: center;
               .svg2 {
-                margin-right: 10px;
+                margin-right: $wbu-margin * 0.5;
               }
               .number {
                 overflow-wrap: break-word;
@@ -759,11 +759,11 @@
             }
           }
           .contenu2 {
-            margin: 30px;
+            margin: $wbu-margin * 1.5;
             .port3 {
               display: inline;
               .svg3 {
-                margin-right: 10px;
+                margin-right: $wbu-margin * 1.5;
               }
               .location {
                 overflow-wrap: break-word;
@@ -772,7 +772,7 @@
             .port4 {
               display: inline;
               .svg4 {
-                margin-right: 10px;
+                margin-right: $wbu-margin * 0.5;
               }
               .web {
                 overflow-wrap: break-word;
@@ -780,7 +780,7 @@
             }
           }
           .reseau {
-            margin: 30px;
+            margin: $wbu-margin * 1.5;
             justify-content: center;
             align-items: center;
             .insta {
@@ -793,7 +793,7 @@
                 0 3px 0 4px rgb(0 0 0 / 5%);
             }
             .twitter {
-              margin: 0px 30px;
+              margin: 0px $wbu-margin * 1.5;
               background: #5976e1;
               border-radius: 50%;
               display: flex;
@@ -815,9 +815,9 @@
         }
         .bloc3 {
           .svg1 {
-            margin-left: 110px;
-            margin-top: 75px;
-            margin-bottom: 45px;
+            margin-left: $wbu-margin * 5.5;
+            margin-top: $wbu-margin * 3.75;
+            margin-bottom: $wbu-margin * 2.25;
             width: 80px;
             height: 80px;
             background: #010202;
@@ -860,15 +860,15 @@
             }
             .titre1 {
               overflow-wrap: break-word;
-              margin-right: 20px;
-              margin-bottom: 10px;
+              margin-right: $wbu-margin;
+              margin-bottom: $wbu-margin * 0.5;
               .dip1 {
                 font-size: 17px;
                 font-weight: bold;
               }
               .content {
                 overflow-wrap: break-word;
-                margin: 10px 0;
+                margin: $wbu-margin * 0.5 0;
               }
               .date {
                 font-weight: bold;
@@ -882,7 +882,7 @@
               }
               .content {
                 overflow-wrap: break-word;
-                margin: 10px 0;
+                margin: $wbu-margin * 0.5 0;
               }
               .date {
                 font-weight: bold;
@@ -923,11 +923,11 @@
               padding: 10px;
               font-size: 25px;
               font-weight: bold;
-              margin-bottom: 20px;
+              margin-bottom: $wbu-margin;
             }
           }
           .contenu1 {
-            margin: 5px 0;
+            margin: $wbu-margin * 0.25 0;
             .text1 {
             }
             .bar1 {
@@ -940,7 +940,7 @@
             }
           }
           .contenu2 {
-            margin: 5px 0;
+            margin: $wbu-margin * 0.25 0;
             .text2 {
             }
             .bar2 {
@@ -953,7 +953,7 @@
             }
           }
           .contenu3 {
-            margin: 5px 0;
+            margin: $wbu-margin * 0.25 0;
             .text3 {
             }
             .bar3 {
@@ -966,7 +966,7 @@
             }
           }
           .contenu4 {
-            margin: 5px 0;
+            margin: $wbu-margin * 0.25 0;
             .text4 {
             }
             .bar4 {
@@ -979,7 +979,7 @@
             }
           }
           .contenu5 {
-            margin: 5px 0;
+            margin: $wbu-margin * 0.25 0;
             .text5 {
             }
             .bar5 {
@@ -992,7 +992,7 @@
             }
           }
           .contenu6 {
-            margin: 5px 0;
+            margin: $wbu-margin * 0.25 0;
             .text6 {
             }
             .bar6 {
@@ -1024,7 +1024,7 @@
           bottom: 280px;
           left: 25px;
           img {
-            margin: 50px;
+            margin: $wbu-margin * 2.5;
             width: 350px;
             height: 350px;
             border-radius: 50%;
@@ -1047,9 +1047,9 @@
         }
         .bloc5 {
           margin-left: 0px;
-          margin-top: 52px;
+          margin-top: $wbu-margin * 2.6;
           .svg1 {
-            margin-left: 120px;
+            margin-left: $wbu-margin * 6;
             width: 80px;
             height: 80px;
             background: #748deb;
@@ -1072,7 +1072,7 @@
           .profil {
             .text {
               overflow-wrap: break-word;
-              margin-top: 30px;
+              margin-top: $wbu-margin * 1.5;
               padding: 10px;
               font-size: 25px;
               font-weight: bold;
@@ -1086,7 +1086,7 @@
               }
               .content {
                 overflow-wrap: break-word;
-                margin: 10px 0;
+                margin: $wbu-margin * 0.5 0;
               }
               .date {
               }
@@ -1095,13 +1095,13 @@
               overflow-wrap: break-word;
               .post2 {
                 overflow-wrap: break-word;
-                margin-top: 10px;
+                margin-top: $wbu-margin * 0.5;
                 font-size: 17px;
                 font-weight: bold;
               }
               .content {
                 overflow-wrap: break-word;
-                margin: 10px 0;
+                margin: $wbu-margin * 0.5 0;
               }
               .date {
               }
@@ -1112,7 +1112,7 @@
       .svg5 {
         position: relative;
         bottom: 200px;
-        margin-left: 20px;
+        margin-left: $wbu-margin;
         width: 80px;
         height: 80px;
         background: #ecde11d0;
@@ -1162,7 +1162,7 @@
           .langue {
             .text {
               overflow-wrap: break-word;
-              margin-top: 30px;
+              margin-top: $wbu-margin * 1.5;
               padding: 10px;
               font-size: 25px;
               font-weight: bold;
@@ -1201,7 +1201,7 @@
           .passion {
             .text {
               overflow-wrap: break-word;
-              margin-top: 30px;
+              margin-top: $wbu-margin * 1.5;
               padding: 10px;
               font-size: 25px;
               font-weight: bold;
@@ -1212,7 +1212,7 @@
                 }
                 h6 {
                   overflow-wrap: break-word;
-                  margin-top: 10px;
+                  margin-top: $wbu-margin * 0.5;
                   font-size: 17px;
                   font-weight: bold;
                   width: max-content;
@@ -1223,7 +1223,7 @@
                 }
                 h6 {
                   overflow-wrap: break-word;
-                  margin-top: 10px;
+                  margin-top: $wbu-margin * 0.5;
                   font-size: 17px;
                   font-weight: bold;
                   width: max-content;
@@ -1234,7 +1234,7 @@
                 }
                 h6 {
                   overflow-wrap: break-word;
-                  margin-top: 10px;
+                  margin-top: $wbu-margin * 0.5;
                   font-size: 17px;
                   font-weight: bold;
                   width: max-content;
@@ -1245,7 +1245,7 @@
           .reference {
             .text {
               overflow-wrap: break-word;
-              margin-top: 30px;
+              margin-top: $wbu-margin * 1.5;
               padding: 10px;
               font-size: 25px;
               font-weight: bold;
@@ -1254,7 +1254,7 @@
               .contenu1 {
                 h6 {
                   overflow-wrap: break-word;
-                  margin-top: 10px;
+                  margin-top: $wbu-margin * 0.5;
                   font-size: 17px;
                   font-weight: bold;
                 }
@@ -1262,7 +1262,7 @@
               .contenu2 {
                 h6 {
                   overflow-wrap: break-word;
-                  margin-top: 10px;
+                  margin-top: $wbu-margin * 0.5;
                   font-size: 17px;
                   font-weight: bold;
                 }
@@ -1270,7 +1270,7 @@
               .contenu3 {
                 h6 {
                   overflow-wrap: break-word;
-                  margin-top: 10px;
+                  margin-top: $wbu-margin * 0.5;
                   font-size: 17px;
                   font-weight: bold;
                 }
