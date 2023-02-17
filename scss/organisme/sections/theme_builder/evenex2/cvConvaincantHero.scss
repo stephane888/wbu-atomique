@@ -13,7 +13,7 @@
             height: 250px;
             background-size: 100%;
             border-radius: 50%;
-            margin-top: 50px;
+            margin-top: $wbu-margin * 2.5;
             border: 3px solid rgba(0, 0, 0, 0.479);
           }
         }
@@ -21,11 +21,9 @@
           h1 {
           }
           h5 {
-            font-size: 30px;
             font-weight: bold;
           }
           h6 {
-            font-size: 22px;
             font-weight: bold;
           }
         }
@@ -36,7 +34,7 @@
           left: 498px;
           width: 80px;
           height: 100%;
-          border-top: 670px solid #d3cfcf;
+          border-top: $wbu-margin * 33.5 solid #d3cfcf;
           border-bottom: 0px solid #d3cfcf;
           transform: rotate(8deg);
         }
@@ -45,7 +43,7 @@
         width: auto;
         margin: 100px 0;
         padding-left: 0;
-        height: 402px;
+        height: $wbu-margin * 20.1;
         max-height: 402px;
         .desc {
           position: relative;
@@ -57,23 +55,20 @@
             right: 50px;
             text-align: center;
             color: white;
-            font-size: 40px;
             font-weight: 20px;
           }
         }
         .form1 {
-          padding-right: 105px;
-          margin-top: 30px;
-          padding-left: 75px;
+          padding-right: $wbu-margin * 5.25;
+          margin-top: $wbu-margin * 1.5;
+          padding-left: $wbu-margin * 3.75;
           height: 212px;
           max-height: 212px;
-          overflow: hidden h3 {
-            font-size: 25px;
+          overflow: hidden;
+          h3 {
             font-weight: bold;
           }
           p {
-            font-size: 20px;
-            font-size: 20px;
             height: 60px;
             max-height: 60px;
             overflow: hidden;
@@ -83,18 +78,15 @@
           }
         }
         .form2 {
-          padding-right: 116px;
-          padding-left: 55px;
-          margin-top: 30px;
+          padding-right: $wbu-margin * 5.8;
+          padding-left: $wbu-margin * 2.75;
+          margin-top: $wbu-margin * 1.5;
           height: 166px;
           max-height: 166px;
           h3 {
-            font-size: 25px;
             font-weight: bold;
           }
           p {
-            font-size: 20px;
-            font-size: 20px;
             height: 77px;
             max-height: 77px;
             overflow: hidden;
