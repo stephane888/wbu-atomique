@@ -1,56 +1,76 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
 .cvSectionExp {
-  //background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionExp/monfond.webp");
+  // background-image: url("/siteweb/AppVuejs/theme-builder/src/evenex2/cvSectionExp/monfond.webp");
   background-size: cover;
   .cvSectionExp-container {
-    padding: 50px 40px;
+    // padding: 50px 40px; //pas necessaire.
     .cvSectionExp-infos {
       .title {
-        font-size: 20px;
         font-weight: bold;
-        border-bottom: 2px solid black;
-        padding: 20px 0px;
-        font-size: 20px;
-        font-weight: bold;
+        border-bottom: 3px solid $wbu-color-primary;
+        margin-bottom: $wbu-margin * 1.5;
+        padding-bottom: $wbu-margin * 0.5;
       }
 
       .cvSectionExp-head {
-        .field--name-field-experiences {
-          display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        .cvSectionExp-head-item {
+          // display: ;
+          max-width: 33.333%;
+          width: 100%;
         }
-        .cvSectionExp-content1 {
-          border-left: 2px solid black;
-
-          h5 {
-            font-size: 20px;
-            font-weight: bold;
-            font-size: 17px;
-            font-weight: bold;
-            margin-left: 10px;
+        // @landry à quoi cela sert de reprendre cvSectionExp-content1, cvSectionExp-content2, cvSectionExp-content3 ... ?
+        .cvSectionExp-content {
+          margin-bottom: $wbu-margin;
+          .titre-poste {
+            font-weight: bolder;
+            color: $wbu-color-primary;
           }
           text1 {
             margin-left: 10px;
             margin-right: 10px;
-            min-height: 83px;
           }
           .bloc1 {
-            margin: 2px 0px;
-            background-color: rgb(204, 204, 212);
-            height: 70px;
-            //width: 140px;
+            background-color: $wbu-color-primary;
             text-align: center;
-            color: white;
+            color: color-yiq($wbu-color-primary);
             justify-content: center;
             align-items: center;
+            padding: $wbu-margin;
+            margin: $wbu-margin * 0.15;
+          }
+          ul {
+            padding-left: $wbu-margin;
+          }
+          .content-block {
+            padding: 0 $wbu-margin;
+            border-left: 1px solid $wbu-background;
+            padding-bottom: $wbu-margin * 0.1;
+          }
+          &:first-child {
+            .bloc1 {
+              //margin-right: 0;
+              margin-left: 0;
+            }
+          }
+          .contenu-date {
+            .date {
+              background-color: rgba($wbu-background, 0.8);
+              color: color-yiq($wbu-background);
+              padding: $wbu-margin $wbu-margin * 0.5;
+            }
+            border-right: 2px solid color-yiq($wbu-background);
           }
         }
         .cvSectionExp-content2 {
           border-left: 2px solid black;
+          // @landry on ne met pas de classe sur les balises.
           h5 {
-            font-size: 20px;
+            font-size: 20px; // @landry ???
             font-weight: bold;
-            font-size: 17px;
+            font-size: 17px; // @landry ???
             font-weight: bold;
             margin-left: 10px;
           }
@@ -88,7 +108,7 @@
             margin: 2px 0px;
             background-color: rgb(153, 153, 206);
             height: 70px;
-            //width: 304px;
+            // width: 304px;
             text-align: center;
             color: white;
             justify-content: center;
@@ -113,7 +133,7 @@
             margin: 2px 0px;
             background-color: rgb(125, 125, 211);
             height: 70px;
-            //width: 304px;
+            // width: 304px;
             text-align: center;
             color: white;
             justify-content: center;
