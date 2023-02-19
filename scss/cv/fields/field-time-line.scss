@@ -1,0 +1,65 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.field-time-line {
+  .left {
+    width: 100%;
+    @include media-min("DD") {
+      min-width: 250px;
+      width: auto;
+    }
+
+    margin-left: $wbu-margin;
+    margin-bottom: $wbu-margin * 0.5;
+    @include media-min("DD") {
+      margin-left: 0;
+    }
+  }
+  .right {
+    padding: 0 $wbu-margin;
+    position: relative;
+    width: 100%;
+    @include media-min("DD") {
+      padding-bottom: $wbu-margin * 2;
+      width: 75%;
+    }
+    &::before {
+      content: "";
+      left: $wbu-margin * 0.25;
+      @include media-min("DD") {
+        left: -$wbu-margin;
+      }
+      right: auto;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      background-color: #ccc;
+      position: absolute;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: $wbu-margin * 0.25 -$wbu-margin * 0.5;
+      @include media-min("DD") {
+        left: -$wbu-margin -$wbu-margin * 0.5;
+      }
+      right: auto;
+      bottom: auto;
+      height: $wbu-margin;
+      width: $wbu-margin;
+      background-color: $wbu-color-primary;
+      border-radius: 50%;
+    }
+  }
+  .address {
+    font-size: $wbu-h4-font-size;
+  }
+  .value,
+  .company {
+    font-size: $wbu-h3-font-size;
+    font-weight: bold;
+    margin-bottom: $wbu-margin * 0.5;
+  }
+  .company {
+    color: $wbu-color-primary;
+  }
+}

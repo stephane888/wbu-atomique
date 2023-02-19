@@ -6,27 +6,28 @@
   .hero {
     background-size: cover;
     display: flex;
+    justify-content: stretch;
+    align-items: stretch;
     .cv-section-profil-hero-container {
-      padding: $wbu-margin * 0.5 $wbu-margin * 2;
+      // @landry pouquoi on a deux cv-section-profil-hero-container et competence. ( ce sont les memes blocks ).
+
+      max-width: 50%;
+      width: 100%;
       .title {
         font-weight: bold;
-        border-bottom: 2px solid black;
-        width: 462px;
-        padding: $wbu-margin 0px;
+        border-bottom: 3px solid $wbu-color-primary;
         font-weight: bold;
-      }
-      .mytexte {
-        padding: $wbu-margin 0px;
+        margin-bottom: $wbu-margin;
       }
     }
     .competence {
-      padding: $wbu-margin * 0.5 $wbu-margin * 2;
+      max-width: 50%;
+      width: 100%;
       .subtitle {
         font-weight: bold;
-        border-bottom: 2px solid black;
-        width: 462px;
-        padding: $wbu-margin 0px;
+        border-bottom: 3px solid $wbu-color-primary;
         font-weight: bold;
+        margin-bottom: $wbu-margin;
       }
       .progress {
         height: 20px;

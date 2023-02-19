@@ -1,0 +1,15 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.field-form-date {
+  margin: $wbu-margin * 0.5 0;
+  .date {
+    background-color: $wbu-background;
+    color: color-yiq($wbu-background);
+    padding: $wbu-margin * 0.5;
+    clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+  }
+  .right {
+    .value {
+      color: $wbu-color-primary;
+    }
+  }
+}
