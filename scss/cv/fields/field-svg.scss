@@ -1,9 +1,9 @@
 @use "../../wbu-ressources-clean.scss" as *;
 
 .field-svg {
-  margin-top: 10px;
+  margin-top: $wbu-margin * 0.5;
   .svg {
-    margin-right: 10px;
+    margin-right: $wbu-margin * 0.5;
   }
   .text {
   }
