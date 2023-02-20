@@ -1,0 +1,36 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.document-parent {
+  .first-presentation {
+    .photo {
+      img {
+        width: 250px;
+        height: 250px;
+        background-size: 100%;
+        border-radius: 50%;
+        margin-top: $wbu-margin * 2.5;
+        border: 3px solid $wbu-background;
+      }
+    }
+    .presentation-name {
+    }
+    .presentation-profession {
+    }
+    .presentation-status {
+    }
+    .presentation-description {
+    }
+    .coordonnées {
+      margin-top: 40px;
+      .infos {
+        margin-top: 10px;
+        .svg {
+          margin-right: 10px;
+        }
+        .text {
+        }
+      }
+    }
+  }
+}
