@@ -1,0 +1,15 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.title {
+  background-color: #2c303a;
+}
+.division {
+  padding: $wbu-margin $wbu-margin * 2;
+  .subtitle {
+  }
+  .description {
+  }
+  .time {
+  }
+}
