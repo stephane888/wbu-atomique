@@ -4,6 +4,8 @@
 .document-parent {
   .element-modif {
     .first-presentation {
+      margin-right: $wbu-margin * 2;
+      width: calc(40%);
       .photo {
         img {
           width: 250px;
@@ -14,15 +16,12 @@
           border: 3px solid $wbu-background;
         }
       }
-      .presentation-name {
-      }
-      .presentation-profession {
-      }
-      .presentation-status {
-      }
       .presentation-description {
         margin: $wbu-margin * 2 0;
       }
     }
+  }
+  .field-stage-region {
+    margin-left: $wbu-margin * 2;
   }
 }
