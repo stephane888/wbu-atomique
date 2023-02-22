@@ -1,0 +1,20 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.section-competences {
+  width: 60%;
+  .skill {
+    margin: 10px 0;
+    margin-left: 8rem;
+    padding-right: 40px;
+    .text {
+      width: 30%;
+    }
+    .bar {
+      width: 70%;
+      .niveau {
+        background-color: rgba(23, 23, 29, 0.897);
+      }
+    }
+  }
+}

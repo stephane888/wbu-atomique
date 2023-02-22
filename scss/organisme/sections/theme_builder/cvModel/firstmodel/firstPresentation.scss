@@ -2,10 +2,11 @@
 @use "../../../../../variables" as *;
 
 .document-parent {
+  position: relative;
   .element-modif {
     .first-presentation {
       margin-right: $wbu-margin * 2;
-      width: calc(40%);
+      width: 40%;
       .photo {
         img {
           width: 250px;

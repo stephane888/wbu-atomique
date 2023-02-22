@@ -5,9 +5,8 @@
   &::before {
     content: "";
     position: absolute;
-    left: 46%;
-    right: 52%;
-    width: 60px;
+    left: calc(40% - 30px);
+    width: 80px;
     height: 100%;
     background-color: #737578;
     opacity: 0.75;
