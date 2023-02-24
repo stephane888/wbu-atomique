@@ -1,0 +1,20 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+.section-language {
+  padding-bottom: $wbu-margin * 2;
+  padding-top: $wbu-margin;
+  margin-right: $wbu-margin * 2;
+  .field-skill-region {
+    margin: 0;
+    padding: 0;
+    padding-right: $wbu-margin * 2;
+    margin-bottom: $wbu-margin;
+    .progress {
+      width: auto;
+      margin-top: 5px;
+    }
+    .text {
+      width: 100%;
+    }
+  }
+}

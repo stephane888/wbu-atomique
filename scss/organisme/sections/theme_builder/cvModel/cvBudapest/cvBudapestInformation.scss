@@ -1,0 +1,19 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+.section-presentaion {
+  padding: $wbu-margin * 2.5 0;
+  .information {
+    width: 70%;
+  }
+  .image {
+    width: 30%;
+    img {
+      width: 150px;
+      height: 150px;
+      background-size: 100%;
+      border-radius: 50%;
+      border: $wbu-background;
+      margin-top: 0;
+    }
+  }
+}
