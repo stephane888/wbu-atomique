@@ -9,7 +9,7 @@
     svg {
       fill: color-yiq($wbu-color-primary);
       width: $wbu-margin;
-      display: flex;
+      display: inline-block;
     }
   }
   .text {

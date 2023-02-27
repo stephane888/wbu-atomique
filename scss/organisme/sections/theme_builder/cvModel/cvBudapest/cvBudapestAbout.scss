@@ -1,0 +1,6 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+.section-about {
+  padding-bottom: $wbu-margin * 2;
+  padding-top: $wbu-margin;
+}

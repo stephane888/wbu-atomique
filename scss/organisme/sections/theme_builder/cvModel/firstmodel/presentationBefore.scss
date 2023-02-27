@@ -1,0 +1,14 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.document-parent {
+  &::before {
+    content: "";
+    position: absolute;
+    left: calc(40% + 50px);
+    width: 80px;
+    height: 100%;
+    background-color: #737578;
+    opacity: 0.75;
+  }
+}

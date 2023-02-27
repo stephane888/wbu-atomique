@@ -2,24 +2,27 @@
 @use "../../../../../variables" as *;
 
 .document-parent {
-  .first-presentation {
-    .photo {
-      img {
-        width: 250px;
-        height: 250px;
-        background-size: 100%;
-        border-radius: 50%;
-        margin-top: $wbu-margin * 2.5;
-        border: 3px solid $wbu-background;
+  position: relative;
+  .element-modif {
+    .first-presentation {
+      margin-right: $wbu-margin * 2;
+      width: 40%;
+      .photo {
+        img {
+          width: 250px;
+          height: 250px;
+          background-size: 100%;
+          border-radius: 50%;
+          margin-top: $wbu-margin * 2.5;
+          border: 3px solid $wbu-background;
+        }
+      }
+      .presentation-description {
+        margin: $wbu-margin * 2 0;
       }
     }
-    .presentation-name {
-    }
-    .presentation-profession {
-    }
-    .presentation-status {
-    }
-    .presentation-description {
-    }
+  }
+  .field-stage-region {
+    margin-left: $wbu-margin * 2;
   }
 }

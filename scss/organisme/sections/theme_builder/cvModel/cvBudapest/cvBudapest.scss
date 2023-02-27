@@ -1,0 +1,18 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.document-secondaire {
+  .sous-document-primary {
+    width: 30%;
+  }
+
+  color: #a19c9c;
+  a {
+    color: #a19c9c;
+    text-decoration: underline;
+  }
+  .sous-document-secondary {
+    margin-left: $wbu-margin * 2;
+    width: 70%;
+  }
+}

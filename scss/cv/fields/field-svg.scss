@@ -2,9 +2,11 @@
 
 .field-svg {
   margin-top: $wbu-margin * 0.5;
-  .svg {
-    margin-right: $wbu-margin * 0.5;
-  }
-  .text {
+  .icon {
+    margin-right: $wbu-margin;
+    svg {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
