@@ -1,0 +1,49 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.presentation {
+  background-color: rgb(70, 70, 104);
+  .post {
+    position: relative;
+    letter-spacing: 5px;
+    color: goldenrod;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 80px;
+      height: 100%;
+      width: 1px;
+      background: goldenrod;
+      transform: rotate(90deg);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 800px;
+      height: 100%;
+      width: 1px;
+      background: goldenrod;
+      transform: rotate(90deg);
+    }
+  }
+  .initial {
+    color: goldenrod;
+  }
+  .coordonnées {
+    .infos {
+      margin-bottom: $wbu-margin * 2;
+      margin-top: $wbu-margin;
+      .icon {
+        margin: $wbu-margin * 0.5 0;
+        svg {
+          fill: goldenrod;
+        }
+      }
+      .text {
+        color: white;
+      }
+    }
+  }
+}

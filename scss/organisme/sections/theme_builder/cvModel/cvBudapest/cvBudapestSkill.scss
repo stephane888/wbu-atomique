@@ -7,8 +7,9 @@
 }
 .skill {
   padding: 0;
+  margin-left: -$wbu-margin * 1.5;
   .comp {
-    padding: 0 $wbu-margin;
+    padding: 0 $wbu-margin * 1.5;
     .progress {
       width: auto;
       margin-top: $wbu-margin * 0.25;
