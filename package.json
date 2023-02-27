@@ -50,6 +50,7 @@
     "@popperjs/core": "^2.11.6",
     "@splidejs/splide": "^2.4.21",
     "bootstrap": "^4.6.0",
+    "chart.js": "^4.2.1",
     "core-js": "^3.26.0",
     "glider-js": "^1.7.7",
     "html2pdf.js": "^0.10.1",
