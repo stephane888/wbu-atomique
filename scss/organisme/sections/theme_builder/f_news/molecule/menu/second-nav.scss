@@ -78,7 +78,7 @@
       }
     }
     @include media-max(DD) {
-      font-size: calc(2rem + 2vw);
+      //font-size: calc(2rem + 2vw);
       padding-left: 1rem;
     }
     &:hover {
@@ -88,7 +88,7 @@
     }
   }
   ul li {
-    font-size: $wbu-default-font-size;
+    //font-size: $wbu-default-font-size;
   }
   .nav-item {
     a {

@@ -25,28 +25,19 @@
     color: white;
     background: transparent;
     border-color: #fff;
-    font-size: $wbu-default-font-size;
     a {
       color: white;
     }
   }
 
   .titre {
-    font-size: $wbu-h1-font-size;
     line-height: 1.2;
     color: #fff;
-    @include media-min("DD") {
-      font-size: $wbu-h1-font-size * 2;
-    }
     margin-bottom: $wbu-margin * 2;
   }
 
   .sub_title {
-    font-size: $wbu-title-font-size;
     color: #fff;
-    @include media-min("DD") {
-      font-size: $wbu-h3-font-size;
-    }
   }
 
   .row {
