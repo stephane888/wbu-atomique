@@ -4,6 +4,7 @@
 .document-secondaire {
   .sous-document-primary {
     width: 30%;
+    min-width: 30%;
   }
 
   color: #a19c9c;
@@ -14,5 +15,6 @@
   .sous-document-secondary {
     margin-left: $wbu-margin * 2;
     width: 70%;
+    min-width: 70%;
   }
 }
