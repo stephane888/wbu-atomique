@@ -2,10 +2,13 @@
 @use "../../../../../variables" as *;
 
 .presentation {
-  background-color: rgb(70, 70, 104);
+  background-color: rgb(44, 44, 63);
+  .name {
+    letter-spacing: $wbu-margin * 0.25;
+  }
   .post {
     position: relative;
-    letter-spacing: 5px;
+    letter-spacing: $wbu-margin * 0.25;
     color: goldenrod;
     &::before {
       content: "";

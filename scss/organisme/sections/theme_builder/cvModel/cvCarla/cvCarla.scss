@@ -1,2 +1,13 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
+
+.section-image {
+  margin: 20px;
+}
+.sous-document-primaire {
+  width: 40%;
+  background-color: rgb(222, 226, 231);
+}
+.sous-document-secondaire {
+  width: 60%;
+}

@@ -1,22 +1,27 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
-
 .section-skill {
   padding-bottom: $wbu-margin * 2;
   padding-top: $wbu-margin;
+  margin-right: $wbu-margin * 2;
+  margin-left: $wbu-margin * 2;
+  .title {
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    letter-spacing: $wbu-margin * 0.25;
+  }
 }
 .skill {
   padding: 0;
   margin-left: -$wbu-margin * 1.5;
   .comp {
     padding: 0 $wbu-margin * 1.5;
-    margin-left: 0 !important;
-    :nth-child(1) {
-      margin: 0 !important;
-    }
     .progress {
       width: auto;
       margin-top: $wbu-margin * 0.25;
+      .niveau {
+        background-color: goldenrod;
+      }
     }
     .text {
       width: 100%;

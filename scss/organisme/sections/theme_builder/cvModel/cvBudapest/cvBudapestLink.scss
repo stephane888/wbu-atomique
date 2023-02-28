@@ -4,10 +4,15 @@
   padding-bottom: $wbu-margin * 2;
   padding-top: $wbu-margin;
   margin-right: $wbu-margin * 2;
-  .lien {
-    margin-bottom: $wbu-margin;
-    a {
-      word-break: break-word;
+  .link-group {
+    :nth-last-child(1) {
+      margin-bottom: 0 !important;
+    }
+    .lien {
+      margin-bottom: $wbu-margin;
+      a {
+        word-break: break-word;
+      }
     }
   }
 }

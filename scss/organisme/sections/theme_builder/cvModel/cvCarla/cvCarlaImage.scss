@@ -1,0 +1,10 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+img {
+  width: 150px;
+  height: 150px;
+  background-size: 100%;
+  border-radius: 50%;
+  border: $wbu-background;
+  margin-top: 0;
+}

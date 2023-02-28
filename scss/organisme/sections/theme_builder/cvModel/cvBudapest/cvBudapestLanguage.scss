@@ -4,10 +4,16 @@
   padding-bottom: $wbu-margin * 2;
   padding-top: $wbu-margin;
   margin-right: $wbu-margin * 2;
-  .language {
-    margin: 0;
-    padding: 0;
-    margin-bottom: $wbu-margin;
+  .language-group {
+    :nth-last-child(1) {
+      margin-bottom: 0 !important;
+    }
+    .language {
+      margin: 0;
+      padding: 0;
+      margin-bottom: $wbu-margin;
+    }
+
     .progress {
       width: auto;
       margin-top: 5px;

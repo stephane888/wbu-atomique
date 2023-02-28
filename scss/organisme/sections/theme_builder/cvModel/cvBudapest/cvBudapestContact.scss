@@ -4,7 +4,10 @@
   padding-bottom: $wbu-margin * 2;
   padding-top: $wbu-margin;
   margin-right: $wbu-margin * 2;
-  .coordonnées {
+  .contact-details {
+    :nth-last-child(1) {
+      border: none !important;
+    }
     .field-svg {
       margin-top: $wbu-margin * 0.05;
       border-bottom: $wbu-margin * 0.05 solid #dddddd;
