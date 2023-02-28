@@ -2,7 +2,6 @@
 @use "../../../../../variables" as *;
 .section-experience {
   padding-bottom: $wbu-margin * 2;
-  padding-top: $wbu-margin;
   margin-right: $wbu-margin * 2;
   margin-left: $wbu-margin * 2;
   .title {
@@ -10,14 +9,22 @@
     margin-bottom: 3rem;
     letter-spacing: $wbu-margin * 0.25;
   }
-  .experience {
-    margin-bottom: $wbu-margin;
-    .time {
-      color: goldenrod;
-      letter-spacing: $wbu-margin * 0.1;
+  .experience-group {
+    :nth-last-child(1) {
+      margin: 0 !important;
     }
-    .job {
-      letter-spacing: $wbu-margin * 0.25;
+    .experience-work {
+      :nth-child(1) {
+        margin: 0 !important;
+      }
+      margin-bottom: $wbu-margin;
+      .time {
+        color: goldenrod;
+        letter-spacing: $wbu-margin * 0.1;
+      }
+      .job {
+        letter-spacing: $wbu-margin * 0.25;
+      }
     }
   }
 }
