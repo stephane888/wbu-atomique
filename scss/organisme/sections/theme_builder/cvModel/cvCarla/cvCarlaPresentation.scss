@@ -2,7 +2,7 @@
 @use "../../../../../variables" as *;
 
 .presentation {
-  background-color: rgb(44, 44, 63);
+  background-color: $wbu-background;
   .name {
     letter-spacing: $wbu-margin * 0.25;
   }
@@ -11,21 +11,21 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     letter-spacing: $wbu-margin * 0.25;
-    color: goldenrod;
+    color: $wbu-color-primary;
     &:nth-child(1) {
-      color: antiquewhite !important;
+      color: lighten($wbu-color-primary, 50%);
     }
     &::after,
     &::before {
       content: "";
       height: 2px;
-      background-color: goldenrod;
+      background-color: $wbu-color-primary;
       display: block;
       margin: 0 $wbu-margin * 1.25;
     }
   }
   .initial {
-    color: goldenrod;
+    color: $wbu-color-primary;
     letter-spacing: $wbu-margin * 0.25;
   }
   .coordonnées {
@@ -36,7 +36,7 @@
         margin: $wbu-margin * 0.5 0;
         svg {
           :nth-child(1) {
-            fill: goldenrod;
+            fill: $wbu-color-primary;
           }
         }
       }

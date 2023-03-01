@@ -6,7 +6,7 @@
 }
 .sous-document-primaire {
   width: 40%;
-  background-color: rgb(222, 226, 231);
+  background-color: lighten($wbu-background, 80%);
 }
 .sous-document-secondaire {
   width: 60%;
