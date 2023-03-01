@@ -9,19 +9,27 @@
     margin-bottom: $wbu-margin * 1.5;
     letter-spacing: $wbu-margin * 0.25;
   }
-  .language {
-    margin: 0;
-    padding: 0;
-    margin-bottom: $wbu-margin;
-    .progress {
-      width: auto;
-      margin-top: 5px;
-      .niveau {
-        background-color: goldenrod;
-      }
+  .language-group {
+    :nth-last-child(1) {
+      margin: 0 !important;
     }
-    .text {
-      width: 100%;
+    .language {
+      margin: 0;
+      padding: 0;
+      margin-bottom: $wbu-margin;
+      :nth-child(1) {
+        margin: 0 !important;
+      }
+      .progress {
+        width: auto;
+        margin-top: 5px;
+        .niveau {
+          background-color: goldenrod;
+        }
+      }
+      .text {
+        width: 100%;
+      }
     }
   }
 }

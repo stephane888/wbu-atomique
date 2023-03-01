@@ -7,32 +7,26 @@
     letter-spacing: $wbu-margin * 0.25;
   }
   .post {
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     letter-spacing: $wbu-margin * 0.25;
     color: goldenrod;
+    &:nth-child(1) {
+      color: antiquewhite !important;
+    }
+    &::after,
     &::before {
       content: "";
-      position: absolute;
-      top: 0px;
-      left: 80px;
-      height: 100%;
-      width: 1px;
-      background: goldenrod;
-      transform: rotate(90deg);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 800px;
-      height: 100%;
-      width: 1px;
-      background: goldenrod;
-      transform: rotate(90deg);
+      height: 2px;
+      background-color: goldenrod;
+      display: block;
+      margin: 0 $wbu-margin * 1.25;
     }
   }
   .initial {
     color: goldenrod;
+    letter-spacing: $wbu-margin * 0.25;
   }
   .coordonnées {
     .infos {
@@ -41,7 +35,9 @@
       .icon {
         margin: $wbu-margin * 0.5 0;
         svg {
-          fill: goldenrod;
+          :nth-child(1) {
+            fill: goldenrod;
+          }
         }
       }
       .text {
