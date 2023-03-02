@@ -1,0 +1,144 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.section-hero {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  height: 100%;
+  background-image: url(https://demo.xpeedstudio.com/evenex/conference/wp-content/uploads/sites/2/2020/02/conference-home-banner-bg.jpg),
+    url(https://demo.xpeedstudio.com/evenex/conference/wp-content/uploads/sites/2/2020/02/boston-text.png);
+
+  color: white;
+  .hero-container {
+    height: 100vh;
+    padding: $wbu-margin * 3 0;
+    background-color: rgb(23 32 112/ 80%);
+    transition: background-color 0.3s, border-radius 0.3s, opacity 0.3s;
+    top: 0;
+    left: 0;
+
+    .elementor-image {
+      position: absolute;
+      img {
+        width: 100%;
+      }
+    }
+    .sous-section-primaire {
+      * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .location {
+        svg {
+          width: 25px;
+          height: 25px;
+          fill: white;
+        }
+        .place {
+          display: flex;
+          margin: 0;
+        }
+      }
+      .subtitle {
+        margin: 0;
+      }
+      .title {
+        line-height: 1;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 2px #fff;
+        margin: 0;
+        margin-bottom: 14px;
+      }
+      .details {
+        margin-bottom: 50px;
+      }
+      .date {
+        margin: 0px 0px 110px 0px;
+      }
+    }
+    .sous-section-secondaire {
+      * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button {
+        margin-bottom: 55px;
+        .lien {
+          padding: 19px 34px 20px 34px;
+          font-family: "Rubik", Sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          color: #ffffff;
+          background-color: transparent;
+          background: linear-gradient(90deg, #f94843 0%, #ff7a49 100%);
+          border-style: none;
+          border-radius: 5px 5px 5px 5px;
+          box-shadow: 0px 15px 25px 0px rgb(249 71 67 / 30%);
+          transition-property: background;
+          transition-duration: 0.3s;
+          transition-timing-function: ease;
+          transition-delay: 0;
+
+          &:hover {
+            background-position: 100px;
+            text-decoration: none;
+          }
+          h6 {
+            margin: 0;
+          }
+          svg {
+            width: 20px;
+            height: 20px;
+            margin-left: 12px;
+            fill: white;
+          }
+        }
+      }
+      .mouse {
+        a {
+          svg {
+            &:hover {
+              background-color: #0350d2;
+            }
+          }
+        }
+      }
+      .arrow {
+        animation: float 6s ease-in infinite;
+        @keyframes float {
+          0% {
+            transform: translatey(0px);
+          }
+          50% {
+            transform: translatey(10px);
+          }
+          100% {
+            transform: translatey(0px);
+          }
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: white;
+        }
+      }
+    }
+
+    .second-image {
+      display: flex;
+      position: relative;
+      justify-content: flex-start;
+      top: -240px;
+    }
+    .first-image {
+      display: block;
+      position: absolute;
+      right: 8%;
+      top: 0px;
+    }
+  }
+}
