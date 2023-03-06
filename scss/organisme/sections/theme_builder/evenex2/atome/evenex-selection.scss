@@ -29,7 +29,7 @@
     font-weight: 600;
     color: white;
     position: relative;
-    background-color: darken($wbu-color-secondary, 10);
+    background-color: darken($wbu-color-primary, 10);
     border: none;
     padding: 2.75rem 0.625rem;
     position: relative;
@@ -75,12 +75,12 @@
     &.active {
       position: relative;
 
-      background-color: $wbu-color-primary;
+      background-color: $wbu-color-secondary;
       transition: padding ease-in 0.3s;
       z-index: 2;
       &::before {
         opacity: 1;
-        color: $wbu-color-primary;
+        color: $wbu-color-secondary;
       }
     }
     @include media-min(DD) {

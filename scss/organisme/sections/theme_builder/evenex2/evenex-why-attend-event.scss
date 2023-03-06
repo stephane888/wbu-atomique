@@ -26,7 +26,7 @@
 
     .col-md-4:nth-child(even) {
         .evenex-reason {
-            background-color: rgb(12, 18, 200);
+            background-color: $wbu-color-primary;
 
             &__title {
                 color: white;
