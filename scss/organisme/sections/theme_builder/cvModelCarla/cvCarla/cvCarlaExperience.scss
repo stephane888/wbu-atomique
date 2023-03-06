@@ -5,8 +5,8 @@
   margin-right: $wbu-margin * 2;
   margin-left: $wbu-margin * 2;
   .title {
-    padding: 1rem 0;
-    margin-bottom: 3rem;
+    padding: $wbu-margin * 0.5 0;
+    margin-bottom: $wbu-margin * 1.5;
     letter-spacing: $wbu-margin * 0.25;
   }
   .experience-group {
@@ -19,7 +19,7 @@
       }
       margin-bottom: $wbu-margin;
       .time {
-        color: goldenrod;
+        color: $wbu-color-primary;
         letter-spacing: $wbu-margin * 0.1;
       }
       .job {

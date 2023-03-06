@@ -10,9 +10,9 @@
     }
     .field-svg {
       margin-top: $wbu-margin * 0.05;
-      border-bottom: $wbu-margin * 0.05 solid #dddddd;
+      border-bottom: $wbu-margin * 0.05 solid $wbu-color-thirdly;
       .icon {
-        background-color: black;
+        background-color: $wbu-color-secondary;
         width: 30px;
         height: 30px;
         display: flex;
@@ -23,7 +23,7 @@
           width: 15px;
         }
         .text {
-          color: #dddddd;
+          color: $wbu-color-thirdly;
           word-break: break-word;
         }
       }

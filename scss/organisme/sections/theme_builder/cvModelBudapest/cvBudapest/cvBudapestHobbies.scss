@@ -10,7 +10,7 @@
       width: 30%;
       margin-top: $wbu-margin * 0.05;
       .icon {
-        border: 1px solid #dddddd;
+        border: 1px solid $wbu-color-thirdly;
         background-color: white;
         width: 30px;
         height: 30px;
@@ -22,7 +22,7 @@
           width: 15px;
         }
         .text {
-          color: #dddddd;
+          color: $wbu-color-thirdly;
           word-break: break-word;
         }
       }
