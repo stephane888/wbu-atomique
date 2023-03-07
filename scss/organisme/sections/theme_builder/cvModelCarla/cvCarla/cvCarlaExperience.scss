@@ -1,6 +1,6 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
-.section-education {
+.section-experience {
   padding-bottom: $wbu-margin * 2;
   margin-right: $wbu-margin * 2;
   margin-left: $wbu-margin * 2;
@@ -9,17 +9,22 @@
     margin-bottom: $wbu-margin * 1.5;
     letter-spacing: $wbu-margin * 0.25;
   }
-  .experience-education {
-    :nth-child(1) {
+  .experience-group {
+    :nth-last-child(1) {
       margin: 0 !important;
     }
-    margin-top: $wbu-margin;
-    .time {
-      color: goldenrod;
-      letter-spacing: $wbu-margin * 0.1;
-    }
-    .school {
-      letter-spacing: $wbu-margin * 0.25;
+    .experience-work {
+      :nth-child(1) {
+        margin: 0 !important;
+      }
+      margin-bottom: $wbu-margin;
+      .time {
+        color: $wbu-color-primary;
+        letter-spacing: $wbu-margin * 0.1;
+      }
+      .job {
+        letter-spacing: $wbu-margin * 0.25;
+      }
     }
   }
 }

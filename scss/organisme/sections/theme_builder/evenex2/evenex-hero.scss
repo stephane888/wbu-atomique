@@ -26,6 +26,7 @@
       }
     }
     .sous-section-primaire {
+      margin-top: $wbu-margin * 4;
       * {
         display: flex;
         justify-content: center;
@@ -50,13 +51,13 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 2px #fff;
         margin: 0;
-        margin-bottom: 14px;
+        margin-bottom: $wbu-margin * 0.7;
       }
       .details {
-        margin-bottom: 50px;
+        margin-bottom: $wbu-margin * 2.5;
       }
       .date {
-        margin: 0px 0px 110px 0px;
+        margin: 0px 0px $wbu-margin * 2.5 0px;
       }
     }
     .sous-section-secondaire {
@@ -66,25 +67,24 @@
         align-items: center;
       }
       .button {
-        margin-bottom: 55px;
+        margin-bottom: $wbu-margin * 2.75;
         .lien {
-          padding: 19px 34px 20px 34px;
+          padding: $wbu-margin $wbu-margin * 1.7 $wbu-margin $wbu-margin * 1.7;
           font-family: "Rubik", Sans-serif;
-          font-size: 16px;
+
           font-weight: 500;
           color: #ffffff;
           background-color: transparent;
-          background: linear-gradient(90deg, #f94843 0%, #ff7a49 100%);
+          background-color: rgb(237 32 112/ 80%);
           border-style: none;
           border-radius: 5px 5px 5px 5px;
           box-shadow: 0px 15px 25px 0px rgb(249 71 67 / 30%);
-          transition-property: background;
-          transition-duration: 0.3s;
-          transition-timing-function: ease;
-          transition-delay: 0;
+          position: relative;
+
+          transition: all 0.2s;
 
           &:hover {
-            background-position: 100px;
+            background-color: pink;
             text-decoration: none;
           }
           h6 {
@@ -93,7 +93,7 @@
           svg {
             width: 20px;
             height: 20px;
-            margin-left: 12px;
+            margin-left: $wbu-margin * 0.6;
             fill: white;
           }
         }
@@ -108,7 +108,7 @@
         }
       }
       .arrow {
-        animation: float 6s ease-in infinite;
+        animation: float 3s ease-in infinite;
         @keyframes float {
           0% {
             transform: translatey(0px);
@@ -129,10 +129,11 @@
     }
 
     .second-image {
+      width: $wbu-margin * 15;
       display: flex;
       position: relative;
       justify-content: flex-start;
-      top: -240px;
+      top: -$wbu-margin * 12;
     }
     .first-image {
       display: block;
