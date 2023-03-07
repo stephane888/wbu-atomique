@@ -27,9 +27,9 @@
 
   .title {
     font-size: $wbu-titre-big-md;
-    @include media-min("DD") {
+    /*@include media-min("DD") {
       font-size: $wbu-titre-biggest;
-    }
+    }*/
     line-height: 100%;
     margin-bottom: $space_bottom * 0.3;
     @include media-min("DD") {
@@ -45,6 +45,7 @@
 
   .content-image {
     min-height: 300px;
+    padding-top: $space_bottom;
     position: relative;
     z-index: 0;
     @include media-min("DD") {
