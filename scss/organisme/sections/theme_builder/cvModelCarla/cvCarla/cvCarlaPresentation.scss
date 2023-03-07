@@ -1,0 +1,48 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.presentation {
+  background-color: $wbu-background;
+  .name {
+    letter-spacing: $wbu-margin * 0.25;
+  }
+  .post {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    letter-spacing: $wbu-margin * 0.25;
+    color: $wbu-color-primary;
+    &:nth-child(1) {
+      color: lighten($wbu-color-primary, 50%);
+    }
+    &::after,
+    &::before {
+      content: "";
+      height: 2px;
+      background-color: $wbu-color-primary;
+      display: block;
+      margin: 0 $wbu-margin * 1.25;
+    }
+  }
+  .initial {
+    color: $wbu-color-primary;
+    letter-spacing: $wbu-margin * 0.25;
+  }
+  .coordonnées {
+    .infos {
+      margin-bottom: $wbu-margin * 2;
+      margin-top: $wbu-margin;
+      .icon {
+        margin: $wbu-margin * 0.5 0;
+        svg {
+          :nth-child(1) {
+            fill: $wbu-color-primary;
+          }
+        }
+      }
+      .text {
+        color: white;
+      }
+    }
+  }
+}

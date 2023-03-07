@@ -7,8 +7,9 @@
     @include media-min(DD) {
         margin-top: 50px;
     }
+
     &__tag {
-        color: #FF4070;
+        color: $wbu-color-secondary;
         font-family: "Poppins", Sans-serif;
         font-size: 16px;
         font-weight: 500;
@@ -30,6 +31,10 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 26px;
+
+        @include media-min(MD) {
+            margin-right: 21px;
+        }
     }
 
     &__subtitle {
@@ -93,6 +98,7 @@
         img {
             max-width: 100%;
             height: auto;
+
             @include media-min(MD) {
                 //width: 80%;
             }
@@ -102,11 +108,12 @@
                 height: 70%;
             }
         }
+
         @include media-min(DD) {
             display: flex;
             justify-content: end;
         }
-        
+
     }
 
     &__imageone {
@@ -170,6 +177,7 @@
                 height: 2.1rem;
                 position: relative;
                 fill: white;
+
                 &::after {
                     content: " ";
                     position: absolute;

@@ -80,7 +80,7 @@
         font-family: rubik, Sans-serif;
         font-size: 16px;
         font-weight: 500;
-        background-color: $wbu-color-primary;
+        background-color: $wbu-color-secondary;
         border-style: none;
         border-radius: 5px 5px 5px 5px;
         box-shadow: 0 15px 25px 0 rgb(249 71 67 / 30%);
@@ -90,7 +90,7 @@
         transition: all 0.4s ease;
 
         &:hover {
-            background-color: darken($color: $wbu-color-primary, $amount: 25);
+            background-color: darken($color: $wbu-color-secondary, $amount: 25);
         }
 
         svg {

@@ -1,28 +1,29 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
-@use "../../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../../variables" as *;
-.section-hobbies {
+.section-contact {
   padding-bottom: $wbu-margin * 2;
   padding-top: $wbu-margin;
-  .coordonnées {
+  margin-right: $wbu-margin * 2;
+  .contact-details {
+    :nth-last-child(1) {
+      border: none !important;
+    }
     .field-svg {
-      width: 30%;
       margin-top: $wbu-margin * 0.05;
+      border-bottom: $wbu-margin * 0.05 solid $wbu-color-thirdly;
       .icon {
-        border: 1px solid #dddddd;
-        background-color: white;
+        background-color: $wbu-color-secondary;
         width: 30px;
         height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: $wbu-margin * 0.5;
         svg {
+          fill: white;
           width: 15px;
         }
         .text {
-          color: #dddddd;
+          color: $wbu-color-thirdly;
           word-break: break-word;
         }
       }

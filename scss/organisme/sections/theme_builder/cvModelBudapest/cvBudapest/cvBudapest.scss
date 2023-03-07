@@ -2,14 +2,15 @@
 @use "../../../../../variables" as *;
 
 .document-secondaire {
+  color: $wbu-color-primary;
   .sous-document-primary {
     width: 30%;
     min-width: 30%;
   }
 
-  color: #a19c9c;
+  color: $wbu-color-primary;
   a {
-    color: #a19c9c;
+    color: $wbu-color-primary;
     text-decoration: underline;
   }
   .sous-document-secondary {

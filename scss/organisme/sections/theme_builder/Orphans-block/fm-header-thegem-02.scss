@@ -53,4 +53,15 @@
       }
     }
   }
+  //ceci c'est uniquement au cas ou ou le module lang-dropdown est activé
+  .block-lang-dropdown {
+    form select {
+      max-width: 120px;
+      background-color: transparent;
+      color: color-yiq($wbu-background);
+      option {
+        background-color: $wbu-background;
+      }
+    }
+  }
 }
