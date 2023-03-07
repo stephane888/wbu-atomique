@@ -12,6 +12,9 @@
     position: relative;
     color: black;
     margin-bottom: 1.5rem;
+    div {
+      display: inline;
+    }
     @include media-max(SM) {
       font-size: $wbu-h2-font-size * 0.8;
     }

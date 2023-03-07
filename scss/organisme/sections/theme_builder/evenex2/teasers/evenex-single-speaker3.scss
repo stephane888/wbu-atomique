@@ -9,13 +9,15 @@
         margin: 0;
         width: 20.9375rem;
         height: 20.9375rem;
-        overflow: visible;
         display: inline-block;
-        border-radius: 50%;
         position: relative;
         max-width: 100%;
         vertical-align: middle;
-
+        .image {
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        
         img {
             height: inherit;
             width: inherit;
@@ -35,6 +37,7 @@
         margin-top: 0px;
         margin-bottom: 0px;
         padding-left: 0px;
+        z-index: 2;
 
         &__link {
             border-radius: 50%;

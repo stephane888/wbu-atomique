@@ -1,5 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
+@use "./atome/section-title.scss";
 
 .spaker_mod_contact {
   .contact-about {
@@ -68,6 +69,12 @@
       line-height: 28px;
       font-size: 14px;
     }
+
+    div {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
   }
 
   .php-email-form {
@@ -111,10 +118,18 @@
     button[type="submit"] {
       background: $wbu-color-primary;
       border: 0;
-      padding: 10px 24px;
+      padding: 15px 24px 10px 24px;
       color: #fff;
       transition: 0.4s;
       border-radius: 50px;
+
+      a {
+        color: #fff;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
 
       &:hover {
         background: $wbu-color-secondary;
