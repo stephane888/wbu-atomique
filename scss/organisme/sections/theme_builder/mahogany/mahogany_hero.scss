@@ -17,7 +17,7 @@
     background-color: rgba($wbu-background, $alpha: 1);
     &::before {
         content: "";
-        background-color: rgba($wbu-background, $alpha: 0.2);
+        background-color: rgba($wbu-background, $alpha: 0.6);
         display: block;
         position: absolute;
         top: 0;
@@ -34,7 +34,7 @@
         flex-direction: column;
         justify-content: center;
         .slider-title {
-            font-weight: $wbu-title-font-weight;
+            //font-weight: $wbu-title-font-weight;
             padding-top: $wbu-margin;
             padding-bottom: $wbu-margin;
             margin-bottom: $wbu-margin;
