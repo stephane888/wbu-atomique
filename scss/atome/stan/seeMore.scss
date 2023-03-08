@@ -1,3 +1,4 @@
+@use "../../wbu-ressources-clean.scss" as *;
 .seeMore {
   background: #fff;
   border: 2px solid #1b1918;
@@ -7,7 +8,9 @@
   font-size: 12px;
   line-height: 14px;
   width: fit-content;
-  margin: 50px auto 0;
+  margin-bottom: $wbu-margin;
+  margin-top: $wbu-margin;
+  //margin: 50px auto 0;
   cursor: pointer;
   a {
     &:hover {

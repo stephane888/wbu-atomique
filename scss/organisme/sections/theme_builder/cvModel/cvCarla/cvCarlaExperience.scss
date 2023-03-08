@@ -1,24 +1,22 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
-.section-education {
+.section-experience {
   padding-bottom: $wbu-margin * 2;
+  padding-top: $wbu-margin;
   margin-right: $wbu-margin * 2;
   margin-left: $wbu-margin * 2;
   .title {
-    padding: $wbu-margin * 0.5 0;
-    margin-bottom: $wbu-margin * 1.5;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
     letter-spacing: $wbu-margin * 0.25;
   }
-  .experience-education {
-    :nth-child(1) {
-      margin: 0 !important;
-    }
-    margin-top: $wbu-margin;
+  .experience {
+    margin-bottom: $wbu-margin;
     .time {
-      color: $wbu-color-primary;
+      color: goldenrod;
       letter-spacing: $wbu-margin * 0.1;
     }
-    .school {
+    .job {
       letter-spacing: $wbu-margin * 0.25;
     }
   }
