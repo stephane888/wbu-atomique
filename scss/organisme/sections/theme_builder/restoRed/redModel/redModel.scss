@@ -1,0 +1,67 @@
+.hero_section_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("https://preview.colorlib.com/theme/redcayenne/img/home-slider/slider-1.jpg.webp");
+  background-size: cover;
+  width: auto;
+  height: 100%;
+  .wrap_element {
+    background: rgba(0, 0, 0, 0.8);
+    height: 380px;
+    width: 660px;
+    position: relative;
+    .wrap_element_box {
+      border: 1px solid #b10400;
+      width: 640px;
+      height: 360px;
+      position: absolute;
+      left: 11px;
+      top: 11px;
+      * {
+        text-align: center;
+      }
+      .wrap_element-text {
+        font-family: "Cantata One", serif;
+      }
+      .wrap_element-title {
+        color: #b10400;
+        font-family: "Great Vibes", cursive;
+      }
+      .wrap_element-subtitle {
+        line-height: 60px;
+        font-family: "Cantata One", serif;
+        margin-bottom: 26px;
+      }
+      .button {
+        background-color: #b10400;
+        transition: all ease-in-out 0.5s;
+        a {
+          color: white;
+        }
+        &:hover {
+          background: none;
+          border: 1px solid #b10400;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.second {
+  display: none;
+  background-color: white !important;
+  .wrap_element_box {
+    .wrap_element-text {
+      color: black !important;
+    }
+    .wrap_element-title {
+    }
+    .wrap_element-subtitle {
+      color: black !important;
+    }
+  }
+}

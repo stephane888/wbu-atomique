@@ -1,6 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
-@use "./grandrestaurant.scss" as *;
+//@use "./grandrestaurant.scss" as *;
 .grandrestaurant-hero {
     background-image: url("https://themes-themegoods.b-cdn.net/grandrestaurantv6/wp-content/uploads/2020/12/eiliv-sonas-aceron-cWqxHoa3zXk-unsplash-768x1152.jpg") ;
     display: flex;
@@ -68,7 +68,6 @@
         }
     }
     &__subtitle {
-        font-family: 'Kristi', cursive ;
         width: 100%;
         position: relative;
         animation: 1s ease-out 0s 1 slideInFromLeft;
@@ -83,7 +82,6 @@
         overflow: hidden;
     }
     &__title {
-        font-family: 'Lato' , sans-serif;
         position: relative;
         width: 100%;
         font-weight: $wbu-title-font-weight;
@@ -363,7 +361,7 @@
         }
         .grandrestaurant-hero__title {
             text-align: center;
-        }   
+        }
     }
     &--middle-no-svg {
         .middle {
@@ -433,7 +431,7 @@
         }
         .grandrestaurant-hero__description {
             display: none;
-        } 
+        }
     }
     &--min-height {
         min-height:100vh;

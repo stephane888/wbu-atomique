@@ -14,7 +14,7 @@
         margin: 0;
     }
     &__visit{
-        background: $wbu-color-primary;
+        background: $wbu-background;
         text-align: center;
         border-radius: 7px;
         width: 100%;
@@ -34,7 +34,7 @@
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
         &_title{
-            text-transform: capitalize;
+            //text-transform: capitalize;
             &_first{
                 color: color-yiq($wbu-color-primary);
                 font-weight: lighter;
@@ -160,6 +160,6 @@
     @keyframes floating {
         0% { transform: translate(0,  0rem); }
         50%  { transform: translate(0, 1.5rem); }
-        100%   { transform: translate(0, -0rem); }   
+        100%   { transform: translate(0, -0rem); }
     }
 }
