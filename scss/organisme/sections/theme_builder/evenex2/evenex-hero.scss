@@ -7,10 +7,8 @@
   overflow: hidden;
   background-size: cover;
   height: 100%;
-  background-image: url(https://demo.xpeedstudio.com/evenex/conference/wp-content/uploads/sites/2/2020/02/conference-home-banner-bg.jpg),
-    url(https://demo.xpeedstudio.com/evenex/conference/wp-content/uploads/sites/2/2020/02/boston-text.png);
-
   color: white;
+
   .hero-container {
     height: 100vh;
     padding: $wbu-margin * 3 0;
@@ -23,31 +21,38 @@
       position: absolute;
       display: flex;
       justify-content: center;
+
       img {
         width: 100%;
       }
     }
+
     .sous-section-primaire {
       margin-top: $wbu-margin * 4;
+
       * {
         display: flex;
         justify-content: center;
         align-items: center;
       }
+
       .location {
         svg {
           width: 25px;
           height: 25px;
           fill: white;
         }
+
         .place {
           display: flex;
           margin: 0;
         }
       }
+
       .subtitle {
         margin: 0;
       }
+
       .title {
         line-height: 1;
         -webkit-text-fill-color: transparent;
@@ -55,13 +60,16 @@
         margin: 0;
         margin-bottom: $wbu-margin * 0.7;
       }
+
       .details {
         margin-bottom: $wbu-margin * 2.5;
       }
+
       .date {
         margin: 0px 0px $wbu-margin * 2.5 0px;
       }
     }
+
     .sous-section-secondaire {
       * {
         display: flex;
@@ -115,6 +123,7 @@
           background-image: linear-gradient(90deg, #ff7a49 10%, #f94843 90%);
         }
       }
+
       .mouse {
         a {
           svg {
@@ -124,19 +133,24 @@
           }
         }
       }
+
       .arrow {
         animation: float 3s ease-in infinite;
+
         @keyframes float {
           0% {
             transform: translatey(0px);
           }
+
           50% {
             transform: translatey(10px);
           }
+
           100% {
             transform: translatey(0px);
           }
         }
+
         svg {
           width: 20px;
           height: 20px;
@@ -152,11 +166,18 @@
       justify-content: flex-start;
       top: -$wbu-margin * 12;
     }
+
     .first-image {
       display: block;
       position: absolute;
       right: 8%;
       top: 0px;
+
+      img {
+        width: 520px;
+        max-width: 520px;
+        height: 221px;
+      }
     }
   }
 }
