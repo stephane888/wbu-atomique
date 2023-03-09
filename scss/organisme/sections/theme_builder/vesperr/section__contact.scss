@@ -51,21 +51,16 @@
   }
 
   .info {
-
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     svg {
-      color: $wbu-color-primary;
-      float: left;
+      fill: $wbu-background;
       line-height: 1;
     }
-
     &_text {
       line-height: 28px;
-    }
-
-    div {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
+      margin-left: $wbu-margin;
     }
   }
 

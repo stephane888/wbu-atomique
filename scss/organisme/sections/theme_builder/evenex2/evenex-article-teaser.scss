@@ -4,6 +4,7 @@
 .evenex-article-teaser {
     box-shadow: 9.899px 9.899px 30px 0 rgb(0 0 0 / 10%);
     margin-bottom: 3rem;
+
     &:hover {
         img {
             transform: rotate(2deg) scale(1.1);
@@ -12,10 +13,15 @@
         h5 {
             color: $wbu-color-primary;
         }
+
+        a {
+            color: $wbu-color-primary;
+        }
     }
 
     ul.links.field__items {
         list-style: none;
+        display: inline;
     }
 
     &__image {
@@ -33,9 +39,12 @@
     }
 
     &__title {
-        transition: all .4s ease;
-        font-weight: 600;
-        color: black;
+        a {
+            transition: all .4s ease;
+            font-weight: 600;
+            text-decoration: none;
+            color: black;
+        }
     }
 
     .card-body {
@@ -53,7 +62,7 @@
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: -.3px;
-        color: rgba(0,0,0,.5);
+        color: rgba(0, 0, 0, .5);
 
         a {
             text-decoration: none;
@@ -67,12 +76,17 @@
         border-style: solid;
         border-color: $wbu-color-primary;
         border-width: 2px;
-        padding: 1rem;
+        padding: 0rem 1rem 0rem 1rem;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         a {
             position: absolute;
             inset: 0;
         }
+
         svg {
             width: 1.5rem;
             height: 1.5rem;
@@ -88,6 +102,7 @@
             color: #fff;
             background-color: $wbu-color-primary;
             border-color: $wbu-color-primary;
+
             svg {
                 fill: white;
             }
