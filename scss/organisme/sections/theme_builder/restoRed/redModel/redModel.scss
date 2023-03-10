@@ -1,3 +1,4 @@
+@use "../../../../../variables" as *;
 .hero_section_wrap {
   display: flex;
   justify-content: center;
@@ -8,12 +9,12 @@
   width: auto;
   height: 100%;
   .wrap_element {
-    background: rgba(0, 0, 0, 0.8);
+    background: $wbu-color-thirdly;
     height: 380px;
     width: 660px;
     position: relative;
     .wrap_element_box {
-      border: 1px solid #b10400;
+      border: 1px solid $wbu-color-secondary;
       width: 640px;
       height: 360px;
       position: absolute;
@@ -22,12 +23,9 @@
       * {
         text-align: center;
       }
-      .wrap_element-text {
-        font-family: "Cantata One", serif;
-      }
+
       .wrap_element-title {
-        color: #b10400;
-        font-family: "Great Vibes", cursive;
+        color: $wbu-color-secondary;
       }
       .wrap_element-subtitle {
         line-height: 60px;
@@ -35,14 +33,14 @@
         margin-bottom: 26px;
       }
       .button {
-        background-color: #b10400;
+        background-color: $wbu-color-secondary;
         transition: all ease-in-out 0.5s;
         a {
-          color: white;
+          color: $wbu-color-primary;
         }
         &:hover {
           background: none;
-          border: 1px solid #b10400;
+          border: 1px solid $wbu-color-secondary;
           a {
             text-decoration: none;
           }
@@ -53,15 +51,15 @@
 }
 .second {
   display: none;
-  background-color: white !important;
+  background-color: $wbu-color-secondary !important;
   .wrap_element_box {
     .wrap_element-text {
-      color: black !important;
+      color: $wbu-color-thirdly !important;
     }
     .wrap_element-title {
     }
     .wrap_element-subtitle {
-      color: black !important;
+      color: $wbu-color-thirdly !important;
     }
   }
 }
