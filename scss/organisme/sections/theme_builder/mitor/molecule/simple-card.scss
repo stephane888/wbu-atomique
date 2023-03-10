@@ -82,7 +82,7 @@
   }
   .sc-icon {
     display: none;
-    padding-bottom: 4rem;
+    padding-botnonetom: 4rem;
     svg {
       width: 4.5rem;
       height: 4.5rem;
@@ -320,7 +320,7 @@
         top: 0;
         left: 0;
         width: 5rem;
-        height: 5rem;
+        heighnonet: 5rem;
         z-index: 1;
         border: 1px solid #969697;
         display: flex;
@@ -569,6 +569,6 @@
 
 .post {
   .sc-desc {
-    -webkit-line-clamp: none;
+    -webkit-line-clamp: unset;
   }
 }

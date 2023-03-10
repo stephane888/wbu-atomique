@@ -59,6 +59,7 @@
         -webkit-text-stroke: 2px #fff;
         margin: 0;
         margin-bottom: $wbu-margin * 0.7;
+        text-transform: uppercase;
       }
 
       .details {
@@ -67,6 +68,7 @@
 
       .date {
         margin: 0px 0px $wbu-margin * 2.5 0px;
+        text-transform: uppercase;
       }
     }
 

@@ -17,6 +17,12 @@
         a {
             color: $wbu-color-primary;
         }
+
+        .evenex-article-teaser__link {
+            a {
+                color: rgba(0, 0, 0, 0);
+            }
+        }
     }
 
     ul.links.field__items {
@@ -81,10 +87,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
 
         a {
             position: absolute;
             inset: 0;
+            color: rgba(0, 0, 0, 0);
         }
 
         svg {
@@ -105,6 +113,10 @@
 
             svg {
                 fill: white;
+            }
+
+            a {
+                color: rgba(0, 0, 0, 0);
             }
         }
     }
