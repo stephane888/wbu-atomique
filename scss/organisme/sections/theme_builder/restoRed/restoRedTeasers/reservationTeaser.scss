@@ -1,0 +1,11 @@
+@use "../../../../../variables" as *;
+@use "../../../../../wbu-ressources-clean.scss";
+
+.section_reservation_subtitle {
+  line-height: 1;
+  color: $wbu-color-primary;
+}
+.section_reservation_title {
+  line-height: 1;
+  color: $wbu-color-primary;
+}
