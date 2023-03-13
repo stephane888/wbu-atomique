@@ -26,10 +26,6 @@
   }
 
   .title {
-    font-size: $wbu-titre-big-md;
-    /*@include media-min("DD") {
-      font-size: $wbu-titre-biggest;
-    }*/
     line-height: 100%;
     margin-bottom: $space_bottom * 0.3;
     @include media-min("DD") {
@@ -39,7 +35,6 @@
   }
 
   .description {
-    font-size: $wbu-h3-font-size;
     margin-bottom: $space_bottom * 0.6;
   }
 
