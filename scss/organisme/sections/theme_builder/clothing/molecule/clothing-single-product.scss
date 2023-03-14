@@ -47,16 +47,16 @@
   }
   .badge {
     padding: 1rem 2rem;
-    color: white;
-    background-color: black;
-    font-size: $wbu-h6-font-size;
+    color: color-yik($wbu-background);
+    background-color: $wbu-background;
+    //font-size: $wbu-h6-font-size;
     position: absolute;
     top: 2rem;
     left: 2rem;
     z-index: 3;
     &--reduction {
       background-color: $wbu-color-primary;
-      color: white;
+      color: color-yik($wbu-color-primary);
       right: 0;
       top: 0;
       border-radius: 50%;
@@ -67,15 +67,14 @@
       height: 5rem;
       left: auto;
       font-weight: bold;
-      font-size: $wbu-h6-font-size;
+      //font-size: $wbu-h6-font-size;
     }
   }
   .csp-title {
     padding: $wbu-margin 0 0;
     &,
     a {
-      color: black;
-      font-size: $wbu-h5-font-size;
+      //font-size: $wbu-h5-font-size;
       transition: 0.3s;
       &:hover {
         color: $wbu-color-primary;
@@ -85,18 +84,18 @@
   }
   .csp-desc {
     padding: 0.5rem 0;
-    font-size: $wbu-default-font-size;
+    //font-size: $wbu-default-font-size;
     max-width: 85%;
   }
   .price-rating {
     padding: $wbu-margin 0 0;
   }
   .price {
-    color: black;
+    //color: black;
     font-weight: bold;
     padding-right: 1rem;
     &--old {
-      color: $wbu-border-color;
+      //color: $wbu-border-color;
       text-decoration: line-through;
     }
   }
@@ -141,8 +140,8 @@
         transition: cubic-bezier(0, 0.16, 0.6, 1.01) 0.6s;
       }
       &:hover {
-        background-color: white;
-        border-color: white;
+        background-color: $wbu-color-secondary;
+        border-color: $wbu-color-secondary;
         svg {
           fill: $wbu-color-primary;
         }
