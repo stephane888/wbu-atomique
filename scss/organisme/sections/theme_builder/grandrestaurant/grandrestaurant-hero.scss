@@ -85,7 +85,7 @@
         position: relative;
         width: 100%;
         font-weight: $wbu-title-font-weight;
-        text-transform: uppercase;
+        text-transform: capitalize;
         animation: 1.5s ease-out 1s 1 slideInFromLeft;
         @include media-max(XX) {
             transition: 1s ease-in-out;
@@ -95,7 +95,7 @@
         }
     }
     &__description {
-        text-transform: uppercase;
+        text-transform: capitalize;
         width: 100%;
         color: $wbu-border-color;
         position: relative;
@@ -154,7 +154,7 @@
                 margin: 0;
             }
             &_second{
-                text-transform: uppercase;
+                text-transform: capitalize;
                 font-weight: 700;
                 padding-top: 0;
                 color: color-yiq($wbu-color-primary);
