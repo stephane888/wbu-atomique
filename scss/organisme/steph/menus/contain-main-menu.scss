@@ -1,7 +1,7 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 @use "../../../variables.scss" as *;
 .contain-main-menu {
-  font-family: "Oswald", sans-serif;
+  //font-family: "Oswald", sans-serif;
   border-top: 1px solid #ebebeb;
   .dropdown-toggle::after {
     background: #f8f9fa;
@@ -17,7 +17,7 @@
     justify-content: center;
     > .nav-item {
       > .nav-link {
-        font-size: $wbu-default-font-size * 1.2;
+        //font-size: $wbu-default-font-size * 1.2;
         font-weight: 500;
         padding-left: $wbu-margin;
         padding-right: $wbu-margin;

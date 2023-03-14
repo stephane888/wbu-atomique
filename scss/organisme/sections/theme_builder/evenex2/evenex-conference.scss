@@ -5,8 +5,12 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0px 50px 0px;
     position: relative;
+    min-height: 600px;
+
+    @include media-min(MD) {
+        min-height: 600px;
+    }
 
     &__parallax {
         left: 0%;
@@ -27,6 +31,7 @@
 
     &__overlay {
         background-color: #2F0063BF;
+        //padding: 100px 0px 50px 0px;
         background-image: url('./images/overlay2.png');
         background-position: center center;
         background-repeat: no-repeat;
@@ -60,7 +65,6 @@
 
     &__title {
         color: #FFFFFF;
-        margin: 18px 0px 0px 0px;
         text-align: center;
         font-weight: 700;
     }

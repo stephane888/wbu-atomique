@@ -3,20 +3,17 @@
 .section-vs-title {
   text-align: center;
   padding-bottom: 3.5rem;
-  //background:black;
 
   h2 {
-    font-size: $wbu-h2-font-size;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     position: relative;
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 1.5rem;
-    @include media-max(SM) {
-      font-size: $wbu-h2-font-size * 0.8;
-    }
-    @include media-max(XS) {
-      font-size: $wbu-h2-font-size * 0.7;
+    div {
+      display: inline;
     }
 
     &::before {
@@ -24,7 +21,7 @@
       margin: 0 15px 10px 0;
       width: 50px;
       height: 2px;
-      background: $wbu-color-primary;
+      background: $wbu-background;
       display: inline-block;
     }
 
@@ -33,14 +30,13 @@
       margin: 0 0 10px 15px;
       width: 50px;
       height: 2px;
-      background: $wbu-color-primary;
+      background: $wbu-background;
       display: inline-block;
     }
   }
   .desc {
     max-width: 70rem;
     margin: 0 auto;
-    font-size: $wbu-default-font-size;
   }
 }
 

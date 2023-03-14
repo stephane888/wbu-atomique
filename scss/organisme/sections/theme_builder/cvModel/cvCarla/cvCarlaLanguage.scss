@@ -1,0 +1,27 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+.section-language {
+  padding-bottom: $wbu-margin * 2;
+  margin-right: $wbu-margin * 2;
+  margin-left: $wbu-margin * 2;
+  .title {
+    padding: $wbu-margin * 0.5 0;
+    margin-bottom: $wbu-margin * 1.5;
+    letter-spacing: $wbu-margin * 0.25;
+  }
+  .language {
+    margin: 0;
+    padding: 0;
+    margin-bottom: $wbu-margin;
+    .progress {
+      width: auto;
+      margin-top: 5px;
+      .niveau {
+        background-color: goldenrod;
+      }
+    }
+    .text {
+      width: 100%;
+    }
+  }
+}

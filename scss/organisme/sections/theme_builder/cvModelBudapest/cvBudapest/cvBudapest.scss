@@ -2,6 +2,7 @@
 @use "../../../../../variables" as *;
 
 .document-secondaire {
+  color: $wbu-color-primary;
   .sous-document-primary {
     width: 30%;
     min-width: 30%;

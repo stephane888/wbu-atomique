@@ -1,0 +1,65 @@
+@use "../../../../../variables" as *;
+.hero_section_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("https://preview.colorlib.com/theme/redcayenne/img/home-slider/slider-1.jpg.webp");
+  background-size: cover;
+  width: auto;
+  height: 100%;
+  .wrap_element {
+    background: $wbu-color-thirdly;
+    height: 380px;
+    width: 660px;
+    position: relative;
+    .wrap_element_box {
+      border: 1px solid $wbu-color-secondary;
+      width: 640px;
+      height: 360px;
+      position: absolute;
+      left: 11px;
+      top: 11px;
+      * {
+        text-align: center;
+      }
+
+      .wrap_element-title {
+        color: $wbu-color-secondary;
+      }
+      .wrap_element-subtitle {
+        line-height: 60px;
+        font-family: "Cantata One", serif;
+        margin-bottom: 26px;
+      }
+      .button {
+        background-color: $wbu-color-secondary;
+        transition: all ease-in-out 0.5s;
+        a {
+          color: $wbu-color-primary;
+        }
+        &:hover {
+          background: none;
+          border: 1px solid $wbu-color-secondary;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+.second {
+  display: none;
+  background-color: $wbu-color-secondary !important;
+  .wrap_element_box {
+    .wrap_element-text {
+      color: $wbu-color-thirdly !important;
+    }
+    .wrap_element-title {
+    }
+    .wrap_element-subtitle {
+      color: $wbu-color-thirdly !important;
+    }
+  }
+}

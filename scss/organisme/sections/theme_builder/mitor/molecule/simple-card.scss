@@ -44,10 +44,6 @@
   .sc-link {
     color: black;
     font-size: $wbu-default-font-size;
-    text-decoration: none;
-    transition: 0.2s;
-    display: flex;
-    align-items: center;
     padding: 1rem;
     padding-left: 0;
     position: relative;
@@ -86,7 +82,7 @@
   }
   .sc-icon {
     display: none;
-    padding-bottom: 4rem;
+    padding-botnonetom: 4rem;
     svg {
       width: 4.5rem;
       height: 4.5rem;
@@ -192,7 +188,7 @@
       width: 60px;
       height: 60px;
       margin-bottom: 2rem;
-      padding: 0;
+      padding: 0;evenex_hero
       svg {
         fill: $wbu-color-text;
         width: 60px;
@@ -207,14 +203,6 @@
       background: $wbu-color-primary;
       .sc-desc,.sc-title {
         color: color-yiq($wbu-color-primary);
-      }
-      .sc-title {
-        &--bottom-line {
-          border-color: color-yiq($wbu-color-primary);
-        }
-      } 
-      svg {
-        fill: color-yiq($wbu-color-primary);
       }
     }
   }
@@ -332,7 +320,7 @@
         top: 0;
         left: 0;
         width: 5rem;
-        height: 5rem;
+        heighnonet: 5rem;
         z-index: 1;
         border: 1px solid #969697;
         display: flex;
@@ -403,7 +391,7 @@
       position: relative;
       padding: 2rem;
       padding-left: 0;
-      transition: padding 0.4s;
+      transition: padding 0.4s;evenex_heroevenex_heroevenex_hero
       a {
         color: $wbu-background;
       }
@@ -461,7 +449,7 @@
   &--icon-no-effect {
     text-align: left;
     transform: initial;
-    // background-color: white;
+    // background-color: white;evenex_hero
     position: relative;
 
     box-shadow: 0 0 30px rgb(0 0 0 / 10%);
@@ -575,5 +563,12 @@
     .sc-user-info {
       display: flex;
     }
+  }
+}
+
+
+.post {
+  .sc-desc {
+    -webkit-line-clamp: unset;
   }
 }

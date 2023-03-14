@@ -1,22 +1,20 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
+@use "./atome/section-title.scss";
 
 .spaker_mod_contact {
+  padding-top: $space_bottom;
   .contact-about {
     h3 {
-      font-size: $wbu-h3-font-size + 1;
       margin: 0 0 10px 0;
       padding: 0;
       line-height: 1;
       font-weight: $wbu-title-font-weight + 1;
       letter-spacing: 1px;
-      color: #222222;
     }
 
     p {
-      font-size: $wbu-default-font-size;
       line-height: 24px;
-      color: #888;
     }
   }
 
@@ -24,9 +22,8 @@
     padding-bottom: 20px;
 
     a {
-      font-size: $wbu-default-font-size + 0.2;
       display: inline-block;
-      background: #fff;
+      background: color-yic($wbu-color-primary);
       color: $wbu-color-primary;
       line-height: 1;
       padding: 8px 0;
@@ -54,19 +51,16 @@
   }
 
   .info {
-    color: #444444;
-
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     svg {
-      font-size: $wbu-default-font-size + 1.8;
-      color: $wbu-color-primary;
-      float: left;
+      fill: $wbu-background;
       line-height: 1;
     }
-
-    p {
-      padding: 0 0 10px 42px;
+    &_text {
       line-height: 28px;
-      font-size: 14px;
+      margin-left: $wbu-margin;
     }
   }
 
@@ -79,7 +73,6 @@
     textarea {
       border-radius: 0;
       box-shadow: none;
-      font-size: $wbu-default-font-size;
       padding: 10px 15px;
     }
 
@@ -92,8 +85,7 @@
 
     .error-message {
       display: none;
-      color: #fff;
-      background: #ed3c0d;
+      background: $wbu-background;
       text-align: left;
       padding: 15px;
       font-weight: $wbu-title-font-weight;
@@ -101,8 +93,7 @@
 
     .sent-message {
       display: none;
-      color: #fff;
-      background: #18d26e;
+      background: $wbu-background;
       text-align: center;
       padding: 15px;
       font-weight: $wbu-title-font-weight;
@@ -111,10 +102,16 @@
     button[type="submit"] {
       background: $wbu-color-primary;
       border: 0;
-      padding: 10px 24px;
-      color: #fff;
+      padding: 15px 24px 10px 24px;
       transition: 0.4s;
       border-radius: 50px;
+
+      a {
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
 
       &:hover {
         background: $wbu-color-secondary;

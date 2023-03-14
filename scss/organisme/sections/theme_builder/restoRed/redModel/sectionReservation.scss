@@ -1,0 +1,13 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../restoRedTeasers/reservationTeaser.scss";
+.section_reservation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  height: 428px;
+  * {
+    color: $wbu-color-primary;
+  }
+}
