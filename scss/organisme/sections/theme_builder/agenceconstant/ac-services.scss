@@ -41,7 +41,6 @@
       margin-bottom: 20px;
       width: 100%;
       color: #ffffff;
-      font-size: $wbu-default-font-size;
       font-weight: bold;
       text-transform: uppercase;
       line-height: 1.5em;
@@ -52,11 +51,7 @@
       width: 100%;
       position: relative;
       color: #ffffff;
-      font-size: $wbu-titre-big;
       font-weight: 800;
-      @include media-max(XS) {
-        font-size: $wbu-titre-big-sm;
-      }
     }
 
     .ac-text-descriptor {

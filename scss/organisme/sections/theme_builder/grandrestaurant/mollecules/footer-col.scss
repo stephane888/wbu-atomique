@@ -11,7 +11,7 @@
     &__logo {
         padding: $wbu-margin;
         padding-left:0;
-        text-transform: uppercase;
+        text-transform: capitalize;
         img {
             max-width: 100%;
         }
@@ -45,12 +45,10 @@
         li {
             a {
                 padding: 0;
-                color: $wbu-color-boder;
                 margin-bottom: $wbu-margin / 2;
             }
             display: flex;
             //flex-direction: column;
-            color: $wbu-color-boder;
             text-decoration: none;
             margin-bottom: $wbu-margin / 2;
             .element__link {
@@ -58,10 +56,6 @@
                 display: flex;
                 justify-content: justify;
                 flex-direction: flex-start;
-                color: $wbu-color-boder;
-                &:hover {
-                    color: $wbu-color-boder;
-                }
                 &_svg {
                     align-items: start;
                     width: inherit;

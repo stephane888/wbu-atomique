@@ -1,13 +1,10 @@
 /** @format */
-
-@use "../../variables" as *;
-
+@use "../../wbu-ressources-clean.scss" as *;
 .btn-carre {
   background-color: transparent;
   color: $wbu-color-primary;
   padding: 15px 56px;
   border: 1px solid $wbu-color-primary;
-  font-size: 17px;
   letter-spacing: 1.9px;
   transition: ease-in-out 0.3s;
   &:hover {

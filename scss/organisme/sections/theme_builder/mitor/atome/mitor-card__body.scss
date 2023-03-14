@@ -4,14 +4,14 @@
   margin: 1rem 0;
   .mc-title {
     color: #222;
-    margin: 0 auto 20px;
+    margin-bottom: $wbu-margin;
     font-weight: 600;
     width: 100%;
     word-break: break-word;
     line-height: 1.4;
   }
   .mc-small {
-    margin-bottom: 1.5rem;
+    margin-bottom: $wbu-margin;
     color: black;
     &--line {
       display: flex;
@@ -26,9 +26,8 @@
     }
   }
   .mc-description {
-    font-size: $wbu-default-font-size;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: $wbu-margin;
     font-weight: normal;
     color: lighten($wbu-color-text, 20);
     ul {
@@ -67,8 +66,7 @@
       h4,
       h5 {
         font-weight: bold;
-        color: black;
-        //font-size: $wbu-default-font-size;
+        //color: black;
       }
       li {
         position: relative;
@@ -84,7 +82,6 @@
           line-height: 1;
           margin-right: 2rem;
           margin-top: 5px;
-          font-size: $wbu-default-font-size;
           width: 30px;
           height: 30px;
           border-radius: 50%;

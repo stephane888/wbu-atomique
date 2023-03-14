@@ -25,35 +25,23 @@
 
       .title,
       .sub-title {
-        color: #fff;
-        font-family: "Montserrat", sans-serif;
         margin-bottom: 0;
       }
       .title {
-        font-weight: 900;
-        margin-bottom: $wbu-margin;
+        font-weight: 500;
+        margin-bottom: $wbu-margin * 2;
         @include media-min(DD) {
-          font-size: $wbu-titre-big;
           line-height: $wbu-default-line-height * 4rem;
-          margin-bottom: $wbu-margin * 3;
+          margin-bottom: $wbu-margin * 2;
         }
       }
       .sub-title {
         font-weight: 700;
-        font-size: $wbu-default-font-size;
-        @include media-min(DD) {
-          font-size: $wbu-h2-font-size;
-        }
+        margin-bottom: $wbu-margin;
       }
       .description {
-        @include media-min(DD) {
-          font-size: $wbu-h3-font-size;
-        }
-        font-family: "Montserrat", sans-serif;
         font-weight: 400;
-        color: #fff;
-        line-height: $wbu-default-line-height * 2.5rem;
-        margin: $wbu-margin 0 $wbu-margin * 1.5;
+        margin-bottom: $wbu-margin * 2;
       }
     }
   }
