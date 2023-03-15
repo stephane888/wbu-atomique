@@ -2,7 +2,6 @@
 @use "../../../atome/stan/seeMore.scss";
 
 .images-bg {
-  color: #fff;
   background-attachment: fixed;
   background-position: center;
   position: relative;
@@ -12,7 +11,7 @@
   &::before {
     content: "";
     position: absolute;
-    background-color: rgba($color: #000000, $alpha: 0.52);
+    background-color: rgba($color: $wbu-background, $alpha: 0.52);
     top: 0;
     left: 0;
     right: 0;
@@ -26,18 +25,18 @@
     background: transparent;
     border-color: #fff;
     a {
-      color: white;
+      //color: white;
     }
   }
 
   .titre {
     line-height: 1.2;
-    color: #fff;
+    //color: #fff;
     margin-bottom: $wbu-margin;
   }
 
   .sub_title {
-    color: #fff;
+    //color: #fff;
     margin-bottom: $wbu-margin;
   }
 
