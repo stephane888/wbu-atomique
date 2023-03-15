@@ -85,6 +85,7 @@
         position: relative;
         width: 100%;
         font-weight: $wbu-title-font-weight;
+        padding: $wbu-margin;
         text-transform: capitalize;
         animation: 1.5s ease-out 1s 1 slideInFromLeft;
         @include media-max(XX) {

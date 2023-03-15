@@ -3,99 +3,123 @@
 
 .safety-handler {
   overflow: hidden;
-}
-.security-service {
-  background: $wbu-background;
-  color: $wbu-border-color;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: $wbu-margin * 1.5;
-  padding-top: $space_inner_top;
-
-  .handler {
+  .security-service {
+    .image-block {
+      display: none;
+    }
+    background: $wbu-background;
+    color: $wbu-border-color;
     position: relative;
-    margin-top: $wbu-margin;
-    display: flex;
-    align-items: center;
+    overflow: hidden;
+    padding-bottom: $wbu-margin * 1.5;
+    padding-top: $space_inner_top;
 
-    justify-content: end;
-  }
-  .icon {
-    position: absolute;
-    top: 65px;
-    left: -130px;
-    opacity: 0.6;
-    color: $wbu-color-thirdly;
-    svg {
-      width: 330px;
-      height: 330px;
+    .handler {
+      position: relative;
+      margin-top: $wbu-margin;
+      display: flex;
+      align-items: center;
+
+      justify-content: end;
+    }
+    .icon {
+      position: absolute;
+      top: 65px;
+      left: -130px;
+      opacity: 0.6;
+      color: $wbu-color-thirdly;
+      svg {
+        width: 330px;
+        height: 330px;
+      }
+    }
+    .head-title {
+      font-size: $wbu-h3-font-size;
+      font-weight: bold;
+      text-align: left;
+      margin-top: $space-inner-top;
+      display: inline-block;
     }
   }
-  .head-title {
-    font-size: $wbu-h3-font-size;
-    font-weight: bold;
-    text-align: left;
-    margin-top: $space-inner-top;
-    display: inline-block;
-  }
-}
-.all-services {
-  margin-top: $wbu-margin * 0.5;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: end;
-  .list-services {
-    color: lighten($wbu-color-text, 30);
-    font-size: $wbu-title-font-size;
-    text-align: left;
-    padding-bottom: $wbu-margin;
-    .element {
-      list-style-type: disc;
-      display: flex;
-      padding-top: $wbu-margin * 0.5;
-      &::before {
-        content: "\2022";
-        color: $wbu-color-primary;
+  .all-services {
+    margin-top: $wbu-margin * 0.5;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+    .list-services {
+      color: lighten($wbu-color-text, 30);
+      font-size: $wbu-title-font-size;
+      text-align: left;
+      padding-bottom: $wbu-margin;
+      .element {
+        list-style-type: disc;
         display: flex;
-        padding-right: $wbu-margin;
+        padding-top: $wbu-margin * 0.5;
+        &::before {
+          content: "\2022";
+          color: $wbu-color-primary;
+          display: flex;
+          padding-right: $wbu-margin;
+        }
       }
     }
   }
-}
-.call-info {
-  background: $wbu-color-primary;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  padding: $wbu-margin * 2 $wbu-margin * 2;
-  padding-right: 0;
-  text-align: center;
+  .call-info {
+    .image-block {
+      display: none;
+    }
+    background: $wbu-color-primary;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: $wbu-margin * 2 $wbu-margin * 2;
+    padding-right: 0;
+    text-align: center;
 
-  .icon {
-    position: absolute;
-    top: 65px;
-    right: -150px;
-    opacity: 0.6;
-    color: rgba($wbu-border-color, 0.5);
-    svg {
-      width: 330px;
-      height: 330px;
+    .icon {
+      position: absolute;
+      top: 65px;
+      right: -150px;
+      opacity: 0.6;
+      color: rgba($wbu-border-color, 0.5);
+      svg {
+        width: 330px;
+        height: 330px;
+      }
+    }
+    .head-title {
+      display: flex;
+      font-size: $wbu-h3-font-size;
+      align-items: flex-start;
+      justify-content: start;
+    }
+    .phone-number {
+      display: flex;
+      justify-content: start;
+      align-items: flex-start;
+      font-size: $wbu-h1-font-size;
+      font-weight: bold;
     }
   }
-  .head-title {
-    display: flex;
-    font-size: $wbu-h3-font-size;
-    align-items: flex-start;
-    justify-content: start;
+  &--image-right {
+    .image-block {
+      display: block;
+      width: 100%;
+    }
+    .call-info {
+      display: none;
+    }
   }
-  .phone-number {
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    font-size: $wbu-h1-font-size;
-    font-weight: bold;
+  &--image-left {
+    .image-block {
+      display: block;
+      width: 100%;
+    }
+    .security-service {
+      display: none;
+    }
   }
 }
