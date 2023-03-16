@@ -13,8 +13,8 @@
     .img-link {
       position: relative;
       display: inline-block;
-      .__img {
-        border-radius: 100%;
+      img {
+        border-radius: 50%;
         width: 100%;
       }
       &::before {
@@ -24,7 +24,7 @@
         opacity: 0;
         width: 100%;
         left: 0;
-        border-radius: 100%;
+        border-radius: 50%;
         background: $wbu-color-primary;
         position: absolute;
         transition: cubic-bezier(0.19, 1, 0.22, 1) 0.7s;
@@ -35,14 +35,14 @@
     }
   }
   .member-role {
-    font-size: $wbu-default-font-size;
     color: $wbu-color-text;
+    margin-bottom: $wbu-margin;
   }
   .member-name {
     .name {
       color: rgba($wbu-background, 0.9);
+      margin-bottom: $wbu-margin;
       font-weight: $wbu-title-font-weight;
-      font-size: $wbu-h3-font-size-sm;
       text-decoration: none;
       transition: ease 0.3s;
       &:hover {
@@ -54,6 +54,7 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: $wbu-margin;
     .icon {
       padding: 5px;
       .__svg {

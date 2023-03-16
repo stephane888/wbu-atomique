@@ -84,12 +84,11 @@
       & {
         color: $wbu-background;
         font-weight: 500;
-        font-size: $wbu-h4-font-size;
         text-decoration: none;
       }
     }
     .descriptor-item {
-      font-size: $wbu-default-font-size;
+      text-align: justify;
     }
     .htl-btn {
       margin-top: $wbu-margin * 1.5;

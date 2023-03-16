@@ -63,6 +63,8 @@
     .slider-container {
       position: relative;
       margin-top: $wbu-margin;
+      text-align: justify;
+      color: color-yiq($wbu-background);
       display: block;
       max-width: 100%;
       width: 100%;
@@ -78,7 +80,7 @@
         margin-top: $wbu-margin;
         align-items: center;
         .author {
-          color: $wbu-border-color;
+          color: color-yiq($wbu-background);
         }
         .company-name {
           padding: 0 0 0 $wbu-margin * 0.5;

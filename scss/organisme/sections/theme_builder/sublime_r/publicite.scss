@@ -38,11 +38,11 @@
       overflow: hidden;
       .title {
         width: 100%;
-        font-weight: $wbu-title-font-weight;
         text-transform: capitalize;
       }
       .text {
         line-height: 2.5rem;
+        text-align: justify;
       }
       .more {
         margin-top: $wbu-margin;
