@@ -4,52 +4,63 @@
 .safety-handler {
   overflow: hidden;
   .security-service {
-    .image-block {
-      display: none;
-    }
+    display: flex;
+    flex-direction: column;
     background: $wbu-background;
     color: $wbu-border-color;
     position: relative;
     overflow: hidden;
-    padding-bottom: $wbu-margin * 1.5;
-    padding-top: $space_inner_top;
-
+    padding: $wbu-margin;
+    //padding-bottom: $wbu-margin * 1.5;
+    //padding-top: $space_inner_top;
+    .image-block {
+      display: none;
+    }
     .handler {
       position: relative;
-      margin-top: $wbu-margin;
+      padding: $wbu-margin;
+      margin-bottom: $wbu-margin;
       display: flex;
-      align-items: center;
-
+      flex-direction: column;
+      align-items: justify;
       justify-content: end;
     }
     .icon {
-      position: absolute;
-      top: 65px;
-      left: -130px;
+      //position: absolute;
+      margin-bottom: $wbu-margin;
+      font-weight: bold;
+      text-align: justify;
+      display: inline-block;
+      /*position: relative;
+      padding: $wbu-margin;
+      margin-bottom: $wbu-margin;*/
+      //top: 65px;
+      //left: -130px;
       opacity: 0.6;
-      color: $wbu-color-thirdly;
       svg {
         width: 330px;
         height: 330px;
       }
     }
     .head-title {
-      font-size: $wbu-h3-font-size;
+      margin-bottom: $wbu-margin;
       font-weight: bold;
-      text-align: left;
-      margin-top: $space-inner-top;
+      text-align: justify;
       display: inline-block;
     }
   }
+  .reverse-class {
+    display: flex;
+    flex-direction: row;
+  }
   .all-services {
-    margin-top: $wbu-margin * 0.5;
+    margin-bottom: $wbu-margin;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
     justify-content: end;
     .list-services {
       color: lighten($wbu-color-text, 30);
-      font-size: $wbu-title-font-size;
       text-align: left;
       padding-bottom: $wbu-margin;
       .element {
@@ -66,25 +77,24 @@
     }
   }
   .call-info {
-    .image-block {
-      display: none;
-    }
     background: $wbu-color-primary;
     overflow: hidden;
+    padding: $wbu-margin;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    padding: $wbu-margin * 2 $wbu-margin * 2;
-    padding-right: 0;
-    text-align: center;
-
+    text-align: justify;
+    .image-block {
+      display: none;
+    }
     .icon {
-      position: absolute;
-      top: 65px;
-      right: -150px;
-      opacity: 0.6;
-      color: rgba($wbu-border-color, 0.5);
+      margin-bottom: $wbu-margin;
+      font-weight: bold;
+      color: color-yiq($wbu-color-primary);
+      text-align: justify;
+      display: inline-block;
+      margin-bottom: 2rem;
       svg {
         width: 330px;
         height: 330px;
@@ -92,34 +102,93 @@
     }
     .head-title {
       display: flex;
-      font-size: $wbu-h3-font-size;
       align-items: flex-start;
+      margin-bottom: 2rem;
+      color: color-yiq($wbu-color-primary);
+      font-weight: bold;
       justify-content: start;
     }
     .phone-number {
       display: flex;
+      color: color-yiq($wbu-color-primary);
       justify-content: start;
       align-items: flex-start;
-      font-size: $wbu-h1-font-size;
+      margin-bottom: 2rem;
       font-weight: bold;
     }
   }
-  &--image-right {
-    .image-block {
-      display: block;
-      width: 100%;
+  &--reverse {
+    .reverse-class {
+      flex-direction: row-reverse;
+    }
+    .security-service {
+      .icon {
+        opacity: 1;
+      }
     }
     .call-info {
-      display: none;
+      .icon {
+        opacity: 1;
+      }
+    }
+    .security-service {
+      padding: 0;
+      .handler,.head-title,.icon {
+        display: none;
+      }
+      .image-block {
+        display: block;
+        height: 100%;
+        min-height: 300px;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &--image-right {
+    .security-service {
+      .icon {
+        opacity: 1;
+      }
+    }
+    .call-info {
+      padding: 0;
+      .icon, .head-title,  .phone-number {
+        display: none;
+      }
+      .image-block {
+        display: block;
+        height: 100%;
+        min-height: 300px;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
   &--image-left {
-    .image-block {
-      display: block;
-      width: 100%;
+    .call-info {
+      .icon {
+        opacity: 1;
+      }
     }
     .security-service {
-      display: none;
+      padding: 0;
+      .handler,.head-title,.icon {
+        display: none;
+      }
+      .image-block {
+        display: block;
+        height: 100%;
+        min-height: 300px;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 }
