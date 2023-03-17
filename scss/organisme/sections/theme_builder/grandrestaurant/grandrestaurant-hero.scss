@@ -70,6 +70,8 @@
     &__subtitle {
         width: 100%;
         position: relative;
+        padding: $wbu-margin;
+        color: color-yiq($wbu-background);
         animation: 1s ease-out 0s 1 slideInFromLeft;
         @include media-max(XX) {
             transition: 1s ease-in-out;
@@ -83,6 +85,7 @@
     }
     &__title {
         position: relative;
+        color: color-yiq($wbu-background);
         width: 100%;
         font-weight: $wbu-title-font-weight;
         padding: $wbu-margin;
@@ -98,7 +101,7 @@
     &__description {
         text-transform: capitalize;
         width: 100%;
-        color: $wbu-border-color;
+        color: color-yiq($wbu-background);
         position: relative;
         font-weight: 400;
         animation: 2s ease-out 2s 1 slideInFromLeft;
@@ -436,5 +439,9 @@
     }
     &--min-height {
         min-height:100vh;
+    }
+    &--min-height-fixed {
+        min-height:100vh;
+        background-attachment: fixed;
     }
 }

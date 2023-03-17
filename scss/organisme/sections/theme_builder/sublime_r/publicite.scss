@@ -36,6 +36,9 @@
       width: 40rem;
       padding: $wbu-margin * 2;
       overflow: hidden;
+      @include media-max(MD) {
+        width: unset;
+      }
       .title {
         width: 100%;
         text-transform: capitalize;
