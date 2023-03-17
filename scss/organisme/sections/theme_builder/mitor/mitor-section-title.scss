@@ -59,6 +59,8 @@
   &--overflowable {
     overflow: visible;
     padding: $space-bottom 0;
+    background-position: center center;
+    background-attachment: fixed;
     .section-header {
       max-width: 800px;
       margin: 0 auto;
