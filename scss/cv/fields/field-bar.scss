@@ -1,0 +1,18 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.field-bar {
+  position: relative;
+  padding-top: $wbu-margin * 0.5;
+  margin-bottom: $wbu-margin * 2;
+  &::before {
+    content: "";
+    height: 3px;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    width: $wbu-margin * 3;
+    position: absolute;
+    background-color: $wbu-color-primary;
+  }
+}

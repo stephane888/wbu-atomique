@@ -1,6 +1,6 @@
 @use "../../../../_variables.scss" as *;
 @use "../../../../wbu-ressources-clean.scss" as *;
-@use "./atome/section-title.scss";
+//@use "./atome/section-title.scss";
 @use "./molecule/single-service-card.scss";
 .services-overview-section-handler {
   padding: $space-top 0;
@@ -16,11 +16,9 @@
 
   .subtitle {
     margin-top: $space_inner_top;
-    @include bp_h3();
   }
   .description {
     margin-top: $space-top;
-    font-size: $wbu-default-font-size;
   }
   .htl-btn {
     margin-top: $space-top;

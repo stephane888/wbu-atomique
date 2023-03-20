@@ -1,6 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
-@use "./atome/section-title.scss";
+//@use "./atome/section-title.scss";
 
 .spaker_mod_contact {
   padding-top: $space_bottom;
@@ -107,7 +107,6 @@
       border-radius: 50px;
 
       a {
-
         &:hover {
           text-decoration: none;
         }

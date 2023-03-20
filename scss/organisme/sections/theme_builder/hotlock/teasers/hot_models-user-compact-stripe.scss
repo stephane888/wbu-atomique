@@ -1,0 +1,31 @@
+@use "../../../../../variables" as *;
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.hot_models-user-compact-stripe {
+  .user-info,
+  .user_mores {
+    padding: $wbu-margin * 0.5;
+  }
+  .user-info {
+    .user_name {
+      font-weight: 600;
+    }
+  }
+  .user_mores {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: $wbu-margin * 0.5;
+      right: $wbu-margin * 0.5;
+      bottom: auto;
+      height: 1px;
+      background-color: rgba($color: $wbu-background, $alpha: 0.4);
+    }
+    &--links {
+      .nav-item {
+        white-space: nowrap;
+      }
+    }
+  }
+}

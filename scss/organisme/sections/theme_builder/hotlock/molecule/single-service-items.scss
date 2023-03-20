@@ -1,9 +1,7 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../atome/hotlock-btn.scss";
 .single-service-items {
-  max-width: 37rem;
   margin: 0 auto;
-  margin-bottom: $wbu-margin;
   &:hover {
     transition: ease 0.4s;
     background: $wbu-background;
@@ -84,16 +82,12 @@
       & {
         color: $wbu-background;
         font-weight: 500;
-        font-size: $wbu-h4-font-size;
         text-decoration: none;
       }
     }
-    .descriptor-item {
-      font-size: $wbu-default-font-size;
-    }
+
     .htl-btn {
       margin-top: $wbu-margin * 1.5;
-      font-size: $wbu-h6-font-size;
     }
   }
 }

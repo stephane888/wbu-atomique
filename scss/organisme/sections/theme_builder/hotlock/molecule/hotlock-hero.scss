@@ -31,45 +31,28 @@
   }
   .hth-content {
     position: relative;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // height: 100%;
-    // width: 100%;
-    // top: 0;
-    // left: 0;
+    &__container {
+      min-height: 600px;
+      padding: $space_inner_top 0;
+    }
     .description {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      max-width: 75rem;
-      padding: 15rem 0;
+      width: 100%;
     }
 
     .title {
       margin-bottom: $wbu-margin;
       color: darken($color: $wbu-color-boder, $amount: 5);
-      max-width: 60rem;
       font-weight: lighter;
-      font-size: $wbu-h3-font-size-sm;
     }
     .sub-title {
-      font-size: $wbu-titre-suppra * 0.8;
       color: white;
-      max-width: 70rem;
-      line-height: 1.1;
-      @include media-max(DD) {
-        font-size:  $wbu-titre-big;
-      }
-      @include media-max(SM) {
-        font-size: $wbu-titre-big-md;
-      }
-      
     }
     .htl-btn {
       margin-top: $space-top;
-      font-size: $wbu-default-font-size * 0.8;
       margin-bottom: $wbu-margin;
     }
   }

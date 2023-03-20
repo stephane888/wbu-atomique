@@ -28,29 +28,15 @@
     }
     .text-title {
       color: $wbu-border-color;
-      font-size: $wbu-titre-big;
       font-weight: lighter;
       margin: $wbu-margin * 2 0;
-      @include media-max(SM) {
-        font-size: $wbu-titre-big-md;
-      }
-      @include media-max(XS) {
-        font-size: $wbu-titre-big-sm;
-      }
     }
     .text-paragraph {
       color: $wbu-border-color;
-      font-size: $wbu-h5-font-size;
       font-weight: lighter;
       margin-bottom: $wbu-margin * 2;
       max-width: 60rem;
       line-height: 1.5;
-      @include media-max(SM) {
-        font-size: $wbu-default-font-size;
-      }
-      // @include media-max(XS) {
-      //   font-size: $wbu-h5-font-size;
-      // }
     }
   }
 }

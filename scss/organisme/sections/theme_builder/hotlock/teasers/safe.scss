@@ -32,7 +32,6 @@
     }
   }
   .head-title {
-    font-size: $wbu-h3-font-size;
     font-weight: bold;
     text-align: left;
     margin-top: $space-inner-top;
@@ -47,20 +46,8 @@
   justify-content: end;
   .list-services {
     color: lighten($wbu-color-text, 30);
-    font-size: $wbu-title-font-size;
     text-align: left;
     padding-bottom: $wbu-margin;
-    .element {
-      list-style-type: disc;
-      display: flex;
-      padding-top: $wbu-margin * 0.5;
-      &::before {
-        content: "\2022";
-        color: $wbu-color-primary;
-        display: flex;
-        padding-right: $wbu-margin;
-      }
-    }
   }
 }
 .call-info {
@@ -87,7 +74,6 @@
   }
   .head-title {
     display: flex;
-    font-size: $wbu-h3-font-size;
     align-items: flex-start;
     justify-content: start;
   }
@@ -95,7 +81,6 @@
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    font-size: $wbu-h1-font-size;
     font-weight: bold;
   }
 }

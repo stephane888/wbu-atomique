@@ -4,7 +4,6 @@
 @use "./atome/blog-btn.scss";
 @use "./variables.scss" as *;
 .single-showcase_fnews {
-  padding: $space-top * 0.5 0 $space-top;
   font-size: $wbu-h5-font-size;
   h3,
   h2 {

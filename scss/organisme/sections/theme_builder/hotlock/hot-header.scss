@@ -5,7 +5,7 @@
 @use "../../../../_variables.scss" as *;
 
 .header-section-handler {
-  overflow: hidden;
+  // overflow: hidden; // On rend visble car on a ajouté un dropdown.
   &.mn-fixed-top {
     position: fixed;
     top: 0;
@@ -481,6 +481,47 @@
         color: $wbu-border-color;
         display: none;
       }
+    }
+  }
+  /**
+   * Style pour le dropdown de la partie compte.
+   */
+  .dropdown-menu {
+    box-shadow: 0 0 0 1px #8898aa1a, 0 15px 35px #31315d1a, 0 5px 15px #00000014;
+    border-radius: $wbu-margin * 0.25;
+    padding: 0;
+    &--user {
+      min-width: 13rem;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -$wbu-margin * 0.25;
+        left: $wbu-margin * 0.25;
+        right: auto;
+        bottom: auto;
+        background-color: inherit;
+      }
+    }
+  }
+  /**
+   * Style pour le compteur du panier.
+   */
+  .cart-small {
+    position: relative;
+    &--count {
+      position: absolute;
+      background: $wbu-color-primary;
+      color: color-yiq($wbu-color-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: auto;
+      right: -100%;
+      bottom: 0;
+      top: auto;
+      padding: $wbu-margin * 0.25;
+      line-height: 1;
+      border-radius: 50%;
     }
   }
 }

@@ -16,18 +16,7 @@
     }
   }
   .lock-info-section {
-    //   padding: 0 0 0 $wbu-margin * 3;
-    &::before {
-      content: "";
-      width: 70px;
-      height: 3px;
-      background: $wbu-color-primary;
-      display: block;
-      margin-top: $space-top;
-      margin-bottom: $space_bottom * 0.2;
-    }
     .title {
-      font-size: $wbu-h5-font-size;
       font-weight: bold;
       margin-bottom: $wbu-margin * 1.5;
     }
@@ -45,7 +34,6 @@
     }
     .all-services {
       margin-top: $wbu-margin;
-
       padding-left: 0;
       flex-direction: column;
       text-align: center;
@@ -58,11 +46,10 @@
         text-align: left;
         .element {
           list-style-type: none;
-          //margin-top: $wbu-margin * 0.5;
+          // margin-top: $wbu-margin * 0.5;
           display: flex;
           align-items: center;
           margin-bottom: $wbu-margin * 0.5;
-          font-size: $wbu-title-font-size;
           &::before {
             content: "\2022";
             position: initial;

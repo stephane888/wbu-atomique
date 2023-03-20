@@ -1,16 +1,18 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 
-@mixin fade-blac() {
-  background: $wbu-color-primary;
+@mixin fade-blac($color: $wbu-color-primary) {
+  background: $color;
+  color: color-yiq($color);
   a {
-    color: color-yiq($wbu-color-primary);
+    color: color-yiq($color);
   }
 }
-@mixin fade-white() {
+@mixin fade-white($color: $wbu-background) {
   transition: all 0.5s;
-  background: $wbu-background;
+  background: $color;
+  color: color-yiq($color);
   a {
-    color: white;
+    color: color-yiq($color);
   }
 }
 @mixin bg-slide($color: $wbu-background) {
@@ -26,73 +28,87 @@
     transform-origin: 0 0;
     transform: scaleX(0);
     pointer-events: none;
+    z-index: -1;
   }
 }
 .htl-btn {
   display: inline-block;
   font-weight: 600;
   text-align: center;
-  font-size: $wbu-default-font-size;
   position: relative;
   cursor: pointer;
   text-transform: uppercase;
   overflow: hidden;
+  z-index: 1;
   .nav-link {
     padding: 0;
   }
+  /**
+   * Ideale pour des elements de liens, i.e contenant la baslise a.
+   */
   &,
   a {
     text-decoration: none;
     transition: all 0.3s;
   }
-  a {
-    padding: 1.6rem 4.2rem;
-    display: inline-block;
-  }
 
-  &--fade {
-    @include fade-blac();
-    &:hover {
-      transition: all 0.5s;
-      @include fade-white;
-    }
-  }
-  &--inv {
-    @include fade-white;
-    &:hover {
-      @include fade-blac();
-    }
+  a {
+    padding: $wbu-margin * 0.75 $wbu-margin * 2;
+    display: inline-block;
   }
   &--big {
     a {
-      padding: 2.5rem 5rem;
+      padding: $wbu-margin $wbu-margin * 3;
     }
   }
   &--sm {
     a {
-      padding: 1.4rem 3rem;
+      padding: $wbu-margin * 0.5 $wbu-margin;
     }
   }
+  /**
+   * Dans le cas ou le rendu n'est pas un lien.
+   */
+  &.hasnotlink {
+    padding: $wbu-margin * 0.75 $wbu-margin * 2;
+  }
+  // model1. (fade)
+  &--fade {
+    @include fade-blac($wbu-color-primary);
+    &:hover {
+      transition: all 0.5s;
+      @include fade-white($wbu-background);
+    }
+  }
+  // model2.
+  &--inv {
+    @include fade-white($wbu-background);
+    &:hover {
+      @include fade-blac($wbu-color-primary);
+    }
+  }
+  // model3.
   &--bg {
-    @include fade-blac();
+    @include fade-blac($wbu-color-primary);
     a {
       z-index: 1;
       position: relative;
       transition: ease-in-out 0.3s;
     }
-    @include bg-slide();
-
+    @include bg-slide($wbu-background);
     &:hover {
+      color: color-yiq($wbu-background);
       &::before {
         transform: scaleX(1);
       }
       a {
-        color: white;
+        color: color-yiq($wbu-background);
       }
     }
   }
+  // model4.
   &--bg-inv {
-    @include fade-white();
+    @include fade-white($wbu-background);
     a {
       z-index: 1;
       position: relative;
@@ -103,7 +119,8 @@
       &::before {
         transform: scaleX(1);
       }
-      a {
+      a,
+      a:hover {
         color: color-yiq($wbu-color-primary);
       }
     }
