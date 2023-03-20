@@ -42,27 +42,30 @@
     background: $wbu-background;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     .testimony {
-      padding: $wbu-margin * 1.5 $wbu-margin;
+      padding: $wbu-margin * 3;
       max-width: 100%;
       width: 100%;
       &::before {
         content: "";
         height: 2px;
-        width: 55px;
+        width: 70px;
         display: block;
         margin-bottom: $wbu-margin;
         background: $wbu-color-primary;
       }
     }
     .title {
-      color: white;
+      color: color-yiq($wbu-background);
       font-weight: bold;
+      margin-bottom: $wbu-margin;
     }
     .slider-container {
       position: relative;
-      margin-top: $wbu-margin;
+      margin-bottom: $wbu-margin;
+      text-align: justify;
+      color: color-yiq($wbu-background);
       display: block;
       max-width: 100%;
       width: 100%;
@@ -70,15 +73,15 @@
       .speech {
         padding-right: $wbu-margin;
         line-height: 5rem;
-        color: white;
+        color: color-yiq($wbu-background);
         @include bp_h3();
       }
       .info {
         display: flex;
-        margin-top: $wbu-margin;
+        margin-bottom: $wbu-margin;
         align-items: center;
         .author {
-          color: $wbu-border-color;
+          color: color-yiq($wbu-background);
         }
         .company-name {
           padding: 0 0 0 $wbu-margin * 0.5;

@@ -3,32 +3,77 @@
 
 .safety-handler {
   overflow: hidden;
-}
-.security-service {
-  background: $wbu-background;
-  color: $wbu-border-color;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: $wbu-margin * 1.5;
-  padding-top: $space_inner_top;
-
-  .handler {
+  .security-service {
+    display: flex;
+    flex-direction: column;
+    background: $wbu-background;
+    color: $wbu-border-color;
     position: relative;
-    margin-top: $wbu-margin;
+    overflow: hidden;
+    padding: $wbu-margin;
+    //padding-bottom: $wbu-margin * 1.5;
+    //padding-top: $space_inner_top;
+    .image-block {
+      display: none;
+    }
+    .handler {
+      position: relative;
+      padding: $wbu-margin;
+      margin-bottom: $wbu-margin;
+      display: flex;
+      flex-direction: column;
+      align-items: justify;
+      justify-content: end;
+    }
+    .icon {
+      //position: absolute;
+      margin-bottom: $wbu-margin;
+      font-weight: bold;
+      text-align: justify;
+      display: inline-block;
+      /*position: relative;
+      padding: $wbu-margin;
+      margin-bottom: $wbu-margin;*/
+      //top: 65px;
+      //left: -130px;
+      opacity: 0.6;
+      svg {
+        width: 330px;
+        height: 330px;
+      }
+    }
+    .head-title {
+      margin-bottom: $wbu-margin;
+      font-weight: bold;
+      text-align: justify;
+      display: inline-block;
+    }
+  }
+  .reverse-class {
+    display: flex;
+    flex-direction: row;
+  }
+  .all-services {
+    margin-bottom: $wbu-margin;
     display: flex;
     align-items: center;
-
+    text-align: justify;
     justify-content: end;
-  }
-  .icon {
-    position: absolute;
-    top: 65px;
-    left: -130px;
-    opacity: 0.6;
-    color: $wbu-color-thirdly;
-    svg {
-      width: 330px;
-      height: 330px;
+    .list-services {
+      color: lighten($wbu-color-text, 30);
+      text-align: left;
+      padding-bottom: $wbu-margin;
+      .element {
+        list-style-type: disc;
+        display: flex;
+        padding-top: $wbu-margin * 0.5;
+        &::before {
+          content: "\2022";
+          color: $wbu-color-primary;
+          display: flex;
+          padding-right: $wbu-margin;
+        }
+      }
     }
   }
   .head-title {
@@ -49,29 +94,37 @@
     text-align: left;
     padding-bottom: $wbu-margin;
   }
-}
-.call-info {
-  background: $wbu-color-primary;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  padding: $wbu-margin * 2 $wbu-margin * 2;
-  padding-right: 0;
-  text-align: center;
-
-  .icon {
-    position: absolute;
-    top: 65px;
-    right: -150px;
-    opacity: 0.6;
-    color: rgba($wbu-border-color, 0.5);
-    svg {
-      width: 330px;
-      height: 330px;
+  &--reverse {
+    .reverse-class {
+      flex-direction: row-reverse;
+    }
+    .security-service {
+      .icon {
+        opacity: 1;
+      }
+    }
+    .call-info {
+      .icon {
+        opacity: 1;
+      }
+    }
+    .security-service {
+      padding: 0;
+      .handler,.head-title,.icon {
+        display: none;
+      }
+      .image-block {
+        display: block;
+        height: 100%;
+        min-height: 300px;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
+<<<<<<< HEAD
   .head-title {
     display: flex;
     align-items: flex-start;
@@ -82,5 +135,50 @@
     justify-content: start;
     align-items: flex-start;
     font-weight: bold;
+=======
+  &--image-right {
+    .security-service {
+      .icon {
+        opacity: 1;
+      }
+    }
+    .call-info {
+      padding: 0;
+      .icon, .head-title,  .phone-number {
+        display: none;
+      }
+      .image-block {
+        display: block;
+        height: 100%;
+        min-height: 300px;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &--image-left {
+    .call-info {
+      .icon {
+        opacity: 1;
+      }
+    }
+    .security-service {
+      padding: 0;
+      .handler,.head-title,.icon {
+        display: none;
+      }
+      .image-block {
+        display: block;
+        height: 100%;
+        min-height: 300px;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+>>>>>>> fcddcb5e0e455f92d1226d19873409b58f9ceba5
   }
 }

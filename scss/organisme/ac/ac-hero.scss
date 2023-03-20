@@ -13,11 +13,15 @@
   .content-text {
     padding-top: $space_bottom;
     padding-bottom: $space_bottom;
+    padding-right: $space_bottom;
     color: inherit;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
+    @include media-max("MD") {
+      padding-right: 2rem;
+    }
   }
 
   .subtitle {
@@ -36,6 +40,7 @@
 
   .description {
     margin-bottom: $space_bottom * 0.6;
+    text-align: justify;
   }
 
   .content-image {

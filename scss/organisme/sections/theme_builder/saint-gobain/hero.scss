@@ -41,19 +41,13 @@
       background: #fff;
     }
     &__title {
-      font-size: $wbu-h1-font-size-md;
       font-weight: bold;
       margin: $space_top * 0.5 auto $wbu-margin * 0.5;
       @include media-min(DD) {
-        font-size: $wbu-h1-font-size;
         margin-top: 0;
-      }
-      @include media-max(XS) {
-        font-size: $wbu-default-font-size * 1.5;
       }
     }
     &__small {
-      font-size: $wbu-default-font-size;
       font-weight: 700;
       margin: 0px 0 $wbu-margin;
     }
@@ -116,11 +110,9 @@
       }
       &__p {
         margin: 0;
-        font-size: $wbu-default-font-size * 0.65;
       }
       &__titre {
         font-weight: bold;
-        font-size: $wbu-default-font-size * 0.8;
       }
     }
     &--sm {

@@ -9,16 +9,14 @@
     padding-bottom:$space_bottom;
     padding-top:$space_bottom;
     &__title {
-        font-family: 'Lato' , sans-serif;
         position: relative;
         text-align: center;
         width: 100%;
         font-weight: $wbu-title-font-weight;
-        text-transform: uppercase;
+        text-transform: capitalize;
         padding-left: $wbu-margin * 2;
         padding-right: $wbu-margin * 2;
         margin-bottom: $wbu-margin;
-        color: $wbu-color-text;
         @include media-max(XX) {
             padding: 0;
             transition: 1s ease-in-out;
@@ -29,10 +27,8 @@
         };
     }
     &__subtitle {
-        font-family: 'Lato' , sans-serif;
         text-align: center;
-        color: $wbu-color-text;
-        text-transform: uppercase;
+        text-transform: capitalize;
         margin-bottom: $wbu-margin;
         padding-left: $wbu-margin * 2;
         padding-right: $wbu-margin * 2;
@@ -48,9 +44,7 @@
         }
     }
     &__author {
-        font-family: 'Kristi', cursive ;
         text-align: center;
-        color: $wbu-color-text;
         margin-bottom: $wbu-margin;
         padding-left: $wbu-margin * 2;
         padding-right: $wbu-margin * 2;

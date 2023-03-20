@@ -11,7 +11,7 @@
   margin: 0;
   &::before {
     content: "";
-    background-color: black;
+    background-color: $wbu-background;
     opacity: 0.2;
     width: 100%;
     height: 100%;
@@ -30,7 +30,7 @@
         max-width: 55rem;
       }
       @include bp_h3();
-      color: $wbu-border-color;
+      color: color-yiq($wbu-background);
       font-weight: 400;
       strong {
         color: white;
@@ -49,7 +49,6 @@
     justify-content: center;
     .link {
       color: $wbu-background;
-      font-size: $wbu-default-font-size;
       text-decoration: none;
       position: relative;
       background: $wbu-color-secondary;

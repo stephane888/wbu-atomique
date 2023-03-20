@@ -10,6 +10,7 @@
     overflow: hidden;
     &__logo {
         padding: $wbu-margin;
+        color: color-yiq($wbu-background);
         padding-left:0;
         text-transform: capitalize;
         img {
@@ -19,6 +20,7 @@
     &__description {
         margin-bottom: $wbu-margin;
         text-align: justify;
+        color: color-yiq($wbu-background);
     }
     .footer-col__socials {
         margin-bottom: $wbu-margin;

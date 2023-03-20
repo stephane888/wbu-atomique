@@ -9,7 +9,7 @@
     width: 100%;
     padding-left: $wbu-margin * 2;
     border-top: 0.1rem solid $wbu-color-boder;
-    background-color: $wbu-color-text;
+    background-color: $wbu-color-primary;
     margin-top: $wbu-margin;
     @include media-max(MD) {
         display: flex;
@@ -25,6 +25,7 @@
         display: flex;
         margin: $wbu-margin;
         margin-bottom: 0;
+        color: color-yiq($wbu-color-primary);
         //padding: $wbu-margin;
         padding-left: 0;
         width: 100%;
@@ -70,7 +71,7 @@
                 a {
                     text-decoration: none;
                     padding: 0;
-                    color: $wbu-color-boder; 
+                    color: $wbu-color-boder;
                 }
                 &__link {
                     text-decoration: none;

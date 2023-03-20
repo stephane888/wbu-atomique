@@ -52,18 +52,16 @@
     font-size: calc(1rem + 2.5vw);
     text-transform: uppercase;
     font-weight: bold;
-    color: black;
     transition: 0.3s;
     font-size: 5rem;
     padding-top: 1rem;
     //padding-left: 2rem;
     min-width: 0;
     a {
-      color: black;
       transition: 0.3s;
       &:hover {
         text-decoration: none;
-        color: lighten(black, 50);
+        color: lighten($wbu-background, 50);
       }
     }
 
@@ -97,9 +95,8 @@
         padding: 2.5rem 2rem;
       }
       text-transform: capitalize;
-      font-weight: bold;
+      font-weight: 500;
       display: block;
-      color: black;
       &:hover {
         background-color: $wbu-color-primary;
         color: color-yiq($wbu-color-primary);

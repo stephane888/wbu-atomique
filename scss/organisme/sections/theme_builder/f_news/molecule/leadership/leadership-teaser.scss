@@ -5,6 +5,9 @@
 .single-member-card {
   margin-bottom: $space_bottom;
   flex-direction: column;
+  padding-top: $wbu-margin;
+  padding-bottom: $wbu-margin;
+  background-color: rgba($wbu-background, 0.9);
   align-items: center;
   display: flex;
   .lutin {
@@ -12,22 +15,30 @@
     margin-bottom: $wbu-margin;
     .img-link {
       position: relative;
-      display: inline-block;
-      .__img {
-        border-radius: 100%;
-        width: 100%;
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &::before {
         content: "";
-        top: 0;
-        height: 100%;
+        top: 2rem;
         opacity: 0;
-        width: 100%;
         left: 0;
+        width: 300px;
+        height: 300px;
         border-radius: 100%;
+        cursor: pointer;
         background: $wbu-color-primary;
         position: absolute;
         transition: cubic-bezier(0.19, 1, 0.22, 1) 0.7s;
+      }
+      img {
+        border-radius: 100%;
+        margin-top: $wbu-margin;
+        margin-bottom: $wbu-margin;
+        width: 300px;
+        height: 300px;
+        object-fit: fill;
+        object-position: center center;
       }
       &:hover::before {
         opacity: 0.5;
@@ -35,14 +46,22 @@
     }
   }
   .member-role {
-    font-size: $wbu-default-font-size;
-    color: $wbu-color-text;
+    color: color-yiq(rgba($wbu-background, 0.9));
+    margin-bottom: $wbu-margin;
+    padding-left: $wbu-margin;
+    padding-right: $wbu-margin;
   }
   .member-name {
+      margin-bottom: $wbu-margin;
+      padding-left: $wbu-margin;
+      padding-right: $wbu-margin;
+      color: color-yiq(rgba($wbu-background, 0.9));
     .name {
-      color: rgba($wbu-background, 0.9);
+      color: color-yiq(rgba($wbu-background, 0.9));
+      margin-bottom: $wbu-margin;
+      padding-left: $wbu-margin;
+      padding-right: $wbu-margin;
       font-weight: $wbu-title-font-weight;
-      font-size: $wbu-h3-font-size-sm;
       text-decoration: none;
       transition: ease 0.3s;
       &:hover {
@@ -54,6 +73,10 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
+    color: color-yiq(rgba($wbu-background, 0.9));
+    margin-bottom: $wbu-margin;
+    padding-left: $wbu-margin;
+    padding-right: $wbu-margin;
     .icon {
       padding: 5px;
       .__svg {
