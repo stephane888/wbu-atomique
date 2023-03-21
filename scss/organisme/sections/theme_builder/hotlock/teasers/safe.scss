@@ -10,9 +10,7 @@
     color: $wbu-border-color;
     position: relative;
     overflow: hidden;
-    padding: $wbu-margin;
-    //padding-bottom: $wbu-margin * 1.5;
-    //padding-top: $space_inner_top;
+    padding: 0 $wbu-margin;
     .image-block {
       display: none;
     }
@@ -22,7 +20,7 @@
       margin-bottom: $wbu-margin;
       display: flex;
       flex-direction: column;
-      align-items: justify;
+      //align-items: justify; // Spaker cette valeur n'existe pas.
       justify-content: end;
     }
     .icon {
@@ -82,7 +80,74 @@
     margin-top: $space-inner-top;
     display: inline-block;
   }
+  // variante avec l'icone qui est partielement caché.
+  &--icon-partiel-hiden {
+    .security-service {
+      .handler {
+        flex-direction: row;
+        margin-bottom: 0;
+        padding: $wbu-margin;
+        @include media-min(DD) {
+          padding: $wbu-margin * 3 $wbu-margin * 2 $wbu-margin * 2 $wbu-margin *
+            2;
+        }
+      }
+      .head-title {
+        margin-top: 0;
+      }
+      .all-services {
+        margin-bottom: 0;
+      }
+      .icon {
+        position: absolute;
+        max-width: 300px;
+        width: 100%;
+        left: -140px;
+        bottom: auto;
+        top: 45%;
+        right: auto;
+        svg,
+        i {
+          width: 300px;
+          height: auto;
+        }
+      }
+    }
+    .call-info {
+      background-color: $wbu-color-primary;
+      .handler {
+        padding: $wbu-margin;
+        @include media-min(DD) {
+          padding: $wbu-margin * 3 $wbu-margin * 2 $wbu-margin * 2 $wbu-margin *
+            2;
+        }
+      }
+      .head-title {
+        margin-top: 0;
+      }
+      .icon {
+        position: absolute;
+        max-width: 300px;
+        width: 100%;
+        right: -140px;
+        left: auto;
+        bottom: auto;
+        top: 45%;
+        text-align: right;
+        svg,
+        i {
+          width: 300px;
+          height: auto;
+        }
+      }
+    }
+  }
 }
+// On recherche l'interet de ce block.
+// Les derivées sont present au niveax de drupal, donc c'est assez urgent.
+// hot_models/src/Plugin/Layout/Sections/HotModelsSafetyHandler.php
+// au niveau drupal on a 3 derivées ou sont utilisé ces derniers ?.
+/*
 .all-services {
   margin-top: $wbu-margin * 0.5;
   display: flex;
@@ -174,9 +239,5 @@
       }
     }
   }
-  &-icon-partiel-hiden {
-    .handler {
-      flex-direction: row;
-    }
-  }
 }
+*/
