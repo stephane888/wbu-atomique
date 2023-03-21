@@ -71,6 +71,12 @@
    */
   &.hasnotlink {
     padding: $wbu-margin * 0.75 $wbu-margin * 2;
+    &.htl-btn--sm {
+      padding: $wbu-margin * 0.5 $wbu-margin;
+    }
+    &.htl-btn--big {
+      padding: $wbu-margin $wbu-margin * 3;
+    }
   }
   // model1. (fade)
   &--fade {

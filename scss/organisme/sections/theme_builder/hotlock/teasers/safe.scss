@@ -110,7 +110,9 @@
     }
     .security-service {
       padding: 0;
-      .handler,.head-title,.icon {
+      .handler,
+      .head-title,
+      .icon {
         display: none;
       }
       .image-block {
@@ -124,18 +126,6 @@
       }
     }
   }
-<<<<<<< HEAD
-  .head-title {
-    display: flex;
-    align-items: flex-start;
-    justify-content: start;
-  }
-  .phone-number {
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    font-weight: bold;
-=======
   &--image-right {
     .security-service {
       .icon {
@@ -144,7 +134,9 @@
     }
     .call-info {
       padding: 0;
-      .icon, .head-title,  .phone-number {
+      .icon,
+      .head-title,
+      .phone-number {
         display: none;
       }
       .image-block {
@@ -166,7 +158,9 @@
     }
     .security-service {
       padding: 0;
-      .handler,.head-title,.icon {
+      .handler,
+      .head-title,
+      .icon {
         display: none;
       }
       .image-block {
@@ -179,6 +173,10 @@
         }
       }
     }
->>>>>>> fcddcb5e0e455f92d1226d19873409b58f9ceba5
+  }
+  &-icon-partiel-hiden {
+    .handler {
+      flex-direction: row;
+    }
   }
 }
