@@ -43,6 +43,7 @@
   position: relative;
   letter-spacing: 0.42px;
   text-transform: uppercase;
+  cursor: pointer;
   &::before {
     content: "";
     position: absolute;
@@ -108,9 +109,24 @@
     .portfolio-info {
       width: 100%;
       padding: 10px;
-      .price {
+      .pricing {
         justify-content: space-between;
       }
     }
+  }
+}
+.filter-active {
+  border: 1px solid #fff !important;
+  background-color: $wbu-color-thirdly;
+  color: $wbu-color-primary;
+}
+.price {
+  color: $wbu-color-secondary;
+}
+
+.name {
+  &:hover {
+    color: $wbu-color-secondary;
+    cursor: pointer;
   }
 }
