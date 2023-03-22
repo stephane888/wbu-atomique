@@ -2,16 +2,16 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 
 .security-info-handler {
+  background: url("https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_cta2.jpg");
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: cover !important;
   overflow: hidden;
 
   .safety-text {
     padding: $space-bottom * 1.5 0;
     position: relative;
     min-height: 60vh;
-    background: url("https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_cta2.jpg");
-    background-position: center !important;
-    background-repeat: no-repeat;
-    background-size: cover !important;
     display: flex;
     justify-content: center;
     align-items: center;
