@@ -1,0 +1,33 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.field-buttons {
+  .item {
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    .svg {
+      padding: $wbu-margin * 0.7;
+      min-width: $wbu-margin * 2.5;
+      cursor: pointer;
+    }
+    .text {
+      padding-right: $wbu-margin * 0.7;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  &--background {
+    background: $wbu-background;
+    color: color-yiq($wbu-background);
+    .item {
+      border-right: 2px solid darken($wbu-background, 15%);
+    }
+  }
+  &--primary {
+    background: $wbu-color-primary;
+    color: color-yiq($wbu-color-primary);
+    .item {
+      border-right: 2px solid darken($wbu-color-primary, 15%);
+    }
+  }
+}
