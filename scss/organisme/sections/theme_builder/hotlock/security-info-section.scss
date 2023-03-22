@@ -7,10 +7,13 @@
   background-repeat: no-repeat;
   background-size: cover !important;
   overflow: hidden;
+  position: relative;
+  z-index: 0;
 
   .safety-text {
     padding: $space-bottom * 1.5 0;
     position: relative;
+    z-index: 1;
     min-height: 60vh;
     display: flex;
     justify-content: center;
