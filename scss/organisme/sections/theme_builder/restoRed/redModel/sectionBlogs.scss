@@ -1,0 +1,110 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../restoRedTeasers/reservationTeaser.scss";
+.teaser_title_name {
+  padding-bottom: 55px;
+  .section_reservation_subtitle {
+    color: $wbu-color-secondary;
+  }
+  .section_reservation_title {
+    color: $wbu-color-thirdly;
+  }
+}
+
+.section_blogs {
+  padding: 50px 0px;
+}
+.blog_box {
+  .image_box {
+    position: relative;
+    z-index: 2;
+    &::before {
+      content: "";
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+      transition: all 400ms linear 0s;
+    }
+  }
+  .text_box {
+    padding: 0px 20px;
+    position: relative;
+    top: -50px;
+    z-index: 3;
+    transition: all 400ms linear 0s;
+    .text_box_container {
+      background: #fff;
+      text-align: center;
+      padding: 0px 20px;
+      border: 1px solid #dfdfdf;
+      padding-bottom: 20px;
+      .text_box_btn {
+        .read_mor_btn {
+          background: #b10400;
+          font-family: "Cantata One", serif;
+          text-transform: uppercase;
+          font-size: 12px;
+          color: #fff;
+          line-height: 40px;
+          padding: 0px 10px;
+          display: inline-block;
+          position: relative;
+          top: -20px;
+          &::before {
+            border: none;
+          }
+        }
+      }
+      .text_box_title {
+        font-size: 18px;
+        color: #292929;
+        font-family: "Cantata One", serif;
+        padding-top: 7px;
+      }
+      .text_box_description {
+        font-size: 14px;
+        line-height: 26px;
+        font-family: "Open Sans", sans-serif;
+        color: #666666;
+        padding: 20px 0px;
+      }
+      .text_box_date {
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          color: #666666;
+          text-decoration: none;
+        }
+        &:hover {
+          a {
+            color: $wbu-color-secondary;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    .image_box {
+      &::before {
+        transform: scaleY(1);
+      }
+    }
+    .text_box {
+      top: -40px;
+    }
+  }
+}
