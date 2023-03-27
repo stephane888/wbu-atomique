@@ -1,10 +1,7 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
-@use "../../../../../wbu-ressources-clean.scss" as *;
-@use "../../../../../variables" as *;
+@use "./default-class.scss";
 .section-hobbies {
-  padding-bottom: $wbu-margin * 2;
-  padding-top: $wbu-margin;
   .coordonnées {
     .field-svg {
       width: 30%;

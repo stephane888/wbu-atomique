@@ -1,0 +1,13 @@
+/** 
+* Contient une liste de class par defaut, utilisé dans la construction de ce model.
+*/
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+.cv-budapest-section-space {
+  padding-bottom: $wbu-margin * 2;
+  padding-top: $wbu-margin;
+}
+
+.cv-budapest-section-space-right {
+  margin-right: $wbu-margin * 2;
+}

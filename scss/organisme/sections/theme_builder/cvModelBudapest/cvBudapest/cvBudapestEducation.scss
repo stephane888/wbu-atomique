@@ -1,8 +1,7 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
+@use "./default-class.scss";
 .section-education {
-  padding-bottom: $wbu-margin * 2;
-  padding-top: $wbu-margin;
   .experience-group {
     :nth-last-child(1) {
       margin-bottom: 0 !important;
