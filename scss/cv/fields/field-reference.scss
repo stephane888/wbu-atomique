@@ -2,25 +2,21 @@
 .field-references {
   .reference-type {
     margin-bottom: $wbu-margin;
-    .ref {
-      margin-bottom: 0;
 
-      .ref-num {
-        margin-left: $wbu-margin * 0.5;
+    .ref {
+      .ref-name {
+        margin-right: $wbu-margin * 0.5;
       }
     }
-    :nth-last-child(1) {
-      margin-bottom: 0;
-      margin-top: 0;
-    }
-    :nth-child(1) {
+
+    .reference-name {
       margin-bottom: 0;
     }
     .name {
       margin-bottom: $wbu-margin * 0.5;
     }
   }
-  :nth-last-child(1) {
+  .reference-type:last-child {
     margin-bottom: 0;
   }
 }
