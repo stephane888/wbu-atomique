@@ -3,7 +3,7 @@
   .reference-type {
     margin-bottom: $wbu-margin;
     .ref {
-      margin-top: $wbu-margin * 0.5;
+      margin-bottom: 0;
 
       .ref-num {
         margin-left: $wbu-margin * 0.5;
@@ -15,6 +15,9 @@
     }
     :nth-child(1) {
       margin-bottom: 0;
+    }
+    .name {
+      margin-bottom: $wbu-margin * 0.5;
     }
   }
   :nth-last-child(1) {
