@@ -33,16 +33,18 @@
   }
   // Derivée icon bg couleur background.
   &.icon-bg-background {
-    border-bottom: 1px solid rgba($wbu-background, 0.3);
-    &:last-child {
-      border-bottom: none;
-    }
-    .icon {
-      background-color: $wbu-background;
-      padding: $wbu-margin * 0.25;
-      color: color-yiq($wbu-background);
-      svg {
-        fill: color-yiq($wbu-background);
+    .field-svg {
+      border-bottom: 1px solid rgba($wbu-background, 0.3);
+      &:last-child {
+        border-bottom: none;
+      }
+      .icon {
+        background-color: $wbu-background;
+        padding: $wbu-margin * 0.25;
+        color: color-yiq($wbu-background);
+        svg {
+          fill: color-yiq($wbu-background);
+        }
       }
     }
   }
