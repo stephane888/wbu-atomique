@@ -1,7 +1,7 @@
 @use "../../wbu-ressources-clean.scss" as *;
 .field-skill-region {
-  margin: $wbu-margin * 0.5 0;
-  padding-right: 0;
+  margin-bottom: $wbu-margin;
+
   .text {
     width: 30%;
   }
