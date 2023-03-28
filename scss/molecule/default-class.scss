@@ -130,6 +130,9 @@ form {
     padding-left: 0;
   }
 }
+/**
+ * Permet de couvrir tout une zone avec un lien. le prent doit avoir la classe position-relative ou utilisé la proprieté "position:relative".
+ */
 .cover-link {
   &::before {
     content: "";
@@ -140,6 +143,9 @@ form {
     top: 0;
   }
 }
+/**
+ * Permet d'ajouter le cover sur un section, il faut completer avec une variante opacity-before-{X} afin d"ajuser l'opacité.
+ */
 .cover-bg-theme {
   position: relative;
   z-index: 0;
@@ -158,6 +164,13 @@ form {
       content: "";
       display: none;
     }
+  }
+  /**
+   * rendre le contenu en position relatif + un z-index.
+   */
+  > * {
+    position: relative;
+    z-index: 1;
   }
 }
 .opacity-before-07 {
@@ -189,6 +202,9 @@ form {
   }
 }
 
+/**
+ * Pour center une video dans une section.
+ */
 .background-local-video {
   overflow: hidden;
   position: relative;

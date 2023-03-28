@@ -1,12 +1,84 @@
 @use "../../wbu-ressources-clean.scss" as *;
-
-.field-svg {
-  margin-top: $wbu-margin * 0.5;
-  .icon {
-    margin-right: $wbu-margin;
-    svg {
-      width: 25px;
-      height: 25px;
+.fields-svg {
+  .field-svg {
+    margin-top: $wbu-margin * 0.5;
+    .icon {
+      margin-right: $wbu-margin;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+      }
+    }
+  }
+  // Derivée icon bg couleur principal.
+  &.icon-bg-primary {
+    .field-svg {
+      border-bottom: 1px solid rgba($wbu-color-primary, 0.3);
+      &:last-child {
+        border-bottom: none;
+      }
+      .icon {
+        background-color: $wbu-color-primary;
+        padding: $wbu-margin * 0.25;
+        color: color-yiq($wbu-color-primary);
+        svg {
+          fill: color-yiq($wbu-color-primary);
+        }
+      }
+    }
+  }
+  // Derivée icon bg couleur background.
+  &.icon-bg-background {
+    .field-svg {
+      border-bottom: 1px solid rgba($wbu-background, 0.3);
+      &:last-child {
+        border-bottom: none;
+      }
+      .icon {
+        background-color: $wbu-background;
+        padding: $wbu-margin * 0.25;
+        color: color-yiq($wbu-background);
+        svg {
+          fill: color-yiq($wbu-background);
+        }
+      }
+    }
+  }
+  // Variant small
+  &.icon-small {
+    .field-svg {
+      &:nth-child(n + 2) {
+        margin-top: $wbu-margin * 0.2;
+      }
+      .icon {
+        width: 25px;
+        height: 25px;
+        svg {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+  // Variant big
+  &.icon-big {
+    .field-svg {
+      margin-top: $wbu-margin;
+      &:nth-child(n + 2) {
+        margin-top: $wbu-margin * 0.5;
+      }
+      .icon {
+        width: 45px;
+        height: 45px;
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
     }
   }
 }

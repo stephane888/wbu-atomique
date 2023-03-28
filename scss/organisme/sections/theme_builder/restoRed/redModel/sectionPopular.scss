@@ -99,7 +99,10 @@
   background-color: white;
   .portfolio-item {
     margin: 20px 0;
-    width: 50%;
+    width: 100%;
+    @include media-min(DD) {
+      width: 50%;
+    }
   }
   .portfolio-wrap {
     display: flex;
