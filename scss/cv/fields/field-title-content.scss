@@ -1,0 +1,13 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.field-title {
+  margin-bottom: $wbu-margin;
+  :nth-last-child(1) {
+    margin-bottom: 0;
+  }
+  .field-content {
+    margin-bottom: $wbu-margin;
+    :nth-child(1) {
+      margin: 0;
+    }
+  }
+}
