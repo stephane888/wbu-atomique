@@ -1,0 +1,12 @@
+@use "../../wbu-ressources-clean.scss" as *;
+.field-link {
+  :nth-last-child(1) {
+    margin-bottom: 0 !important;
+  }
+  .lien {
+    margin-bottom: $wbu-margin;
+    a {
+      word-break: break-word;
+    }
+  }
+}

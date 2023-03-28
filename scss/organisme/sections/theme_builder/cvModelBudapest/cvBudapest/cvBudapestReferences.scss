@@ -1,29 +1,4 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
 @use "./default-class.scss";
-.section-references {
-  .references-group {
-    :nth-last-child(1) {
-      margin-bottom: 0 !important;
-    }
-    .reference-type {
-      :nth-last-child(1) {
-        margin-bottom: 0 !important;
-        margin-top: 0 !important;
-      }
-      :nth-child(1) {
-        margin-bottom: 0 !important;
-      }
-
-      margin-top: $wbu-margin * 0.5;
-      margin-bottom: $wbu-margin;
-      .ref {
-        margin-top: $wbu-margin * 0.5;
-
-        .ref-num {
-          margin-left: $wbu-margin * 0.5;
-        }
-      }
-    }
-  }
-}
+@use "../../../../../cv/fields/field-reference.scss";

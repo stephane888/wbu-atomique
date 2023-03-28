@@ -1,16 +1,4 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
 @use "./default-class.scss";
-.section-liens {
-  .link-group {
-    :nth-last-child(1) {
-      margin-bottom: 0 !important;
-    }
-    .lien {
-      margin-bottom: $wbu-margin;
-      a {
-        word-break: break-word;
-      }
-    }
-  }
-}
+@use "../../../../../cv/fields/field-link.scss";
