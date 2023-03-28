@@ -1,17 +1,6 @@
 @use "../../wbu-ressources-clean.scss" as *;
 .field-references {
-  :nth-last-child(1) {
-    margin-bottom: 0 !important;
-  }
   .reference-type {
-    :nth-last-child(1) {
-      margin-bottom: 0 !important;
-      margin-top: 0 !important;
-    }
-    :nth-child(1) {
-      margin-bottom: 0 !important;
-    }
-
     margin-top: $wbu-margin * 0.5;
     margin-bottom: $wbu-margin;
     .ref {
@@ -21,5 +10,15 @@
         margin-left: $wbu-margin * 0.5;
       }
     }
+    :nth-last-child(1) {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    :nth-child(1) {
+      margin-bottom: 0;
+    }
+  }
+  :nth-last-child(1) {
+    margin-bottom: 0;
   }
 }

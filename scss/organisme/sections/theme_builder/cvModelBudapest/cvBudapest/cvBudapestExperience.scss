@@ -1,16 +1,4 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
 @use "./default-class.scss";
-.section-experience {
-  .experience-group {
-    :nth-last-child(1) {
-      margin-bottom: 0 !important;
-    }
-    .experience {
-      :nth-child(1) {
-        margin: 0 !important;
-      }
-      margin-bottom: $wbu-margin;
-    }
-  }
-}
+@use "../../../../../cv/fields/field-title-content.scss";

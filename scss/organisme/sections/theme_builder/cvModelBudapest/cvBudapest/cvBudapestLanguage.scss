@@ -3,21 +3,11 @@
 @use "./default-class.scss";
 .section-language {
   .language-group {
-    :nth-last-child(1) {
-      margin-bottom: 0 !important;
-    }
-    .language {
-      margin: 0;
-      padding: 0;
-      margin-bottom: $wbu-margin;
-    }
-
-    .progress {
-      width: auto;
-      margin-top: $wbu-margin * 0.25;
-    }
     .text {
       width: 100%;
+    }
+    :nth-last-child(1) {
+      margin-bottom: 0;
     }
   }
 }
