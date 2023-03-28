@@ -1,11 +1,17 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../restoRedTeasers/service.scss";
-.section-service {
+.restored_section-service {
   padding: 164px 0px 100px 0;
+  @include media-max(XX) {
+    padding-bottom: 50px;
+  }
 }
 
 @media (max-width: 992px) {
-  .service_item {
+  .restored_service_item {
     margin-bottom: 80px;
   }
+}
+.restored_text {
+  padding: 10px 20px;
 }

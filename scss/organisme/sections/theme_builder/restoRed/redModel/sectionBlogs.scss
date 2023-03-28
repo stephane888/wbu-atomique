@@ -1,16 +1,17 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../restoRedTeasers/reservationTeaser.scss";
+
 .teaser_title_name {
   padding-bottom: 55px;
-  .section_reservation_subtitle {
-    color: $wbu-color-secondary;
+  .blog_subtitle {
+    color: $wbu-color-secondary !important;
   }
-  .section_reservation_title {
-    color: $wbu-color-thirdly;
+  .blog_title {
+    color: $wbu-color-thirdly !important;
   }
 }
 
-.section_blogs {
+.restored_section_blogs {
   padding: 50px 0px;
 }
 .blog_box {

@@ -1,6 +1,6 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../restoRedTeasers/reservationTeaser.scss";
-.section_menu_repas {
+.restored_section_menu_repas {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,11 +11,11 @@
   .teaser_title_name {
     padding-bottom: 60px;
     text-align: center;
-    .section_reservation_subtitle {
-      color: $wbu-color-secondary;
+    .menu_subtitle {
+      color: $wbu-color-secondary !important;
     }
-    .section_reservation_title {
-      color: $wbu-color-thirdly;
+    .menu_title {
+      color: $wbu-color-thirdly !important;
     }
   }
 
@@ -43,10 +43,6 @@
       transition: all 200ms ease-in;
     }
     &:hover {
-      .menu_card_name,
-      .menu_card_price {
-        display: unset;
-      }
       .menu_price {
         z-index: 22;
       }
@@ -79,8 +75,11 @@
       color: $wbu-color-primary;
       width: 100%;
       z-index: 22;
-      .menu_card_name {
+      .menu_card_name,
+      .menu_card_price {
         padding-right: 5px;
+        width: 100%;
+        text-decoration: none;
       }
     }
   }

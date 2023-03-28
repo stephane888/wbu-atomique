@@ -1,6 +1,6 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../restoRedTeasers/reservationTeaser.scss";
-.section_reservation {
+.restored_section_reservation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,15 @@
   background-attachment: fixed;
   background-position: center;
   height: 428px;
+  position: relative;
   * {
+    z-index: 2;
     color: $wbu-color-primary;
+  }
+  .section_reservation_description {
+    @include media-max(XX) {
+      padding: 0 10px;
+      text-align: center;
+    }
   }
 }

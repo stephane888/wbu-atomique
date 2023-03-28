@@ -2,7 +2,7 @@
 @use "../restoRedTeasers/reservationTeaser.scss";
 @use "../restoRedTeasers/service.scss";
 
-.section_Popular {
+.restored_section_Popular {
   background-size: cover;
   background-size: cover;
   padding: 100px 0px;
@@ -17,6 +17,10 @@
     left: 0px;
     top: 0px;
     z-index: -1;
+  }
+  .section_reservation_subtitle,
+  .section_reservation_title {
+    color: $wbu-color-primary !important;
   }
 }
 

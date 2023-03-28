@@ -1,8 +1,13 @@
-@use "../../../../../variables" as *;
-.hero_section_wrap {
+//@use "../../../../../variables" as *;
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.restored_hero_section_wrap {
+  @include media-max(XX) {
+    height: 50%;
+    width: 100% !important;
+  }
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   background-image: url("https://preview.colorlib.com/theme/redcayenne/img/home-slider/slider-1.jpg.webp");
   background-size: cover;
@@ -13,6 +18,9 @@
     height: 380px;
     width: 660px;
     position: relative;
+    @include media-max(XX) {
+      background: none;
+    }
     .wrap_element_box {
       border: 1px solid $wbu-color-secondary;
       width: 640px;
@@ -20,6 +28,9 @@
       position: absolute;
       left: 11px;
       top: 11px;
+      @include media-max(XX) {
+        border: none;
+      }
       * {
         text-align: center;
       }

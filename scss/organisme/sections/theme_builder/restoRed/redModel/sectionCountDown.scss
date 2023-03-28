@@ -1,11 +1,25 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../restoRedTeasers/reservationTeaser.scss";
 @use "../../../../../../../theme-builder/src/restoRed/variables";
-.section_count_down {
+.restored_section_count_down {
   background-image: url("https://preview.colorlib.com/theme/redcayenne/img/next-event/next-event-bg.jpg.webp");
   background-size: cover;
   background-position: center;
   padding: 100px 0;
+  position: relative;
+  .count_subtitle {
+    color: $wbu-color-primary !important;
+    position: relative;
+    z-index: 11;
+  }
+  .count_title {
+    color: $wbu-color-secondary !important;
+    position: relative;
+    z-index: 11;
+  }
+  * {
+    z-index: 1;
+  }
   .count_down_event {
     background: $wbu-color-primary;
     padding-left: 40px;

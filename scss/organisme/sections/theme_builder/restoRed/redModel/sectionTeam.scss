@@ -1,8 +1,14 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../restoRedTeasers/reservationTeaser.scss";
 @use "../restoRedTeasers/service.scss";
-.section_menu_repas {
+.restored_section_menu_repas {
   position: relative;
+  .team_subtitle {
+    color: $wbu-color-thirdly !important;
+  }
+  .team_title {
+    color: $wbu-color-secondary !important;
+  }
 }
 .menu_price {
   max-height: 80px;
@@ -102,11 +108,11 @@
       opacity: 1 !important;
       z-index: 22;
     }
-    .menu_card_name {
-      display: none;
+    .name_hover {
+      display: none !important;
     }
-    .menu_card_price {
-      display: none;
+    .name_hover {
+      display: none !important;
     }
     .social-network {
       display: flex;
@@ -143,6 +149,9 @@
       -ms-transform: scale(1);
       transform: scale(1);
     }
+    .hover {
+      display: none;
+    }
   }
   .menu_image {
     position: relative;
@@ -160,12 +169,12 @@
         color: #fff;
         border: 1px solid #b10400;
         font-family: "Cantata One", serif;
-        font-size: 18px;
+        font-size: 11px;
         text-transform: uppercase;
-        padding: 0px 12px;
+        padding: 14px 12px;
         display: inline-block;
-        line-height: 40px;
-        margin: 60px 0px 30px 0px;
+        /* line-height: 40px; */
+        margin: 16px 0px 30px 0px;
       }
     }
     img {
