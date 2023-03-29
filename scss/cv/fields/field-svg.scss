@@ -1,7 +1,6 @@
 @use "../../wbu-ressources-clean.scss" as *;
 .fields-svg {
   .field-svg {
-    margin-top: $wbu-margin * 0.5;
     .icon {
       margin-right: $wbu-margin;
       display: flex;
@@ -81,25 +80,43 @@
       }
     }
   }
-  //dérivé pour la section hobbies
-  &.field-svg-square {
-    width: 30%;
-    margin-top: $wbu-margin * 0.05;
-    .icon {
-      border: 1px solid $wbu-color-thirdly;
-      background-color: white;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: $wbu-margin * 0.5;
-      svg {
-        width: 15px;
+  // Dérivé pour la section hobbies
+  &.field-svg-square-background,
+  &.field-svg-square-primary {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    .field-svg {
+      margin-bottom: $wbu-margin;
+      width: 100%;
+      max-width: 153px;
+      .icon {
+        border: 1px solid $wbu-background;
+        background-color: white;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $wbu-margin * 0.5;
+        svg {
+          width: 15px;
+          fill: $wbu-background;
+        }
+        .text {
+          word-break: break-word;
+        }
       }
-      .text {
-        color: $wbu-color-thirdly;
-        word-break: break-word;
+    }
+  }
+  //
+  &.field-svg-square-primary {
+    .field-svg {
+      .icon {
+        border-color: $wbu-color-primary;
+        svg {
+          fill: $wbu-color-primary;
+        }
       }
     }
   }
