@@ -12,6 +12,18 @@
         display: inline-block;
       }
     }
+    /**
+     * Les balises SVG ne sont pas encore rendu par le module de PDF, on les masque en attendant.
+     */
+    .icon {
+      height: $wbu-margin * 0.5 !important;
+      width: $wbu-margin * 0.5 !important;
+      background-color: $wbu-background !important;
+      background: $wbu-background !important;
+      line-height: 1 !important;
+      border-radius: $wbu-margin * 0.25;
+      border: none !important;
+    }
   }
   // Derivée icon bg couleur principal.
   &.icon-bg-primary {
