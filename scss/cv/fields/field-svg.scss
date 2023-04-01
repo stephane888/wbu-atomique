@@ -24,6 +24,8 @@
       border-radius: $wbu-margin * 0.25;
       border: none !important;
       padding: $wbu-margin * 0.45 !important;
+      clip: unset;
+      clip-path: none;
     }
   }
   // Derivée icon bg couleur principal.
