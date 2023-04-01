@@ -26,6 +26,9 @@
       padding: $wbu-margin * 0.45 !important;
       clip: unset;
       clip-path: none;
+      svg {
+        display: none !important;
+      }
     }
   }
   // Derivée icon bg couleur principal.
