@@ -1,0 +1,18 @@
+/** 
+* Contient une liste de class par defaut, utilisé dans la construction de ce model.
+*/
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+.cv-carla-section-space {
+  padding-bottom: $wbu-margin * 2;
+  margin-right: $wbu-margin * 2;
+  margin-left: $wbu-margin * 2;
+}
+.title-border {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: $wbu-margin * 0.5 0;
+  margin-bottom: $wbu-margin * 1.5;
+  letter-spacing: 0.5rem;
+  font-weight: bolder;
+}

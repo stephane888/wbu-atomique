@@ -10,6 +10,10 @@
       background-color: rgba(23, 23, 29, 0.897);
       margin: 0;
     }
+    //dérivé pour cvmodele carla couleur sur le progress bar
+    .niveau-color-gold {
+      background-color: $wbu-color-primary;
+    }
   }
   .pourcentage {
     width: 10%;

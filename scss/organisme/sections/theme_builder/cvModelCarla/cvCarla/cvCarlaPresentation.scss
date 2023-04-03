@@ -3,6 +3,7 @@
 
 .presentation {
   background-color: $wbu-background;
+  padding: $wbu-margin * 2 $wbu-margin * 0.5;
   .name {
     letter-spacing: $wbu-margin * 0.25;
   }
@@ -27,22 +28,5 @@
   .initial {
     color: $wbu-color-primary;
     letter-spacing: $wbu-margin * 0.25;
-  }
-  .coordonnées {
-    .infos {
-      margin-bottom: $wbu-margin * 2;
-      margin-top: $wbu-margin;
-      .icon {
-        margin: $wbu-margin * 0.5 0;
-        svg {
-          :nth-child(1) {
-            fill: $wbu-color-primary;
-          }
-        }
-      }
-      .text {
-        color: white;
-      }
-    }
   }
 }

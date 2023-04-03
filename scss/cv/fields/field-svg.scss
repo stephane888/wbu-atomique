@@ -120,4 +120,22 @@
       }
     }
   }
+  //dérivé pour la section presentation dans cv modelcarla
+  &.fields-svg {
+    .field-svg {
+      margin-bottom: $wbu-margin * 2;
+      margin-top: $wbu-margin;
+      .icon {
+        margin: $wbu-margin * 0.5 0;
+        svg {
+          :nth-child(1) {
+            fill: $wbu-color-primary;
+          }
+        }
+      }
+      .text {
+        color: white;
+      }
+    }
+  }
 }

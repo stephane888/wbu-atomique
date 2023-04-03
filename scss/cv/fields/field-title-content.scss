@@ -9,4 +9,22 @@
   .field-content:last-child {
     margin-bottom: 0;
   }
+
+  //dérivé pour cvmodelcarla modification de couleur
+  .field-content-gold {
+    margin-bottom: $wbu-margin;
+    :nth-child(1) {
+      margin: 0;
+    }
+    .time {
+      color: $wbu-color-primary;
+      letter-spacing: $wbu-margin * 0.1;
+    }
+    .school {
+      letter-spacing: $wbu-margin * 0.25;
+    }
+  }
+  .field-content-gold:last-child {
+    margin-bottom: 0;
+  }
 }
