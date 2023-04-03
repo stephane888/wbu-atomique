@@ -2,7 +2,7 @@
 @use "../../../../../variables" as *;
 
 .section-image {
-  margin: $wbu-margin;
+  margin-top: $wbu-margin * 2;
 }
 .sous-document-primaire {
   width: 40%;

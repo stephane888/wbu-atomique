@@ -10,8 +10,23 @@
     margin-bottom: 0;
   }
 
+  .field-content:last-child {
+    margin-bottom: 0;
+  }
+}
+.field-title-primary {
+  .field-content {
+    margin-bottom: $wbu-margin;
+    :nth-child(1) {
+      margin: 0;
+    }
+  }
+  .field-content:last-child {
+    margin-bottom: 0;
+  }
+
   //dérivé pour cvmodelcarla modification de couleur
-  .field-content-gold {
+  .field-content {
     margin-bottom: $wbu-margin;
     :nth-child(1) {
       margin: 0;
@@ -24,7 +39,7 @@
       letter-spacing: $wbu-margin * 0.25;
     }
   }
-  .field-content-gold:last-child {
+  .field-content:last-child {
     margin-bottom: 0;
   }
 }
