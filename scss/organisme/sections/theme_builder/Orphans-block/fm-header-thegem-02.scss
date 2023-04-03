@@ -32,6 +32,7 @@
     display: flex;
     width: auto;
     justify-content: space-between;
+    align-items: center;
   }
   .page-linker {
     display: flex;
@@ -55,12 +56,20 @@
   }
   //ceci c'est uniquement au cas ou ou le module lang-dropdown est activé
   .block-lang-dropdown {
-    form select {
-      max-width: 120px;
-      background-color: transparent;
-      color: color-yiq($wbu-background);
-      option {
-        background-color: $wbu-background;
+    form.lang-dropdown-form {
+      display: flex;
+      align-items: baseline;
+      .js-form-item {
+        margin-bottom: 0 !important;
+      }
+      select {
+        max-width: 120px;
+        background-color: transparent;
+
+        color: color-yiq($wbu-background);
+        option {
+          background-color: $wbu-background;
+        }
       }
     }
   }
