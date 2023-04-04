@@ -17,10 +17,8 @@
     border: 2px solid color-yiq($wbu-color-primary);
 
     a {
-      &:hover {
-        text-decoration: none;
-        color: $wbu-color-primary;
-      }
+      text-decoration: none;
+      color: $wbu-color-primary;
     }
   }
 
