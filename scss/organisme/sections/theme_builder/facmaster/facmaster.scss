@@ -3,85 +3,60 @@
 @use "../../../../defaut/model/custom_bp.scss";
 
 .facmaster-coming-soon {
-  height: 100vh;
-  min-height: 600px;
+  min-height: 100vh;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
-  &:before {
-    content: "";
-    background: rgba(28, 13, 39, 0.5);
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    top: auto;
-    width: auto;
-    height: 100%;
-  }
+  padding: $wbu-margin * 9 0 0 0;
+  color: color-yiq($wbu-background);
+  flex-direction: column;
+
   .facmaster-coming-soon-container {
     z-index: 22;
     .coming-soon-text-element {
       margin-bottom: 60px;
       .coming-soon-title {
-        color: $wbu-color-primary;
         text-shadow: rgba(255, 255, 255, 0.4) 0px 9px 16px;
-        margin-bottom: 31px;
+        margin-bottom: $wbu-margin * 1.5;
         letter-spacing: 9;
       }
       .coming-soon-subtitle {
-        color: $wbu-color-secondary;
         text-transform: uppercase;
         letter-spacing: 0.03em;
-        width: 600px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 20px;
-        @media only screen and (max-width: $MS_debut) {
-          width: 500px;
-        }
-        @media only screen and (max-width: $DD_debut) {
-          width: 400px;
+        color: $wbu-color-primary;
+        //
+        @include media-min(DD) {
+          max-width: 600;
         }
       }
       .coming-soon-description {
-        color: $wbu-color-primary;
-        width: 500px;
+        // width: 500px;
         margin-left: auto;
         margin-right: auto;
-        @media only screen and (max-width: $MS_debut) {
-          width: 400px;
-        }
-        @media only screen and (max-width: $DD_debut) {
-          width: 300px;
+        @include media-min(DD) {
+          max-width: 500;
         }
       }
     }
     .coming-soon-count {
+      margin-bottom: $wbu-margin * 2;
       .count {
         text-align: center;
         //padding: 0 -15px;
         margin-bottom: 0 !important;
       }
-      .demo_element {
-        display: flex;
-        text-align: center;
-        // padding: 17px 0px;
-        color: $wbu-color-primary;
-
-        //justify-content: space-around;
-        flex-wrap: nowrap;
-      }
       .set {
-        margin-right: 20px;
         position: relative;
+        margin-bottom: $wbu-margin * 1.5;
 
         &::before {
           content: "";
-          background: rgba(80, 77, 77, 0.5);
+          background: rgba(color-yiq($wbu-background), 0.2);
           position: absolute;
           left: 0px;
           right: 0px;
@@ -91,10 +66,7 @@
           height: 100%;
         }
       }
-      .col-md-3 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
+
       .time {
         padding: 60px 10px;
         z-index: 2;
@@ -102,13 +74,16 @@
       }
       .letter {
         text-transform: uppercase;
-        background-color: $wbu-color-primary;
-        color: $wbu-color-thirdly;
+        background-color: color-yiq($wbu-background);
+        color: $wbu-background;
         padding: 20px 10px;
         margin-bottom: 0;
         position: relative;
         z-index: 2;
       }
     }
+  }
+  .coming-soon-copy-right {
+    //
   }
 }
