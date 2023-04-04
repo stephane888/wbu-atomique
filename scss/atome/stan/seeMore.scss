@@ -9,8 +9,11 @@
   line-height: 14px;
   width: fit-content;
   margin-bottom: $wbu-margin;
-  //margin-top: $wbu-margin;
   cursor: pointer;
+
+  a {
+    color: color-yiq($wbu-color-primary);
+  }
 
   a {
     &:hover {
