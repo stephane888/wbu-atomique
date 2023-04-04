@@ -8,10 +8,11 @@
   padding-top: $space_top;
   padding-bottom: $space_bottom;
   z-index: 2;
+
   &::before {
     content: "";
     position: absolute;
-    background-color: rgba($color: $wbu-background, $alpha: 0.52);
+    background-color: rgba($color: $wbu-background, $alpha: 0.2);
     top: 0;
     left: 0;
     right: 0;
@@ -24,6 +25,7 @@
     color: white;
     background: transparent;
     border-color: #fff;
+
     a {
       //color: white;
     }
@@ -43,6 +45,7 @@
   .row {
     padding-top: $wbu-margin;
     padding-bottom: $wbu-margin;
+
     @include media-min("DD") {
       padding-top: $wbu-margin * 2;
       padding-bottom: $wbu-margin * 2;
