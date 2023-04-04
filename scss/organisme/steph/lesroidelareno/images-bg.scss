@@ -24,13 +24,9 @@
 
   .seeMore {
     display: inline-block;
-    color: white;
-    background: transparent;
-    border-color: #fff;
-
-    a {
-      //color: white;
-    }
+    color: color-yiq($wbu-background); //white;
+    background: $wbu-background; //transparent;
+    border-color: $wbu-background;
   }
 
   .titre {
