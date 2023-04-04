@@ -7,10 +7,15 @@
   padding: $wbu-margin;
   font-weight: 700;
   line-height: 14px;
+  text-transform: uppercase;
   width: fit-content;
   margin-bottom: $wbu-margin;
-  //margin-top: $wbu-margin;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
+
+  a {
+    color: color-yiq($wbu-color-primary);
+  }
 
   a {
     &:hover {

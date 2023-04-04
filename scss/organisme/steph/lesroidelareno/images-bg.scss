@@ -14,7 +14,7 @@
   &::before {
     content: "";
     position: absolute;
-    background-color: rgba($color: $wbu-background, $alpha: 0.2);
+    background-color: rgba($color: $wbu-background, $alpha: 0.35);
     top: 0;
     left: 0;
     right: 0;
@@ -27,16 +27,24 @@
     color: color-yiq($wbu-color-primary); //white;
     background: $wbu-color-primary; //transparent;
     border-color: $wbu-color-primary;
+
+    &:hover {
+      background: color-yiq($wbu-color-primary);
+      border: 2px solid color-yiq($wbu-color-primary);
+
+      a {
+        text-decoration: none;
+        color: $wbu-color-primary;
+      }
+    }
   }
 
   .titre {
     line-height: 1.2;
-    //color: #fff;
     margin-bottom: $wbu-margin;
   }
 
   .sub_title {
-    //color: #fff;
     margin-bottom: $wbu-margin;
   }
 
