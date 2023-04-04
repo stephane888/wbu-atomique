@@ -5,13 +5,16 @@
   background-attachment: fixed;
   background-position: center;
   position: relative;
-  padding-top: $space_top;
-  padding-bottom: $space_bottom;
+  background-size: cover;
+  height: 100vh;
+  padding-top: $space_top * 2;
+  padding-bottom: $space_bottom * 2;
   z-index: 2;
+
   &::before {
     content: "";
     position: absolute;
-    background-color: rgba($color: $wbu-background, $alpha: 0.52);
+    background-color: rgba($color: $wbu-background, $alpha: 0.2);
     top: 0;
     left: 0;
     right: 0;
@@ -21,12 +24,9 @@
 
   .seeMore {
     display: inline-block;
-    color: white;
-    background: transparent;
-    border-color: #fff;
-    a {
-      //color: white;
-    }
+    color: color-yiq($wbu-color-primary); //white;
+    background: $wbu-color-primary; //transparent;
+    border-color: $wbu-color-primary;
   }
 
   .titre {
@@ -43,6 +43,7 @@
   .row {
     padding-top: $wbu-margin;
     padding-bottom: $wbu-margin;
+
     @include media-min("DD") {
       padding-top: $wbu-margin * 2;
       padding-bottom: $wbu-margin * 2;
