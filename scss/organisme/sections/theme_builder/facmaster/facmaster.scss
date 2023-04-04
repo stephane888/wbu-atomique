@@ -1,0 +1,114 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+@use "../../../../defaut/model/custom_bp.scss";
+
+.facmaster-coming-soon {
+  height: 100vh;
+  min-height: 600px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  &:before {
+    content: "";
+    background: rgba(28, 13, 39, 0.5);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: auto;
+    width: auto;
+    height: 100%;
+  }
+  .facmaster-coming-soon-container {
+    z-index: 22;
+    .coming-soon-text-element {
+      margin-bottom: 60px;
+      .coming-soon-title {
+        color: $wbu-color-primary;
+        text-shadow: rgba(255, 255, 255, 0.4) 0px 9px 16px;
+        margin-bottom: 31px;
+        letter-spacing: 9;
+      }
+      .coming-soon-subtitle {
+        color: $wbu-color-secondary;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        @media only screen and (max-width: $MS_debut) {
+          width: 500px;
+        }
+        @media only screen and (max-width: $DD_debut) {
+          width: 400px;
+        }
+      }
+      .coming-soon-description {
+        color: $wbu-color-primary;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        @media only screen and (max-width: $MS_debut) {
+          width: 400px;
+        }
+        @media only screen and (max-width: $DD_debut) {
+          width: 300px;
+        }
+      }
+    }
+    .coming-soon-count {
+      .count {
+        text-align: center;
+        //padding: 0 -15px;
+        margin-bottom: 0 !important;
+      }
+      .demo_element {
+        display: flex;
+        text-align: center;
+        // padding: 17px 0px;
+        color: $wbu-color-primary;
+
+        //justify-content: space-around;
+        flex-wrap: nowrap;
+      }
+      .set {
+        margin-right: 20px;
+        position: relative;
+
+        &::before {
+          content: "";
+          background: rgba(80, 77, 77, 0.5);
+          position: absolute;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          top: auto;
+          width: auto;
+          height: 100%;
+        }
+      }
+      .col-md-3 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .time {
+        padding: 60px 10px;
+        z-index: 2;
+        position: relative;
+      }
+      .letter {
+        text-transform: uppercase;
+        background-color: $wbu-color-primary;
+        color: $wbu-color-thirdly;
+        padding: 20px 10px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+}
