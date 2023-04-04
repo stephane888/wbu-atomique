@@ -10,8 +10,14 @@
   align-items: center;
   position: relative;
   padding: $wbu-margin * 9 0 0 0;
+  @include media-min(DD) {
+    padding-top: $wbu-margin * 5;
+  }
   color: color-yiq($wbu-background);
   flex-direction: column;
+  background-color: $wbu-background;
+  background-image: url("./images/transport-logistique_37416-165.png");
+  //src/facmaster/images/transport-logistique_37416-165.png
 
   .facmaster-coming-soon-container {
     z-index: 22;
@@ -31,7 +37,7 @@
         color: $wbu-color-primary;
         //
         @include media-min(DD) {
-          max-width: 600;
+          max-width: 600px;
         }
       }
       .coming-soon-description {
@@ -39,7 +45,7 @@
         margin-left: auto;
         margin-right: auto;
         @include media-min(DD) {
-          max-width: 500;
+          max-width: 500px;
         }
       }
     }
@@ -81,6 +87,12 @@
         position: relative;
         z-index: 2;
       }
+    }
+    .logo {
+      max-width: 250px;
+      max-height: 250px;
+      width: auto;
+      height: auto;
     }
   }
   .coming-soon-copy-right {
