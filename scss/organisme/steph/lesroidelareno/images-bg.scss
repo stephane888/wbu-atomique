@@ -27,6 +27,16 @@
     color: color-yiq($wbu-color-primary); //white;
     background: $wbu-color-primary; //transparent;
     border-color: $wbu-color-primary;
+
+    &:hover {
+      background: color-yiq($wbu-color-primary);
+      border: 2px solid color-yiq($wbu-color-primary);
+
+      a {
+        text-decoration: none;
+        color: $wbu-color-primary;
+      }
+    }
   }
 
   .titre {

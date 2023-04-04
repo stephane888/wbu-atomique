@@ -13,16 +13,6 @@
   cursor: pointer;
   transition: 0.5s ease-in-out;
 
-  &:hover {
-    background: color-yiq($wbu-color-primary);
-    border: 2px solid color-yiq($wbu-color-primary);
-
-    a {
-      text-decoration: none;
-      color: $wbu-color-primary;
-    }
-  }
-
   a {
     color: color-yiq($wbu-color-primary);
   }
