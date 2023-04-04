@@ -11,6 +11,10 @@
   margin-bottom: $wbu-margin;
   cursor: pointer;
 
+  &:hover {
+    background-color: rgba($color: $wbu-color-primary0, $alpha: 0.5);
+  }
+
   a {
     color: color-yiq($wbu-color-primary);
   }
@@ -18,7 +22,6 @@
   a {
     &:hover {
       text-decoration: none;
-      color: color-yiq($wbu-color-primary);
     }
   }
 
