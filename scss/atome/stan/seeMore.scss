@@ -10,9 +10,10 @@
   width: fit-content;
   margin-bottom: $wbu-margin;
   cursor: pointer;
+  transition: 1s ease-in-out;
 
   &:hover {
-    background-color: rgba($color: $wbu-color-primary0, $alpha: 0.5);
+    background-color: color-yiq($wbu-color-primary);
   }
 
   a {
@@ -22,6 +23,7 @@
   a {
     &:hover {
       text-decoration: none;
+      color: $wbu-color-primary;
     }
   }
 
