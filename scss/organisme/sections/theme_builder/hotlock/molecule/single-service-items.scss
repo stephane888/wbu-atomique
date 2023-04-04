@@ -28,6 +28,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #fff;
+    z-index: 2;
     img {
       width: 100%;
     }
@@ -42,7 +44,7 @@
       pointer-events: none;
     }
     &:hover::before {
-      opacity: 0.6;
+      opacity: 0.3;
     }
     &:hover {
       .icon {

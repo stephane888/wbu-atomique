@@ -1,6 +1,7 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
 .image-rounded {
+  display: contents;
   width: 30%;
   img {
     width: 150px;

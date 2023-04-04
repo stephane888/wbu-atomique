@@ -12,24 +12,6 @@
         display: inline-block;
       }
     }
-    /**
-     * Les balises SVG ne sont pas encore rendu par le module de PDF, on les masque en attendant.
-     */
-    .icon {
-      height: $wbu-margin * 0.5 !important;
-      width: $wbu-margin * 0.5 !important;
-      background-color: $wbu-background !important;
-      background: $wbu-background !important;
-      line-height: 1 !important;
-      border-radius: $wbu-margin * 0.25;
-      border: none !important;
-      padding: $wbu-margin * 0.45 !important;
-      clip: unset;
-      clip-path: none;
-      svg {
-        display: none !important;
-      }
-    }
   }
   // Derivée icon bg couleur principal.
   &.icon-bg-primary {
@@ -139,20 +121,46 @@
     }
   }
   //dérivé pour la section presentation dans cv modelcarla
-  &.fields-svg {
+  &.icon-primary {
     .field-svg {
+      border-right: 1px solid white;
       margin-bottom: $wbu-margin * 2;
       margin-top: $wbu-margin;
+      width: 100%;
+      &:last-child {
+        border: none;
+      }
       .icon {
         margin: $wbu-margin * 0.5 0;
+        color: $wbu-color-primary;
         svg {
-          :nth-child(1) {
-            fill: $wbu-color-primary;
-          }
+          display: block;
+          fill: $wbu-color-primary;
         }
       }
       .text {
         color: white;
+      }
+    }
+  }
+  //
+  &.hide-icon {
+    /**
+     * Les balises SVG ne sont pas encore rendu par le module de PDF, on les masque en attendant.
+     */
+    .icon {
+      height: $wbu-margin * 0.5 !important;
+      width: $wbu-margin * 0.5 !important;
+      background-color: $wbu-background !important;
+      background: $wbu-background !important;
+      line-height: 1 !important;
+      border-radius: $wbu-margin * 0.25;
+      border: none !important;
+      padding: $wbu-margin * 0.45 !important;
+      clip: unset;
+      clip-path: none;
+      svg {
+        display: none !important;
       }
     }
   }
