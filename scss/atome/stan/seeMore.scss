@@ -1,21 +1,23 @@
 @use "../../wbu-ressources-clean.scss" as *;
+
 .seeMore {
-  background: $wbu-background;
-  border: 2px solid #1b1918;
+  background: $wbu-color-primary;
+  border: 2px solid $wbu-color-primary;
   border-radius: 2px;
-  padding: 15px 20px;
+  padding: $wbu-margin;
   font-weight: 700;
   line-height: 14px;
   width: fit-content;
   margin-bottom: $wbu-margin;
-  margin-top: $wbu-margin;
-  //margin: 50px auto 0;
+  //margin-top: $wbu-margin;
   cursor: pointer;
+
   a {
     &:hover {
       text-decoration: none;
     }
   }
+
   svg {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
