@@ -16,7 +16,7 @@
     content: "";
     position: absolute;
     background: $wbu-background;
-    opacity: 0.8;
+    // opacity: 0.8;
     z-index: 1;
     height: 100%;
     width: 100%;
@@ -91,9 +91,9 @@
   &--vixcon {
     min-height: 40vh;
 
-    &::before {
-      opacity: 0.9;
-    }
+    // &::before {
+    //   opacity: 0.9;
+    // }
 
     .titles-handler {
 
