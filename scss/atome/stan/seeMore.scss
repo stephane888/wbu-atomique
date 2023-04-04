@@ -13,7 +13,15 @@
   transition: 1s ease-in-out;
 
   &:hover {
-    background-color: color-yiq($wbu-color-primary);
+    background: color-yiq($wbu-color-primary);
+    border: 2px solid color-yiq($wbu-color-primary);
+
+    a {
+      &:hover {
+        text-decoration: none;
+        color: $wbu-color-primary;
+      }
+    }
   }
 
   a {
@@ -23,7 +31,6 @@
   a {
     &:hover {
       text-decoration: none;
-      color: $wbu-color-primary;
     }
   }
 
