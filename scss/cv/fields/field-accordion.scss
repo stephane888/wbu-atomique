@@ -1,0 +1,44 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.accordion-section-field {
+	.field-box {
+		position: relative;
+		box-sizing: border-box;
+
+		.field-meta {
+			background-color: $wbu-color-primary;
+			display: flex;
+			flex-wrap: nowrap;
+
+			.field-icon {
+				width: 63px;
+				min-width: auto;
+				text-align: center;
+				background-color: $wbu-color-secondary;
+				position: relative;
+
+				svg {
+					top: 50%;
+					left: 50%;
+					position: absolute;
+					max-width: 50px;
+					transform: translate(-50%, -50%);
+					fill: currentColor;
+				}
+			}
+
+			.field-title {
+				text-transform: uppercase;
+				color: color-yiq($wbu-color-primary);
+				margin-bottom: 0;
+				padding: $wbu-margin;
+			}
+		}
+
+		.field-description {
+			padding: $wbu-margin*1.25 $wbu-margin*1.15;
+			border: 1px solid #d8d8d8;
+			border-top: none;
+		}
+	}
+}
