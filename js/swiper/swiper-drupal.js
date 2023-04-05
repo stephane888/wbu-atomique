@@ -6,11 +6,14 @@ import Swiper, {
   Controller,
   Thumbs,
 } from "swiper";
+import AOS from "aos";
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs]);
 // import Swiper styles
 import "swiper/css/bundle";
-
+/**
+ * il faudra documenter.
+ */
 (function () {
   document.querySelectorAll(".swiper-full-options").forEach((item) => {
     try {
@@ -19,7 +22,76 @@ import "swiper/css/bundle";
         !item.classList.contains("thumbs-carousel")
       ) {
         const settings = JSON.parse(item.getAttribute("data-swiper"));
-        new Swiper(item, settings);
+        const overrideSettings = {
+          ...settings,
+          on: {
+            // transitionStart(swiper) {
+            //   swiper.slides.forEach((item) => {
+            //     item.querySelectorAll(".aos-init").forEach((element) => {
+            //       element.classList.remove("aos-init", "aos-animate");
+            //     });
+            //   });
+            // },
+            // slideChange(swiper) {
+            //   // swiper.slides[swiper.activeIndex]
+            //   //   .querySelectorAll(".aos-init")
+            //   //   .forEach((element) => {
+            //   //     element.classList.remove("aos-init", "aos-animate");
+            //   //   });
+            //   swiper.slides.forEach((item) => {
+            //     item.querySelectorAll(".aos-init").forEach((element) => {
+            //       element.classList.remove("aos-init", "aos-animate");
+            //     });
+            //   });
+            // },
+            beforeTransitionStart(swiper) {
+              // swiper.slides[swiper.activeIndex]
+              //   .querySelectorAll(".aos-init")
+              //   .forEach((element) => {
+              //     element.classList.remove("aos-init", "aos-animate");
+              //   });
+              //
+              // swiper.slides.forEach((item) => {
+              //   // aos
+              //   item.querySelectorAll(".aos-init").forEach((element) => {
+              //     element.classList.remove("aos-init", "aos-animate");
+              //   });
+              //   // animate
+              //   item.querySelectorAll(".animate-css").forEach((element) => {
+              //     element.classList.remove(
+              //       "animate__animated",
+              //       "animate__bounce"
+              //     );
+              //   });
+              // });
+            },
+            // slideChangeTransitionStart(swiper) {
+            //   swiper.slides[swiper.activeIndex]
+            //     .querySelectorAll(".aos-init")
+            //     .forEach((element) => {
+            //       element.classList.remove("aos-init", "aos-animate");
+            //     });
+            // },
+            slideChangeTransitionEnd(swiper) {
+              console.log("slideChangeTransitionEnd : ", swiper);
+              // swiper.slides[swiper.activeIndex]
+              //   .querySelectorAll(".animate-css")
+              //   .forEach((element) => {
+              //     element.classList.add("animate__animated", "animate__bounce");
+              //   });
+              // On initialise AOS.
+              AOS.init();
+              //On le retire sur tous les elements sauf celui encours.
+              swiper.slides.forEach((item, index) => {
+                if (swiper.activeIndex !== index)
+                  item.querySelectorAll(".aos-init").forEach((element) => {
+                    element.classList.remove("aos-init", "aos-animate");
+                  });
+              });
+            },
+          },
+        };
+        new Swiper(item, overrideSettings);
       } else {
         console.log("Display items : ", item);
       }
