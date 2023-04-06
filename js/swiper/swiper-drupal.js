@@ -51,29 +51,27 @@ import "swiper/css/bundle";
               //     element.classList.remove("aos-init", "aos-animate");
               //   });
               //
-              // swiper.slides.forEach((item) => {
-              //   // aos
-              //   item.querySelectorAll(".aos-init").forEach((element) => {
-              //     element.classList.remove("aos-init", "aos-animate");
-              //   });
-              //   // animate
-              //   item.querySelectorAll(".animate-css").forEach((element) => {
-              //     element.classList.remove(
-              //       "animate__animated",
-              //       "animate__bounce"
-              //     );
-              //   });
+              // swiper.slides.forEach((item, index) => {
+              //   if (swiper.activeIndex !== index)
+              //     item.querySelectorAll(".aos-init").forEach((element) => {
+              //       element.classList.add("d-none");
+              //     });
+              //   else
+              //     item.querySelectorAll(".aos-init").forEach((element) => {
+              //       element.classList.remove("d-none");
+              //     });
               // });
             },
             // slideChangeTransitionStart(swiper) {
-            //   swiper.slides[swiper.activeIndex]
-            //     .querySelectorAll(".aos-init")
-            //     .forEach((element) => {
-            //       element.classList.remove("aos-init", "aos-animate");
-            //     });
+            //   swiper.slides.forEach((item, index) => {
+            //     if (swiper.activeIndex === index)
+            //       item.querySelectorAll(".aos-init").forEach((element) => {
+            //         element.classList.remove("d-none");
+            //       });
+            //   });
             // },
             slideChangeTransitionEnd(swiper) {
-              console.log("slideChangeTransitionEnd : ", swiper);
+              //console.log(" slideChangeTransitionEnd : ", swiper);
               // swiper.slides[swiper.activeIndex]
               //   .querySelectorAll(".animate-css")
               //   .forEach((element) => {
@@ -86,7 +84,13 @@ import "swiper/css/bundle";
                 if (swiper.activeIndex !== index)
                   item.querySelectorAll(".aos-init").forEach((element) => {
                     element.classList.remove("aos-init", "aos-animate");
+                    //   element.classList.add("d-none");
                   });
+                else {
+                  // item.querySelectorAll(".aos-init").forEach((element) => {
+                  //   element.classList.remove("d-none");
+                  // });
+                }
               });
             },
           },
