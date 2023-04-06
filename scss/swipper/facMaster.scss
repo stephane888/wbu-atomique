@@ -1,0 +1,40 @@
+@use "../wbu-ressources-clean.scss" as *;
+@use "../variables" as *;
+.swiper {
+  // model
+  &.swiper-button-left-bottom {
+    .swiper-button-prev {
+      right: auto;
+      top: calc(100% - 100px);
+      width: 90px;
+      height: 90px;
+      background-color: color-yiq($wbu-background);
+      &::after {
+        color: $wbu-color-primary;
+      }
+      &:hover {
+        background-color: $wbu-background;
+        &::after {
+          color: color-yiq($wbu-background);
+        }
+      }
+    }
+    .swiper-button-next {
+      left: 120px;
+      right: auto;
+      top: calc(100% - 100px);
+      width: 90px;
+      height: 90px;
+      background-color: color-yiq($wbu-background);
+      &::after {
+        color: $wbu-color-primary;
+      }
+      &:hover {
+        background-color: $wbu-background;
+        &::after {
+          color: color-yiq($wbu-background);
+        }
+      }
+    }
+  }
+}
