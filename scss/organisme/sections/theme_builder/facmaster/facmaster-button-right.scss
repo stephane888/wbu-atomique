@@ -1,0 +1,78 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.facmaster-button-right {
+    display: flex;
+    padding: $space-bottom 0 $space-bottom 0;
+    overflow: hidden;
+    @include media-max(MD) {
+        flex-direction: column;
+    }
+    &__left {
+        flex: 1;
+        @include media-max(MD) {
+            align-items: flex-start;
+            padding-left: $wbu-margin;
+            padding-bottom: $wbu-margin;
+        }
+        &_subtitle {
+            text-transform: uppercase;
+            margin-bottom: $wbu-margin;
+        }
+        &_title {
+            text-transform: uppercase;
+            font-weight: $wbu-title-font-weight;
+            margin-bottom: $wbu-margin;
+        }
+        &_text {
+            text-align: justify;
+            position: relative;
+            padding-bottom: $wbu-margin;
+            margin-bottom: $wbu-margin;
+            &::after {
+                content: "";
+                position: absolute;
+                height: 4px;
+                width: 100px;
+                background-color: $wbu-color-primary;
+                left: 0;
+                bottom: 0;
+                margin-top: $wbu-margin;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 150px;
+                background-color: $wbu-background;
+                left: 100px;
+                bottom: 1.5px;
+                margin-top: $wbu-margin;
+            }
+        }
+    }
+    &__right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include media-max(MD) {
+            align-items: flex-start;
+            padding-left: $wbu-margin;
+            justify-content: flex-start;
+        }
+        &_button {
+            text-decoration: none;
+            padding: $wbu-margin;
+            display: block;
+            background-color: $wbu-background;
+            color: color-yiq($wbu-background);
+            text-transform: uppercase;
+            &:hover {
+                color:color-yiq($wbu-color-primary);
+                text-decoration: none;
+                background-color: $wbu-color-primary;
+            }
+        }
+    }
+}
