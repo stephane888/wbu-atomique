@@ -40,6 +40,12 @@
   text-transform: uppercase;
   overflow: hidden;
   z-index: 1;
+
+  &.htl--center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .nav-link {
     padding: 0;
   }

@@ -5,16 +5,11 @@
 //// les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
 
 .first-nav {
-  background-color: lighten($wbu-color-boder, 6);
   display: flex;
   justify-content: start;
-  padding: 0 4.5rem;
   flex-wrap: nowrap;
   a {
     text-decoration: none;
-    &:hover {
-      color: black;
-    }
   }
 
   & .menu-icons {
@@ -22,15 +17,10 @@
     position: relative;
   }
   &__brand {
-    font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: black;
     display: none;
     padding: 1rem 0;
-    a {
-      color: black;
-    }
     img {
       max-width: 25rem;
       width: 100%;
@@ -41,20 +31,16 @@
         max-width: 15rem;
       }
     }
-    @media screen and (max-width: 400px) {
-      font-size: 2.5rem;
-    }
   }
   .nav-item {
     display: block;
     font-weight: bold;
-    font-size: $wbu-default-font-size;
     text-transform: capitalize;
     color: inherit;
+    position: relative;
     .nav-link {
       color: inherit;
       padding: 1rem 1rem;
-
       &:hover {
         background-color: $wbu-color-primary;
         color: color-yiq($wbu-color-primary);
@@ -75,12 +61,15 @@
         height: 1.5rem;
         content: "";
         position: absolute;
-        @include wbu__angle-right(black, 10);
+        /**
+         * on doit avoir des derivées afin de permettre au svg d'etre visible sur les principaux couleurs de fonds.
+         */
+        @include wbu__angle-right(color-yiq($wbu-background), 10);
         transform: rotate(90deg);
         background-position: center;
         display: inline-block;
-        top: 1.1rem;
-        right: 1.2rem;
+        top: calc(50% - 7px);
+        right: $wbu-margin;
       }
       &:hover {
         &::after {
@@ -88,6 +77,13 @@
         }
         &::before {
           color: color-yiq($wbu-color-primary);
+        }
+      }
+    }
+    & .sub-alt {
+      & .nav-link {
+        &::after {
+          @include wbu__angle-right(color-yiq($wbu-color-primary), 10);
         }
       }
     }
@@ -118,6 +114,8 @@
     position: relative;
     flex-wrap: wrap;
     justify-content: end;
+    margin: 0;
+    padding: 0;
     & > .nav-item {
       &:nth-child(7) ~ * {
         @include media-min(M) {
@@ -207,7 +205,6 @@
       }
     }
     .nav-item {
-      // background-color: $wbu-color-primary;
       &:hover {
         & > ul {
           display: inherit;
@@ -224,8 +221,9 @@
     .sub-menu {
       max-height: 0;
       position: absolute;
-      top: 3.6rem;
+      top: 100%;
       left: 0;
+      bottom: auto;
       overflow: hidden;
       opacity: 5;
       z-index: 10;
@@ -293,14 +291,12 @@
 @include media-max(SM) {
   .first-nav {
     flex-wrap: wrap;
-    // width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 0;
     &__brand {
       padding-left: 3rem;
       display: block;
-      //color: rgba($wbu-background, 0.9); ( svp, utilisez les varibles predefinit ).
       color: $wbu-color-primary;
     }
     .menu-icons {
@@ -362,7 +358,6 @@
               }
               & ul > li {
                 .nav-link {
-                  //background-color: rgb(0, 153, 255);
                   padding-left: 13rem;
                 }
               }
@@ -383,7 +378,6 @@
         }
         &::before {
           content: "+";
-          font-size: 2rem;
           position: absolute;
           color: black;
           top: 4rem;
@@ -395,7 +389,6 @@
     }
 
     .nav-item {
-      font-size: $wbu-default-font-size;
       display: block;
       width: 100%;
       position: relative;

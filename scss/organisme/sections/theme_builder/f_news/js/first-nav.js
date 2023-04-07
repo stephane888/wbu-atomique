@@ -7,7 +7,6 @@ function firstNav() {
   let activeLi = Array.from(fnewsHeader.querySelectorAll(".nav-item--active"));
   window.addEventListener("load", () => {
     // enabledHover(true);
-
     addSubAlt(liList);
     // console.log("activeLi", activeLi);
     for (let active of activeLi) {
