@@ -6,22 +6,19 @@
   .teaser-title {
     @include bp_h2();
     margin: 0 auto;
-    color: black;
-    font-weight: bold;
+    color: $wbu-background;
     max-width: 90rem;
   }
   .teaser-desc {
     margin: 0 auto;
-    font-size: $wbu-h5-font-size;
     padding: $wbu-btn-padding-x-sm;
-    color: black;
+    color: $wbu-background;
     max-width: 100rem;
   }
   .teaser-note {
     margin: 0 auto;
     margin-top: $wbu-margin * 1.5;
-    font-size: $wbu-h5-font-size;
-    color: black;
+    color: $wbu-background;
     display: flex;
     justify-content: center;
 

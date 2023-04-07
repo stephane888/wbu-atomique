@@ -1,0 +1,251 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+@use "../../../../defaut/model/custom_bp.scss";
+
+.facmaster-header {
+  font-size: $wbu-default-font-size-sm;
+  box-shadow: 0px 0px 9px 8px rgba($wbu-background, 8%);
+  .modal {
+    @include WBUtransition();
+    .modal-content {
+      border: none;
+      background-color: transparent;
+      .close {
+        position: absolute;
+        color: $wbu-color-primary;
+        left: calc(50% - 3rem);
+        top: -15vh;
+        z-index: 10;
+        display: flex;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: $wbu-background;
+        opacity: 0.8;
+        line-height: 1;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          opacity: 1;
+        }
+        svg {
+          fill: $wbu-color-primary;
+          width: 40%;
+        }
+      }
+    }
+    .modal-body {
+      padding: $wbu-margin;
+      background-color: #fff;
+      @include media-min(DD) {
+        padding: $wbu-margin * 1.5;
+      }
+    }
+    // background: transparent;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(darken($wbu-background, 15%), 0.5);
+    }
+    &.fade {
+      transform: scale(0);
+      opacity: 0;
+      transition-property: opacity, transform;
+      transition-duration: 0.5s, 0.7s;
+    }
+    &.show {
+      transform: scale(1);
+      opacity: 1;
+      transition-property: opacity, transform;
+      transition-duration: 0.7s, 0.4s;
+    }
+    &.modal-cart {
+      padding: 0 !important;
+      .modal-dialog {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        .close {
+          top: 1rem;
+          border-radius: 3px;
+          left: auto;
+          right: 1rem;
+        }
+        .modal-body {
+          padding-top: $wbu-margin * 2.5;
+          background: rgba(#fff, 80%);
+        }
+      }
+      .modal-content {
+        width: 100%;
+        height: 100vh;
+        @include WBUtransition($temps: 0.5s);
+        @include media-min(SM) {
+          max-width: 400px;
+        }
+        opacity: 0;
+        transform: translateX(100px);
+        transition-delay: 0.3s;
+      }
+      &.fade {
+        transform: translateX(100%);
+        // transform: scaleY(100px);
+      }
+      &.show {
+        transform: translateX(0);
+        transition-duration: 0.7s, 0.2s;
+        .modal-content {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+  .site-header-top {
+    background: $wbu-background;
+    color: color-yiq($wbu-background);
+    .field-buttons:not(.icones-statique) {
+      .item {
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .icones-statique {
+      .item {
+        position: relative;
+        .cart_counter_header {
+          position: absolute;
+          right: 2px;
+          top: 2px;
+          left: auto;
+          bottom: auto;
+          background: $wbu-color-primary;
+          padding: $wbu-margin * 0.15;
+          line-height: 1;
+          border-radius: $wbu-margin * 0.25;
+          color: color-yiq($wbu-color-primary);
+        }
+      }
+    }
+    .lang-dropdown-form {
+      display: flex;
+      align-items: center;
+      margin: 0 $wbu-margin 0 0;
+      .js-form-item {
+        margin: 0 !important;
+      }
+      img {
+        width: auto;
+        height: 14px;
+      }
+      /**
+       * il faudra changer le select car les options ne sont pas entierement personnalisable.
+       */
+      select {
+        padding: 0;
+        line-height: inherit;
+        height: auto;
+        background-color: transparent;
+        color: inherit;
+        border: none;
+        width: auto !important;
+        display: inline-block;
+        padding: $wbu-margin * 0.775 0;
+        padding-left: $wbu-margin * 0.25;
+        box-shadow: none;
+        //car on doit avoir une taille de police plus petite
+        font-size: $wbu-default-font-size-sm;
+        &:focus,
+        &:focus-visible {
+          border: none;
+          box-shadow: none;
+        }
+        option {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          padding: $wbu-margin;
+          display: block;
+          color: $wbu-background;
+        }
+      }
+    }
+  }
+  .site-header-middle {
+    padding: $wbu-margin * 1.5 0;
+    .site-branding {
+      padding: 0 $wbu-margin * 0.25;
+      margin-bottom: $wbu-margin;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        @include media-min(DD) {
+          max-height: 55px;
+          max-width: 240px;
+        }
+      }
+    }
+  }
+  .site-header-main {
+    // position: sticky;
+    // top: 0px;
+    @include media-min(DD) {
+      &.scroll-element-exceeded {
+        .fnews-header {
+          margin-top: -100px;
+          opacity: 0;
+          @include WBUtransition($temps: 0.7s);
+        }
+        &.scroll-up {
+          margin-bottom: 0;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          .fnews-header {
+            margin-top: 0;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .container-menu {
+      position: relative;
+    }
+    .fnews-header {
+      @include media-min(MD) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $wbu-background;
+        color: color-yiq($wbu-background);
+        .nav-list .sub-menu {
+          color: $wbu-background;
+        }
+      }
+    }
+    .first-nav {
+      margin-left: $wbu-margin * 2;
+      @include media-min(DD) {
+        .nav-list {
+          > .nav-item {
+            > .nav-link {
+              padding: $wbu-margin;
+              padding-right: $wbu-margin * 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modal-backdrop {
+  opacity: 0 !important;
+}

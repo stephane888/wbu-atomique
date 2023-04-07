@@ -4,10 +4,19 @@
     line-height: 1;
     align-items: center;
     justify-content: center;
+    @include WBUtransition($temps: 0.6s);
     .svg {
       padding: $wbu-margin * 0.7;
       min-width: $wbu-margin * 2.5;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+      svg {
+        max-width: 1.5rem;
+        @include WBUtransition($temps: 0.6s);
+      }
     }
     .text {
       padding-right: $wbu-margin * 0.7;
@@ -16,16 +25,51 @@
       border-right: none;
     }
   }
+  // derivé
   &--background {
     background: $wbu-background;
     color: color-yiq($wbu-background);
+    svg {
+      fill: color-yiq($wbu-background);
+    }
     .item {
       border-right: 2px solid darken($wbu-background, 15%);
+    }
+    // pour avoir les boudures sur tous les elements.
+    &.border-full-light {
+      .item {
+        border-right: 1px solid rgba(color-yiq($wbu-background), 0.3);
+        &:first-child {
+          border-left: 1px solid rgba(color-yiq($wbu-background), 0.3);
+        }
+      }
+    }
+  }
+  //
+  &--hover_primary {
+    .item {
+      &:hover {
+        background: $wbu-color-primary;
+      }
+    }
+  }
+  //
+  &--hover_primary_text {
+    .item {
+      &:hover {
+        color: $wbu-color-primary;
+        svg {
+          fill: $wbu-color-primary;
+        }
+      }
     }
   }
   &--primary {
     background: $wbu-color-primary;
     color: color-yiq($wbu-color-primary);
+    svg {
+      fill: color-yiq($wbu-color-primary);
+    }
     .item {
       border-right: 2px solid darken($wbu-color-primary, 15%);
     }
