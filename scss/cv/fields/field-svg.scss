@@ -121,7 +121,7 @@
     }
   }
   //dérivé pour la section presentation dans cv modelcarla
-  &.icon-primary {
+  &.icon-carla-primary {
     .field-svg {
       border-right: 1px solid white;
       margin-bottom: $wbu-margin * 2;
@@ -138,12 +138,28 @@
           fill: $wbu-color-primary;
         }
       }
-      .text {
-        color: white;
+    }
+  }
+  &.icon-primary {
+    .field-svg {
+      .icon {
+        color: $wbu-color-primary;
+        svg {
+          fill: $wbu-color-primary;
+        }
       }
     }
   }
   //
+  &.infos {
+    .field-svg {
+      display: flex;
+    }
+    .text {
+      line-height: 1.7;
+    }
+  }
+  // en attante de coorection de bug.
   &.hide-icon {
     /**
      * Les balises SVG ne sont pas encore rendu par le module de PDF, on les masque en attendant.
