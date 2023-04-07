@@ -10,10 +10,9 @@
   .page-item {
     .page-link {
       border: 1px solid transparent;
-      font-size: $wbu-h6-font-size;
       padding: 0.9rem 1.5rem;
       margin: 0 1rem;
-      color: black;
+      color: $wbu-background;
       background-color: transparent;
       transition: ease-in-out 0.3s;
     }
@@ -23,7 +22,7 @@
         text-decoration: none;
         background-color: $wbu-color-primary;
         border-color: $wbu-color-primary;
-        color: color-yiq( $wbu-color-primary);
+        color: color-yiq($wbu-color-primary);
       }
     }
     &--active {

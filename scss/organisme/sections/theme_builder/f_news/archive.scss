@@ -1,12 +1,21 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
-
+@use "../../../../molecule/default-class.scss";
 @use "./molecule/archive/afc-month.scss";
 @use "./molecule/archive/afc-nav.scss";
 @use "./molecule/archive/afc-search.scss";
 @use "./variables.scss" as *;
+@use "../../../../defaut/model/custom_bp.scss";
 .archive-fnews {
-  padding: $space-bottom 0;
+  padding: $wbu-margin * 3.5 0;
   .af-content {
     justify-content: space-between;
+    @include media-max(SM) {
+      display: block;
+    }
+    .afc-search {
+      @include media-max(SM) {
+        padding: 0;
+      }
+    }
   }
 }

@@ -8,20 +8,16 @@
     border-bottom: 1px solid $wbu-color-secondary;
     width: 66.5%;
     padding-bottom: $wbu-margin;
-    font-weight: bold;
     color: rgba($wbu-background, 0.9);
-    font-size: $wbu-h5-font-size;
   }
   .all-comments {
     .single-comment {
       background: rgba($wbu-color-boder, 0.5);
       padding-top: $wbu-margin;
-      padding-bottom: $wbu-btn-padding-y-sm;
+      padding-bottom: $wbu-margin * 1.6;
       margin-bottom: $wbu-margin;
       .reaction {
         color: rgba($wbu-background, 0.9);
-        font-size: $wbu-h6-font-size;
-        font-weight: bold;
         margin-bottom: $wbu-margin * 0.5;
       }
       .comment-content {
@@ -36,7 +32,7 @@
         }
         .meta-info {
           margin-top: $wbu-margin * 0.5;
-          color: $wbu-color-text;
+          color: rgba($wbu-background, 0.6);
           .role {
             margin-top: $wbu-margin * 0.1;
           }
