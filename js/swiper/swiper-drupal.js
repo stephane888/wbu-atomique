@@ -5,10 +5,19 @@ import Swiper, {
   Autoplay,
   Controller,
   Thumbs,
+  EffectFade,
 } from "swiper";
 import AOS from "aos";
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs]);
+Swiper.use([
+  Navigation,
+  Pagination,
+  Parallax,
+  Autoplay,
+  Controller,
+  Thumbs,
+  EffectFade,
+]);
 // import Swiper styles
 import "swiper/css/bundle";
 /**
