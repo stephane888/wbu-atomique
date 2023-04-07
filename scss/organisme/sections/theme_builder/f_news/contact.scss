@@ -1,6 +1,4 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
-
-@use "./variables.scss" as *;
 .contact-fnews {
   padding: $space-top 0;
   .cf-content {
@@ -30,13 +28,11 @@
     gap: 2.5rem;
     .cfc-btn {
       padding: 1.6rem 3.3rem;
-      font-size: $wbu-default-font-size;
     }
   }
   .fi-group {
     &__label {
-      font-size: $wbu-default-font-size * 1.1;
-      color: $wbu-color-text;
+      color: $wbu-background;
       margin-bottom: 1.5rem;
       display: inline-block;
       position: relative;
@@ -47,13 +43,12 @@
         position: absolute;
         right: -1.5rem;
         top: 0;
-        font-size: $wbu-h3-font-size-sm;
-        color: red;
+        color: $wbu-color-primary;
       }
     }
     &__input {
       padding: 2.2rem 1.8rem;
-      border-color: black;
+      border-color: $wbu-background;
       &:focus,
       &:hover {
         box-shadow: none;
@@ -67,7 +62,6 @@
   }
   .info-bloc {
     &__title {
-      font-size: $wbu-h4-font-size;
       font-weight: bold;
       padding-bottom: $wbu-margin * 0.7;
     }
@@ -81,11 +75,7 @@
     }
     .ibl-item {
       display: flex;
-      font-size: $wbu-default-font-size;
       align-items: start;
-      @include media-max(XS) {
-        font-size: $wbu-h6-font-size;
-      }
       svg {
         width: 2.2rem;
         height: 1.5rem;
