@@ -28,7 +28,6 @@
   }
   function animeToggle(el) {
     let etat = el.classList.contains("opened");
-
     let p = el.querySelector("p");
     let height;
     if (etat) {
