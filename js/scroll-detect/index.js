@@ -33,7 +33,7 @@
       } else {
         elment.classList.remove("scroll-element-exceeded");
       }
-      console.log("position : ", position);
+      // console.log("position : ", position);
     });
   }
   function checkScrollDirection() {

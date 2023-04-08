@@ -179,6 +179,7 @@
   }
   .site-header-middle {
     padding: $wbu-margin * 1.5 0;
+    padding-bottom: $wbu-margin * 0.5;
     .site-branding {
       padding: 0 $wbu-margin * 0.25;
       margin-bottom: $wbu-margin;
@@ -193,8 +194,8 @@
     }
   }
   .site-header-main {
-    // position: sticky;
-    // top: 0px;
+    position: relative;
+    z-index: 99;
     @include media-min(DD) {
       &.scroll-element-exceeded {
         .fnews-header {
