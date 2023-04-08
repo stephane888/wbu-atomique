@@ -2,3 +2,69 @@
 @use "../../../../variables" as *;
 @use "atome/general.scss" as *;
 @use "teasers/hero-teaser.scss";
+
+.impact-accordion-section {
+    .side-left {
+        .illustrator {
+            position: relative;
+
+            img {
+                max-width: 100%;
+            }
+
+            a {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                font-family: rubik;
+                color: color-yiq($wbu-color-primary);
+                background-color: $wbu-color-primary;
+                line-height: 68px;
+                padding: 0 $wbu-margin*1.75 0 $wbu-margin*1.4;
+
+                &:hover {
+                    outline: none;
+                    text-decoration: none;
+                }
+
+                svg {
+                    color: currentColor;
+                    height: 27px;
+                    width: auto;
+                    border-radius: 50%;
+                    text-align: center;
+                    background-color: $wbu-color-primary;
+                    margin-right: $wbu-margin*0.6;
+                }
+            }
+
+        }
+
+        &-call-to-action {
+            a {
+
+                font-weight: 400;
+                vertical-align: middle;
+                padding: 1rem 1.8rem;
+                font-size: 1.6rem;
+                line-height: 1.3;
+                background-color: $wbu-color-primary;
+                // font-size: 15px;
+                color: color-yiq($wbu-color-primary);
+                text-transform: uppercase;
+                transition: all 300ms linear 0ms;
+                border-radius: 0;
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                cursor: pointer;
+                // font-weight: bold;
+
+                &:hover {
+                    background-color: $wbu-color-secondary;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
