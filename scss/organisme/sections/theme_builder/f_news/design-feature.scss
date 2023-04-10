@@ -4,20 +4,15 @@
 .design-feature-fnews {
   padding: $wbu-margin * 1.5 0;
   .dff-title {
-    font-size: $wbu-h4-font-size;
     text-transform: uppercase;
-    color: black;
-    margin-bottom: 1rem;
-    font-weight: bold;
+    color: $wbu-background;
+    margin-bottom: $wbu-margin * 0.5;
   }
   .dff-paragraph {
-    font-size: $wbu-h5-font-size;
     padding: $wbu-margin * 0.7 0 $wbu-margin * 0.4;
     color: rgba($wbu-background, 0.92);
     margin: 0;
-    @include media-max(XX) {
-      font-size: $wbu-h6-font-size;
-    }
+
     a {
       color: $wbu-color-secondary;
       &:hover {

@@ -4,16 +4,11 @@
 @use "./molecule/teaser/finance-teaser.scss";
 @use "./variables.scss" as *;
 .tech-stories-section-handler {
-  padding-bottom: $space_top;
+  padding-bottom: $wbu-margin * 2.5;
   .section-title {
-    font-size: $wbu-h2-font-size;
-    font-weight: bold;
-    color: black;
+    color: $wbu-background;
     padding-bottom: $space_inner_top;
     text-transform: capitalize;
-    @include media-max(XX) {
-      font-size: $wbu-h4-font-size;
-    }
   }
   .stories-handler {
     display: flex;

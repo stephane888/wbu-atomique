@@ -6,27 +6,17 @@
 
 .featured-section-handler {
   //padding: $space-top 0;
-  padding-bottom: $space_top;
+  padding-bottom: $wbu-margin * 2.5;
   overflow: hidden;
   position: relative;
   .section-title {
-    font-size: $wbu-h2-font-size;
-    color: black;
+    color: $wbu-background;
     text-align: center;
-    font-weight: bold;
-    @include media-max(XX) {
-      font-size: $wbu-h4-font-size;
-    }
   }
   .section-sub-title {
     text-align: center;
     margin-bottom: $wbu-margin;
-    font-size: $wbu-h5-font-size;
-    font-weight: 400;
-    color: black;
-    @include media-max(XX) {
-      font-size: $wbu-h6-font-size;
-    }
+    color: $wbu-background;
   }
   .featured-cards-handler {
     display: flex;
