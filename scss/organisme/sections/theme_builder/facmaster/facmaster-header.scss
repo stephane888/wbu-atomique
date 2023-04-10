@@ -4,6 +4,7 @@
 
 .facmaster-header {
   font-size: $wbu-default-font-size-sm;
+  box-shadow: 0px 0px 9px 8px rgba($wbu-background, 8%);
   .modal {
     @include WBUtransition();
     .modal-content {
@@ -180,9 +181,67 @@
     padding: $wbu-margin * 1.5 0;
     .site-branding {
       padding: 0 $wbu-margin * 0.25;
+      margin-bottom: $wbu-margin;
       img {
-        max-height: 55px;
-        max-width: 240px;
+        max-width: 100%;
+        max-height: 100%;
+        @include media-min(DD) {
+          max-height: 55px;
+          max-width: 240px;
+        }
+      }
+    }
+  }
+  .site-header-main {
+    // position: sticky;
+    // top: 0px;
+    @include media-min(DD) {
+      &.scroll-element-exceeded {
+        .fnews-header {
+          margin-top: -100px;
+          opacity: 0;
+          @include WBUtransition($temps: 0.7s);
+        }
+        &.scroll-up {
+          margin-bottom: 0;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          .fnews-header {
+            margin-top: 0;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .container-menu {
+      position: relative;
+    }
+    .fnews-header {
+      @include media-min(MD) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $wbu-background;
+        color: color-yiq($wbu-background);
+        .nav-list .sub-menu {
+          color: $wbu-background;
+        }
+      }
+    }
+    .first-nav {
+      margin-left: $wbu-margin * 2;
+      @include media-min(DD) {
+        .nav-list {
+          > .nav-item {
+            > .nav-link {
+              padding: $wbu-margin;
+              padding-right: $wbu-margin * 2;
+            }
+          }
+        }
       }
     }
   }
