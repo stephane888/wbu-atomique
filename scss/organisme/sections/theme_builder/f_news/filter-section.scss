@@ -2,17 +2,15 @@
 
 @use "./variables.scss" as *;
 .filter-section-fnews {
-  padding: $space-top 0;
+  padding: $wbu-margin * 2.5 0;
   .filter-section {
     &__input {
       padding-bottom: $wbu-margin * 1.5;
     }
   }
   .filter-title {
-    font-size: $wbu-h5-font-size;
-    font-weight: bold;
     text-align: left;
-    color: black;
+    color: $wbu-background;
     padding: 0;
     padding-bottom: $wbu-margin * 0.5;
     text-transform: uppercase;
@@ -43,12 +41,11 @@
   .apply-btn {
     margin-top: $wbu-margin;
     padding: $wbu-margin * 0.5 $wbu-margin * 2;
-    font-size: $wbu-h5-font-size;
     text-transform: capitalize;
     background-color: $wbu-color-primary;
     color: color-yiq($wbu-color-primary);
     &:hover {
-      background-color: darken($wbu-color-primary,8);
+      background-color: darken($wbu-color-primary, 8);
     }
   }
 }
@@ -90,7 +87,7 @@
       opacity: 0;
       transform: translateX(8px);
       transition: ease-in-out 0.2s;
-      @include wbu__angle-right( color-yiq($wbu-color-primary), 15);
+      @include wbu__angle-right(color-yiq($wbu-color-primary), 15);
     }
   }
 
@@ -114,7 +111,7 @@
   top: 0;
   left: -33rem;
   z-index: 10;
-  background-color: white;
+  background-color: color-yiq($wbu-background);
   transition: ease-in-out 0.4s;
   &--show {
     left: 0;

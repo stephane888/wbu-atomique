@@ -58,7 +58,7 @@
       color: $wbu-color-primary;
     }
     .posted-date {
-      color: white;
+      color: color-yiq($wbu-background);
       font-size: $wbu-default-font-size;
     }
     .post-link {

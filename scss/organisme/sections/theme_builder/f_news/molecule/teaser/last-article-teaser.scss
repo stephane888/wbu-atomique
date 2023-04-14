@@ -39,7 +39,7 @@
   }
   .post-link {
     font-size: $wbu-h4-font-size;
-    max-height: 6rem;
+    min-height: 6rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -55,7 +55,6 @@
   }
   .posted-date {
     margin-top: $space_top * 0.2;
-    color: black;
-    font-size: $wbu-h6-font-size;
+    color: $wbu-background;
   }
 }
