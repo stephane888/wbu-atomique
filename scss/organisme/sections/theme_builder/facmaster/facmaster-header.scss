@@ -180,6 +180,10 @@
   .site-header-middle {
     padding: $wbu-margin * 1.5 0;
     padding-bottom: $wbu-margin * 0.5;
+    display: none;
+    @include media-min(MD) {
+      display: block;
+    }
     .site-branding {
       padding: 0 $wbu-margin * 0.25;
       margin-bottom: $wbu-margin;
@@ -196,7 +200,7 @@
   .site-header-main {
     position: relative;
     z-index: 99;
-    @include media-min(DD) {
+    @include media-min(SM) {
       &.scroll-element-exceeded {
         .fnews-header {
           margin-top: -100px;
@@ -220,6 +224,7 @@
       position: relative;
     }
     .fnews-header {
+      background: #fff;
       @include media-min(MD) {
         position: absolute;
         top: 0;
@@ -233,8 +238,12 @@
       }
     }
     .first-nav {
-      margin-left: $wbu-margin * 2;
+      margin-left: 0;
+      @include media-min(MD) {
+        margin-left: $wbu-margin;
+      }
       @include media-min(DD) {
+        margin-left: $wbu-margin * 2;
         .nav-list {
           > .nav-item {
             > .nav-link {

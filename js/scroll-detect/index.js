@@ -1,11 +1,10 @@
 /**
  * Permet de determiner le sens de deplacement de la bare vertical pour un element donnée.
  */
-(function () {
+function ScrollRunning(elements) {
   "use-strict";
   let oldValue = 0;
   let timer = null;
-  const elements = document.querySelectorAll('[data-hbk="scroll"]');
   function addClass(direction, newValue = 0) {
     elements.forEach((elment) => {
       if (direction) {
@@ -50,9 +49,28 @@
       oldValue = newValue;
     }, 50);
   }
-  document.querySelectorAll('[data-hbk="scroll"]').forEach((elment) => {
-    elment.addEventListener("scroll", checkScrollDirection);
-    console.log("elment: ", elment);
-  });
+  // document.querySelectorAll('[data-hbk="scroll"]').forEach((elment) => {
+  //   elment.addEventListener("scroll", checkScrollDirection);
+  //   console.log("elment: ", elment);
+  // });
   document.addEventListener("scroll", checkScrollDirection);
-})();
+}
+if (window.Drupal && window.Drupal.behaviors) {
+  // @see https://www.drupal.org/project/once/issues/3204168
+  Drupal.behaviors.myBehavior = {
+    attach: function () {
+      const elements = once(
+        "scroll-index-once-id",
+        document.querySelector('[data-hbk="scroll"]')
+      );
+      if (elements.length > 0) {
+        ScrollRunning(elements);
+      }
+    },
+  };
+} else {
+  //pour les environnements non drupal.
+  const elements = document.querySelectorAll('[data-hbk="scroll"]');
+  const context = document;
+  ScrollRunning(elements);
+}

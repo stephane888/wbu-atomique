@@ -2,106 +2,103 @@
 @use "../../../../variables" as *;
 
 .footer {
-    &__logo {
-        margin: 0px 0px 46px 0px;
-        text-align: center;
+  &__logo {
+    margin: 0px 0px 46px 0px;
+    text-align: center;
+  }
 
+  &__description {
+    color: #666666;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6em;
+    text-align: center;
+    margin: 0px 0px 45px 0px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 46px 0px;
+
+    &__link {
+      display: flex;
+      margin: 0px 3px 0px -1px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 10% 10% 10% 10%;
+      padding: 0px 0px 0px 0px;
+      width: 45px;
+      height: 45px;
+      line-height: 44px;
+      background-color: #ffffff;
+      box-shadow: 0px 15px 40px 0px rgb(0 0 0 / 10%);
+      justify-content: center;
+
+      svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        vertical-align: middle;
+        display: inline-block;
+        fill: #222222;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
     }
+  }
 
-    &__description {
-        color: #666666;
-        font-family: "Rubik", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.6em;
-        text-align: center;
-        margin: 0px 0px 45px 0px;
+  &__copywrigth {
+    text-align: center;
+
+    a {
+      color: $wbu-color-primary;
+      text-decoration: underline;
     }
+  }
 
-    &__social {
-        display: flex;
-        justify-content: center;
-        margin: 0px 0px 46px 0px;
+  &__bottom {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 11rem;
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: 50% auto;
+    opacity: 0.9;
+    box-sizing: border-box;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 
-        &__link {
-            display: flex;
-            margin: 0px 3px 0px -1px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 10% 10% 10% 10%;
-            padding: 0px 0px 0px 0px;
-            width: 45px;
-            height: 45px;
-            line-height: 44px;
-            background-color: #FFFFFF;
-            box-shadow: 0px 15px 40px 0px rgb(0 0 0 / 10%);
-            justify-content: center;
-
-            svg {
-                width: 1.8rem;
-                height: 1.8rem;
-                vertical-align: middle;
-                display: inline-block;
-                fill: #222222;
-                margin-top: auto;
-                margin-bottom: auto;
-            }
-        }
+    @include media-min(MD) {
+      background-size: 40% auto;
     }
+  }
 
-    &__copywrigth {
-        text-align: center;
+  .evenex-info__inner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
 
-        a {
-            color: $wbu-color-primary;
-            text-decoration: underline;
-        }
+  &--shadow {
+    position: relative;
+    padding: 200px 0px 100px 0px;
+    margin-top: -12.875rem;
+    .overlay {
+      opacity: 0.5;
+      transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: #f0f3f6;
+      background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/02/footer-four-bg-image.png);
+      background-position: bottom center;
+      background-repeat: repeat-x;
+      background-size: auto;
+      padding: 200px 0px 100px 0px;
+      overflow: visible;
     }
-
-    &__bottom {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        max-height: 11rem;
-        background-position: bottom center;
-        background-repeat: repeat-x;
-        background-size: 50% auto;
-        opacity: 0.9;
-        box-sizing: border-box;
-        transition: background .3s, border-radius .3s, opacity .3s;
-
-        @include media-min(MD) {
-            background-size: 40% auto;
-        }
-    }
-
-    .evenex-info__inner {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-        padding: 10px;
-    }
-
-    &--shadow {
-        position: relative;
-        padding: 200px 0px 100px 0px;
-        margin-top: -12.875rem;
-        .overlay {
-            opacity: 0.5;
-            transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            background-color: #F0F3F6;
-            background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/02/footer-four-bg-image.png);
-            background-position: bottom center;
-            background-repeat: repeat-x;
-            background-size: auto;
-            padding: 200px 0px 100px 0px;
-            overflow: visible;
-        }
-    }
-
+  }
 }

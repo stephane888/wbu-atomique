@@ -2,84 +2,84 @@
 @use "../../../../../variables" as *;
 
 .evenex-feature {
-    border-radius: 5px 5px 5px 5px;
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: 20px 0px 40px 0px rgb(0 0 0 / 10%);
-    font-family: "Poppins", Sans-serif;
-    font-size: 16px;
-    padding: 30px 20px 30px 20px;
-    color: #10101075;
-    background-color: #FFFFFF99;
+  border-radius: 5px 5px 5px 5px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 20px 0px 40px 0px rgb(0 0 0 / 10%);
+
+  font-size: 16px;
+  padding: 30px 20px 30px 20px;
+  color: #10101075;
+  background-color: #ffffff99;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  margin-bottom: 10px;
+
+  @include media-min(SM) {
+    width: 35%;
+  }
+
+  @include media-min(MD) {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 77px 70px 77px 70px;
+    float: none;
+    display: inline-block;
+  }
+
+  &.active {
+    color: #ffffff;
+    background-color: transparent;
+    background-image: linear-gradient(-45deg, #ff924b 0%, #f25022 100%);
+  }
+
+  &__icon {
+    svg {
+      width: 77px;
+      height: 65px;
+      fill: #10101075;
+    }
+  }
+
+  &__inner {
     display: flex;
     justify-content: center;
-    position: relative;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    width: 45%;
-    margin-bottom: 10px;
-
-    @include media-min(SM) {
-        width: 35%;
-    }
 
     @include media-min(MD) {
-        position: absolute;
-        width: auto;
-        height: auto;
-        padding: 77px 70px 77px 70px;
-        float: none;
-        display: inline-block;
+      flex-direction: column;
+      .evenex-feature:nth-child(2n + 1) {
+        margin-bottom: 10px;
+        top: 0;
+      }
+
+      .evenex-feature:nth-child(2n + 2) {
+        left: 200px;
+        top: 116px;
+        z-index: 1;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+
+      .evenex-feature:nth-child(2n + 3) {
+        left: 50px;
+        top: 296px;
+        bottom: auto;
+        z-index: 1;
+        margin-bottom: 0;
+      }
     }
+  }
 
-    &.active {
-        color: #FFFFFF;
-        background-color: transparent;
-        background-image: linear-gradient(-45deg, #FF924B 0%, #F25022 100%);
+  &__title {
+    text-transform: capitalize;
+    @include media-min(MD) {
+      font-size: 20px;
     }
-
-    &__icon {
-        svg {
-            width: 77px;
-            height: 65px;
-            fill: #10101075;
-        }
-    }
-
-    &__inner {
-        display: flex;
-        justify-content: center;
-
-        @include media-min(MD) {
-            flex-direction: column;
-            .evenex-feature:nth-child(2n+1) {
-                margin-bottom: 10px;
-                top: 0;
-            }
-
-            .evenex-feature:nth-child(2n+2) {
-                left: 200px;
-                top: 116px;
-                z-index: 1;
-                margin-bottom: 10px;
-                margin-right: 10px;
-            }
-
-            .evenex-feature:nth-child(2n+3) {
-                left: 50px;
-                top: 296px;
-                bottom: auto;
-                z-index: 1;
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    &__title {
-        text-transform: capitalize;
-        @include media-min(MD) {
-            font-size: 20px;
-        }
-    }
+  }
 }

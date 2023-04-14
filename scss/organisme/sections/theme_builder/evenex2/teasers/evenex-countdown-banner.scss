@@ -5,13 +5,13 @@
   position: relative;
   border-radius: 8px;
   padding: $wbu-margin $wbu-margin * 2;
-  box-shadow: 0 3px 6px 0 rgb(248 56 56 / 42%);
+  box-shadow: 0 3px 6px 0 $wbu-color-secondary;
   background-color: transparent;
-  padding-bottom: 2rem;
+  padding-bottom: $wbu-margin;
   background-image: linear-gradient(
     100deg,
     $wbu-color-primary 0%,
-    $wbu-color-thirdly 100%
+    $wbu-color-secondary 100%
   );
   &::before {
     content: "";

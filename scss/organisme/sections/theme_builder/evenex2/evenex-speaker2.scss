@@ -2,21 +2,21 @@
 @use "../../../../variables" as *;
 
 .evenex-speaker2 {
-    &__title {
-        margin: 0px 0px 10px 0px;
-        font-weight: 700;
-        font-family: "Poppins", Sans-serif;
-        color: #101010;
-        text-align: center;
-    }
+  &__title {
+    margin: 0px 0px 10px 0px;
+    font-weight: 700;
 
-    &__description {
-        text-align: center;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 30px;
-        letter-spacing: 0.21px;
-        margin: 0px 0px 47px 0px;
-        color: #666666;
-    }
+    color: #101010;
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.21px;
+    margin: 0px 0px 47px 0px;
+    color: #666666;
+  }
 }

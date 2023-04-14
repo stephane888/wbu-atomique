@@ -4,27 +4,14 @@
 .images-bg {
   background-attachment: fixed;
   background-position: center;
-  position: relative;
   background-size: cover;
   height: 100vh;
   min-height: 400px;
   max-height: 800px;
   padding-top: $space_top * 2;
   padding-bottom: $space_bottom * 2;
-  z-index: 2;
   display: flex;
   align-items: center;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: rgba($color: $wbu-background, $alpha: 0.35);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-  }
 
   .seeMore {
     display: inline-block;

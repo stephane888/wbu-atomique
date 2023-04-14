@@ -3,18 +3,11 @@
 @use "./teasers/evenex-countdown-banner.scss";
 
 .evenex-countdown-section {
-  padding-top: 4rem;
-
   .ecs-title {
-    color: black;
     font-weight: 700;
-    line-height: 54px;
   }
-
   .ecs-description {
-    padding-bottom: 4rem;
-    font-size: $wbu-default-font-size;
-    line-height: 25px;
+    padding-bottom: $wbu-margin * 2;
+    line-height: 1.8;
   }
-
 }

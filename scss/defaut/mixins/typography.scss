@@ -21,15 +21,15 @@
 }
 
 @mixin wbu-titre-suppra() {
-  font-size: $wbu-titre-big-sm;
+  font-size: $wbu-titre-suppra-xs;
   @include media-min(SM) {
-    font-size: $wbu-titre-big-md;
+    font-size: $wbu-titre-suppra-sm;
   }
   @include media-min(DD) {
-    font-size: $wbu-titre-big;
+    font-size: $wbu-titre-suppra-dd;
   }
   @include media-min(M) {
-    font-size: $wbu-titre-biggest;
+    font-size: $wbu-titre-suppra-m;
   }
   @include media-min(LM) {
     font-size: $wbu-titre-suppra;
