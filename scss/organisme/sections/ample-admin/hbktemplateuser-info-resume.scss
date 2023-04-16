@@ -12,6 +12,26 @@
     a {
       color: inherit;
     }
+    //
+    .title-manage {
+      .items .item {
+        margin-left: $wbu-margin * 0.5;
+        @include media-min(M) {
+          margin-left: $wbu-margin;
+        }
+        @include media-min(LM) {
+          margin-left: $wbu-margin * 1.5;
+        }
+        opacity: 0.55;
+        @include WBUtransition();
+        &:first-child {
+          margin-left: 0;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
   }
   .icone {
     color: $wbu-color-primary;
@@ -19,8 +39,14 @@
     * {
       margin: 0;
     }
-    img {
+    img,
+    svg {
       max-width: 40px;
+      width: 100%;
+      height: auto;
+    }
+    svg {
+      fill: $wbu-color-primary;
     }
   }
   .nombre {
