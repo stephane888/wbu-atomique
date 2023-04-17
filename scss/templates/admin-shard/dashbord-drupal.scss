@@ -20,8 +20,23 @@
         padding: $wbu-margin * 0.5 $wbu-margin * 1.6;
       }
     }
+    .search-block-form {
+      flex-wrap: unset !important;
+      .js-form-type-search,
+      .form-wrapper {
+        margin-bottom: 0 !important;
+      }
+      .form-control,
+      .form-wrapper {
+        height: 100%;
+      }
+    }
     .block-hbktemplateuser {
       margin-bottom: $wbu-margin * 2;
+    }
+    .dropdown-menu {
+      left: auto;
+      right: 0;
     }
     .main-content-container {
       padding: $wbu-margin;
@@ -68,6 +83,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    .block-hbktemplateuser {
+      padding-left: 2px;
     }
     .main-navbar {
       margin-bottom: $wbu-margin;
