@@ -2,209 +2,200 @@
 @use "../../../../variables" as *;
 
 .evenex-footer-info {
-    background-color: transparent;
-    background-image: linear-gradient(180deg, #071651 0%, #1016D7 100%);
-    padding: 55px 45px 55px 45px;
-    position: relative;
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #071651 0%, #1016d7 100%);
+  padding: 55px 45px 55px 45px;
+  position: relative;
+  z-index: 2;
+
+  .overlay {
+    background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/02/home3-latest-event-dot-shape.png);
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  &__day {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: center;
     z-index: 2;
+    position: relative;
+  }
 
+  &__title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+  }
 
-    .overlay {
-        background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/02/home3-latest-event-dot-shape.png);
-        opacity: 0.5;
-        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
+  &__hour {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
 
+  &__icon {
+    margin: 0px 15px 0px 0px;
+    height: 60px;
+    width: 60px;
+    transform: rotate(0deg);
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 100px 100px 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .address__inner {
+    .col-8 {
+      display: flex;
+      align-items: center;
     }
 
-    &__day {
-        color: #FFFFFF;
-        font-family: "Poppins", Sans-serif;
-        font-size: 50px;
-        font-weight: 600;
-        line-height: 45px;
-        text-align: center;
-        z-index: 2;
-        position: relative;
+    .evenex-footer-info__title {
+      text-align: left;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    @include media-min(XS) {
+      width: 50%;
+      justify-content: start;
+      padding: 15px;
     }
 
-    &__title {
-        color: #FFFFFF;
-        font-family: "Rubik", Sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
-        text-align: center;
+    @include media-min(MD) {
+      justify-content: space-around;
     }
 
-    &__hour {
-        color: #FFFFFF;
-        font-family: "Rubik", Sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        text-align: center;
-    }
+    @include media-min(MD) {
+      width: 25%;
 
-    &__icon {
-        margin: 0px 15px 0px 0px;
-        height: 60px;
-        width: 60px;
-        transform: rotate(0deg);
-        background-color: #FFFFFF;
-        border-style: solid;
-        border-width: 0px 0px 0px 0px;
-        border-radius: 100px 100px 100px 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        svg {
-            width: 30px;
-            height: 30px;
-        }
-    }
-
-    .address__inner {
-        .col-8 {
-            display: flex;
-            align-items: center;
-        }
-
-        .evenex-footer-info__title {
-            text-align: left;
-        }
-    }
-
-    .wrapper {
-        display: flex;
-        padding: 10px;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-
-        @include media-min(XS) {
-            width: 50%;
-            justify-content: start;
-            padding: 15px;
-        }
-
-        @include media-min(MD) {
-            justify-content: space-around;
-        }
-
-        @include media-min(MD) {
-            width: 25%;
-
-            &>.row {
-                padding: 20px 0px 20px 0px;
-                border-style: solid;
-                border-width: 0px 2px 0px 0px;
-                border-color: #4054B2;
-            }
-        }
-    }
-
-    &__social {
-        display: flex;
+      & > .row {
         padding: 20px 0px 20px 0px;
+        border-style: solid;
+        border-width: 0px 2px 0px 0px;
+        border-color: #4054b2;
+      }
+    }
+  }
 
-        @include media-min(MS) {
-            padding: 12px 0px 12px 0px;
-        }
+  &__social {
+    display: flex;
+    padding: 20px 0px 20px 0px;
 
-        &__link {
-            border-radius: 100% 100% 100% 100%;
-            width: 38px;
-            height: 38px;
-            line-height: 38px;
-            background-color: #4054B2;
-            fill: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-
-            &:hover {
-                background-color: white;
-                fill: $wbu-color-primary;
-            }
-
-            svg {
-                height: 18px;
-                width: 18px;
-            }
-        }
-
+    @include media-min(MS) {
+      padding: 12px 0px 12px 0px;
     }
 
-    &__ticket {
-        display: flex;
-        padding: 19px 34px 19px 34px;
-        background-color: #FFFFFF;
-        box-shadow: 20px 0px 40px 0px rgb(16 22 215 / 10%);
-        border-radius: 5px;
-        position: relative;
-        justify-content: space-around;
-        text-align: center;
-        align-items: center;
+    &__link {
+      border-radius: 100% 100% 100% 100%;
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
+      background-color: #4054b2;
+      fill: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
 
-        @include media-min(XS) {
-            max-height: 54px;
-            width: 76%;
-        }
+      &:hover {
+        background-color: white;
+        fill: $wbu-color-primary;
+      }
 
-        @include media-min(MD) {
-            max-height: 54px;
-            width: 50%;
-        }
-
-        @include media-min(MS) {
-            width: 100%;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background: #09166f;
-            top: -10px;
-            left: 35px;
-            border-radius: 100%;
-            z-index: 1;
-            opacity: 1;
-        }
-
-        &::after {
-
-            content: "";
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background: #0d16ae;
-            bottom: -10px;
-            left: 35px;
-            border-radius: 100%;
-
-        }
-
-        svg {
-            width: 18px;
-            height: 18px;
-            display: inline-block;
-        }
-
-        a {
-            font-size: 16px;
-            font-weight: 500;
-            color: #101010;
-            text-decoration: none;
-            font-family: "Rubik", Sans-serif;
-            display: inline-block;
-        }
+      svg {
+        height: 18px;
+        width: 18px;
+      }
     }
+  }
+
+  &__ticket {
+    display: flex;
+    padding: 19px 34px 19px 34px;
+    background-color: #ffffff;
+    box-shadow: 20px 0px 40px 0px rgb(16 22 215 / 10%);
+    border-radius: 5px;
+    position: relative;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+
+    @include media-min(XS) {
+      max-height: 54px;
+      width: 76%;
+    }
+
+    @include media-min(MD) {
+      max-height: 54px;
+      width: 50%;
+    }
+
+    @include media-min(MS) {
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #09166f;
+      top: -10px;
+      left: 35px;
+      border-radius: 100%;
+      z-index: 1;
+      opacity: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #0d16ae;
+      bottom: -10px;
+      left: 35px;
+      border-radius: 100%;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+    }
+
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      color: #101010;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
 }

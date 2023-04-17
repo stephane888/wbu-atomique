@@ -6,7 +6,7 @@
   .stroked-text {
     color: transparent;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #242424;
+    -webkit-text-stroke-color: $wbu-color-primary;
     //font-size: $wbu-titre-suppra;
     font-weight: bold;
     text-transform: uppercase;

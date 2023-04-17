@@ -6,8 +6,9 @@
 //on ajoute les models de puces.
 @use "./steph/puce-check.scss";
 @use "./steph/puce-dd-check.scss";
+@use "./steph/animate-text.scss";
 @use "./steph/puce-step-vertical.scss";
-//@use "../atome/typography/title.scss";
+// @use "../atome/typography/title.scss";
 @use "../atome/typography/default";
 @use "../atome/typography/h1.scss";
 @use "../atome/typography/h2.scss";
@@ -196,11 +197,26 @@ form {
     position: relative;
     z-index: 1;
   }
+  &.cover-light {
+    &::before {
+      background-color: white;
+    }
+  }
+  &.cover-dark {
+    &::before {
+      background-color: rgb(17, 17, 17);
+    }
+  }
+  &.cover-primary {
+    &::before {
+      background-color: $wbu-color-primary;
+    }
+  }
 }
 
-.opacity-before-07 {
+.opacity-before-092 {
   &::before {
-    opacity: 0.7;
+    opacity: 0.92;
   }
 }
 
@@ -209,7 +225,11 @@ form {
     opacity: 0.88;
   }
 }
-
+.opacity-before-07 {
+  &::before {
+    opacity: 0.7;
+  }
+}
 .opacity-before-055 {
   &::before {
     opacity: 0.55;

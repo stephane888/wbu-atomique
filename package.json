@@ -59,6 +59,7 @@
     "image-webpack-loader": "^8.1.0",
     "imagemin": "^7.0.1",
     "lightgallery": "^2.5.0",
+    "shards-ui": "^3.0.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.3.2",
     "uuid": "^9.0.0",

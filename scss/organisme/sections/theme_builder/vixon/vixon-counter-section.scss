@@ -10,7 +10,10 @@
   overflow: hidden;
 
   .counter-inner {
-    padding: 50px;
+    padding: $wbu-margin;
+    @include media-min(DD) {
+      padding: $wbu-margin * 2;
+    }
     position: relative;
 
     @include media-max(XS) {
@@ -30,7 +33,10 @@
     }
 
     .counter-stat {
-      margin-bottom: 1rem;
+      margin-bottom: $wbu-margin * 1.5;
+      @include media-min(DD) {
+        margin-bottom: 0;
+      }
       color: black;
 
       .cs-light {
@@ -45,7 +51,6 @@
         margin-top: 1rem;
       }
     }
-
 
     .counter-circle {
       min-height: 80px;

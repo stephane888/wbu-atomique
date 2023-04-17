@@ -2,101 +2,101 @@
 @use "../../../../../variables" as *;
 
 .evenex-article {
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 30px 0px;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 0%);
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+
+  &__image {
+    z-index: -1;
+    transition: all 0.4s ease;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__body {
+    margin-left: 30px;
+    background: #fff;
+    padding: 10px 15px 30px 15px;
     position: relative;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 30px 0px;
-    background-color: rgba(255, 255, 255, 0);
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 0%);
-    border-radius: 5px 5px 5px 5px;
-    overflow: hidden;
 
-    &__image {
-        z-index: -1;
-        transition: all 0.4s ease;
+    bottom: 40px;
+  }
 
-        img {
-            max-width: 100%;
-        }
+  &__title {
+    text-align: left;
+    margin-bottom: 28px;
+
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    word-break: break-word;
+    line-height: 1.25;
+    a {
+      color: #05103c;
+      text-decoration: none;
+    }
+  }
+
+  &__text {
+    margin: 0px 0px 9px 0px;
+    position: relative;
+  }
+
+  &__date {
+    color: #666666;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    margin-bottom: 3px;
+  }
+
+  &__category {
+    position: static;
+    transform: rotate(0deg);
+    left: 0px;
+    top: 0px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+      color: #666666;
+      &:hover {
+        color: $wbu-color-primary;
+      }
     }
 
-    &__body {
-        margin-left: 30px;
-        background: #fff;
-        padding: 10px 15px 30px 15px;
-        position: relative;
-
-        bottom: 40px;
+    ul {
+      list-style: none;
     }
 
-    &__title {
-        text-align: left;
-        margin-bottom: 28px;
-        font-family: Poppins, sans-serif;
-        font-weight: 700;
-        letter-spacing: -0.4px;
-        word-break: break-word;
-        line-height: 1.25;
-        a {
-            color: #05103C;
-            text-decoration: none;
-        }
+    @include media-min(XS) {
+      display: none;
     }
 
-    &__text {
-        margin: 0px 0px 9px 0px;
-        position: relative;
+    @include media-min(MD) {
+      display: block;
+      position: absolute;
+      transform: rotate(-90deg) translateX(-50%);
+      left: -90px;
+      top: -13px;
+      margin: -8px 0px 0px 0px;
     }
+  }
 
-    &__date {
-        color: #666666;
-        transition: all .4s ease;
-        cursor: pointer;
-        margin-bottom: 3px;
+  &:hover {
+    .evenex-article__image {
+      transform: rotate(1deg) scale(1.1);
     }
-
-    &__category {
-        position: static;
-        transform: rotate(0deg);
-        left: 0px;
-        top: 0px;
-        transition: all .4s ease;
-        cursor: pointer;
-        text-transform: uppercase;
-
-        a {
-            text-decoration: none;
-            color: #666666;
-            &:hover {
-                color: $wbu-color-primary;
-            }
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        @include media-min(XS) {
-            display: none;
-        }
-
-        @include media-min(MD) {
-            display: block;
-            position: absolute;
-            transform: rotate(-90deg) translateX(-50%);
-            left: -90px;
-            top: -13px;
-            margin: -8px 0px 0px 0px;
-        }
+    .evenex-article__title {
+      a {
+        color: $wbu-color-primary;
+      }
     }
-
-    &:hover {
-        .evenex-article__image {
-            transform: rotate(1deg) scale(1.1);
-        }
-        .evenex-article__title {
-            a {
-                color: $wbu-color-primary;
-            }
-        }
-    }
+  }
 }

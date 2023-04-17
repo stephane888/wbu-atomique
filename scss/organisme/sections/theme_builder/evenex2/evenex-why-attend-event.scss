@@ -2,45 +2,45 @@
 @use "../../../../variables" as *;
 
 .evenex-why-attend {
-    &__title {
-        color: rgb(16, 16, 16);
-        text-align: center;
-        margin: 0px 0px 10px;
-        font-weight: 700;
+  &__title {
+    color: rgb(16, 16, 16);
+    text-align: center;
+    margin: 0px 0px 10px;
+    font-weight: 700;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.21px;
+    margin: 0px 0px 40px;
+
+    @include media-min(XS) {
+      font-size: 18px;
     }
+  }
 
-    &__description {
-        text-align: center;
-        font-size: 16px;
-        color: rgb(102, 102, 102);
-        font-family: Rubik, sans-serif;
-        font-weight: 400;
-        line-height: 30px;
-        letter-spacing: 0.21px;
-        margin: 0px 0px 40px;
+  .col-md-4:nth-child(even) {
+    .evenex-reason {
+      background-color: $wbu-color-primary;
 
-        @include media-min(XS) {
-            font-size: 18px;
+      &__title {
+        color: white;
+      }
+
+      &__icon {
+        svg {
+          fill: white;
         }
+      }
+
+      &__description {
+        color: white;
+      }
     }
-
-    .col-md-4:nth-child(even) {
-        .evenex-reason {
-            background-color: $wbu-color-primary;
-
-            &__title {
-                color: white;
-            }
-
-            &__icon {
-                svg {
-                    fill: white;
-                }
-            }
-
-            &__description {
-                color: white;
-            }
-        }
-    }
+  }
 }

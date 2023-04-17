@@ -295,12 +295,11 @@
     align-items: center;
     padding: 0;
     &__brand {
-      padding-left: 3rem;
       display: block;
       color: $wbu-color-primary;
     }
     .menu-icons {
-      margin-right: 3rem;
+      //margin-right: 3rem;
       display: block;
       transform: scale(1);
       transition: ease 0.3s;

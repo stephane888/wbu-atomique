@@ -2,104 +2,100 @@
 @use "../../../../../variables" as *;
 
 .evenex-feature-detail {
-    padding: 70px 0px 0px 0px;
-    overflow: visible;
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
+  padding: 70px 0px 0px 0px;
+  overflow: visible;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+
+  &__icon {
+    left: -83px;
+    text-align: left;
+    z-index: 0;
+    top: 33px;
+    margin-bottom: 0;
+    position: absolute;
+    @include media-min(MD) {
+      left: 0;
+      top: 65px;
+    }
+
+    svg {
+      position: relative;
+      width: 150px;
+      width: 150px;
+      fill: #f0f0f0;
+      @include media-min(MD) {
+        width: 105px;
+        height: 105px;
+      }
+    }
+  }
+
+  &__tag {
+    color: #f94743;
+
+    font-weight: 500;
+    line-height: 1.625em;
+    letter-spacing: -0.4px;
+    margin: 0px 0px 0px 0px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  &__title {
+    color: #101010;
+
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
     position: relative;
+  }
 
-    &__icon {
-        left: -83px;
-        text-align: left;
-        z-index: 0;
-        top: 33px;
-        margin-bottom: 0;
-        position: absolute;
-        @include media-min(MD) {
-            left: 0;
-            top: 65px;
-        }
+  &__description {
+    color: #666666;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  }
 
-        svg {
-            position: relative;
-            width: 150px;
-            width: 150px;
-            fill: #f0f0f0;
-            @include media-min(MD) {
-                width: 105px;
-                height: 105px;
-            }
-        }
+  &__button {
+    display: flex;
+    padding: 0px 0px 5px 0px;
+    margin-right: 10px;
+    min-width: 130px;
+    cursor: pointer;
+
+    svg {
+      margin-right: 8px;
+      width: 17px;
+      fill: $wbu-color-primary;
     }
 
-    &__tag {
-        color: #F94743;
-        font-family: "Rubik", Sans-serif;
-        font-weight: 500;
-        line-height: 1.625em;
-        letter-spacing: -0.4px;
-        margin: 0px 0px 0px 0px;
-        padding-bottom: 10px;
-        text-align: center;
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      text-align: start;
+      color: #05103b;
+      min-width: 80px;
     }
 
-    &__title {
-        color: #101010;
-        font-family: "Poppins", Sans-serif;
-        font-weight: 700;
-        line-height: 54px;
-        text-align: center;
-        position: relative;
-    }
-
-    &__description {
-        color: #666666;
-        font-family: "Roboto", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 26px;
-        margin-top: 10px;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        margin-bottom: 10px;
-    }
-
-
-    &__button {
-        display: flex;
-        padding: 0px 0px 5px 0px;
-        margin-right: 10px;
-        min-width: 130px;
-        cursor: pointer;
-
-        svg {
-            margin-right: 8px;
-            width: 17px;
-            fill: $wbu-color-primary;
+    &__inner {
+      .col-sm-12:nth-child(odd) {
+        .evenex-feature-detail__button {
+          @include media-min(SM) {
+            border-style: solid;
+            border-width: 0px 1px 0px 0px;
+            border-color: #d4d7da;
+            background-color: #02010100;
+          }
         }
-
-        a {
-            font-family: "Rubik", Sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            text-align: start;
-            color: #05103B;
-            min-width: 80px;
-        }
-
-        &__inner {
-            .col-sm-12:nth-child(odd) {
-                .evenex-feature-detail__button {
-                    @include media-min(SM) {
-                        border-style: solid;
-                        border-width: 0px 1px 0px 0px;
-                        border-color: #D4D7DA;
-                        background-color: #02010100;
-                    }
-                }
-            }
-        }
+      }
     }
-
+  }
 }

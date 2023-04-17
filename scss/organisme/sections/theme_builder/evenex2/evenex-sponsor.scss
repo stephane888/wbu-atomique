@@ -2,117 +2,114 @@
 @use "../../../../variables" as *;
 
 .evenex-sponsor {
+  position: relative;
+  background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/10/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0px 120px 0px;
+
+  .overlay {
+    background-repeat: repeat;
+    background-size: auto;
+    background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/10/dot-shape.png);
+    opacity: 1;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  &__title {
+    text-align: center;
+    color: white;
+  }
+
+  &__description {
+    color: #c2c2c2;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.21px;
+    margin: 0px 0px 50px 0px;
+    text-align: center;
+  }
+
+  &__logo {
+    background-color: #262eb5;
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+    padding: 30px 0px 30px 0px;
+    display: inline-block;
+    text-align: center;
+    max-width: 50%;
+
+    &:last-child {
+      max-width: 100%;
+    }
+
+    &:nth-last-child(-n + 3) {
+      @include media-min(XS) {
+        max-width: 32.33%;
+      }
+    }
+
+    @include media-min(XS) {
+      max-width: 24%;
+      margin: 0px 2px 2px 0px;
+    }
+
+    @include media-min(XS) {
+      margin: 0px 4px 4px 0px;
+    }
+
+    &__inner {
+      display: flex;
+      padding: 20px;
+    }
+  }
+
+  &__link {
+    padding: 19px 34px 20px;
+
+    font-size: 16px;
+    font-weight: 500;
+    background-color: $wbu-color-secondary;
+    border-style: none;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 15px 25px 0 rgb(249 71 67 / 30%);
+    margin: 6rem auto 0 auto;
     position: relative;
-    background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/10/bg.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 100px 0px 120px 0px;
-    
+    align-items: center;
+    transition: all 0.4s ease;
 
-    .overlay {
-        background-repeat: repeat;
-        background-size: auto;
-        background-image: url(https://demo.xpeedstudio.com/evenex/meetup/wp-content/uploads/sites/3/2020/10/dot-shape.png);
-        opacity: 1;
-        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
+    &:hover {
+      background-color: darken($color: $wbu-color-secondary, $amount: 25);
+    }
+
+    svg {
+      fill: white;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 10px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &::before {
         position: absolute;
+        inset: 0;
+        content: "";
+      }
     }
 
-    &__title {
-        text-align: center;
-        color: white;
+    div {
+      display: inline-block;
     }
-
-    &__description {
-        color: #C2C2C2;
-        font-family: "Rubik", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 30px;
-        letter-spacing: 0.21px;
-        margin: 0px 0px 50px 0px;
-        text-align: center;
-    }
-
-    &__logo {
-        background-color: #262EB5;
-        margin: 0px 0px 10px 0px;
-        width: 100%;
-        padding: 30px 0px 30px 0px;
-        display: inline-block;
-        text-align: center;
-        max-width: 50%;
-
-        &:last-child {
-            max-width: 100%;
-        }
-
-        &:nth-last-child(-n +3) {
-            @include media-min(XS) {
-                max-width: 32.33%;
-            }
-        }
-
-        @include media-min(XS) {
-            max-width: 24%;
-            margin: 0px 2px 2px 0px;
-        }
-
-        @include media-min(XS) {
-            margin: 0px 4px 4px 0px;
-        }
-
-        &__inner {
-            display: flex;
-            padding: 20px;
-
-        }
-
-    }
-
-    &__link {
-        padding: 19px 34px 20px;
-        font-family: rubik, Sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        background-color: $wbu-color-secondary;
-        border-style: none;
-        border-radius: 5px 5px 5px 5px;
-        box-shadow: 0 15px 25px 0 rgb(249 71 67 / 30%);
-        margin: 6rem auto 0 auto;
-        position: relative;
-        align-items: center;
-        transition: all 0.4s ease;
-
-        &:hover {
-            background-color: darken($color: $wbu-color-secondary, $amount: 25);
-        }
-
-        svg {
-            fill: white;
-            width: 2rem;
-            height: 2rem;
-            margin-right: 10px;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-
-            &::before {
-                position: absolute;
-                inset: 0;
-                content: "";
-            }
-        }
-        
-        div {
-            display: inline-block;
-        }
-    }
+  }
 }

@@ -1,0 +1,33 @@
+@use "../../wbu-ressources.scss" as *;
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    $wbu-color-primary 0%,
+    $wbu-color-secondary 29%,
+    $wbu-color-thirdly 67%,
+    $wbu-background 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 8s linear infinite;
+  display: inline-block;
+  .animate-charcter.fast {
+    animation: textclip 4s linear infinite;
+  }
+  .animate-charcter.slow {
+    animation: textclip 15s linear infinite;
+  }
+}
