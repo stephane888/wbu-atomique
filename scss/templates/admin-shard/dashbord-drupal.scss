@@ -30,6 +30,9 @@
       .form-wrapper {
         height: 100%;
       }
+      .form-wrapper {
+        padding: 0 !important;
+      }
     }
     .block-hbktemplateuser {
       margin-bottom: $wbu-margin * 2;
