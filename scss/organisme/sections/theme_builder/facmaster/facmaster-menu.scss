@@ -18,6 +18,10 @@ body {
 
 .logo {
   max-width: 200px;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
   img {
     width: 100%;
     height: auto;
@@ -28,9 +32,9 @@ body {
   background: $wbu-background;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   display: flex;
-  justify-content: space-between;
   font-family: sans-serif;
-  padding: 10px 50px;
+  padding: 0 15px;
+  justify-content: space-between;
   @media screen and (max-width: 768px) {
     background-color: inherit;
   }
@@ -99,7 +103,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  transition: all 0.25s ease-in;
+  transition: all 0.35s ease-in;
 
   @media screen and (max-width: 768px) {
     background: $primary;
@@ -110,7 +114,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    transform: translatey(-100%);
+    transform: translatey(110%);
     text-align: center;
 
     .menu-active & {
@@ -121,7 +125,6 @@ body {
 
   .menu-item a {
     color: color-yiq($wbu-background);
-    display: block;
     line-height: 30px;
     margin: 0px 10px;
     text-decoration: none;
@@ -130,7 +133,7 @@ body {
     position: relative;
 
     &:hover {
-      color: $wbu-background;
+      color: $wbu-color-primary;
     }
 
     @media screen and (max-width: 768px) {
@@ -142,13 +145,16 @@ body {
 }
 
 .sub-nav {
-  border: 1px solid #ccc;
+  border-top: 4px solid$wbu-color-primary;
   display: none;
   position: absolute;
-  background-color: $primary;
+  background-color: color-yiq($wbu-background);
   padding: 5px 5px;
   list-style: none;
-  width: 230px;
+  transform: translatey(30%);
+
+  transition: all 0.35s ease-in;
+
   @media screen and (max-width: 768px) {
     position: relative;
     width: 100%;
@@ -164,31 +170,29 @@ body {
   }
 }
 
-.sub-nav {
-  &:hover {
-    display: block;
-  }
-}
 .menu-item {
   display: flex;
+  padding: 2rem 1rem;
 
   svg {
     width: 14px !important;
     fill: color-yiq($wbu-background);
   }
   &:hover {
-    background-color: $wbu-color-primary;
-    color: color-yiq($wbu-color-primary);
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 48px;
-      margin: auto;
-      background-color: #f5ad0d;
-      height: 3px;
+    .sub-nav {
+      display: block;
+      transform: translatey(45%);
+      width: 100%;
+      a {
+        color: $wbu-background;
+
+        &:hover {
+          color: $wbu-color-primary;
+        }
+      }
+    }
+    svg {
+      fill: $wbu-color-primary;
     }
   }
   @media screen and (max-width: 768px) {
