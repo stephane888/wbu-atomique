@@ -30,8 +30,11 @@
       .form-wrapper {
         height: 100%;
       }
-      .form-wrapper {
+      .input-group-prepend .form-wrapper {
         padding: 0 !important;
+        input {
+          color: color-yiq($wbu-color-primary);
+        }
       }
     }
     .block-hbktemplateuser {
