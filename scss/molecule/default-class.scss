@@ -14,10 +14,15 @@
 @use "../atome/typography/h2.scss";
 @use "../atome/typography/h3.scss";
 @use "../atome/typography/h4.scss";
-
+/**
+ * espacement/marge entre blog
+ */
 .space_bottom,
 .space-bottom {
   margin-bottom: $space_bottom;
+}
+.space-top-inv {
+  margin-top: -$space_bottom;
 }
 .space-padding {
   padding-top: $space_top;
@@ -42,6 +47,10 @@
 .padding-bottom {
   padding-bottom: $space_bottom;
 }
+
+/**
+ * Background
+ */
 .bg-theme {
   background-color: $wbu-background !important;
 }
@@ -57,6 +66,36 @@
 .with-tablet, // @depreciate
 .width-tablet {
   max-width: $with_tablet;
+}
+
+/**
+ * Ombre
+ */
+.box-shadow-top {
+  &-black {
+    box-shadow: 0px -13px 1px 0px rgba(0, 0, 0, 40%);
+  }
+  &-primary {
+    box-shadow: 0px -13px 1px 0px rgba($wbu-color-primary, 40%);
+  }
+}
+
+/**
+ * bordure arrondie
+ */
+.border-radius {
+  &-0 {
+    border-radius: 0;
+  }
+  &-5 {
+    border-radius: $wbu-margin * 0.25;
+  }
+  &-10 {
+    border-radius: $wbu-margin * 0.5;
+  }
+  &-20 {
+    border-radius: $wbu-margin;
+  }
 }
 /**
  * Gestion de la taille des titres.
