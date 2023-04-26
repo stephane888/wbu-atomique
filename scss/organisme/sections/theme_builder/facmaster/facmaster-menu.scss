@@ -131,6 +131,7 @@ body {
     text-transform: uppercase;
     text-align: left;
     position: relative;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       color: $wbu-color-primary;
@@ -146,20 +147,20 @@ body {
 
 .sub-nav {
   border-top: 4px solid$wbu-color-primary;
-  display: none;
+  visibility: hidden;
   position: absolute;
   background-color: color-yiq($wbu-background);
   padding: 5px 5px;
   list-style: none;
-  transform: translatey(30%);
-
-  transition: all 0.35s ease-in;
+  transform: translatey(90%);
+  transition: all 0.3s ease-in;
 
   @media screen and (max-width: 768px) {
-    position: relative;
+    // position: relative;
     width: 100%;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    border: none;
+    background-color: color-yiq($wbu-background);
     box-sizing: border-box;
   }
 }
@@ -180,7 +181,7 @@ body {
   }
   &:hover {
     .sub-nav {
-      display: block;
+      visibility: visible;
       transform: translatey(45%);
       width: 100%;
       a {
@@ -199,6 +200,9 @@ body {
     display: flex;
     justify-content: space-between;
     &::before {
+      display: none;
+    }
+    svg {
       display: none;
     }
   }
