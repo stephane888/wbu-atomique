@@ -4,8 +4,35 @@
 @use "./molecule/hotlock-service-items.scss";
 @use "../../../../_variables.scss" as *;
 
+/**
+ * est n'est pas optimisé, il contient des blocks qui doivent etre separer lorqu'on souhaite avoir uniquement le menu.
+ */
 .header-section-handler {
   // overflow: hidden; // On rend visble car on a ajouté un dropdown.
+  // module .lang-dropdown-form by drupal.
+  .lang-dropdown-form {
+    display: flex;
+    margin-left: $wbu-margin * 1.5;
+    .js-form-item {
+      margin-bottom: 0 !important;
+    }
+    img {
+      min-width: 25px;
+      padding: 1.2rem 0;
+    }
+    select {
+      width: auto !important;
+      border: none;
+      background: transparent;
+      padding-right: $wbu-margin * 0.25;
+      padding-left: $wbu-margin * 0.25;
+      &:focus,
+      &:focus-visible {
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
   &.mn-fixed-top {
     position: fixed;
     top: 0;

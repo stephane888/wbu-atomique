@@ -7,18 +7,44 @@
   overflow: hidden;
   background-size: cover;
   min-height: 600px;
-  height: 100vh;
-  .hero-container {
-    height: 100%;
-    padding: $wbu-margin * 3 0;
-    top: 0;
+  @include media-min(DD) {
+    min-height: 100vh;
+  }
+
+  .first-image {
+    display: block;
+    position: absolute;
+    right: $wbu-margin;
+    top: 0px;
+
+    img {
+      width: 520px;
+      max-width: 520px;
+      height: 221px;
+    }
+  }
+
+  .second-image {
+    // width: $wbu-margin * 15;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    top: auto;
+    position: absolute;
+    bottom: $wbu-margin;
     left: 0;
+  }
+  .hero-container {
+    //height: 100%;
+    //padding: $wbu-margin * 3 0;
+    //top: 0;
+    //left: 0;
 
     .elementor-image {
       position: absolute;
       display: flex;
       justify-content: center;
-
+      z-index: -3;
       img {
         width: 100%;
       }
@@ -37,6 +63,7 @@
       }
 
       .location {
+        margin-bottom: $wbu-margin * 2.5;
         svg {
           width: 25px;
           height: 25px;
@@ -51,7 +78,6 @@
 
       .subtitle {
         margin: 0;
-        margin-bottom: $wbu-margin * 2.5;
       }
 
       .title {
@@ -165,27 +191,6 @@
           height: 20px;
           fill: white;
         }
-      }
-    }
-
-    .second-image {
-      width: $wbu-margin * 15;
-      display: flex;
-      position: relative;
-      justify-content: flex-start;
-      top: -$wbu-margin * 12;
-    }
-
-    .first-image {
-      display: block;
-      position: absolute;
-      right: 8%;
-      top: 0px;
-
-      img {
-        width: 520px;
-        max-width: 520px;
-        height: 221px;
       }
     }
   }
