@@ -6,17 +6,6 @@
   padding: $space_bottom * 1.2 0;
   position: relative;
 
-  &::before {
-    display: block;
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba($color: $wbu-background, $alpha: 0.7);
-  }
-
   .slider-content {
     .slider-nner {
       @include media-min(DD) {
