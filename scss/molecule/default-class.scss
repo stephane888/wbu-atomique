@@ -1,9 +1,9 @@
 /** 
-* Contient une liste de class par defaut, utilisé dans la construction de tout rendu html.
-*/
+ * Contient une liste de class par defaut, utilisé dans la construction de tout rendu html.
+ */
 @use "../wbu-ressources-clean.scss" as *;
 @use "../variables";
-//on ajoute les models de puces.
+// On ajoute les models de puces.
 @use "./steph/puce-check.scss";
 @use "./steph/puce-dd-check.scss";
 @use "./steph/animate-text.scss";
@@ -15,7 +15,7 @@
 @use "../atome/typography/h3.scss";
 @use "../atome/typography/h4.scss";
 /**
- * espacement/marge entre blog
+ * Espacement/marge entre blog
  */
 .space_bottom,
 .space-bottom {
@@ -47,6 +47,40 @@
 .padding-bottom {
   padding-bottom: $space_bottom;
 }
+/**
+ * -- Gestion des backgrounds.
+ */
+.background {
+  &--attached {
+    background-attachment: fixed;
+  }
+  &--cover {
+    background-size: cover;
+  }
+  &--contain {
+    background-size: contain;
+  }
+}
+.background-position {
+  &--left-center {
+    background-position: left center;
+  }
+  &--right-center {
+    background-position: right center;
+  }
+  &--left-top {
+    background-position: left top;
+  }
+  &--left-bottom {
+    background-position: left bottom;
+  }
+  &--right-bottom {
+    background-position: right bottom;
+  }
+  &--right-top {
+    background-position: right top;
+  }
+}
 
 /**
  * Background
@@ -59,11 +93,11 @@
   color: $wbu-color-primary;
 }
 // definie les container de lecture.
-.with-phone, // @depreciate
+.with-phone, // @depreciate remove before 2x
 .width-phone {
   max-width: $with_phone;
 }
-.with-tablet, // @depreciate
+.with-tablet, // @depreciate remove before 2x
 .width-tablet {
   max-width: $with_tablet;
 }
