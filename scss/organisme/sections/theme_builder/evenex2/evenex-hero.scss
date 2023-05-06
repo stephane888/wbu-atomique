@@ -7,25 +7,29 @@
   overflow: hidden;
   background-size: cover;
   min-height: 600px;
+  z-index: 1;
   @include media-min(DD) {
     min-height: 100vh;
   }
 
-  .first-image {
+  .first-image:not(.layout-builder__region) {
     display: block;
     position: absolute;
     right: $wbu-margin;
     top: 0px;
-
-    img {
-      width: 520px;
-      max-width: 520px;
-      height: 221px;
+    right: 0;
+    bottom: auto;
+    max-width: 25%;
+    @include media-min(MD) {
+      max-width: 350px;
     }
+    @include media-min(DD) {
+      max-width: 500px;
+    }
+    opacity: 0.4;
   }
 
-  .second-image {
-    // width: $wbu-margin * 15;
+  .second-image:not(.layout-builder__region) {
     display: flex;
     position: relative;
     justify-content: flex-start;
@@ -33,20 +37,37 @@
     position: absolute;
     bottom: $wbu-margin;
     left: 0;
+    z-index: 0;
+    bottom: 0;
+    max-width: 25%;
+    @include media-min(MD) {
+      max-width: 350px;
+    }
+    @include media-min(DD) {
+      max-width: 500px;
+    }
+    opacity: 0.4;
   }
   .hero-container {
-    //height: 100%;
-    //padding: $wbu-margin * 3 0;
-    //top: 0;
-    //left: 0;
-
-    .elementor-image {
+    .elementor-image:not(.layout-builder__region) {
       position: absolute;
       display: flex;
       justify-content: center;
-      z-index: -3;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-width: 2000px;
+      width: auto;
+      opacity: 0.2;
+      -webkit-clip-path: polygon(0 0, 88% 0, 100% 100%, 7% 100%);
+      clip-path: polygon(0 0, 88% 0, 100% 100%, 7% 100%);
+      border-radius: 50px;
+      overflow: hidden;
       img {
-        width: 100%;
+        object-fit: cover;
+        max-width: 2500px;
       }
     }
 
