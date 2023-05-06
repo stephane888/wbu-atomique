@@ -62,6 +62,9 @@
   }
 }
 .background-position {
+  &--center {
+    background-position: center center;
+  }
   &--left-center {
     background-position: left center;
   }

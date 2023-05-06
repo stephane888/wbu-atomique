@@ -5,6 +5,10 @@
   &__logo {
     margin: 0px 0px 46px 0px;
     text-align: center;
+    img {
+      max-width: 300px;
+      max-height: 150px;
+    }
   }
 
   &__description {
