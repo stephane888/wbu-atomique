@@ -4,23 +4,27 @@
 .mitor-card__img {
   position: relative;
   z-index: 2;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  // margin-top: $wbu-margin * 0.5;
+  // margin-bottom: $wbu-margin * 0.5;
 
   img {
-    max-width: 100%;
+    max-width: 150%;
+    @include media-min(MD) {
+      max-width: 2500px;
+    }
+
     width: auto;
     height: auto;
     object-fit: cover;
-    min-height: 15rem;
   }
 
   .img-bloc {
-    padding: 20px 0;
-    @include media-min(DD) {
-      padding: 0;
-    }
+    padding: $wbu-margin * 2 $wbu-margin;
     display: flex;
     align-items: center;
+    &--item {
+      overflow: hidden;
+      border-radius: 3px;
+    }
   }
 }

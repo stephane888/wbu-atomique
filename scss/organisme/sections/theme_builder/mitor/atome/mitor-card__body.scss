@@ -45,7 +45,7 @@
       }
       li::before {
         content: "";
-        @include wbu__svg-dd-puce-check(#000, 45);
+        @include wbu__svg-dd-puce-check($wbu-color-primary, 45);
         position: relative;
         width: 6rem;
         height: 2rem;
@@ -78,7 +78,7 @@
           counter-increment: section;
           content: counter(section);
           display: inline-block;
-          background-color: $wbu-background;
+          background-color: $wbu-color-primary;
           line-height: 1;
           margin-right: 2rem;
           margin-top: 5px;

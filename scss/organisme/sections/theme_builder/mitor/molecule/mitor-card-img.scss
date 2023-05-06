@@ -23,7 +23,7 @@
   padding-bottom: $space-bottom;
   align-items: center;
   width: 100%;
-  //margin: 0;
+  overflow: hidden;
   @include media-max(XS) {
     overflow: hidden;
   }
@@ -32,26 +32,43 @@
   }
   &--left {
     .mitor-card__img {
+      .img-bloc {
+        padding-right: 0;
+        @include media-min(MD) {
+          padding-left: $wbu-margin;
+        }
+      }
       &::after {
         content: "";
         position: absolute;
-        left: -25px;
+        left: 0;
         top: 0;
-        width: 250px;
+        bottom: 0;
         height: 100%;
         z-index: -1;
         background-color: $wbu-background;
         @include dynamiqWidthLeft();
       }
+      .img-bloc--item {
+        padding-left: 0;
+      }
     }
   }
   &--right {
     .mitor-card__img {
-      //order: 2;
+      .img-bloc {
+        padding-left: 0;
+        &--item {
+          padding-left: 0;
+          @include media-min(MD) {
+            padding-left: 15px;
+          }
+        }
+      }
       &::after {
         content: "";
         position: absolute;
-        right: -25px;
+        right: 0;
         top: 0;
         width: 250px;
         height: 100%;
