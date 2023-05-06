@@ -22,6 +22,7 @@
   &__time {
     display: flex;
     margin-right: 3rem;
+    align-items: baseline;
 
     &__icon {
       margin-right: 0.8375rem;
@@ -46,7 +47,7 @@
 
   &__location {
     display: flex;
-
+    align-items: baseline;
     &__icon {
       margin-right: 0.8375rem;
       vertical-align: text-top;
