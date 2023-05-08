@@ -19,7 +19,10 @@
   }
 
   .img-bloc {
-    padding: $wbu-margin * 2 $wbu-margin;
+    padding: $wbu-margin $grid-gutter-width * 0.5;
+    @include media-min(MD) {
+      padding: $wbu-margin;
+    }
     display: flex;
     align-items: center;
     &--item {

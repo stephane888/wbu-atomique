@@ -85,19 +85,15 @@
           $wbu-color-primary 0%,
           $wbu-color-secondary 100%
         );
-
         &__price {
           color: white;
-
           &::after {
-            background: #fd9f90;
+            background: $wbu-color-secondary;
           }
         }
-
         &__main-benefit {
           color: white;
         }
-
         &__benefit {
           color: white;
         }
@@ -129,7 +125,7 @@
             color: white;
 
             &::after {
-              background: #fd9f90;
+              background: $wbu-color-secondary;
             }
           }
 

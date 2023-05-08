@@ -33,10 +33,10 @@
   &--left {
     .mitor-card__img {
       .img-bloc {
-        padding-right: 0;
-        @include media-min(MD) {
-          padding-left: $wbu-margin;
-        }
+        //padding-right: 0;
+        // @include media-min(MD) {
+        //   padding-left: $wbu-margin;
+        // }
       }
       &::after {
         content: "";
@@ -58,12 +58,11 @@
     .mitor-card__img {
       .img-bloc {
         padding-left: 0;
-        &--item {
-          padding-left: 0;
-          @include media-min(MD) {
-            padding-left: 15px;
-          }
-        }
+        // &--item {
+        //   @include media-min(MD) {
+        //     padding-left: 15px;
+        //   }
+        // }
       }
       &::after {
         content: "";
@@ -83,7 +82,9 @@
       .img-bloc {
         justify-content: end;
       }
-      order: 2;
+      @include media-min(DD) {
+        order: 2;
+      }
     }
   }
   &--triangle {

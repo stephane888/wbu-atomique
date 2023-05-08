@@ -5,12 +5,15 @@
   margin-bottom: $wbu-margin;
 
   &__iconContainer {
-    // height: 80px;
-    // width: 80px;
     background-color: $wbu-background;
     border-radius: 50%;
     border: 1px solid darken($wbu-background, 30%);
     margin: 0 auto 22px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__assistance {
