@@ -29,8 +29,9 @@
     i {
       max-height: 60px;
       max-width: 60px;
-      color: color-yiq($wbu-background);
-      fill: color-yiq($wbu-background);
+      width: 100%; // Si cela ne fonctionne pas pour la balise i, il faudra la surchager en dessous.
+      color: $wbu-color-primary;
+      fill: $wbu-color-primary;
     }
   }
 
