@@ -8,6 +8,8 @@
   padding-top: $space-bottom;
   padding-bottom: $space-bottom;
   background-position: center center;
+  height: 100vh;
+  object-fit: fill;
   .pub-teaser-handler {
     width: 100%;
     min-height: 360px;
