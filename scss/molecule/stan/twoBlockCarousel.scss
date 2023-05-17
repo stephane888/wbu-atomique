@@ -19,7 +19,7 @@
   &.open {
     margin-top: 0;
     opacity: 1;
-    z-index: 10;
+    z-index: 999;
   }
 
   .close {
@@ -56,7 +56,7 @@
     justify-content: space-around;
     height: 100%;
     margin: auto;
-    //max-height: 70vh;
+    // max-height: 70vh;
     align-items: flex-start;
     @include media-max(SM) {
       //  max-height: 80vh;
