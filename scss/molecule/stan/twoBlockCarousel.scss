@@ -11,7 +11,7 @@
   bottom: 0;
   right: 0;
   background: #fff;
-  z-index: 99999;
+  z-index: -10;
   margin-top: 100%;
   opacity: 0;
   @include WBUtransition();
@@ -19,6 +19,7 @@
   &.open {
     margin-top: 0;
     opacity: 1;
+    z-index: 10;
   }
 
   .close {
@@ -55,10 +56,10 @@
     justify-content: space-around;
     height: 100%;
     margin: auto;
-    max-height: 70vh;
+    //max-height: 70vh;
     align-items: flex-start;
     @include media-max(SM) {
-      max-height: 80vh;
+      //  max-height: 80vh;
       padding: 0;
     }
 
@@ -82,20 +83,30 @@
     }
 
     .bigImage {
-      width: 60%;
+      width: 100%;
+      background-color: rgba($wbu-background, 0.15);
+      @include media-min(MD) {
+        width: 60%;
+      }
       @include media-min(M) {
         width: 65%;
       }
-      @include media-max(SM) {
-        width: 100%;
-      }
 
+      .slick-track {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       .rer {
         //background-color: rgba(245, 58, 192, 0.508);
         padding: 2px;
 
         img {
-          width: 100%;
+          max-width: 100%;
+          max-height: calc(
+            100vh - 150px
+          ); // cela permet à des images de ne par remplir tout l'ecran ce qui permet d'afficher le titre du slider.
+          object-fit: contain;
         }
       }
 

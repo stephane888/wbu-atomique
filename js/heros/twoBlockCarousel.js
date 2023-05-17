@@ -8,15 +8,24 @@ if (window.jQuery) {
 
   //console.log(slick);
   //code pour le paramétrage de twoblockCarousel.scss
-  jQuery(document).ready(function($) {
-    $(".galeryImage .small__voirPlus").click(function() {
-      $(".stanCaroussel").toggleClass("open");
-    });
-    $(".stanCaroussel .close").click(function() {
-      $(".stanCaroussel").toggleClass("open");
-    });
-  });
-  $(document).ready(function() {
+  const openGalery = document.querySelector(".galeryImage__read-more");
+  const popupGalerie = document.querySelector(".stanCaroussel");
+  if (openGalery && popupGalerie) {
+    const openClose = () => {
+      popupGalerie.classList.toggle("open");
+      if (popupGalerie.classList.contains("open")) {
+        document.body.classList.add("modal-open");
+      } else {
+        document.body.classList.remove("modal-open");
+      }
+    };
+    openGalery.addEventListener("click", () => openClose());
+    popupGalerie
+      .querySelector(".close")
+      .addEventListener("click", () => openClose());
+  }
+
+  $(document).ready(function () {
     $(".bigImage").slick({
       dots: false,
       slidesToShow: 1,
@@ -40,10 +49,10 @@ if (window.jQuery) {
             dots: true,
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 2000
-          }
-        }
-      ]
+            autoplaySpeed: 2000,
+          },
+        },
+      ],
     });
   });
 
@@ -67,22 +76,22 @@ if (window.jQuery) {
           centerPadding: "40px",
           slidesToScroll: 1,
           infinite: true,
-          dots: false
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 990,
         settings: {
-          centerPadding: "60px"
-        }
+          centerPadding: "60px",
+        },
       },
       {
         breakpoint: 850,
         settings: {
-          centerPadding: "50px"
-        }
-      }
-    ]
+          centerPadding: "50px",
+        },
+      },
+    ],
   });
 
   $(".smallCarousell").slick({
@@ -104,46 +113,44 @@ if (window.jQuery) {
           slidesToShow: 1,
           centerPadding: "-40px",
           slidesToScroll: 1,
-          infinite: false
-        }
+          infinite: false,
+        },
       },
       {
         breakpoint: 990,
         settings: {
-          centerPadding: "-60px"
-        }
+          centerPadding: "-60px",
+        },
       },
       {
         breakpoint: 850,
         settings: {
           slidesToShow: 1,
-          centerPadding: "-20px"
-        }
-      }
-    ]
+          centerPadding: "-20px",
+        },
+      },
+    ],
   });
 
-  $(".bigImage").on("init", function(event, slick, currentSlide, nextSlide) {
+  $(".bigImage").on("init", function (event, slick, currentSlide, nextSlide) {
     var num = slick.slideOffset + 1;
     var total = slick.slideCount;
     document.getElementById("num").innerHTML = num;
     document.getElementById("total").innerHTML = total;
   });
-  $(".bigImage").on("beforeChange", function(
-    event,
-    slick,
-    currentSlide,
-    nextSlide
-  ) {
-    if (slick.$nextArrow) {
-      var num = nextSlide + 1;
-    } else if (slick.$prevArrow) {
-      var num = currentSlide - 1;
-    } else {
-      var num = currentSlide + 1;
+  $(".bigImage").on(
+    "beforeChange",
+    function (event, slick, currentSlide, nextSlide) {
+      if (slick.$nextArrow) {
+        var num = nextSlide + 1;
+      } else if (slick.$prevArrow) {
+        var num = currentSlide - 1;
+      } else {
+        var num = currentSlide + 1;
+      }
+      document.getElementById("num").innerHTML = num;
     }
-    document.getElementById("num").innerHTML = num;
-  });
+  );
 } else {
   console.log("La bibiotheque Jquery est requise");
 }

@@ -3,7 +3,7 @@
 @use "puce-check";
 
 .expert-solution {
-  background-color: rbga($wbu-background, 0.3);
+  background-color: rgba($wbu-background, 0.3);
   padding: $wbu-margin * 4 0;
 
   img {
