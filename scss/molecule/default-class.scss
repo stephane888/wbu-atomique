@@ -24,17 +24,31 @@
 .space-top-inv {
   margin-top: -$space_bottom;
 }
+//
 .space-padding {
   padding-top: $space_top;
   padding-bottom: $space_bottom;
 }
+//
 .space-inner-padding {
   padding-top: $space_inner_top;
   padding-bottom: $space_inner_top;
 }
+//
+.space-inner-padding,
+.space-inner-py {
+  padding-top: $space_inner_top;
+  padding-bottom: $space_inner_top;
+}
+.space-inner-px {
+  padding-right: $space_inner_top;
+  padding-left: $space_inner_top;
+}
+//
 .space-inner-bottom {
   margin-bottom: $space_inner_top;
 }
+//
 .space-inner-top {
   margin-top: $space_inner_top;
 }
@@ -267,7 +281,7 @@ form {
     }
   }
   /**
-   * rendre le contenu en position relatif + un z-index.
+   * Rendre le contenu en position relatif + un z-index.
    */
   > * {
     position: relative;
