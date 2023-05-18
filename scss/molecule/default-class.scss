@@ -27,7 +27,7 @@
 //
 .space-padding,
 .space-padding-py {
-  padding-top: $space_top;
+  padding-top: $space_bottom;
   padding-bottom: $space_bottom;
 }
 .space-padding-px {
@@ -36,6 +36,10 @@
   @include media-min(DD) {
     padding-left: $space_bottom;
     padding-right: $space_bottom;
+    &--dd {
+      padding-left: $space_bottom * 0.7;
+      padding-right: $space_bottom * 0.7;
+    }
   }
 }
 //
