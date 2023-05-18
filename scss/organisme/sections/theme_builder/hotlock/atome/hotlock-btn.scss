@@ -141,16 +141,16 @@
 @include media-max(MS) {
   .htl-btn {
     a {
-      padding: 1.8rem 3.8rem;
+      padding: 2rem;
     }
     &--big {
       a {
-        padding: 2.2rem 4.4rem;
+        padding: 2rem;
       }
     }
     &--sm {
       a {
-        padding: 1.2rem 2.8rem;
+        padding: 2rem;
       }
     }
   }
@@ -158,16 +158,16 @@
 @include media-max(SM) {
   .htl-btn {
     a {
-      padding: 1.6rem 3.4rem;
+      padding: 2rem;
     }
     &--big {
       a {
-        padding: 1.8rem 3.8rem;
+        padding: 2rem;
       }
     }
     &--sm {
       a {
-        padding: 1rem 2.4rem;
+        padding: 2rem;
       }
     }
   }
@@ -175,16 +175,16 @@
 @include media-max(XS) {
   .htl-btn {
     a {
-      padding: 1.5rem 3rem;
+      padding: 2rem;
     }
     &--big {
       a {
-        padding: 1.6rem 3.4rem;
+        padding: 2rem;
       }
     }
     &--sm {
       a {
-        padding: 0.8rem 2rem;
+        padding: 2rem;
       }
     }
   }
