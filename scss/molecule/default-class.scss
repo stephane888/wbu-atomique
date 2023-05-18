@@ -25,9 +25,18 @@
   margin-top: -$space_bottom;
 }
 //
-.space-padding {
+.space-padding,
+.space-padding-py {
   padding-top: $space_top;
   padding-bottom: $space_bottom;
+}
+.space-padding-px {
+  padding-left: $space_bottom * 0.3;
+  padding-right: $space_bottom * 0.3;
+  @include media-min(MD) {
+    padding-left: $space_bottom;
+    padding-right: $space_bottom;
+  }
 }
 //
 .space-inner-padding {
