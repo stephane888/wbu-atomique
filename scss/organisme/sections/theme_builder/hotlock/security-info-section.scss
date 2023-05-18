@@ -6,8 +6,14 @@
   background-position: center !important;
   background-repeat: no-repeat;
   background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center center;
   overflow: hidden;
   position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 0;
 
   .safety-text {
