@@ -33,7 +33,7 @@
 .space-padding-px {
   padding-left: $space_bottom * 0.3;
   padding-right: $space_bottom * 0.3;
-  @include media-min(MD) {
+  @include media-min(DD) {
     padding-left: $space_bottom;
     padding-right: $space_bottom;
   }
