@@ -24,17 +24,48 @@
 .space-top-inv {
   margin-top: -$space_bottom;
 }
-.space-padding {
-  padding-top: $space_top;
+//
+.space-padding,
+.space-padding-py {
+  padding-top: $space_bottom;
   padding-bottom: $space_bottom;
 }
+.space-padding-px {
+  padding-left: $space_bottom * 0.3;
+  padding-right: $space_bottom * 0.3;
+  @include media-min(DD) {
+    padding-left: $space_bottom;
+    padding-right: $space_bottom;
+    &--md {
+      padding-left: $space_bottom * 0.55;
+      padding-right: $space_bottom * 0.55;
+    }
+    &--dd {
+      padding-left: $space_bottom * 0.7;
+      padding-right: $space_bottom * 0.7;
+    }
+  }
+}
+//
 .space-inner-padding {
   padding-top: $space_inner_top;
   padding-bottom: $space_inner_top;
 }
+//
+.space-inner-padding,
+.space-inner-py {
+  padding-top: $space_inner_top;
+  padding-bottom: $space_inner_top;
+}
+.space-inner-px {
+  padding-right: $space_inner_top;
+  padding-left: $space_inner_top;
+}
+//
 .space-inner-bottom {
   margin-bottom: $space_inner_top;
 }
+//
 .space-inner-top {
   margin-top: $space_inner_top;
 }
@@ -267,7 +298,7 @@ form {
     }
   }
   /**
-   * rendre le contenu en position relatif + un z-index.
+   * Rendre le contenu en position relatif + un z-index.
    */
   > * {
     position: relative;
