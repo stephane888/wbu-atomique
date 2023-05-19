@@ -9,6 +9,7 @@ $color-dark: lighten($wbu-background, 35);
   .footer-first {
     background: $wbu-background;
     padding: $space-bottom 0 $space-bottom * 0.8;
+    padding-bottom: 0;
   }
   .footer-middle {
     margin-bottom: -2rem;
