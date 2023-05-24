@@ -32,7 +32,7 @@
       width: 3px;
       height: 100%;
       top: 0;
-      left: 0;
+      left: $grid-gutter-width * 0.5;
       bottom: 0;
       right: auto;
       position: absolute;

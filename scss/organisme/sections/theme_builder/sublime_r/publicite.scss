@@ -5,11 +5,9 @@
   background: url("https://preview.colorlib.com/theme/sublime/images/xavds_xl.jpg.pagespeed.ic.hPLCuIxgvV.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: $space-bottom;
-  padding-bottom: $space-bottom;
+  padding-top: $space_inner_top * 0.5;
+  padding-bottom: $space_inner_top * 0.5;
   background-position: center center;
-  height: 100vh;
-  object-fit: fill;
   .pub-teaser-handler {
     width: 100%;
     min-height: 360px;
@@ -17,15 +15,6 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    //padding: $wbu-margin;
-    //.pub {
-      //padding: $wbu-margin;
-      //position: absolute;
-      //top: 0;
-      //left: 0;
-      //width: 100%;
-      //height: 100%;
-    //}
     .banner {
       display: flex;
       justify-content: end;
@@ -35,12 +24,11 @@
       flex-direction: column;
       justify-content: justify;
       background: $wbu-color-primary;
-      width: 40rem;
+      width: 100%;
+      max-width: 450px;
       padding: $wbu-margin * 2;
       overflow: hidden;
-      @include media-max(MD) {
-        width: unset;
-      }
+      color: color-yiq($wbu-color-primary);
       .title {
         width: 100%;
         text-transform: capitalize;
@@ -54,7 +42,6 @@
         width: fit-content;
         border-bottom: 1px solid $wbu-border-color;
         .link {
-          //margin-left: $wbu-margin;
           position: relative;
           text-decoration: none;
         }

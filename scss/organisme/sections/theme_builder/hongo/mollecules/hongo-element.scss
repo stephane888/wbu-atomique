@@ -1,57 +1,30 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
-// grace à ce fichier , l'élément hongo-element peut etre appeler dans d'autres sections pour plus 
+// grace à ce fichier , l'élément hongo-element peut etre appeler dans d'autres sections pour plus
 // de modularité et éviter la réécriture de code.
-.element{
-      .img-handler{
-        margin: $wbu-margin * 0.2;
-        ._img{
-            width: 100%;
-        }
-      }
-      .text-wrapper{
-        position: absolute;
-        margin: $wbu-margin;
-        width: 90%;
-        height: 35vh;
-        .content{
-            margin-right: $wbu-margin * 2;
-            height: 100%;
-            position: relative;
-            display: flex;
-            justify-content: end;
-            align-items: center;
-            .title{
-                color: $wbu-border-color;
-                font-size: $wbu-h4-font-size;
-            }
-            .shop{
-                margin-top: $wbu-margin;
-                .link{
-                    color: $wbu-border-color;
-                    border-bottom: 1px solid $wbu-border-color;
-                    text-transform: uppercase;
-                }
-            }
-        }
-        .content1{
-            margin-left: $wbu-margin ;
-            height: 100%;
-            position: relative;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            .title{
-                color: $wbu-border-color;
-                font-size: $wbu-h4-font-size;
-            }
-            .shop{
-                margin-top: $wbu-margin;
-                .link{
-                    color: $wbu-border-color;
-                    border-bottom: 1px solid $wbu-border-color;
-                }
-            }
-        }
-      }
+.hot_models_hongo_item {
+  overflow: hidden;
+  position: relative;
+  min-height: 250px;
+  z-index: 1;
+  .img-handler {
+    margin: $wbu-margin * 0.2;
+    img {
+      width: auto;
+      max-width: 1500px;
+      height: 100%;
     }
+  }
+  .text-wrapper {
+    z-index: 2;
+    position: absolute;
+    background-color: rgba($wbu-background, 0.4);
+    top: auto;
+    padding: $wbu-margin * 1.5;
+    left: $wbu-margin * 1.5;
+    right: $wbu-margin * 1.5;
+    bottom: $wbu-margin * 1.5;
+    color: color-yiq($wbu-background);
+    min-height: 200px;
+  }
+}
