@@ -2,7 +2,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 
 .security-info-handler {
-  background: url("https://hotlock.axiomthemes.com/wp-content/uploads/2017/01/bg_cta2.jpg");
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-position: center center;
@@ -34,12 +33,10 @@
       }
     }
     .text-title {
-      color: $wbu-border-color;
       font-weight: lighter;
       margin: $wbu-margin * 2 0;
     }
     .text-paragraph {
-      color: $wbu-border-color;
       font-weight: lighter;
       margin-bottom: $wbu-margin * 2;
       max-width: 60rem;
