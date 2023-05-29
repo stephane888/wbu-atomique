@@ -12,18 +12,6 @@
   align-items: center;
   justify-content: center;
 
-  &::before {
-    content: "";
-    position: absolute;
-    background: $wbu-background;
-    // opacity: 0.8;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-
   .titles-handler {
     position: relative;
     z-index: 3;
@@ -96,7 +84,6 @@
     // }
 
     .titles-handler {
-
       .title {
         letter-spacing: 2px;
         text-transform: capitalize !important;

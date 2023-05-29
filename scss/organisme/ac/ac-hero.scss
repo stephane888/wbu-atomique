@@ -4,7 +4,7 @@
 @use "../../wbu-ressources.scss" as *;
 @use "../../atome/typography/h4.scss";
 @use "../../atome/typography/h1.scss";
-.ac-hero {
+.formatage-models-ac-hero {
   background: $wbu-background;
   color: #fff;
   overflow: hidden;
@@ -19,8 +19,10 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    order: 3;
     @include media-max("MD") {
       padding-right: 2rem;
+      order: 1;
     }
   }
 
@@ -45,11 +47,16 @@
 
   .content-image {
     min-height: 300px;
-    //padding-top: $space_bottom;
+    order: 1;
+    overflow: hidden;
     position: relative;
     z-index: 0;
+    @include media-min(MD) {
+      order: 3;
+    }
     @include media-min("DD") {
       min-height: 550px;
+      overflow: visible;
     }
 
     img {
@@ -67,6 +74,21 @@
       @include media-min("DD") {
         max-width: 1900px;
         max-height: calc(100% + #{$space_bottom} + #{$space_top});
+      }
+    }
+  }
+  &.image-left {
+    .content-text {
+      order: 3;
+    }
+    .content-image {
+      order: 1;
+      img {
+        left: auto;
+        right: 0;
+        @include media-min(MD) {
+          right: $grid-gutter-width * 0.5;
+        }
       }
     }
   }
