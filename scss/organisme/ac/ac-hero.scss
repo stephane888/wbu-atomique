@@ -81,6 +81,12 @@
     .content-text {
       order: 3;
     }
+    @include media-min(MD) {
+      .content-text {
+        padding-right: $wbu-margin;
+        padding-left: $space_bottom;
+      }
+    }
     .content-image {
       order: 1;
       @include media-min(MD) {
@@ -88,10 +94,6 @@
           left: auto;
           right: 0;
           right: $grid-gutter-width * 0.5;
-        }
-        .content-text {
-          padding-right: $wbu-margin;
-          padding-left: $space_bottom;
         }
       }
     }
