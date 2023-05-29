@@ -13,7 +13,7 @@
   .content-text {
     padding-top: $space_bottom;
     padding-bottom: $space_bottom;
-    padding-right: $space_bottom;
+    padding-right: $wbu-margin;
     color: inherit;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@
     flex-direction: column;
     order: 3;
     @include media-max("MD") {
-      padding-right: 2rem;
+      padding-right: $space_bottom;
       order: 1;
     }
   }
@@ -83,11 +83,15 @@
     }
     .content-image {
       order: 1;
-      img {
-        left: auto;
-        right: 0;
-        @include media-min(MD) {
+      @include media-min(MD) {
+        img {
+          left: auto;
+          right: 0;
           right: $grid-gutter-width * 0.5;
+        }
+        .content-text {
+          padding-right: $wbu-margin;
+          padding-left: $space_bottom;
         }
       }
     }
