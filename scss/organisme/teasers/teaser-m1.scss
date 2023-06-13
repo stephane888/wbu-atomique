@@ -25,6 +25,9 @@
       bottom: auto;
       left: auto;
       line-height: 0;
+      svg {
+        fill: $wbu-color-primary;
+      }
     }
   }
 }

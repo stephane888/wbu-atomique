@@ -18,4 +18,13 @@
       box-shadow: 0px 2px 3px #a7a7a7;
     }
   }
+  &.title-2-lines {
+    .card-body {
+      .titre {
+        &:not(.layout-builder__region) {
+          @include multiLineEllipsis($lineHeight: $wbu-h3-font-size, $lineCount: 2);
+        }
+      }
+    }
+  }
 }
