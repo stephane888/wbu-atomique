@@ -4,7 +4,14 @@
 .footer-handler {
   background: $wbu-background;
   padding: $space-bottom 0;
-
+  color: color-yiq($wbu-background);
+  a {
+    color: color-yiq($wbu-background);
+    @include WBUtransition();
+    &:hover {
+      color: $wbu-color-primary;
+    }
+  }
   .img-logo {
     margin-bottom: 3.5rem;
     img {
@@ -14,14 +21,19 @@
   p {
     margin: 0;
   }
-
+  // En attendant de pouvoir selectionner un template pour les menus lors du rendu, on force le style via la css.
+  .nav {
+    .nav-item {
+      width: 100%;
+    }
+  }
   .element {
     display: flex;
     align-items: center;
     padding-bottom: $wbu-margin * 0.8;
 
     .icon {
-      border: 2px soliid tomato;
+      border: 2px soliid $wbu-color-primary;
       color: $wbu-color-primary;
     }
     svg {

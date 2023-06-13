@@ -5,7 +5,10 @@
   flex-direction: column;
   background-color: $wbu-background;
   position: relative;
-  @include bp_h3();
   margin-bottom: $wbu-margin;
   padding: $wbu-margin * 0.5 0;
+  color: color-yiq($wbu-background);
+  a {
+    color: color-yiq($wbu-background);
+  }
 }

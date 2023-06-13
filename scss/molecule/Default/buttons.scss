@@ -1,0 +1,51 @@
+/** 
+ * Contient une liste de class par defaut, utilisé dans la construction de tout rendu html.
+ */
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables";
+
+/**
+ * Buttons clignotant.
+ */
+.animate-bg--secondary {
+  animation: bg_secondary 1.5s infinite;
+  @include WBUtransition();
+}
+@keyframes bg_secondary {
+  0% {
+    background-color: rgba($wbu-color-primary, 100%);
+  }
+  8% {
+    background-color: rgba($wbu-color-primary, 50%);
+  }
+  30% {
+    background-color: rgba($wbu-color-secondary, 50%);
+  }
+  50% {
+    background-color: rgba($wbu-color-secondary, 100%);
+  }
+  100% {
+    background-color: rgba($wbu-color-secondary, 100%);
+  }
+}
+.animate-bg--primary {
+  animation: bg_primary 1.5s infinite;
+  @include WBUtransition();
+}
+@keyframes bg_primary {
+  0% {
+    background-color: rgba($wbu-color-secondary, 100%);
+  }
+  8% {
+    background-color: rgba($wbu-color-secondary, 50%);
+  }
+  30% {
+    background-color: rgba($wbu-color-primary, 50%);
+  }
+  50% {
+    background-color: rgba($wbu-color-primary, 100%);
+  }
+  100% {
+    background-color: rgba($wbu-color-primary, 100%);
+  }
+}

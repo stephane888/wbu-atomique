@@ -9,10 +9,9 @@
     align-items: center;
   }
   &__name {
-    @include bp_h3();
     font-weight: 600;
   }
-  &__subname {
-    font-size: $wbu-default-font-size;
-  }
+  // &__subname {
+  //   //
+  // }
 }

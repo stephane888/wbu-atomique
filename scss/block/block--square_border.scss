@@ -1,0 +1,13 @@
+@use "../wbu-ressources-clean.scss" as *;
+.block--square_border {
+  > .item {
+    border: 1px solid $wbu-border-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $wbu-margin;
+    .icone + .label {
+      padding-left: $wbu-margin * 0.5;
+    }
+  }
+}

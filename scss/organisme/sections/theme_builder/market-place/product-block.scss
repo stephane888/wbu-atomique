@@ -14,8 +14,10 @@
 @use "./mollecules/product-btn-action.scss";
 @use "./mollecules/product-gift.scss";
 .product-block {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  @include media-min(DD) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
   position: relative;
   .product-content {
     // width: auto;
@@ -57,7 +59,7 @@
       flex-wrap: wrap;
       margin-left: -$wbu-margin * 0.5;
       margin-right: -$wbu-margin * 0.5;
-      margin-top: $wbu-margin;
+      //margin-top: $wbu-margin;
       .form-check {
         padding: 0;
         margin: 0 $wbu-margin/2 $wbu-margin $wbu-margin/2;

@@ -1,0 +1,17 @@
+/** 
+ * Contient une liste de class par defaut, utilisé dans la construction de tout rendu html.
+ */
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables";
+
+.text-1-ligne {
+  @include ellipseText(1);
+}
+
+.text-2-ligne {
+  @include ellipseText(2);
+}
+
+.text-3-ligne {
+  @include ellipseText(3);
+}
