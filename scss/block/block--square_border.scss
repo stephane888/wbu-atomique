@@ -6,8 +6,38 @@
     justify-content: center;
     align-items: center;
     padding: $wbu-margin;
+    @include WBUtransition();
+    cursor: pointer;
     .icone + .label {
       padding-left: $wbu-margin * 0.5;
+    }
+    svg {
+      @include WBUtransition();
+      fill: inherit;
+    }
+  }
+  //
+  &--primary {
+    > .item {
+      &:hover {
+        color: $wbu-color-primary;
+        border-color: $wbu-color-primary;
+        svg {
+          fill: $wbu-color-primary;
+        }
+      }
+    }
+  }
+  //
+  &--background {
+    > .item {
+      &:hover {
+        color: $wbu-background;
+        border-color: $wbu-background;
+        svg {
+          fill: $wbu-background;
+        }
+      }
     }
   }
 }
