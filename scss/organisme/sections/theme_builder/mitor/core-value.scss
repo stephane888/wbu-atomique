@@ -1,48 +1,36 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 
-.mitor-core-value-section-handler{
-    background: $wbu-background;
-    display: flex;
-    padding-top: $space-bottom;
-    padding-bottom: $space-bottom;
-    position: relative;
+.mitor-core-value-section-handler {
+  // background: $wbu-background;
+  display: flex;
+  padding-top: $space-bottom;
+  padding-bottom: $space-bottom;
+  position: relative;
+  &--bg-img {
+    height: 100vh;
+    background: url(https://ludoviccreative.com/storage/2022/05/3-450x328.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    &--bg-img{
-        height: 100vh;
-        background: url(https://ludoviccreative.com/storage/2022/05/3-450x328.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
+  }
+
+  .section-header {
+    position: relative;
+    z-index: 5;
+    .section-title {
+      padding-top: $wbu-margin;
+      padding-bottom: $wbu-margin;
+      text-align: center;
     }
-    &::after{
-        content: '';
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        position: absolute;
-        z-index: 4;
-        background-color: rgba($wbu-background, 0.52);
+    .section-desc {
+      padding-top: $wbu-margin;
+      text-align: center;
+      padding-bottom: $wbu-margin;
     }
-    .section-header{
-        position: relative;
-        z-index: 5;
-        .section-title {
-            padding-top: $wbu-margin;
-            padding-bottom: $wbu-margin;
-            text-align: center;
-        }
-        .section-desc {
-            padding-top: $wbu-margin;
-            text-align: center;
-            padding-bottom: $wbu-margin;
-        }
-    }
-    .value-list {
-        position: relative;
-        z-index: 5;
-    }
+  }
+  .value-list {
+    position: relative;
+    z-index: 5;
+  }
 }
