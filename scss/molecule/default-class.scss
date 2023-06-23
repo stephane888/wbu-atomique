@@ -301,7 +301,7 @@ form {
       display: none;
     }
   }
-  .cover-before-z10 {
+  &-before-z10 {
     &::before {
       z-index: 10;
     }
