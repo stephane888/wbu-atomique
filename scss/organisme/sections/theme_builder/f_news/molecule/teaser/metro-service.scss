@@ -11,7 +11,8 @@
       transform: translateY(-20%);
       .head-nav {
         opacity: 1;
-        max-height: 6rem;
+        // max-height: 6rem;
+        max-height: 10%;
         margin-bottom: 1rem;
       }
       .node-date {
@@ -57,9 +58,9 @@
     .head-nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      // gap: 1rem;
       justify-content: start;
-      font-size: $wbu-default-font-size ;
+      font-size: $wbu-default-font-size;
       align-items: center;
       padding: 0;
       list-style: none;
