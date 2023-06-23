@@ -18,6 +18,9 @@
 // import default styles.
 @use "./Default/buttons.scss";
 @use "./Default/text.scss";
+@use "./Default/z-index.scss";
+@use "./Default/row-alter.scss";
+
 /**
  * Espacement/marge entre blog
  */
@@ -267,7 +270,8 @@ form {
   }
 }
 /**
- * Permet de couvrir tout une zone avec un lien. le prent doit avoir la classe position-relative ou utilisé la proprieté "position:relative".
+ * Permet de couvrir tout une zone avec un lien. le parent doit avoir la classe position-relative ou utilisé la proprieté "position:relative".
+ * Cette classe doit etre sur la balise a.
  */
 .cover-link {
   &::before {
@@ -390,16 +394,4 @@ form {
   .space_bottom {
     margin-bottom: 0;
   }
-}
-.z-index-1 {
-  z-index: 1;
-}
-.z-index-10 {
-  z-index: 10;
-}
-.z-index-50 {
-  z-index: 50;
-}
-.z-index-100 {
-  z-index: 100;
 }
