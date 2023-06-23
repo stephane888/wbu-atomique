@@ -5,7 +5,7 @@
   &-marg-2px {
     margin-inline: -2px;
   }
-  > [class^="col"] {
+  > [class*="col"] {
     padding-left: 2px;
     padding-right: 2px;
   }
