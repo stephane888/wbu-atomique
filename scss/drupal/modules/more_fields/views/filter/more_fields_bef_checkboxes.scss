@@ -1,0 +1,67 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+$light_bg: lighten($wbu-background, 15);
+$light_pr: lighten($wbu-color-primary, 15);
+.more_fields_bef_radios {
+  .radio {
+    padding: 0;
+    margin: 0;
+    input[type="radio"] {
+      display: none;
+    }
+    .form-check-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-right: $wbu-margin * 0.5;
+      border-radius: $wbu-margin * 0.25;
+      cursor: pointer;
+      padding: $wbu-margin * 0.5 $wbu-margin;
+      border: 1px solid $light_bg;
+      transition: all 0.3s ease;
+      position: relative;
+      &::before {
+        height: $wbu-margin;
+        width: $wbu-margin;
+        display: flex;
+        border-radius: 50%;
+        background-color: $light_bg;
+        margin-right: $wbu-margin * 0.5;
+        opacity: 0.5;
+        content: "";
+        @include WBUtransition($temps: 0.1s);
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+    input:checked:checked ~ .form-check-label {
+      background-color: $wbu-background;
+      color: color-yiq($wbu-background);
+      &::before {
+        background-color: $wbu-color-primary;
+        opacity: 1;
+      }
+    }
+  }
+  &.mf_bef_primary {
+    .radio {
+      .form-check-label {
+        border-color: $light_pr;
+        &::before {
+          background-color: $light_pr;
+        }
+      }
+      input:checked:checked ~ .form-check-label {
+        background-color: $wbu-color-primary;
+        color: color-yiq($wbu-color-primary);
+        &::before {
+          background-color: $wbu-color-primary;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
