@@ -5,7 +5,7 @@ $light_pr: lighten($wbu-color-primary, 15);
 .more_fields_bef_radios {
   .radio {
     padding: 0;
-    margin: 0;
+    margin: 0 0 $wbu-margin * 0.5 0;
     input[type="radio"] {
       display: none;
     }
