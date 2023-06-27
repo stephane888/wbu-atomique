@@ -10,16 +10,44 @@
    * Cette fonction require core/drupal.ajax
    * ( cela est deja acivé dans le module commerceformatage,
    * si vous decidez de l'utiliser ailleurs rassurer vus que la libraie core/drupal.ajax est presente ).
-   * @param {*} context
+   * @param {*} context : le conexte n'est pas forcement necessaire, mais le devien apres la MAJ du panier via ajax.
    */
-  function reloadBloc(context) {
-    once(
-      "commerceformatage",
-      ".commerceformatage_cart_habeuk_click.use-ajax",
-      context
-    ).forEach((item) => {
-      item.click();
-    });
+  function reloadBloc(context = null) {
+    console.log("relaodBlock ", context);
+    const item = document.querySelector(
+      ".commerceformatage_cart_habeuk_click.use-ajax"
+    );
+    item.click();
+    // once n'est pas adapté, lorsqu'on soihaite cliquer plusieurs fois.
+    // if (context)
+    //   once(
+    //     "commerceformatage",
+    //     ".commerceformatage_cart_habeuk_click.use-ajax",
+    //     context
+    //   ).forEach((item) => {
+    //     item.click();
+    //     console.log("JS trigger reload button");
+    //   });
+    // else {
+    //   console.log(
+    //     "find element : ",
+    //     document.querySelector(".commerceformatage_cart_habeuk_click.use-ajax")
+    //   );
+    //   console.log(
+    //     "ONCE find elemnt click : ",
+    //     once(
+    //       "commerceformatage",
+    //       ".commerceformatage_cart_habeuk_click.use-ajax"
+    //     )
+    //   );
+    //   once(
+    //     "commerceformatage",
+    //     ".commerceformatage_cart_habeuk_click.use-ajax"
+    //   ).forEach((item) => {
+    //     item.click();
+    //     console.log("JS trigger reload button");
+    //   });
+    //}
   }
 
   function ManageCover(action, context) {
@@ -42,12 +70,12 @@
    * Ouvre le popup
    * @param {*} open
    */
-  function openCartPopup(open, context) {
+  function openCartPopup(open, context = null) {
     if (open) {
       document
         .querySelector(".commerceformatage_cart_habeuk")
         .classList.add("show");
-      reloadBloc(context);
+      reloadBloc();
     } else
       document
         .querySelector(".commerceformatage_cart_habeuk")
