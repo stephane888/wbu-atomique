@@ -100,8 +100,7 @@
   }
 
   .table-responsive {
-    padding: 0;
-    padding-right: $wbu-margin * 0.5;
+    padding: 0 $wbu-margin * 0.5;
     tbody {
       tr:first-child td {
         border-top: none;
@@ -132,9 +131,28 @@
   }
   .field--name-total-price {
     background: #e9e7e7;
-    padding: 15px 0;
+    padding: $wbu-margin * 0.75 $wbu-margin * 0.5;
     .order-total-line.mb-5 {
       margin-bottom: 0 !important;
+    }
+  }
+  .order-total-line {
+    .order-total-line-label {
+      padding-right: $wbu-margin * 0.5;
+    }
+    .order-total-line-value {
+      width: auto;
+    }
+  }
+  .commerceformatage_cart_habeuk_remove {
+    cursor: pointer;
+    opacity: 0.7;
+    color: $wbu-background;
+    @include WBUtransition();
+
+    &:hover {
+      opacity: 1;
+      color: $danger;
     }
   }
 }
