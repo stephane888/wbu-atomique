@@ -55,26 +55,24 @@
     }
   }
   //ceci c'est uniquement au cas ou ou le module lang-dropdown est activé
-  .block-lang-dropdown {
-    form.lang-dropdown-form {
-      display: flex;
-      align-items: center;
-      margin-left: $wbu-margin;
-      .js-form-item {
-        margin-bottom: 0 !important;
-      }
-      img.language-icon {
-        min-width: 35px;
-      }
-      select {
-        max-width: 120px;
-        width: auto !important;
-        background-color: transparent;
-        border: none;
-        color: color-yiq($wbu-background);
-        option {
-          background-color: $wbu-background;
-        }
+  form.lang-dropdown-form {
+    display: flex;
+    align-items: center;
+    margin-left: $wbu-margin;
+    .js-form-item {
+      margin-bottom: 0 !important;
+    }
+    img.language-icon {
+      min-width: 35px;
+    }
+    select {
+      max-width: 120px;
+      width: auto !important;
+      background-color: transparent;
+      border: none;
+      color: color-yiq($wbu-background);
+      option {
+        background-color: $wbu-background;
       }
     }
   }
