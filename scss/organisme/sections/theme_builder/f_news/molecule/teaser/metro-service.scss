@@ -60,7 +60,6 @@
       flex-wrap: wrap;
       // gap: 1rem;
       justify-content: start;
-      font-size: $wbu-default-font-size;
       align-items: center;
       padding: 0;
       list-style: none;
@@ -108,7 +107,6 @@
       }
     }
     .node-date {
-      font-size: $wbu-h6-font-size;
       color: rgba(255, 255, 255, 0.726);
       opacity: 0;
       transition: ease 0.3s;
@@ -120,7 +118,6 @@
       }
     }
     .node-title {
-      font-size: $wbu-h3-font-size-sm;
       font-weight: bold;
       margin-bottom: $wbu-margin * 0.5;
       display: inline-block;
