@@ -5,13 +5,16 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
   min-height: 400px;
   max-height: 800px;
-  padding-top: $space_top * 2;
-  padding-bottom: $space_bottom * 2;
+  padding-top: $space_top;
+  padding-bottom: $space_bottom;
   display: flex;
   align-items: center;
+  @include media-min("S_768") {
+    height: 100vh;
+  }
 
   .seeMore {
     display: inline-block;

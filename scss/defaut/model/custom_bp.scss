@@ -1,12 +1,63 @@
-// variable pour les PB
+/**
+ * version 1 : Juin 2023
+ * pour voir les stats d'utilisation en fonction de la taille des ecrans : https://gs.statcounter.com/screen-resolution-stats/mobile/worldwide
+ */
+//360 (360x800 ...)
+$S_360_fin: 359px; // S < 360
+$S_360_debut: 360px; // S >= 360
+//400 (412x915, 414x896 ...)
+$S_400_fin: 399px; // S < 400
+$S_400_debut: 400px; // S >= 400
+// CUSTOM key : mobile
+//575 (bootstrap v5)
+$S_575_fin: 574px; // S < 575
+$S_575_debut: 575px; // S >= 575
+//600 (600x1024, 601x962 ...)
+$S_600_fin: 599px; // S < 600
+$S_600_debut: 600px; // S >= 600
+// CUSTOM key : tablet
+//768 (bootstrap, 768x1024 ...)
+$S_768_fin: 767px; // S < 768
+$S_768_debut: 768px; // S >= 768
+//800 (800x1280 ...)
+$S_800_fin: 799px; // S < 800
+$S_800_debut: 800px; // S >= 800
+//992 (bootstrap ...)
+$S_992_fin: 991px; // S < 992
+$S_992_debut: 992px; // S >= 992
+//1200 (bootstrap ...)
+$S_1200_fin: 1199px; // S < 1200
+$S_1200_debut: 1200px; // S >= 1200
+//1280 (1280x800 ...)
+$S_1280_fin: 1279px; // S < 1280
+$S_1280_debut: 1280px; // S >= 1280
+// CUSTOM key : desktop
+//1366 (1366x768 ...)
+$S_1366_fin: 1365px; // S < 1366
+$S_1366_debut: 1366px; // S >= 1366
+//1400 (bootstrap ...)
+$S_1400_fin: 1399px; // S < 1400
+$S_1400_debut: 1400px; // S >= 1400
+//1536 (1536x864 ...)
+$S_1536_fin: 1536px; // S < 1536
+$S_1536_debut: 1536px; // S >= 1536
+//1920 (1920x1080 ...)
+$S_1920_fin: 1919px; // S < 1920
+$S_1920_debut: 1920px; // S >= 1920
+
+// end
+/**
+ * version 0.
+ * Remove before 2x
+ * @depreciated value.
+ */
 $XX_fin: 440px;
-
 $XS_debut: 441px;
+
 $XS_fin: 575px;
-
 $SM_debut: 576px;
-$SM_fin: 768px;
 
+$SM_fin: 768px;
 $MD_debut: 769px;
 $MD_fin: 991px;
 
@@ -27,17 +78,6 @@ $L_fin: 1920px;
 
 $XL_debut: 1921px;
 //$XL_fin: 2500px;
-
-// variaibles BreakPoints
-$var: false !default; // Can be overridden elsewhere
-
-@if $var == true {
-  //div p{font-size:40px;}
-} @else if $var == false {
-  //div p{font-size:80px;}
-} @else {
-  //div p{font-size:80px;}
-}
 
 @mixin media-min($_key: false) {
   @if $_key == "XS" {
@@ -76,6 +116,78 @@ $var: false !default; // Can be overridden elsewhere
     @media only screen and (min-width: $XL_debut) {
       @content;
     }
+  } @else if $_key == "S_360" {
+    @media only screen and (min-width: $S_360_debut) {
+      @content;
+    }
+  } @else if $_key == "S_400" {
+    @media only screen and (min-width: $S_400_debut) {
+      @content;
+    }
+  } @else if $_key == "S_575" {
+    @media only screen and (min-width: $S_575_debut) {
+      @content;
+    }
+  } @else if $_key == "S_600" {
+    @media only screen and (min-width: $S_600_debut) {
+      @content;
+    }
+  } @else if $_key == "S_768" {
+    @media only screen and (min-width: $S_768_debut) {
+      @content;
+    }
+  } @else if $_key == "S_800" {
+    @media only screen and (min-width: $S_800_debut) {
+      @content;
+    }
+  } @else if $_key == "S_992" {
+    @media only screen and (min-width: $S_992_debut) {
+      @content;
+    }
+  } @else if $_key == "XL" {
+    @media only screen and (min-width: $XL_debut) {
+      @content;
+    }
+  } @else if $_key == "S_1200" {
+    @media only screen and (min-width: $S_1200_debut) {
+      @content;
+    }
+  } @else if $_key == "S_1280" {
+    @media only screen and (min-width: $S_1280_debut) {
+      @content;
+    }
+  } @else if $_key == "S_1366" {
+    @media only screen and (min-width: $S_1366_debut) {
+      @content;
+    }
+  } @else if $_key == "S_1400" {
+    @media only screen and (min-width: $S_1400_debut) {
+      @content;
+    }
+  } @else if $_key == "S_1536" {
+    @media only screen and (min-width: $S_1536_debut) {
+      @content;
+    }
+  } @else if $_key == "S_1920" {
+    @media only screen and (min-width: $S_1920_debut) {
+      @content;
+    }
+  }
+  // Custom key
+  @else if $_key == "mobile" {
+    @media only screen and (min-width: $S_575_debut) {
+      @content;
+    }
+  } @else if $_key == "tablet" {
+    @media only screen and (min-width: $S_768_debut) {
+      @content;
+    }
+  } @else if $_key == "desktop" {
+    @media only screen and (min-width: $S_1366_debut) {
+      @content;
+    }
+  } @else {
+    @error "Property #{$_key} is not a valid value, see @file scss/defaut/model/custom_bp.scss for more information. ";
   }
 }
 
@@ -105,7 +217,20 @@ $var: false !default; // Can be overridden elsewhere
       @content;
     }
   }
-}
-
-@mixin media-between($_min, $_max) {
+  // Custom key
+  @else if $_key == "mobile" {
+    @media only screen and (max-width: $S_575_fin) {
+      @content;
+    }
+  } @else if $_key == "tablet" {
+    @media only screen and (max-width: $S_768_fin) {
+      @content;
+    }
+  } @else if $_key == "desktop" {
+    @media only screen and (max-width: $S_1366_fin) {
+      @content;
+    }
+  } @else {
+    @error "Property #{$_key} is not a valid value, see @file scss/defaut/model/custom_bp.scss for more information. ";
+  }
 }

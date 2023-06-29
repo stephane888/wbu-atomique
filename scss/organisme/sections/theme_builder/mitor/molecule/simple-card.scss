@@ -1,9 +1,9 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 .simple-card {
-  border-radius: 10px;
+  border-radius: $wbu-margin * 0.5;
   overflow: hidden;
-  margin-bottom: 4rem;
-  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  margin-bottom: $wbu-margin * 2;
+  box-shadow: 0 0 10px rgba($wbu-background, 10%);
   transition: ease-in-out 0.3s;
   position: relative;
   background: #fff;
@@ -19,32 +19,28 @@
     }
   }
   &__body {
-    padding: 3rem;
+    padding: $wbu-margin * 1.5;
   }
   .sc-title {
     font-weight: 600;
-    color: black;
     // font-size: $wbu-h5-font-size;
-    margin-bottom: 1rem;
+    margin-bottom: $wbu-margin * 0.5;
     @include ellipseText(2);
     a,
     & {
       font-weight: 600;
-      color: black;
+      color: inherit;
       text-decoration: none;
     }
   }
   .sc-desc {
     font-size: $wbu-default-font-size;
-    margin-bottom: 1.5rem;
-    line-height: 30px;
+    margin-bottom: $wbu-margin * 0.5;
     color: lighten($wbu-color-text, 20);
     @include ellipseText(2);
   }
   .sc-link {
-    color: black;
-    font-size: $wbu-default-font-size;
-    padding: 1rem;
+    padding: $wbu-margin * 0.5;
     padding-left: 0;
     position: relative;
     text-transform: capitalize;
@@ -53,7 +49,7 @@
       transform: scale(1);
       transition: 0.3s;
       font-weight: 600;
-      color: black;
+      color: inherit;
     }
     a {
       @include cover-link();
@@ -82,7 +78,7 @@
   }
   .sc-icon {
     display: none;
-    padding-botnonetom: 4rem;
+    padding-bottom: $wbu-margin * 2;
     svg {
       width: 4.5rem;
       height: 4.5rem;
@@ -107,11 +103,11 @@
     }
   }
   .sc-user-info {
-    margin-bottom: 2rem;
+    margin-bottom: $wbu-margin;
     display: none;
     align-items: center;
     .img-bloc {
-      margin-right: 2rem;
+      margin-right: $wbu-margin;
 
       img {
         width: 5.5rem;
@@ -122,7 +118,6 @@
     }
     .user-title {
       font-weight: 600;
-      color: black;
       font-size: $wbu-h5-font-size * 0.9;
       line-height: 30px;
       @include ellipseText(1);
@@ -176,8 +171,8 @@
         display: block;
         width: 4.5rem;
         border: 0.3rem solid $wbu-color-primary;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-top: $wbu-margin * 0.5;
+        margin-bottom: $wbu-margin * 0.5;
       }
     }
     .sc-icon {
@@ -187,9 +182,9 @@
       border-radius: 10px;
       width: 60px;
       height: 60px;
-      margin-bottom: 2rem;
-      padding: 0;evenex_hero
-      svg {
+      margin-bottom: $wbu-margin;
+      padding: 0;
+      evenex_hero svg {
         fill: $wbu-color-text;
         width: 60px;
         position: relative;
@@ -201,7 +196,8 @@
     }
     &:hover {
       background: $wbu-color-primary;
-      .sc-desc,.sc-title {
+      .sc-desc,
+      .sc-title {
         color: color-yiq($wbu-color-primary);
       }
     }
@@ -222,11 +218,11 @@
       justify-content: center;
       align-items: center;
       border-radius: 10px;
-      color: #fff;
-      background: #000000;
+      color: color-yiq($wbu-background);
+      background: $wbu-background;
       width: 60px;
       height: 60px;
-      margin-bottom: 2rem;
+      margin-bottom: $wbu-margin;
       padding: 0;
       svg {
         fill: white;
@@ -391,8 +387,8 @@
       position: relative;
       padding: 2rem;
       padding-left: 0;
-      transition: padding 0.4s;evenex_heroevenex_heroevenex_hero
-      a {
+      transition: padding 0.4s;
+      evenex_heroevenex_heroevenex_hero a {
         color: $wbu-background;
       }
       &::after {
@@ -565,7 +561,6 @@
     }
   }
 }
-
 
 .post {
   .sc-desc {
