@@ -345,6 +345,18 @@
         background-color: $wbu-color-secondary;
       }
     }
+    &--center-bottom {
+      width: 260px;
+      margin-inline: auto;
+      right: auto;
+      left: calc(50% - 130px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      top: auto;
+      bottom: 3rem;
+    }
   }
   // next & prev
   .swiper-button {
@@ -371,6 +383,21 @@
       &::after {
         color: $wbu-color-secondary;
       }
+    }
+    &--align-bottom-y-mobile {
+      top: calc(100% - 4rem);
+      @include media-min("mobile") {
+        top: 50%;
+      }
+    }
+    &--align-bottom-y-tablet {
+      top: calc(100% - 4rem);
+      @include media-min("tablet") {
+        top: 50%;
+      }
+    }
+    &--align-bottom-y {
+      top: calc(100% - 4rem);
     }
   }
 }
