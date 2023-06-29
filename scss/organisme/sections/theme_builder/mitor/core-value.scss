@@ -4,9 +4,8 @@
 .mitor-core-value-section-handler {
   // background: $wbu-background;
   display: flex;
-  padding-top: $space-bottom;
-  padding-bottom: $space-bottom;
   position: relative;
+  //derivée height 100%
   &--bg-img {
     height: 100vh;
     background: url(https://ludoviccreative.com/storage/2022/05/3-450x328.png);

@@ -26,16 +26,46 @@
  */
 .space_bottom,
 .space-bottom {
-  margin-bottom: $space_bottom;
+  margin-bottom: $space_bottom * 0.3;
+  @include media-min("mobile") {
+    margin-bottom: $space_bottom * 0.6;
+  }
+  @include media-min("tablet") {
+    margin-bottom: $space_bottom * 0.9;
+  }
+  @include media-min("desktop") {
+    margin-bottom: $space_bottom;
+  }
 }
 .space-top-inv {
-  margin-top: -$space_bottom;
+  margin-top: -$space_bottom * 0.3;
+  @include media-min("mobile") {
+    margin-bottom: -$space_bottom * 0.6;
+  }
+  @include media-min("tablet") {
+    margin-bottom: -$space_bottom * 0.9;
+  }
+  @include media-min("desktop") {
+    margin-bottom: -$space_bottom;
+  }
 }
 //
 .space-padding,
 .space-padding-py {
-  padding-top: $space_bottom;
-  padding-bottom: $space_bottom;
+  padding-top: $space_bottom * 0.3;
+  padding-bottom: $space_bottom * 0.3;
+  @include media-min("mobile") {
+    padding-top: $space_bottom * 0.6;
+    padding-bottom: $space_bottom * 0.6;
+  }
+  @include media-min("tablet") {
+    padding-top: $space_bottom * 0.9;
+    padding-bottom: $space_bottom * 0.9;
+  }
+  @include media-min("desktop") {
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
+  }
 }
 .space-padding-px {
   padding-left: $space_bottom * 0.3;
@@ -55,35 +85,80 @@
 }
 //
 .space-inner-padding {
-  padding-top: $space_inner_top;
-  padding-bottom: $space_inner_top;
+  padding-top: $space_inner_top * 0.5;
+  padding-bottom: $space_inner_top * 0.5;
+  @include media-min("mobile") {
+    padding-top: $space_inner_top;
+    padding-bottom: $space_inner_top;
+  }
 }
 //
 .space-inner-padding,
 .space-inner-py {
-  padding-top: $space_inner_top;
-  padding-bottom: $space_inner_top;
+  padding-top: $space_inner_top * 0.5;
+  padding-bottom: $space_inner_top * 0.5;
+  @include media-min("mobile") {
+    padding-top: $space_inner_top;
+    padding-bottom: $space_inner_top;
+  }
 }
 .space-inner-px {
-  padding-right: $space_inner_top;
-  padding-left: $space_inner_top;
+  padding-right: $space_inner_top * 0.5;
+  padding-left: $space_inner_top * 0.5;
+  @include media-min("mobile") {
+    padding-top: $space_inner_top;
+    padding-bottom: $space_inner_top;
+  }
 }
 //
 .space-inner-bottom {
-  margin-bottom: $space_inner_top;
+  margin-bottom: $space_inner_top * 0.5;
+  @include media-min("mobile") {
+    margin-bottom: $space_inner_top;
+  }
 }
 //
 .space-inner-top {
-  margin-top: $space_inner_top;
+  margin-top: $space_inner_top * 0.5;
+  @include media-min("mobile") {
+    margin-top: $space_inner_top;
+  }
 }
 .padding-top {
-  padding-top: $space_top;
+  padding-top: $space_top * 0.3;
+  @include media-min("mobile") {
+    padding-top: $space_top * 0.6;
+  }
+  @include media-min("tablet") {
+    padding-top: $space_top * 0.9;
+  }
+  @include media-min("desktop") {
+    padding-top: $space_top;
+  }
 }
 .margin-top {
-  margin-top: $space_top;
+  margin-top: $space_top * 0.3;
+  @include media-min("mobile") {
+    margin-top: $space_top * 0.6;
+  }
+  @include media-min("tablet") {
+    margin-top: $space_top * 0.9;
+  }
+  @include media-min("desktop") {
+    margin-top: $space_top;
+  }
 }
 .padding-bottom {
-  padding-bottom: $space_bottom;
+  padding-bottom: $space_bottom * 0.3;
+  @include media-min("mobile") {
+    padding-bottom: $space_bottom * 0.6;
+  }
+  @include media-min("tablet") {
+    padding-bottom: $space_bottom * 0.9;
+  }
+  @include media-min("desktop") {
+    padding-bottom: $space_bottom;
+  }
 }
 /**
  * -- Gestion des backgrounds.
