@@ -1,5 +1,10 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "swiper/css/pagination";
+/**
+ * ce code n'est pas documenté.
+ */
+
+// model .carousel-nav
 .carousel-nav {
   display: inline-flex;
   align-items: center;
@@ -30,7 +35,6 @@
   &--black {
     .swiper-pagination-bullet {
       background-color: black;
-
       &-active {
         opacity: 1;
       }
@@ -59,6 +63,8 @@
     width: auto !important;
   }
 }
+
+// model .carousel-nav
 .carousel-testy {
   .swiper-wrapper {
     height: auto;
@@ -69,6 +75,7 @@
     width: auto;
   }
 }
+// ????
 .project-tabs {
   .swiper-wrapper {
     height: auto;
@@ -94,6 +101,8 @@
     }
   }
 }
+
+// model .carousel-testy-nav
 .carousel-testy-nav {
   overflow: hidden;
   padding: 1rem;
@@ -111,8 +120,10 @@
   }
   .carousel-nav {
     width: auto;
-    position: relative;
+    position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
   }
   .swiper-slide {
     //max-width: 65rem;
@@ -231,6 +242,8 @@
     }
   }
 }
+
+// model .carousel-testy-nav-rond
 .carousel-testy-nav-rond {
   overflow: hidden;
   padding: 1rem;
@@ -298,14 +311,38 @@
     }
   }
 }
+// ????
 .bloc-carousel {
   position: relative;
 }
+
+// model .carousel-testy-nav-rond
 .carousel-rond {
   .swiper-pagination-bullet {
     background-color: $wbu-color-primary;
     &-active {
       opacity: 1;
+    }
+  }
+}
+
+// Cette section permet de definir la couleur des bouttons.
+.swiper-full-options {
+  .swiper-pagination {
+    &--background {
+      .swiper-pagination-bullet {
+        background-color: $wbu-background;
+      }
+    }
+    &--primary {
+      .swiper-pagination-bullet {
+        background-color: $wbu-color-primary;
+      }
+    }
+    &--secondary {
+      .swiper-pagination-bullet {
+        background-color: $wbu-color-secondary;
+      }
     }
   }
 }
