@@ -6,7 +6,7 @@
 //
 $font-size-base: $wbu-default-font-size !default;
 $line-height-base: $wbu-default-line-height !default;
-$input-font-size: $wbu-default-font-size !default; 
+$input-font-size: $wbu-default-font-size !default;
 
 // Buttons + Forms
 //
@@ -38,7 +38,8 @@ $input-btn-padding-x-lg: $wbu-margin * 1.44 !default; //1rem !default;
 ------------------------------------*/
 
 //bootstrap override
-$primary: $wbu-color-primary;
+$primary: $wbu-bootstrap-primary;
+$link-color: $wbu-link-color;
 $border-radius: 0;
 $border-radius-lg: 0;
 $border-radius-sm: 0;
@@ -47,3 +48,13 @@ $nav-link-padding-y: $wbu-margin * 0.5;
 $nav-link-padding-x: $wbu-margin * 0.8;
 $form-check-input-gutter: $wbu-margin;
 $card-spacer-x: $wbu-margin;
+
+// $theme-colors: map-merge(
+//   (
+//     // Add custom color.
+//     "wbu-secondary": $wbu-color-secondary,
+//     "wbu-background": $wbu-background,
+//     "wbu-thirdly": $wbu-color-thirdly
+//   ),
+//   $theme-colors
+// );

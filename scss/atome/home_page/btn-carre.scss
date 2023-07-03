@@ -7,6 +7,10 @@
   border: 1px solid $wbu-color-primary;
   letter-spacing: 1.9px;
   transition: ease-in-out 0.3s;
+  &.btn-carre--secondary {
+    color: $wbu-color-secondary;
+    border-color: $wbu-color-secondary;
+  }
   &:hover {
     border-color: $wbu-color-boder;
   }

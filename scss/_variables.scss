@@ -14,8 +14,10 @@ $wbu-color-primary: #ea000d !default;
 $wbu-color-secondary: #ee8700 !default;
 // Couleur d'arrière plan ( à priviliger au niveau du footer, des elements de covers ).
 $wbu-background: #0f103e !default;
-// Couleur des liens
+// Couleurs supplementaire.
 $wbu-color-thirdly: rgb(7, 79, 128) !default;
+// couleurs des liens
+$wbu-link-color: $wbu-color-primary;
 //
 // Autre couleurs
 // =========================================================
@@ -24,6 +26,9 @@ $wbu-color-text: #4c4c4c !default;
 $wbu-color-teal: #49a0a2 !default;
 $wbu-color-boder: #dee2e6;
 $wbu-title-color: inherit !default;
+
+// Permet de surcharger la couleur primaire (primary) de bootstrap
+$wbu-bootstrap-primary: $wbu-color-primary;
 
 /*------------------------------------
   BORDURES
@@ -95,7 +100,7 @@ $wbu-h1-margin: $wbu-margin * 0.75 !default;
 $wbu-h2-margin: $wbu-margin * 0.625 !default;
 $wbu-h3-margin: $wbu-margin * 0.526 !default;
 $wbu-h4-margin: $wbu-margin * 0.454 !default;
-/* page-header-bg */
+/* Page-header-bg */
 $wbu-page-header-bg: 200px;
 /* Permet de surcharger les variables bootstrap */
 // bootstrap variables
