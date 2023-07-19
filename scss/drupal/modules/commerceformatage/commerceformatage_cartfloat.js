@@ -99,7 +99,8 @@
           if (httpRequest.status === 200) {
             resolv(true);
           } else {
-            alert(" Il y a eu un problème avec la requête. ");
+            //alert(" Il y a eu un problème avec la requête. ");
+            console.log("error in request ", httpRequest);
           }
         }
       };
