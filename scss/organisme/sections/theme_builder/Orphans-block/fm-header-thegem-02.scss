@@ -4,6 +4,16 @@
 .top-header-teaser {
   background-color: $wbu-background;
   color: $wbu-color-boder;
+  .navbar-toggler {
+    border-color: rgba(color-yiq($wbu-background), 0.3);
+    opacity: 0.4;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  svg {
+    fill: color-yiq($wbu-background);
+  }
   .linker {
     color: $wbu-color-boder;
   }
@@ -11,7 +21,7 @@
     color: $wbu-color-boder;
   }
   :is(.location, .phone) {
-    color: $wbu-color-thirdly;
+    color: color-yiq($wbu-background);
   }
   .joinBtn {
     color: $wbu-color-boder;
@@ -32,12 +42,14 @@
     display: flex;
     width: auto;
     justify-content: space-between;
-    align-items: center;
+    //align-items: center;
   }
   .page-linker {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @include media-min(bootstrap_lg) {
+      justify-content: center;
+      align-items: center;
+    }
     .linker {
       color: $wbu-color-boder;
       &:hover {

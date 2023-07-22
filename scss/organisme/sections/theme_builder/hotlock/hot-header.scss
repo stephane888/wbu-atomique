@@ -49,9 +49,12 @@
     @include WBUtransition($temps: 0.7s);
   }
   .header-nav {
-    padding-left: $wbu-margin;
-    padding-top: $wbu-margin * 0.5;
-    padding-bottom: $wbu-margin * 0.5;
+    padding: $wbu-margin * 0.25 0;
+    @include media-min(mobile) {
+      padding-left: $wbu-margin;
+      padding-top: $wbu-margin * 0.5;
+      padding-bottom: $wbu-margin * 0.5;
+    }
     .navbar-collapse {
       align-items: stretch;
     }

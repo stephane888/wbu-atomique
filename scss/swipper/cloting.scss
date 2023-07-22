@@ -6,7 +6,10 @@
     .swiper-pagination {
       top: 50%;
       bottom: auto;
-      left: $wbu-margin * 2;
+      left: 0;
+      @include media-min(tablet) {
+        left: $wbu-margin * 2;
+      }
       right: auto;
       width: auto;
       transform: translateY(-50%);
@@ -30,14 +33,16 @@
       }
       &.swiper-pagination-bullet-active {
         opacity: 1;
-      }
-      &.swiper-pagination-bullet-active::after {
-        content: "";
-        position: absolute;
-        left: $wbu-margin * 2;
-        height: 2px;
-        width: 40px;
-        margin-top: $wbu-margin * 0.4;
+        @include media-min(tablet) {
+          &::after {
+            content: "";
+            position: absolute;
+            left: $wbu-margin * 2;
+            height: 2px;
+            width: 40px;
+            margin-top: $wbu-margin * 0.4;
+          }
+        }
       }
     }
     // Derivée

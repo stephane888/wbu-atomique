@@ -5,14 +5,23 @@
 .hot_models_hongo_item {
   overflow: hidden;
   position: relative;
-  min-height: 250px;
+  min-height: 300px;
   z-index: 1;
+  margin: 0 0 $wbu-margin * 0.2 0;
   .img-handler {
-    margin: $wbu-margin * 0.2;
     img {
       width: auto;
       max-width: 1500px;
       height: 100%;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 0;
+      @include media-min(mobile) {
+        transform: none;
+        left: 0;
+        position: relative;
+      }
     }
   }
   .text-wrapper {
