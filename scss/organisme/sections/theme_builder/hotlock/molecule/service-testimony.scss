@@ -72,7 +72,6 @@
         padding-right: $wbu-margin;
         line-height: 5rem;
         color: color-yiq($wbu-background);
-        @include bp_h3();
       }
       .info {
         display: flex;
