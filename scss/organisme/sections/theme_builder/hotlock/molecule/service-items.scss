@@ -30,6 +30,7 @@
   .icon {
     color: $wbu-color-primary;
     transition: 0.3s;
+    min-width: 35px;
     svg {
       max-width: 30px;
       max-height: 30px;

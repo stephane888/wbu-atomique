@@ -9,9 +9,7 @@
 
   .text-wrapper {
     height: 100%;
-    padding-top: $wbu-margin;
-    padding-left: $wbu-margin;
-    padding-bottom: $wbu-margin * 2;
+    padding: $wbu-margin;
     .text-shadow {
       position: relative;
       max-width: 567px;

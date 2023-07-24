@@ -20,9 +20,8 @@
   }
   position: relative;
   .product-content {
-    // width: auto;
-    // height: auto;
-    // display: flex;
+    margin-inline: auto;
+    max-width: 1200px;
     position: relative;
     .image-content {
       overflow: auto;
