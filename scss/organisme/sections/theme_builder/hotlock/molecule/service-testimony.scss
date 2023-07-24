@@ -24,15 +24,21 @@
         margin-left: $wbu-margin * -1;
       }
       .icon {
-        color: $wbu-background;
+        color: color-yiq($wbu-color-primary);
+        margin-bottom: $wbu-margin * 1.5;
       }
       .number {
-        margin-top: $wbu-margin * 0.2;
-        color: $wbu-background;
+        margin-bottom: $wbu-margin * 1.5;
+        color: color-yiq($wbu-color-primary);
       }
       .title {
-        color: $wbu-background;
+        color: color-yiq($wbu-color-primary);
         font-weight: bold;
+      }
+      svg {
+        max-width: 80px;
+        max-height: 80px;
+        width: 100%;
       }
     }
   }
@@ -70,7 +76,6 @@
 
       .speech {
         padding-right: $wbu-margin;
-        line-height: 5rem;
         color: color-yiq($wbu-background);
       }
       .info {
