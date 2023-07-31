@@ -6,6 +6,7 @@
   .done {
     background: $wbu-color-primary;
     position: relative;
+    padding: $wbu-margin 0;
   }
   .all-single-services {
     //padding: $wbu-margin * 4 $wbu-margin; #if you need to change it just check the layout
@@ -20,15 +21,25 @@
       height: 100%;
     }
     .services {
+      margin-bottom: $wbu-margin * 1.5;
+      @include media-min(tablet) {
+        margin-bottom: 0;
+      }
       &:first-child {
         margin-left: $wbu-margin * -1;
       }
       .icon {
         color: color-yiq($wbu-color-primary);
-        margin-bottom: $wbu-margin * 1.5;
+        margin-bottom: $wbu-margin * 0.5;
+        @include media-min(tablet) {
+          margin-bottom: $wbu-margin * 1.5;
+        }
       }
       .number {
-        margin-bottom: $wbu-margin * 1.5;
+        margin-bottom: $wbu-margin * 0.5;
+        @include media-min(tablet) {
+          margin-bottom: $wbu-margin * 1.5;
+        }
         color: color-yiq($wbu-color-primary);
       }
       .title {
@@ -39,6 +50,8 @@
         max-width: 80px;
         max-height: 80px;
         width: 100%;
+        color: color-yiq($wbu-color-primary);
+        fill: color-yiq($wbu-color-primary);
       }
     }
   }
@@ -48,7 +61,10 @@
     align-items: center;
     justify-content: space-between;
     .testimony {
-      padding: $wbu-margin * 3;
+      padding: $wbu-margin;
+      @include media-min(tablet) {
+        padding: $wbu-margin * 2 $wbu-margin * 3;
+      }
       max-width: 100%;
       width: 100%;
       &::before {
