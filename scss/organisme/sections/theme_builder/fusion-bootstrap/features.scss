@@ -26,8 +26,7 @@
     .content-left {
       .box-item {
         box-shadow: 0px 2px 18px 0px rgb(198 198 198 / 30%);
-        padding: 15px;
-        line-height: 22px;
+        padding: $wbu-margin * 0.75;
         margin-top: 30px;
         border-radius: 3px;
         background-color: #fff;
@@ -42,16 +41,26 @@
           }
         }
         .icon {
-          // float: right;
           display: inline-block;
-          width: 60px;
-          height: 60px;
+          width: 30px;
+          height: 30px;
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+          @include media-min(mobile) {
+            width: 60px;
+            height: 60px;
+            svg {
+              width: 60px;
+              height: 60px;
+            }
+          }
           border-radius: 4px;
           text-align: center;
           position: relative;
           z-index: 1;
           order: 2;
-          margin: 12px;
           -webkit-transition: all 0.2s linear;
           -moz-transition: all 0.2s linear;
           -o-transition: all 0.2s linear;
@@ -68,17 +77,8 @@
         }
         .text {
           text-align: right;
-          font-size: $wbu-default-font-size-sm;
-          h4 {
-            cursor: pointer;
-            //font-size: 1.3rem;
-            font-weight: 700;
-            //line-height: 22px;
-            -webkit-transition: all 0.2s linear;
-            -moz-transition: all 0.2s linear;
-            -o-transition: all 0.2s linear;
-            transition: all 0.2s linear;
-          }
+          display: block;
+          margin-right: $wbu-margin * 0.5;
         }
       }
     }
@@ -95,8 +95,7 @@
       .content-right {
         .box-item {
           box-shadow: 0px 2px 18px 0px rgba(198, 198, 198, 0.3);
-          padding: 15px;
-          line-height: 22px;
+          padding: $wbu-margin * 0.75;
           margin-top: 30px;
           border-radius: 3px;
           background-color: #fff;
@@ -112,14 +111,25 @@
           }
           .icon {
             display: inline-block;
-            width: 60px;
-            height: 60px;
+            width: 30px;
+            height: 30px;
+            svg {
+              width: 30px;
+              height: 30px;
+            }
+            @include media-min(mobile) {
+              width: 60px;
+              height: 60px;
+              svg {
+                width: 60px;
+                height: 60px;
+              }
+            }
             border-radius: 4px;
             text-align: center;
             position: relative;
             z-index: 1;
             text-align: center;
-            margin: 12px;
             -webkit-transition: all 0.2s linear;
             -moz-transition: all 0.2s linear;
             -o-transition: all 0.2s linear;
@@ -134,17 +144,7 @@
             }
           }
           .text {
-            font-size: $wbu-default-font-size-sm;
-            h4 {
-              cursor: pointer;
-              //font-size: $wbu-title-font-size;
-              font-weight: 700;
-              line-height: 22px;
-              -webkit-transition: all 0.2s linear;
-              -moz-transition: all 0.2s linear;
-              -o-transition: all 0.2s linear;
-              transition: all 0.2s linear;
-            }
+            margin-left: $wbu-margin * 0.5;
           }
         }
       }
