@@ -70,6 +70,8 @@
   form.lang-dropdown-form {
     display: flex;
     align-items: center;
+    @include media-min(mobile) {
+    }
     margin-left: $wbu-margin;
     .js-form-item {
       margin-bottom: 0 !important;

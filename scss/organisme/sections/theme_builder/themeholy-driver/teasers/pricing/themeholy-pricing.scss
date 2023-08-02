@@ -1,0 +1,43 @@
+@use "../../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../../_variables" as *;
+
+.themeholy-driver-price-card {
+  box-shadow: 0px 6px 30px rgba($wbu-background, 0.24);
+  border-radius: $wbu-margin * 0.5;
+  padding: $wbu-margin * 2;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  margin-bottom: $wbu-margin * 2;
+  .tag {
+    background-color: $wbu-color-primary;
+    color: color-yiq($wbu-color-primary);
+    padding: $wbu-margin * 0.2 $wbu-margin * 2;
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .item {
+    margin-bottom: $wbu-margin;
+  }
+
+  .price-card_price {
+    line-height: 1;
+    .currency {
+      color: $wbu-color-primary;
+      margin-top: -$wbu-margin * 0.4;
+    }
+    .duration {
+      align-self: flex-end;
+      padding-left: $wbu-margin * 0.25;
+    }
+  }
+  .price-card_content {
+    margin-bottom: $wbu-margin * 1.7;
+    border-top: 1px solid rgba($wbu-background, 0.24);
+    padding-top: $wbu-margin * 1.7;
+  }
+}
