@@ -1,0 +1,62 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../_variables" as *;
+/**
+ * On a un probleme de bordure, avec Btn-{color}, voir => 
+ */
+.th-btn {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  vertical-align: middle;
+  &:hover {
+    border-color: transparent;
+  }
+}
+.th-btn:before,
+.th-btn:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 50%;
+  background-color: $wbu-color-primary;
+  border: 1px solid $wbu-color-primary;
+  z-index: -1;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  border-radius: 0;
+}
+// derivate color for background
+.th-btn-background:before,
+.th-btn-background:after {
+  background-color: $wbu-background;
+  border-color: $wbu-background;
+}
+// derivate color for wbu-color-secondary
+.th-btn-secondary:before,
+.th-btn-secondary:after {
+  background-color: $wbu-color-secondary;
+  border-color: $wbu-color-secondary;
+}
+.th-btn:before {
+  -webkit-transform: scale(0) rotate(0);
+  -ms-transform: scale(0) rotate(0);
+  transform: scale(0) rotate(0);
+}
+.th-btn:after {
+  -webkit-transform: scale(0) rotate(0);
+  -ms-transform: scale(0) rotate(0);
+  transform: scale(0) rotate(0);
+  left: unset;
+  right: 0;
+}
+.th-btn:hover::before,
+.th-btn:hover:after,
+.th-btn.active::before,
+.th-btn.active:after {
+  border-radius: 0;
+  -webkit-transform: scale(1) rotate(360deg);
+  -ms-transform: scale(1) rotate(360deg);
+  transform: scale(1) rotate(360deg);
+}
