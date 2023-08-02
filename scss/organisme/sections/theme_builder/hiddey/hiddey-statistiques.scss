@@ -1,0 +1,28 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.hiddey-statistiques {
+    .statistiques-left {
+        img {
+            width: 60%;
+
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+                z-index: 999;
+            }
+
+            &:nth-child(2) {
+                left: 20%;
+                top: 20%;
+                z-index: 998;
+            }
+
+            &:nth-child(3) {
+                right: 0;
+                bottom: 0;
+                z-index: 997;
+            }
+        }
+    }
+}

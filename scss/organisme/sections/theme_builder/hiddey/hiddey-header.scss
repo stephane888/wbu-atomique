@@ -1,0 +1,12 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.hiddey-header {
+    .navbar {
+        .navbar-brand {
+            img {
+                height: 100px;
+            }
+        }
+    }
+}

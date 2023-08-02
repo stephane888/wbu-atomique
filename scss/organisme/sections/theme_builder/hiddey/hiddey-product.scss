@@ -1,0 +1,70 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+
+.hiddey-product {
+    .products {
+
+
+        .product {
+            margin-bottom: 15px;
+
+            @include media-min("tablet") {
+                margin-bottom: 0px;
+            }
+
+            border-radius: 30px;
+
+            transition: filter .3s ease-in-out;
+            -webkit-transition: .3s -webkit-filter ease-in-out;
+            -moz-transition: .3s -moz-filter ease-in-out;
+            -moz-transition: .3s filter ease-in-out;
+            -ms-transition: .3s -ms-filter ease-in-out;
+            -o-transition: .3s -o-filter ease-in-out;
+            transition: .3s filter ease-in-out,
+            .3s -webkit-filter ease-in-out;
+
+            .product-label,
+            .product-image {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+            }
+
+            .product-label {
+                color: white;
+                opacity: 0;
+
+                transition: opacity .3s ease-in-out;
+                // background-color: rgba($color: #000000, $alpha: .3);
+            }
+
+            &:hover {
+                filter: grayscale(80%);
+
+                .product-label {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .product-right {
+            display: grid;
+            // grid-template-cols: 50% 50%;
+
+            @include media-min("tablet") {
+                display: grid;
+                grid-template-rows: 50% 50%;
+            }
+
+            .product-position {
+                position: static;
+
+                @include media-min("tablet") {
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

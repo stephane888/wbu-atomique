@@ -1,0 +1,12 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+.hiddey-presentation {
+    .presentation {
+        &-left {
+            .presentation-image {
+                max-width: 100%;
+            }
+        }
+    }
+}
