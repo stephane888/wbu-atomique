@@ -14,13 +14,75 @@
             }
         }
 
-        .cloud {
-            position: relative;
+    }
 
-            &::before {
-                position: absolute;
-                content: "";
-                background: url("https: //static.wixstatic.com/media/c0bbc5_7f4dc1817d0f49c8a079d25e4c5161b8~mv2.png/v1/fill/w_259,h_140,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cloud2.png");
+    .clound-container {
+
+        .cloud {
+            img {
+                width: 100px;
+
+                @include media-min("tablet") {
+                    width: 150px;
+                }
+
+                @include media-min('desktop') {
+                    width: 260px;
+                }
+            }
+
+            &:nth-child(1) {
+                top: 0;
+                left: 30%;
+
+                img {
+                    @include media-min('tablet') {
+                        width: 100px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                left: 0%;
+                top: 40%;
+            }
+
+            &:nth-child(3) {
+                bottom: 1%;
+                left: 4%;
+
+                img {
+                    @include media-min('tablet') {
+                        width: 150px;
+                        height: 125px;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                top: 0;
+                right: 7%;
+            }
+
+            &:nth-child(5) {
+                right: 5%;
+                top: 15%;
+            }
+
+            &:nth-child(6) {
+                bottom: 0;
+                right: 27%;
+            }
+
+            &:nth-child(7) {
+                right: -3%;
+                top: 10%;
+
+                img {
+                    @include media-min('tablet') {
+                        width: 100px;
+                    }
+                }
             }
         }
     }
