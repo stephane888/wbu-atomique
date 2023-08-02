@@ -2,11 +2,10 @@
 @use "../../../../variables" as *;
 
 .hiddey-presentation {
-    .presentation {
-        &-left {
-            .presentation-image {
-                max-width: 100%;
-            }
-        }
-    }
+  .presentation-description {
+    margin-bottom: $wbu-margin * 1.5;
+  }
+  .presentation-image {
+    margin-bottom: $wbu-margin;
+  }
 }
