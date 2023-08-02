@@ -1,0 +1,27 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+
+.hiddey-contact-us {
+    background-color: $wbu-color-thirdly;
+
+    .contact-container {
+        min-height: 300px;
+
+        .call-to-action {
+            .cta-text {
+                font-size: 10px;
+            }
+        }
+
+        .cloud {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                background: url("https: //static.wixstatic.com/media/c0bbc5_7f4dc1817d0f49c8a079d25e4c5161b8~mv2.png/v1/fill/w_259,h_140,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cloud2.png");
+            }
+        }
+    }
+}
