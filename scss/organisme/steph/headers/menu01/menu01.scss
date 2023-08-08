@@ -19,7 +19,6 @@
       height: auto !important;
     }
   }
-
   .menu {
     .navbar-nav {
       padding-top: $wbu-margin;
@@ -32,23 +31,48 @@
       .nav-item {
         font-weight: bold;
         text-transform: uppercase;
+        width: 100%;
+        position: relative;
+        z-index: 10;
 
-        &.active {
-          color: $wbu-color-primary;
+        @include media-min("DD") {
+          width: auto;
+          .menu {
+            display: none;
+            margin: 0;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            right: auto;
+            background-color: #fff;
+            padding: $wbu-margin * 0.5;
+            list-style: none;
+            min-width: 200px;
+            max-width: 350px;
+            width: auto;
+            li {
+              list-style: none;
+            }
+          }
+          &:hover {
+            > .menu {
+              display: block;
+            }
+          }
         }
-
-        &:hover {
-          color: $wbu-color-primary;
-        }
-
         .nav-link {
           color: inherit;
           padding-left: 0;
           padding-right: 0;
-          @include media-min("DD") {
-            padding-left: $wbu-margin;
-            padding-right: $wbu-margin;
+          &:hover {
+            color: $wbu-color-primary;
           }
+          &.is-active {
+            background-color: $wbu-color-secondary;
+            color: color-yiq($wbu-color-secondary);
+          }
+          padding-left: $wbu-margin;
+          padding-right: $wbu-margin;
         }
       }
     }
