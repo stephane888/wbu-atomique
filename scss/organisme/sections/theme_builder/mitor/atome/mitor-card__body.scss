@@ -39,15 +39,15 @@
       }
       li {
         position: relative;
-        display: flex;
-        align-items: start;
+        //display: flex;
+        //align-items: start;
         margin-bottom: 1rem;
       }
       li::before {
         content: "";
         @include wbu__svg-dd-puce-check($wbu-color-primary, 45);
         position: relative;
-        width: 6rem;
+        width: 3rem;
         height: 2rem;
         display: inline-block;
         margin-right: 1.5rem;
