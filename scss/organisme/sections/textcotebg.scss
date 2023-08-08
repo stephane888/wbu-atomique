@@ -1,14 +1,14 @@
 @use "../../wbu-ressources-clean.scss" as *;
 .textcotebg {
-  padding: $space_top $wbu-margin $space_bottom $wbu-margin;
+  //padding: $space_top $wbu-margin $space_bottom $wbu-margin;
   margin: 0;
-  line-height: 1.8;
-  font-size: $wbu-default-font-size * 1.2;
   background-attachment: fixed;
   background-position: left bottom !important;
   .entete {
-    padding: $wbu-margin * 3 $wbu-margin * 3;
-    background-color: $wbu-background;
+    padding: $wbu-margin * 1.5;
+    @include media-min(tablet) {
+      padding: $wbu-margin * 3 $wbu-margin * 3;
+    }
 
     .title {
       margin-bottom: $wbu-margin * 1.5;
@@ -23,8 +23,8 @@
     .call_action {
       line-height: 1;
       i {
-        font-size: 4rem;
         line-height: 0;
+        font-size: 4rem;
         //color: $wbu-color-primary;
         color: color-yiq($wbu-background);
       }
