@@ -149,6 +149,7 @@
       context
     ).forEach((item) => {
       item.addEventListener("click", (event) => {
+        console.log("click disabled ", item.disabled);
         event.preventDefault();
         item.querySelector(".loading").classList.add("fa-spin");
         item.querySelector(".loading").classList.remove("d-none");

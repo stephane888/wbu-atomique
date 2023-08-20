@@ -6,6 +6,9 @@
   height: 100%;
   background-color: $wbu-color-primary;
   color: color-yiq($wbu-color-primary);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
 
   .left_teaser_img {
     position: absolute;

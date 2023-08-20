@@ -2,31 +2,44 @@
 @use "../../../../../_variables" as *;
 
 .hot_models_box-x {
-  //background-size: cover;
-  //background-position: center center;
   color: $wbu-border-color;
   position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
 
   .text-wrapper {
     height: 100%;
     padding: $wbu-margin;
     .text-shadow {
       position: relative;
-      max-width: 567px;
+      @include media-min(tablet) {
+        max-width: 567px;
+      }
       height: 100%;
-      background-color: rgba($wbu-background, 0.5);
-      padding-right: 130px;
-      padding-left: 30px;
-      padding-top: 51px;
-      padding-bottom: 30px;
+      background-color: rgba($wbu-background, 0.8);
+      // padding-right: 130px;
+      // padding-left: 30px;
+      // padding-top: 51px;
+      // padding-bottom: 30px;
+      > * {
+        margin-left: auto;
+        margin-right: auto;
+        @include media-min(tablet) {
+          max-width: 530px;
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+      padding: $wbu-margin;
       .title_avds {
         color: $wbu-border-color;
-        font-weight: $wbu-title-font-weight;
-        font-size: $wbu-h2-font-size;
+        // font-weight: $wbu-title-font-weight;
+        // font-size: $wbu-h2-font-size;
       }
       .text_avds {
         color: $wbu-border-color;
-        font-size: $wbu-h6-font-size;
+        // font-size: $wbu-h6-font-size;
         line-height: 2rem;
         margin-top: $wbu-margin * 0.5;
       }

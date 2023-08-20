@@ -3,13 +3,18 @@
 
 .footer-handler {
   background: $wbu-background;
-  padding: $space-bottom 0;
   color: color-yiq($wbu-background);
   a {
     color: color-yiq($wbu-background);
     @include WBUtransition();
     &:hover {
       color: $wbu-color-primary;
+    }
+  }
+  .footer-column {
+    margin-bottom: $wbu-margin * 2;
+    @include media-min(tablet) {
+      margin-bottom: 0;
     }
   }
   .img-logo {
@@ -76,13 +81,12 @@
   }
 
   .head-element {
-    margin-bottom: 3.5rem;
     color: white;
     font-weight: bold;
+    margin-bottom: $wbu-margin;
   }
   .links {
     display: block;
-    margin-top: $wbu-margin;
     .link {
       padding-bottom: $wbu-margin * 0.8;
     }
@@ -146,21 +150,22 @@
       }
     }
   }
-}
-.copyright {
-  padding-top: $wbu-margin;
-  padding-bottom: $wbu-margin;
-  .elements {
-    color: white;
-    font-size: $wbu-title-font-size;
+  //
+  .copyright {
+    padding-top: $wbu-margin;
+    padding-bottom: $wbu-margin;
+    .elements {
+      color: white;
+      font-size: $wbu-title-font-size;
 
-    .f-link {
-      color: $wbu-color-boder;
-      text-decoration: none;
-      font-weight: bold;
-      &:hover {
-        transition: all 0.3s;
-        color: $wbu-color-primary;
+      .f-link {
+        color: $wbu-color-boder;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+          transition: all 0.3s;
+          color: $wbu-color-primary;
+        }
       }
     }
   }
