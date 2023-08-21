@@ -533,27 +533,6 @@
       }
     }
   }
-  /**
-   * Style pour le compteur du panier.
-   */
-  .cart-small {
-    position: relative;
-    &--count {
-      position: absolute;
-      background: $wbu-color-primary;
-      color: color-yiq($wbu-color-primary);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      left: auto;
-      right: -100%;
-      bottom: 0;
-      top: auto;
-      padding: $wbu-margin * 0.25;
-      line-height: 1;
-      border-radius: 50%;
-    }
-  }
 }
 
 /**
