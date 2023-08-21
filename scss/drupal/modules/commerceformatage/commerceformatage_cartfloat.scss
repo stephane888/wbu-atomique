@@ -7,9 +7,24 @@
     top: 79px;
   }
 }
+//customise back button
+.layout-region-checkout-footer {
+  .link--previous {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    color: #3f3e3e;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+}
+//
 .commerceformatage_cart_habeuk_open {
   margin-right: $wbu-margin;
   cursor: pointer;
+  font-size: $wbu-default-font-size-sm;
 }
 // permet de centrer verticalment les elements su tableau.
 .table-td-align-middle {
@@ -228,8 +243,28 @@
       align-items: end;
       min-width: 100px;
       width: 100%;
+      flex-grow: 1; // pour repartir l'espace entre les blocks.
       margin: 0;
       padding: $wbu-margin * 0.25 $wbu-margin;
+      @include media-min(mobile) {
+        width: auto;
+      }
+      @include media-min(tablet) {
+        justify-content: center;
+        padding: 0;
+        padding-bottom: $wbu-margin * 0.3;
+        padding-top: $wbu-margin * 1.5;
+        min-height: 65px;
+        &:first-child {
+          justify-content: left;
+          &::before {
+            left: 0;
+          }
+          &::after {
+            left: 5px;
+          }
+        }
+      }
 
       &::before {
         display: flex;
@@ -260,28 +295,6 @@
           right: 0;
           bottom: auto;
           height: 8px;
-        }
-      }
-
-      @include media-min(mobile) {
-        width: 50%;
-      }
-      @include media-min(tablet) {
-        justify-content: center;
-        width: auto;
-        padding: 0;
-        padding-bottom: $wbu-margin * 0.3;
-        padding-top: $wbu-margin * 1.5;
-        min-height: 65px;
-        flex-grow: 1; // pour repartir l'espace entre les blocks.
-        &:first-child {
-          justify-content: left;
-          &::before {
-            left: 0;
-          }
-          &::after {
-            left: 5px;
-          }
         }
       }
 
