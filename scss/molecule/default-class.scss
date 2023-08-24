@@ -23,139 +23,177 @@
 .space_bottom,
 .space-bottom {
   margin-bottom: $space_bottom * 0.3;
+
   @include media-min("mobile") {
     margin-bottom: $space_bottom * 0.6;
   }
+
   @include media-min("tablet") {
     margin-bottom: $space_bottom * 0.9;
   }
+
   @include media-min("desktop") {
     margin-bottom: $space_bottom;
   }
 }
+
 .space-top-inv {
   margin-top: -$space_bottom * 0.3;
+
   @include media-min("mobile") {
     margin-bottom: -$space_bottom * 0.6;
   }
+
   @include media-min("tablet") {
     margin-bottom: -$space_bottom * 0.9;
   }
+
   @include media-min("desktop") {
     margin-bottom: -$space_bottom;
   }
 }
+
 //
 .space-padding,
 .space-padding-py {
   padding-top: $space_bottom * 0.3;
   padding-bottom: $space_bottom * 0.3;
+
   @include media-min("mobile") {
     padding-top: $space_bottom * 0.6;
     padding-bottom: $space_bottom * 0.6;
   }
+
   @include media-min("tablet") {
     padding-top: $space_bottom * 0.9;
     padding-bottom: $space_bottom * 0.9;
   }
+
   @include media-min("desktop") {
     padding-top: $space_bottom;
     padding-bottom: $space_bottom;
   }
 }
+
 .space-padding-px {
   padding-left: $space_bottom * 0.3;
   padding-right: $space_bottom * 0.3;
+
   @include media-min(DD) {
     padding-left: $space_bottom;
     padding-right: $space_bottom;
+
     &--md {
       padding-left: $space_bottom * 0.55;
       padding-right: $space_bottom * 0.55;
     }
+
     &--dd {
       padding-left: $space_bottom * 0.7;
       padding-right: $space_bottom * 0.7;
     }
   }
 }
+
 //
 .space-inner-padding {
   padding-top: $space_inner_top * 0.5;
   padding-bottom: $space_inner_top * 0.5;
+
   @include media-min("mobile") {
     padding-top: $space_inner_top;
     padding-bottom: $space_inner_top;
   }
 }
+
 //
 .space-inner-padding,
 .space-inner-py {
   padding-top: $space_inner_top * 0.5;
   padding-bottom: $space_inner_top * 0.5;
+
   @include media-min("mobile") {
     padding-top: $space_inner_top;
     padding-bottom: $space_inner_top;
   }
 }
+
 .space-inner-px {
   padding-right: $space_inner_top * 0.5;
   padding-left: $space_inner_top * 0.5;
+
   @include media-min("mobile") {
     padding-top: $space_inner_top;
     padding-bottom: $space_inner_top;
   }
 }
+
 //
 .space-inner-bottom {
   margin-bottom: $space_inner_top * 0.5;
+
   @include media-min("mobile") {
     margin-bottom: $space_inner_top;
   }
 }
+
 //
 .space-inner-top {
   margin-top: $space_inner_top * 0.5;
+
   @include media-min("mobile") {
     margin-top: $space_inner_top;
   }
 }
+
 .padding-top {
   padding-top: $space_top * 0.3;
+
   @include media-min("mobile") {
     padding-top: $space_top * 0.6;
   }
+
   @include media-min("tablet") {
     padding-top: $space_top * 0.9;
   }
+
   @include media-min("desktop") {
     padding-top: $space_top;
   }
 }
+
 .margin-top {
   margin-top: $space_top * 0.3;
+
   @include media-min("mobile") {
     margin-top: $space_top * 0.6;
   }
+
   @include media-min("tablet") {
     margin-top: $space_top * 0.9;
   }
+
   @include media-min("desktop") {
     margin-top: $space_top;
   }
 }
+
 .padding-bottom {
   padding-bottom: $space_bottom * 0.3;
+
   @include media-min("mobile") {
     padding-bottom: $space_bottom * 0.6;
   }
+
   @include media-min("tablet") {
     padding-bottom: $space_bottom * 0.9;
   }
+
   @include media-min("desktop") {
     padding-bottom: $space_bottom;
   }
 }
+
 /**
  * -- Gestion des backgrounds.
  */
@@ -163,32 +201,41 @@
   &--attached {
     background-attachment: fixed;
   }
+
   &--cover {
     background-size: cover;
   }
+
   &--contain {
     background-size: contain;
   }
 }
+
 .background-position {
   &--center {
     background-position: center center;
   }
+
   &--left-center {
     background-position: left center;
   }
+
   &--right-center {
     background-position: right center;
   }
+
   &--left-top {
     background-position: left top;
   }
+
   &--left-bottom {
     background-position: left bottom;
   }
+
   &--right-bottom {
     background-position: right bottom;
   }
+
   &--right-top {
     background-position: right top;
   }
@@ -200,16 +247,21 @@
 .bg-theme {
   background-color: $wbu-background !important;
 }
+
 .text-theme,
 .color-primary-theme {
   color: $wbu-color-primary;
 }
+
 // definie les container de lecture.
-.with-phone, // @depreciate remove before 2x
+.with-phone,
+// @depreciate remove before 2x
 .width-phone {
   max-width: $with_phone;
 }
-.with-tablet, // @depreciate remove before 2x
+
+.with-tablet,
+// @depreciate remove before 2x
 .width-tablet {
   max-width: $with_tablet;
 }
@@ -221,6 +273,7 @@
   &-black {
     box-shadow: 0px -13px 1px 0px rgba(0, 0, 0, 40%);
   }
+
   &-primary {
     box-shadow: 0px -13px 1px 0px rgba($wbu-color-primary, 40%);
   }
@@ -233,16 +286,20 @@
   &-0 {
     border-radius: 0;
   }
+
   &-5 {
     border-radius: $wbu-margin * 0.25;
   }
+
   &-10 {
     border-radius: $wbu-margin * 0.5;
   }
+
   &-20 {
     border-radius: $wbu-margin;
   }
 }
+
 /**
  * Gestion de la taille des titres.
  * On souhaite que les balises soit surchargeable par les classes.
@@ -278,10 +335,12 @@ h5 {
 h6 {
   @include bp_h6();
 }
+
 // typography
 .wbu-titre-suppra {
   @include wbu-titre-suppra();
 }
+
 .bp_hero {
   @include bp_hero();
 }
@@ -291,23 +350,28 @@ h6 {
   margin-bottom: 1.5rem;
   line-height: $wbu-h1-line-height;
 }
+
 .h2 {
   @include bp_h2();
   margin-bottom: 1rem;
   line-height: $wbu-h2-line-height;
 }
+
 .h3 {
   @include bp_h3();
   margin-bottom: 0.6rem;
   line-height: $wbu-h3-line-height;
 }
+
 .h4 {
   @include bp_h4();
   line-height: $wbu-h4-line-height;
 }
+
 .h5 {
   @include bp_h5();
 }
+
 .h6 {
   @include bp_h6();
 }
@@ -340,6 +404,7 @@ form {
     padding-left: 0;
   }
 }
+
 /**
  * Permet de couvrir tout une zone avec un lien. le parent doit avoir la classe position-relative ou utilisé la proprieté "position:relative".
  * Cette classe doit etre sur la balise a.
@@ -354,12 +419,14 @@ form {
     top: 0;
   }
 }
+
 /**
  * Permet d'ajouter le cover sur un section, il faut completer avec une variante opacity-before-{X} afin d"ajuser l'opacité.
  */
 .cover-bg-theme {
   position: relative;
   z-index: 0;
+
   &::before {
     content: "";
     position: absolute;
@@ -370,34 +437,40 @@ form {
     top: 0;
     bottom: 0;
   }
+
   .cover-bg-theme {
     &::before {
       content: "";
       display: none;
     }
   }
+
   &-before-z10 {
     &::before {
       z-index: 10;
     }
   }
+
   /**
    * Rendre le contenu en position relatif + un z-index.
    */
-  > * {
+  >* {
     position: relative;
     z-index: 1;
   }
+
   &.cover-light {
     &::before {
       background-color: white;
     }
   }
+
   &.cover-dark {
     &::before {
       background-color: rgb(17, 17, 17);
     }
   }
+
   &.cover-primary {
     &::before {
       background-color: $wbu-color-primary;
@@ -407,34 +480,37 @@ form {
 
 .opacity-before-092 {
   &::before {
-    opacity: 0.92;
+    opacity: 0.92 !important;
   }
 }
 
 .opacity-before-088 {
   &::before {
-    opacity: 0.88;
+    opacity: 0.88 !important;
   }
 }
+
 .opacity-before-07 {
   &::before {
-    opacity: 0.7;
+    opacity: 0.7 !important;
   }
 }
+
 .opacity-before-055 {
   &::before {
-    opacity: 0.55;
+    opacity: 0.55 !important;
   }
 }
 
 .opacity-before-03 {
   &::before {
-    opacity: 0.3;
+    opacity: 0.3 !important;
   }
 }
+
 .opacity-before-015 {
   &::before {
-    opacity: 0.15;
+    opacity: 0.15 !important;
   }
 }
 
@@ -444,6 +520,7 @@ form {
 .background-local-video {
   overflow: hidden;
   position: relative;
+
   video {
     position: absolute;
     top: 50%;
@@ -458,10 +535,12 @@ form {
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
   }
+
   .video-content {
     position: relative;
     z-index: 3;
   }
+
   .space_bottom {
     margin-bottom: 0;
   }
