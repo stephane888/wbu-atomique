@@ -2,21 +2,17 @@
 @use "../../variables" as *;
 $darken-primary: darken(
   $color: $wbu-color-primary,
-  $amount: 2
+  $amount: 2,
 );
 
 .load-more-button {
   margin: $wbu-margin 0;
-  background-color: $wbu-color-primary;
-  font-size: $wbu-h6-font-size;
   font-weight: bold;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  min-width: 16.8rem;
-  min-height: 4.9rem;
 
   &,
   a {
@@ -55,19 +51,14 @@ $darken-primary: darken(
 }
 .lmb-full {
   margin: $wbu-margin 0;
-  background-color: $wbu-color-primary;
-  font-size: $wbu-default-font-size;
+  //background-color: $wbu-color-primary;
   color: color-yiq($wbu-color-primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
   position: relative;
-  text-transform: capitalize;
-  font-size: $wbu-default-font-size;
   font-weight: bold;
   width: 100%;
-  height: 4.9rem;
 
   &,
   a {
@@ -111,7 +102,6 @@ $darken-primary: darken(
   }
 }
 .more-link {
-  font-size: $wbu-default-font-size * 1.2;
   font-weight: bold;
   text-align: center;
 

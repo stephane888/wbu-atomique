@@ -146,8 +146,7 @@ function firstNav() {
     }, 200);
   }
   function toggleAfterInterval(th) {
-    const allChild =
-      th.parentElement.parentElement.querySelectorAll("li.nav-item--open");
+    const allChild = th.parentElement.parentElement.querySelectorAll("li.nav-item--open");
 
     allChild.forEach((al) => {
       const ch = al;
@@ -202,5 +201,5 @@ function firstNav() {
 try {
   firstNav();
 } catch (er) {
-  console.log("error script first-nav", er);
+  console.log("error script first-nav.js", er);
 }
