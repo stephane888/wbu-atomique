@@ -19,7 +19,6 @@ $darken-primary: darken(
     color: color-yiq($wbu-color-primary);
     transition: ease-in-out 0.3s;
     text-decoration: none;
-    line-height: 3;
     cursor: pointer;
   }
   .btn-angle-right {
@@ -65,7 +64,6 @@ $darken-primary: darken(
     color: color-yiq($wbu-color-primary);
     transition: ease-in-out 0.3s;
     text-decoration: none;
-    line-height: 1;
     cursor: pointer;
   }
   & > :nth-child(1) {
