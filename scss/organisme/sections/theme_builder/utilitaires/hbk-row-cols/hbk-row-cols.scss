@@ -1,0 +1,19 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+/**
+ * Dans les environnements non bootstrap. on utilise ce composant afin d'avoir les row/cols.
+ */
+.hbk-row {
+  display: flex;
+  margin-left: -$grid-gutter-width * 0.5;
+  margin-right: -$grid-gutter-width * 0.5;
+  flex-wrap: wrap;
+  > [class*="hbk-col"] {
+    padding-left: $grid-gutter-width * 0.5;
+    padding-right: $grid-gutter-width * 0.5;
+    width: 100%;
+    @include media-min(mobile) {
+      width: auto;
+      flex-grow: 1; // Pour remplir de façon proportionnelle.
+    }
+  }
+}

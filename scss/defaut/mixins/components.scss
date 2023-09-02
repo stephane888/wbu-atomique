@@ -14,8 +14,7 @@
     z-index: -1;
     filter: blur(10px);
     backdrop-filter: blur(10px);
-    transition: all 400ms, -webkit-backdrop-filter 400ms,
-      -webkit-backdrop-filter 400ms;
+    transition: all 400ms, -webkit-backdrop-filter 400ms, -webkit-backdrop-filter 400ms;
   }
 
   &.lazyloaded::after {
@@ -49,6 +48,7 @@
   align-items: center;
   margin-top: 1em;
   margin-bottom: 0.8em;
+
   @include media-min(DD) {
     margin-top: -3px;
     padding-left: 2em;
@@ -107,6 +107,7 @@
     }
   }
 }
+
 /**
  * Card rotation
  */
@@ -138,7 +139,7 @@
   }
 }
 /**
-* translation on hover
+* Translation on hover
 */
 @mixin WBUtransition($propriete: all, $temps: 0.3s, $style: ease-in-out) {
   transition-property: $propriete;
@@ -198,14 +199,7 @@
  * @depreciated move before 2x, 
  * @use ellipseText
  */
-@mixin multiLineEllipsis(
-  $lineHeight: 1.2em,
-  $lineCount: 1,
-  $bgColor: white,
-  $text-align: left,
-  $opacity: 0.5,
-  $ellipsis-margin-right: 0
-) {
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white, $text-align: left, $opacity: 0.5, $ellipsis-margin-right: 0) {
   overflow: hidden;
   display: block;
   position: relative;
@@ -311,13 +305,7 @@
 /*!
  * .list-element{@include list-element(($paddingY:10px, $paddingX:5px, $borderW:1px));}
  */
-@mixin list-element(
-  $paddingT: 10px,
-  $paddingB: 10px,
-  $paddingL: 5px,
-  $paddingR: 5px,
-  $borderW: 1px
-) {
+@mixin list-element($paddingT: 10px, $paddingB: 10px, $paddingL: 5px, $paddingR: 5px, $borderW: 1px) {
   margin: 0;
   list-style: none;
   padding: 0;
@@ -367,11 +355,7 @@
 /**
  *
  */
-@mixin linear-gradient(
-  $start-color: #929090,
-  $end-color: #e2e2e2,
-  $orientation: "vertical"
-) {
+@mixin linear-gradient($start-color: #929090, $end-color: #e2e2e2, $orientation: "vertical") {
   background: $start-color;
 
   @if $orientation== "vertical" {
@@ -381,12 +365,7 @@
     background: -webkit-linear-gradient(left, $start-color, $end-color);
     background: linear-gradient(to right, $start-color, $end-color);
   } @else {
-    background: -webkit-radial-gradient(
-      center,
-      ellipse cover,
-      $start-color,
-      $end-color
-    );
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
     background: radial-gradient(ellipse at center, $start-color, $end-color);
   }
 }
@@ -626,12 +605,7 @@
   }
 }
 
-@mixin traitBottom(
-  $wbu-margin,
-  $wbu-border-color,
-  $wbu-width: 40px,
-  $wbu-margin-left: auto
-) {
+@mixin traitBottom($wbu-margin, $wbu-border-color, $wbu-width: 40px, $wbu-margin-left: auto) {
   &::after {
     content: "";
     margin-top: $wbu-margin * 0.8;
