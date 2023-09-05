@@ -1,0 +1,22 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+.hbk-mega-menu.style-merseille {
+  display: flex;
+  justify-content: space-between;
+  padding: $wbu-margin;
+  .block-logo {
+    img {
+      max-width: 220px;
+      max-height: 70px;
+    }
+  }
+  .hbk-mega-menu--burgers {
+    background: transparent;
+    margin-bottom: 0;
+    svg {
+      stroke: $wbu-background;
+      path {
+        stroke: $wbu-background;
+      }
+    }
+  }
+}
