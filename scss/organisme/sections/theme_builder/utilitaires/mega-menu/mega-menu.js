@@ -196,9 +196,10 @@ class HbkMegaMenu {
   clickToOpenMobileMenu() {
     const MainMenus = document.querySelectorAll(".hbk-mega-menu");
     MainMenus.forEach((MainMenu) => {
+      const menu = MainMenu.querySelector(".hbk-mega-menu--items");
       const burger = MainMenu.querySelector(".burger__button");
       burger.addEventListener("click", () => {
-        this.openCloseMobileMenu(MainMenu);
+        this.openCloseMobileMenu(menu);
         this.burgerSvgAnim(burger);
       });
     });
