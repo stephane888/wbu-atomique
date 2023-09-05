@@ -16,7 +16,7 @@
     padding: 0;
   }
   /**
-   * S'applique sur <li> qui contient des sous menus ou MegaMenus
+   * S'applique sur <li> qui contient des sous menus ou MegaMenus.
    */
   @mixin open() {
     > .svg-arrow {
@@ -31,7 +31,7 @@
   }
   z-index: 999;
   position: relative;
-  // cette valeur doit etre ajuste par le js afin que l'enssemble fasse un cover sur mobile si necessaire.
+  // Cette valeur doit etre ajuste par le js afin que l'enssemble fasse un cover sur mobile si necessaire.
   max-height: 100vh;
   // --burgers
   &--burgers {
@@ -56,7 +56,7 @@
       justify-content: end;
     }
   }
-  // menu level base
+  // Menu level base
   &--items {
     @include ul_menu();
     position: fixed;
@@ -106,15 +106,16 @@
         min-width: 0;
       }
       .svg-arrow {
-        width: $wbu-margin;
-        height: $wbu-margin;
+        width: $wbu-margin * 2;
+        height: $wbu-margin * 2;
         align-self: center;
-        margin-inline: $wbu-margin * 0.5;
+        margin-left: $wbu-margin * 0.5;
         transform-origin: center;
         transform: rotate(0);
         position: absolute;
-        right: $wbu-margin;
-        top: $wbu-margin;
+        right: 0;
+        top: $wbu-margin * 0.5;
+        padding: $wbu-margin * 0.5;
         cursor: pointer;
         @include WBUtransition();
       }
@@ -207,7 +208,7 @@
   }
   // Sub menu, classic
   &--items__sub {
-    // herite class of base.
+    // Herite class of base.
     @include ul_menu();
     position: relative;
     opacity: 0;
@@ -362,7 +363,7 @@
     z-index: 1;
   }
   /**
-   * -- derivate color : style-tab-primary
+   * -- Derivate color : style-tab-primary
    */
   &.style-tab-primary {
     .item {
@@ -385,6 +386,18 @@
             fill: color-yiq($wbu-color-primary);
           }
         }
+      }
+    }
+  }
+  /**
+   * --
+   */
+  &.big-svg {
+    .item {
+      .svg-arrow {
+        top: 0.5rem;
+        width: 5rem;
+        height: 5rem;
       }
     }
   }

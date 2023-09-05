@@ -51,9 +51,9 @@ class HbkMegaMenu {
     });
   }
 
-  CloseAllItems() {
+  CloseAllItems(MainMenu) {
     return new Promise((resolv) => {
-      const items = document.querySelectorAll(".hbk-mega-menu .item");
+      const items = MainMenu.querySelectorAll(".item");
       items.forEach((item) => {
         item.classList.remove("open");
       });
@@ -166,28 +166,29 @@ class HbkMegaMenu {
    * Ajoute l'icone de fermeture. (afficher generalement sur mobile)
    */
   addIconClose() {
-    const MainMenu = document.querySelector(".hbk-mega-menu");
-    const menu = MainMenu.querySelector(".hbk-mega-menu--items");
-    menu.appendChild(this.generateIconMobileClose());
-    //
-    const covertDk = document.createElement("div");
-    covertDk.setAttribute("class", "overlay-descktop overlay");
-    menu.appendChild(covertDk);
-    menu.querySelector(".overlay-descktop").addEventListener("click", () => {
-      this.CloseAllItems();
-    });
-    //
-
-    menu.querySelector(".js-close").addEventListener("click", () => {
-      this.openCloseMobileMenu();
-      this.burgerSvgAnim();
-    });
-    const div = document.createElement("div");
-    div.setAttribute("class", "overlay overlay-mobile");
-    MainMenu.appendChild(div);
-    MainMenu.querySelector(".overlay-mobile").addEventListener("click", () => {
-      this.openCloseMobileMenu();
-      this.burgerSvgAnim();
+    const MainMenus = document.querySelectorAll(".hbk-mega-menu");
+    MainMenus.forEach((MainMenu) => {
+      const menu = MainMenu.querySelector(".hbk-mega-menu--items");
+      const burger = MainMenu.querySelector(".burger__button");
+      menu.appendChild(this.generateIconMobileClose());
+      const covertDk = document.createElement("div");
+      covertDk.setAttribute("class", "overlay-descktop overlay");
+      menu.appendChild(covertDk);
+      menu.querySelector(".overlay-descktop").addEventListener("click", () => {
+        this.CloseAllItems(MainMenu);
+      });
+      menu.querySelector(".js-close").addEventListener("click", () => {
+        this.openCloseMobileMenu(menu);
+        this.burgerSvgAnim(burger);
+      });
+      //
+      const div = document.createElement("div");
+      div.setAttribute("class", "overlay overlay-mobile");
+      MainMenu.appendChild(div);
+      MainMenu.querySelector(".overlay-mobile").addEventListener("click", () => {
+        this.openCloseMobileMenu(menu);
+        this.burgerSvgAnim(burger);
+      });
     });
   }
   /**
