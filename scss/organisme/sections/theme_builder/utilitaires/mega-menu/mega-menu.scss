@@ -106,6 +106,7 @@
         min-width: 0;
       }
       .svg-arrow {
+        min-width: $wbu-margin * 2;
         width: $wbu-margin * 2;
         height: $wbu-margin * 2;
         align-self: center;
@@ -143,9 +144,9 @@
       text-decoration: none;
       color: inherit;
       @include WBUtransition();
-
-      &:hover {
-        background-color: rgba($wbu-background, 0.15);
+      width: 100%;
+      @include media-min("DD") {
+        width: auto;
       }
       &::after {
         content: "";
@@ -334,6 +335,7 @@
     @include WBUtransition($temps: 0.1s);
     transition-delay: 0s;
     margin-left: 100%;
+    display: none;
     &:hover {
       stroke: $wbu-color-primary;
       path {

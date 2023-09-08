@@ -230,7 +230,12 @@ $XL_debut: 1921px;
     @media only screen and (max-width: $S_768_fin) {
       @content;
     }
-  } @else if $_key == "desktop" {
+  } @else if $_key == "bootstrap_lg" {
+    @media only screen and (max-width: $S_992_fin) {
+      @content;
+    }
+  }
+ @else if $_key == "desktop" {
     @media only screen and (max-width: $S_1366_fin) {
       @content;
     }

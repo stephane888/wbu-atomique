@@ -120,7 +120,7 @@ class HbkMegaMenu {
    * --
    * @returns
    */
-  generateIconMobileClose() {
+  generateIconClose() {
     const iconSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     const iconPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
     //
@@ -170,7 +170,7 @@ class HbkMegaMenu {
     MainMenus.forEach((MainMenu) => {
       const menu = MainMenu.querySelector(".hbk-mega-menu--items");
       const burger = MainMenu.querySelector(".burger__button");
-      menu.appendChild(this.generateIconMobileClose());
+      menu.appendChild(this.generateIconClose());
       const covertDk = document.createElement("div");
       covertDk.setAttribute("class", "overlay-descktop overlay");
       menu.appendChild(covertDk);
@@ -205,6 +205,35 @@ class HbkMegaMenu {
       });
     });
   }
+
+  /**
+   * open formulaire
+   */
+  openModelsearch() {
+    const body = document.querySelector("body");
+    const MainMenus = document.querySelectorAll(".hbk-mega-menu");
+    const omenClose = (MainMenu) => {
+      body.classList.toggle("hbk-mega-menu-open");
+      MainMenu.classList.toggle("open-search");
+    };
+    MainMenus.forEach((MainMenu) => {
+      // Add cover
+      const div = document.createElement("div");
+      div.setAttribute("class", "overlay overlay-search");
+      div.appendChild(this.generateIconClose());
+      MainMenu.appendChild(div);
+      // add listener to close.
+      const iconClose = MainMenu.querySelector(".overlay-search .js-close");
+      iconClose.addEventListener("click", () => {
+        omenClose(MainMenu);
+      });
+      //
+      const iconSearch = MainMenu.querySelector(".icon-search");
+      iconSearch.addEventListener("click", () => {
+        omenClose(MainMenu);
+      });
+    });
+  }
 }
 
 const HBK = new HbkMegaMenu();
@@ -212,3 +241,4 @@ HBK.toggleSubMenu();
 HBK.BuildItems();
 HBK.addIconClose();
 HBK.clickToOpenMobileMenu();
+HBK.openModelsearch();
