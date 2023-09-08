@@ -13,20 +13,16 @@
     .title {
       margin-bottom: $wbu-margin * 1.5;
       text-transform: capitalize;
-      color: color-yiq($wbu-background);
       line-height: 1.5;
     }
     .description {
       margin-bottom: $wbu-margin * 1.5;
-      color: color-yiq($wbu-background);
     }
     .call_action {
       line-height: 1;
       i {
         line-height: 0;
         font-size: 4rem;
-        //color: $wbu-color-primary;
-        color: color-yiq($wbu-background);
       }
       .counter {
         font-weight: 900;
