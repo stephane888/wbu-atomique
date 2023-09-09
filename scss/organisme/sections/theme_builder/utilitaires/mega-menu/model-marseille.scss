@@ -84,6 +84,7 @@
       margin-inline: auto;
     }
     > .item {
+      flex: auto;
       @include media-min(DD) {
         flex-wrap: unset;
         align-items: center;
@@ -169,7 +170,7 @@
     }
     .block-form-search {
       opacity: 01;
-      transition-duration: 0.7s;
+      transition-duration: 0.3s;
       margin-top: 0;
     }
   }
