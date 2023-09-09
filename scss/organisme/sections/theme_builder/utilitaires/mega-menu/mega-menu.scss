@@ -29,7 +29,7 @@
       z-index: 0;
     }
   }
-  z-index: 999;
+  z-index: 99;
   position: relative;
   // Cette valeur doit etre ajuste par le js afin que l'enssemble fasse un cover sur mobile si necessaire.
   max-height: 100vh;
@@ -71,7 +71,7 @@
     max-height: 0;
     overflow: hidden;
     margin-left: -100%;
-    z-index: 999;
+    z-index: 99;
     @include WBUtransition($temps: 0.7s);
     transition-delay: 0.15s;
     @include media-min("DD") {
@@ -225,7 +225,7 @@
     box-shadow: 0 8px 10px -5px #ccc;
     @include WBUtransition($temps: 0.7s);
     @include media-min("DD") {
-      box-shadow: 0 8px 24px -5px #ccc;
+      box-shadow: 0px 3px 2px 1px #ebebeb;
       position: absolute;
       padding-left: 0;
       // overflow: visible;
