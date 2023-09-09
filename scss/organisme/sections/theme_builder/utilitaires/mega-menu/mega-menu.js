@@ -212,7 +212,7 @@ class HbkMegaMenu {
   openModelsearch() {
     const body = document.querySelector("body");
     const MainMenus = document.querySelectorAll(".hbk-mega-menu");
-    const omenClose = (MainMenu) => {
+    const openClose = (MainMenu) => {
       body.classList.toggle("hbk-mega-menu-open");
       MainMenu.classList.toggle("open-search");
     };
@@ -225,12 +225,18 @@ class HbkMegaMenu {
       // add listener to close.
       const iconClose = MainMenu.querySelector(".overlay-search .js-close");
       iconClose.addEventListener("click", () => {
-        omenClose(MainMenu);
+        openClose(MainMenu);
       });
       //
       const iconSearch = MainMenu.querySelector(".icon-search");
       iconSearch.addEventListener("click", () => {
-        omenClose(MainMenu);
+        openClose(MainMenu);
+        // add focus in input.
+        const inputSearch = MainMenu.querySelector(".blm-key-search");
+        console.log("inputSearch : ", inputSearch);
+        if (inputSearch) {
+          inputSearch.focus();
+        }
       });
     });
   }
