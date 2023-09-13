@@ -40,7 +40,7 @@
       opacity: 0;
       @include WBUtransition($temps: 0.6s);
       transition-duration: 0.2s;
-      margin-top: -100%;
+      margin-top: calc(-100% + -150px);
       form .form-actions {
         align-self: center;
       }
