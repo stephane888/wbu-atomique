@@ -242,9 +242,18 @@ class HbkMegaMenu {
   }
 }
 
-const HBK = new HbkMegaMenu();
-HBK.toggleSubMenu();
-HBK.BuildItems();
-HBK.addIconClose();
-HBK.clickToOpenMobileMenu();
-HBK.openModelsearch();
+(function ($, Drupal) {
+  Drupal.behaviors.myModuleBehavior = {
+    attach: function (context, settings) {
+      if (once("myCustomBehavior", ".hbk-mega-menu", context).length > 0) {
+        const HBK = new HbkMegaMenu();
+        HBK.toggleSubMenu();
+        HBK.BuildItems();
+        HBK.addIconClose();
+        HBK.clickToOpenMobileMenu();
+        HBK.openModelsearch();
+      }
+    },
+  };
+  //
+})(jQuery, Drupal);
