@@ -148,6 +148,9 @@
       position: absolute;
       top: $wbu-margin * 2;
       right: $wbu-margin * 1.5;
+      visibility: hidden;
+      opacity: 0;
+      @include WBUtransition($temps: 0.15s);
       @include media-min(DD) {
         top: $wbu-margin * 5;
         right: $wbu-margin * 4;
@@ -167,6 +170,11 @@
       background: $wbu-background;
       opacity: 1;
       height: 100vh;
+      .svg-close {
+        visibility: visible;
+        opacity: 1;
+        transition-duration: 1s;
+      }
     }
     .block-form-search {
       opacity: 01;
