@@ -5,10 +5,7 @@
  */
 class HbkMegaMenu {
   constructor() {
-    /**
-     * Contient tous les elements de menus.
-     */
-    this.items = [];
+    //
   }
   /**
    * Ajoute les icones svg, à tous les elements qui possedent de
@@ -65,36 +62,6 @@ class HbkMegaMenu {
     });
   }
 
-  /**
-   * Construit les itemps pour les menus classic.
-   */
-  BuildItems() {
-    const menus = document.querySelectorAll(".hbk-mega-menu .hbk-mega-menu--items");
-    if (menus) {
-      /**
-       * Permet de generer le tableu de sous menus.
-       * @param {*} item
-       */
-      const loopSubItems = (item) => {
-        //
-      };
-      menus.forEach((menu) => {
-        // On parcourt les elements.
-        for (const i in menu.children) {
-          const item = menu.children[i];
-          if (item.classList) {
-            const hasSubItems = item.querySelector(".hbk-mega-menu--items__sub");
-            const element = {
-              open: false,
-              has_submenu: hasSubItems ? true : false,
-              items: hasSubItems ? loopSubItems(item) : [],
-            };
-            this.items.push(element);
-          }
-        }
-      });
-    }
-  }
   /**
    * Svg icon open close.
    * @returns
@@ -235,7 +202,6 @@ class HbkMegaMenu {
         openClose(MainMenu);
         // add focus in input.
         const inputSearch = MainMenu.querySelector(".blm-key-search");
-        console.log("inputSearch : ", inputSearch);
         if (inputSearch) {
           inputSearch.focus();
         }
@@ -243,19 +209,4 @@ class HbkMegaMenu {
     });
   }
 }
-
-(function ($, Drupal) {
-  Drupal.behaviors.myModuleBehavior = {
-    attach: function (context, settings) {
-      if (once("myCustomBehavior", ".hbk-mega-menu", context).length > 0) {
-        const HBK = new HbkMegaMenu();
-        HBK.toggleSubMenu();
-        HBK.BuildItems();
-        HBK.addIconClose();
-        HBK.clickToOpenMobileMenu();
-        HBK.openModelsearch();
-      }
-    },
-  };
-  //
-})(jQuery, Drupal);
+export default HbkMegaMenu;
