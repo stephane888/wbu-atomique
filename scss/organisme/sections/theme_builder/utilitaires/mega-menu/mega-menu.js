@@ -185,28 +185,31 @@ class HbkMegaMenu {
       body.classList.toggle("hbk-mega-menu-open");
       MainMenu.classList.toggle("open-search");
     };
-    MainMenus.forEach((MainMenu) => {
-      // Add cover
-      const div = document.createElement("div");
-      div.setAttribute("class", "overlay overlay-search");
-      div.appendChild(this.generateIconClose());
-      MainMenu.appendChild(div);
-      // add listener to close.
-      const iconClose = MainMenu.querySelector(".overlay-search .js-close");
-      iconClose.addEventListener("click", () => {
-        openClose(MainMenu);
+    if (MainMenus)
+      MainMenus.forEach((MainMenu) => {
+        // Add cover
+        const div = document.createElement("div");
+        div.setAttribute("class", "overlay overlay-search");
+        div.appendChild(this.generateIconClose());
+        MainMenu.appendChild(div);
+        // add listener to close.
+        const iconClose = MainMenu.querySelector(".overlay-search .js-close");
+        if (iconClose)
+          iconClose.addEventListener("click", () => {
+            openClose(MainMenu);
+          });
+        //
+        const iconSearch = MainMenu.querySelector(".hbk--icon-search");
+        if (iconSearch)
+          iconSearch.addEventListener("click", () => {
+            openClose(MainMenu);
+            // add focus in input.
+            const inputSearch = MainMenu.querySelector(".blm-key-search");
+            if (inputSearch) {
+              inputSearch.focus();
+            }
+          });
       });
-      //
-      const iconSearch = MainMenu.querySelector(".icon-search");
-      iconSearch.addEventListener("click", () => {
-        openClose(MainMenu);
-        // add focus in input.
-        const inputSearch = MainMenu.querySelector(".blm-key-search");
-        if (inputSearch) {
-          inputSearch.focus();
-        }
-      });
-    });
   }
 }
 export default HbkMegaMenu;
