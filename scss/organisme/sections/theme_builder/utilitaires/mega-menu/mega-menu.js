@@ -200,6 +200,7 @@ class HbkMegaMenu {
           });
         //
         const iconSearch = MainMenu.querySelector(".hbk--icon-search");
+        console.log("icon search : ", iconSearch);
         if (iconSearch)
           iconSearch.addEventListener("click", () => {
             openClose(MainMenu);
