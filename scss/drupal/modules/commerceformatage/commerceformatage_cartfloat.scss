@@ -218,6 +218,10 @@
       }
     }
   }
+  .layout-region-checkout-main,
+  .layout-region-checkout-footer {
+    float: none !important;
+  }
 }
 //
 .checkout-pane-login {
