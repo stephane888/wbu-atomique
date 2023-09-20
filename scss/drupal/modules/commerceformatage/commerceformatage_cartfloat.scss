@@ -9,6 +9,7 @@
 }
 //customise back button
 .layout-region-checkout-footer {
+  float: none !important;
   .link--previous {
     display: inline-block;
     margin-top: 3rem;
@@ -217,10 +218,6 @@
         }
       }
     }
-  }
-  .layout-region-checkout-main,
-  .layout-region-checkout-footer {
-    float: none !important;
   }
 }
 //
