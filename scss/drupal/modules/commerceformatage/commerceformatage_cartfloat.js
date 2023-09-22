@@ -13,10 +13,8 @@
    * @param {*} context : le conexte n'est pas forcement necessaire, mais le devien apres la MAJ du panier via ajax.
    */
   function reloadBloc(context = null) {
-    console.log("relaodBlock ", context);
-    const item = document.querySelector(
-      ".commerceformatage_cart_habeuk_click.use-ajax"
-    );
+    //console.log("relaodBlock ", context);
+    const item = document.querySelector(".commerceformatage_cart_habeuk_click.use-ajax");
     item.click();
     // once n'est pas adapté, lorsqu'on soihaite cliquer plusieurs fois.
     // if (context)
@@ -72,14 +70,9 @@
    */
   function openCartPopup(open, context = null) {
     if (open) {
-      document
-        .querySelector(".commerceformatage_cart_habeuk")
-        .classList.add("show");
+      document.querySelector(".commerceformatage_cart_habeuk").classList.add("show");
       reloadBloc();
-    } else
-      document
-        .querySelector(".commerceformatage_cart_habeuk")
-        .classList.remove("show");
+    } else document.querySelector(".commerceformatage_cart_habeuk").classList.remove("show");
   }
   /**
    * --
@@ -89,9 +82,7 @@
     return new Promise((resolv) => {
       httpRequest = new XMLHttpRequest();
       if (!httpRequest) {
-        alert(
-          "Svp, veillez mettre à jour votre navigateur ou contactez notre support technique"
-        );
+        alert("Svp, veillez mettre à jour votre navigateur ou contactez notre support technique");
         return false;
       }
       httpRequest.onreadystatechange = () => {
@@ -114,9 +105,7 @@
     return new Promise((resolv, reject) => {
       httpRequest = new XMLHttpRequest();
       if (!httpRequest) {
-        alert(
-          "Svp, veillez mettre à jour votre navigateur ou contactez notre support technique"
-        );
+        alert("Svp, veillez mettre à jour votre navigateur ou contactez notre support technique");
         return false;
       }
       httpRequest.onreadystatechange = () => {
@@ -129,10 +118,7 @@
           }
         }
       };
-      httpRequest.open(
-        "get",
-        "/commerceformatage/remove-product/" + orderId + "/" + itemId
-      );
+      httpRequest.open("get", "/commerceformatage/remove-product/" + orderId + "/" + itemId);
       httpRequest.setRequestHeader("Content-Type", "application/json");
       httpRequest.send();
     });
@@ -143,13 +129,8 @@
    * @param {*} context
    */
   function initAddTocart(context) {
-    once(
-      "commerceformatage",
-      ".commerceformatage-button-add-to-cart",
-      context
-    ).forEach((item) => {
+    once("commerceformatage", ".commerceformatage-button-add-to-cart", context).forEach((item) => {
       item.addEventListener("click", (event) => {
-        console.log("click disabled ", item.disabled);
         event.preventDefault();
         item.querySelector(".loading").classList.add("fa-spin");
         item.querySelector(".loading").classList.remove("d-none");
@@ -159,11 +140,12 @@
         if (form) {
           const formData = new FormData(form);
           const formProps = Object.fromEntries(formData);
+          const intQty = form.querySelector('input[name="quantity[0][value]"]');
           cartItem = [
             {
               purchased_entity_type: "commerce_product_variation",
               purchased_entity_id: formProps.commerce_product_variation_id,
-              quantity: 1,
+              quantity: intQty && intQty.value > 0 ? intQty.value : 1,
               combine: true,
             },
           ];
@@ -203,16 +185,9 @@
   }
   // Close cart popup
   function initCloseCary(context) {
-    var cl =
-      context && context.querySelector
-        ? context.querySelector(".commerceformatage_cart_habeuk_close")
-        : null;
+    var cl = context && context.querySelector ? context.querySelector(".commerceformatage_cart_habeuk_close") : null;
     if (cl) {
-      once(
-        "commerceformatage",
-        ".commerceformatage_cart_habeuk_close",
-        context
-      ).forEach((item) => {
+      once("commerceformatage", ".commerceformatage_cart_habeuk_close", context).forEach((item) => {
         item.addEventListener("click", () => {
           openCartPopup(false, context);
           ManageCover(false, context);
@@ -223,16 +198,9 @@
 
   // open cart popup
   function initOpenCart(context) {
-    var cl =
-      context && context.querySelector
-        ? context.querySelector(".commerceformatage_cart_habeuk_open")
-        : null;
+    var cl = context && context.querySelector ? context.querySelector(".commerceformatage_cart_habeuk_open") : null;
     if (cl) {
-      once(
-        "commerceformatage",
-        ".commerceformatage_cart_habeuk_open",
-        context
-      ).forEach((item) => {
+      once("commerceformatage", ".commerceformatage_cart_habeuk_open", context).forEach((item) => {
         item.addEventListener("click", () => {
           openCartPopup(true, context);
           ManageCover(true, context);
@@ -244,21 +212,11 @@
 
   // Remove items to cart
   function initRemoveItems(context) {
-    var cl =
-      context && context.querySelectorAll
-        ? context.querySelectorAll(".commerceformatage_cart_habeuk_remove")
-        : null;
+    var cl = context && context.querySelectorAll ? context.querySelectorAll(".commerceformatage_cart_habeuk_remove") : null;
     if (cl) {
-      once(
-        "commerceformatage",
-        ".commerceformatage_cart_habeuk_remove",
-        context
-      ).forEach((item) => {
+      once("commerceformatage", ".commerceformatage_cart_habeuk_remove", context).forEach((item) => {
         item.addEventListener("click", () => {
-          removeItem(
-            item.getAttribute("data-order-id"),
-            item.getAttribute("data-cart-id")
-          ).then(() => {
+          removeItem(item.getAttribute("data-order-id"), item.getAttribute("data-cart-id")).then(() => {
             reloadBloc(context);
           });
         });
