@@ -1,0 +1,349 @@
+body {
+  .footer-agence-constant {
+    .navigation {
+      .block-title {
+        .title {
+          color: $wbu-color-primary;
+          font-weight: bold;
+        }
+      }
+
+      .nav-item {
+        .nav-link {
+          padding-left: 0;
+          color: white;
+          transition: color 0.1s ease-in;
+
+          &:hover {
+            color: $wbu-color-primary;
+          }
+        }
+      }
+    }
+
+    .last-content {
+      .svg {
+        svg {
+          max-width: 32px;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .h1 {
+    letter-spacing: -0.05rem;
+  }
+
+  .hero-block__title {
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.85);
+  }
+
+  .custom-class.phantom {
+    text-shadow: 0px 0px 5px rgb(0, 0, 0), 0px 0px 5px rgb(0, 0, 0), 0px 0px 5px rgb(0, 0, 0), 0px 0px 5px rgb(0, 0, 0);
+  }
+
+  .img-container {
+    img {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  .block-system-branding-block {
+    img {
+      max-height: 95px !important;
+    }
+  }
+
+  .spaker_mod_header {
+    &.d-none.d-flex {
+      display: none !important;
+
+      &.d-md-flex {
+        @media (min-width: 768px) {
+          display: flex !important;
+        }
+      }
+    }
+  }
+
+  ul.hbk-mega-menu--items {
+    li.item {
+      white-space: nowrap;
+      text-wrap: nowrap;
+    }
+  }
+
+  ul.hbk-mega-menu--items__sub {
+    width: fit-content;
+
+    li.item {
+      white-space: nowrap;
+      text-wrap: nowrap;
+    }
+  }
+
+  .text-link-white {
+    a {
+      color: white;
+    }
+  }
+
+  .evenex-speaker .last-content {
+    padding-bottom: 0px;
+  }
+
+  .supra-class {
+    &.z-index-100 {
+      z-index: 100 !important;
+    }
+
+    .metro-service__body {
+      z-index: 100 !important;
+    }
+  }
+
+  .custom-act-fig {
+    .hurry-up__shape {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .z-card-customized {
+    .text-dark {
+      a {
+        color: #343a40 !important;
+      }
+    }
+
+    .content.d-flex {
+      display: block !important;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .squared-before {
+    aspect-ratio: 1/1;
+    display: flex;
+
+    img.img-fluid {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+}
+
+html .simple-bg-light {
+  background-color: white;
+}
+
+.fivejar-hero.airport {
+  min-height: 50vh;
+}
+
+.option {
+  &__item {
+    svg {
+      width: 50px;
+      height: 45px;
+      fill: url("#blue_gradient");
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, #4e7cb9, #41a7dc, #60b9bb);
+      transition: all 0.5s ease;
+      border-color: #fff;
+
+      svg {
+        fill: #fff;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.fly-booking .main-app-container {
+  margin: auto;
+}
+
+.block-field-blockparagraphvolsfield-content {
+  height: 100%;
+
+  div,
+  article {
+    height: inherit;
+  }
+}
+
+.coup-coeur__title {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  color: #fff;
+  font-size: 2.9rem;
+  text-align: center;
+  -webkit-transform: translate(50%, 50%) rotate(-3deg);
+  transform: translate(50%, 50%) rotate(-3deg);
+  line-height: 1.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: Edo, Montserrat, sans-serif;
+  z-index: 1;
+}
+
+div.hover--black:hover .wrapper {
+  background-color: #343a40a3;
+}
+
+.p-10 {
+  padding-block: 10rem !important;
+}
+
+.blink {
+  opacity: 0;
+  animation: blinker 3s ease infinite;
+}
+
+@keyframes blinker {
+  40% {
+    opacity: 100%;
+  }
+
+  70% {
+    opacity: 100%;
+  }
+}
+
+.bg-lome {
+  background-color: #2595d42b;
+}
+
+.unstyled-list {
+  ul {
+    list-style: none;
+  }
+}
+
+.mr-svg-0 {
+  &.fields-svg {
+    .field-svg {
+      svg.icon {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+section.clothings_hero {
+  min-height: 450px;
+}
+
+div.proposition .svg-handler .svg {
+  background: transparent;
+}
+
+div.proposition {
+  margin-top: 0px;
+}
+
+.customized-table {
+  .table-responsive {
+    padding: 0 !important;
+    // gestion du tableau sur petit ecran.
+    table {
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    table caption {
+      font-size: 1.5em;
+      margin: 0.5em 0 0.75em;
+    }
+
+    table tr {
+      //background-color: #f8f8f8;
+      //border: 1px solid #ddd;
+      // padding: 0.35em;
+    }
+
+    table th,
+    table td {
+      padding: 0.625em 0;
+      text-align: center;
+      @include media-min(DD) {
+        padding-right: 0.625em;
+        height: 93px;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+
+    table th {
+      font-size: 0.85em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @include media-max(DD) {
+      table {
+        border: 0;
+      }
+
+      table caption {
+        font-size: 1.3em;
+      }
+
+      table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      table tr {
+        // border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 0.625em;
+      }
+
+      table td {
+        // border-bottom: 1px solid #ddd;
+        //  display: block;
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        height: auto;
+      }
+
+      table td::before {
+        content: attr(data-label) !important;
+        float: left;
+        // font-weight: bold;
+        text-transform: uppercase;
+        position: unset !important;
+        width: auto !important;
+        border: none !important;
+        height: auto !important;
+      }
+
+      table td:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}

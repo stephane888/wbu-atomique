@@ -1,0 +1,217 @@
+@use "@stephane888/wbu-atomique/scss/bootstrap-all.scss";
+@use "@stephane888/wbu-atomique/scss/atome/typography/_default.scss";
+@use "@stephane888/wbu-atomique/scss/molecule/default-class.scss";
+@use "@stephane888/wbu-atomique/scss/drupal/ajustement.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+body {
+  font-family: Montserrat;
+  font-weigth: 300;
+  h1,
+  h2,
+  h3,
+  h4,
+  .h1,
+  .h2,
+  .h3,
+  .h4 {
+    font-weight: 500;
+  }
+}
+.customized-paragraph {
+  &.actualite {
+    .customized-desc {
+      .field__item {
+        p {
+          @extend .row, .mx-auto;
+
+          &:last-child {
+            position: relative;
+
+            &::before {
+              position: absolute;
+            }
+
+            img {
+              @extend .col-md-3, .col-sm-4, .col-6, .p-0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .irl-bloc__text {
+    @extend .text-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1.irl-bloc__title {
+      position: relative;
+      width: fit-content;
+      // margin-inline: auto;
+      @extend .h1, .text-light;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        height: 2px;
+      }
+
+      &::before {
+        top: 0;
+        right: 0;
+        width: 50%;
+      }
+
+      &::after {
+        bottom: 0;
+        left: 0;
+        width: 50%;
+      }
+
+      .field__item {
+        @extend .pt-4, .pb-5, .h1;
+      }
+    }
+
+    div.irl-bloc__desc {
+      @extend .py-2, .text-left, .text-light;
+
+      @media (min-width: 768px) {
+        position: absolute;
+        left: 20%;
+        top: calc(50% + 1.1rem);
+      }
+    }
+  }
+}
+
+.force-squared {
+  aspect-ratio: 1;
+
+  * {
+    height: 100%;
+  }
+
+  .card-body {
+    height: fit-content !important;
+  }
+
+  .field--name-field-image {
+    .field__item {
+      @extend .d-flex, .justify-content-center, .flex-column;
+
+      a {
+        height: fit-content;
+      }
+    }
+  }
+}
+
+.customized-table {
+  overflow: hidden;
+
+  .pagination {
+    @extend .w-100;
+    @extend .justify-content-center;
+
+    li {
+      @extend .d-none;
+
+      &.pager__item {
+        &--next,
+        &--prev {
+          @extend .d-block;
+          @extend .col-md-5;
+
+          a {
+            @extend .w-100;
+            @extend .py-5;
+            @extend .btn;
+            @extend .btn-primary;
+          }
+        }
+      }
+
+      // &:first-child,
+      // &:last-child {
+      //     @extend .d-none;
+      // }
+    }
+  }
+
+  .table-responsive {
+    overflow: visible;
+
+    thead {
+      color: white;
+    }
+
+    thead tr,
+    tbody tr {
+      min-height: 93px;
+      font-size: 19px;
+      text-align: center;
+      position: relative;
+
+      td,
+      th {
+        vertical-align: middle;
+        border: none;
+
+        &:first-child {
+          // position: relative;
+          &::after {
+            content: "";
+            width: 200vw;
+            left: -100vw;
+            top: 0;
+            position: absolute;
+            height: 100%;
+            z-index: -1;
+            border-bottom: 1px solid #727272;
+          }
+        }
+      }
+      th {
+        font-weight: 400;
+        position: sticky;
+        z-index: 1;
+        top: 0;
+        &:first-child {
+          &::after {
+            background: #777777;
+          }
+        }
+      }
+    }
+  }
+}
+.customized-filter-form {
+  background-color: #eaeaea;
+
+  .d-flex.flex-wrap {
+    justify-content: space-between;
+
+    & > * {
+      label {
+        font-size: 0.8em;
+      }
+
+      @media (min-width: 768px) {
+        flex: 0 0 23%;
+        max-width: 23%;
+      }
+
+      &.form-actions {
+        input.form-submit {
+          @extend .btn-primary;
+        }
+      }
+    }
+  }
+}
