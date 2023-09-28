@@ -42,12 +42,11 @@
 
     .reinsuranceItem {
       margin: 0;
-
       p {
         margin: 0.5rem 0 0;
         color: #959595;
         @include media-max(XX) {
-          font-size: $wbu-default-font-size * 0.8;
+          // font-size: $wbu-default-font-size * 0.8;
           margin: 0;
         }
       }
@@ -75,24 +74,24 @@
       }
 
       &__title {
-        font-size: $wbu-default-font-size * 2;
+        //font-size: $wbu-default-font-size * 2;
         font-weight: 300;
         margin-top: 2rem;
         margin-bottom: 0.5rem;
         @include media-max(XS) {
-          font-size: $wbu-default-font-size * 1.2;
+          // font-size: $wbu-default-font-size * 1.2;
           margin-bottom: -5px;
         }
         @include media-max(XX) {
-          font-size: $wbu-default-font-size * 0.8;
+          // font-size: $wbu-default-font-size * 0.8;
           margin: 0 0 -5px;
         }
 
         .number-unit {
-          font-size: $wbu-default-font-size * 1.5;
+          // font-size: $wbu-default-font-size * 1.5;
           color: black;
           @include media-max(XS) {
-            font-size: $wbu-default-font-size * 1;
+            // font-size: $wbu-default-font-size * 1;
           }
         }
       }

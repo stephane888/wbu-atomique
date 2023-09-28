@@ -29,11 +29,10 @@
   &__title {
     margin-bottom: $wbu-margin * 1.5;
     color: #1b1918;
-    font-style: normal;
+    // font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-
+    // font-size: 20px;
+    // line-height: 24px;
     span {
       color: #49a0a2;
     }
@@ -42,7 +41,7 @@
   &__description {
     color: #1b1918;
     font-weight: 300;
-    font-size: 1em;
-    line-height: 20px;
+    // font-size: 1em;
+    // line-height: 20px;
   }
 }
