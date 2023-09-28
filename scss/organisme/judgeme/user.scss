@@ -1,0 +1,39 @@
+
+.user-container{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    border:2px solid green;
+    text-align: center;
+    padding: 20px;
+
+    h2{
+        font-size:60px;
+        font-weight: bolder;
+    }
+
+}
+
+#increase{
+    font-size:40px;
+    font-weight: bolder;
+}
+
+.user-views{
+
+    border: 1px solid #c0c0c0;
+    box-shadow: 4px 4px 4px silver;
+    padding:20px;
+    height:50vh;
+
+.review-b{
+    margin-left: 20px;
+    .spanning, .skinning{
+        border: 1px solid lightgreen;
+        padding:5px;
+        border-radius:30px;
+        cursor: pointer;
+    }
+}
+
+}

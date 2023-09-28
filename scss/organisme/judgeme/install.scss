@@ -1,0 +1,56 @@
+
+
+.install-container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:100px;
+
+    img{
+        border-radius:30px;
+    }
+
+    .im{
+        width:30px;
+        height:30px;
+        border-radius:50%;
+    }
+
+    h5{
+        font-size:17px;
+        font-weight:bolder;
+    }
+
+    p{
+        font-size: 15px;
+    }
+  }
+
+
+
+
+
+.install-size{
+    h2{
+        font-size:32px;
+        font-weight: bolder;
+    }
+
+    h5{
+        font-size:18px;
+        font-weight: bolder;
+    }
+
+    p{
+        font-size:15px;
+    }
+}
+
+
+/*MEDIA QUERIES*/
+
+@media(max-width:1000px){
+    .install-container{
+      display: grid;
+      grid-template-columns:1fr;
+    }
+}
