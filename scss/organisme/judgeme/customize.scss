@@ -1,0 +1,49 @@
+       
+.customize-container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:30px;
+
+    img{
+        height:400px;
+        object-fit: contain;
+    }
+  }
+
+
+
+.customize{
+    h2{
+        font-size:30px;
+        font-weight: bolder;
+    }
+
+    p{
+        font-size:17px;
+    }
+
+    button{
+        font-size:20px;
+        font-weight: bolder;
+        width:230px;
+        border-radius:30px;
+
+        &:hover{
+            background-color:#d8bfd8;
+            color:#fff;
+            border-color: #d8bfd8;
+        }
+    }
+}
+
+
+/*MEDIA QUERIES*/
+
+@media(max-width:1000px){
+    .customize-container{
+      display: grid;
+      grid-template-columns:1fr;
+    }
+
+    
+}

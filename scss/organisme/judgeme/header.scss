@@ -1,0 +1,75 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+
+
+
+/*NAVIGATION WRAPPER*/
+.nav-wrapper{
+    font-size:17px;
+
+    #logo{
+    mix-blend-mode: multiply;
+    width:200px;
+}
+
+}
+/*END OF NAVIGATION WRAPPER*/
+
+/*MENU*/
+.mega-area{
+    padding:20px;   
+    background-color:ghostwhite;
+    box-shadow: 3px 4px 4px silver;
+    position: absolute;
+    left:0;
+    right:0;
+}
+
+.menu-area{
+    position: static;
+}
+
+
+#grow-title{
+    font-size:30px;
+    font-weight: bolder;
+}
+
+
+.info{
+    margin:0 0 20px;
+}
+
+.show{
+    display:flex;
+    gap:25px
+}
+
+
+
+
+
+#link{
+    font-size: 20px;
+}
+
+
+
+.card{
+    box-shadow: 2px 2px 3px silver;
+}
+
+.card:hover{
+   border: 1px solid green;
+}
+
+.section-i{
+    margin-bottom: 100px;
+}
+
+/*dropdown size*/
+
+#dropdown-size{
+    font-size: 17px;
+}
+

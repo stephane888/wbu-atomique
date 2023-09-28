@@ -1,0 +1,88 @@
+
+#app-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+
+}
+
+
+.app1{
+    border:1px solid #c0c0c0;
+    padding:10px;
+    text-align: center;
+    line-height:2;
+    height:400px;
+    border-radius:20px;
+}
+
+
+.app2{
+    border:1px solid #c0c0c0;
+    padding:10px;
+    text-align: center;
+    line-height:2;
+    height:400px;
+    border-radius: 20px;
+}
+
+
+
+.app3{
+    border:1px solid #c0c0c0;
+    padding:10px;
+    text-align: center;
+    height:400px;
+    line-height:2;
+    height:400px;
+    border-radius:20px ;
+}
+
+
+
+
+.appShow{
+
+    .card{
+        border-radius:20px;
+    }
+
+    h5{
+        font-size:25px;
+        font-weight: bolder;
+        padding:14px 0;
+    }
+
+    p{
+        font-size:17px;
+    }
+
+    a{
+        font-size:20px;
+        margin:20px 0
+    }
+
+    .linko{
+        width:240px;
+        text-align: center;
+        padding:10px;
+        border-radius:30px;
+    }
+}
+
+#sha{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    
+}
+
+
+@media(max-width:1000px){
+    #app-container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:20px;
+    
+    }
+}
