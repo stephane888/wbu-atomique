@@ -18,6 +18,22 @@
       .block-logo img {
         max-height: 50px;
       }
+      .hbk-mega-menu {
+        .search.layout-region {
+          height: calc(100vh - 250px);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          top: 100px;
+          bottom: auto;
+          margin-top: -100vh;
+        }
+      }
+      .hbk-mega-menu.open-search {
+        .search.layout-region {
+          margin-top: 0;
+        }
+      }
     }
     &.up {
       .block-logo img {
