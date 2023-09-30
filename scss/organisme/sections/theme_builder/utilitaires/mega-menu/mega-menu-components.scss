@@ -1,0 +1,90 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+//style-merseille _none menu-static hbk-dynamiques-headers
+.hbk-dynamiques-headers {
+  &.menu-static {
+    // @include media-min(DD) {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    @include WBUtransition($temps: 0.5s);
+    // }
+  }
+  &.fixed-menu {
+    // @include media-min(DD) {
+    transform: translateY(-100%);
+    &.down {
+      transform: translateY(0);
+      .block-logo img {
+        max-height: 50px;
+      }
+    }
+    // }
+  }
+  &.menu-bg-background {
+    .hbk-mega-menu--items {
+      background-color: rgba($wbu-background, 90%);
+      @include media-min(DD) {
+        background-color: transparent;
+      }
+    }
+    .hbk-mega-menu {
+      background-color: rgba($wbu-background, 70%);
+      .hbk-mega-menu--items .item {
+        color: color-yiq($wbu-background);
+        .svg-arrow {
+          fill: color-yiq($wbu-background);
+        }
+        .item-link::after {
+          border-color: rgba(color-yiq($wbu-background), 20%);
+        }
+        .hbk-mega-menu--items__sub {
+          box-shadow: 0 8px 10px -5px $wbu-background;
+        }
+      }
+      .hbk-mega-menu--items__sub {
+        background-color: rgba($wbu-background, 85%);
+      }
+    }
+    .hbk-mega-menu--burgers svg.hbk--icon-search {
+      stroke: color-yiq($wbu-background);
+      fill: color-yiq($wbu-background);
+    }
+    .hbk-mega-menu--burgers .burger__button svg path {
+      stroke: color-yiq($wbu-background);
+    }
+  }
+  &.menu-to-left,
+  &.menu-to-right,
+  &.menu-to-center {
+    @include media-min(DD) {
+      .hbk-mega-menu {
+        .hbk-mega-menu--items > .item {
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+  &.menu-to-center {
+    @include media-min(DD) {
+      .hbk-mega-menu .hbk-mega-menu--items {
+        justify-content: center;
+      }
+    }
+  }
+  &.menu-to-right {
+    @include media-min(DD) {
+      .hbk-mega-menu .hbk-mega-menu--items {
+        justify-content: end;
+      }
+    }
+  }
+  &.menu-multiligne {
+    .hbk-mega-menu--items {
+      flex-wrap: wrap;
+      > .item {
+        //flex-grow: 0;
+      }
+    }
+  }
+}

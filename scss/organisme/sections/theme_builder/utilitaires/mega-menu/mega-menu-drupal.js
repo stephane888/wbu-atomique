@@ -13,6 +13,7 @@ import HbkMegaMenu from "./mega-menu";
         HBK.addIconClose();
         HBK.clickToOpenMobileMenu();
         HBK.openModelsearch();
+        HBK.listernerScroll();
       }
     },
   };

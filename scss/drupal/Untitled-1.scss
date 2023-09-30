@@ -1,0 +1,60 @@
+@use "./service_prestige_wb_horizon_com_variables.scss" as *;
+// ces elements ne sont pas importé dans le rendu final ...vendor.css car cela ils sont deja dans ...vendor.scss .( tester sur sass-loader@11.1.1 && sass@1.66.1 )
+@use "@stephane888/wbu-atomique/scss/bootstrap-all.scss" as *;
+@use "@stephane888/wbu-atomique/scss/molecule/default-class.scss" as *;
+.formatage-models-simple-block-5953--XmOILItb_1U {
+  .security-info-handler {
+    @include media-min(DD) {
+      min-height: 90vh;
+    }
+  }
+}
+.formatage-models-simple-block-7582--ZR8FaMEX40M {
+  .field__item {
+    svg {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1.5rem;
+    }
+  }
+  .reinsuranceItem__iconContainer {
+    height: auto;
+    width: auto;
+    margin-bottom: 0;
+  }
+  .reinsuranceItem__assistance {
+    padding-bottom: 0;
+  }
+}
+.formatage-models-simple-block-7780--nJsq0SnXCDs {
+  background-attachment: fixed;
+  background-position: center;
+}
+.formatage-models-simple-block-2079--RzZiO1N9Wfc {
+  background-attachment: fixed;
+  background-position: center;
+}
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
+.font-famify-bilbo {
+  font-family: "Bilbo Swash Caps", cursive;
+  color: $wbu-color-secondary;
+}
+body {
+  .security-info-handler .safety-text .text-title {
+    font-family: "Bilbo Swash Caps", cursive;
+    margin: 0;
+    line-height: 1;
+    @extend .wbu-titre-suppra;
+    color: $wbu-color-secondary;
+  }
+  .security-info-handler .safety-text .text-paragraph {
+    font-weight: 400 !important;
+  }
+}
+.formatage-models-simple-block-9393--1U9kTg9TgzM {
+  . field--name-field-email {
+    line-height: 0.7;
+  }
+}

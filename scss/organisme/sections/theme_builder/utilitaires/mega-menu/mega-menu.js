@@ -6,6 +6,7 @@
 class HbkMegaMenu {
   constructor() {
     //
+    this.timerScroll;
   }
   /**
    * Ajoute les icones svg, à tous les elements qui possedent de
@@ -200,7 +201,6 @@ class HbkMegaMenu {
           });
         //
         const iconSearch = MainMenu.querySelector(".hbk--icon-search");
-        console.log("icon search : ", iconSearch);
         if (iconSearch)
           iconSearch.addEventListener("click", () => {
             openClose(MainMenu);
@@ -211,6 +211,47 @@ class HbkMegaMenu {
             }
           });
       });
+  }
+
+  listernerScroll() {
+    var derniere_position_de_scroll_connue = 0;
+    var newPosition = 0;
+    const MainMenus = document.querySelectorAll(".hbk-mega-menu");
+
+    function faireQuelqueChose(directionDown) {
+      MainMenus.forEach((MainMenu) => {
+        const containerMenu = MainMenu.parentElement;
+        // L'option static doit etre activée
+        const actifStatic = containerMenu.classList.contains("menu-static");
+        if (actifStatic) {
+          //On prend le parent du menu, car la position de se dernier ne varie pas.
+          const position = containerMenu.parentElement.getBoundingClientRect();
+          const height = containerMenu.offsetHeight;
+          const ht = containerMenu.getAttribute("data-fixed-top") ? parseInt(containerMenu.getAttribute("data-fixed-top")) + height : height;
+          if (position.top <= -ht) {
+            containerMenu.classList.add(["fixed-menu"]);
+          } else containerMenu.classList.remove("fixed-menu");
+          if (directionDown) {
+            containerMenu.classList.add("up");
+            containerMenu.classList.remove("down");
+          } else {
+            containerMenu.classList.add("down");
+            containerMenu.classList.remove("up");
+          }
+          console.log("position : ", position.top, "::", ht);
+        }
+      });
+    }
+    window.addEventListener("scroll", function (e) {
+      newPosition = window.scrollY;
+      if (this.timerScroll) clearTimeout(this.timerScroll);
+      this.timerScroll = setTimeout(() => {
+        let directionDown = true;
+        if (newPosition < derniere_position_de_scroll_connue) directionDown = false;
+        faireQuelqueChose(directionDown);
+        derniere_position_de_scroll_connue = newPosition;
+      }, 50);
+    });
   }
 }
 export default HbkMegaMenu;

@@ -341,7 +341,8 @@ h6 {
   @include wbu-titre-suppra();
 }
 
-.bp_hero {
+.bp_hero,
+.wbu-titre-biggest {
   @include bp_hero();
 }
 
@@ -454,7 +455,7 @@ form {
   /**
    * Rendre le contenu en position relatif + un z-index.
    */
-  >* {
+  > * {
     position: relative;
     z-index: 1;
   }

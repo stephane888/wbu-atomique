@@ -3,11 +3,12 @@
 .hbk-mega-menu.style-merseille {
   display: flex;
   justify-content: space-between;
-  padding: $wbu-margin;
+  padding: 0 $wbu-margin * 1.5;
   .block-logo {
+    padding: $wbu-margin * 0.5;
     img {
       max-width: 220px;
-      max-height: 70px;
+      max-height: 110px;
     }
   }
   .hbk-mega-menu--burgers {
@@ -82,7 +83,7 @@
     @include media-min(DD) {
       max-width: 1200px;
       width: calc(100% - $wbu-margin * 2);
-      margin-inline: auto;
+      //margin-inline: auto;
     }
     > .item {
       flex: auto;
