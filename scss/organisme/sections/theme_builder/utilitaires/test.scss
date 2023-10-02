@@ -1,0 +1,29 @@
+.block-anime-asky {
+  max-width: 400px;
+  position: relative;
+  img {
+    max-width: 100%;
+  }
+  .field__item {
+    p.text {
+      position: absolute;
+      background: #fff;
+      left: auto;
+      padding: $wbu-margin * 0.5;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+    }
+  }
+}
+
+.middle-footer__sub-menu {
+  flex-wrap: wrap;
+  > .block {
+    margin-bottom: $wbu-margin;
+    @include media-min(DD) {
+      margin-bottom: 0;
+    }
+  }
+}
