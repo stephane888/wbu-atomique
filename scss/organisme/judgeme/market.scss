@@ -1,0 +1,36 @@
+
+.market-container{
+
+.market-showcase{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:50px;
+};
+@media(max-width:1000px){
+    .market-showcase{
+       display:grid;
+       grid-template-columns:1fr;
+    }
+};
+
+
+img{
+    width:100%;
+    border-radius:20px;
+}
+
+h3{
+    font-size:30px;
+    font-weight: bolder;
+}
+
+p{
+    font-size:17px;
+}
+
+button{
+    font-size:17px;
+    border-radius:30px;
+}
+
+}

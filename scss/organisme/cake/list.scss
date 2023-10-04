@@ -1,0 +1,21 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.list-container{
+    background-image: radial-gradient(#f5f5f5,#f5f5f5);
+
+    h5{
+    font-size:$wbu-default-font-size;
+    font-weight:$wbu-title-font-weight
+    }
+
+
+    a{
+        font-size:$wbu-default-font-size*0.7;
+        &:hover{
+            background-color:pink;
+            border:none;
+        }
+
+    }
+   
+}

@@ -1,14 +1,16 @@
-{
+ {
     "name": "stephane888/wbu-atomique",
     "description": "style css et js",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "stephane888",
-            "email": "kksasteph888@gmail.com"
+          "name": "stephane888",
+        "email": "kksasteph888@gmail.com"
         }
     ],
     "minimum-stability": "stable",
     "require": {}
 }
+
+        

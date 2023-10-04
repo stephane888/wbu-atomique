@@ -1,0 +1,70 @@
+
+.user-views{
+
+    border: 1px solid hsl(0, 0%, 75%);
+    box-shadow: 4px 4px 4px silver;
+    padding:20px;
+     
+       .review-container{
+        display:flex;
+         gap:30px;
+         justify-content: space-between;
+        @media(max-width:1000px){
+            display:flex;
+            flex-direction: column;
+        }
+
+         #file{
+            width:40%;
+           
+         }
+
+         .pro{
+            display:flex;
+            gap:15px;
+            align-items: center;
+         }
+          
+
+     .main-progress{
+       display: flex;
+       flex-direction: column;
+    
+        @media(max-width:1000px){
+            display: grid;
+            grid-template-columns: 1fr;
+            gap:30px
+        }
+     }
+    }
+
+.review-b{
+    margin-left: 20px;
+    .spanning, .skinning{
+        border: 1px solid lightgreen;
+        padding:15px;
+        border-radius:30px;
+        font-size:15px;
+        
+    }
+}
+
+.wrapp-client{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:50px;
+    
+    }
+    @media(max-width:1000px){
+        .wrapp-client{
+            display:grid;
+            grid-template-columns:1fr;
+        }
+     }
+
+     .client{
+        background-color:whitesmoke;
+        padding:20px;
+    }
+
+}

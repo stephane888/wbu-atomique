@@ -1,0 +1,37 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.contact-container{
+    background: (#c2dda6);
+    padding:40px;
+    img{
+        width:60px;
+        height:60px;
+        border-radius:50%;
+        background-color: #b3c79e;
+        padding:10px;
+    }
+    h5{
+        font-size:$wbu-default-font-size*0.7;
+        font-weight:$wbu-title-font-weight
+        }
+
+        .contact-title{
+            width:250px;
+            height:250px;
+            border-radius:50%;
+            background-color: #b9c7ab;
+            padding:10px;
+            font-size:$wbu-default-font-size*1.1;
+            font-weight:$wbu-title-font-weight
+        }
+
+        h3{
+            font-size:$wbu-default-font-size*1.4;
+            font-weight:$wbu-title-font-weight
+        }
+
+        a{
+            border-radius:30px;
+        }
+
+}

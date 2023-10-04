@@ -1,0 +1,28 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.staff-container{
+
+    img{
+        height:300px;
+        width:300px;
+        border-radius:50%;
+        padding-top:15px;
+    }
+
+    .card{
+        border-radius:20px;
+        background-color:#cbcbdc;
+        box-shadow:2px 2px 2px #cdcdfb;
+        border:none;
+        transition:transform 0.5s;
+        &:hover{
+            transform:translateY(-7px)
+        }
+    }
+    
+        h4{
+            font-size:$wbu-default-font-size*0.7;
+            font-weight:$wbu-title-font-weight
+            }
+    
+}

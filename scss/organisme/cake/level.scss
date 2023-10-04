@@ -1,0 +1,8 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.level-container{
+    h2{
+        font-size:$wbu-default-font-size*1.5;
+        font-weight:$wbu-title-font-weight
+        }
+}

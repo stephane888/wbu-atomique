@@ -1,0 +1,10 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.section{
+    background-color:$wbu-color-secondary;
+    h2{
+        font-size : $wbu-default-font-size;
+        font-weight : $wbu-title-font-weight
+    }
+
+}
