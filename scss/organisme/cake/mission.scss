@@ -1,0 +1,22 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.mission-container{
+    img{
+        object-fit: cover;
+        height:500px;
+        border-radius:20px;
+    }
+    a{
+        border-radius:30px;
+        &:hover{
+            background-color:lightgreen;
+            border:none;
+            color:lightgreen
+        }
+    }
+
+    h5{
+        font-size:$wbu-default-font-size*1.5;
+        font-weight:$wbu-title-font-weight
+        }
+}

@@ -1,0 +1,35 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.date-container{
+    background-color:hsl(91, 37%, 89%);
+    h2{
+        font-size:$wbu-default-font-size*1.5;
+        font-weight:$wbu-title-font-weight
+        }
+        input{
+            border:1px solid silver;
+            outline:none;
+            border-radius:30px;
+            padding:10px;
+            font-size:$wbu-default-font-size*0.7;
+        }
+        .show-contain{
+            background-color:#fff;
+            padding:30px;
+            border-radius:30px;
+            @media(max-width:700px){
+                display: grid;
+                grid-template-columns:1fr;
+                width:400px;
+            }
+            
+        }
+
+        .show{
+            background-color: hsl(89, 70%, 87%);
+            @media(max-width:700px){
+                width:280px;
+                margin-top:10px;
+            }
+        }
+}
