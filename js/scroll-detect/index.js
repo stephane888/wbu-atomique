@@ -32,7 +32,6 @@ function ScrollRunning(elements) {
       } else {
         elment.classList.remove("scroll-element-exceeded");
       }
-      // console.log("position : ", position);
     });
   }
   function checkScrollDirection() {
@@ -59,10 +58,7 @@ if (window.Drupal && window.Drupal.behaviors) {
   // @see https://www.drupal.org/project/once/issues/3204168
   Drupal.behaviors.myBehavior = {
     attach: function () {
-      const elements = once(
-        "scroll-index-once-id",
-        document.querySelector('[data-hbk="scroll"]')
-      );
+      const elements = once("scroll-index-once-id", document.querySelector('[data-hbk="scroll"]'));
       if (elements.length > 0) {
         ScrollRunning(elements);
       }
