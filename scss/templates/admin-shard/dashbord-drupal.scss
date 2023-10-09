@@ -97,7 +97,7 @@
 
     width: 100%;
   }
-  //card info
+  // card info
   .card-info {
     line-height: 1;
     @include WBUtransition();
@@ -107,6 +107,7 @@
     }
     .block-link {
       padding: $wbu-margin * 0.3;
+      color: #454545;
       @include media-min(DD) {
         padding: $wbu-margin * 0.5;
       }
