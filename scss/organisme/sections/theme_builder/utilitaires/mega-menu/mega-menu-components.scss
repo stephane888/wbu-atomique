@@ -47,6 +47,10 @@
     // }
   }
   &.menu-bg-background {
+    color: color-yiq($wbu-background);
+    a {
+      color: inherit;
+    }
     .hbk-mega-menu--items {
       background-color: rgba($wbu-background, 90%);
       @include media-min(DD) {
