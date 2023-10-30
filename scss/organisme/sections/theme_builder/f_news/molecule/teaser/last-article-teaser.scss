@@ -38,16 +38,11 @@
     }
   }
   .post-link {
-    font-size: $wbu-h4-font-size;
-    min-height: 6rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
     color: $wbu-color-secondary;
-    @include media-max(XS) {
-      font-size: $wbu-h5-font-size * 0.8;
-    }
     a {
       color: $wbu-color-secondary;
       font-weight: bolder;
