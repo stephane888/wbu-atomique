@@ -1,0 +1,73 @@
+
+@use "../../wbu-ressources-clean.scss" as *;
+
+.access-text{
+    h2{
+        font-size:$wbu-default-font-size*1.5;
+        font-weight:$wbu-title-font-weight
+        }
+
+        .click{
+            background-color:rgb(226, 41, 226);
+            padding:12px 40px;
+            color:#fff;
+            border-radius:30px;
+             outline:none;
+            border:1px solid white;
+            text-align: center;
+            margin:10px 0 0;
+        }
+}
+
+	
+.container{
+    display:table;
+    width:90%;
+    border-collapse: collapse;
+    }
+ .heading{
+     font-weight: bold;
+     display:table-row;
+     background-color:#C91622;
+     text-align: center;
+     line-height: 25px;
+     font-size: $wbu-default-font-size*0.5 ;
+     font-family:sans-serif;
+     color:#fff;
+     
+ }
+ .table-row{  
+     display:table-row;
+     text-align: center;
+     
+ }
+ .column{ 
+    display:table-cell;
+     border: 1px solid #CCC;
+     font-size:$wbu-default-font-size*0.7;
+     margin-right:4px;
+    
+     h6{
+        font-size:$wbu-default-font-size*0.5;
+     }
+
+     .small{
+        font-size:$wbu-default-font-size*0.5;
+         
+     }
+
+     .info{
+        cursor:pointer;
+     }
+
+     .content{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:16px;
+     }
+    
+ }
+
+ 
+
