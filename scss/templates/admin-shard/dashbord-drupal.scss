@@ -16,6 +16,42 @@
     min-height: calc(100vh);
     .main-navbar {
       padding: $wbu-margin;
+      background: rgba($wbu-background, 1);
+      color: #fff;
+      svg,
+      i,
+      a {
+        fill: color-yiq($wbu-background);
+        color: color-yiq($wbu-background);
+      }
+      .dropdown-menu {
+        color: $wbu-background;
+        a,
+        svg,
+        i {
+          color: $wbu-background;
+        }
+      }
+      .branding {
+        img {
+          max-height: 50px;
+        }
+      }
+      .search-form {
+        border: 1px solid color-yiq($wbu-background);
+        border-radius: 5px;
+        background: lighten($wbu-background, 10%);
+        width: 100%;
+        max-width: 600px;
+        //margin-left: auto;
+        margin-right: auto;
+        .button {
+          color: color-yiq($wbu-background);
+        }
+        .form-type-search {
+          flex-grow: 2;
+        }
+      }
       @include media-min(DD) {
         padding: $wbu-margin * 0.5 $wbu-margin * 1.6;
       }
@@ -45,6 +81,9 @@
       right: 0;
     }
     .main-content-container {
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
       padding: $wbu-margin;
       @include media-min(DD) {
         padding: $wbu-margin * 1.2 $wbu-margin * 1.6;
@@ -57,19 +96,60 @@
     }
 
     width: 100%;
-    @include media-min(MD) {
-      max-width: calc(100% - 300px);
+  }
+  // card info
+  .card-info {
+    line-height: 1;
+    @include WBUtransition();
+    overflow: hidden;
+    * {
+      line-height: 1;
     }
-    @include media-min(DD) {
-      max-width: calc(100% - 325px);
+    .block-link {
+      padding: $wbu-margin * 0.3;
+      color: #454545;
+      @include media-min(DD) {
+        padding: $wbu-margin * 0.5;
+      }
+    }
+
+    .icone {
+      padding: $wbu-margin * 0.5 !important;
+      line-height: 1;
+      @include media-min(DD) {
+        padding: $wbu-margin * 0.75 !important;
+      }
+      @include media-min(S_1200) {
+        padding: $wbu-margin !important;
+      }
+    }
+    &::after {
+      position: absolute;
+      left: -10px;
+      width: 3px;
+      right: auto;
+      bottom: 0;
+      top: 0;
+      background-color: $wbu-color-primary;
+      @include WBUtransition($temps: 0.5s);
+      content: "";
+    }
+    &:hover {
+      box-shadow: 5px 4px 13px 3px #e3e1e1;
+      &::after {
+        left: 0;
+      }
     }
   }
+
   // aside bar
   .main-sidebar {
     min-height: calc(100vh);
     background: #fff;
     z-index: 1070;
     width: 100%;
+    position: fixed;
+    margin-left: -100%;
     @include media-min(MD) {
       max-width: 300px;
     }
@@ -80,9 +160,7 @@
     transition: -webkit-transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-    box-shadow: 0 0.125rem 9.375rem rgba(90, 97, 105, 0.1),
-      0 0.25rem 0.5rem rgba(90, 97, 105, 0.12),
-      0 0.9375rem 1.375rem rgba(90, 97, 105, 0.1),
+    box-shadow: 0 0.125rem 9.375rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.5rem rgba(90, 97, 105, 0.12), 0 0.9375rem 1.375rem rgba(90, 97, 105, 0.1),
       0 0.4375rem 2.1875rem rgba(165, 182, 201, 0.1);
     .navbar-brand {
       padding: $wbu-margin * 0.7 $wbu-margin;
@@ -149,9 +227,7 @@
             top: 100%;
             opacity: 0;
             transform: translateY(50px);
-            box-shadow: 0 0.125rem 9.375rem rgba(90, 97, 105, 0.1),
-              0 0.25rem 0.5rem rgba(90, 97, 105, 0.12),
-              0 0.9375rem 1.375rem rgba(90, 97, 105, 0.1),
+            box-shadow: 0 0.125rem 9.375rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.5rem rgba(90, 97, 105, 0.12), 0 0.9375rem 1.375rem rgba(90, 97, 105, 0.1),
               0 0.4375rem 2.1875rem rgba(165, 182, 201, 0.1);
             z-index: 3;
           }

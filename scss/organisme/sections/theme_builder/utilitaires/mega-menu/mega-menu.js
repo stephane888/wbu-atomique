@@ -238,7 +238,6 @@ class HbkMegaMenu {
             containerMenu.classList.add("down");
             containerMenu.classList.remove("up");
           }
-          console.log("position : ", position.top, "::", ht);
         }
       });
     }
