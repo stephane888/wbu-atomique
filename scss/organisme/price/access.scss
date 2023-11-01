@@ -12,17 +12,17 @@
     display: table-row;
     font-size: $wbu-default-font-size*0.2 ;
     font-family: sans-serif;
-
 }
 
 .table-row {
     display: table-row;
+
 }
 
 .column {
     display: table-cell;
-    border: 1px solid #CCC;
+    border: $wbu-default-font-size*0.1 solid #CCC;
     font-size: $wbu-default-font-size*0.6;
-
+    width:40%
 
 }
