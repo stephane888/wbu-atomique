@@ -193,8 +193,15 @@
   }
   &--left {
     .checkout-pane {
-      padding-bottom: $wbu-margin;
+      padding-bottom: $wbu-margin * 2;
       margin-bottom: 0 !important;
+      .form-item {
+        margin-top: $wbu-margin * 0.75;
+        > legend,
+        > label {
+          font-weight: 700;
+        }
+      }
       .stripe-form {
         padding: $wbu-margin;
         padding-right: 0;

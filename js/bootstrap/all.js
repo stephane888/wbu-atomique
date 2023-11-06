@@ -11,4 +11,5 @@ import "bootstrap/js/src/scrollspy.js";
 import "bootstrap/js/src/tab.js";
 import "bootstrap/js/src/toast.js";
 import "bootstrap/js/src/tooltip.js";
+
 //import "bootstrap/js/dist/tooltip";
