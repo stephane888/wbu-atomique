@@ -25,12 +25,14 @@
     .radio {
       display: flex;
       justify-content: center;
+      align-items: center;
       .js-form-item {
-        padding: 5rem 5rem;
+        padding: 5rem 2rem;
         position: relative;
         margin-top: 4rem;
         background-color: rgba($wbu-color-primary, 0.1);
         margin-right: 0.2rem;
+        min-height: 200px;
       }
       input {
         position: absolute;
