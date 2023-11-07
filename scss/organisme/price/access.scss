@@ -5,6 +5,9 @@
     background-color: lighten($wbu-color-primary, 25);
     padding-top: $wbu-margin;
   }
+  .sub-container-table {
+    display: inline-table;
+  }
   .nav-tabs {
     .nav-item {
       .nav-link {
