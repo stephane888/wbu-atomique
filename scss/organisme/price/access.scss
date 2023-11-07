@@ -36,8 +36,9 @@
   .heading {
     display: table-row;
     font-family: sans-serif;
-    margin: $wbu-margin;
-  }
+    margin:  $wbu-margin;
+    top:0;
+}
 
   .table-row {
     display: table-row;
