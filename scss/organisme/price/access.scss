@@ -5,20 +5,28 @@
     background-color: lighten($wbu-color-primary, 25);
     padding-top: $wbu-margin;
   }
+
+  .sub-container-table {
+    display: inline-table;
+  }
+
   .nav-tabs {
     .nav-item {
       .nav-link {
         background-color: lighten($wbu-color-primary, 10);
         @include WBUtransition();
+
         &:hover {
           background-color: lighten($wbu-color-primary, 7);
         }
+
         &.active {
           background-color: #fff;
         }
       }
     }
   }
+
   .tab-content {
     padding-top: $wbu-margin * 1.5;
     padding-bottom: $wbu-margin * 1.5;
@@ -33,9 +41,9 @@
   .heading {
     display: table-row;
     font-family: sans-serif;
-    margin:  $wbu-margin;
-    top:0;
-}
+    margin: $wbu-margin;
+    top: 0;
+  }
 
   .table-row {
     display: table-row;
@@ -44,7 +52,7 @@
   .column {
     display: table-cell;
     border: 1px solid #ccc;
-    width: 40%;
+    width: 10%;
   }
 }
 
