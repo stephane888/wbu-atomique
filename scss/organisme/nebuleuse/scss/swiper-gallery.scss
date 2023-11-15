@@ -1,0 +1,126 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@import "/node_modules/swiper/swiper.scss";
+
+.product-gallery-swiper {
+    .product-container {
+        .visually-hidden {
+            display: none;
+        }
+
+        @include media-min(SM) {
+            max-width: 82%;
+        }
+
+        .product-galleries {
+            .nebuleuse-swiper {
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            aspect-ratio: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .product-datas {
+            .section-separator {
+                border-color: $gray-900
+            }
+
+            .product-desc {
+                .rating {
+                    // padding-left: calc(14px * 5);
+                    padding-left: 90px;
+
+                    .stars {
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-59%);
+
+                        svg {
+                            color: rgb(203, 154, 40);
+                            width: 14px;
+                            aspect-ratio: 1;
+                        }
+                    }
+                }
+
+                .command-advantage {
+                    font-size: $font-size-base*1.9;
+                }
+            }
+
+            .product-attributes {
+                .product-color {
+                    .color-choices {
+                        gap: 8px;
+
+                        input[type="radio"] {
+                            display: none;
+
+                            &:checked+label {
+                                border-color: black;
+                            }
+                        }
+
+                        label {
+                            position: relative;
+                            width: 40px;
+                            aspect-ratio: 1;
+                            border-radius: 50%;
+                            border: 2px solid white;
+                            padding: 2px;
+                            transition: border-color .2s ease, transform .2s ease;
+
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                border: 2px solid white;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+
+                .product-offer {
+                    .quantity-choice {
+                        input[type="radio"] {
+                            display: none;
+
+                            &:checked+label {
+                                border-color: black;
+                                background-color: $gray-100;
+                            }
+                        }
+
+                        label {
+                            width: 100%;
+                            border: 2px solid white;
+                            padding: 2px;
+                            transition: border-color .2s ease-out, transform .2s ease-out, background-color .2s ease-out;
+                            padding: 10px 18px;
+
+                            .label-text {
+                                font-size: $font-size-base * 1.7;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .product-actions {
+                .add-cart-btn {
+                    flex-grow: 1;
+                }
+            }
+
+        }
+    }
+}
