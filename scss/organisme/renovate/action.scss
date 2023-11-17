@@ -1,0 +1,71 @@
+
+@use "../../wbu-ressources-clean.scss" as *;
+
+
+*{
+    line-height:$wbu-default-line-height*1.2;
+}
+
+.action-header{
+    background-image: url(https://images.unsplash.com/photo-1699190375905-3cac33bbdbb1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8 );
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:50vh;
+
+    .action-container{
+        margin-bottom: $wbu-margin * 5.5;
+        margin-top: $wbu-margin * 5.5;
+    }
+
+}
+
+
+.first-block{
+ .first{
+   padding-bottom: $wbu-padding*5.5;
+   padding-top: $wbu-padding*5.5;
+   
+}
+
+h4{
+    margin-bottom: $wbu-margin *3;
+
+}
+
+}
+
+.second-block{
+    background-color: $wbu-color-primary;
+    .second{
+      padding-bottom: $wbu-padding * 6.5;
+      padding-top: $wbu-padding * 6.5;
+}
+
+}
+
+.show{
+    h3{
+        padding-top: $wbu-padding * 6.5;
+        padding-bottom: $wbu-padding*3.5;
+        
+  }
+    }
+
+    .description{
+
+        padding-bottom: $wbu-padding * 4.5;
+
+    }
+
+
+    .cost-container{
+        padding-top: $wbu-padding * 5.5;
+        padding-bottom: $wbu-padding*3.5;
+    }
+
+    .footer-container{
+        background-color: $wbu-background;
+        padding-top: $wbu-padding * 5.5;
+        padding-bottom: $wbu-padding*3.5;
+    }
