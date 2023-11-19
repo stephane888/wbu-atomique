@@ -15,7 +15,7 @@ $wbu-color-secondary: #ee8700 !default;
 // Couleur d'arrière plan ( à priviliger au niveau du footer, des elements de covers ).
 $wbu-background: #0f103e !default;
 // Couleurs supplementaire.
-$wbu-color-thirdly: rgb(7, 79, 128) !default;
+$wbu-color-thirdly: teal;
 // couleurs des liens
 $wbu-link-color: $wbu-color-primary;
 //
@@ -96,6 +96,7 @@ $wbu-title-font-size-sm: 1.6rem !default;
 /* */
 // space.
 $wbu-margin: 2rem !default;
+$wbu-padding:2rem !default;
 $wbu-h1-margin: $wbu-margin * 0.75 !default;
 $wbu-h2-margin: $wbu-margin * 0.625 !default;
 $wbu-h3-margin: $wbu-margin * 0.526 !default;
