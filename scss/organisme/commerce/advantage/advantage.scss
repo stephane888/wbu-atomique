@@ -1,0 +1,24 @@
+.advantage {
+    display: flex;
+    align-items: center;
+    &__svg {
+        margin-left: 10px;
+        margin-right: 10px;
+        svg {
+            width: 48px;
+            height: 48px;
+            fill: blue;
+        }
+    }
+    &__text {
+        margin-left: 10px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 15px;
+    }
+    &__subtitle {
+        color: #818ea0;
+        font-size: 13px;
+    }
+}
