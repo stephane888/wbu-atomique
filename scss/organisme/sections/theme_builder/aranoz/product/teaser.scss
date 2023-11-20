@@ -1,6 +1,7 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 .aranoz-product-teaser {
   @include WBUtransition();
+  margin-bottom: $wbu-margin;
   &__text {
     margin: 0;
     padding-top: $wbu-margin * 1.5;
