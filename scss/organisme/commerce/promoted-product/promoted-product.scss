@@ -1,29 +1,32 @@
+@use '../../../wbu-ressources-clean.scss' as *;
+@use '../../../_variables' as *;
+
 .promoted-product {
   position: relative;
   &__content {
     position: absolute;
-    padding: 30px;
+    padding: 3rem;
   }
   &__descripton {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
   &__title {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
   }
   &__price-container {
-    padding-top: 30px;
+    padding-top: 3rem;
   }
   &__subtitle {
-    font-size: 13px;
+    font-size: 1.3rem;
   }
   &__current-price {
-    color: red;
-    font-size: 20px;
+    color: $wbu-color-secondary;
+    font-size: 2rem;
   }
   &__old-price {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
   &__price {
     display: flex;
