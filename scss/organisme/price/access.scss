@@ -14,12 +14,14 @@
     .nav-item {
       .nav-link {
         background-color: lighten($wbu-color-primary, 10);
+        min-width: 150px;
+        @include media-min(MD) {
+          min-width: 300px;
+        }
         @include WBUtransition();
-
         &:hover {
           background-color: lighten($wbu-color-primary, 7);
         }
-
         &.active {
           background-color: #fff;
         }

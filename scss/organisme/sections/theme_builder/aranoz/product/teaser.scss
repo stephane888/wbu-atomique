@@ -7,6 +7,17 @@
     padding-top: $wbu-margin * 1.5;
     padding-bottom: $wbu-margin * 1.5;
     @include WBUtransition();
+    .price {
+      margin-bottom: $wbu-margin * 0.7;
+    }
+    .add_cart {
+      &:hover {
+        .button--add-to-cart {
+          @include WBUtransition();
+          font-weight: 600;
+        }
+      }
+    }
     .icons {
       @include WBUtransition();
       opacity: 0;
