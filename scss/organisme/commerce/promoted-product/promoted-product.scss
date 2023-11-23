@@ -1,0 +1,32 @@
+.promoted-product {
+  position: relative;
+  &__content {
+    position: absolute;
+    padding: 30px;
+  }
+  &__descripton {
+    font-size: 15px;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  &__price-container {
+    padding-top: 30px;
+  }
+  &__subtitle {
+    font-size: 13px;
+  }
+  &__current-price {
+    color: red;
+    font-size: 20px;
+  }
+  &__old-price {
+    font-size: 15px;
+  }
+  &__price {
+    display: flex;
+    align-items: baseline;
+  }
+}
