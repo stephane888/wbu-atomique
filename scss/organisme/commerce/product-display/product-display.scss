@@ -1,7 +1,40 @@
-@use "../../../wbu-ressources-clean.scss" as *;
+@use '../../../wbu-ressources-clean.scss' as *;
+@use '../../../_variables' as *;
 
-.move-container{
-    .price{
-    font-size: $wbu-default-font-size*1.5;
-}
+.move-container {
+
+    .title {
+        strong {
+            font-weight: 700;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 50rem;
+            background-color: $wbu-color-secondary;
+        }
+    }
+
+    .price {
+        font-weight: bold;
+
+        strong {
+            color: $wbu-color-primary;
+            font-size: $wbu-default-font-size*1.5;
+            margin-left: 1.5rem;
+        }
+    }
+
+    .subtitle {
+        font-size: $wbu-h6-font-size;
+    }
+
+    .button {
+        background-color: $wbu-color-primary;
+
+        a {
+            color: #fff;
+            font-weight: bold;
+            font-size: $wbu-h6-font-size;
+            text-decoration: none;
+        }
+    }
 }

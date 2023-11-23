@@ -1,0 +1,18 @@
+@use '../../../wbu-ressources-clean.scss' as *;
+@use '../../../_variables' as *;
+
+.commerce-discount {
+    padding: 3rem 2.4rem;
+    position: relative;
+    background-color: #021523;
+    background-repeat: no-repeat;
+    background-image: url("../images/pattern.png");
+    background-position: 0 50%;
+    border-radius: 3px;
+    padding: 1.25rem;
+    overflow: hidden;
+
+    &::before {
+
+    }
+}
