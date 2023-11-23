@@ -3,18 +3,30 @@
 
 
 
-img{
-    width:100px;
-    cursor: pointer;
-    opacity:0.2;
-    &:hover{
-        opacity:1
-    }
-}
-
-a{
+.col {
     position: relative;
-    left:70px;
-    
+
+    a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+  }
+
+  img{
+    width:100px;
+    opacity:0.2;
+    cursor:pointer;
+    position: relative;
+    z-index:1;
+
+    &:hover{
+        opacity:1;
+    }
+  }
   
-}
