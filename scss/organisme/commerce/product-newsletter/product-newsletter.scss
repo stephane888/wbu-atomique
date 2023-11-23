@@ -1,0 +1,13 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+
+.newsletter-container{
+    background-color: $wbu-background;
+    .newsletter-wrapper{
+       padding:$wbu-padding*2 ;
+    }
+
+    input{
+        padding:$wbu-padding*0.5  $wbu-padding*3   $wbu-padding*0.5;
+        outline:none;
+    }
+}

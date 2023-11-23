@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+=======
+@use '../../../wbu-ressources-clean.scss' as *;
+@use '../../../_variables' as *;
+
+>>>>>>> 28a6e7300553d9939c394ab3ca69d3c593fc5747
 .promoted-product {
   position: relative;
   &__content {
     position: absolute;
+<<<<<<< HEAD
     padding: 30px;
   }
   &__descripton {
@@ -24,6 +31,30 @@
   }
   &__old-price {
     font-size: 15px;
+=======
+    padding: 3rem;
+  }
+  &__descripton {
+    font-size: 1.5rem;
+  }
+  &__title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+  }
+  &__price-container {
+    padding-top: 3rem;
+  }
+  &__subtitle {
+    font-size: 1.3rem;
+  }
+  &__current-price {
+    color: $wbu-color-secondary;
+    font-size: 2rem;
+  }
+  &__old-price {
+    font-size: 1.5rem;
+>>>>>>> 28a6e7300553d9939c394ab3ca69d3c593fc5747
   }
   &__price {
     display: flex;

@@ -1,0 +1,15 @@
+
+@use "../../wbu-ressources-clean.scss" as *;
+
+
+.color{
+    color:$wbu-color-primary;
+    cursor: pointer;
+}
+
+
+#arrow{
+    height:10px;
+    width:10px;
+    color:$wbu-color-primary;
+}
