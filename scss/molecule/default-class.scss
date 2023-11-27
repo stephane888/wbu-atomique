@@ -22,7 +22,8 @@
  * Espacement/marge entre blog
  */
 .space_bottom,
-.space-bottom {
+.space-bottom,
+.margin-bottom {
   margin-bottom: $space_bottom * 0.3;
 
   @include media-min("mobile") {
@@ -419,6 +420,36 @@ form {
     position: absolute;
     left: 0;
     top: 0;
+  }
+}
+.cover-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  right: auto;
+  height: 100%;
+  min-width: 100%;
+  max-width: 2500px;
+  z-index: -1;
+}
+.cover-images {
+  display: flex;
+  overflow: hidden;
+  .item {
+    position: relative;
+    min-height: 500px;
+    width: 25%;
+    @include WBUtransition($temps: 1s);
+    &:hover {
+      flex-grow: 2;
+      width: 45%;
+    }
+  }
+  .cover-image {
+    min-height: 500px;
+    object-fit: cover;
+    position: absolute;
   }
 }
 

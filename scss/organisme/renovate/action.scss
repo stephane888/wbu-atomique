@@ -1,124 +1,144 @@
-
 @use "../../wbu-ressources-clean.scss" as *;
 
-
-*{
-    line-height:$wbu-default-line-height*1.2;
+* {
+  line-height: $wbu-default-line-height * 1.2;
 }
 
-.action-header{
-    background-image:linear-gradient(#00010000,#5f605e),url(https://demo.templatesjungle.com/boldiz/images/banner-item1.jpg);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:80vh;
-
-    .btn{
-        margin-top: $wbu-margin;
-        outline: none;
-        &:hover{
-            background-color:$wbu-color-lawngreen ;
-            border:none;
-            color:$wbu-black-color;
-        }
-
-    }
-
-    .action-container{
-        margin-bottom: $wbu-margin* 5.5;
-        margin-top: $wbu-margin* 5.5;
-    }
-
-}
-
-
-.first-block{
-background-image:radial-gradient($wbu-color-lawngreen,$wbu-color-prime);
-  
- .first{
-   padding-bottom: $wbu-padding*5.5;
-   padding-top: $wbu-padding*5.5;
-   
-}
-
-h4{
-    margin-bottom: $wbu-margin *3;
-
-}
-
-.block-a{
-    padding-bottom: $wbu-padding*7.5;
-    padding-top: $wbu-padding*2.5;   
-}
-
-.block-b{
-    padding-bottom: $wbu-padding*2.5;
-    padding-top: $wbu-padding*2.5;   
-}
-
-.photo-a{
-    box-shadow: 0 40px 45px #d5d3d3;
-}
-
-
-}
-
-.second-block{
-     background-image:linear-gradient($wbu-color-lawngreen,$wbu-color-prime);
-    .second{
-      padding-bottom: $wbu-padding * 6.5;
-      padding-top: $wbu-padding * 6.5;
-}
-
-.building{
-    padding-bottom: $wbu-padding *3.5;
-      padding-top: $wbu-padding * 5.5;
-}
-
-}
-
-.show{
-    h3{
-        padding-top: $wbu-padding * 6.5;
-        padding-bottom: $wbu-padding*3.5;    
+.lesrois-action-header {
+  background-image: linear-gradient(#01010182, #0c0c0c99);
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  min-height: 500px;
+  .cover-image {
+    position: absolute;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 2500px;
+    z-index: -1;
   }
-
+  .btn {
+    margin-top: $wbu-margin;
+    outline: none;
+    &:hover {
+      background-color: $wbu-color-lawngreen;
+      border: none;
+      color: $wbu-black-color;
     }
+  }
+}
+.lesrois-call-toaction {
+  .content-phone {
+    background-color: $wbu-background;
+  }
+  svg {
+    fill: $wbu-color-primary;
+  }
+}
 
-    .description{
-
-        padding-bottom: $wbu-padding * 4.5;
-
+.lesrois-first-block {
+  .block-img {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    margin-bottom: $wbu-margin;
+    .photo-a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      max-width: 647px;
+      width: auto;
+      left: auto;
+      right: 0;
+      height: 100%;
+      min-width: 100%;
+      object-fit: cover;
     }
-
-
-    .cost-container{
-        padding-top: $wbu-padding * 5.5;
-        padding-bottom: $wbu-padding*3.5;
-        .click{
-            margin-top:$wbu-margin ;
-        }
-        .circle{
-            border:$wbu-default-font-size*0.1 solid $wbu-color-prime ;
-            padding:$wbu-padding*0.5 ;
-            border-radius:$wbu-default-font-size ;
-            box-shadow: 0 $wbu-default-font-size $wbu-default-font-size $wbu-color-prime;
-        }
-
-        .circle-b{
-            margin-top:$wbu-margin*2;
-
-        }
-
-        .circle-c{
-            margin-top:$wbu-margin*2 ;
-
-        }
+    @include media-min(DD) {
+      margin-bottom: 0;
+      .photo-a {
+        right: 15px;
+      }
     }
-
-    .footer-container{
-        background-color: $wbu-background;
-        padding-top: $wbu-padding * 5.5;
-        padding-bottom: $wbu-padding*3.5;
+  }
+  &--inv {
+    .block-img {
+      order: 1;
+      .photo-a {
+        right: 0;
+      }
     }
+  }
+}
+.lesrois-description-icon {
+  padding: $wbu-margin * 1.5 $wbu-margin;
+  flex-direction: column;
+  box-shadow: 4px 7px 11px 4px #efefefb8;
+  @include WBUtransition();
 
+  .icon {
+    min-width: 100px;
+    margin-bottom: $wbu-margin;
+    svg {
+      @include WBUtransition();
+      width: 6rem;
+      height: 6rem;
+      fill: $wbu-color-primary;
+    }
+  }
+  @include media-min(MD) {
+    padding: $wbu-margin * 1.5 $wbu-margin * 2;
+    flex-direction: row;
+    .icon {
+      margin-bottom: 0;
+    }
+  }
+  &:hover {
+    box-shadow: -4px -7px 11px 4px #efefefb8;
+    .icon {
+      svg {
+        fill: $wbu-color-secondary;
+      }
+    }
+  }
+}
+.lesrois-section-cover {
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  .cover-image {
+    position: absolute;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+  }
+  .titre {
+    margin-bottom: $wbu-margin * 2.5;
+    font-weight: 600;
+  }
+}
+.lesrois-img-multi {
+  position: relative;
+  margin-bottom: 100px;
+  .container-text {
+    position: absolute;
+    top: calc(100% - 100px);
+    bottom: auto;
+    left: 0;
+    right: 0;
+  }
+  .block-text {
+    padding: $wbu-margin * 1.5 $wbu-margin * 2;
+    .titre {
+      font-weight: 600;
+    }
+  }
+}
