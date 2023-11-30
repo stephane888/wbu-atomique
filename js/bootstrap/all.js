@@ -1,5 +1,3 @@
-import "@popperjs/core";
-import "bootstrap/js/src/util.js";
 import "bootstrap/js/src/alert.js";
 import "bootstrap/js/src/button.js";
 import "bootstrap/js/src/carousel.js";

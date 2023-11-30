@@ -5,3 +5,17 @@
 // se rassurer que la surchage bootstrap functionne, sinon, on cree un autre fichier.
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+
+/**
+ * On a un bug avec la fonction color-yiq à partir de la version bootstrap5, 
+ * border-color: rgba(color-yiq($wbu-background), 20%); ne fonctionne pas.
+ * On surg
+ */
+@function color-yiq($color) {
+  $result: invert($color);
+  $lightness: lightness($result);
+  @if ($lightness < 50) {
+    $result: black;
+  }
+  @return $result;
+}
