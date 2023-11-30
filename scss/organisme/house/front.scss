@@ -1,0 +1,14 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+
+.front-wrapper{
+    background-image: linear-gradient(rgba(219, 182, 182,0),rgb(29, 26, 26)),url(https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-position: center;
+   background-size:cover;
+   background-repeat: no-repeat;
+   object-fit: cover;
+   height:100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
