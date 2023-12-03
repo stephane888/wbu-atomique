@@ -9,7 +9,7 @@
 /**
  * On a un bug avec la fonction color-yiq à partir de la version bootstrap5, 
  * border-color: rgba(color-yiq($wbu-background), 20%); ne fonctionne pas.
- * On surg
+ * ( raison cette fonction est repressier , il faut utiliser color-contrast() ).
  */
 @function color-yiq($color) {
   $result: invert($color);
