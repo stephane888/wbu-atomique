@@ -1,0 +1,126 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+
+.image{
+    width:100%;
+    height:615px;
+    object-fit: cover;
+    overflow: hidden;
+
+    transition: all 1.2s ease-in-out ;
+    &:hover{
+        transform:scale(1.1);
+    }
+}
+
+svg{
+    width:10px;
+    height:10px
+}
+
+
+
+.box-a, .box-b{
+    background-color: $wbu-background;
+    padding: $wbu-padding;
+    position:relative;
+    margin: auto;
+    width:80%;
+    height:200px;
+    top:-100px;
+    z-index:1;
+    letter-spacing:1px;
+    line-height:1.5;
+    a{
+        text-decoration:none;
+        line-height:1.5;
+    }
+}
+
+
+.small-content{
+    background-color: $wbu-background;
+    padding: $wbu-padding;
+    position:relative;
+    width:80%;
+    margin: auto;
+    top:-120px;
+    z-index:1;
+    height:170px;
+    letter-spacing:2px;
+    a{
+        text-decoration:none;
+        color:#000;
+    }
+}
+
+
+.box{
+    overflow: hidden;
+}
+
+
+.box-1{
+    overflow: hidden;
+    .image-1{
+        width:100%;
+        height:200px;
+        object-fit: cover;
+        transition: all 1.2s ease-in-out ;
+        &:hover{
+            transform:scale(1.1);
+        }
+    }
+ 
+}
+
+.box-2{
+    overflow: hidden;
+
+.image-2{
+    width:100%;
+    height:200px;
+    object-fit: cover;
+    transition: all 1.2s ease-in-out ;
+    &:hover{
+        transform:scale(1.1);
+    }
+}
+}
+
+
+
+
+.box-3{
+    position: relative;
+    top:-70px;
+    overflow: hidden;
+    width:100%;
+    .image-3{
+        width:100%;
+        height:287px;
+        object-fit: cover; 
+        transition: 1.3s ease-in-out ;
+        &:hover{
+            transform: scale(1.3);
+        }
+    }
+
+    .small-content-1{
+        background-color:$wbu-background ;
+        padding: $wbu-padding;
+        width:400px;
+        position:relative;
+        left:15px;
+        top:-140px;
+        height:190px;
+        z-index:100;
+        letter-spacing:2px;
+        a{
+            text-decoration:none;
+        }
+    
+    }
+    
+}
+
