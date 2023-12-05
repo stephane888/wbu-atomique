@@ -1,0 +1,152 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+  color: $wbu-color-primary;
+}
+
+swiper-slide {
+  text-align: center;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-content{
+    background-position: center;
+    background-size: cover;
+    width: 100% ;
+    height: 100%;
+    
+    .Slide-element-content{
+      padding-top: 150px;
+    }
+    .Slide-element{
+        display: inline;
+        align-items: center;
+        justify-content:flex-start;
+        text-align: left;
+        padding-top: 55px;
+    padding-bottom: 55px;
+        .mybtn{
+          pointer-events: initial;
+          margin-left: 0.5em;
+          margin-right: 0.5em;
+          display: inline-block;
+          background: #e76f51;
+          color: #fff;
+          border: 2px solid #e76f51;
+          height: auto;
+          width: auto;
+           padding: 9px 1.4em;
+          font-family: inherit;
+          font-size: 1em;
+         line-height: 1.2em;
+          font-weight: 400;
+         vertical-align: middle;
+          text-align: center;
+         border-radius: 25px;
+          transition: opacity .2s,background-color .15s,border-color .15s,filter .2s,-webkit-filter .2s;
+          &:hover{
+            border-color: #ed947e;
+            background: #ed947e;
+            color: #fff;
+          }
+          a{
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+        .btn-sp{
+          pointer-events: initial;
+          margin-left: 0.5em;
+          margin-right: 0.5em;
+          display: inline-block;
+          background: none;
+          color: #000000;
+          border: 2px solid #ffffff;
+          height: auto;
+          width: auto;
+           padding: 9px 1.4em;
+          font-family: inherit;
+          font-size: 1em;
+         line-height: 1.2em;
+          font-weight: 400;
+         vertical-align: middle;
+          text-align: center;
+         border-radius: 25px;
+          transition: opacity .2s,background-color .15s,border-color .15s,filter .2s,-webkit-filter .2s;
+          a{
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+        .slider-subtitle{
+          font-size: 17px;
+          margin: 0px 0px 11.9px;
+          font-family: 'Roboto', sans-serif;
+          text-transform:uppercase;
+          h4{
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 5px;
+          }
+        }
+        .slider-title{
+          line-height: 1.2em;
+          padding: 0;
+          margin: 0 0 20px;
+          font-family: 'Roboto', sans-serif;
+          text-transform:uppercase;
+          max-width: 600px;
+          h1{
+            font-size: 70px;
+            font-weight: bolder;
+            letter-spacing: 5px;
+          }
+        }
+        .slider-description{
+          font-size: 21px;
+    font-style: normal;
+    padding: 0;
+    margin: 0 0 20px;
+    color: inherit;
+    text-transform: none;
+    font-family: 'PT Serif', serif;
+        }
+    }
+    .element-pos{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+    } 
+}
+
+.swiper-pagination-bullet .swiper-pagination-bullet-active{
+  background: red !important;
+}

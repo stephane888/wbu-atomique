@@ -1,0 +1,64 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+
+
+.container{
+  margin: 4.5em auto !important;
+  margin-bottom: 0px !important;
+  max-width: 1440px !important;
+  width: 90% !important; 
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+swiper-container {
+  width: 100%;
+  height: 360px !important;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 300px;
+}
+
+swiper-slide img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+swiper-container {
+  width: 100%;
+  height: 450px;
+  margin: 20px auto;
+}
+
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.append-buttons button {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+.swipe-content-element{
+  img{
+    &:hover{
+      transform: scale(1.5);
+    }
+  }
+}
