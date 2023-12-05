@@ -1,0 +1,6 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+.block-page-title-block {
+  .title {
+    padding-top: $wbu-margin * 2;
+  }
+}

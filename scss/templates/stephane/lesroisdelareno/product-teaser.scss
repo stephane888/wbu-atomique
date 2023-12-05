@@ -1,0 +1,27 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../organisme/products/teasers/product-teaser.scss";
+
+.page-product-full {
+  .col {
+    padding: 0;
+  }
+}
+.product-teaser {
+  height: 100%;
+  background: #fff;
+  padding-bottom: $wbu-margin * 0.5;
+  i {
+    padding-right: $wbu-margin * 0.5;
+  }
+  .item:last-child {
+    margin-bottom: 0;
+  }
+  .title {
+    height: 67px;
+    overflow: hidden;
+    line-height: 1.2;
+  }
+  form .field--widget-commerce-product-variation-attributes {
+    display: none;
+  }
+}

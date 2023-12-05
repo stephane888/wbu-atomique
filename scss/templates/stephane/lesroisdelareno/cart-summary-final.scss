@@ -1,0 +1,102 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+.cart-summary-final {
+  padding-top: $wbu-margin * 1.5;
+  padding-bottom: $wbu-margin * 1.5;
+  .views-field-total-price__number {
+    width: 130px;
+    text-align: right;
+  }
+  .field--name-total-price {
+    padding-right: 12px;
+    font-size: $wbu-default-font-size * 1.2;
+    .order-total-line-label {
+      display: inline-block;
+      padding-right: $wbu-margin * 0.25;
+    }
+  }
+  .form-actions {
+    padding-left: $wbu-margin * 1.25;
+  }
+  .paypal-buttons-container {
+    display: flex;
+    float: none;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    padding-right: $wbu-margin;
+  }
+}
+
+//  Step
+.layout-checkout-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $wbu-margin * 2;
+  legend {
+    font-size: $wbu-default-font-size * 1.2;
+    font-weight: 600;
+    margin-top: $wbu-margin;
+    margin-bottom: $wbu-margin * 0.5;
+  }
+  .form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .link--previous {
+      padding-left: $wbu-margin * 0.5;
+    }
+  }
+}
+
+// Step
+.content-payment-info {
+  padding: $wbu-margin * 0.5;
+  border: 1px solid #f1f1f1;
+  background-color: #f9f9f9;
+  margin-bottom: $wbu-margin * 0.5;
+  legend {
+    margin-top: 0;
+  }
+  .fieldset-wrapper {
+    width: 100%;
+  }
+  .radio {
+    display: flex;
+    .radio.form-check {
+      margin-bottom: $wbu-margin * 0.8;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}
+
+// Step
+.add-payment-method-kksa888 {
+  #card-number-element {
+    width: 100%;
+  }
+  .stripe-form {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    border-left: 3px solid $wbu-color-primary;
+    border-bottom: 1px solid $wbu-color-primary;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem !important;
+    fieldset {
+      width: 33%;
+      &.js-form-item-payment-information-add-payment-method-payment-details-card-number {
+        width: 100%;
+      }
+    }
+    #expiration-element {
+      width: 6em;
+      text-align: right;
+    }
+  }
+  #payment-errors {
+    width: calc(100% - 12px);
+    margin-left: 10px;
+    margin-bottom: $wbu-margin * 0.5;
+  }
+}

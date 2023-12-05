@@ -1,0 +1,22 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+.filter-side-bar-search {
+  .form-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .select2-selection {
+    min-height: 37px;
+    display: flex;
+    align-items: center;
+  }
+  .select2-selection__arrow {
+    top: 5px;
+  }
+  .form-type-select {
+    width: 100%;
+  }
+  label {
+    display: block;
+    font-weight: 500;
+  }
+}
