@@ -1,0 +1,118 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.unicamp-box {
+  &__image {
+    overflow: hidden;
+    .image {
+      width: 100%;
+      height: 720px;
+      object-fit: cover;
+      overflow: hidden;
+      @include WBUtransition($temps: 1.2s);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__content {
+    background-color: $wbu-background;
+    padding: $wbu-padding;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    top: -120px;
+    z-index: 1;
+    height: 170px;
+    letter-spacing: 2px;
+    color: color-yiq($wbu-background);
+    a {
+      text-decoration: none;
+    }
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.unicamp-box-a,
+.unicamp-box-b {
+  background-color: $wbu-background;
+  padding: $wbu-padding;
+  position: relative;
+  margin: auto;
+  width: 80%;
+  height: 200px;
+  top: -100px;
+  z-index: 1;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  a {
+    text-decoration: none;
+    line-height: 1.5;
+  }
+}
+
+.unicamp-box-1 {
+  overflow: hidden;
+  height: 300px;
+  width: 100%;
+
+  .image-1 {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 1;
+    @include WBUtransition($temps: 1.2s);
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.unicamp-box-2 {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  .image-2 {
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    @include WBUtransition($temps: 1.2s);
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.unicamp-flex-content-3 {
+  position: relative;
+  top: -80px;
+
+  .unicamp-box-3 {
+    overflow: hidden;
+    height: 300px;
+    .image-3 {
+      width: 100%;
+      object-fit: cover;
+      @include WBUtransition($temps: 1.2s);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.unicamp-content-1 {
+  background-color: $wbu-background;
+  padding: $wbu-padding;
+  width: 400px;
+  position: relative;
+  left: 15px;
+  top: -121px;
+  z-index: 1;
+  letter-spacing: 2px;
+  a {
+    text-decoration: none;
+  }
+}
