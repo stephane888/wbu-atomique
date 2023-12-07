@@ -6,3 +6,40 @@ hr{
     width:100px;
     background-color:$wbu-color-primary;
 }
+
+
+.unicamp-event-content{
+    .unicamp-event-box{
+        background-image: linear-gradient(rgba(0,0,0,0.1),rgb(67, 61, 61)),url(https://unicamp-4437.kxcdn.com/main/wp-content/uploads/sites/2/2021/01/event-12-1170x520.jpg);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        width:100%;
+        height:390px;
+    
+    }
+
+    .unicamp-event-block{
+        background-color:$wbu-background;
+        height:390px;
+     
+       
+        img{
+            width:100%;
+        }
+
+        .unicamp-event-text{
+            margin-top:$wbu-margin * 1.5 ;  
+        }
+
+        .unicamp-spany{
+            position: relative;
+            top:-15px;
+        }
+    }
+
+   }
+
+   
+
