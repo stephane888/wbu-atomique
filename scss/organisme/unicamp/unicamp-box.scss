@@ -1,0 +1,70 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.unicamp-box {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  &__image {
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    margin-bottom: calc($wbu-margin + 40px);
+    .image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      max-width: 1200px;
+      @include WBUtransition($temps: 1.2s);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__content {
+    background-color: $wbu-background;
+    padding: $wbu-padding;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: calc(100% - 90%);
+    width: 80%;
+    margin: auto;
+    z-index: 1;
+    min-height: 100px;
+
+    color: color-yiq($wbu-background);
+    .list-tags {
+      margin-bottom: $wbu-margin * 0.5;
+      .item {
+        margin-right: $wbu-margin;
+      }
+      svg {
+        width: 10px;
+        height: 10px;
+        path {
+          fill: $wbu-color-primary;
+        }
+      }
+      .item:nth-child(odd) {
+        svg {
+          path {
+            fill: $wbu-color-secondary;
+          }
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: rgba(color-yiq($wbu-background), 60%);
+    }
+    .titre {
+      margin-bottom: 0;
+      + .author {
+        margin-top: $wbu-margin * 1.5;
+      }
+    }
+  }
+}
