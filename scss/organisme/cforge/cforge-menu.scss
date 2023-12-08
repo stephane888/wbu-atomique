@@ -10,7 +10,7 @@
 
     .menu-wrapper {
         position: relative;
-        max-width: 1300px;
+        // max-width: 1300px;
         padding: 0px 30px;
         min-height: 70px;
         max-height: 250px;
@@ -61,7 +61,7 @@
         .nav-links {
             display: inline-flex;
             position: relative;
-
+            flex-wrap: wrap;
 
             .menu-element,
             li {
