@@ -1,0 +1,101 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@import "/node_modules/swiper/swiper.scss";
+
+.commerce-swiper-container {
+    .commerce-swiper {
+
+        .swiper-button {
+
+            &-next,
+            &-prev {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: inherit;
+
+            }
+
+            &-prev {
+                left: 0;
+                right: 50%;
+
+                &:hover {
+                    cursor: w-resize;
+                }
+            }
+
+            &-next {
+                left: 50%;
+                right: 0;
+
+                &:hover {
+                    cursor: e-resize;
+                }
+            }
+        }
+    }
+
+    .commerce-swiper,
+    .commerce-swiper-thumb {
+        .swiper-wrapper {
+            .swiper-slide {
+                background-repeat: no-repeat;
+                background-size: cover;
+                aspect-ratio: 1;
+            }
+        }
+    }
+
+    .commerce-swiper-thumb {
+        min-width: 20%;
+
+        .swiper-wrapper {
+            gap: 20px;
+
+            .swiper-slide {
+                position: relative;
+                height: unset !important;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                }
+
+                &::after {
+                    border: 2px solid $light;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+
+                &::before {
+                    border: 2px solid transparent;
+                    top: -2px;
+                    left: -2px;
+                    bottom: -2px;
+                    right: -2px;
+                    transform: scale(.95);
+                    transition: border .2s ease-out, transform .2s ease-out;
+                }
+
+
+                &-active {
+                    &::before {
+                        border-color: $dark;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
