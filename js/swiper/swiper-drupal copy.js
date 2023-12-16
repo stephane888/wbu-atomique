@@ -1,4 +1,11 @@
-import SwiperManager from "./swiper";
+import Swiper, { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade } from "swiper";
+//import Swiper, { Navigation } from "swiper";
+import AOS from "aos";
+// configure Swiper to use modules
+Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade]);
+//Swiper.use([Navigation]);
+// import Swiper styles
+import "swiper/css/bundle";
 /**
  * il faudra documenter.
  */
@@ -84,7 +91,7 @@ import SwiperManager from "./swiper";
                   },
                 },
               };
-              new SwiperManager(item, overrideSettings);
+              new Swiper(item, overrideSettings);
             } else {
               console.log("Display items : ", item);
             }
@@ -92,6 +99,31 @@ import SwiperManager from "./swiper";
             console.log("Error swiper slide : ", error, " \n Element : ", item);
           }
         });
+        // this will are defined for snipsets slides
+        let thum_swiper = context.querySelector(".swiper-full-options.thumbs-carousel");
+        let small_thum_swiper = context.querySelector(".swiper-full-options.thumbnail-swiper");
+        if (thum_swiper && small_thum_swiper) {
+          try {
+            const settings = JSON.parse(thum_swiper.getAttribute("data-swiper"));
+            const small_settings = JSON.parse(small_thum_swiper.getAttribute("data-swiper"));
+            let small_thum_swiper_image = new Swiper(small_thum_swiper, small_settings);
+            settings.thumbs = {
+              swiper: small_thum_swiper_image,
+              autoScrollOffset: 1,
+            };
+            console.log("items : item", small_thum_swiper_image);
+            new Swiper(thum_swiper, settings, "trait trait ou un truc: ", settings);
+          } catch (error) {
+            console.log("Error swiper slide : ", error, " \n Element : ", thum_swiper);
+          }
+        } else if (thum_swiper) {
+          try {
+            const settings = JSON.parse(thum_swiper.getAttribute("data-swiper"));
+            new Swiper(thum_swiper, settings);
+          } catch (error) {
+            console.log(" Error swiper slide : ", error, "\n Element : ", thum_swiper);
+          }
+        }
       }
     },
   };

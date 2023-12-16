@@ -6,8 +6,6 @@
   position: relative;
   & .container > .row {
     min-height: 58rem;
-
-    @include media-min();
   }
 
   .col-12 {

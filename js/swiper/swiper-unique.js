@@ -1,3 +1,6 @@
+/**
+ * @deprecated file remove in 2x.
+ */
 import Swiper, { Navigation, Pagination, Parallax, Autoplay } from "swiper";
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination, Parallax, Autoplay]);

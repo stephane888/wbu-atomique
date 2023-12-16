@@ -1,52 +1,34 @@
-// import Swiper JS
-// import Swiper from "swiper/bundle";
-//--
-import Swiper, { Navigation, Pagination, Parallax, Autoplay } from "swiper";
+import Swiper, { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade } from "swiper";
+//import Swiper, { Navigation } from "swiper";
+import AOS from "aos";
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination, Parallax, Autoplay]);
-// import Swiper styles
+Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade]);
+
 import "swiper/css/bundle";
-
-//custom style
-//import "../../scss/sections/formatage_models_swiper.scss";
 /**
- * --
+ * Fichier de base pour le module swipper.
  */
-var mySwiper = new Swiper(".swiper", {
-  direction: "vertical",
-  loop: true,
-  pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
-  //grabCursor: true,
-  speed: 1000,
-  parallax: true,
-  //effect: "slide",
-  //mousewheelControl: 1,
-  autoplay: {
-    delay: 8000,
-  },
-});
+class SwiperManager {
+  /**
+   *
+   * @param {*} item element permettant de selectionner le slider.( elment object, #id)
+   * @param {*} settings configuration du slider.
+   */
+  constructor(item, settings) {
+    this.item = item;
+    this.settings = settings;
+    this.SwiperInstance;
+  }
 
-/**
- * --
- */
-// const swiper = new Swiper(".swiper", {
-//   // Optional parameters
-//   direction: "vertical",
-//   loop: true,
-
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: ".swiper-scrollbar",
-//   },
-// });
+  init() {
+    try {
+      this.SwiperInstance = new Swiper(this.item, this.settings);
+    } catch (error) {
+      console.log("Error swiper slide : ", error, " \n Element : ", item);
+    }
+  }
+  getInstance() {
+    return this.SwiperInstance;
+  }
+}
+export default SwiperManager;
