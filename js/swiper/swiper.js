@@ -29,7 +29,7 @@ class SwiperManager {
    * construit tous les sliders.
    */
   build() {
-    if (this.context.querySelectorAll && this.context.querySelectorAll(".swiper-full-options")) {
+    if (this.context.querySelectorAll && this.context.querySelectorAll(".swiper-full-options").length) {
       this.context.querySelectorAll(".swiper-full-options").forEach((item, key) => {
         try {
           /**

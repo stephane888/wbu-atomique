@@ -5,7 +5,7 @@ import SwiperManager from "./swiper";
 (function (Drupal) {
   Drupal.behaviors.swiperjs_options = {
     attach: function (context, settings) {
-      if (context.querySelectorAll && context.querySelectorAll(".swiper-full-options")) {
+      if (context.querySelectorAll && context.querySelectorAll(".swiper-full-options").length) {
         const sw = new SwiperManager(context);
         sw.build();
       }
