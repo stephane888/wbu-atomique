@@ -1,8 +1,8 @@
-import Swiper, { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade } from "swiper";
+import Swiper, { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade } from "swiper";
 //import Swiper, { Navigation } from "swiper";
 import AOS from "aos";
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade]);
+Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade]);
 
 import "swiper/css/bundle";
 /**
@@ -22,6 +22,7 @@ class SwiperManager {
     else this.context = document;
     this.settings = settings;
     this.SwipersInstances = {};
+    this.waitterResizeWindow;
   }
 
   /**
@@ -54,6 +55,8 @@ class SwiperManager {
           const overrideSettings = {
             ...this.settings,
             ...settings,
+            // il est preferable d'injecter cela dans use. c'est plus element.
+            //modules: [Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade, Scrollbar],
             on: {
               // transitionStart(swiper) {
               //   swiper.slides.forEach((item) => {
@@ -132,6 +135,7 @@ class SwiperManager {
                 overrideSettings.thumbs.swiper = this.getInstances(children);
                 this.SwipersInstances[parent] = new Swiper(item, overrideSettings);
                 this.TransistionOrders(this.getInstances(parent), this.getInstances(children));
+                this.ChangeDirenctionThumb(this.getInstances(children));
                 console.log(" Run swiper slider by parent : test => 30/12/2024 ");
               } else {
                 this.SwipersInstances[parent] = { item: item, overrideSettings: overrideSettings };
@@ -146,6 +150,7 @@ class SwiperManager {
                 elt_PP.overrideSettings.thumbs.swiper = this.getInstances(children);
                 this.SwipersInstances[parent] = new Swiper(elt_PP.item, elt_PP.overrideSettings);
                 this.TransistionOrders(this.getInstances(parent), this.getInstances(children));
+                this.ChangeDirenctionThumb(this.getInstances(children));
                 console.log(" Run swiper slider by children : test => 30/12/2024 ");
               }
             }
@@ -165,15 +170,50 @@ class SwiperManager {
     return this.SwipersInstances;
   }
 
+  /**
+   * Permet aux sliders main et thumb d'etre synchroner.
+   *  ( semble avoir un bug dans la selection, pas evident à reproduire. )
+   * @param {*} galleryMain
+   * @param {*} galleryThumb
+   */
   TransistionOrders(galleryMain, galleryThumb) {
+    // lorsque le slider man change, le slider thumb suit.
     galleryMain.on("slideChangeTransitionStart", function () {
       galleryThumb.slideTo(galleryMain.activeIndex);
     });
+    // Lorsqu'on slide sur le thumb le slider main passe sur le thumb actif.
     galleryThumb.on("transitionStart", function () {
       galleryMain.slideTo(galleryThumb.activeIndex);
     });
-    console.log("galleryMain : ", galleryMain);
-    console.log("galleryThumb : ", galleryThumb);
+  }
+  /**
+   * Permet de changer la disrection du slider en function de la lageur de l'ecran.
+   */
+  ChangeDirenctionThumb(swiper) {
+    // On load
+    const changeDirection = () => {
+      if (window.innerWidth < 992) {
+        console.log("direction horizontal");
+        swiper.changeDirection("horizontal");
+      } else {
+        console.log("direction vertical");
+        swiper.changeDirection("vertical");
+      }
+      swiper.pagination.render();
+      swiper.pagination.update();
+    };
+    changeDirection();
+    // On resize window.
+    window.addEventListener(
+      "resize",
+      () => {
+        if (this.waitterResizeWindow) clearTimeout(this.waitterResizeWindow);
+        this.waitterResizeWindow = setTimeout(() => {
+          changeDirection();
+        }, 50);
+      },
+      true
+    );
   }
 }
 export default SwiperManager;
