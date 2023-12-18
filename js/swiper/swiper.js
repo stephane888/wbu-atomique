@@ -177,7 +177,7 @@ class SwiperManager {
    * @param {*} galleryThumb
    */
   TransistionOrders(galleryMain, galleryThumb) {
-    // lorsque le slider man change, le slider thumb suit.
+    // lorsque le slider main change, le slider thumb suit.
     galleryMain.on("slideChangeTransitionStart", function () {
       galleryThumb.slideTo(galleryMain.activeIndex);
     });
