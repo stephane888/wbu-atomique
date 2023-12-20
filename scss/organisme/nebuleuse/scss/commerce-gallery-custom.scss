@@ -1,0 +1,21 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+
+
+.galleries-main-thumbs {
+
+    .swiper-full-options {
+
+        &.galleries-main,
+        &.galleries-thumb {
+            .swiper-slide {
+
+                .swiper-image-full,
+                .swiper-video-full {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
