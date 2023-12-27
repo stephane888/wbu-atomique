@@ -1,8 +1,8 @@
-import Swiper, { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade } from "swiper";
+import Swiper, { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade, Zoom } from "swiper";
 //import Swiper, { Navigation } from "swiper";
 import AOS from "aos";
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade]);
+Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade, Zoom]);
 
 import "swiper/css/bundle";
 /**
@@ -52,11 +52,12 @@ class SwiperManager {
           const isChildren = item.hasAttribute("data-is-children") ? item.getAttribute("data-is-children") : false;
 
           const settings = item.hasAttribute("data-swiper") ? JSON.parse(item.getAttribute("data-swiper")) : {};
+          console.log("my__settings: ", { ...this.settings, ...settings });
           const overrideSettings = {
             ...this.settings,
             ...settings,
             // il est preferable d'injecter cela dans use. c'est plus element.
-            //modules: [Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade, Scrollbar],
+            // modules: [Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade, Scrollbar],
             on: {
               // transitionStart(swiper) {
               //   swiper.slides.forEach((item) => {
