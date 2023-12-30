@@ -1,0 +1,28 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@include media-min(DD) {
+  $unicamp_content_height: 600px;
+  .unicamp-galleries {
+    height: $unicamp_content_height;
+    &__big {
+      height: calc($unicamp_content_height - $wbu-margin);
+      margin-bottom: $wbu-margin;
+      width: 100%;
+      overflow: hidden;
+      > * {
+        height: 100%;
+        min-height: 100%;
+      }
+    }
+    &__small {
+      height: calc($unicamp_content_height * 0.5 - $wbu-margin);
+      width: 100%;
+      margin-bottom: $wbu-margin;
+      overflow: hidden;
+      > * {
+        height: 100%;
+        min-height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

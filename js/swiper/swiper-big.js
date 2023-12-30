@@ -1,3 +1,6 @@
+/**
+ * @deprecated file remove in 2x.
+ */
 // import Swiper JS
 // import Swiper from "swiper/bundle";
 //--

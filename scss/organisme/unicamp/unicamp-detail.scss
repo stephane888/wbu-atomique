@@ -1,0 +1,35 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.unicamp-detail {
+  padding: $wbu-padding;
+  @include WBUtransition($temps: 0.5s);
+  &__image {
+    svg {
+      width: 164px;
+      height: 164px;
+      fill: $wbu-color-primary;
+      @include WBUtransition($temps: 0.3s);
+    }
+    img {
+      max-width: 164px;
+      max-height: 164px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__titre {
+    margin-top: $wbu-margin * 1.25;
+  }
+  &__button {
+    margin-top: $wbu-margin * 1.25;
+  }
+
+  &:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    .unicamp-detail__image {
+      svg {
+        fill: $wbu-color-secondary;
+      }
+    }
+  }
+}

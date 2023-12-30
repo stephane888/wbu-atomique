@@ -1,0 +1,22 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+hr{
+    text-align: center;
+    height:2px;
+    width:100px;
+    background-color:$wbu-color-primary;
+}
+
+.unicamp-study-box{
+    overflow: hidden;
+    img{
+     width:100%;
+     height:200px;
+     object-fit: cover;
+    @include WBUtransition($temps: 1.2s);
+    &:hover{
+        transform:scale(1.1);
+    }
+}
+
+}

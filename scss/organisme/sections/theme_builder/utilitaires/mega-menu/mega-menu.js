@@ -1,7 +1,5 @@
 /**
- *  Ce fichier doit etre seperer en fin de pouvoir fonctionner sous different environnment.
- *  - https://www.npmjs.com/package/@drupal/once
- * Help to build, classic menu, mega-menu
+ *  Mega-menu fichier de base.
  */
 class HbkMegaMenu {
   constructor() {

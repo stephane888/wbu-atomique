@@ -6,6 +6,8 @@
   position: relative;
   overflow: hidden;
   margin-bottom: $wbu-margin * 1.5;
+  background-color: rgba($wbu-background, 60%);
+  min-height: 150px;
   &:hover {
     .metro-service__body {
       transform: translateY(-20%);

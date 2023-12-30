@@ -48,29 +48,12 @@
     }
   }
   .badge {
-    padding: 1rem 2rem;
-    color: color-yiq($wbu-background);
-    background-color: $wbu-background;
-    //font-size: $wbu-h6-font-size;
     position: absolute;
-    top: 2rem;
-    left: 2rem;
-    z-index: 3;
-    &--reduction {
-      background-color: $wbu-color-primary;
-      color: color-yiq($wbu-color-primary);
-      right: 0;
-      top: 0;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 5rem;
-      height: 5rem;
-      left: auto;
-      font-weight: bold;
-      //font-size: $wbu-h6-font-size;
-    }
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: auto;
+    z-index: 10;
   }
   .csp-title {
     padding: $wbu-margin 0 0;
