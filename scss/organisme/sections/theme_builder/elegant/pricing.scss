@@ -1,0 +1,80 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+.myproduct{
+    width: 100%;
+}
+.color-content{
+    border: 1px solid black;
+border-radius: 50% ;
+width: 25px;
+height: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.product-color-first{
+    
+    margin: 1px;
+    width: 15px;
+height: 15px;
+border-radius: 50px;
+background-color: black;
+margin: 0 5px;
+}
+.product-color-second{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: rgb(194, 173, 146);
+    margin: 0 5px;
+}
+.product-star{
+    margin: 10px 0;
+    span{
+        font-size: 12px;
+    }
+    svg{
+        width: 15px;
+        fill:  rgb(246, 195, 71);;
+    }
+}
+.product-description{
+    margin: 5px 0;
+    text-transform: capitalize;
+}
+
+.new-price{
+    font-size: 20px;
+    color: orangered;
+    margin: 0 5px;
+}
+.old-price{
+    font-size: 15px;
+    color: rgb(88, 88, 88);
+    text-decoration: line-through;
+    margin: 0 5px;
+}
+.product-sold{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f60;
+    color: #fff;
+    padding: 5px;
+    max-width: 80px;
+    font-size: 15px; 
+    word-wrap: unset;
+    text-decoration: none !important;
+    
+}
+
+.product-head-image{
+    a{
+        &:hover{
+            text-decoration: none !important;
+        }
+    }
+}
+.products-group{
+    margin: 30px 0;
+}

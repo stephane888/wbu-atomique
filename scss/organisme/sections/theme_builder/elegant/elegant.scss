@@ -15,13 +15,13 @@ body {
   
 }
 
-swiper-container {
+.mySwiper-hero {
   width: 100%;
   height: 100%;
   color: $wbu-color-primary;
 }
 
-swiper-slide {
+.hero-content {
   text-align: center;
   background: #fff;
   display: flex;
@@ -29,7 +29,7 @@ swiper-slide {
   align-items: center;
 }
 
-swiper-slide img {
+.hero-content img {
   display: block;
   width: 100%;
   height: 100%;
