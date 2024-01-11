@@ -7,9 +7,9 @@ if (window.jQuery) {
   var $ = window.jQuery;
   $(document).ready(function () {
     //add src
-    document.querySelectorAll(".zurb-twentytwenty img").forEach((item) => {
-      item.src = item.getAttribute("data-src");
-    });
+    // document.querySelectorAll(".zurb-twentytwenty img").forEach((item) => {
+    //   item.src = item.getAttribute("data-src");
+    // });
     setTimeout(() => {
       (function () {
         console.log("zurb-twentytwenty");
