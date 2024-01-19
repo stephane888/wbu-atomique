@@ -1,32 +1,8 @@
 @use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../molecule/swipper/swiper-default.scss";
+
 $with_thumbs_slider: 250px;
 .galleries-main-thumbs {
-  // configuration general.
-  .swiper {
-    width: 100%;
-    height: 100%;
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: $wbu-color-primary;
-    }
-    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill,
-    .swiper-pagination-bullet-active {
-      background: $wbu-color-primary;
-    }
-    .swiper-slide {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      //important de mettre un bg ( car dasn certains cas de figures on pourra avoir des effect visueul inatendu ).
-      background-color: #fff;
-    }
-    /**
-     * Pagination bug d'affichage
-     * Lorsque l'on bascule de l'affichage vertical à horizontal on a la pagination qui reste en place.
-     */
-  }
-
   // main slider
   .galleries-main {
     position: relative;

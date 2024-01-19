@@ -59,54 +59,9 @@ class SwiperManager {
             // il est preferable d'injecter cela dans use. c'est plus element.
             // modules: [Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade, Scrollbar],
             on: {
-              // transitionStart(swiper) {
-              //   swiper.slides.forEach((item) => {
-              //     item.querySelectorAll(".aos-init").forEach((element) => {
-              //       element.classList.remove("aos-init", "aos-animate");
-              //     });
-              //   });
-              // },
-              // slideChange(swiper) {
-              //   // swiper.slides[swiper.activeIndex]
-              //   //   .querySelectorAll(".aos-init")
-              //   //   .forEach((element) => {
-              //   //     element.classList.remove("aos-init", "aos-animate");
-              //   //   });
-              //   swiper.slides.forEach((item) => {
-              //     item.querySelectorAll(".aos-init").forEach((element) => {
-              //       element.classList.remove("aos-init", "aos-animate");
-              //     });
-              //   });
-              // },
-              beforeTransitionStart(swiper) {
-                // swiper.slides[swiper.activeIndex]
-                //   .querySelectorAll(".aos-init")
-                //   .forEach((element) => {
-                //     element.classList.remove("aos-init", "aos-animate");
-                //   });
-                //
-                // swiper.slides.forEach((item, index) => {
-                //   if (swiper.activeIndex !== index)
-                //     item.querySelectorAll(".aos-init").forEach((element) => {
-                //       element.classList.add("d-none");
-                //     });
-                //   else
-                //     item.querySelectorAll(".aos-init").forEach((element) => {
-                //       element.classList.remove("d-none");
-                //     });
-                // });
-              },
-              // slideChangeTransitionStart(swiper) {
-              //   swiper.slides.forEach((item, index) => {
-              //     if (swiper.activeIndex === index)
-              //       item.querySelectorAll(".aos-init").forEach((element) => {
-              //         element.classList.remove("d-none");
-              //       });
-              //   });
-              // },
               slideChangeTransitionEnd(swiper) {
                 AOS.init();
-                //On le retire sur tous les elements sauf celui encours.
+                // On le retire sur tous les elements sauf celui encours.
                 swiper.slides.forEach((item, index) => {
                   if (swiper.activeIndex !== index)
                     item.querySelectorAll(".aos-init").forEach((element) => {

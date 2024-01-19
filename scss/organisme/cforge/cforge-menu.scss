@@ -8,19 +8,6 @@
   background: $light;
   top: 0;
 
-<<<<<<< HEAD
-    .menu-wrapper {
-        position: relative;
-        max-width: 1300px;
-        padding: 0px 30px;
-        min-height: 70px;
-        max-height: 250px;
-        line-height: 70px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-=======
   .menu-wrapper {
     position: relative;
     // max-width: 1300px;
@@ -35,7 +22,6 @@
     @include media-min(MD) {
       padding: 0px 30px;
     }
->>>>>>> 691da648962cdeb0d22a038621576c270da9359d
 
     &::before {
       content: "";
@@ -107,150 +93,6 @@
             content: "";
             position: absolute;
             bottom: 0;
-<<<<<<< HEAD
-            right: -100%;
-            height: 1px;
-            background-color: $gray-600;
-        }
-
-        .site-information {
-            gap: 10px;
-            text-align: center;
-
-            .logo a {
-                color: $dark;
-                font-size: 30px;
-                font-weight: 600;
-                text-decoration: none;
-
-                img {
-                    max-height: 100px;
-                }
-            }
-
-            .site-name {
-                line-height: initial;
-                text-decoration: none;
-                font-weight: bold;
-                color: $dark;
-                transition: color .3s;
-
-                &:hover {
-                    color: $wbu-color-primary;
-                }
-            }
-        }
-
-        .nav-links {
-            display: inline-flex;
-            position: relative;
-
-
-            .menu-element,
-            li {
-                list-style: none;
-                padding: 0;
-                overflow: hidden;
-
-                label {
-
-                    &::before,
-                    &::after {
-                        content: none;
-                    }
-                }
-
-                a {
-                    color: $dark;
-                    text-decoration: none;
-                    font-size: 20px;
-                    font-weight: 500;
-                    padding: 9px 15px;
-                    border-radius: 5px;
-                    transition: all 0.3s ease;
-                    position: relative;
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        bottom: 0;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: all .3s ease;
-                        background-color: $wbu-color-primary;
-                        left: -100%;
-                        right: 100%;
-                        height: 2px;
-                    }
-
-
-
-                    &:hover {
-
-                        &::before {
-                            opacity: 1;
-                            visibility: visible;
-                            left: 0;
-                            right: 0;
-                        }
-                    }
-                }
-
-
-                &:hover {
-
-                    .drop-menu,
-                    .mega-box {
-                        max-height: 1000%;
-                    }
-                }
-            }
-
-            .mobile-item {
-                display: none;
-            }
-
-            .drop-menu {
-                position: absolute;
-                background: $light;
-                width: 180px;
-                line-height: 45px;
-                padding: 0 10px;
-                overflow: hidden;
-                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-                max-height: 0;
-                transition: max-height .5s ease-in;
-
-                li a {
-                    width: 100%;
-                    display: block;
-                    padding: 0;
-                    font-weight: 400;
-                    border-radius: 0px;
-                }
-            }
-        }
-
-        .menu-hamburger {
-
-            width: 20px;
-            aspect-ratio: 1;
-            font-size: 20px;
-            cursor: pointer;
-            display: none;
-
-            span,
-            &::before,
-            &::after {
-                display: block;
-                content: "";
-                height: 3px;
-                background-color: $dark;
-                left: 0;
-                right: 0;
-                position: absolute;
-            }
-=======
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
@@ -259,7 +101,6 @@
             right: 100%;
             height: 2px;
           }
->>>>>>> 691da648962cdeb0d22a038621576c270da9359d
 
           &:hover {
             &::before {
@@ -271,131 +112,11 @@
           }
         }
 
-<<<<<<< HEAD
-        @media screen and (max-width: 970px) {
-
-            /* custom scroll bar */
-            ::-webkit-scrollbar {
-                width: 10px;
-            }
-
-            ::-webkit-scrollbar-track {
-                background: #242526;
-            }
-
-            ::-webkit-scrollbar-thumb {
-                background: #3a3b3c;
-            }
-
-            #menu-btn:checked~.nav-links {
-                left: 0%;
-            }
-
-            #menu-btn:checked~.btn.menu-btn {
-                display: none;
-            }
-
-            #close-btn:checked~.btn.menu-btn {
-                display: block;
-            }
-
-            .sub-checkbox:checked+.menu-hamburger {
-                display: none;
-            }
-
-            .showDrop:checked~.drop-menu,
-            #showMega:checked~.mega-box {
-                max-height: 100%;
-            }
-
-            .menu-hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                height: 100vh;
-                width: 100%;
-                max-width: 350px;
-                top: 0;
-                left: -100%;
-                background: $light;
-                display: block;
-                padding: 50px 10px;
-                line-height: 50px;
-                overflow-y: auto;
-                box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
-                transition: all 0.3s ease;
-                z-index: 2;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    right: 0;
-                    width: 1px;
-                    background-color: $gray-600;
-                }
-
-                li {
-                    margin: 15px 10px;
-
-                    a {
-                        // padding: 0 20px;
-                        display: block;
-                        font-size: 20px;
-                    }
-                }
-
-                .drop-menu {
-                    position: static;
-                    opacity: 1;
-                    top: 65px;
-                    visibility: visible;
-                    padding-left: 20px;
-                    width: 100%;
-                    max-height: 0px;
-                    overflow: hidden;
-                    box-shadow: none;
-                    transition: all 0.3s ease;
-
-                    li {
-                        margin: 0;
-
-                        a {
-                            border-radius: 5px;
-                            font-size: 20px;
-                        }
-                    }
-                }
-
-                .desktop-item {
-                    display: none;
-                }
-
-                .mobile-item {
-                    display: block;
-                    color: $dark;
-                    font-size: 20px;
-                    font-weight: 500;
-                    padding-left: 15px;
-                    cursor: pointer;
-                    border-radius: 5px;
-                    transition: all 0.3s ease;
-                }
-
-                .mobile-item:hover {
-                    background: $light;
-                }
-            }
-=======
         &:hover {
           .drop-menu,
           .mega-box {
             max-height: 1000%;
           }
->>>>>>> 691da648962cdeb0d22a038621576c270da9359d
         }
       }
 

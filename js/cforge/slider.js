@@ -1,14 +1,14 @@
-import Swiper, { Autoplay, Controller, Navigation } from 'swiper';
-
-const swiper = new Swiper(".swiper", {
-    modules: [Autoplay, Controller, Navigation],
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
+import SwiperManager from "../swiper/swiper";
+/**
+ * il faudra documenter.
+ */
+(function (Drupal) {
+  Drupal.behaviors.swiperjs_options = {
+    attach: function (context, settings) {
+      if (context.querySelectorAll && context.querySelectorAll(".swiper-full-options").length) {
+        const sw = new SwiperManager(context);
+        sw.build();
+      }
     },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-    speed: 500,
-})
+  };
+})(window.Drupal);
