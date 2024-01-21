@@ -52,7 +52,7 @@ class SwiperManager {
           const isChildren = item.hasAttribute("data-is-children") ? item.getAttribute("data-is-children") : false;
 
           const settings = item.hasAttribute("data-swiper") ? JSON.parse(item.getAttribute("data-swiper")) : {};
-          console.log("my__settings: ", { ...this.settings, ...settings });
+          //console.log("my__settings: ", { ...this.settings, ...settings });
           const overrideSettings = {
             ...this.settings,
             ...settings,
