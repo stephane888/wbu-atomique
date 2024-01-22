@@ -46,6 +46,8 @@
     "not ie 11"
   ],
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.1",
+    "@codemirror/lang-sass": "^6.0.2",
     "@glidejs/glide": "^3.4.1",
     "@popperjs/core": "^2.11.6",
     "@splidejs/splide": "^2.4.21",
@@ -53,6 +55,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^4.6.2",
     "chart.js": "^4.2.1",
+    "codemirror": "^6.0.1",
     "core-js": "^3.26.0",
     "glider-js": "^1.7.7",
     "html2pdf.js": "^0.10.1",
