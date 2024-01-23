@@ -15,8 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // important de mettre un bg ( car dasn certains cas de figures on pourra avoir des effect visueul inatendu ).
-    background-color: #fff;
     > * {
       flex-grow: 1;
     }

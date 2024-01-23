@@ -28,6 +28,7 @@ $with_thumbs_slider: 250px;
     }
     .swiper-slide {
       border: 1px solid #ccc;
+      background-color: #fff;
     }
   }
   // thumb slider
@@ -40,6 +41,7 @@ $with_thumbs_slider: 250px;
       border: 1px solid #ccc;
       position: relative;
       opacity: 0.8;
+      background-color: #fff;
       &:after {
         position: absolute;
         background-color: rgba($wbu-background, 40%);
