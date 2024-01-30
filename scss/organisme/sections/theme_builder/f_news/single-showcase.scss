@@ -4,7 +4,7 @@
 @use "./atome/blog-btn.scss";
 @use "./variables.scss" as *;
 .single-showcase_fnews {
-  font-size: $wbu-h5-font-size;
+  word-break: break-word;
   img {
     //width: auto;
     object-fit: contain;
@@ -132,8 +132,13 @@
   }
   .ssf-paragraph,
   .ssf-bq {
-    margin: $wbu-margin 0;
-    padding-left: $wbu-margin * 2;
+    margin: $wbu-margin * 3 0 $wbu-margin 0;
+    padding-left: 0;
+    @include media-min(MD) {
+      margin: $wbu-margin 0;
+      padding-left: $wbu-margin * 2;
+    }
+
     //font-size: $wbu-h5-font-size;
     position: relative;
     //color: rgba($wbu-background, 0.92);
@@ -141,13 +146,15 @@
     //   font-size: $wbu-h6-font-size;
     // }
     &::before {
-      content: "";
       position: absolute;
       left: 0;
-      top: 0;
+      top: -$wbu-margin * 0.5;
       @include wbu_svg_quote_before();
       transform: none;
       color: black;
+      @include media-min(MD) {
+        top: 0;
+      }
     }
   }
   .tag-list {
