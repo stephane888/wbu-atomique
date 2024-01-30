@@ -134,7 +134,7 @@
     padding-left: $wbu-margin * 2;
     //font-size: $wbu-h5-font-size;
     position: relative;
-    color: rgba($wbu-background, 0.92);
+    //color: rgba($wbu-background, 0.92);
     // @include media-max(XX) {
     //   font-size: $wbu-h6-font-size;
     // }
@@ -156,8 +156,8 @@
   .ss-two-bloc {
     padding: $wbu-margin 0;
     .ssf-h4 {
-      font-size: $wbu-h4-font-size;
-      color: black;
+      // font-size: $wbu-h4-font-size;
+      // color: black;
       font-weight: bold;
       text-align: left;
       padding-bottom: 5px;
