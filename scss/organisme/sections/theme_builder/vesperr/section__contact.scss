@@ -4,56 +4,12 @@
 
 .spaker_mod_contact {
   padding-top: $space_bottom;
-  .contact-about {
-    h3 {
-      margin: 0 0 10px 0;
-      padding: 0;
-      line-height: 1;
-      font-weight: $wbu-title-font-weight + 1;
-      letter-spacing: 1px;
-    }
-
-    p {
-      line-height: 24px;
-    }
-  }
-
-  .social-links {
-    padding-bottom: 20px;
-
-    a {
-      display: inline-block;
-      background: color-yic($wbu-color-primary);
-      color: $wbu-color-primary;
-      line-height: 1;
-      padding: 8px 0;
-      margin-right: 4px;
-      border-radius: 50%;
-      text-align: center;
-      width: 36px;
-      height: 36px;
-      transition: 0.3s;
-      border: 1px solid $wbu-color-primary;
-      text-decoration: none;
-
-      i {
-        color: $wbu-color-primary;
-      }
-
-      &:hover {
-        background: $wbu-color-primary;
-      }
-
-      &:hover i {
-        color: #fff;
-      }
-    }
-  }
 
   .info {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: $wbu-margin;
     svg {
       fill: $wbu-background;
       line-height: 1;

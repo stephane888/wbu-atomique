@@ -5,16 +5,12 @@
 @use "./variables.scss" as *;
 .single-showcase_fnews {
   font-size: $wbu-h5-font-size;
-  h3,
-  h2 {
-    font-weight: 400;
-  }
   img {
     //width: auto;
     object-fit: contain;
     height: auto;
     max-width: 100%;
-    margin: 0 auto;
+    margin: $wbu-margin * 0.5 auto;
   }
   a {
     color: $wbu-color-secondary;
@@ -23,6 +19,21 @@
       text-decoration: underline;
     }
   }
+  // On ajoute un espace entre les paragraphes
+  p,
+  div + {
+    h2,
+    .h2 {
+      margin-top: $wbu-margin * 1.5;
+    }
+    h3,
+    .h3,
+    h4,
+    .h4 {
+      margin-top: $wbu-margin;
+    }
+  }
+
   .ss-author {
     padding: $wbu-margin 0;
     display: flex;
@@ -116,18 +127,6 @@
     }
   }
   .ssf-paragraph,
-  p {
-    //font-size: $wbu-default-font-size;
-    padding: $wbu-margin 0;
-    margin: 0;
-    //span {
-    //font-size: $wbu-default-font-size;
-    //}
-    // @include media-max(XX) {
-    //   font-size: $wbu-h6-font-size;
-    // }
-  }
-
   .ssf-bq {
     margin: $wbu-margin 0;
     padding-left: $wbu-margin * 2;
