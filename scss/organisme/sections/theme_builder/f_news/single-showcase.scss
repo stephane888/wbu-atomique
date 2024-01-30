@@ -26,10 +26,12 @@
   ul + {
     h2,
     .h2 {
-      margin-top: $wbu-margin * 1.5;
+      margin-top: $wbu-margin * 2;
     }
     h3,
-    .h3,
+    .h3 {
+      margin-top: $wbu-margin * 1.5;
+    }
     h4,
     .h4 {
       margin-top: $wbu-margin;
