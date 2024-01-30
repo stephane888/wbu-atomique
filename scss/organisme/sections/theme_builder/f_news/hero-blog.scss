@@ -36,14 +36,14 @@
       padding: 0.5rem 2rem;
       position: relative;
       text-transform: capitalize;
-      font-size: $wbu-default-font-size;
+      //font-size: $wbu-default-font-size;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      @include media-max(SM) {
-        font-size: $wbu-default-font-size * 0.9;
-      }
+      // @include media-max(SM) {
+      //   font-size: $wbu-default-font-size * 0.9;
+      // }
       a {
         color: $wbu-color-primary;
       }
@@ -119,13 +119,13 @@
       padding: 0.5rem 2rem;
       position: relative;
       text-transform: capitalize;
-      font-size: $wbu-h6-font-size;
+      //font-size: $wbu-h6-font-size;
       display: flex;
       align-items: center;
       justify-content: center;
-      @include media-max(SM) {
-        font-size: $wbu-h6-font-size * 0.8;
-      }
+      // @include media-max(SM) {
+      //   font-size: $wbu-h6-font-size * 0.8;
+      // }
       a {
         color: $wbu-color-primary;
       }
@@ -175,24 +175,24 @@
     text-transform: uppercase;
     font-weight: bold;
     color: white;
-    font-size: $wbu-h5-font-size;
-    @include media-max(SM) {
-      font-size: $wbu-h5-font-size * 0.8;
-    }
+    // font-size: $wbu-h5-font-size;
+    // @include media-max(SM) {
+    //   font-size: $wbu-h5-font-size * 0.8;
+    // }
   }
   .hbf-title {
     text-transform: uppercase;
-    font-size: $wbu-h2-font-size;
+    //font-size: $wbu-h2-font-size;
     font-weight: bold;
     color: white;
-    @include media-max(MD) {
-      font-size: $wbu-h2-font-size * 0.8;
-    }
-    @include media-max(SM) {
-      font-size: $wbu-h2-font-size * 0.7;
-    }
-    @include media-max(XS) {
-      font-size: $wbu-h2-font-size * 0.48;
-    }
+    // @include media-max(MD) {
+    //   font-size: $wbu-h2-font-size * 0.8;
+    // }
+    // @include media-max(SM) {
+    //   font-size: $wbu-h2-font-size * 0.7;
+    // }
+    // @include media-max(XS) {
+    //   font-size: $wbu-h2-font-size * 0.48;
+    // }
   }
 }
