@@ -21,7 +21,9 @@
   }
   // On ajoute un espace entre les paragraphes
   p +,
-  div + {
+  div +,
+  pre +,
+  ul + {
     h2,
     .h2 {
       margin-top: $wbu-margin * 1.5;
