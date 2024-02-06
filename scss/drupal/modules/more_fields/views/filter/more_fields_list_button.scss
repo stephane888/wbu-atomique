@@ -1,0 +1,12 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+@use "./more_fields_list_button_light.scss";
+
+.more_fields_list_button.more_fields_exposed_filter {
+  @extend .more_fields_list_button_light;
+  ul {
+    a {
+      background-color: rgba($wbu-background, 7%);
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+/**
+ * On doit mettre cette partie dans un autre fichier, celui du block.
+ */
+.view_filter_display_exposed_fields_filter {
+  label {
+    font-weight: 600;
+    @include bp_h5();
+    margin-bottom: $wbu-margin * 0.5;
+  }
+  form {
+    .js-form-item {
+      width: 100%;
+    }
+  }
+  .show_reset_link {
+    text-align: right;
+    width: 100%;
+    a {
+      position: relative;
+      line-height: 1;
+      &::before {
+        content: "+";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: -25px;
+        background: $wbu-color-primary;
+        border-radius: 50%;
+        line-height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+        color: #fff;
+        transform: rotate(45deg);
+        top: 2px;
+      }
+    }
+  }
+  .more_fields_exposed_filter {
+    a {
+      line-height: 1;
+      span {
+        display: inline-block;
+        padding-left: $wbu-margin * 0.4;
+        color: $wbu-color-text;
+        font-size: 80%;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.more_fields_list_simple.more_fields_exposed_filter {
+  margin-bottom: $wbu-margin * 0.75;
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin-bottom: $wbu-margin * 0.3;
+      a {
+        display: block;
+        padding-left: $wbu-margin * 0.5;
+        padding-top: $wbu-margin * 0.3;
+        padding-bottom: $wbu-margin * 0.3;
+        border-left: 2px solid transparent;
+        text-decoration: none;
+        position: relative;
+        @include WBUtransition();
+        &::after {
+          background-color: transparent;
+          @include WBUtransition($temps: 0.1s);
+          content: "";
+          color: color-yiq($wbu-color-primary);
+          padding: $wbu-margin * 0.3;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 0;
+          top: 50%;
+          bottom: auto;
+          right: 10px;
+          left: auto;
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          transform: translateY(-50%);
+          font-weight: 600;
+        }
+        &:hover,
+        &.bef-link--selected {
+          border-left: 2px solid $wbu-color-primary;
+          background-color: rgba($wbu-background, 7%);
+          &::after {
+            background-color: $wbu-color-primary;
+            transition-duration: 0.3s;
+            content: "+";
+          }
+        }
+        &.bef-link--selected:hover {
+          &::after {
+            background-color: $wbu-background;
+            transition-duration: 0.3s;
+            content: "-";
+            font-size: 110%;
+            color: color-yiq($wbu-background);
+          }
+        }
+      }
+    }
+  }
+}
