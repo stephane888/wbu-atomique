@@ -1,0 +1,34 @@
+@use "../../../../../variables" as*;
+@use "./../../../../../wbu-ressources-clean.scss" as *;
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+     
+ 
+
+  swiper-slide {
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+  
+  
+}

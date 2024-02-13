@@ -1,0 +1,121 @@
+@use "../../../../variables" as*;
+@use "./../../../../wbu-ressources-clean.scss" as *;
+
+
+
+.part-one {
+
+    margin: 0;
+    background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_1277861122_1296x.jpg?v=1632754691');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+   
+    .container{
+       
+        
+        .part-one-image {
+            // Centrer le contenu horizontalement
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+           
+
+            .part-one-line{
+                text-align: center;
+                font-weight: bold;
+                color: $wbu-color-primary;
+            }
+
+            .part-one-line-2{
+                color: $wbu-color-primary;
+                text-align: center;
+            }
+            .btn{
+                text-decoration: none;
+                background: $wbu-background;
+                color: $wbu-color-primary;
+                border: 2px solid $wbu-background;
+                height: $wbu-default-line-height * 35;
+                padding: 9px 1.4em;
+             
+                border-radius: $wbu-btn-border-radius
+
+                
+               
+            }
+        }
+    }
+}
+
+.part-one-image :nth-child(3) {
+    margin-top: $wbu-margin;
+  }
+                                    
+ 
+    // Sur les écrans de largeur inférieure ou égale à 576px
+@media (max-width: 557px) {
+    .part-one {
+        height: 500px;
+   
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+
+        
+            .part-one-image{
+                
+
+                .part-one-line{
+                    font-size: $wbu-default-font-size * 3;
+                }
+
+                .part-one-line-2{
+                    font-size: $wbu-default-font-size * 1;
+                }
+
+                
+                    
+                
+
+            }
+        
+        }
+    }
+}
+
+// Sur les écrans de largeur inférieure ou égale à 238px
+@media (max-width: 238px) {
+    .part-one {
+       
+        .container{
+           
+
+            .part-one-image{
+                
+                
+
+                .part-one-line{
+                    font-size: $wbu-default-font-size * 2;
+                }
+                .part-one-line-2{
+                    font-size: $wbu-default-font-size * 0.7;
+                }
+                
+                
+                
+
+            }
+            
+        }
+    }
+        
+ }
+ 
