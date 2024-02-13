@@ -1,0 +1,86 @@
+@use "../../../../../variables" as*;
+@use "./../../../../../wbu-ressources-clean.scss" as *;
+
+
+
+
+.slide2{
+    margin: 0;
+    background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_1589823133v2-EDIT_1512x.jpg?v=1672929603');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    opacity: 0.9;
+
+
+    .container{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-top: $wbu-padding * 14;
+
+
+
+    
+        .slide2-texte{
+         
+           .texte{
+            
+             line-height: $wbu-default-line-height - 0.4;
+             
+           }
+
+            .btn{
+                text-decoration: none;
+                background: $wbu-color-secondary;
+                color: $wbu-color-primary;
+                border: 2px solid $wbu-color-secondary;
+                text-align: center;
+                padding: $wbu-padding;
+                vertical-align: middle;
+                border-radius: 25px;
+               
+              
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 669px) {
+    
+    .slide2 {
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/slide-mobile2_900x@2x.jpg?v=1632837204');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+ 
+    
+    
+        .container {
+          padding-top: 10%;
+
+          .slide2-texte{
+            .texte{
+                font-size: 23px;
+            }
+            
+          }
+        }
+    }
+}
+    
+    
