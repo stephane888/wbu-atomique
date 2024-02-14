@@ -10,21 +10,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    display: flex;
-    align-items: center;
     height: 100vh;
     opacity: 0.9;
 
 
     .container{
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
         padding-top: $wbu-padding * 14;
-
-
-
     
         .slide2-texte{
          
@@ -39,7 +30,6 @@
                 background: $wbu-color-secondary;
                 color: $wbu-color-primary;
                 border: 2px solid $wbu-color-secondary;
-                text-align: center;
                 padding: $wbu-padding;
                 vertical-align: middle;
                 border-radius: 25px;
