@@ -1,0 +1,62 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../_variables.scss" as *;*
+section{
+    background-color: #009688;
+    .bg-content{
+        background-image: url(https://opendata.swiss/images/swiss_map.png);
+        background-position: right;
+background-size: contain;
+background-repeat: no-repeat;
+    }
+    .left-part{
+        h2{
+            color: $wbu-color-primary;
+            ;
+            margin-top: $wbu-margin;
+            margin-bottom: 20px;
+        }
+        a{
+            border: 1px solid $wbu-color-primary;
+            border-radius: 2px;
+            padding: 14px;
+            color: $wbu-color-primary;
+            text-decoration: none;
+            &:hover{
+                background-color: #056b61;
+                color: color-yiq(red);
+            }
+
+        }
+    }
+    .rigth-part{
+        h5{
+            line-height: 28px;
+        }
+        .search-input{
+            position: relative;
+            margin-bottom: 15px;
+            input{
+                height: 67px;
+                padding: 10px 16px;
+                padding-right: 16px;
+                font-size: 23px;
+                line-height: 1.3333333;
+                border-radius: 0;
+                width: 457;
+                padding: 8px 12px;
+                background-color: $wbu-color-primary;
+                background-image: none;
+                border: 1px solid #333;
+                border-radius: 0;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            }
+        }
+        p{
+            margin: 0 0 13.5px;
+            a{
+                color: $wbu-color-primary;
+            }
+        }
+    }
+}

@@ -19,3 +19,17 @@ ul.puce-check {
     }
   }
 }
+ul.puce-check--color-secondary {
+  li {
+    &::before {
+      @include wbu__svg-puce-check($wbu-color-secondary, $wbu_dimension_puce);
+    }
+  }
+}
+ul.puce-check--color-background {
+  li {
+    &::before {
+      @include wbu__svg-puce-check($wbu-background, $wbu_dimension_puce);
+    }
+  }
+}
