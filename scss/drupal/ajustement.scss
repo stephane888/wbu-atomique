@@ -1,3 +1,4 @@
+@use "../wbu-ressources-clean.scss" as *;
 // Ce fichier permet d'ajuster, les styles.
 // Version : Drupal 8/9;
 /**
@@ -16,4 +17,12 @@ table.treetable tbody > tr.token-group {
   > td:first-child {
     padding-left: 20px;
   }
+}
+
+/**
+ * La detection du menu actif se fait via le js.
+ * Drupal ajoute une class active
+ */
+.navbar-nav .nav-link.is-active {
+  color: $wbu-color-primary;
 }

@@ -15,22 +15,13 @@
   "author": "gugledas",
   "license": "MIT",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-regular-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "animate.css": "^4.1.1",
-    "autoprefixer": "^10.2.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^5.2.0",
     "css-minimizer-webpack-plugin": "^3.4.1",
-    "cssnano": "^5.0.16",
     "file-loader": "^6.2.0",
-    "font-awesome": "^4.7.0",
-    "fs-extra": "^9.1.0",
     "mini-css-extract-plugin": "^1.4.0",
     "postcss-loader": "^5.2.0",
     "resolve-url-loader": "^5.0.0",
@@ -46,23 +37,13 @@
     "not ie 11"
   ],
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
-    "@popperjs/core": "^2.11.6",
-    "@splidejs/splide": "^2.4.21",
-    "animejs": "^3.2.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.2",
     "chart.js": "^4.2.1",
-    "core-js": "^3.26.0",
-    "glider-js": "^1.7.7",
-    "html2pdf.js": "^0.10.1",
     "image-webpack-loader": "^8.1.0",
     "imagemin": "^7.0.1",
     "lightgallery": "^2.5.0",
-    "shards-ui": "^3.0.0",
-    "slick-carousel": "^1.8.1",
     "swiper": "^8.3.2",
-    "uuid": "^9.0.0",
-    "zurb-twentytwenty": "^0.1.1"
+    "uuid": "^9.0.0"
   }
 }
