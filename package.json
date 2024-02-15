@@ -1,8 +1,9 @@
 {
   "name": "@stephane888/wbu-atomique",
-  "version": "1.0.8",
-  "description": "Ce module  a été créer pour stocker nos différents composants en suivant le principe de l'atomique design",
+  "version": "1.1.0",
+  "description": "This module was created to store our different components following the principle of atomic design",
   "main": "src/index.js",
+  "private": false,
   "scripts": {
     "test": "echo \"No test specified\"",
     "dev": "webpack serve  --mode='development'  --progress",
@@ -12,7 +13,7 @@
     "publish": "npm publish --access public",
     "serve": "webpack serve --mode='production' --open"
   },
-  "author": "gugledas",
+  "author": "stephanegb",
   "license": "MIT",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
@@ -67,5 +68,19 @@
     "swiper": "^8.3.2",
     "uuid": "^9.0.0",
     "zurb-twentytwenty": "^0.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephane888/wbu-atomique.git"
+  },
+  "keywords": [
+    "atomique",
+    "design",
+    "drupal",
+    "scss"
+  ],
+  "bugs": {
+    "url": "https://github.com/stephane888/wbu-atomique/issues"
+  },
+  "homepage": "https://github.com/stephane888/wbu-atomique#readme"
 }
