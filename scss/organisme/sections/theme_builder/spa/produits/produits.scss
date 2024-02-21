@@ -1,0 +1,125 @@
+
+@use "../../../../../variables" as *;
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+
+
+
+.product-container{
+    margin-bottom: 60px;
+}
+
+
+.color-content{
+    border: 1px solid black;
+    border-radius: 50% ;
+    width: 25px;
+    height: 25px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-color-first{
+    
+    margin: 1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: black;
+
+}
+.product-color-second{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: rgb(194, 173, 146);
+    margin: 10px;
+}
+.product-color-third{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: rgb(248, 232, 232);
+    margin:10px;
+}
+.product-color-four{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: $wbu-color-secondary;
+    margin: 10px;
+}
+.product-color-five{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: $wbu-background;
+    margin:10px;
+}
+.product-color-six{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: $wbu-color-secondary;
+    margin: 10px;
+}
+
+
+.product-info{
+    
+    
+    .product-star{
+        margin: 5px ;
+        span{
+            font-size: 12px;
+            
+        }
+        svg{
+          
+            height:16px;
+            width: 18px;
+            fill:  rgb(246, 195, 71);
+        }
+    }
+    .product-price{
+        .new-price{
+            color: orangered;
+            margin: 5 10px;
+        }
+        .old-price{
+            text-decoration:line-through;
+            color: rgb(88, 88, 88);
+            margin: 0 5px;
+        }
+    }
+    
+    
+
+}
+
+
+
+
+.product-remise{
+    position: absolute;
+    background-color: #f60;
+    color: #fff;
+    max-width: 80px;
+    margin-top: 23px;
+}
+
+.product-header-image{
+    a{
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+.header-title {
+    h3{
+        &:hover{
+            color: $wbu-color-secondary;
+        } 
+    }
+}
