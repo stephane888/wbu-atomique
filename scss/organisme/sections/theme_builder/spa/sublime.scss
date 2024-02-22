@@ -3,29 +3,27 @@
 
 
 
-.part-one {
+.sublime {
 
     margin: 0;
     background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_1277861122_1296x.jpg?v=1632754691');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    display: flex;
-    align-items: center;
     height: 100vh;
+    opacity: 0.9;
+    
    
     .container{
-       
         
-        .part-one-image {
-            // Centrer le contenu horizontalement
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        
+        .sublime-container-image {
+            position: absolute;
+            left: 0;
+            left: 0;
+            right: 50px;
+            padding: 20rem;
             
-           
-
             .part-one-line{
                 text-align: center;
                 font-weight: bold;

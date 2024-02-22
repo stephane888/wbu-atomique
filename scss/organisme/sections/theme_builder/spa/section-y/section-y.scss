@@ -17,7 +17,7 @@
         padding-right: $wbu-padding;
                 
         
-    .slide-texte{
+    .slide-container-texte{
        .part-one-line{
             line-height: $wbu-default-line-height;
         }
@@ -67,7 +67,7 @@
             flex-direction: column;
             width: 80%;
 
-            .slide-texte{
+            .slide-container-texte{
               text-align: center;
             }
         }
