@@ -1,0 +1,41 @@
+@use "../../../../../variables" as *;
+@use "../../../../../wbu-ressources-clean.scss" as *;
+
+
+.btn{
+    text-decoration: none;
+    background: transparent;
+    color: $wbu-color-primary;
+    border: 2px solid white;
+    height: $wbu-default-line-height * 35;
+    padding: 10px 2em;
+    margin: 5px;
+    border-radius: $wbu-btn-border-radius;  
+     
+    &:hover{
+        color:white;
+    }
+   
+}
+.galerie_item {
+    position: absolute;
+    top: 75%;
+    left: 158px;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    
+    .galerie_title {
+        font-size: 15px;
+    }
+    .line1 {
+        font-size: 35px;
+    }
+}
+    
+    .row_image {
+     position: relative;
+    
+    }
+   
