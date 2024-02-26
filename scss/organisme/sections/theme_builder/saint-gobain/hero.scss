@@ -24,7 +24,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     //   max-width: 800px;
     //background-color: gray;
     text-align: center;
@@ -53,8 +52,8 @@
     }
     &__btn {
       display: flex;
-      position: absolute;
-      bottom: -23px;
+      //  position: absolute;
+      // bottom: -23px;
       width: 100%;
       justify-content: center;
 

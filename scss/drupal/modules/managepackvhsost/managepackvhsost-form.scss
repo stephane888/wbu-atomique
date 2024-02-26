@@ -1,31 +1,39 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 @use "../../../variables" as *;
+
 .path-managepackvhsost {
   #block-breamcrumb {
     .one-column {
       margin-bottom: 0 !important;
     }
+
     .breadcrumb {
       margin-bottom: 0;
     }
   }
+
   .titre-section-block {
     background-color: rgba($wbu-color-primary, 0.1);
   }
+
   .managepackvhsost-subscribe-buy-pack {
     min-height: 200px;
     margin-bottom: $space_bottom;
+
     label,
     legend {
       font-weight: 600;
     }
+
     legend {
       text-align: center;
     }
+
     .radio {
       display: flex;
       justify-content: center;
       align-items: center;
+
       .js-form-item {
         padding: 5rem 2rem;
         position: relative;
@@ -34,13 +42,16 @@
         margin-right: 0.2rem;
         min-height: 200px;
       }
+
       input {
         position: absolute;
         top: 1.5rem;
       }
+
       label {
         text-align: center;
         cursor: pointer;
+
         span {
           font-weight: 300;
           margin: 1rem 0;
@@ -49,9 +60,11 @@
         }
       }
     }
+
     .actions-buttons {
-      margin-top: $space_top;
+      margin-top: $wbu-margin * 1.5;
     }
+
     .form-actions {
       margin-bottom: 0 !important;
     }
