@@ -1,12 +1,11 @@
-
 @use "./../../../../../wbu-ressources-clean.scss" as *;
 
-.mySwiper{
-  .slide1{
-   .container{
-    .slide1-texte{
-      color: red;
+.mySwiper {
+  .slide1 {
+    .container {
+      .slide1-texte {
+        color: $wbu-color-primary;
+      }
     }
-   }
   }
 }
