@@ -2,18 +2,25 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 
 
-.btn{
+
+
+.galerie-content{
+    margin-bottom: 25px;
+    
+}
+.btns{
     text-decoration: none;
     background: transparent;
     color: $wbu-color-primary;
-    border: 2px solid white;
+    border: 2px solid $wbu-border-color;
     height: $wbu-default-line-height * 35;
     padding: 10px 2em;
     margin: 5px;
-    border-radius: $wbu-btn-border-radius;  
-     
+    border-radius: $wbu-btn-border-radius;
+    
     &:hover{
-        color:white;
+        color:$wbu-color-secondary;
+        text-decoration: none;
     }
    
 }
@@ -22,7 +29,7 @@
     top: 75%;
     left: 158px;
     transform: translate(-50%, -50%);
-    color: white;
+    color: $wbu-color-primary;
     font-size: 24px;
     font-weight: bold;
     
@@ -36,6 +43,12 @@
     
     .row_image {
      position: relative;
+
+     &:hover{
+       opacity: 0.8;
+        
+    }
+   
     
     }
    

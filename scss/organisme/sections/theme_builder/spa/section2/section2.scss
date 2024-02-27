@@ -1,12 +1,23 @@
 
 @use "./../../../../../wbu-ressources-clean.scss" as *;
 
-.mySwiper{
-  .slide1{
-   .container{
-    .slide1-texte{
-      color: red;
-    }
-   }
-  }
+
+.swiper-button-prev {
+  background-color: $wbu-color-secondary;
+  color: $wbu-color-primary !important;
+  width: 40px !important;
+}
+.swiper-button-next {
+  background-color: $wbu-color-secondary;
+  color: $wbu-color-primary !important;
+  width: 40px !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: 15px !important;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
 }

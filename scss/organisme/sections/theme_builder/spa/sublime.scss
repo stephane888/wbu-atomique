@@ -5,13 +5,14 @@
 
 .sublime {
 
-    margin: 0;
+    margin:0;
     background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_1277861122_1296x.jpg?v=1632754691');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 100vh;
     opacity: 0.9;
+    margin-bottom: 25px;
     
    
     .container{
@@ -32,7 +33,7 @@
             .part-one-line-2{
                 color: $wbu-color-primary;
                 text-align: center;
-            }
+            }s
             .btn{
                 text-decoration: none;
                 background: $wbu-background;
@@ -40,10 +41,8 @@
                 border: 2px solid $wbu-background;
                 height: $wbu-default-line-height * 35;
                 padding: 9px 1.4em;
-             
-                border-radius: $wbu-btn-border-radius
-
-                
+                text-align: center;
+                border-radius: $wbu-btn-border-radius;
                
             }
         }

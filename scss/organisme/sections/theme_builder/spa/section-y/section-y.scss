@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    margin-bottom: 25px;
     
 }
 .container{
@@ -26,7 +27,7 @@
          line-height: $wbu-default-line-height * 1.2;
         }
 
-       a{
+        a{
 
             text-decoration: none;
             background: $wbu-color-secondary;
@@ -35,13 +36,13 @@
             padding: 9px 1.4em;
             vertical-align: middle;
             border-radius: 25px;
-            padding: $wbu-padding;
+            text-align: center;
           
            
             &:hover{
                background-color: $wbu-background;
             }
-       }
+        }
         
       
        

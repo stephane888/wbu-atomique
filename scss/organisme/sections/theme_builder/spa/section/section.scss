@@ -9,6 +9,7 @@
     background-size: cover;
     background-position: center center;
     height: 100vh;
+    margin-bottom: 25px;
 }
 .container{
     color: $wbu-color-primary;
@@ -39,8 +40,6 @@
             padding: 9px 1.4em;
             vertical-align: middle;
             border-radius: 25px;
-            padding: $wbu-padding;
-          
            
             &:hover{
                background-color: $wbu-background;
