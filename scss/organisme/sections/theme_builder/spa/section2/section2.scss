@@ -1,6 +1,6 @@
-
 @use "./../../../../../wbu-ressources-clean.scss" as *;
 
+<<<<<<< HEAD
 
 .swiper-button-prev {
   background-color: $wbu-color-secondary;
@@ -20,4 +20,14 @@
   letter-spacing: 0;
   font-variant: initial;
   line-height: 1;
+=======
+.mySwiper {
+  .slide1 {
+    .container {
+      .slide1-texte {
+        color: $wbu-color-primary;
+      }
+    }
+  }
+>>>>>>> 4ece4520f15c976c6b97604d0348ec6eaf259466
 }

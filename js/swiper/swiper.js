@@ -1,8 +1,8 @@
-import Swiper, { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade, Zoom } from "swiper";
+import Swiper, { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade, Zoom, FreeMode } from "swiper";
 //import Swiper, { Navigation } from "swiper";
 import AOS from "aos";
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade, Zoom]);
+Swiper.use([Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade, Zoom, FreeMode]);
 
 import "swiper/css/bundle";
 /**
