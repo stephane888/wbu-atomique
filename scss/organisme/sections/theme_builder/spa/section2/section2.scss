@@ -3,81 +3,76 @@
 @use "./../../../../../wbu-ressources-clean.scss" as *;
 
 .testslider.swiper-full-options {
+ // width: 100vw;
   .swiper-wrapper {
     height: 500px;
-    transition-timing-function: linear;
+
+    //transition-timing-function: linear;
     .swiper-slide {
+   
       overflow: hidden;
       min-height: 500px;
       height: 500px;
-      background: $wbu-background;
-      img {
+     // background: $wbu-background;
+     /*img {
         max-width: 1500px;
         width: auto;
         height: 100%;
-      }
+      }*/
     }
   }
 }
 
 
 .slide2{
-    margin: 0;
-    background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_1589823133v2-EDIT_1512x.jpg?v=1672929603');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    opacity: 0.9;
-    margin-bottom: 25px;
+  margin: 0;
+  background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_1589823133v2-EDIT_1512x.jpg?v=1672929603');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  opacity: 0.9;
+  margin-bottom: 25px;
 
-
-    .container{
-        padding-top: $wbu-padding * 9;
+  .container{
+    padding-top: $wbu-padding * 5;
     
-        .slide2-container-texte{
+   .slide2-container-texte{
          
-           .texte{
-            
-             line-height: $wbu-default-line-height - 0.4;
-             
-           }
+    .texte{  
+       line-height: $wbu-default-line-height - 0.4;  
+   }
 
-            .btn{
-                text-decoration: none;
-                background: $wbu-color-secondary;
-                color: $wbu-color-primary;
-                border: 2px solid $wbu-color-secondary;
-                
-                vertical-align: middle;
-                border-radius: 25px;
-               
-              
-            }
-        }
+    .btn{
+      text-decoration: none;
+      background: $wbu-color-secondary;
+     color: $wbu-color-primary;
+     border: 2px solid $wbu-color-secondary;
+      vertical-align: middle;
+      border-radius: 25px; 
     }
-
+      }
+  } 
 }
 
 
-@media (max-width: 669px) {
+
+
+
+@media only screen and (max-width: $S_575_fin) {
     
     .slide2 {
     
         display: flex;
         align-items: center;
-        justify-content: center;
-        
+        justify-content: center; 
         background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/slide-mobile2_900x@2x.jpg?v=1632837204');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        display: flex;
-        align-items: center;
         height: 100vh;
         .container {
-          padding-top: 10%;
-
+          
           .slide2-container-texte{
             .texte{
                 font-size: 23px;
@@ -100,7 +95,7 @@
 .container{
   color: $wbu-color-primary;
   margin: 0 auto;
-  max-width: 1440px;
+  min-width: 1440px;
   padding-left: $wbu-padding;
   padding-right: $wbu-padding;
               
@@ -113,11 +108,12 @@
 
      }
 
-     p{
-       line-height: $wbu-default-line-height * 1.2;
+     .Explore{
+       line-height: $wbu-default-line-height;
      }
 
-     a{
+     
+     .lien-btn{
 
           text-decoration: none;
           background: $wbu-color-secondary;
@@ -133,32 +129,22 @@
      }
   }
 }
-div .slide1-texte{
-  a:nth-child(2) {
+div .slide1-texte-lien{
+  .lien-btn:nth-child(2) {
 
-      margin: $wbu-margin;
       background-color: transparent;
       border-color: $wbu-color-primary;
   }
 }
 
-@media (max-width: 600px) {
+@media only screen and (min-width: $S_600_debut){
  
   .slide1 {
      
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      
       .container {
           display: flex;
           flex-direction: column;
-          width: 80%;
-
-          .slide1-texte{
-            text-align: center;
-          }
+          align-items: start;
       }
   }
 }
@@ -185,11 +171,11 @@ div .slide1-texte{
           line-height: $wbu-default-line-height;
       }
 
-     p{
+     .part-one-paragraph{
        line-height: $wbu-default-line-height * 1.2;
       }
 
-      a{
+      .lien-btnss{
 
           text-decoration: none;
           background: $wbu-color-secondary;
@@ -216,7 +202,7 @@ div .slide1-texte{
 }
 
 
-@media (max-width: 600px) {
+@mediasss only screen and (max-width: $S_575_fin) {
  
   .slide {
      
