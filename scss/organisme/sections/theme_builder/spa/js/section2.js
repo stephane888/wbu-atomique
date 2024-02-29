@@ -2,16 +2,14 @@
  * Pour l'env. Drupal, il faudra importer : import "@stephane888/wbu-atomique/js/swiper/swiper-drupal.js";
  */
 import SwiperManager from "../../../../../../js/swiper/swiper";
-/**
- * TOP
- */
+
 const settingsGalleryTops = {
   direction: "horizontal",
-  effect: "coverflow",
-  speed: 100,
+  effect: "cover",
+  speed: 5000,
   spaceBetween: 10,
   loop: true,
-  pagination: { el: ".swiper-pagination", type: "bullets", clickable: true, enabled: 1 },
+  pagination: { el: ".swiper-pagination", clickable: true, enabled: 1 },
   navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev", enabled: 1 },
   parallax: false, // https://swiperjs.com/swiper-api#parallax
   freeMode: {
@@ -22,7 +20,6 @@ const settingsGalleryTops = {
     momentumBounceRatio: 1,
     momentumRatio: 1,
     momentumVelocityRatio: 1,
-    sticky: 1,
   },
   autoplay: {
     delay: 900000,
