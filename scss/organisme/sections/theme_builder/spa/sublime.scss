@@ -16,25 +16,25 @@
     
    
     .container{
-        
+        color: $wbu-color-primary;
         
         .sublime-container-image {
-            position: absolute;
-            left: 0;
-            right: 50px;
-            padding: 20rem;
+            position: relative;
+             margin: auto;
+             justify-content: center;
+             padding: 10rem;
             
             .part-one-line{
                 text-align: center;
                 font-weight: bold;
-                color: $wbu-color-primary;
+                
             }
 
             .part-one-line-2{
-                color: $wbu-color-primary;
+                
                 text-align: center;
-            }s
-            .btn{
+            }
+            .line-btn{
                 text-decoration: none;
                 background: $wbu-background;
                 color: $wbu-color-primary;
@@ -49,13 +49,10 @@
     }
 }
 
-.part-one-image :nth-child(3) {
-    margin-top: $wbu-margin;
-  }
-                                    
+                                 
  
     // Sur les écrans de largeur inférieure ou égale à 576px
-@media (max-width: 557px) {
+@media only screen and (MD){
     .part-one {
         height: 500px;
    
@@ -88,7 +85,7 @@
 }
 
 // Sur les écrans de largeur inférieure ou égale à 238px
-@media (max-width: 238px) {
+@media only screen and (DD){
     .part-one {
        
         .container{

@@ -33,35 +33,35 @@
     height: 15px;
     border-radius: 50px;
     background-color: rgb(194, 173, 146);
-    margin: 10px;
+    margin: $wbu-margin - 1;
 }
 .product-color-third{
     width: 15px;
     height: 15px;
     border-radius: 50px;
     background-color: rgb(248, 232, 232);
-    margin:10px;
+    margin:$wbu-margin ;
 }
 .product-color-four{
     width: 15px;
     height: 15px;
     border-radius: 50px;
     background-color: $wbu-color-secondary;
-    margin: 10px;
+    margin: $wbu-margin -1;
 }
 .product-color-five{
     width: 15px;
     height: 15px;
     border-radius: 50px;
     background-color: $wbu-background;
-    margin:10px;
+    margin:$wbu-margin -1;
 }
 .product-color-six{
     width: 15px;
     height: 15px;
     border-radius: 50px;
     background-color: $wbu-color-secondary;
-    margin: 10px;
+    margin: $wbu-margin;
 }
 
 
@@ -109,7 +109,7 @@
 }
 
 .product-header-image{
-    a{
+    .header-lien{
         &:hover{
             text-decoration: none;
         }
@@ -117,7 +117,7 @@
 }
 
 .header-title {
-    h3{
+    .title{
         &:hover{
             color: $wbu-color-secondary;
         } 

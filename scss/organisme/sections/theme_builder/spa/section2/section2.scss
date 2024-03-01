@@ -9,7 +9,6 @@
 
     //transition-timing-function: linear;
     .swiper-slide {
-   
       //)overflow: hidden;
       min-height: 500px;
       height: 500px;
@@ -59,7 +58,7 @@
 
 
 
-@media only screen and (max-width: $S_575_fin) {
+@media only screen and (DD) {
     
     .slide2 {
     
@@ -137,7 +136,7 @@ div .slide1-texte-lien{
   }
 }
 
-@media only screen and (min-width: $S_600_debut){
+@media only screen and (DD){
  
   .slide1 {
      
@@ -202,7 +201,7 @@ div .slide1-texte-lien{
 }
 
 
-@media only screen and (max-width: $S_575_fin) {
+@media only screen and (DD) {
  
   .slide {
      

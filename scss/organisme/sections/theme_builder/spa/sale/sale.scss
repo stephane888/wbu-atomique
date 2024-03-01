@@ -3,15 +3,17 @@
 
 .sale-content{
     margin-bottom: 25px;
+    line-height: $wbu-default-line-height ;  
 }
 
-.btn{
+.btne{
     text-decoration: none;
-    background: #e76f51;
+    background: $wbu-background;
     color: white;
-    border: 2px solid #e76f51;
+    border: 2px solid $wbu-color-boder;
     height: 45.5;
     padding: 9px 1.4em;
     border-radius: 30px;   
+    
   
 }

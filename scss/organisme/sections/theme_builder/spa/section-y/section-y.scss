@@ -13,7 +13,7 @@
 .container{
         color: $wbu-color-primary;
         margin: 0 auto;
-        max-width: 1440px;
+        min-width: 1440px;
         padding-left: $wbu-padding ;
         padding-right: $wbu-padding;
                 
@@ -23,11 +23,11 @@
             line-height: $wbu-default-line-height;
         }
 
-       p{
+       .part-one-paragraph{
          line-height: $wbu-default-line-height * 1.2;
         }
 
-        a{
+        .butn{
 
             text-decoration: none;
             background: $wbu-color-secondary;
@@ -36,41 +36,26 @@
             padding: 9px 1.4em;
             vertical-align: middle;
             border-radius: 25px;
-            text-align: center;
-          
            
             &:hover{
                background-color: $wbu-background;
             }
         }
         
-      
-       
-
-
     }
 
 
 }
 
 
-@media (max-width: 600px) {
-   
+@media only screen and (DD){
     .slide {
-       
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        
-        .container {
+         .container {
             display: flex;
             flex-direction: column;
             width: 80%;
+            
 
-            .slide-container-texte{
-              text-align: center;
-            }
         }
     }
 }
