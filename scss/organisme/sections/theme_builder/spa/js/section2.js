@@ -1,10 +1,7 @@
-
-
 /**
  * Pour l'env. Drupal, il faudra importer : import "@stephane888/wbu-atomique/js/swiper/swiper-drupal.js";
  */
 import SwiperManager from "../../../../../../js/swiper/swiper";
-
 
 const settingsGalleryTops = {
   direction: "horizontal",
@@ -23,10 +20,9 @@ const settingsGalleryTops = {
     momentumBounceRatio: 1,
     momentumRatio: 1,
     momentumVelocityRatio: 1,
-    
   },
   autoplay: {
-    delay: 2,
+    delay: 900000,
     pauseOnMouseEnter: true,
     disableOnInteraction: false,
     waitForTransition: true,
