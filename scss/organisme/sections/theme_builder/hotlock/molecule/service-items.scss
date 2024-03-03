@@ -12,9 +12,9 @@
   position: static;
   border-right: 1px solid rgba($wbu-border-color, 0.2);
   border-bottom: 1px solid rgba($wbu-border-color, 0.2);
-  @include media-min(tablet) {
-    justify-content: space-around;
-  }
+  // @include media-min(tablet) {
+  //   justify-content: space-around;
+  // }
   // cursor: pointer;
   &:hover {
     color: $wbu-color-primary;
@@ -31,6 +31,10 @@
     color: $wbu-color-primary;
     transition: 0.3s;
     min-width: 35px;
+    margin-right: $wbu-margin * 0.5;
+    @include media-min(mobile) {
+      margin-right: $wbu-margin;
+    }
     svg {
       max-width: 30px;
       max-height: 30px;
@@ -43,7 +47,6 @@
     }
   }
   .icon-title {
-    font-size: $wbu-default-font-size;
     a,
     & {
       transition: 0.3s;
