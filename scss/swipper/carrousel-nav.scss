@@ -1,7 +1,7 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
-@use "swiper/css/pagination";
+@use "./swiper-default.scss";
 /**
- * ce code n'est pas documenté.
+ * Ce code n'est pas documenté. et est nettoyer.
  */
 
 // model .carousel-nav
@@ -325,79 +325,78 @@
     }
   }
 }
-
 // Cette section permet de definir la couleur des bouttons.
 .swiper-full-options {
   //
   .swiper-pagination {
-    &--background {
-      .swiper-pagination-bullet {
-        background-color: $wbu-background;
-      }
-    }
-    &--primary {
-      .swiper-pagination-bullet {
-        background-color: $wbu-color-primary;
-      }
-    }
-    &--secondary {
-      .swiper-pagination-bullet {
-        background-color: $wbu-color-secondary;
-      }
-    }
-    &--center-bottom {
-      width: 260px;
-      margin-inline: auto;
-      right: auto;
-      left: calc(50% - 130px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      top: auto;
-      bottom: 3rem;
-    }
+    // &--background {
+    //   .swiper-pagination-bullet {
+    //     background-color: $wbu-background;
+    //   }
+    // }
+    // &--primary {
+    //   .swiper-pagination-bullet {
+    //     background-color: $wbu-color-primary;
+    //   }
+    // }
+    // &--secondary {
+    //   .swiper-pagination-bullet {
+    //     background-color: $wbu-color-secondary;
+    //   }
+    // }
+    // &--center-bottom {
+    //   width: 260px;
+    //   margin-inline: auto;
+    //   right: auto;
+    //   left: calc(50% - 130px);
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   flex-wrap: wrap;
+    //   top: auto;
+    //   bottom: 3rem;
+    // }
   }
   // next & prev
   .swiper-button {
-    &::after {
-      color: inherit;
-      opacity: 1;
-    }
-    &.swiper-button-disabled {
-      &::after {
-        opacity: 0.2;
-      }
-    }
-    &--primary {
-      &::after {
-        color: $wbu-color-primary;
-      }
-    }
-    &--background {
-      &::after {
-        color: $wbu-background;
-      }
-    }
-    &--secondary {
-      &::after {
-        color: $wbu-color-secondary;
-      }
-    }
-    &--align-bottom-y-mobile {
-      top: calc(100% - 4rem);
-      @include media-min("mobile") {
-        top: 50%;
-      }
-    }
-    &--align-bottom-y-tablet {
-      top: calc(100% - 4rem);
-      @include media-min("tablet") {
-        top: 50%;
-      }
-    }
-    &--align-bottom-y {
-      top: calc(100% - 4rem);
-    }
+    // &::after {
+    //   color: inherit;
+    //   opacity: 1;
+    // }
+    // &.swiper-button-disabled {
+    //   &::after {
+    //     opacity: 0.2;
+    //   }
+    // }
+    // &--primary {
+    //   &::after {
+    //     color: $wbu-color-primary;
+    //   }
+    // }
+    // &--background {
+    //   &::after {
+    //     color: $wbu-background;
+    //   }
+    // }
+    // &--secondary {
+    //   &::after {
+    //     color: $wbu-color-secondary;
+    //   }
+    // }
+    // &--align-bottom-y-mobile {
+    //   top: calc(100% - 4rem);
+    //   @include media-min("mobile") {
+    //     top: 50%;
+    //   }
+    // }
+    // &--align-bottom-y-tablet {
+    //   top: calc(100% - 4rem);
+    //   @include media-min("tablet") {
+    //     top: 50%;
+    //   }
+    // }
+    // &--align-bottom-y {
+    //   top: calc(100% - 4rem);
+    // }
   }
 }

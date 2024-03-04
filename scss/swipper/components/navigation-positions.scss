@@ -1,0 +1,21 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.swiper {
+  .swiper-button {
+    &--align-bottom-y-mobile {
+      top: calc(100% - 4rem);
+      @include media-min("mobile") {
+        top: 50%;
+      }
+    }
+    &--align-bottom-y-tablet {
+      top: calc(100% - 4rem);
+      @include media-min("tablet") {
+        top: 50%;
+      }
+    }
+    &--align-bottom-y {
+      top: calc(100% - 4rem);
+    }
+  }
+}

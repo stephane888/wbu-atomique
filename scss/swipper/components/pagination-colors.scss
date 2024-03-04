@@ -1,0 +1,79 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.swiper {
+  .swiper-pagination {
+    // Les models utilisant background.
+    &--background {
+      .swiper-pagination-bullet {
+        background-color: $wbu-background;
+      }
+    }
+    &--primary {
+      .swiper-pagination-bullet {
+        background-color: $wbu-color-primary;
+      }
+    }
+    &--secondary {
+      .swiper-pagination-bullet {
+        background-color: $wbu-color-secondary;
+      }
+    }
+    &--white {
+      .swiper-pagination-bullet {
+        background-color: #fff;
+      }
+    }
+    &--dark {
+      .swiper-pagination-bullet {
+        background-color: #000;
+      }
+    }
+    // Les modeles utilisant border et le background tranparent.
+    &.swiper-pagination--carre {
+      .swiper-pagination-bullet {
+        background-color: transparent;
+        background: transparent;
+      }
+      &.swiper-pagination--background {
+        .swiper-pagination-bullet {
+          &::before,
+          &::after {
+            border-color: $wbu-background;
+          }
+        }
+      }
+      &.swiper-pagination--primary {
+        .swiper-pagination-bullet {
+          &::before,
+          &::after {
+            border-color: $wbu-color-primary;
+          }
+        }
+      }
+      &.swiper-pagination--secondary {
+        .swiper-pagination-bullet {
+          &::before,
+          &::after {
+            border-color: $wbu-color-secondary;
+          }
+        }
+      }
+      &.swiper-pagination--white {
+        .swiper-pagination-bullet {
+          &::before,
+          &::after {
+            border-color: #fff;
+          }
+        }
+      }
+      &.swiper-pagination--dark {
+        .swiper-pagination-bullet {
+          &::before,
+          &::after {
+            border-color: #000;
+          }
+        }
+      }
+    }
+  }
+}
