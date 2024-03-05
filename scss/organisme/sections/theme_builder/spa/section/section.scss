@@ -1,12 +1,17 @@
-@use "../../../../../variables" as*;
+@use "../../../../../variables";
 @use "./../../../../../wbu-ressources-clean.scss" as *;
 
 
 .slide1{
     background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_297687515v6_1512x.jpg?v=1632741210');
     background-repeat: no-repeat;
+<<<<<<< HEAD
     background-size: cover;
    color: color-yiq($wbu-color-primary);
+=======
+background-size: cover;
+color: color-yiq($wbu-color-primary);
+>>>>>>> 4d8764c4014478eb4956f27d11d5b8f7289087ea
     .slide1-container{
         .slide1-texte{
             height: 100%;
@@ -17,6 +22,7 @@
             .titre{
                 max-width: 42%;
                 margin-bottom: $wbu-margin;
+<<<<<<< HEAD
             }
             
 
@@ -37,4 +43,9 @@
      background: none;
      color: white;
     }
+=======
+            }
+        }
+    }
+>>>>>>> 4d8764c4014478eb4956f27d11d5b8f7289087ea
 }
