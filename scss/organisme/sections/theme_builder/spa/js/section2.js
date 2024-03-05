@@ -5,8 +5,8 @@ import SwiperManager from "../../../../../../js/swiper/swiper";
 
 const settingsGalleryTops = {
   direction: "horizontal",
-  effect: "cover",
-  speed: 5000,
+  effect: "coverflow",
+  speed: 10000,
   spaceBetween: 10,
   loop: true,
   pagination: { el: ".swiper-pagination", clickable: true, enabled: 1 },
