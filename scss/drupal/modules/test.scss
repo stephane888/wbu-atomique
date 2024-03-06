@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
+.container {
+  max-width: 1400px;
+  width: 100%;
+}
+.font-famify-bilbo {
+  font-family: "Bilbo Swash Caps", cursive;
+  color: $wbu-color-secondary;
+}
+body {
+  .container {
+    max-width: 1400px;
+    width: 100%;
+  }
+  //
+  svg {
+    color: $wbu-color-primary !important;
+    fill: currentColor;
+  }
+  //
+  .block__whoAreWe--plain {
+    @extend .space-padding;
+  }
+  .security-info-handler .safety-text .text-title {
+    font-family: "Bilbo Swash Caps", cursive;
+    margin: 0;
+    line-height: 1;
+    @extend .wbu-titre-suppra!optional;
+    color: $wbu-color-secondary;
+  }
+  .security-info-handler .safety-text .text-paragraph {
+    font-weight: 400 !important;
+  }
+}
+
+.space-padding-custom.force {
+  padding-block: $space_bottom * 0.6 !important;
+  @include media-min(SM) {
+    padding-block: $space_bottom * 1.2 !important;
+  }
+  @include media-min(MD) {
+    padding-block: $space_bottom * 1.8 !important;
+  }
+  @include media-min(DD) {
+    padding-block: $space_bottom * 2 !important;
+  }
+
+  &.pb-0 {
+    padding-bottom: 0 !important;
+  }
+  &.pt-0 {
+    padding-top: 0 !important;
+  }
+}
+
+/**
+ *  images
+ */
+.fb-features .row-handler {
+  padding-bottom: $wbu-margin * 2.5;
+  padding-top: 0rem;
+  overflow: hidden;
+  position: relative;
+  > div:first-child {
+    z-index: 3;
+  }
+  //
+  .img-handler {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    .show-box {
+      > .block {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        opacity: 0.5;
+      }
+    }
+    @include media-min(DD) {
+      position: unset;
+      left: unset;
+      right: unset;
+      top: unset;
+    }
+  }
+  //
+  .content-left,
+  .content-right {
+    .box-item {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 500px;
+      width: 100%;
+      @include media-min(DD) {
+        max-width: 100%;
+      }
+    }
+  }
+  .content-left {
+    .box-item {
+      .text {
+        text-align: left;
+        margin-left: $wbu-margin * 0.5;
+        margin-right: 0;
+        @include media-min(DD) {
+          text-align: right;
+          margin-left: 0;
+          margin-right: $wbu-margin * 0.5;
+        }
+      }
+      .icon {
+        order: 0;
+        @include media-min(DD) {
+          order: 2;
+        }
+      }
+    }
+  }
+}

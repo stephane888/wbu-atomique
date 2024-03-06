@@ -1,0 +1,37 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../variables" as *;
+
+.more_fields_list_button_light.more_fields_exposed_filter {
+  margin-bottom: $wbu-margin * 0.75;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      margin-bottom: $wbu-margin * 0.4;
+      margin-right: $wbu-margin * 0.4;
+    }
+    a {
+      border-radius: 5px;
+      border: 1px solid $wbu-color-boder;
+      display: block;
+      padding: $wbu-margin * 0.25 $wbu-margin * 0.4;
+      color: lighten($wbu-color-text, 20%);
+      font-size: 87%;
+      line-height: 1;
+      span {
+        font-size: 90%;
+        padding-left: $wbu-margin * 0.15;
+        color: lighten($wbu-color-text, 20%);
+      }
+      &.bef-link--selected {
+        background-color: rgba($wbu-background, 45%);
+        color: color-yiq($wbu-background);
+        span {
+          color: color-yiq($wbu-background);
+        }
+      }
+    }
+  }
+}
