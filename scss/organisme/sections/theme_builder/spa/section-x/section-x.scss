@@ -3,64 +3,46 @@
 
 
 
-
 .slide2{
     background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_1589823133v2-EDIT_1512x.jpg?v=1672929603');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    opacity: 0.9;
-    margin-bottom: 25px;
+   
+   color: color-yiq($wbu-color-primary);
+    .slide2-container{
+        max-width: 40%;
+       text-align: center;
+      .slide2-container-texte{
+        height: 100%;
+        padding-top: 60%;
+        
+      }
+      .btn{
 
-
-    .container{
-        padding-top: $wbu-padding * 16;
-        .slide2-container-texte{
-         
-           .texte{
-             line-height: $wbu-default-line-height - 0.4;
-            }
-            .btn{
-                text-decoration: none;
-                background: $wbu-color-secondary;
-                color: $wbu-color-primary;
-                border: 2px solid $wbu-color-secondary;
-                vertical-align: middle;
-                border-radius: 25px; 
-              
-            }
-        }
-    }
-
-}
-
-
-@media only screen and (DD){
-    
-    .slide2 {
-    
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/slide-mobile2_900x@2x.jpg?v=1632837204');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        align-items: center;
-        height: 100vh;
- 
-        .container {
-          padding-top: 10%;
-
-          .slide2-container-texte{
-            .texte{
-                font-size: 23px;
-            }
+        &:hover{
+           opacity: 0.5;
             
-          }
         }
     }
-}
-    
-    
+      
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
