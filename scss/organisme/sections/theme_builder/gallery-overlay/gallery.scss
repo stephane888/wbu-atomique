@@ -3,41 +3,46 @@
 @import "font-awesome/scss/font-awesome";
 
 
-#gallery {
+.gallery-overlay-section {
     padding-top: 40px;
 
-    @media screen and (min-width: 991px) {
+    @include media-min(DD) {
         padding: 60px 30px 0 30px;
     }
 
-    .img-wrapper {
-        position: relative;
-        margin-top: 15px;
+    .gallery-overlay-section-gallery {
 
-        img {
+
+
+        .go-img-wrapper {
+            position: relative;
+            margin-top: 15px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .go-img-overlay {
+            background: rgba(0, 0, 0, 0.7);
             width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+
+            i {
+                color: #fff;
+                font-size: 3em;
+            }
         }
     }
 
-    .img-overlay {
-        background: rgba(0, 0, 0, 0.7);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-
-        i {
-            color: #fff;
-            font-size: 3em;
-        }
-    }
-
-    #overlay {
+    .gallery-overlay-section-overlay {
         background: rgba(0, 0, 0, 0.7);
         width: 100%;
         height: 100%;
@@ -54,65 +59,70 @@
         -ms-user-select: none;
         user-select: none;
 
-        img {
-            margin: 0;
-            width: 80%;
-            height: auto;
-            object-fit: contain;
-            padding: 5%;
+        .gallery-overlay-section {
 
-            @media screen and (min-width:768px) {
-                width: 60%;
+            &-current-image {
+                margin: 0;
+                width: 80%;
+                height: auto;
+                object-fit: contain;
+                padding: 5%;
+
+                @include media-min(MD) {
+                    width: 60%;
+                }
+
+                @include media-min(M) {
+                    width: 50%;
+                }
             }
 
-            @media screen and (min-width:1200px) {
-                width: 50%;
+            &-btn-next {
+                color: #fff;
+                font-size: 2em;
+                transition: opacity 0.8s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                @include media-min(MD) {
+                    font-size: 3em;
+                }
+            }
+
+            &-btn-prev {
+                color: #fff;
+                font-size: 2em;
+                transition: opacity 0.8s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                @include media-min(MD) {
+                    font-size: 3em;
+                }
+            }
+
+            &-btn-exit {
+                color: #fff;
+                font-size: 2em;
+                transition: opacity 0.8s;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+
+                @include media-min(MD) {
+                    font-size: 3em;
+                }
             }
         }
     }
 
-    #nextButton {
-        color: #fff;
-        font-size: 2em;
-        transition: opacity 0.8s;
 
-        &:hover {
-            opacity: 0.7;
-        }
-
-        @media screen and (min-width:768px) {
-            font-size: 3em;
-        }
-    }
-
-    #prevButton {
-        color: #fff;
-        font-size: 2em;
-        transition: opacity 0.8s;
-
-        &:hover {
-            opacity: 0.7;
-        }
-
-        @media screen and (min-width:768px) {
-            font-size: 3em;
-        }
-    }
-
-    #exitButton {
-        color: #fff;
-        font-size: 2em;
-        transition: opacity 0.8s;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-
-        &:hover {
-            opacity: 0.7;
-        }
-
-        @media screen and (min-width:768px) {
-            font-size: 3em;
-        }
-    }
 }
