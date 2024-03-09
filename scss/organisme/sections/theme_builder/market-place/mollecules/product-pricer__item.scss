@@ -17,17 +17,25 @@
     text-decoration: none;
     outline: 0;
   }
+  &_attributes {
+    .product-pricer__item_size {
+      margin-right: $wbu-margin * 0.2;
+      img {
+        width: 16px;
+        border-radius: 5px;
+      }
+    }
+  }
   &_price {
     text-align: center;
-    font-size: $wbu-h3-font-size;
-    margin: 2rem 0 0 0;
+    margin: 0rem $wbu-margin * 0.5 0 0;
     &_text {
       font-weight: 700;
       color: inherit;
+      margin: 0;
     }
   }
   &_content {
-    font-size: $wbu-default-font-size-sm; //$wbu-default-font-size;
     font-weight: 500;
     padding: 0 1rem 0 1rem;
     margin: 1rem 0 0 0;
@@ -99,10 +107,10 @@
     }
   }
   &_size {
-    margin: 1rem 0 1rem 0;
-    border: 0.1rem solid black;
-    padding: 1rem;
-    border-radius: 2rem;
+    //margin: 1rem 0 1rem 0;
+    //border: 0.1rem solid black;
+    padding: 0.5rem;
+    //  border-radius: 2rem;
   }
   &_image {
     margin: 0;
@@ -121,5 +129,7 @@
       border-right: 5px solid #fff;
       border-left: 5px solid #fff;
     }
+    // On masque pour l'instant, problabement, il faudra :
+    display: none;
   }
 }

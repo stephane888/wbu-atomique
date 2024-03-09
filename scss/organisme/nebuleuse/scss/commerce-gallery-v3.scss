@@ -1,11 +1,15 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 @use "../../../swipper/swiper-default.scss";
 
-$with_thumbs_slider: 250px;
+$with_thumbs_slider: 100px;
 .galleries-main-thumbs {
   // main slider
   .galleries-main {
     position: relative;
+    margin-bottom: $wbu-margin;
+    @include media-min(DD) {
+      order: 1;
+    }
     &::after {
       content: "";
       padding: 0;
@@ -27,7 +31,6 @@ $with_thumbs_slider: 250px;
       position: absolute;
     }
     .swiper-slide {
-      border: 1px solid #ccc;
       background-color: #fff;
     }
   }
@@ -38,26 +41,15 @@ $with_thumbs_slider: 250px;
       height: auto;
     }
     .swiper-slide {
-      border: 1px solid #ccc;
+      border: 2px solid transparent;
       position: relative;
-      opacity: 0.8;
+      padding: $wbu-margin * 0.4;
+      opacity: 0.7;
       background-color: #fff;
-      &:after {
-        position: absolute;
-        background-color: rgba($wbu-background, 40%);
-        z-index: 1;
-        @include WBUtransition();
-        content: "";
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }
+      @include WBUtransition();
       &-thumb-active {
         opacity: 1;
-        &:after {
-          background-color: rgba($wbu-background, 0);
-        }
+        border-color: $wbu-color-primary;
       }
     }
     @include media-min(DD) {

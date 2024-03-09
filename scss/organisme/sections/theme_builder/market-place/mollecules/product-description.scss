@@ -4,12 +4,23 @@
   flex-direction: column;
   align-items: left;
   justify-content: space-between;
-  color: $wbu-color-secondary;
-
+  &__subname {
+    .field {
+      margin-bottom: $wbu-margin * 0.4;
+      display: flex;
+      .field__label {
+        width: 40%;
+        min-width: 100px;
+        margin-right: $wbu-margin * 0.5;
+        + .field__item {
+          font-weight: 600;
+        }
+      }
+    }
+    margin-bottom: $wbu-margin * 0.8;
+  }
   &__name {
     font-weight: 600;
+    color: $wbu-color-primary;
   }
-  // &__subname {
-  //   //
-  // }
 }
