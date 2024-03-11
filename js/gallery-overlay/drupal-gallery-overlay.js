@@ -8,10 +8,13 @@ import GalleryOverlay from "./gallery-overlay";
             if (context.querySelectorAll && context.querySelectorAll(".drupal-gallery-overlay").length) {
                 console.log(...context.querySelector(".drupal-gallery-overlay").classList);
                 if (![...context.querySelector(".drupal-gallery-overlay").classList].includes("loaded")) {
-                    const dg = new GalleryOverlay(context);
-                    dg.build();
+
                     [...context.querySelectorAll(".drupal-gallery-overlay")].forEach(element => {
                         element.classList.add("loaded")
+
+                        const settings = element.hasAttribute("data-gallery-overlay") ? JSON.parse(element.getAttribute("data-gallery-overlay")) : {};
+                        const dg = new GalleryOverlay(context, settings);
+                        dg.build();
                     });
                 }
             }

@@ -77,7 +77,7 @@ class GalleryOverlay {
             }
         );
 
-        const settings = { ...defaultSettings, ...settings };
+        const settings = { ...defaultSettings, ...this.settings };
         /**
          * @var {Array < Element | Document >} $generatedElement
          */
@@ -135,7 +135,6 @@ class GalleryOverlay {
         $generatedElement.nextButton.click(function (event) {
             // Hide the current image
             $generatedElement.image.hide();
-            console.log($generatedElement.image);
             // Overlay image location
             var $currentImgSrc = $generatedElement.image.attr("src");
             // Image with matching location of the overlay image
@@ -147,10 +146,8 @@ class GalleryOverlay {
             // If there is a next image
             if ($nextImg.length > 0) {
                 // Fade in the next image
-                console.log($generatedElement.image);
                 $generatedElement.image.attr("src", $nextImg.attr("src")).fadeIn(settings.fade_time);
             } else {
-                console.log($generatedElement.image);
                 // Otherwise fade in the first image
                 $generatedElement.image.attr("src", $($images[0]).attr("src")).fadeIn(settings.fade_time);
             }
