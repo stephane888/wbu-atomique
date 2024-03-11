@@ -127,7 +127,6 @@ class SwiperManager {
                   this.SwipersInstances[parent] = new Swiper(elt_PP.item, elt_PP.overrideSettings);
                   this.TransistionOrders(this.getInstances(parent), this.getInstances(children));
                   this.ChangeDirenctionThumb(this.getInstances(children));
-                  console.log(" Run swiper slider by children : test => 30/12/2024 ");
                 }
               }
             } else {

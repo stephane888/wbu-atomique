@@ -1,12 +1,24 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 @use "../../../swipper/swiper-default.scss";
+@use "./commerce-gallery-custom.scss";
+
+// PAGINAION : L'ordre compte modeles, positions, colors.
+@use "../../../swipper/components/pagination-models.scss";
+@use "../../../swipper/components/pagination-positions.scss";
+@use "../../../swipper/components/pagination-colors.scss";
+// NAVIGATION : L'ordre compte modeles, positions, colors.
+@use "../../../swipper/components/navigation.scss";
+@use "../../../swipper/components/navigation-positions.scss";
+@use "../../../swipper/components/navigation-colors.scss";
 
 $with_thumbs_slider: 100px;
 .galleries-main-thumbs {
+  max-height: 600px;
   // main slider
   .galleries-main {
     position: relative;
     margin-bottom: $wbu-margin;
+    margin-right: $wbu-margin;
     @include media-min(DD) {
       order: 1;
     }
@@ -36,15 +48,40 @@ $with_thumbs_slider: 100px;
   }
   // thumb slider
   .galleries-thumb {
-    .swiper-wrapper {
-      max-height: 500px;
-      height: auto;
+    max-height: 200px;
+    overflow: hidden;
+    height: auto;
+    .swiper-button {
+      display: none;
+      &::after {
+        font-size: 25px;
+      }
     }
+    &.swiper-vertical {
+      max-height: 100%;
+      // padding-top: $wbu-margin * 2;
+      // padding-bottom: $wbu-margin * 2;
+      margin-right: $wbu-margin;
+      .swiper-button-next {
+        bottom: 1rem;
+      }
+      .swiper-button {
+        display: flex;
+      }
+    }
+    &.swiper-horizontal {
+      padding-left: $wbu-margin * 2;
+      padding-right: $wbu-margin * 2;
+      .swiper-button {
+        display: flex;
+      }
+    }
+
     .swiper-slide {
       border: 2px solid transparent;
       position: relative;
       padding: $wbu-margin * 0.4;
-      opacity: 0.7;
+      opacity: 0.88;
       background-color: #fff;
       @include WBUtransition();
       &-thumb-active {

@@ -1,0 +1,18 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../../defaut/customAniamate.scss";
+.layoutscommerce-product-block {
+  form.commerce-order-item-add-to-cart-form {
+    .row {
+      margin-bottom: $wbu-margin;
+      .form-item {
+        margin: 0 !important;
+      }
+    }
+    svg {
+      fill: currentColor;
+      &.svg-load {
+        animation: fa-spin 2s infinite linear;
+      }
+    }
+  }
+}
