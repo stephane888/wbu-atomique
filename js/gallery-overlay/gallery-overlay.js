@@ -140,7 +140,7 @@ class GalleryOverlay {
             // Image with matching location of the overlay image
             var $currentImg = $($gallerySelector + ' a[href="' + $currentImgSrc + '"]');
             // Finds the next image
-            var $nextImg = $($currentImg.closest('.image').next().find('a'));
+            var $nextImg = $($currentImg.closest('.base-image-container').next().find('a'));
             // If there is a next image
             if ($nextImg.length > 0) {
                 // Fade in the next image
@@ -165,7 +165,7 @@ class GalleryOverlay {
             // Image with matching location of the overlay image
             var $currentImg = $($gallerySelector + ' a[href="' + $currentImgSrc + '"]');
             // Finds the next image
-            var $nextImg = $($currentImg.closest(".image").prev().find("a"));
+            var $nextImg = $($currentImg.closest(".base-image-container").prev().find("a"));
             // Fade in the next image
             if ($nextImg.length > 0) {
                 // Fade in the next image
