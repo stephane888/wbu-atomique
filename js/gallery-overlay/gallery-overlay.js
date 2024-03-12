@@ -139,13 +139,8 @@ class GalleryOverlay {
             var $currentImgSrc = $generatedElement.image.attr("src");
             // Image with matching location of the overlay image
             var $currentImg = $($gallerySelector + ' a[href="' + $currentImgSrc + '"]');
-            console.log("currentImage: ", $currentImg);
             // Finds the next image
             var $nextImg = $($currentImg.closest('.image').next().find('a'));
-            console.log("next Image: ", $nextImg);
-            // All of the images in the gallery
-            console.log("Selector:\n", $gallerySelector + ' a[href="' + $currentImgSrc + '"]');
-            // console.log("images", $images);
             // If there is a next image
             if ($nextImg.length > 0) {
                 // Fade in the next image
@@ -172,11 +167,6 @@ class GalleryOverlay {
             // Finds the next image
             var $nextImg = $($currentImg.closest(".image").prev().find("a"));
             // Fade in the next image
-            console.log({
-                'next': $nextImg,
-                'current': $currentImg,
-                "currentSrc": $currentImgSrc
-            });
             if ($nextImg.length > 0) {
                 // Fade in the next image
                 var imageLocation = $nextImg.prev().attr("href");
