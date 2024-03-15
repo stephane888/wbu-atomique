@@ -13,10 +13,21 @@
 @use "./mollecules/product-card__plus.scss";
 @use "./mollecules/product-btn-action.scss";
 @use "./mollecules/product-gift.scss";
-.product-block {
-  @include media-min(DD) {
-    padding-left: 3rem;
-    padding-right: 3rem;
+@use "./mollecules/product-form.scss";
+.layoutscommerce-product-block {
+  .caracteristiques {
+    .field {
+      margin-bottom: $wbu-margin * 0.4;
+      display: flex;
+      .field__label {
+        width: 30%;
+        min-width: 100px;
+        margin-right: $wbu-margin * 0.5;
+        + .field__item {
+          font-weight: 600;
+        }
+      }
+    }
   }
   position: relative;
   .product-content {
@@ -38,7 +49,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem;
+      padding-bottom: 1rem;
       .product-tags,
       .product-love-icons {
         max-width: 50%;

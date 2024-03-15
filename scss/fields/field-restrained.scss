@@ -1,0 +1,17 @@
+@use "../wbu-ressources-clean.scss" as *;
+
+.restrained-field {
+  position: relative;
+  background-color: red;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    padding-top: 30%;
+    background-image: linear-gradient(to bottom, transparent, white);
+    content: "";
+  }
+}

@@ -1,25 +1,23 @@
-//// custom animation 
+//// custom animation
 ////
-@mixin vitesseAlter(){
-  
+@mixin vitesseAlter() {
   .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
   }
- 
+
   .animated.infinite {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
   }
 
-  
   .animated.delay-400ms {
     -webkit-animation-delay: 400ms;
     animation-delay: 400ms;
   }
-  
+
   .animated.delay-800ms {
     -webkit-animation-delay: 800ms;
     animation-delay: 800ms;
@@ -28,45 +26,41 @@
     -webkit-animation-delay: 1200ms;
     animation-delay: 1200ms;
   }
- 
- .animated.delay-1600ms {
+
+  .animated.delay-1600ms {
     -webkit-animation-delay: 1600ms;
     animation-delay: 1600ms;
   }
-
 }
 
 ////
-@mixin zoomIn($name:zoomIn, $zoom:1.1) {
-@keyframes zoomIn {
-  from {
-    opacity: 0 !important;
-    //
-    -webkit-transform: scale3d($zoom, $zoom, $zoom); 
-    transform: scale3d($zoom, $zoom, $zoom);
-    //
-    -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    
+@mixin zoomIn($name: zoomIn, $zoom: 1.1) {
+  @keyframes zoomIn {
+    from {
+      opacity: 0 !important;
+      //
+      -webkit-transform: scale3d($zoom, $zoom, $zoom);
+      transform: scale3d($zoom, $zoom, $zoom);
+      //
+      -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+      animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    50% {
+      opacity: 1 !important;
+      -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+      animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
   }
-  50% {
-    opacity: 1 !important;
-    -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  .zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
   }
-}
-
-.zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-  
-}
-
 }
 /////////
-@mixin scale($name:zoomOut, $p_x:1.1, $p_y:1.1, $p_z:1.1, $time:1s, $timing:cubic-bezier(0.165, 0.84, 0.44, 1) ) {
+@mixin scale($name: zoomOut, $p_x: 1.1, $p_y: 1.1, $p_z: 1.1, $time: 1s, $timing: cubic-bezier(0.165, 0.84, 0.44, 1)) {
   @keyframes $name {
-  from {
+    from {
       opacity: 0 !important;
       -webkit-transform: scale3d($p_x, $p_y, $p_z);
       transform: scale3d($p_x, $p_y, $p_z);
@@ -75,100 +69,101 @@
       opacity: 1 !important;
       -webkit-transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
-    }  
+    }
   }
   .#{$name} {
     animation-name: $name;
-    @if $time != '1s' {
+    @if $time != "1s" {
       -webkit-animation-duration: $time;
       animation-duration: $time;
     }
     ///
-      -webkit-animation-timing-function: $timing;
-      animation-timing-function: $timing;
+    -webkit-animation-timing-function: $timing;
+    animation-timing-function: $timing;
   }
 }
 
 //////
-@mixin translate($name:slideInTop, $p_x:0, $p_y:100%, $p_z:0, $time:1s, $timing:cubic-bezier(0.165, 0.84, 0.44, 1)) {
-@keyframes $name {
-  from {
-  	opacity: 0 !important;
-    -webkit-transform: translate3d($p_x,$p_y,$p_z);
-    transform: translate3d($p_x,$p_y,$p_z);
-    visibility: visible;
-  }
-  to {
-  	opacity: 1 !important;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+@mixin translate($name: slideInTop, $p_x: 0, $p_y: 100%, $p_z: 0, $time: 1s, $timing: cubic-bezier(0.165, 0.84, 0.44, 1)) {
+  @keyframes $name {
+    from {
+      opacity: 0 !important;
+      -webkit-transform: translate3d($p_x, $p_y, $p_z);
+      transform: translate3d($p_x, $p_y, $p_z);
+      visibility: visible;
+    }
+    to {
+      opacity: 1 !important;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   .#{$name} {
     animation-name: $name;
-    @if $time != '1s' {
+    @if $time != "1s" {
       -webkit-animation-duration: $time;
       animation-duration: $time;
     }
     ///
-      -webkit-animation-timing-function: $timing;
-      animation-timing-function: $timing;
+    -webkit-animation-timing-function: $timing;
+    animation-timing-function: $timing;
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-
-
-@mixin customAnimate(){
-    .animated.easeInOutCirc{
+@mixin customAnimate() {
+  .animated.easeInOutCirc {
     -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86) !important;
-    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86) !important;}
-    ///
-  .animated.easeInOutQuad{
-  	-webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
-    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;;}
-    ///
-  .animated.easeInOutQuint{
-  	-webkit-animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
-    animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;}
-    ///
-  .animated.easeInExpo{
-  	-webkit-animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
-    animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;}
-    ///
-  .animated.easeInOutBack{
-  	-webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
-    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;}
-    
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86) !important;
+  }
+  ///
+  .animated.easeInOutQuad {
+    -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+  }
+  ///
+  .animated.easeInOutQuint {
+    -webkit-animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+    animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1) !important;
+  }
+  ///
+  .animated.easeInExpo {
+    -webkit-animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
+    animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
+  }
+  ///
+  .animated.easeInOutBack {
+    -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  }
+
   ////
-    .animated.easeInOutBack2{
-  	-webkit-animation-timing-function: cubic-bezier(.74,1.24,.41,1.8) !important;
-    animation-timing-function: cubic-bezier(.74,1.24,.41,1.8) !important;}
-    ///
-  .animated.easeOutSine{
-  	-webkit-animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1) !important;
-    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1) !important;}
-    ///
-  .animated.easeOutCubic{
-  	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;}
-    ///
-  .animated.easeOutQuart{
-  	-webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;}
+  .animated.easeInOutBack2 {
+    -webkit-animation-timing-function: cubic-bezier(0.74, 1.24, 0.41, 1.8) !important;
+    animation-timing-function: cubic-bezier(0.74, 1.24, 0.41, 1.8) !important;
+  }
+  ///
+  .animated.easeOutSine {
+    -webkit-animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1) !important;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1) !important;
+  }
+  ///
+  .animated.easeOutCubic {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+  }
+  ///
+  .animated.easeOutQuart {
+    -webkit-animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

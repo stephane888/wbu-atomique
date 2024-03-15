@@ -3,10 +3,10 @@
 .hbk-mega-menu.style-merseille {
   display: flex;
   justify-content: space-between;
-  padding: 0 $wbu-margin * 0.75;
-  @include media-min(DD) {
-    padding: 0 $wbu-margin * 1.5;
-  }
+  // padding: 0 $wbu-margin * 0.75;
+  // @include media-min(DD) {
+  //   padding: 0 $wbu-margin * 1.5;
+  // }
   .block-logo {
     padding: $wbu-margin * 0.5 0;
     img {

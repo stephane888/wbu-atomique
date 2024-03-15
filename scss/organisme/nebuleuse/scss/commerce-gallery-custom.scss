@@ -1,154 +1,144 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 
-
 .galleries-main-thumbs {
+  .swiper-full-options {
+    &.galleries-main,
+    &.galleries-thumb {
+      .swiper-slide {
+        position: relative;
+        cursor: pointer;
 
-    .swiper-full-options {
-
-        &.galleries-main,
-        &.galleries-thumb {
-            .swiper-slide {
-                position: relative;
-                cursor: pointer;
-
-                .swiper-image-full,
-                .swiper-video-full {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                }
-
-                .video-play-button {
-                    opacity: 0;
-                    visibility: hidden;
-                    top: 100%;
-                    position: absolute;
-                    width: 100px;
-                    left: 50%;
-                    aspect-ratio: 1;
-                    transform: translate(-50%, -50%);
-                    justify-content: center;
-                    align-items: center;
-                    display: flex;
-                    transition: visibility .4s, opacity .2s, top .4s;
-
-                    &.video-onplay {
-                        .action-svg.play-svg {
-                            transform: translate(-50%, -50%) scale(1.5);
-                            opacity: 0;
-                            visibility: hidden;
-                            position: absolute;
-                        }
-                    }
-
-                    &.video-onpause {
-                        .action-svg.pause-svg {
-                            transform: translate(-50%, -50%) scale(1.5);
-                            visibility: hidden;
-                            opacity: 0;
-                            position: absolute;
-                        }
-                    }
-
-                    .button-part-circle {
-                        padding: 10px;
-                        width: 100%;
-                        transform: scale(.75);
-                        border: 2px solid $wbu-color-primary;
-                        border-radius: 50%;
-                        display: flex;
-                        color: $wbu-color-primary;
-                        background-color: transparent;
-                        transition: color .8s ease;
-                        position: relative;
-                        height: 100%;
-
-                        .action-svg {
-                            color: currentColor;
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            height: 60px;
-                            transform: translate(-50%, -50%);
-                            transition: visibility .3s, opacity .3s, transform .4s;
-                        }
-                    }
-                }
-
-                &:hover .video-play-button,
-                .video-onpause.video-play-button {
-
-
-
-                    opacity: 1;
-                    top: 50%;
-                    z-index: 1;
-                    visibility: visible;
-
-
-                    &::before,
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        border-radius: 50%;
-                        // box-shadow: inset $wbu-color-primary 0 0 8px;
-                        border: 1px solid $wbu-color-primary;
-                        transform: scale(0.75);
-                        animation: play-button 3s ease-out infinite;
-                        transition: transform .8s ease;
-                    }
-
-                    &::before {
-                        transition: border-width .4s ease-in;
-                    }
-
-                    &::after {
-                        animation-delay: 1.5s;
-                    }
-
-                    &:hover {
-
-                        &::before,
-                        &::after {
-                            animation: none;
-                            opacity: 1;
-                        }
-
-                        &::before {
-                            // background-color: $wbu-color-primary;
-                            border-width: 50px;
-                        }
-
-                        &::after {
-                            animation: none;
-                            content: none;
-                            background-color: color-yiq($wbu-color-primary);
-                            transform: scale(0);
-                        }
-
-                        .button-part-circle {
-                            color: color-yiq($wbu-color-primary)
-                        }
-                    }
-
-
-                }
-            }
+        .swiper-image-full,
+        .swiper-video-full {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
         }
+
+        .video-play-button {
+          opacity: 0;
+          visibility: hidden;
+          top: 100%;
+          position: absolute;
+          width: 100px;
+          left: 50%;
+          aspect-ratio: 1;
+          transform: translate(-50%, -50%);
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          transition: visibility 0.4s, opacity 0.2s, top 0.4s;
+
+          &.video-onplay {
+            .action-svg.play-svg {
+              transform: translate(-50%, -50%) scale(1.5);
+              opacity: 0;
+              visibility: hidden;
+              position: absolute;
+            }
+          }
+
+          &.video-onpause {
+            .action-svg.pause-svg {
+              transform: translate(-50%, -50%) scale(1.5);
+              visibility: hidden;
+              opacity: 0;
+              position: absolute;
+            }
+          }
+
+          .button-part-circle {
+            padding: 10px;
+            width: 100%;
+            transform: scale(0.75);
+            border: 2px solid $wbu-color-primary;
+            border-radius: 50%;
+            display: flex;
+            color: $wbu-color-primary;
+            background-color: transparent;
+            transition: color 0.8s ease;
+            position: relative;
+            height: 100%;
+
+            .action-svg {
+              color: currentColor;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              height: 60px;
+              transform: translate(-50%, -50%);
+              transition: visibility 0.3s, opacity 0.3s, transform 0.4s;
+            }
+          }
+        }
+
+        &:hover .video-play-button,
+        .video-onpause.video-play-button {
+          opacity: 1;
+          top: 50%;
+          z-index: 1;
+          visibility: visible;
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            // box-shadow: inset $wbu-color-primary 0 0 8px;
+            border: 1px solid $wbu-color-primary;
+            transform: scale(0.75);
+            animation: play-button 3s ease-out infinite;
+            transition: transform 0.8s ease;
+          }
+
+          &::before {
+            transition: border-width 0.4s ease-in;
+          }
+
+          &::after {
+            animation-delay: 1.5s;
+          }
+
+          &:hover {
+            &::before,
+            &::after {
+              animation: none;
+              opacity: 1;
+            }
+
+            &::before {
+              // background-color: $wbu-color-primary;
+              border-width: 50px;
+            }
+
+            &::after {
+              animation: none;
+              content: none;
+              background-color: color-yiq($wbu-color-primary);
+              transform: scale(0);
+            }
+
+            .button-part-circle {
+              color: color-yiq($wbu-color-primary);
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 @keyframes play-button {
-    0% {
-        transform: scale(0.75);
-    }
+  0% {
+    transform: scale(0.75);
+  }
 
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
