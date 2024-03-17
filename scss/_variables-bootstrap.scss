@@ -48,7 +48,10 @@ $nav-link-padding-y: $wbu-margin * 0.5;
 $nav-link-padding-x: $wbu-margin * 0.8;
 $form-check-input-gutter: $wbu-margin;
 $card-spacer-x: $wbu-margin;
-
+//
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+//
 // $theme-colors: map-merge(
 //   (
 //     // Add custom color.

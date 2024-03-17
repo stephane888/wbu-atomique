@@ -26,3 +26,9 @@ table.treetable tbody > tr.token-group {
 .navbar-nav .nav-link.is-active {
   color: $wbu-color-primary;
 }
+/**
+ * les messages incluent dans placeholder pose un probleme de visibilité.
+ */
+.placeholder {
+  background-color: transparent;
+}

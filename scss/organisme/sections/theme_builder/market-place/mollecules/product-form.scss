@@ -11,7 +11,7 @@
     svg {
       fill: currentColor;
       &.svg-load {
-        animation: fa-spin 2s infinite linear;
+        animation: animate-rotation 2s infinite linear;
       }
     }
   }

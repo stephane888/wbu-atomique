@@ -110,7 +110,10 @@
     animation-timing-function: $timing;
   }
 }
-@keyframes fa-spin {
+/**
+ * Build rotation som
+ */
+@keyframes animate-rotation {
   0% {
     transform: rotate(0deg);
   }
