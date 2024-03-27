@@ -1,0 +1,9 @@
+@use "../../../../../variables" as*;
+@use "./../../../../../wbu-ressources-clean.scss" as *;
+
+.row_image{
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: aqua;
+}
