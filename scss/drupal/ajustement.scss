@@ -31,4 +31,29 @@ table.treetable tbody > tr.token-group {
  */
 .placeholder {
   background-color: transparent;
+  font-weight: 900;
+  padding-inline: 12px;
+}
+
+/**
+ * Permettre l'affichage de plusieurs boutons de configurations.
+ */
+.contextual-region {
+  .contextual {
+    + .contextual {
+      right: 24px;
+      top: 24px;
+      + .contextual {
+        right: 36px;
+        top: 30px;
+      }
+    }
+  }
+}
+
+/**
+ * l'icone du bouton dropdown doit suivre la couleur courante.
+ */
+.dropdown-toggle::after {
+  color: inherit;
 }

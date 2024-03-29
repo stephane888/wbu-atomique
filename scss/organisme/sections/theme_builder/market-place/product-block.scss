@@ -35,7 +35,7 @@
     max-width: 1200px;
     position: relative;
     .image-content {
-      overflow: auto;
+      //overflow: auto;
       position: sticky;
     }
     .desc-content {
@@ -67,8 +67,8 @@
       flex-direction: row;
       align-items: center;
       flex-wrap: wrap;
-      margin-left: -$wbu-margin * 0.5;
-      margin-right: -$wbu-margin * 0.5;
+      // margin-left: -$wbu-margin * 0.5;
+      // margin-right: -$wbu-margin * 0.5;
       //margin-top: $wbu-margin;
       .form-check {
         padding: 0;

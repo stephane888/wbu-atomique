@@ -1,13 +1,14 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 @use "../../../variables" as *;
-.administrator .commerceformatage_cart_habeuk {
-  //on va deduire en js.
-  padding-top: 80px;
-  .commerceformatage_cart_habeuk_close {
-    top: 79px;
-  }
-}
-//customise back button
+// Pas necessaire :
+// .administrator .commerceformatage_cart_habeuk {
+//   //on va deduire en js.
+//   padding-top: 80px;
+//   .commerceformatage_cart_habeuk_close {
+//     top: 79px;
+//   }
+// }
+// customise back button
 .layout-region-checkout-footer {
   float: none !important;
   .link--previous {
@@ -22,12 +23,15 @@
   }
 }
 //
-.commerceformatage_cart_habeuk_open {
-  margin-right: $wbu-margin;
-  cursor: pointer;
+.commerceformatage_cart_habeuk_icon1 {
   font-size: $wbu-default-font-size-sm;
+  margin-right: $wbu-margin * 0.25;
 }
-// permet de centrer verticalment les elements su tableau.
+.commerceformatage_cart_habeuk_open {
+  margin-right: 0;
+  cursor: pointer;
+}
+// Permet de centrer verticalment les elements su tableau.
 .table-td-align-middle {
   tbody tr td {
     vertical-align: initial;
@@ -93,10 +97,11 @@
     font-size: 3rem;
     position: absolute;
     z-index: 2;
-    top: 10px;
+    top: 25px;
     right: 15px;
     color: darken($color: $wbu-color-primary, $amount: 30%);
     cursor: pointer;
+    fill: currentColor;
     @include WBUtransition();
     &:hover {
       color: $wbu-color-primary;
@@ -124,6 +129,7 @@
       tr {
         td {
           vertical-align: baseline;
+          padding: $wbu-margin * 0.45;
           img {
             max-width: 82px;
             max-height: 82px;

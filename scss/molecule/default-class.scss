@@ -6,16 +6,17 @@
 // On ajoute les models de puces.
 @use "./steph/puce-check.scss";
 @use "./steph/puce-dd-check.scss";
-@use "./steph/animate-text.scss";
+// Tres peu utilisé.
+//@use "./steph/animate-text.scss";
 @use "./steph/puce-step-vertical.scss";
 // @use "../atome/typography/title.scss";
 @use "../atome/typography/default";
 
 // import default styles.
-@use "./Default/buttons.scss";
 @use "./Default/text.scss";
 @use "./Default/z-index.scss";
-@use "./Default/row-alter.scss";
+// Tres peu utilisé.
+// @use "./Default/row-alter.scss";
 @use "./Default/svg.scss";
 
 /**
