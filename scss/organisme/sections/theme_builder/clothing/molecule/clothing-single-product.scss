@@ -116,62 +116,62 @@
       fill: black;
     }
   }
-  .clothing-four-btn {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    justify-content: center;
-    height: 100%;
-    margin-top: 0;
-    pointer-events: none;
-    z-index: 3;
-    .btn-carre {
-      pointer-events: all;
-      opacity: 0;
-      position: relative;
-      top: 65%;
-      &:nth-child(1) {
-        transition: cubic-bezier(0, 0.16, 0.6, 1.01) 0.3s;
-      }
-      &:nth-child(2) {
-        transition: cubic-bezier(0, 0.16, 0.6, 1.01) 0.4s;
-      }
-      &:nth-child(3) {
-        transition: cubic-bezier(0, 0.16, 0.6, 1.01) 0.5s;
-      }
-      &:nth-child(4) {
-        transition: cubic-bezier(0, 0.16, 0.6, 1.01) 0.6s;
-      }
-      &:hover {
-        background-color: $wbu-color-secondary;
-        border-color: $wbu-color-secondary;
-        svg {
-          fill: $wbu-color-primary;
-        }
-      }
-    }
-  }
-  &:hover {
-    .images {
-      &::before {
-        opacity: 0.5;
-        transform: translate(-50%, -50%) scale(1);
-      }
-    }
-    .img-1 {
-      opacity: 0;
-    }
-    .img-2 {
-      opacity: 1;
-      //z-index: 1;
-    }
-    .clothing-four-btn {
-      .btn-carre {
-        top: 50%;
-        opacity: 1;
-      }
-    }
-  }
+  // .clothing-four-btn {
+  //   position: absolute;
+  //   transform: translate(-50%, -50%);
+  //   top: 50%;
+  //   left: 50%;
+  //   width: 100%;
+  //   justify-content: center;
+  //   height: 100%;
+  //   margin-top: 0;
+  //   pointer-events: none;
+  //   z-index: 3;
+  //   .btn-carre {
+  //     pointer-events: all;
+  //     opacity: 0;
+  //     position: relative;
+  //     top: 65%;
+  //     &:nth-child(1) {
+  //       transition: cubic-bezier(0, 0.16, 0.6, 1.01) 0.3s;
+  //     }
+  //     &:nth-child(2) {
+  //       transition: cubic-bezier(0, 0.16, 0.6, 1.01) 0.4s;
+  //     }
+  //     &:nth-child(3) {
+  //       transition: cubic-bezier(0, 0.16, 0.6, 1.01) 0.5s;
+  //     }
+  //     &:nth-child(4) {
+  //       transition: cubic-bezier(0, 0.16, 0.6, 1.01) 0.6s;
+  //     }
+  //     &:hover {
+  //       background-color: $wbu-color-secondary;
+  //       border-color: $wbu-color-secondary;
+  //       svg {
+  //         fill: $wbu-color-primary;
+  //       }
+  //     }
+  //   }
+  // }
+  // &:hover {
+  //   .images {
+  //     &::before {
+  //       opacity: 0.5;
+  //       transform: translate(-50%, -50%) scale(1);
+  //     }
+  //   }
+  //   .img-1 {
+  //     opacity: 0;
+  //   }
+  //   .img-2 {
+  //     opacity: 1;
+  //     //z-index: 1;
+  //   }
+  //   // .clothing-four-btn {
+  //   //   .btn-carre {
+  //   //     top: 50%;
+  //   //     opacity: 1;
+  //   //   }
+  //   // }
+  // }
 }

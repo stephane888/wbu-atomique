@@ -1,60 +1,60 @@
-@use "../../../../../wbu-ressources-clean.scss" as *;
+// @use "../../../../../wbu-ressources-clean.scss" as *;
 
-.clothing-four-btn .btn-carre {
-  width: 3.5rem;
-  height: 3.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid white;
-  background-color: transparent;
-  transition: all 0.3s ease-out 0s;
-  position: relative;
-  cursor: pointer;
-  padding: 0 0;
-  font-size: $wbu-h6-font-size;
-  i {
-    color: white;
-    transition: all 0.3s ease-out 0s;
-  }
-  svg {
-    width: 1.6rem;
-    height: 2rem;
-    fill: white;
-  }
-  &:hover {
-    background-color: $wbu-color-primary;
-    border-color: $wbu-color-primary;
-    i {
-      color: $wbu-color-primary;
-    }
-    .bc-tooltip {
-      top: -55px;
-      opacity: 1;
-    }
-  }
-  .bc-tooltip {
-    position: absolute;
-    background-color: black;
-    padding: $wbu-margin * 0.5 $wbu-margin;
-    left: calc(3.5rem / 2);
-    width: auto;
-    top: -30px;
-    border-radius: 4px;
-    white-space: nowrap;
-    opacity: 0;
-    transform: translate(-50%, 0px);
-    transition: ease-in-out 0.3s;
-    color: white;
-    pointer-events: none;
-    &::before {
-      content: "";
-      border: 10px solid transparent;
-      border-top-color: black;
-      position: absolute;
-      left: 50%;
-      top: 95%;
-      transform: translate(-50%, 0px);
-    }
-  }
-}
+// .clothing-four-btn .btn-carre {
+//   width: 3.5rem;
+//   height: 3.5rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border: 1px solid white;
+//   background-color: transparent;
+//   transition: all 0.3s ease-out 0s;
+//   position: relative;
+//   cursor: pointer;
+//   padding: 0 0;
+//   font-size: $wbu-h6-font-size;
+//   i {
+//     color: white;
+//     transition: all 0.3s ease-out 0s;
+//   }
+//   svg {
+//     width: 1.6rem;
+//     height: 2rem;
+//     fill: white;
+//   }
+//   &:hover {
+//     background-color: $wbu-color-primary;
+//     border-color: $wbu-color-primary;
+//     i {
+//       color: $wbu-color-primary;
+//     }
+//     .bc-tooltip {
+//       top: -55px;
+//       opacity: 1;
+//     }
+//   }
+//   .bc-tooltip {
+//     position: absolute;
+//     background-color: black;
+//     padding: $wbu-margin * 0.5 $wbu-margin;
+//     left: calc(3.5rem / 2);
+//     width: auto;
+//     top: -30px;
+//     border-radius: 4px;
+//     white-space: nowrap;
+//     opacity: 0;
+//     transform: translate(-50%, 0px);
+//     transition: ease-in-out 0.3s;
+//     color: white;
+//     pointer-events: none;
+//     &::before {
+//       content: "";
+//       border: 10px solid transparent;
+//       border-top-color: black;
+//       position: absolute;
+//       left: 50%;
+//       top: 95%;
+//       transform: translate(-50%, 0px);
+//     }
+//   }
+// }
