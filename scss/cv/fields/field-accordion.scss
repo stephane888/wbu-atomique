@@ -1,4 +1,5 @@
 @use "../../wbu-ressources-clean.scss" as *;
+
 .accordion.fields-box {
   .field-box {
     position: relative;
@@ -9,6 +10,10 @@
       background-color: $wbu-color-primary;
       display: flex;
       flex-wrap: nowrap;
+
+      .bg-black-50 {
+        background-color: rgba($color: #000, $alpha: 0.5);
+      }
 
       .field-icon {
         width: 63px;
@@ -34,6 +39,7 @@
         padding: $wbu-margin;
       }
     }
+
     .field-description {
       padding: $wbu-margin * 1.25 $wbu-margin * 1.15;
       // margin-block: 0px;
@@ -49,9 +55,11 @@
     .field-box {
       .field-meta {
         background-color: #f3f3f3;
+
         .field-title {
           color: #5b5b5b;
         }
+
         .field-icon {
           background-color: #b5b3b3;
         }
