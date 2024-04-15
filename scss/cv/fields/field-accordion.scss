@@ -13,6 +13,10 @@
 
       .bg-black-50 {
         background-color: rgba($color: #000, $alpha: 0.5);
+
+        .field-title {
+          color: color-yiq(gba($color: #000, $alpha: 0.5));
+        }
       }
 
       .field-icon {
