@@ -1,28 +1,28 @@
-@use "../../wbu-ressources-clean.scss" as *;
-@use "default";
-/**
-  Elment de base pour le titre.
-*/
-//
+// @use "../../wbu-ressources-clean.scss" as *;
+// @use "default";
+// /**
+//   Elment de base pour le titre.
+// */
+// //
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $wbu-title-font-family;
-  // font-weight: $wbu-title-font-weight;
-  font-size: $wbu-title-font-size;
-  margin: 0 0 $wbu-margin * 0.5;
-  color: $wbu-title-color;
-  @include media-min("DD") {
-    font-size: $wbu-title-font-size-sm;
-  }
-}
+// .h1,
+// .h2,
+// .h3,
+// .h4,
+// .h5,
+// .h6,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: $wbu-title-font-family;
+//   // font-weight: $wbu-title-font-weight;
+//   font-size: $wbu-title-font-size;
+//   margin: 0 0 $wbu-margin * 0.5;
+//   color: $wbu-title-color;
+//   @include media-min("DD") {
+//     font-size: $wbu-title-font-size-sm;
+//   }
+// }

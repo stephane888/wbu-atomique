@@ -1,4 +1,5 @@
 @use "../wbu-ressources-clean.scss" as *;
+@use "../molecule/default-class.scss" as *;
 // Ce fichier permet d'ajuster, les styles.
 // Version : Drupal 8/9;
 /**
@@ -56,4 +57,12 @@ table.treetable tbody > tr.token-group {
  */
 .dropdown-toggle::after {
   color: inherit;
+}
+
+/**
+ * On doit pouvoir distinguer les fieldset inclut dans les fieldset.
+ * On va ajouter le style de h5, car par defaut on est sur du h4.
+ */
+fieldset.form-item fieldset.form-item legend {
+  @extend .h5;
 }

@@ -11,11 +11,15 @@
  * border-color: rgba(color-yiq($wbu-background), 20%); ne fonctionne pas.
  * ( raison cette fonction est repressier , il faut utiliser color-contrast() ).
  */
+// On masque cette fonction car le calcul n'est pas assez exact.
+// @function color-yiq($color) {
+//   $result: invert($color);
+//   $lightness: lightness($result);
+//   @if ($lightness < 50) {
+//     $result: black;
+//   }
+//   @return $result;
+// }
 @function color-yiq($color) {
-  $result: invert($color);
-  $lightness: lightness($result);
-  @if ($lightness < 50) {
-    $result: black;
-  }
-  @return $result;
+  @return color-contrast($color);
 }

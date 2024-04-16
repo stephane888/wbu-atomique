@@ -1,13 +1,27 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 @use "../../../variables" as *;
-// Pas necessaire :
-// .administrator .commerceformatage_cart_habeuk {
-//   //on va deduire en js.
-//   padding-top: 80px;
-//   .commerceformatage_cart_habeuk_close {
-//     top: 79px;
-//   }
-// }
+.commerce-cart-form {
+  margin-bottom: $wbu-margin;
+  table {
+    tr {
+      td,
+      th {
+        &:last-child {
+          text-align: right;
+          padding-right: $wbu-margin;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  // Bouton to remove item in cart.
+  .remove-item:hover {
+    svg {
+      // Cette couleur reste statique, car elle signaler une action de suppresion.
+      fill: #cd1f1f;
+    }
+  }
+}
 // customise back button
 .layout-region-checkout-footer {
   float: none !important;
@@ -164,10 +178,12 @@
     }
   }
 }
+
 //
 .field--name-total-price {
-  background: #e9e7e7;
+  background: rgba($wbu-background, 20%);
   padding: $wbu-margin * 0.75 $wbu-margin * 0.5;
+  margin-bottom: $wbu-margin;
   .order-total-line.mb-5 {
     margin-bottom: 0 !important;
   }
@@ -202,7 +218,7 @@
       padding-bottom: $wbu-margin * 2;
       margin-bottom: 0 !important;
       .form-item {
-        margin-top: $wbu-margin * 0.75;
+        // margin-top: $wbu-margin * 0.75;
         > legend,
         > label {
           font-weight: 700;
@@ -242,6 +258,7 @@
 //
 .checkout-progress--custom {
   width: 100%;
+  margin-top: $wbu-margin * 2;
   margin-bottom: $wbu-margin * 3;
   .checkout-progress {
     margin: 0;
