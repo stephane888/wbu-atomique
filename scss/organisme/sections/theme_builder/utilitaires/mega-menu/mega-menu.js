@@ -1,12 +1,11 @@
 /**
- *  Ce fichier doit etre seperer en fin de pouvoir fonctionner sous different environnment.
- *  - https://www.npmjs.com/package/@drupal/once
  * Help to build, classic menu, mega-menu
  */
 class HbkMegaMenu {
   constructor() {
     //
     this.timerScroll;
+    this.timerResize;
   }
   /**
    * Ajoute les icones svg, à tous les elements qui possedent de
@@ -251,6 +250,50 @@ class HbkMegaMenu {
         derniere_position_de_scroll_connue = newPosition;
       }, 50);
     });
+  }
+
+  /**
+   * Calcule de la hauteur du menu afin de pouvoir pousser le site.
+   */
+  calculHauteur() {
+    const MainMenus = document.querySelectorAll(".hbk-mega-menu");
+    const run = () => {
+      MainMenus.forEach((MainMenu) => {
+        const parentElement = MainMenu.parentElement;
+        // On verifie si la fonctionnalité est activé.
+        const actif = parentElement.classList.contains("not-cover-section");
+        const disableOnTablette = parentElement.classList.contains("tablette");
+        const siteBlock = parentElement.parentElement;
+        if (actif && disableOnTablette && window.innerWidth <= 992) {
+          const height = MainMenu.offsetHeight;
+          siteBlock.style.paddingBottom = height + "px";
+        }
+        if (disableOnTablette && window.innerWidth > 992) siteBlock.style.paddingBottom = 0;
+      });
+    };
+    run();
+    window.addEventListener(
+      "resize",
+      () => {
+        if (this.timerResize) clearTimeout(this.timerResize);
+        this.timerResize = setTimeout(() => {
+          run();
+        }, 100);
+      },
+      true
+    );
+  }
+
+  /**
+   * Initialisation
+   */
+  build() {
+    this.toggleSubMenu();
+    this.addIconClose();
+    this.clickToOpenMobileMenu();
+    this.openModelsearch();
+    this.listernerScroll();
+    this.calculHauteur();
   }
 }
 export default HbkMegaMenu;

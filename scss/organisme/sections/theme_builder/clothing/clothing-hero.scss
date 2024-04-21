@@ -3,19 +3,12 @@
 @use "./separateur.scss" as *;
 .clothings_hero {
   position: relative;
-  min-height: 350px;
-  padding: 0 $wbu-margin;
-
-  @include media-min(MD) {
-    min-height: 500px;
-  }
-
-  @include media-min(DD) {
-    min-height: 600px;
-  }
+  min-height: 600px;
+  padding: 0;
 
   @include media-min(LM) {
     min-height: 700px;
+    padding: 0 $wbu-margin;
   }
   .image_bg {
     position: absolute;

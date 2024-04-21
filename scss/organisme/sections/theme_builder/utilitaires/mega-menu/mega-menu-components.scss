@@ -1,6 +1,5 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 //style-merseille _none menu-static hbk-dynamiques-headers
-
 .hbk-dynamiques-headers {
   &.menu-static {
     // @include media-min(DD) {
@@ -10,6 +9,15 @@
     width: 100%;
     @include WBUtransition($temps: 0.5s);
     // }
+  }
+  &.tablette {
+    @include media-min(DD) {
+      position: relative;
+      top: unset;
+      z-index: unset;
+      width: auto;
+      transform: unset;
+    }
   }
   &.fixed-menu {
     // @include media-min(DD) {
@@ -44,7 +52,6 @@
     .overlay {
       height: 100vh;
     }
-
     // }
   }
   &.menu-bg-background {
@@ -53,7 +60,7 @@
       color: inherit;
     }
     .hbk-mega-menu--items {
-      background-color: rgba($wbu-background, 90%);
+      background-color: rgba($wbu-background, 88%);
       @include media-min(DD) {
         background-color: transparent;
       }
@@ -115,9 +122,9 @@
   &.menu-multiligne {
     .hbk-mega-menu--items {
       flex-wrap: wrap;
-      > .item {
-        //flex-grow: 0;
-      }
+      // > .item {
+      //   //flex-grow: 0;
+      // }
     }
   }
 }
