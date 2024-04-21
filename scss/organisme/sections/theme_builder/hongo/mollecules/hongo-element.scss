@@ -36,5 +36,7 @@
     bottom: $wbu-margin * 1.5;
     color: color-yiq($wbu-background);
     min-height: 200px;
+    display: flex;
+    align-items: end;
   }
 }

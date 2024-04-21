@@ -36,9 +36,18 @@
       margin-bottom: 0;
     }
     .title {
-      margin-bottom: $wbu-margin * 3;
+      @include media-min(DD) {
+        margin-bottom: $wbu-margin * 3;
+      }
       text-transform: capitalize;
       @include hr_separation();
+      &::before,
+      &::after {
+        display: none;
+        @include media-min(mobile) {
+          display: block;
+        }
+      }
     }
     .button {
       a:hover {
