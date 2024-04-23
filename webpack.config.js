@@ -4,7 +4,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+// const TerserPlugin = require("terser-webpack-plugin");
 
 // on récupère la valeur de NODE_ENV
 const env = process.env.NODE_ENV;
@@ -125,7 +125,6 @@ module.exports = {
           {
             // Using file-loader for these files
             loader: "file-loader?name=[name].[ext]&outputPath=./icons/",
-
             // In options we can set different things like format
             // and directory to save
             // options: {
@@ -138,10 +137,7 @@ module.exports = {
     ],
   },
   devServer: {
-    //contentBase: path.resolve(__dirname, "./public"),
     port: 3000,
-    //publicPath: "/dist/",
-    //watchContentBase: true,
     hot: true,
   },
   optimization: {
@@ -156,7 +152,7 @@ module.exports = {
           ],
         },
       }),
-      new TerserPlugin(),
+      // new TerserPlugin(),
     ],
   },
 };
