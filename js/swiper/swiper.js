@@ -1,4 +1,5 @@
-import Swiper, { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade, Zoom, FreeMode } from "swiper";
+import Swiper from "swiper";
+import { Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, Scrollbar, EffectFade, Zoom, FreeMode } from "swiper/modules";
 //import Swiper, { Navigation } from "swiper";
 import AOS from "aos";
 // configure Swiper to use modules
