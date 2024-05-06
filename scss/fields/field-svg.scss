@@ -1,10 +1,8 @@
 @use "../wbu-ressources-clean.scss" as *;
 .fields-svg {
+  line-height: 1;
   .field-svg {
     margin-bottom: $wbu-margin * 0.5;
-    &:last-child {
-      margin-bottom: 0;
-    }
     .icon {
       margin-right: $wbu-margin;
       display: flex;

@@ -4,11 +4,15 @@
   margin-bottom: $wbu-margin;
   &__text {
     margin: 0;
-    padding-top: $wbu-margin * 1.5;
-    padding-bottom: $wbu-margin * 1.5;
+    padding-top: $wbu-margin * 0.5;
+    padding-bottom: $wbu-margin;
     @include WBUtransition();
     .price {
       margin-bottom: $wbu-margin * 0.7;
+      .field--name-list-price {
+        text-decoration: line-through solid red;
+        opacity: 0.5;
+      }
     }
     .add_cart {
       &:hover {
@@ -37,7 +41,8 @@
   &:hover {
     box-shadow: 0px 10px 20px 0px rgba(0, 23, 51, 0.09);
     .aranoz-product-teaser__text {
-      padding: $wbu-margin * 1.5;
+      padding-left: $wbu-margin * 0.5;
+      padding-right: $wbu-margin * 0.5;
       .icons {
         opacity: 1;
       }
