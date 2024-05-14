@@ -4,6 +4,7 @@
 
 .hero-blog-fnews {
   background-color: $wbu-background;
+  color: color-yiq($wbu-background);
   .hbf-content {
     padding: $wbu-margin * 11 0 $space-top * 0.7;
     @include media-max(MD) {
@@ -65,8 +66,8 @@
         color: white;
         a {
           color: white;
-          cursor: text;
-          pointer-events: none;
+          //cursor: text;
+          //pointer-events: none;
           &:hover {
             text-decoration: none;
           }
@@ -90,7 +91,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
+        //cursor: pointer;
         @include media-max(MD) {
         }
         svg {
@@ -158,8 +159,8 @@
         color: white;
         a {
           color: white;
-          pointer-events: none;
-          cursor: text;
+          //pointer-events: none;
+          //cursor: text;
           &:hover {
             text-decoration: none;
           }
@@ -182,17 +183,6 @@
   }
   .hbf-title {
     text-transform: uppercase;
-    font-size: $wbu-h2-font-size;
     font-weight: bold;
-    color: white;
-    @include media-max(MD) {
-      font-size: $wbu-h2-font-size * 0.8;
-    }
-    @include media-max(SM) {
-      font-size: $wbu-h2-font-size * 0.7;
-    }
-    @include media-max(XS) {
-      font-size: $wbu-h2-font-size * 0.48;
-    }
   }
 }

@@ -35,7 +35,7 @@
       left: 10px;
       padding: 0.8rem 1.4rem;
       font-weight: 600;
-      font-size: $wbu-default-font-size/1.17;
+      font-size: 83%;
       z-index: 1;
     }
 
@@ -69,8 +69,6 @@
     .title {
       font-weight: 500;
       margin-bottom: $wbu-margin / 1.5;
-      line-height: $wbu-h3-line-height;
-
       a {
         color: inherit;
       }
@@ -78,8 +76,8 @@
 
     .time_read {
       position: relative;
-      font-size: $wbu-default-font-size/1.17;
-      padding-left: 1.7rem;
+      font-size: 85%;
+      padding-left: $wbu-margin * 0.8;
 
       &::before {
         content: "";
