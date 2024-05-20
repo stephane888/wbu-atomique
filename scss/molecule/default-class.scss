@@ -13,11 +13,12 @@
 @use "../atome/typography/default";
 
 // import default styles.
-@use "./Default/text.scss";
+@use "./Default/text-ligne.scss";
 @use "./Default/z-index.scss";
 // Tres peu utilisé.
 // @use "./Default/row-alter.scss";
 @use "./Default/svg.scss";
+@use "./Default/text-titre.scss";
 
 /**
  * Espacement/marge entre blog
@@ -301,102 +302,6 @@
   &-20 {
     border-radius: $wbu-margin;
   }
-}
-
-/**
- * Gestion de la taille des titres.
- * On souhaite que les balises soit surchargeable par les classes.
- * De plus, les classes sont appliqués par ordre decroissant suivant la taille du texte.
- */
-h1 {
-  @include bp_h1();
-  margin-bottom: 1.5rem;
-  line-height: $wbu-h1-line-height;
-}
-
-h2 {
-  @include bp_h2();
-  margin-bottom: 1rem;
-  line-height: $wbu-h2-line-height;
-}
-
-h3 {
-  @include bp_h3();
-  margin-bottom: 0.6rem;
-  line-height: $wbu-h3-line-height;
-}
-
-h4 {
-  @include bp_h4();
-  line-height: $wbu-h4-line-height;
-}
-
-h5 {
-  @include bp_h5();
-}
-
-h6 {
-  @include bp_h6();
-}
-
-// typography
-.wbu-titre-suppra {
-  @include wbu-titre-suppra();
-}
-
-.bp_hero,
-.wbu-titre-biggest {
-  @include bp_hero();
-}
-
-.h1 {
-  @include bp_h1();
-  margin-bottom: 1.5rem;
-  line-height: $wbu-h1-line-height;
-}
-
-.h2 {
-  @include bp_h2();
-  margin-bottom: 1rem;
-  line-height: $wbu-h2-line-height;
-}
-
-.h3 {
-  @include bp_h3();
-  margin-bottom: 0.6rem;
-  line-height: $wbu-h3-line-height;
-}
-
-.h4 {
-  @include bp_h4();
-  line-height: $wbu-h4-line-height;
-}
-
-.h5 {
-  @include bp_h5();
-}
-
-.h6 {
-  @include bp_h6();
-}
-
-h1,
-h2,
-h3,
-.h1,
-.h2,
-.h3 {
-  line-height: 1.2;
-}
-
-h4,
-h5,
-h6,
-.h4,
-.h5,
-.h6 {
-  margin-bottom: 0.9rem;
-  line-height: 1.5;
 }
 
 /**

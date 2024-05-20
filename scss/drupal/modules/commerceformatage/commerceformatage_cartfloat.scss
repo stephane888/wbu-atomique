@@ -245,6 +245,11 @@
           min-width: 150px;
           width: 40%;
         }
+        #card-number-element,
+        #expiration-element,
+        #security-code-element {
+          background-color: #fff;
+        }
       }
     }
   }

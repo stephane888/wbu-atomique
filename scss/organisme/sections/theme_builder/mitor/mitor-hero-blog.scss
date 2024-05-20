@@ -5,7 +5,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 65vh;
+  height: 50vh;
+  min-height: 300px;
   width: 100%;
   position: relative;
   display: flex;
@@ -42,7 +43,6 @@
     }
 
     .parent-route {
-      font-size: $wbu-default-font-size;
       color: white;
       text-transform: capitalize;
       padding: 1rem 0;
@@ -76,17 +76,9 @@
   }
 
   &--vixcon {
-    min-height: 65vh;
-
-    // &::before {
-    //   opacity: 0.9;
-    // }
-
     .titles-handler {
       .title {
         letter-spacing: 2px;
-        text-transform: capitalize !important;
-        font-size: $wbu-titre-big-sm;
       }
 
       .divider {
@@ -97,7 +89,6 @@
 
       .title-desc {
         list-style: none;
-
         li:not(:first-of-type)::before {
           content: "/";
           margin-right: 1.5rem;
@@ -105,11 +96,8 @@
       }
       .parent-route {
         margin: 0 0rem;
-        font-size: $wbu-h5-font-size;
-
         &:last-child {
           pointer-events: none;
-
           a {
             color: white;
             pointer-events: none;
