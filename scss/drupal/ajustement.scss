@@ -1,7 +1,11 @@
 @use "../wbu-ressources-clean.scss" as *;
 @use "../molecule/default-class.scss" as *;
 // Ce fichier permet d'ajuster, les styles.
-// Version : Drupal 8/9;
+// Version : Drupal 8/9/10;
+
+::selection {
+  background: $wbu-color-primary;
+}
 /**
  * Correction drupal/field_formatter
  */
