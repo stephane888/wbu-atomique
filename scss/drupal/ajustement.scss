@@ -5,6 +5,7 @@
 
 ::selection {
   background: $wbu-color-primary;
+  color: color-yiq($wbu-color-primary);
 }
 /**
  * Correction drupal/field_formatter
