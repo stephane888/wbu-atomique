@@ -1,0 +1,19 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.swiper {
+  &.swiper-vertical {
+    .swiper-button {
+      transform: rotate(90deg);
+      right: auto;
+      left: calc(50% - 2rem);
+    }
+    .swiper-button-prev {
+      top: $wbu-margin;
+      bottom: auto;
+    }
+    .swiper-button-next {
+      top: auto;
+      bottom: $wbu-margin;
+    }
+  }
+}
