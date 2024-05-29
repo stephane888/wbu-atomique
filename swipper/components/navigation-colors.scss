@@ -1,0 +1,40 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.swiper {
+  .swiper-button {
+    &::after {
+      color: inherit;
+      opacity: 1;
+    }
+    &.swiper-button-disabled {
+      &::after {
+        opacity: 0.2;
+      }
+    }
+    &--primary {
+      &::after {
+        color: $wbu-color-primary;
+      }
+    }
+    &--background {
+      &::after {
+        color: $wbu-background;
+      }
+    }
+    &--secondary {
+      &::after {
+        color: $wbu-color-secondary;
+      }
+    }
+    &--white {
+      &::after {
+        color: #fff;
+      }
+    }
+    &--dark {
+      &::after {
+        color: #000;
+      }
+    }
+  }
+}

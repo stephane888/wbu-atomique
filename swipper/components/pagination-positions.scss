@@ -1,0 +1,37 @@
+@use "../../wbu-ressources-clean.scss" as *;
+
+.swiper {
+  .swiper-pagination {
+    &--left-center {
+      top: 50%;
+      bottom: auto;
+      left: 0;
+      @include media-min(tablet) {
+        left: $wbu-margin * 2;
+      }
+      right: auto;
+      width: auto;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      min-width: 80px;
+      .swiper-pagination-bullet {
+        margin: 0;
+        margin-bottom: $wbu-margin * 1.2;
+        &.swiper-pagination-bullet-active {
+          &::after {
+            transform: rotate(90deg);
+            left: calc(100% + 2rem);
+            top: 0;
+            bottom: auto;
+            right: auto;
+            @include media-min(DD) {
+              height: 30px;
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
