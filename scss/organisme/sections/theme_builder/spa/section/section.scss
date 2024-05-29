@@ -1,86 +1,51 @@
-@use "../../../../../variables" as*;
+@use "../../../../../variables";
 @use "./../../../../../wbu-ressources-clean.scss" as *;
 
 
 .slide1{
-    margin: 0;
     background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_297687515v6_1512x.jpg?v=1632741210');
     background-repeat: no-repeat;
+<<<<<<< HEAD
     background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    margin-bottom: 25px;
-}
-.container{
-    color: $wbu-color-primary;
-    margin: 0 auto;
-    max-width: 1440px;
-    padding-left: $wbu-padding;
-    padding-right: $wbu-padding;
-                
-        
-    .slide1-texte{
-      
-
-       .part-one-line-2{
-            line-height: 1em;
-
-       }
-
-       p{
-         line-height: $wbu-default-line-height * 1.2;
-       }
-
-       a{
-
-            text-decoration: none;
-            background: $wbu-color-secondary;
-            color: $wbu-color-primary;
-            border: 2px solid $wbu-color-secondary;
-            padding: 9px 1.4em;
-            vertical-align: middle;
-            border-radius: 25px;
-           
-            &:hover{
-               background-color: $wbu-background;
+   color: color-yiq($wbu-color-primary);
+=======
+background-size: cover;
+color: color-yiq($wbu-color-primary);
+>>>>>>> 4d8764c4014478eb4956f27d11d5b8f7289087ea
+    .slide1-container{
+        .slide1-texte{
+            height: 100%;
+            .part-one-line-2{
+                max-width: 50%;
+                margin-bottom: $wbu-margin;
             }
-       }
-        
-      
-       
+            .titre{
+                max-width: 42%;
+                margin-bottom: $wbu-margin;
+<<<<<<< HEAD
+            }
+            
 
+            .btn{
 
-    }
-
-
-}
-div .slide1-texte{
-    a:nth-child(2) {
-
-        margin: $wbu-margin;
-        background-color: transparent;
-        border-color: $wbu-color-primary;
-    }
-}
-
-@media (max-width: 600px) {
-   
-    .slide1 {
-       
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        
-        .container {
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-
-            .slide1-texte{
-              text-align: center;
+                &:hover{
+                   opacity: 0.5;
+                    
+                }
             }
         }
     }
 }
+.slide1-texte-lien {
+ 
+    .btn:nth-child(2) {
     
+     background: none;
+     color: white;
+    }
+=======
+            }
+        }
+    }
+>>>>>>> 4d8764c4014478eb4956f27d11d5b8f7289087ea
+}

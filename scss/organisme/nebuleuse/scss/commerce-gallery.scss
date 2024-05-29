@@ -1,8 +1,9 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 
-.commerce-swiper-container {
-  .commerce-swiper {
+.galleries-main-thumbs {
+  .galleries-main {
     .swiper-button {
+
       &-next,
       &-prev {
         position: absolute;
@@ -31,8 +32,8 @@
     }
   }
 
-  .commerce-swiper,
-  .commerce-swiper-thumb {
+  .galleries-main,
+  .galleries-thumb {
     .swiper-wrapper {
       .swiper-slide {
         background-repeat: no-repeat;
@@ -42,7 +43,7 @@
     }
   }
 
-  .commerce-swiper-thumb {
+  .galleries-thumb {
     min-width: 20%;
 
     .swiper-wrapper {

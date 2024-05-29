@@ -5,57 +5,34 @@
 
 .sublime {
 
-    margin:0;
     background: url('https://canopy-theme-elegant.myshopify.com/cdn/shop/files/shutterstock_1277861122_1296x.jpg?v=1632754691');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 100vh;
     opacity: 0.9;
-    margin-bottom: 25px;
-    
+  
    
     .container{
-        
+        color: $wbu-color-primary;
+        text-align: center;
+        color: color-yiq($wbu-color-primary);
         
         .sublime-container-image {
-            position: absolute;
-            left: 0;
-            right: 50px;
-            padding: 20rem;
+            height: 100%;
+            position: relative;
+             margin: auto;
+             justify-content: center;
+             padding: 10rem;
             
-            .part-one-line{
-                text-align: center;
-                font-weight: bold;
-                color: $wbu-color-primary;
-            }
-
-            .part-one-line-2{
-                color: $wbu-color-primary;
-                text-align: center;
-            }s
-            .btn{
-                text-decoration: none;
-                background: $wbu-background;
-                color: $wbu-color-primary;
-                border: 2px solid $wbu-background;
-                height: $wbu-default-line-height * 35;
-                padding: 9px 1.4em;
-                text-align: center;
-                border-radius: $wbu-btn-border-radius;
-               
-            }
+            
         }
     }
 }
 
-.part-one-image :nth-child(3) {
-    margin-top: $wbu-margin;
-  }
-                                    
+                                 
  
     // Sur les écrans de largeur inférieure ou égale à 576px
-@media (max-width: 557px) {
+@media only screen and (MD){
     .part-one {
         height: 500px;
    
@@ -63,9 +40,6 @@
             display: flex;
             flex-direction: column;
             align-items: start;
-
-
-        
             .part-one-image{
                 
 
@@ -88,7 +62,7 @@
 }
 
 // Sur les écrans de largeur inférieure ou égale à 238px
-@media (max-width: 238px) {
+@media only screen and (DD){
     .part-one {
        
         .container{
