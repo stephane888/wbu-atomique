@@ -42,7 +42,10 @@
     "drift-zoom": "^1.5.1",
     "image-webpack-loader": "^8.1.0",
     "imagemin": "^8.0.1",
+    "jquery": "^3.7.1",
     "lightgallery": "^2.7.2",
-    "swiper": "^11.1.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.1",
+    "zurb-twentytwenty": "^0.1.1"
   }
 }
