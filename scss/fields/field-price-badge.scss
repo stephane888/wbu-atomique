@@ -1,0 +1,22 @@
+@use "../wbu-ressources-clean.scss" as *;
+
+.field-badge {
+  padding: $wbu-margin * 0.5 $wbu-margin;
+  color: color-yiq($wbu-background);
+  background-color: $wbu-background;
+
+  &--reduction {
+    background-color: $wbu-color-primary;
+    color: color-yiq($wbu-color-primary);
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    left: auto;
+    font-weight: bold;
+  }
+}

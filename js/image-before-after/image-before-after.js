@@ -1,6 +1,7 @@
 //import $ from "jquery";
-import "zurb-twentytwenty/js/jquery.event.move.js";
-import "zurb-twentytwenty/js/jquery.twentytwenty.js";
+//à remplacer car utiliser jquery 
+// import "zurb-twentytwenty/js/jquery.event.move.js";
+// import "zurb-twentytwenty/js/jquery.twentytwenty.js";
 import "bootstrap/js/src/tab.js";
 
 if (window.jQuery) {

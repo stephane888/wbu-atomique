@@ -1,24 +1,29 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
 @use "./separateur.scss" as *;
+
 .clothings-tabs {
   .nav-tabs {
     border: none;
     margin-bottom: $wbu-margin * 0.75;
+
     .nav-link {
       padding: 0 $wbu-margin * 3 0 0;
       border: none;
       color: inherit;
+
       .layout-region {
         font-size: $wbu-h3-font-size;
       }
+
       &:hover {
         color: $wbu-color-primary;
       }
     }
+
     .nav-link.active {
       border: none;
-      @include hr_separation($color: lighten($wbu-color-primary, 30%));
+      // @include hr_separation($color: lighten($wbu-color-primary, 30%));
     }
   }
 }
