@@ -1,15 +1,18 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 @use "./atome/mitor-btn.scss";
-@use "./atome/carrousel-nav.scss";
+@use "../../../../swipper/carrousel-nav.scss";
+
 .mitor-section-title {
   //padding: $space-bottom 0;
   position: relative;
   overflow: hidden;
+
   .section-header {
     max-width: 800px;
     margin: 0 auto;
     display: block;
+
     .section-title {
       max-width: 700px;
       text-transform: capitalize;
@@ -17,11 +20,13 @@
       margin: 0 auto;
       margin-bottom: $wbu-margin;
     }
+
     .section-desc {
       text-align: center;
       margin: 0 auto;
     }
   }
+
   &--bg {
     &::before {
       content: "";
@@ -39,28 +44,34 @@
       padding: 0 30px;
       opacity: 0.8;
     }
+
     .section-header {
       display: flex;
       gap: 1rem;
       flex-direction: column-reverse;
+
       .section-title {
         margin: 0 auto;
         margin-top: 2rem;
       }
+
       .section-desc {
         font-weight: bold;
       }
     }
   }
+
   &--overflowable {
     overflow: visible;
     padding: $space-bottom 0;
     background-position: center center;
     background-attachment: fixed;
+
     .section-header {
       max-width: 800px;
       margin: 0 auto;
       display: block;
+
       .section-title {
         max-width: 700px;
         font-weight: bold;
@@ -69,12 +80,14 @@
         margin: 0 auto;
         margin-bottom: $wbu-margin;
       }
+
       .section-desc {
         text-align: center;
         margin: 0 auto;
       }
     }
   }
+
   &--bottom-black {
     &::before {
       content: "";
@@ -85,6 +98,7 @@
       background-color: $wbu-background;
     }
   }
+
   &--item-midle-border {
     .items {
       .item:nth-child(2) {
@@ -93,6 +107,7 @@
       }
     }
   }
+
   &--color-middle {
     .items {
       .item:nth-child(2) {
@@ -102,11 +117,13 @@
           }
         }
       }
+
       .item:nth-child(5) {
         .services-list {
           .bg-icon::before {
             background-color: $wbu-color-primary;
           }
+
           .icon {
             svg {
               fill: $wbu-color-teal;
@@ -114,6 +131,7 @@
           }
         }
       }
+
       .item:nth-child(3) {
         .services-list {
           .bg-icon::before {
@@ -121,6 +139,7 @@
           }
         }
       }
+
       .item:nth-child(7) {
         .services-list {
           .bg-icon::before {
@@ -130,71 +149,87 @@
       }
     }
   }
+
   &--absolute-content {
     padding: $space-bottom * 1.8 0;
   }
+
   &--text-left {
     .section-header {
       margin: 0;
       display: block;
       margin-bottom: 4rem;
+
       .section-title {
         text-align: left;
         margin: 0;
         margin-bottom: 2rem;
       }
+
       .section-desc {
         text-align: left;
       }
     }
+
     .mitor-project-tab {
       .mpt-tabs {
         justify-content: start;
         margin-bottom: 6rem;
       }
-      .container > .row {
+
+      .container>.row {
         min-height: 40rem;
       }
     }
   }
+
   .tree-card-carousel {
     .tcc-content {
       @include media-min(DD) {
         padding-left: 4rem !important;
       }
     }
+
     .blog-carousel {
       @include media-min(DD) {
         margin-left: 4rem !important;
       }
     }
+
     @include media-min(DD) {
       position: absolute;
       width: 100%;
       right: 0;
       padding-left: 0 !important;
+
       .tcc-content {
         padding-left: 0rem !important;
       }
     }
+
     @include media-min(M) {
       right: -20px;
       padding-left: 0 !important;
     }
+
     @include media-min(LM) {
       right: -50px;
       padding-left: 4rem !important;
+
       .tcc-content {
         padding-left: 4rem !important;
       }
     }
+
     @include media-min(L) {
       right: -70px;
       padding-left: 6rem !important;
+
       .tcc-content {
         padding-left: 6rem !important;
       }
     }
+
     &::after {
       content: "";
       clear: both;
