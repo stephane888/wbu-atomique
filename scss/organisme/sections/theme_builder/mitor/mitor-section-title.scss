@@ -38,7 +38,7 @@
       right: 10%;
       margin: 0 auto;
       z-index: -1;
-      background-image: url("./img/map2.png");
+      //// background-image: url("./img/map2.png");
       background-size: cover;
       background-position: center;
       padding: 0 30px;
@@ -177,7 +177,7 @@
         margin-bottom: 6rem;
       }
 
-      .container>.row {
+      .container > .row {
         min-height: 40rem;
       }
     }

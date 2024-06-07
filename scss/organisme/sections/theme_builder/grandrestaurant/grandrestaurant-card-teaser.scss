@@ -1,166 +1,172 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 
-.grandrestaurant-card-teaser{
-    padding-top: $space_bottom;
-    padding-bottom: $space_bottom;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.grandrestaurant-card-teaser {
+  padding-top: $space_bottom;
+  padding-bottom: $space_bottom;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  @include media-max(MD) {
+    margin: 0;
+  }
+  &__visit {
+    background: $wbu-background;
+    text-align: center;
+    border-radius: 7px;
     width: 100%;
-    position: relative;
-    @include media-max(MD) {
-        margin: 0;
+    margin-left: -6rem;
+    margin-bottom: 1.5rem;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //box-shadow: 0px 2px 60px 0px rgb(0 0 0 /20%);
+    //transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: $wbu-margin * 3;
+    /* animations */
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    &_title {
+      //text-transform: capitalize;
+      &_first {
+        color: color-yiq($wbu-color-primary);
+        font-weight: lighter;
+        //margin-bottom: $wbu-margin;
+      }
+      &_second {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: color-yiq($wbu-color-primary);
+        margin-bottom: $wbu-margin;
+      }
     }
-    &__visit{
-        background: $wbu-background;
-        text-align: center;
-        border-radius: 7px;
-        width: 100%;
-        margin-left: -6rem;
-        margin-bottom: 1.5rem;
-        z-index: 4;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        //box-shadow: 0px 2px 60px 0px rgb(0 0 0 /20%);
-        //transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-        padding: $wbu-margin*3;
-        /* animations */
-        animation-name: floating;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        &_title{
-            //text-transform: capitalize;
-            &_first{
-                color: color-yiq($wbu-color-primary);
-                font-weight: lighter;
-                //margin-bottom: $wbu-margin;
-            }
-            &_second{
-                text-transform: uppercase;
-                font-weight: 700;
-                color: color-yiq($wbu-color-primary);
-                margin-bottom: $wbu-margin;
-            }
+    &_icone {
+      margin-bottom: $wbu-margin;
+      color: $wbu-color-boder;
+    }
+    &_text {
+      color: color-yiq($wbu-color-primary);
+      vertical-align: baseline;
+      line-height: 2;
+      a {
+        text-decoration: none;
+        font-weight: $wbu-title-font-weight;
+        color: color-yiq($wbu-color-primary);
+      }
+    }
+    &_link {
+      margin-top: $wbu-margin;
+      display: inline-block;
+      .linker {
+        text-transform: capitalize;
+        color: #cfa670;
+        font-weight: 600;
+        fill: #cfa670;
+        border-style: solid;
+        border-width: 0px 0px 3px 0px;
+        line-height: 1;
+        text-decoration: none;
+      }
+    }
+    @include media-max(MD) {
+      margin: 0;
+      position: relative;
+    }
+  }
+  &__imgs {
+    width: 100%;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    &_single {
+      width: 30rem;
+      height: 52.2rem;
+      background-color: $wbu-background;
+      overflow: hidden;
+      border-radius: 0.9rem;
+      position: relative;
+      margin-left: ($wbu-margin * 0.5);
+      @include media-max(MD) {
+        height: 30rem;
+      }
+      img {
+        height: 100%;
+        //width: 100%;
+        position: absolute;
+        object-fit: cover;
+        &:hover {
+          transition: all 2s;
+          transform: scale(1.2);
         }
-        &_icone{
-            margin-bottom: $wbu-margin;
-            color: $wbu-color-boder;
-        }
-        &_text{
-            color: color-yiq($wbu-color-primary);
-            vertical-align: baseline;
-            line-height: 2;
-            a {
-                text-decoration: none;
-                font-weight: $wbu-title-font-weight;
-                color: color-yiq($wbu-color-primary);
-            }
-        }
-        &_link{
-            margin-top: $wbu-margin;
-            display: inline-block;
-            .linker{
-                text-transform: capitalize;
-                color: #cfa670;
-                font-weight: 600;
-                fill: #cfa670;
-                border-style: solid;
-                border-width: 0px 0px 3px 0px;
-                line-height: 1;
-                text-decoration: none;
-            }
+      }
+    }
+  }
+  &--reverse {
+    flex-direction: row-reverse;
+    .grandrestaurant-card-teaser__visit {
+      margin-right: -6rem;
+      margin-left: 0;
+      @include media-max(MD) {
+        margin: 0;
+        position: relative;
+      }
+    }
+  }
+  &--four {
+    .grandrestaurant-card-teaser__imgs {
+      overflow: hidden;
+      width: 100%;
+      margin-top: $wbu-margin;
+      margin-bottom: $wbu-margin;
+      margin-right: -6rem;
+      display: flex;
+      flex-wrap: wrap;
+      @include media-max(MD) {
+        margin: 0;
+      }
+      &_single {
+        width: 40%;
+        height: 230px;
+        background-color: $wbu-background;
+        overflow: hidden;
+        border-radius: $wbu-margin * 0.5;
+        position: relative;
+        margin: $wbu-margin * 0.5;
+        img {
+          //height: 100%;
+          width: 100%;
+          object-fit: cover;
+          position: absolute;
+          &:hover {
+            transition: all 2s;
+            transform: scale(1.2);
+          }
         }
         @include media-max(MD) {
-            margin: 0;
-            position: relative;
+          width: 100%;
         }
+      }
     }
-    &__imgs{
-        width: 100%;
-        z-index: 3;
-        position: relative;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        &_single{
-            width: 30rem;
-            height: 52.2rem;
-            background-color: $wbu-background;
-            overflow: hidden;
-            border-radius: 0.9rem;
-            position: relative;
-            margin-left: ($wbu-margin/2);
-            @include media-max(MD) {
-                height: 30rem;
-            }
-            img{
-                height: 100%;
-                //width: 100%;
-                position: absolute;
-                object-fit: cover;
-                &:hover{
-                    transition: all 2s;
-                    transform: scale(1.2);
-                }
-            }
-        }
+  }
+  /* keyframes for animations */
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0rem);
     }
-    &--reverse{
-        flex-direction: row-reverse;
-        .grandrestaurant-card-teaser__visit {
-            margin-right: -6rem;
-            margin-left: 0;
-            @include media-max(MD) {
-                margin: 0;
-                position: relative;
-            }
-        }
+    50% {
+      transform: translate(0, 1.5rem);
     }
-    &--four{
-        .grandrestaurant-card-teaser__imgs{
-            overflow: hidden;
-            width: 100%;
-            margin-top: $wbu-margin;
-            margin-bottom: $wbu-margin;
-            margin-right: -6rem;
-            display: flex;
-            flex-wrap: wrap;
-            @include media-max(MD) {
-                margin: 0;
-            }
-            &_single{
-                width: 40%;
-                height: 230px;
-                background-color: $wbu-background;
-                overflow: hidden;
-                border-radius: $wbu-margin/2;
-                position: relative;
-                margin: $wbu-margin *0.5;
-                img{
-                    //height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    position: absolute;
-                    &:hover{
-                        transition: all 2s;
-                        transform: scale(1.2);
-                    }
-                }
-                @include media-max(MD) {
-                    width: 100%;
-                }
-            }
-        }
+    100% {
+      transform: translate(0, -0rem);
     }
-    /* keyframes for animations */
-    @keyframes floating {
-        0% { transform: translate(0,  0rem); }
-        50%  { transform: translate(0, 1.5rem); }
-        100%   { transform: translate(0, -0rem); }
-    }
+  }
 }

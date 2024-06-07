@@ -1,7 +1,7 @@
 @use "../../wbu-ressources-clean.scss" as *;
 @use "slick-carousel/slick/slick";
-@use "slick-carousel/slick/slick-theme";
-@use "../../variables" as *;
+//@use "slick-carousel/slick/slick-theme";
+// @use "../../variables" as *;
 
 .stanCaroussel {
   width: 100%;
@@ -103,9 +103,7 @@
 
         img {
           max-width: 100%;
-          max-height: calc(
-            100vh - 150px
-          ); // cela permet à des images de ne par remplir tout l'ecran ce qui permet d'afficher le titre du slider.
+          max-height: calc(100vh - 150px); // cela permet à des images de ne par remplir tout l'ecran ce qui permet d'afficher le titre du slider.
           object-fit: contain;
         }
       }

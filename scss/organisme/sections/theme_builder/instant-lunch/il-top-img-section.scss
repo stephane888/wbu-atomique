@@ -4,10 +4,7 @@
 
 .il-top-img-section {
   background-repeat: no-repeat;
-  background-position: right;
-  @include media-max(SM) {
-    background-image: url() !important;
-  }
+  background-position: right; 
   .container .col-md-9 {
     background-color: rgba(#fff, 0.7);
   }

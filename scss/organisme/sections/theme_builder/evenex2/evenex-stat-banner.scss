@@ -2,49 +2,48 @@
 @use "../../../../variables" as *;
 
 .evenex-stat-banner {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 50px 0px 50px 0px;
+  position: relative;
+  overflow: visible;
 
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 50px 0px 50px 0px;
-    position: relative;
-    overflow: visible;
+  @include media-min(XS) {
+    padding: 100px 0px 92px 0px;
+  }
+
+  .wrapper {
+    padding: 10px;
+    margin-bottom: 20px;
 
     @include media-min(XS) {
-        padding: 100px 0px 92px 0px;
+      padding: 0px;
     }
+  }
 
-    .wrapper {
-        padding: 10px;
-        margin-bottom: 20px;
+  .overlay {
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    //// background-image: url("./images/home3-overlay.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
 
-        @include media-min(XS) {
-            padding: 0px;
-        }
-    }
+  .content {
+    display: flex;
+    justify-content: center;
+  }
 
+  &.evenex-stat-banner--purple {
     .overlay {
-        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-        background-image: url("./images/home3-overlay.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 1;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
+      // // background-image: url("./images/overlay.png");
+      opacity: 0.9;
     }
-
-    .content {
-        display: flex;
-        justify-content: center;
-    }
-
-    &.evenex-stat-banner--purple {
-        .overlay {
-            background-image: url("./images/overlay.png");
-            opacity: 0.9;
-        }
-    }
+  }
 }

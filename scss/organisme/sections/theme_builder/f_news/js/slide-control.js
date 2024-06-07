@@ -1,10 +1,5 @@
-import Swiper, {
-  Navigation,
-  Pagination,
-  Parallax,
-  Autoplay,
-  EffectFade,
-} from "swiper";
+import Swiper from "swiper";
+import { Navigation, Pagination, Parallax, Autoplay, EffectFade } from "swiper/modules";
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination, Parallax, Autoplay, EffectFade]);
 // import Swiper styles
@@ -61,9 +56,7 @@ try {
         pause.style.display = "none";
       });
     } else {
-      console.error(
-        "l'élement html avec la classe \"play-pause\" permettant de mettre en pose le slide n'existe pas"
-      );
+      console.error("l'élement html avec la classe \"play-pause\" permettant de mettre en pose le slide n'existe pas");
     }
   })();
 } catch (er) {

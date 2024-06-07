@@ -75,7 +75,7 @@
     flex-grow: 1;
     height: 744px;
     background-position: 50%;
-    background-image: url("./img/gobain.jpg");
+    //// background-image: url("./img/gobain.jpg");
     background-size: cover;
     @include media-max(MD) {
       height: 541px;

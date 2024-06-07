@@ -1,6 +1,6 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../variables" as *;
-@use "./mollecules/product-ban.scss";
+//@use "./mollecules/product-ban.scss";
 @use "./atomes/product-tag.scss";
 @use "./atomes/product-love-icon.scss";
 @use "./mollecules/product-gallery.scss";
@@ -72,7 +72,7 @@
       //margin-top: $wbu-margin;
       .form-check {
         padding: 0;
-        margin: 0 $wbu-margin/2 $wbu-margin $wbu-margin/2;
+        margin: 0 $wbu-margin * 0.5 $wbu-margin $wbu-margin * 0.5;
         flex-grow: 1;
         label {
           width: 100%;

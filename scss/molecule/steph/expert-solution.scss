@@ -27,7 +27,7 @@
     max-width: 100%;
 
     .profile_image {
-      padding-right: $wbu-margin/2;
+      padding-right: $wbu-margin * 0.5;
     }
     @include media-min("MD") {
       .profile_image {
@@ -57,7 +57,7 @@
     }
 
     .seeMore {
-      margin: 0 0 $wbu-margin/1.5;
+      margin: 0 0 $wbu-margin * 0.75;
       background: #000;
 
       a {
@@ -71,7 +71,7 @@
 
       .profile_name {
         color: $wbu-color-primary;
-        padding-right: $wbu-margin/2;
+        padding-right: $wbu-margin * 0.5;
       }
     }
   }

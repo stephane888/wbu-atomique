@@ -4,35 +4,35 @@
 @use "../../atome/typography/h1";
 
 .galeryTitle {
-  width        : 100%;
-  display      : block;
-  box-sizing   : border-box;
-  margin       : 1rem auto;
-  padding-left : 10px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin: 1rem auto;
+  padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: $wbu-margin*2.5;
+  margin-bottom: $wbu-margin * 2.5;
 
   &__container {
-    width         : 100%;
-    display       : flex;
-    align-items   : center;
+    width: 100%;
+    display: flex;
+    align-items: center;
     flex-direction: column;
-    flex-wrap     : wrap;
-    box-sizing    : border-box;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 
     .title {
-      font-size    : $wbu-default-font-size * 3.3;
-      color        : $wbu-color-primary;
-      text-align   : center;
-      margin       : 0;
-      line-height  : 48px;
-      margin-bottom: $wbu-margin/2;
+      font-size: $wbu-default-font-size * 3.3;
+      color: $wbu-color-primary;
+      text-align: center;
+      margin: 0;
+      line-height: 48px;
+      margin-bottom: $wbu-margin * 0.5;
       @include media-max(DD) {
-        font-size  : $wbu-default-font-size * 2.5;
+        font-size: $wbu-default-font-size * 2.5;
         line-height: $wbu-default-line-height;
       }
       @include media-max(XS) {
-        font-size  : $wbu-default-font-size * 2;
+        font-size: $wbu-default-font-size * 2;
         line-height: $wbu-default-line-height;
       }
     }
@@ -42,19 +42,19 @@
     }
 
     .list-terms {
-      font-size   : $wbu-default-font-size/1.1;
-      position    : relative;
+      font-size: $wbu-default-font-size/1.1;
+      position: relative;
       padding-left: 1.4rem;
 
       &::before {
         position: absolute;
-        content : "";
+        content: "";
         @include wbu__svg-map($wbu-color-text, 10);
-        left    : 0;
-        top     : 0;
-        bottom  : 0;
-        right   : auto;
-        width   : 10px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: auto;
+        width: 10px;
       }
 
       a {
@@ -63,7 +63,7 @@
 
       > * {
         margin-right: 0.7rem;
-        display     : flex;
+        display: flex;
 
         &::after {
           content: ",";

@@ -3,56 +3,56 @@
 @use "../../../atome/typography/h2";
 
 .comment-lmsg {
-  padding   : 0 0 $wbu-margin*2.5;
+  padding: 0 0 $wbu-margin * 2.5;
   //margin    : 0 0 $wbu-margin*2.5;
-  margin    : 0;
-  background: linear-gradient(11.96deg,darken($wbu-color-primary,30),$wbu-color-primary);
-  color     : #FFF;
+  margin: 0;
+  background: linear-gradient(11.96deg, darken($wbu-color-primary, 30), $wbu-color-primary);
+  color: #fff;
   text-align: center;
-  font-size : $wbu-default-font-size*1.58;
+  font-size: $wbu-default-font-size * 1.58;
 
   .title {
-    font-size     : $wbu-h2-font-size*1.7;
-    padding-top   : $wbu-margin*1.5;
-    padding-bottom: $wbu-margin*1.3;
+    font-size: $wbu-h2-font-size * 1.7;
+    padding-top: $wbu-margin * 1.5;
+    padding-bottom: $wbu-margin * 1.3;
   }
 
   &__container {
-    @include media-min('DD') {
+    @include media-min("DD") {
       max-width: 700px;
     }
-    @include media-min('M') {
+    @include media-min("M") {
       max-width: 920px;
     }
-    @include media-min('LM') {
+    @include media-min("LM") {
       max-width: 100%;
     }
 
     .card-title-field {
       margin-bottom: $wbu-margin;
-      position     : relative;
-      padding      : 0 $wbu-margin/1.5;
+      position: relative;
+      padding: 0 $wbu-margin * 0.75;
 
       &::before {
-        content : "« ";
-        display : inline-block;
+        content: "« ";
+        display: inline-block;
         position: absolute;
-        left    : 0;
-        top     : 0;
+        left: 0;
+        top: 0;
       }
 
       &::after {
-        content : " »";
-        display : inline-block;
+        content: " »";
+        display: inline-block;
         position: absolute;
-        right   : 0;
-        bottom  : 0;
+        right: 0;
+        bottom: 0;
       }
     }
 
     .card-content-field {
       font-weight: 600;
-      font-size  : $wbu-default-font-size*1.37;
+      font-size: $wbu-default-font-size * 1.37;
     }
 
     .card-localisation {
@@ -61,8 +61,8 @@
 
     .icons-reviews {
       svg {
-        width  : 21px;
-        fill   : #FFF;
+        width: 21px;
+        fill: #fff;
         opacity: 0.5;
       }
 
@@ -73,8 +73,8 @@
 
     .owl-carousel {
       .owl-item {
-        display        : flex;
-        align-items    : center;
+        display: flex;
+        align-items: center;
         justify-content: center;
       }
 
@@ -82,31 +82,31 @@
         margin: 0;
 
         button {
-          position     : absolute;
-          top          : calc(61% - 100px);
-          left         : -15%;
-          bottom       : auto;
-          background   : transparent;
-          font-size    : $wbu-default-font-size * 1.2;
-          border       : 2px solid #FFF;
+          position: absolute;
+          top: calc(61% - 100px);
+          left: -15%;
+          bottom: auto;
+          background: transparent;
+          font-size: $wbu-default-font-size * 1.2;
+          border: 2px solid #fff;
           border-radius: 0;
-          transform    : rotateZ(-90deg);
-          display      : none;
-          @include media-min('DD') {
+          transform: rotateZ(-90deg);
+          display: none;
+          @include media-min("DD") {
             display: inline-block;
           }
         }
 
         button.owl-next {
-          left     : auto;
-          right    : -15%;
+          left: auto;
+          right: -15%;
           transform: rotateZ(90deg);
         }
 
         .owl-svg-nav {
-          width     : 40px;
+          width: 40px;
           background: transparent;
-          fill      : #FFF;
+          fill: #fff;
         }
       }
     }

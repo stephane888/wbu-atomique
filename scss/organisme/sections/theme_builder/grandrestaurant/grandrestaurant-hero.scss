@@ -2,446 +2,446 @@
 @use "../../../../_variables.scss" as *;
 //@use "./grandrestaurant.scss" as *;
 .grandrestaurant-hero {
-    background-image: url("https://themes-themegoods.b-cdn.net/grandrestaurantv6/wp-content/uploads/2020/12/eiliv-sonas-aceron-cWqxHoa3zXk-unsplash-768x1152.jpg") ;
+  // background-image: url("https://themes-themegoods.b-cdn.net/grandrestaurantv6/wp-content/uploads/2020/12/eiliv-sonas-aceron-cWqxHoa3zXk-unsplash-768x1152.jpg") ;
+  display: flex;
+  height: auto;
+  //min-height:100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding-top: $space_bottom * 2;
+  padding-bottom: $space_bottom * 2;
+  @include media-max(MD) {
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
+  }
+  @include media-max(XS) {
+    padding-top: $space_bottom;
+    padding-bottom: $space_bottom;
+  }
+  &__actions {
     display: flex;
-    height: auto;
-    //min-height:100vh;
-    width: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    justify-content: space-between;
+  }
+  .actions_link {
+    color: $wbu-color-boder;
+    font-weight: $wbu-title-font-weight;
+    border: 0.3rem solid $wbu-color-boder;
+    padding: ($wbu-margin / 2);
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  .actions_text {
+    color: $wbu-color-boder;
+    font-weight: $wbu-title-font-weight;
+    margin-top: $wbu-margin;
+    padding: ($wbu-margin / 2);
+    cursor: pointer;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($wbu-background, 0.5);
+  }
+  .middle {
+    display: none;
+  }
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateY(100%);
+      z-index: 2;
+    }
+    100% {
+      transform: translateY(0);
+      z-index: 5;
+    }
+  }
+  &__subtitle {
+    width: 100%;
     position: relative;
-    background-size: cover;
-    background-position: center;
-    padding-top:$space_bottom * 2;
-    padding-bottom:$space_bottom * 2;
+    padding: $wbu-margin;
+    color: color-yiq($wbu-background);
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    @include media-max(XX) {
+      transition: 1s ease-in-out;
+    }
     @include media-max(MD) {
-        padding-top:$space_bottom;
-        padding-bottom:$space_bottom;
+      transition: 1s ease-in-out;
     }
-    @include media-max(XS) {
-        padding-top:$space_bottom;
-        padding-bottom:$space_bottom;
+  }
+  &__subtitle_cont {
+    overflow: hidden;
+  }
+  &__title {
+    position: relative;
+    color: color-yiq($wbu-background);
+    width: 100%;
+    font-weight: $wbu-title-font-weight;
+    padding: $wbu-margin;
+    text-transform: capitalize;
+    animation: 1.5s ease-out 1s 1 slideInFromLeft;
+    @include media-max(XX) {
+      transition: 1s ease-in-out;
     }
-    &__actions {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+    @include media-max(MD) {
+      transition: 1s ease-in-out;
     }
-    .actions_link {
-        color: $wbu-color-boder;
-        font-weight: $wbu-title-font-weight;
-        border:0.3rem solid $wbu-color-boder;
-        padding: ($wbu-margin / 2);
-        border-radius: 0.5rem;
-        cursor: pointer;
+  }
+  &__description {
+    text-transform: capitalize;
+    width: 100%;
+    color: color-yiq($wbu-background);
+    position: relative;
+    font-weight: 400;
+    animation: 2s ease-out 2s 1 slideInFromLeft;
+  }
+  &__svg {
+    transform: rotate(180deg);
+    position: absolute;
+    display: block;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    svg {
+      position: relative;
+      bottom: 0;
+      display: block;
+      margin: 0;
+      padding: 0;
     }
-    .actions_text {
-        color: $wbu-color-boder;
-        font-weight: $wbu-title-font-weight;
-        margin-top: $wbu-margin;
-        padding: ($wbu-margin / 2);
-        cursor: pointer;
+  }
+  &--top {
+    .grandrestaurant-hero__svg {
+      transform: rotate(360deg);
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 100%;
     }
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba($wbu-background, 0.5);
+  }
+  &__card {
+    background: rgba($color: $wbu-color-primary, $alpha: 0.8);
+    text-align: center;
+    border-radius: 7px;
+    position: relative;
+    width: 100%;
+    padding: $wbu-margin * 2;
+    z-index: 4;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include media-max(MD) {
+      margin-top: $wbu-margin * 2;
+      margin-bottom: $wbu-margin * 2;
+      margin: $wbu-margin;
+      margin-left: $wbu-margin;
+    }
+    &_title {
+      text-transform: capitalize;
+      &_first {
+        color: $wbu-background;
+        font-weight: lighter;
+        padding-bottom: 0;
+        margin: 0;
+      }
+      &_second {
+        text-transform: capitalize;
+        font-weight: 700;
+        padding-top: 0;
+        color: color-yiq($wbu-color-primary);
+        margin-top: 0;
+        margin-bottom: $wbu-margin;
+      }
+    }
+    &_icone {
+      margin-bottom: $wbu-margin;
+      color: $wbu-color-boder;
+    }
+    &_text {
+      color: color-yiq($wbu-color-primary);
+      vertical-align: baseline;
+      line-height: 2;
+    }
+    &_link {
+      margin-top: $wbu-margin;
+      display: inline-block;
+      .linker {
+        text-transform: capitalize;
+        color: #cfa670;
+        font-weight: 600;
+        fill: #cfa670;
+        border-style: solid;
+        border-width: 0px 0px 3px 0px;
+        line-height: 1;
+        text-decoration: none;
+      }
+    }
+  }
+  &--card--reverse {
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    .grandrestaurant-hero__card {
+      display: flex;
+      margin-left: 0;
+      float: right;
+      @include media-max(MD) {
+        margin-top: $wbu-margin * 2;
+        margin-bottom: $wbu-margin * 2;
+        margin-left: $wbu-margin;
+      }
+    }
+    .grandrestaurant-hero__svg {
+      transform: rotate(360deg);
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 100%;
     }
     .middle {
+      display: none;
+      .grandrestaurant-hero__subtitle {
         display: none;
-    }
-    @keyframes slideInFromLeft {
-        0% {
-          transform: translateY(100%);
-          z-index: 2;
-        }
-        100% {
-          transform: translateY(0);
-          z-index: 5;
-        }
-    }
-    &__subtitle {
-        width: 100%;
-        position: relative;
-        padding: $wbu-margin;
-        color: color-yiq($wbu-background);
-        animation: 1s ease-out 0s 1 slideInFromLeft;
-        @include media-max(XX) {
-            transition: 1s ease-in-out;
-        }
-        @include media-max(MD) {
-            transition: 1s ease-in-out;
-        }
-    }
-    &__subtitle_cont {
-        overflow: hidden;
-    }
-    &__title {
-        position: relative;
-        color: color-yiq($wbu-background);
-        width: 100%;
-        font-weight: $wbu-title-font-weight;
-        padding: $wbu-margin;
-        text-transform: capitalize;
-        animation: 1.5s ease-out 1s 1 slideInFromLeft;
-        @include media-max(XX) {
-            transition: 1s ease-in-out;
-        }
-        @include media-max(MD) {
-            transition: 1s ease-in-out;
-        }
-    }
-    &__description {
-        text-transform: capitalize;
-        width: 100%;
-        color: color-yiq($wbu-background);
-        position: relative;
-        font-weight: 400;
-        animation: 2s ease-out 2s 1 slideInFromLeft;
-    }
-    &__svg {
-        transform: rotate(180deg);
-        position:absolute;
-        display: block;
-        right: 0;
-        width: 100%;
-        bottom: 0;
-        svg {
-            position: relative;
-            bottom: 0;
-            display: block;
-            margin: 0;
-            padding: 0;
-        }
-    }
-    &--top {
-        .grandrestaurant-hero__svg {
-            transform: rotate(360deg);
-            position:absolute;
-            display: block;
-            right: 0;
-            top: 0;
-            width: 100%;
-        }
-    }
-    &__card {
-        background:rgba($color: $wbu-color-primary, $alpha: 0.8);
-        text-align: center;
-        border-radius: 7px;
-        position: relative;
-        width: 100%;
-        padding: $wbu-margin*2;
-        z-index: 4;
+      }
+      .grandrestaurant-hero__title {
         display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        @include media-max(MD) {
-            margin-top: $wbu-margin * 2;
-            margin-bottom: $wbu-margin *2;
-            margin: $wbu-margin;
-            margin-left: $wbu-margin;
-        }
-        &_title{
-            text-transform: capitalize;
-            &_first{
-                color: $wbu-background;
-                font-weight: lighter;
-                padding-bottom: 0;
-                margin: 0;
-            }
-            &_second{
-                text-transform: capitalize;
-                font-weight: 700;
-                padding-top: 0;
-                color: color-yiq($wbu-color-primary);
-                margin-top: 0;
-                margin-bottom: $wbu-margin;
-            }
-        }
-        &_icone{
-            margin-bottom: $wbu-margin;
-            color: $wbu-color-boder;
-        }
-        &_text{
-            color: color-yiq($wbu-color-primary);
-            vertical-align: baseline;
-            line-height: 2;
-        }
-        &_link{
-            margin-top: $wbu-margin;
-            display: inline-block;
-            .linker{
-                text-transform: capitalize;
-                color: #cfa670;
-                font-weight: 600;
-                fill: #cfa670;
-                border-style: solid;
-                border-width: 0px 0px 3px 0px;
-                line-height: 1;
-                text-decoration: none;
-            }
-        }
-    }
-    &--card--reverse {
-        padding: 0;
+      }
+      .grandrestaurant-hero__actions {
         display: flex;
-        flex-direction: column-reverse;
-        .grandrestaurant-hero__card {
-            display: flex;
-            margin-left: 0;
-            float: right;
-            @include media-max(MD) {
-                margin-top: $wbu-margin * 2;
-                margin-bottom: $wbu-margin *2;
-                margin-left: $wbu-margin;
-            }
-        }
-        .grandrestaurant-hero__svg {
-            transform: rotate(360deg);
-            position:absolute;
-            display: block;
-            right: 0;
-            top: 0;
-            width: 100%;
-        }
-        .middle {
-            display: none;
-            .grandrestaurant-hero__subtitle {
-                display: none;
-            }
-            .grandrestaurant-hero__title {
-                display: none;
-            }
-            .grandrestaurant-hero__actions {
-                display: flex;
-            }
-        }
-        .simple {
-            display: none;
-        }
-        .grandrestaurant-hero__description {
-            display: none;
-        }
-        .grandrestaurant-hero__subtitle {
-            display: none;
-        }
-        .grandrestaurant-hero__title {
-            display: none;
-        }
+      }
     }
-    &--card {
-        padding: 0;
+    .simple {
+      display: none;
+    }
+    .grandrestaurant-hero__description {
+      display: none;
+    }
+    .grandrestaurant-hero__subtitle {
+      display: none;
+    }
+    .grandrestaurant-hero__title {
+      display: none;
+    }
+  }
+  &--card {
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    .grandrestaurant-hero__card {
+      display: flex;
+      margin-left: 60%;
+      float: right;
+      @include media-max(MD) {
+        margin-top: $wbu-margin * 2;
+        margin-bottom: $wbu-margin * 2;
+        margin-left: $wbu-margin;
+      }
+    }
+    .grandrestaurant-hero__svg {
+      transform: rotate(360deg);
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+    .middle {
+      display: none;
+      .grandrestaurant-hero__subtitle {
+        display: none;
+      }
+      .grandrestaurant-hero__title {
+        display: none;
+      }
+      .grandrestaurant-hero__actions {
         display: flex;
-        flex-direction: column-reverse;
-        .grandrestaurant-hero__card {
-            display: flex;
-            margin-left: 60%;
-            float: right;
-            @include media-max(MD) {
-                margin-top: $wbu-margin * 2;
-                margin-bottom: $wbu-margin *2;
-                margin-left: $wbu-margin;
-            }
-        }
-        .grandrestaurant-hero__svg {
-            transform: rotate(360deg);
-            position:absolute;
-            display: block;
-            right: 0;
-            top: 0;
-            width: 100%;
-        }
-        .middle {
-            display: none;
-            .grandrestaurant-hero__subtitle {
-                display: none;
-            }
-            .grandrestaurant-hero__title {
-                display: none;
-            }
-            .grandrestaurant-hero__actions {
-                display: flex;
-            }
-        }
-        .simple {
-            display: none;
-        }
-        .grandrestaurant-hero__description {
-            display: none;
-        }
-        .grandrestaurant-hero__subtitle {
-            display: none;
-        }
-        .grandrestaurant-hero__title {
-            display: none;
-        }
+      }
     }
-    &--middle-actions-top {
-        .grandrestaurant-hero__svg {
-            transform: rotate(360deg);
-            position:absolute;
-            display: block;
-            right: 0;
-            top: 0;
-            width: 100%;
-        }
-        .middle {
-            display: block;
-            .grandrestaurant-hero__subtitle {
-                display: none;
-            }
-            .grandrestaurant-hero__title {
-                display: none;
-            }
-            .grandrestaurant-hero__actions {
-                display: flex;
-            }
-        }
-        .simple {
-            display: none;
-        }
-        .grandrestaurant-hero__description {
-            display: none;
-        }
-        .grandrestaurant-hero__subtitle {
-            display: none;
-        }
-        .grandrestaurant-hero__title {
-            display: none;
-        }
+    .simple {
+      display: none;
     }
-    &--middle-actions-bottom {
-        .middle {
-            display: block;
-            .grandrestaurant-hero__subtitle {
-                display: none;
-            }
-            .grandrestaurant-hero__title {
-                display: none;
-            }
-            .grandrestaurant-hero__actions {
-                display: flex;
-            }
-        }
-        .simple {
-            display: none;
-        }
-        .grandrestaurant-hero__description {
-            display: none;
-        }
-        .grandrestaurant-hero__subtitle {
-            display: none;
-        }
-        .grandrestaurant-hero__title {
-            display: none;
-        }
+    .grandrestaurant-hero__description {
+      display: none;
     }
-    &--middle-svg-bottom {
-        .middle {
-            display: block;
-            .grandrestaurant-hero__description {
-                display: none;
-            }
-        }
-        .simple {
-            display: none;
-        }
-        .grandrestaurant-hero__actions {
-            display: none;
-        }
-        .grandrestaurant-hero__description {
-            display: none;
-        }
-        .grandrestaurant-hero__subtitle {
-            text-align: center;
-        }
-        .grandrestaurant-hero__title {
-            text-align: center;
-        }
+    .grandrestaurant-hero__subtitle {
+      display: none;
     }
-    &--middle-no-svg {
-        .middle {
-            display: block;
-            .grandrestaurant-hero__description {
-                display: none;
-            }
-        }
-        .simple {
-            display: none;
-        }
-        .grandrestaurant-hero__actions {
-            display: none;
-        }
-        .grandrestaurant-hero__svg {
-            display: none;
-        }
-        .grandrestaurant-hero__subtitle {
-            text-align: center;
-        }
-        .grandrestaurant-hero__title {
-            text-align: center;
-        }
-        .grandrestaurant-hero__description {
-            text-align: none;
-        }
+    .grandrestaurant-hero__title {
+      display: none;
     }
-    &--middle-svg-top {
-        .middle {
-            display: block;
-            .grandrestaurant-hero__description {
-                display: none;
-            }
-        }
-        .simple {
-            display: none;
-        }
-        .grandrestaurant-hero__svg {
-            transform: rotate(360deg);
-            position:absolute;
-            display: block;
-            right: 0;
-            top: 0;
-            width: 100%;
-        }
-        .grandrestaurant-hero__actions {
-            display: none;
-        }
-        .grandrestaurant-hero__subtitle {
-            text-align: center;
-        }
-        .grandrestaurant-hero__title {
-            text-align: center;
-        }
-        .grandrestaurant-hero__description {
-            display: none;
-        }
+  }
+  &--middle-actions-top {
+    .grandrestaurant-hero__svg {
+      transform: rotate(360deg);
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 100%;
     }
-    &--top-no-desc {
-        .grandrestaurant-hero__svg {
-            transform: rotate(360deg);
-            position:absolute;
-            display: block;
-            right: 0;
-            top: 0;
-            width: 100%;
-        }
-        .grandrestaurant-hero__description {
-            display: none;
-        }
+    .middle {
+      display: block;
+      .grandrestaurant-hero__subtitle {
+        display: none;
+      }
+      .grandrestaurant-hero__title {
+        display: none;
+      }
+      .grandrestaurant-hero__actions {
+        display: flex;
+      }
     }
-    &--min-height {
-        min-height:100vh;
+    .simple {
+      display: none;
     }
-    &--min-height-fixed {
-        min-height:100vh;
-        background-attachment: fixed;
+    .grandrestaurant-hero__description {
+      display: none;
     }
+    .grandrestaurant-hero__subtitle {
+      display: none;
+    }
+    .grandrestaurant-hero__title {
+      display: none;
+    }
+  }
+  &--middle-actions-bottom {
+    .middle {
+      display: block;
+      .grandrestaurant-hero__subtitle {
+        display: none;
+      }
+      .grandrestaurant-hero__title {
+        display: none;
+      }
+      .grandrestaurant-hero__actions {
+        display: flex;
+      }
+    }
+    .simple {
+      display: none;
+    }
+    .grandrestaurant-hero__description {
+      display: none;
+    }
+    .grandrestaurant-hero__subtitle {
+      display: none;
+    }
+    .grandrestaurant-hero__title {
+      display: none;
+    }
+  }
+  &--middle-svg-bottom {
+    .middle {
+      display: block;
+      .grandrestaurant-hero__description {
+        display: none;
+      }
+    }
+    .simple {
+      display: none;
+    }
+    .grandrestaurant-hero__actions {
+      display: none;
+    }
+    .grandrestaurant-hero__description {
+      display: none;
+    }
+    .grandrestaurant-hero__subtitle {
+      text-align: center;
+    }
+    .grandrestaurant-hero__title {
+      text-align: center;
+    }
+  }
+  &--middle-no-svg {
+    .middle {
+      display: block;
+      .grandrestaurant-hero__description {
+        display: none;
+      }
+    }
+    .simple {
+      display: none;
+    }
+    .grandrestaurant-hero__actions {
+      display: none;
+    }
+    .grandrestaurant-hero__svg {
+      display: none;
+    }
+    .grandrestaurant-hero__subtitle {
+      text-align: center;
+    }
+    .grandrestaurant-hero__title {
+      text-align: center;
+    }
+    .grandrestaurant-hero__description {
+      text-align: none;
+    }
+  }
+  &--middle-svg-top {
+    .middle {
+      display: block;
+      .grandrestaurant-hero__description {
+        display: none;
+      }
+    }
+    .simple {
+      display: none;
+    }
+    .grandrestaurant-hero__svg {
+      transform: rotate(360deg);
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+    .grandrestaurant-hero__actions {
+      display: none;
+    }
+    .grandrestaurant-hero__subtitle {
+      text-align: center;
+    }
+    .grandrestaurant-hero__title {
+      text-align: center;
+    }
+    .grandrestaurant-hero__description {
+      display: none;
+    }
+  }
+  &--top-no-desc {
+    .grandrestaurant-hero__svg {
+      transform: rotate(360deg);
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+    .grandrestaurant-hero__description {
+      display: none;
+    }
+  }
+  &--min-height {
+    min-height: 100vh;
+  }
+  &--min-height-fixed {
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
 }

@@ -5,8 +5,8 @@
   padding-bottom: 0;
 
   .container-menu {
-    padding-top: $wbu-margin/4;
-    padding-bottom: $wbu-margin/4;
+    padding-top: $wbu-margin * 0.25;
+    padding-bottom: $wbu-margin * 0.25;
     position: relative;
   }
 
@@ -81,7 +81,7 @@
   &__search {
     @include media-min("DD") {
       padding-left: $wbu-margin;
-      width: $wbu-margin/2;
+      width: $wbu-margin * 0.5;
       height: $wbu-margin;
     }
 

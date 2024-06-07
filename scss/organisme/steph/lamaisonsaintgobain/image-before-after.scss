@@ -4,7 +4,7 @@
 .main-twentytwenty {
   .buttons {
     .seeMore {
-      margin: 0 0 $wbu-margin/1.5;
+      margin: 0 0 $wbu-margin * 0.75;
       border: 1px solid $wbu-border-color;
       color: lighten($wbu-color-text, 10);
       background-color: #fff;
@@ -12,7 +12,7 @@
       @include WBUtransition();
 
       &.after-before {
-        margin-right: $wbu-margin/2;
+        margin-right: $wbu-margin * 0.5;
       }
 
       &.active {

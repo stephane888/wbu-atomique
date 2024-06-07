@@ -2,158 +2,156 @@
 @import "../../../../variables";
 
 .footer {
+  position: relative;
+  color: $wbu-color-text;
+  bottom: 0;
+  overflow: hidden;
+  display: block;
+  height: auto;
+  // background-image: url("http://mahogany.themerex.net/wp-content/uploads/2017/08/footer-copyright.jpg?id=446");
+  background-repeat: no-repeat;
 
-    position: relative;
-    color: $wbu-color-text;
+  .bg-opacity {
+    position: absolute;
+    background-color: rgba($color: $wbu-color-thirdly, $alpha: 0.9);
+    top: 0;
+    left: 0;
     bottom: 0;
-    overflow: hidden;
-    display: block;
-    height: auto;
-    background-image: url("http://mahogany.themerex.net/wp-content/uploads/2017/08/footer-copyright.jpg?id=446");
-    background-repeat: no-repeat;
+    right: 0;
+  }
 
-    .bg-opacity{
-        position: absolute;
-        background-color: rgba($color: $wbu-color-thirdly, $alpha:0.9);
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
-    
-    .footer-one{
-        padding-top: $space_bottom;
-        position: relative;
-        margin: 0;
-        width: 100%;
-        padding-left: $space_bottom;
-        padding-right: $space_bottom;
-        .col-lg-3{
-            padding-top: $wbu-margin;
-            .text {
-                color: $wbu-border-color;
-                display: block;
-                text-align: justify;
-                font-size: $wbu-default-font-size;
+  .footer-one {
+    padding-top: $space_bottom;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding-left: $space_bottom;
+    padding-right: $space_bottom;
+    .col-lg-3 {
+      padding-top: $wbu-margin;
+      .text {
+        color: $wbu-border-color;
+        display: block;
+        text-align: justify;
+        font-size: $wbu-default-font-size;
+      }
+      .foot-title {
+        color: $wbu-color-boder;
+        font-size: $wbu-h3-font-size;
+      }
+      .links {
+        display: block;
+        list-style: none;
+        color: $wbu-color-boder;
+        padding: 0; // magic thing help us to remove default left margin on ul
+        li {
+          .link {
+            text-decoration: none;
+            color: $wbu-border-color;
+            margin: 0;
+            display: block;
+            padding-top: $wbu-btn-padding-x-sm;
+            &:hover {
+              color: $wbu-color-secondary;
             }
-            .foot-title{
-                color: $wbu-color-boder;
-                font-size: $wbu-h3-font-size;
-            }
-            .links {
-                display: block;
-                list-style: none;
-                color: $wbu-color-boder;
-                padding: 0; // magic thing help us to remove default left margin on ul
-                li{
-                    .link{
-                        text-decoration: none;
-                        color: $wbu-border-color;
-                        margin: 0;
-                        display: block;
-                        padding-top: $wbu-btn-padding-x-sm;
-                        &:hover{
-                            color: $wbu-color-secondary;
-                        }
-                    }
-                }
-            }
-            .bloc {
-                display: flex;
-                .icon {
-                    display: inline-block;
-                    span{
-                        position: relative;
-                        padding-left: 0;
-                        padding-right: 0;
-                        display: block;
-                    }
-                }
-                .bloc-text {
-                    display: inline-block;
-                    margin: 0;
-                    padding: 0;
-                    .title-icon {
-                        display: block;
-                        padding-left: 0.5rem;
-                        color: $wbu-color-boder;
-                        font-size: $wbu-title-font-size;
-                    }
-                    .bloc-link {
-                        text-decoration: none;
-                        font-size: $wbu-h3-font-size;
-                        color: $wbu-color-secondary;
-                        padding-left: 0.5rem;
-                        font-weight: 500;
-                        &:hover{
-                            color: $wbu-color-boder;
-                        }
-                    }
-                    .bloc-link-mail{
-                        text-decoration: none;
-                        font-size: $wbu-title-font-size;
-                        padding-left: 0.5rem;
-                        color: $wbu-color-secondary;
-                        &:hover{
-                            color: $wbu-color-boder;
-                        }  
-                    }
-                    p{
-                        color: $wbu-color-boder;
-                        font-size: $wbu-title-font-size;
-                        padding-left: 0.5rem;
-                    }
-                }
-            }
+          }
         }
+      }
+      .bloc {
+        display: flex;
+        .icon {
+          display: inline-block;
+          span {
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+            display: block;
+          }
+        }
+        .bloc-text {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+          .title-icon {
+            display: block;
+            padding-left: 0.5rem;
+            color: $wbu-color-boder;
+            font-size: $wbu-title-font-size;
+          }
+          .bloc-link {
+            text-decoration: none;
+            font-size: $wbu-h3-font-size;
+            color: $wbu-color-secondary;
+            padding-left: 0.5rem;
+            font-weight: 500;
+            &:hover {
+              color: $wbu-color-boder;
+            }
+          }
+          .bloc-link-mail {
+            text-decoration: none;
+            font-size: $wbu-title-font-size;
+            padding-left: 0.5rem;
+            color: $wbu-color-secondary;
+            &:hover {
+              color: $wbu-color-boder;
+            }
+          }
+          p {
+            color: $wbu-color-boder;
+            font-size: $wbu-title-font-size;
+            padding-left: 0.5rem;
+          }
+        }
+      }
     }
+  }
 
-    .footer-two{
-        position: relative;
-        bottom: 0;
-        margin-top: $wbu-margin;
-        padding-top: $wbu-margin;
-        padding-bottom: $wbu-margin;
-        left: 0;
-        right: 0;
-        background-color: rgba($color: $wbu-background, $alpha: 0.7);
-        .col-lg-6{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            .footer-two-text-left{
-                color: $wbu-color-boder;
-                font-size: $wbu-default-font-size;
-                a {
-                    color: $wbu-color-secondary;
-                    text-decoration: none;
-                    font-size: $wbu-default-font-size;
-                }
-            }
-            .foot-title{
-                display: inline-flex;
-                font-size: $wbu-title-font-size;
-                color: $wbu-color-boder;
-                font-weight: 500;
-            }
-            .icon-container{
-                display: inline-flex;
-                padding: $wbu-margin;
-                span{
-                    background-color: inherit;
-                    border-radius: 50%;
-                    display: inline-block;
-                    padding: 0.2rem;
-                    margin-left: 0.3rem;
-                    background-color: rgba($color: $wbu-color-thirdly, $alpha:0.9);
-                    &:hover{
-                        background-color: $wbu-color-secondary;
-                    }
-                }
-            }
+  .footer-two {
+    position: relative;
+    bottom: 0;
+    margin-top: $wbu-margin;
+    padding-top: $wbu-margin;
+    padding-bottom: $wbu-margin;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: $wbu-background, $alpha: 0.7);
+    .col-lg-6 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      .footer-two-text-left {
+        color: $wbu-color-boder;
+        font-size: $wbu-default-font-size;
+        a {
+          color: $wbu-color-secondary;
+          text-decoration: none;
+          font-size: $wbu-default-font-size;
         }
+      }
+      .foot-title {
+        display: inline-flex;
+        font-size: $wbu-title-font-size;
+        color: $wbu-color-boder;
+        font-weight: 500;
+      }
+      .icon-container {
+        display: inline-flex;
+        padding: $wbu-margin;
+        span {
+          background-color: inherit;
+          border-radius: 50%;
+          display: inline-block;
+          padding: 0.2rem;
+          margin-left: 0.3rem;
+          background-color: rgba($color: $wbu-color-thirdly, $alpha: 0.9);
+          &:hover {
+            background-color: $wbu-color-secondary;
+          }
+        }
+      }
     }
-    
+  }
 }

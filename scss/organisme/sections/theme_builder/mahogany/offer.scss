@@ -2,68 +2,68 @@
 @import "../../../../variables";
 
 .offer {
-    position: relative;
-    padding-top: $space_bottom;
-    padding-bottom: $space_bottom;
-    background-image: url("http://mahogany.themerex.net/wp-content/uploads/2017/12/section_bg_3-copyright.jpg?id=675");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    .bg-opacity{
-        position: absolute;
-        background-color: rgba($color: $wbu-background, $alpha: 0.4);
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+  position: relative;
+  padding-top: $space_bottom;
+  padding-bottom: $space_bottom;
+  // background-image: url("http://mahogany.themerex.net/wp-content/uploads/2017/12/section_bg_3-copyright.jpg?id=675");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .bg-opacity {
+    position: absolute;
+    background-color: rgba($color: $wbu-background, $alpha: 0.4);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: $wbu-margin;
+    color: $wbu-color-boder;
+    .title-price {
+      display: inline-block;
+      font-size: $wbu-titre-biggest;
+      .title-price-color {
+        color: $wbu-color-secondary;
+        font-size: $wbu-h1-font-size;
+        text-decoration: line-through;
+      }
+      .title-price-dim {
+        font-size: $wbu-h1-font-size;
+      }
     }
-    .text-container{
-        display: flex;
-        flex-direction: column;
-        margin-top: $wbu-margin;
-        color: $wbu-color-boder;
-        .title-price {
-            display: inline-block;
-            font-size: $wbu-titre-biggest;
-            .title-price-color{
-                color: $wbu-color-secondary;
-                font-size: $wbu-h1-font-size;
-                text-decoration: line-through;
-            }
-            .title-price-dim {
-                font-size: $wbu-h1-font-size;
-            }
-        }
-        .title {
-            display: inline-block;
-            width: auto;
-            font-size: $wbu-titre-biggest;
-            .styled {
-                font-family: "Satisfy",cursive;
-            }
-        }
-        .bouton {
-            display: inline-block;
-            padding: 0;
-            margin-top: $wbu-margin;
-            margin-left: 0;
-            margin-bottom: 0;
-            margin-right: 0;
-        }
+    .title {
+      display: inline-block;
+      width: auto;
+      font-size: $wbu-titre-biggest;
+      .styled {
+        font-family: "Satisfy", cursive;
+      }
     }
-    .carder {
+    .bouton {
+      display: inline-block;
+      padding: 0;
+      margin-top: $wbu-margin;
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+  .carder {
+    padding: $wbu-margin;
+    .card-sale {
+      .card-text {
         padding: $wbu-margin;
-        .card-sale {
-            .card-text {
-                padding: $wbu-margin;
-                top: 75%;
-                @include media-max(MD){
-                    top: 70%;
-                }
-                &:hover{
-                    top: 60%;
-                }
-            }
+        top: 75%;
+        @include media-max(MD) {
+          top: 70%;
         }
+        &:hover {
+          top: 60%;
+        }
+      }
     }
+  }
 }

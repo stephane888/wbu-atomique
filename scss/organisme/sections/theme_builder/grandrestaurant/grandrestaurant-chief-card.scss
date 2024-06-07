@@ -2,77 +2,77 @@
 @use "../../../../_variables.scss" as *;
 
 .grandrestaurant-chief-card {
-    position: relative;
-    &__title {
-        margin-bottom: ($wbu-margin/2);
-        font-weight: $wbu-title-font-weight;
+  position: relative;
+  &__title {
+    margin-bottom: ($wbu-margin * 0.5);
+    font-weight: $wbu-title-font-weight;
+  }
+  &__img {
+    margin-bottom: $wbu-margin;
+    width: 100%;
+    max-height: 50rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: ($wbu-margin * 0.5);
     }
-    &__img {
-        margin-bottom: $wbu-margin;
-        width: 100%;
-        max-height: 50rem;
-        img {
-            width: 100%;
-            object-fit: cover;
-            border-radius: ($wbu-margin/2);
-        }
+  }
+  &__post {
+    margin-bottom: ($wbu-margin * 0.5);
+    text-transform: uppercase;
+    color: $wbu-color-text;
+  }
+  &__name {
+    margin-bottom: ($wbu-margin * 0.5);
+    font-weight: $wbu-title-font-weight;
+  }
+  &__desc {
+    margin-bottom: ($wbu-margin * 0.5);
+    font-weight: 450;
+  }
+  &__signature {
+    display: none;
+    margin-bottom: ($wbu-margin * 0.5);
+    font-weight: $wbu-title-font-weight;
+  }
+  &--no-img {
+    .grandrestaurant-chief-card__title {
+      text-transform: uppercase;
     }
-    &__post {
-        margin-bottom: ($wbu-margin/2);
-        text-transform: uppercase;
-        color: $wbu-color-text;
+    .grandrestaurant-chief-card__signature {
+      display: block;
     }
-    &__name {
-        margin-bottom: ($wbu-margin/2);
-        font-weight: $wbu-title-font-weight;
-    }
-    &__desc {
-        margin-bottom: ($wbu-margin/2);
-        font-weight: 450;
-    }
-    &__signature {
+    .grandrestaurant-chief-card__img {
+      display: none;
+      img {
         display: none;
-        margin-bottom: ($wbu-margin/2);
-        font-weight: $wbu-title-font-weight;
+      }
     }
-    &--no-img {
-        .grandrestaurant-chief-card__title {
-            text-transform: uppercase;
-        }
-        .grandrestaurant-chief-card__signature {
-            display: block;
-        }
-        .grandrestaurant-chief-card__img {
-            display: none;
-            img {
-                display: none;
-            }
-        }
-        .grandrestaurant-chief-card__post {
-            display: none;
-        }
-        .grandrestaurant-chief-card__name {
-            display: none;
-        }
+    .grandrestaurant-chief-card__post {
+      display: none;
     }
-    &--hover {
-        .grandrestaurant-chief-card__title {
-            display: none;
-        }
-        .grandrestaurant-chief-card__img {
-            position: relative;
-            overflow: hidden;
-        }
-        &:hover {
-            .grandrestaurant-chief-card__img {
-                padding: $wbu-margin;
-                border: 1.8rem solid white;
-                transition: 0.5s all ease-in-out;
-            }
-            img {
-                transform: scale(1.5);
-                transition: 0.5s all ease-in-out;
-            }
-        }
+    .grandrestaurant-chief-card__name {
+      display: none;
     }
+  }
+  &--hover {
+    .grandrestaurant-chief-card__title {
+      display: none;
+    }
+    .grandrestaurant-chief-card__img {
+      position: relative;
+      overflow: hidden;
+    }
+    &:hover {
+      .grandrestaurant-chief-card__img {
+        padding: $wbu-margin;
+        border: 1.8rem solid white;
+        transition: 0.5s all ease-in-out;
+      }
+      img {
+        transform: scale(1.5);
+        transition: 0.5s all ease-in-out;
+      }
+    }
+  }
 }

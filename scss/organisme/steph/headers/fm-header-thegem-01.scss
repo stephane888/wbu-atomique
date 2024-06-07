@@ -6,8 +6,8 @@ $wbu-default-font-size-head: $wbu-default-font-size - 0.1rem;
   font-size: $wbu-default-font-size-head;
 
   .item {
-    margin-top: $wbu-margin/1.7;
-    margin-bottom: $wbu-margin/1.7;
+    margin-top: $wbu-margin * 0.55;
+    margin-bottom: $wbu-margin * 0.55;
   }
 
   .btn {

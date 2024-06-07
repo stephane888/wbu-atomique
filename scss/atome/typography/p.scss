@@ -1,5 +1,5 @@
 @use "../../wbu-ressources-clean.scss" as *;
 
 p {
-  margin: 0 0 $wbu-margin/1.5;
+  margin: 0 0 $wbu-margin * 0.5;
 }

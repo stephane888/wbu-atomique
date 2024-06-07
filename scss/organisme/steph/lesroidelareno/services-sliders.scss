@@ -4,25 +4,25 @@
 
 .services-sliders {
   .titre {
-    margin-bottom: $wbu-margin/2;
+    margin-bottom: $wbu-margin * 0.5;
   }
 
   .sub_title {
     margin-bottom: $wbu-margin;
-    font-weight  : 300;
+    font-weight: 300;
   }
 
   .main {
     .owl-item {
       padding-right: $wbu-margin;
-      padding-left : 1px;
+      padding-left: 1px;
     }
   }
 
   .img-bg {
-    min-height         : 350px;
-    height             : 100%;
-    background-repeat  : no-repeat;
+    min-height: 350px;
+    height: 100%;
+    background-repeat: no-repeat;
     background-position: center top;
   }
 }

@@ -54,7 +54,7 @@
 
   &__desc {
     width: calc(100% - 260px);
-    padding-left: $wbu-margin / 1.5;
+    padding-left: $wbu-margin * 0.75;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -63,12 +63,12 @@
     }
 
     .description {
-      margin-bottom: $wbu-margin / 2;
+      margin-bottom: $wbu-margin * 0.5;
     }
 
     .title {
       font-weight: 500;
-      margin-bottom: $wbu-margin / 1.5;
+      margin-bottom: $wbu-margin * 0.75;
       a {
         color: inherit;
       }
@@ -104,7 +104,7 @@
 
     .teaser-img-desc__desc {
       width: 100%;
-      padding: $wbu-margin $wbu-margin/1.5 0;
+      padding: $wbu-margin $wbu-margin * 0.75 0;
     }
   }
 }

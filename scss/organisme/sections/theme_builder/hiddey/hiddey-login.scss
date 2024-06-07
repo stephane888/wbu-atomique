@@ -2,27 +2,27 @@
 @use "../../../../variables" as *;
 
 .hiddey-login {
-    .login-btn {
-        position: relative;
-        color: white;
-        border-radius: 50rem;
+  .login-btn {
+    position: relative;
+    color: white;
+    border-radius: 50rem;
 
-        &::before {
-            background-image: url("https://cdn.pixabay.com/photo/2017/08/20/10/44/diagonal-2661260_1280.png");
-            background-size: cover;
-            // z-index: -1;
-            border-radius: 50rem;
-            position: absolute;
-            opacity: .1;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            content: "";
-        }
+    &::before {
+      // background-image: url("https://cdn.pixabay.com/photo/2017/08/20/10/44/diagonal-2661260_1280.png");
+      background-size: cover;
+      // z-index: -1;
+      border-radius: 50rem;
+      position: absolute;
+      opacity: 0.1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      content: "";
     }
+  }
 }
 
 .login-btn {
-    background: rgba(white, $alpha: .2);
+  background: rgba(white, $alpha: 0.2);
 }

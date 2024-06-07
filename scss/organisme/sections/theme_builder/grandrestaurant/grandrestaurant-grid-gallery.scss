@@ -2,68 +2,68 @@
 @use "../../../../_variables.scss" as *;
 
 .grandrestaurant-grid-gallery {
-    position: relative;
-    background-color: $wbu-background;
-    padding-top: ($wbu-margin/2);
-    padding-left: ($wbu-margin/2);
-    padding-right: ($wbu-margin/2);
-    display: grid;
-    gap: ($wbu-margin/2) ($wbu-margin/2);
-    grid-template-columns: repeat(3, 2fr) repeat(2, 1fr) 2fr;
-    grid-auto-rows: 300px;
-    // customisation : 
-    /*grid-template-columns: repeat(6, 2fr);
+  position: relative;
+  background-color: $wbu-background;
+  padding-top: ($wbu-margin * 0.5);
+  padding-left: ($wbu-margin * 0.5);
+  padding-right: ($wbu-margin * 0.5);
+  display: grid;
+  gap: ($wbu-margin * 0.5) ($wbu-margin * 0.5);
+  grid-template-columns: repeat(3, 2fr) repeat(2, 1fr) 2fr;
+  grid-auto-rows: 300px;
+  // customisation :
+  /*grid-template-columns: repeat(6, 2fr);
     grid-auto-rows: 300px;
     grid-template-rows: 200px 200px 200px 480px;*/
+  @include media-max(XS) {
+    grid-template-columns: 2fr;
+  }
+  @include media-max(MD) {
+    grid-template-columns: 1fr;
+  }
+  .grid-item {
+    border: 2px solid black;
+    border-radius: $wbu-margin * 0.33;
+    overflow: hidden;
+    width: 100%;
+    img {
+      position: relative;
+      object-fit: cover;
+      background-position: center center;
+      height: 100%;
+      width: 100%;
+    }
+    &:hover {
+      img {
+        transition: all 2s;
+        transform: scale(1.2);
+        background-position: center center;
+      }
+    }
+  }
+  &--type-one {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr) repeat(1, 1fr) repeat(2, 2fr);
+    grid-auto-rows: 300px;
     @include media-max(XS) {
-        grid-template-columns: 2fr;
+      grid-template-columns: 2fr;
     }
-    @include media-max(MD) {
-        grid-template-columns: 1fr;
+  }
+  &--type-two {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) repeat(3, 2fr) repeat(1, 1fr) repeat(1, 2fr);
+    grid-auto-rows: 300px;
+    @include media-max(XS) {
+      grid-template-columns: 2fr;
     }
-    .grid-item {
-        border: 2px solid black;
-        border-radius: $wbu-margin/3;
-        overflow: hidden;
-        width: 100%;
-        img {
-            position: relative;
-            object-fit: cover;
-            background-position: center center;
-            height: 100%;
-            width: 100%;
-        }
-        &:hover{
-            img {
-                transition: all 2s;
-                transform: scale(1.2);
-                background-position: center center;
-            }
-        }
+  }
+  &--type-three {
+    display: grid;
+    padding-bottom: ($wbu-margin * 0.25);
+    grid-template-columns: repeat(1, 3fr) repeat(2, 1.5fr);
+    grid-auto-rows: 480px;
+    @include media-max(XS) {
+      grid-template-columns: 2fr;
     }
-    &--type-one {
-        display: grid;
-        grid-template-columns: repeat(3, 2fr) repeat(1, 1fr) repeat(2, 2fr);
-        grid-auto-rows: 300px;
-        @include media-max(XS) {
-            grid-template-columns: 2fr;
-        }
-    }
-    &--type-two {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr) repeat(3, 2fr) repeat(1, 1fr) repeat(1, 2fr);
-        grid-auto-rows: 300px;
-        @include media-max(XS) {
-            grid-template-columns: 2fr;
-        }
-    }
-    &--type-three {
-        display: grid;
-        padding-bottom: ($wbu-margin/4);
-        grid-template-columns: repeat(1, 3fr) repeat(2, 1.5fr);
-        grid-auto-rows: 480px;
-        @include media-max(XS) {
-            grid-template-columns: 2fr;
-        }
-    }
+  }
 }
