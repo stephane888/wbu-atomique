@@ -1,13 +1,15 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
-@use "../atome/carrousel-nav.scss";
+@use "../../../../../swipper/carrousel-nav.scss";
 
 .single-lutin {
   box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
   border-radius: 10px;
   margin: 3rem 0;
   position: relative;
+
   .lutin-img {
     overflow: hidden;
+
     img {
       width: 100%;
       height: auto;
@@ -16,12 +18,14 @@
       border-top-right-radius: 10px;
     }
   }
+
   .lutin-content {
     padding: $wbu-margin;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 100%;
     text-align: center;
+
     .lutin-name {
       margin-bottom: $wbu-margin * 0.6;
 
@@ -32,12 +36,14 @@
         color: black;
         line-height: 1.4;
         font-weight: 600;
+
         &:hover {
           color: black;
           text-decoration: none;
         }
       }
     }
+
     .media-list {
       padding-top: $wbu-margin * 0.3;
       list-style-type: none;
@@ -45,8 +51,10 @@
       padding-left: 0;
       justify-content: center;
       display: none;
+
       .element {
         list-style-type: none;
+
         .link {
           text-decoration: none;
           color: $wbu-background;
@@ -59,17 +67,20 @@
           margin: $wbu-margin * 0.4 $wbu-margin * 0.2;
           border: 1px solid rgba($wbu-color-primary, 0.4);
           transition: 0.3s;
+
           svg {
             width: 1.5rem;
             height: 1.5rem;
             transition: 0.3s;
             fill: $wbu-background;
           }
+
           &:hover {
             background: $wbu-background;
             text-decoration: none;
             border: none;
             border: 1px solid $wbu-background;
+
             svg {
               fill: white;
             }
@@ -78,23 +89,28 @@
       }
     }
   }
+
   //team img glass ui
   &--glassmorphism {
     border-radius: 10px;
     overflow: hidden;
+
     &:hover {
       img {
         filter: blur(3px);
       }
+
       .lutin-content {
         opacity: 1;
         transform: translateY(0px);
         bottom: 0;
       }
     }
+
     .lutin-img {
       overflow: hidden;
       position: relative;
+
       img {
         width: 100%;
         max-width: 100%;
@@ -103,6 +119,7 @@
         border-radius: 10px;
       }
     }
+
     .lutin-content {
       text-align: center;
       background-color: #fff;
@@ -110,12 +127,15 @@
       padding: 30px 0;
       position: absolute;
       width: 100%;
+
       @include media-max(MD) {
         width: 100%;
       }
+
       @include media-max(XS) {
         width: 100%;
       }
+
       bottom: 0;
       z-index: 2;
       transform: translateY(130px);
@@ -126,11 +146,13 @@
       border-top-right-radius: 20px;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
+
       .media-list {
         display: flex;
       }
     }
   }
+
   //end glassmorphism
 
   //card skeumorphism
@@ -138,9 +160,11 @@
     border-radius: 10px;
     padding: $wbu-margin;
     transition: 0.3s;
+
     .lutin-img {
       border-radius: 50%;
       overflow: hidden;
+
       img {
         width: 100%;
         border-radius: 100%;
@@ -153,19 +177,23 @@
         display: flex;
       }
     }
+
     &:hover {
       box-shadow: 0 0 30px rgb(0 0 0 / 10%);
     }
   }
+
   &--flat {
     box-shadow: none;
     border-radius: 10px;
     margin: $wbu-margin * 0.5 0;
     padding: $wbu-margin;
     transition: 0.3s;
+
     .lutin-img {
       border-radius: 50%;
       overflow: hidden;
+
       img {
         width: 100%;
         border-radius: 100%;

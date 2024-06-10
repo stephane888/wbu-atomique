@@ -2,116 +2,117 @@
 //
 //on peut aussi cette fonction pour faire le traitement ou recherche unmodule en ligne sass-inline-svg, mais ce processus reste assez lourd pendant le rendu.
 @use "../../libraries/inline-svg" as *;
+
 @mixin wbu__svg-puce-check($color: #ffa0a2, $dimension: 25) {
-  //@include background-svg('<svg width= "25" height="25" viewBox="0 0 25 25" fill="none"><path d="M24.5 12.5C24.5 19.1274 19.1274 24.5 12.5 24.5C5.87258 24.5 0.5 19.1274 0.5 12.5C0.5 5.87258 5.87258 0.5 12.5 0.5C19.1274 0.5 24.5 5.87258 24.5 12.5Z" fill="#F8F8F8" stroke="#EFEFEF"></path><path d="M10.3994 17.218C10.1816 17.218 9.98204 17.1454 9.81873 16.9821L6.20786 13.3712C5.88125 13.0446 5.88125 12.5365 6.20786 12.2099C6.53447 11.8833 7.04252 11.8833 7.36913 12.2099L10.4175 15.2402L17.6575 8.01839C17.9841 7.69178 18.4921 7.69178 18.8187 8.01839C19.1454 8.34501 19.1454 8.85308 18.8187 9.17969L10.9982 16.9821C10.8167 17.1454 10.6171 17.218 10.3994 17.218Z" fill="#49A0A2"></path></svg>'); //
+  @include background-svg('<svg width= "25" height="25" viewBox="0 0 25 25" fill="none"><path d="M24.5 12.5C24.5 19.1274 19.1274 24.5 12.5 24.5C5.87258 24.5 0.5 19.1274 0.5 12.5C0.5 5.87258 5.87258 0.5 12.5 0.5C19.1274 0.5 24.5 5.87258 24.5 12.5Z" fill="#F8F8F8" stroke="#EFEFEF"></path><path d="M10.3994 17.218C10.1816 17.218 9.98204 17.1454 9.81873 16.9821L6.20786 13.3712C5.88125 13.0446 5.88125 12.5365 6.20786 12.2099C6.53447 11.8833 7.04252 11.8833 7.36913 12.2099L10.4175 15.2402L17.6575 8.01839C17.9841 7.69178 18.4921 7.69178 18.8187 8.01839C19.1454 8.34501 19.1454 8.85308 18.8187 9.17969L10.9982 16.9821C10.8167 17.1454 10.6171 17.218 10.3994 17.218Z" fill="#49A0A2"></path></svg>'); //
   $color: str-replace(#{$color}, "\#", "");
   // background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$dimension}' height='#{$dimension}' viewBox='0 0 25 25' fill='none'%3E%3Cpath d='M24.5 12.5C24.5 19.1274 19.1274 24.5 12.5 24.5C5.87258 24.5 0.5 19.1274 0.5 12.5C0.5 5.87258 5.87258 0.5 12.5 0.5C19.1274 0.5 24.5 5.87258 24.5 12.5Z' fill='%23F8F8F8' stroke='%23EFEFEF'%3E%3C/path%3E%3Cpath d='M10.3994 17.218C10.1816 17.218 9.98204 17.1454 9.81873 16.9821L6.20786 13.3712C5.88125 13.0446 5.88125 12.5365 6.20786 12.2099C6.53447 11.8833 7.04252 11.8833 7.36913 12.2099L10.4175 15.2402L17.6575 8.01839C17.9841 7.69178 18.4921 7.69178 18.8187 8.01839C19.1454 8.34501 19.1454 8.85308 18.8187 9.17969L10.9982 16.9821C10.8167 17.1454 10.6171 17.218 10.3994 17.218Z' fill='%23#{$color}'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
 }
+
 @mixin wbu__svg-dd-puce-check($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">    <g>        <path fill="none" d="M0 0h24v24H0z"/>        <path fill="#{$color}" d="M11.602 13.76l1.412 1.412 8.466-8.466 1.414 1.414-9.88 9.88-6.364-6.364 1.414-1.414 2.125 2.125 1.413 1.412zm.002-2.828l4.952-4.953 1.41 1.41-4.952 4.953-1.41-1.41zm-2.827 5.655L7.364 18 1 11.636l1.414-1.414 1.413 1.413-.001.001 4.951 4.951z"/>    </g></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">    <g>        <path fill="none" d="M0 0h24v24H0z"/>        <path fill="#{$color}" d="M11.602 13.76l1.412 1.412 8.466-8.466 1.414 1.414-9.88 9.88-6.364-6.364 1.414-1.414 2.125 2.125 1.413 1.412zm.002-2.828l4.952-4.953 1.41 1.41-4.952 4.953-1.41-1.41zm-2.827 5.655L7.364 18 1 11.636l1.414-1.414 1.413 1.413-.001.001 4.951 4.951z"/>    </g></svg>'
   ); //
   background-repeat: no-repeat;
 }
+
 @mixin wbu__svg-time-clock($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg width="12" height="11" viewBox="0 0 12 11" fill="none"><path d="M5.93919 10.3125C8.61094 10.3125 10.7768 8.15787 10.7768 5.5C10.7768 2.84213 8.61094 0.6875 5.93919 0.6875C3.26744 0.6875 1.10156 2.84213 1.10156 5.5C1.10156 8.15787 3.26744 10.3125 5.93919 10.3125Z" stroke="#A9A9A9" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.9375 2.75V5.5L7.31968 6.875" stroke="#A9A9A9" stroke-linecap="round" stroke-linejoin="round"></path></svg>'
+  @include background-svg('<svg width="12" height="11" viewBox="0 0 12 11" fill="none"><path d="M5.93919 10.3125C8.61094 10.3125 10.7768 8.15787 10.7768 5.5C10.7768 2.84213 8.61094 0.6875 5.93919 0.6875C3.26744 0.6875 1.10156 2.84213 1.10156 5.5C1.10156 8.15787 3.26744 10.3125 5.93919 10.3125Z" stroke="#A9A9A9" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.9375 2.75V5.5L7.31968 6.875" stroke="#A9A9A9" stroke-linecap="round" stroke-linejoin="round"></path></svg>'
   ); //
   background-repeat: no-repeat;
 }
 
 @mixin wbu__check($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 448 512"><path    fill="#{$color}" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 448 512"><path    fill="#{$color}" d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></svg>'
   ); //
   background-repeat: no-repeat;
   background-position: center;
 }
 
 @mixin wbu__angle-right($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg  version="1.1" x="0px" y="0px" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 66.91 122.88" style="fill:#fff;" xml:space="preserve"><g><path fill="#{$color}" d="M1.95,111.2c-2.65,2.72-2.59,7.08,0.14,9.73c2.72,2.65,7.08,2.59,9.73-0.14L64.94,66l-4.93-4.79l4.95,4.8 c2.65-2.74,2.59-7.11-0.15-9.76c-0.08-0.08-0.16-0.15-0.24-0.22L11.81,2.09c-2.65-2.73-7-2.79-9.73-0.14 C-0.64,4.6-0.7,8.95,1.95,11.68l48.46,49.55L1.95,111.2L1.95,111.2L1.95,111.2z"/></g></svg>'
+  @include background-svg('<svg  version="1.1" x="0px" y="0px" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 66.91 122.88" style="fill:#fff;" xml:space="preserve"><g><path fill="#{$color}" d="M1.95,111.2c-2.65,2.72-2.59,7.08,0.14,9.73c2.72,2.65,7.08,2.59,9.73-0.14L64.94,66l-4.93-4.79l4.95,4.8 c2.65-2.74,2.59-7.11-0.15-9.76c-0.08-0.08-0.16-0.15-0.24-0.22L11.81,2.09c-2.65-2.73-7-2.79-9.73-0.14 C-0.64,4.6-0.7,8.95,1.95,11.68l48.46,49.55L1.95,111.2L1.95,111.2L1.95,111.2z"/></g></svg>'
   ); //
   background-repeat: no-repeat;
   background-position: center;
 }
+
 @mixin wbu__direction-right($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 512 512"> <path fill="#{$color}" d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 512 512"> <path fill="#{$color}" d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"/></svg>'
   ); //
   background-repeat: no-repeat;
   background-position: center;
 }
+
 @mixin wbu-bars($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 448 512"><path fill="#{$color}" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 448 512"><path fill="#{$color}" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>'
   ); //
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @mixin wbu-circle-play($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 512 512"><path fill="#{$color}" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 512 512"><path fill="#{$color}" d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM176 168V344C176 352.7 180.7 360.7 188.3 364.9C195.8 369.2 205.1 369 212.5 364.5L356.5 276.5C363.6 272.1 368 264.4 368 256C368 247.6 363.6 239.9 356.5 235.5L212.5 147.5C205.1 142.1 195.8 142.8 188.3 147.1C180.7 151.3 176 159.3 176 168V168z"/></svg>'
   ); //
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @mixin wbu-close($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 320 512"><path fill="#{$color}"  d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 320 512"><path fill="#{$color}"  d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>'
   ); //
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @mixin wbu-pause($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg"  width="#{$dimension}" height="#{$dimension}"   viewBox="0 0 320 512"><path  fill="#{$color}" d="M272 63.1l-32 0c-26.51 0-48 21.49-48 47.1v288c0 26.51 21.49 48 48 48L272 448c26.51 0 48-21.49 48-48v-288C320 85.49 298.5 63.1 272 63.1zM80 63.1l-32 0c-26.51 0-48 21.49-48 48v288C0 426.5 21.49 448 48 448l32 0c26.51 0 48-21.49 48-48v-288C128 85.49 106.5 63.1 80 63.1z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg"  width="#{$dimension}" height="#{$dimension}"   viewBox="0 0 320 512"><path  fill="#{$color}" d="M272 63.1l-32 0c-26.51 0-48 21.49-48 47.1v288c0 26.51 21.49 48 48 48L272 448c26.51 0 48-21.49 48-48v-288C320 85.49 298.5 63.1 272 63.1zM80 63.1l-32 0c-26.51 0-48 21.49-48 48v288C0 426.5 21.49 448 48 448l32 0c26.51 0 48-21.49 48-48v-288C128 85.49 106.5 63.1 80 63.1z"/></svg>'
   ); //
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @mixin wbu-play($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}"  viewBox="0 0 384 512"><path fill="#{$color}"  d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}"  viewBox="0 0 384 512"><path fill="#{$color}"  d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"/></svg>'
   ); //
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @mixin wbu-search($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 512 512"><path fill="#{$color}" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}" viewBox="0 0 512 512"><path fill="#{$color}" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg>'
   ); //
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @mixin wbu-tags($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg"  width="#{$dimension}" height="#{$dimension}" viewBox="0 0 512 512"> <path fill="#{$color}" d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg"  width="#{$dimension}" height="#{$dimension}" viewBox="0 0 512 512"> <path fill="#{$color}" d="M472.8 168.4C525.1 221.4 525.1 306.6 472.8 359.6L360.8 472.9C351.5 482.3 336.3 482.4 326.9 473.1C317.4 463.8 317.4 448.6 326.7 439.1L438.6 325.9C472.5 291.6 472.5 236.4 438.6 202.1L310.9 72.87C301.5 63.44 301.6 48.25 311.1 38.93C320.5 29.61 335.7 29.7 344.1 39.13L472.8 168.4zM.0003 229.5V80C.0003 53.49 21.49 32 48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L410.7 218.7C435.7 243.7 435.7 284.3 410.7 309.3L277.3 442.7C252.3 467.7 211.7 467.7 186.7 442.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5L.0003 229.5zM112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112z"/></svg>'
   ); //
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @mixin wbu__angle-up($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}"  viewBox="0 0 384 512" ><path fill="#{$color}" d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg" width="#{$dimension}" height="#{$dimension}"  viewBox="0 0 384 512" ><path fill="#{$color}" d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z"/></svg>'
   ); //
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @mixin wbu__angles-up($color: #ffa0a2, $dimension: 25) {
-  @include background-svg(
-    '<svg xmlns="http://www.w3.org/2000/svg"  width="#{$dimension}" height="#{$dimension}" viewBox="0 0 384 512"><path fill="#{$color}" d="M54.63 246.6L192 109.3l137.4 137.4C335.6 252.9 343.8 256 352 256s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25l-160-160c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25S42.13 259.1 54.63 246.6zM214.6 233.4c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0L192 301.3l137.4 137.4C335.6 444.9 343.8 448 352 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L214.6 233.4z"/></svg>'
+  @include background-svg('<svg xmlns="http://www.w3.org/2000/svg"  width="#{$dimension}" height="#{$dimension}" viewBox="0 0 384 512"><path fill="#{$color}" d="M54.63 246.6L192 109.3l137.4 137.4C335.6 252.9 343.8 256 352 256s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25l-160-160c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25S42.13 259.1 54.63 246.6zM214.6 233.4c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0L192 301.3l137.4 137.4C335.6 444.9 343.8 448 352 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L214.6 233.4z"/></svg>'
   ); //
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @mixin wbu__svg-map($color: #ffa0a2, $dimension: 25) {
   $color: str-replace(#{$color}, "\#", "");
   // background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='#{$dimension}' height='#{$dimension}' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 297 297' style='enable-background:new 0 0 297 297;' xml:space='preserve'%3E%3Cg fill='%23#{$color}'%3E%3Cpath d='M148.5,0C87.43,0,37.747,49.703,37.747,110.797c0,91.026,99.729,179.905,103.976,183.645 c1.936,1.705,4.356,2.559,6.777,2.559c2.421,0,4.841-0.853,6.778-2.559c4.245-3.739,103.975-92.618,103.975-183.645 C259.253,49.703,209.57,0,148.5,0z M148.5,272.689c-22.049-21.366-90.243-93.029-90.243-161.892 c0-49.784,40.483-90.287,90.243-90.287s90.243,40.503,90.243,90.287C238.743,179.659,170.549,251.322,148.5,272.689z'/%3E%3Cpath d='M148.5,59.183c-28.273,0-51.274,23.154-51.274,51.614c0,28.461,23.001,51.614,51.274,51.614 c28.273,0,51.274-23.153,51.274-51.614C199.774,82.337,176.773,59.183,148.5,59.183z M148.5,141.901 c-16.964,0-30.765-13.953-30.765-31.104c0-17.15,13.801-31.104,30.765-31.104c16.964,0,30.765,13.953,30.765,31.104 C179.265,127.948,165.464,141.901,148.5,141.901z'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: left center;
 }
+
 @mixin wbu_svg_quote_before() {
   content: "\201C";
   -webkit-transform: translate(-40px, 10px);
@@ -122,6 +123,7 @@
   position: absolute;
   line-height: 3rem;
 }
+
 @mixin wbu_svg_quote_after() {
   content: "\201D";
   -webkit-transform: translate(20px, -44px);
