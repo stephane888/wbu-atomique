@@ -11,8 +11,8 @@
   position: relative;
   z-index: 1;
   .content-text {
-    padding-top: $space_bottom;
-    padding-bottom: $space_bottom;
+    //padding-top: $space_bottom;
+    //padding-bottom: $space_bottom;
     padding-right: $wbu-margin;
     color: inherit;
     align-items: center;
@@ -21,7 +21,6 @@
     flex-direction: column;
     order: 3;
     @include media-max("MD") {
-      padding-right: $space_bottom;
       order: 1;
     }
   }

@@ -2,30 +2,37 @@
 
 .footer1 {
   background: $wbu-background;
+
   /* 21 Footer
 ================================================== */
   .footer {
     color: color-yiq($wbu-background);
     padding: 5rem 0;
+
     p.gray {
       font-weight: 400;
       color: #969ba0;
       margin-bottom: 0px;
       background: none;
     }
+
     .bold {
       font-weight: 400;
       margin-bottom: $wbu-margin * 0.5;
     }
+
     .timing {
       margin-top: $wbu-margin * 2;
+
       .bold {
         font-weight: 600;
         margin-bottom: $wbu-margin * 0.5;
       }
     }
+
     a {
       color: color-yiq($wbu-background);
+
       &:hover {
         color: color-yiq($wbu-background);
         font-weight: 700;
@@ -39,6 +46,7 @@
     .circled {
       padding: 0;
       list-style: none;
+
       .useful-links {
         &:before {
           content: "\e800";
@@ -51,6 +59,7 @@
           color: $wbu-color-primary;
           font-size: 8px;
         }
+
         margin-left: -2px;
         display: inline-block;
         width: 50%;
@@ -70,6 +79,7 @@
     text-transform: capitalize;
     padding-bottom: 20px;
   }
+
   .footer .widget .contact .content p {
     font-size: 14px;
     line-height: 18px;
@@ -77,18 +87,21 @@
     padding: 0 0 10px 0;
     text-transform: none;
   }
+
   .footer-links li {
     display: inline-block;
     padding: 8px 6px;
   }
+
   .footer-links li a {
-    color: darken(color-yiq($wbu-background), 70);
+    // color: darken(color-yiq($wbu-background), 70);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+
   .footer-links li a:hover {
     color: color-yiq($wbu-background);
   }
@@ -104,10 +117,12 @@
     margin-left: -20px;
     margin-top: 10px;
   }
+
   .social-icons li {
     display: inline-block;
     padding-right: 8px;
   }
+
   .social-icons li a i {
     width: 40px;
     height: 40px;
@@ -136,6 +151,7 @@
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+
   .social-icons .tooltip.top .tooltip-arrow {
     border-top-color: #64696e;
     position: relative;

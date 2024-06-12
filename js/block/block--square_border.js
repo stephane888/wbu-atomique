@@ -26,24 +26,14 @@ jQuery(document).ready(function ($) {
     };
     if ($(".socialmediaicons").length > 0) {
       var html = "";
-      var href = $("main article.full-wb_universe").attr(
-        "data-history-node-id"
-      );
+      var href = $("main article.full-wb_universe").attr("data-history-node-id");
       var title = $("head title").html();
       var description = $('meta[property="og:description"]').attr("content");
       var img = $('meta[property="og:image"]').attr("content");
-      href =
-        window.location.protocol +
-        "://" +
-        window.location.host +
-        "/node/" +
-        href;
+      href = window.location.protocol + "://" + window.location.host + "/node/" + href;
       $.each(rx, function (i, f) {
         if (f && i == "facebook") {
-          html +=
-            '<a class="fb-share fab fa-facebook-f" data-href="' +
-            href +
-            '"><span>Partage</span></a>';
+          html += '<a class="fb-share fab fa-facebook-f" data-href="' + href + '"><span>Partage</span></a>';
         } else if (f && i == "whatsapp") {
           // support https://faq.whatsapp.com/fr/android/26000030/
           // https://forum.webflow.com/t/dynamic-page-sharing-on-whatsapp/31465
@@ -70,12 +60,7 @@ jQuery(document).ready(function ($) {
           texte += "Lire la suite : ";
           //texte += "\r\n";
           texte += href;
-          html +=
-            '<a class="fb-whatsapp fab fa-whatsapp" href="whatsapp://send?text=' +
-            encodeURIComponent(texte) +
-            "&source=" +
-            href +
-            '"><span>Partage</span></a>';
+          html += '<a class="fb-whatsapp fab fa-whatsapp" href="whatsapp://send?text=' + encodeURIComponent(texte) + "&source=" + href + '"><span>Partage</span></a>';
         }
       });
       $(".socialmediaicons").html(html);
@@ -121,7 +106,7 @@ jQuery(document).ready(function ($) {
        *
        */
       (function () {
-        //console.log(' Face Count ');
+        // console.log(' Face Count ');
         FB.api(
           "/",
           {
@@ -209,8 +194,7 @@ jQuery(document).ready(function ($) {
             "/me",
             "GET",
             {
-              fields:
-                "first_name,last_name,gender,name,email,verified,name_format,picture,hometown,address,age_range,birthday,cover",
+              fields: "first_name,last_name,gender,name,email,verified,name_format,picture,hometown,address,age_range,birthday,cover",
             },
             function (response) {
               console.log("Get data from user");
@@ -250,7 +234,7 @@ jQuery(document).ready(function ($) {
       });
     })();
     /**
-     * initialise API
+     * Initialise API
      */
     (function () {
       /**
@@ -280,7 +264,7 @@ jQuery(document).ready(function ($) {
     })();
   });
   /**
-   * post data
+   * Post data
    */
   function postDatas(url, datas, reload) {
     var reponse = "";

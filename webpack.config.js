@@ -19,7 +19,6 @@ plugins.push(
     chunkFilename: "[id].css",
   })
 );
-
 console.log("devMode", devMode);
 module.exports = {
   plugins,
@@ -34,7 +33,7 @@ module.exports = {
   devtool: devMode ? "inline-source-map" : false,
   module: {
     rules: [
-      //règles de compilations pour les fichiers .js
+      // règles de compilations pour les fichiers .js
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -45,7 +44,7 @@ module.exports = {
           },
         },
       },
-      //règles de compilations pour les fichiers .css
+      // règles de compilations pour les fichiers .css
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
