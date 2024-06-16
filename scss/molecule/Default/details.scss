@@ -1,0 +1,59 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables";
+details {
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(#ccc, 0);
+  margin-bottom: $wbu-margin;
+  box-shadow: 0 0.1rem 1rem -0.5rem rgba(200, 200, 200, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0 $wbu-margin 0 $wbu-margin;
+  // color: color-yiq($wbu-color-primary);
+}
+
+summary {
+  padding: $wbu-margin * 0.5;
+  display: block;
+  background: rgba(#ccc, 0.24);
+  padding-left: $wbu-margin * 1.2;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  margin-left: -$wbu-margin;
+  margin-right: -$wbu-margin;
+}
+
+summary:before {
+  content: "";
+  border-width: $wbu-margin * 0.3;
+  border-style: solid;
+  border-color: transparent transparent transparent $wbu-color-primary;
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  transform: rotate(0);
+  transform-origin: 0.2rem 50%;
+  transition: 0.25s transform ease;
+}
+
+/* THE MAGIC 🧙‍♀️ */
+details[open] {
+  padding-bottom: $wbu-margin * 0.25;
+  background: rgba(#ccc, 0.24);
+  > summary {
+    margin-bottom: $wbu-margin;
+    &:before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details > ul {
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}

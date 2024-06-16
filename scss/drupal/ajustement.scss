@@ -71,3 +71,22 @@ table.treetable tbody > tr.token-group {
 fieldset.form-item fieldset.form-item legend {
   @extend .h5;
 }
+
+/**
+ * On doit ajouter les marges autour des images qui sont ajouter dans l'editeur.
+ */
+.field--type-text-with-summary,
+.field--type-text-long {
+  img {
+    max-width: 100%;
+    width: auto;
+  }
+  .align-right {
+    margin-left: $wbu-margin;
+    margin-bottom: $wbu-margin;
+  }
+  .align-left {
+    margin-right: $wbu-margin;
+    margin-bottom: $wbu-margin;
+  }
+}
