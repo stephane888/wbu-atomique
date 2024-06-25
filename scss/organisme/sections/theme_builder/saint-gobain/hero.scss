@@ -4,18 +4,22 @@
 .hero-saint-gobain {
   position: relative;
   display: block;
+
   @include media-min(DD) {
     display: flex;
   }
+
   .module-empty {
     min-width: 400px;
     display: none;
     width: calc(36%);
     position: relative;
+
     @include media-min(DD) {
       display: block;
     }
   }
+
   .module-text {
     position: relative;
     background-color: #fff;
@@ -29,6 +33,7 @@
     //background-color: gray;
     text-align: center;
     position: relative;
+
     @include media-min(DD) {
       padding: 60px 60px 60px 0;
       box-shadow: 1px 1px 103px 31px rgb(255, 255, 255, 0.75);
@@ -40,20 +45,23 @@
       margin-left: calc(100% - 89%);
       background: #fff;
     }
+
     &__title {
       font-weight: bold;
       margin: $space_top * 0.5 auto $wbu-margin * 0.5;
+
       @include media-min(DD) {
         margin-top: 0;
       }
     }
+
     &__small {
       font-weight: 700;
       margin: 0px 0 $wbu-margin;
     }
+
     &__btn {
       display: flex;
-      position: absolute;
       bottom: -23px;
       width: 100%;
       justify-content: center;
@@ -63,6 +71,7 @@
         position: relative;
         margin-bottom: $wbu-margin * 0.8;
       }
+
       @include media-max(MD) {
         .btn-link-rectangle {
           //padding: 12px 50px;
@@ -71,28 +80,34 @@
       }
     }
   }
+
   .module-img {
     flex-grow: 1;
     height: 744px;
     background-position: 50%;
     //// background-image: url("./img/gobain.jpg");
     background-size: cover;
+
     @include media-max(MD) {
       height: 541px;
     }
   }
+
   .module-grille {
     display: flex;
     justify-content: space-around;
     display: none;
     padding: $wbu-margin 0;
+
     // flex-wrap: wrap;
     @include media-max(XS) {
       flex-wrap: wrap;
     }
+
     @include media-max(MD) {
       display: flex;
     }
+
     .grille-bloc {
       display: flex;
       // background-color: gray;
@@ -102,22 +117,28 @@
       //max-width: 400px;
       //min-width: 200px;
       padding: 1rem;
+
       &__svg {
         margin-bottom: 10px;
+
         svg {
           fill: $wbu-color-primary;
         }
       }
+
       &__p {
         margin: 0;
       }
+
       &__titre {
         font-weight: bold;
       }
     }
+
     &--sm {
       display: none;
       padding: 10px 0;
+
       @include media-min(DD) {
         display: flex;
       }
