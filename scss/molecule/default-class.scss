@@ -19,6 +19,8 @@
 // @use "./Default/row-alter.scss";
 @use "./Default/svg.scss";
 @use "./Default/text-titre.scss";
+//
+@use "./Default/details.scss";
 
 /**
  * Espacement/marge entre blog
@@ -127,8 +129,8 @@
   padding-left: $space_inner_top * 0.5;
 
   @include media-min("mobile") {
-    padding-top: $space_inner_top;
-    padding-bottom: $space_inner_top;
+    padding-right: $space_inner_top;
+    padding-left: $space_inner_top;
   }
 }
 
@@ -426,6 +428,12 @@ form {
 .opacity-before-088 {
   &::before {
     opacity: 0.88 !important;
+  }
+}
+
+.opacity-before-080 {
+  &::before {
+    opacity: 0.8 !important;
   }
 }
 

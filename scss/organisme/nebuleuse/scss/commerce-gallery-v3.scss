@@ -15,10 +15,12 @@ $with_thumbs_slider: 100px;
 .galleries-main-thumbs {
   max-height: 600px;
   // main slider
-  .galleries-main {
-    position: relative;
+  .galleries-main.swiper-with-thumbs {
     margin-bottom: $wbu-margin;
     margin-right: $wbu-margin;
+  }
+  .galleries-main {
+    position: relative;
     @include media-min(DD) {
       order: 1;
     }
