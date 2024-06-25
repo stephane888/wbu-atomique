@@ -1,0 +1,39 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../variables" as *;
+
+.local-tasks-block {
+  background-color: $wbu-background;
+  color: color-yiq($wbu-background);
+  padding: 0;
+  margin: 0;
+  .nav-item,
+  .nav-link {
+    color: color-yiq($wbu-background);
+  }
+  .nav-link {
+    padding: $wbu-margin * 0.75 $wbu-margin * 0.5;
+    position: relative;
+    &::before {
+      @include WBUtransition($temps: 0.2s);
+      bottom: 0;
+      top: auto;
+      left: 0;
+      right: 0;
+      position: absolute;
+      height: 0;
+      display: flex;
+      content: "";
+      background-color: $wbu-color-primary;
+    }
+    &.is-active,
+    &:hover {
+      font-weight: bold;
+      &::before {
+        height: $wbu-margin * 0.2;
+      }
+    }
+  }
+  .navbar-toggler {
+    background-color: color-yiq($wbu-background);
+  }
+}

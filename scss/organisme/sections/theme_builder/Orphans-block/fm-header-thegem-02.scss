@@ -58,8 +58,8 @@
       }
     }
   }
-  .navbar-nav {
-    .nav-item {
+  .navbar-collapse > .navbar-nav {
+    > .nav-item {
       .nav-link {
         &:first-child {
           padding-left: 0;
@@ -67,7 +67,8 @@
       }
     }
   }
-  //ceci c'est uniquement au cas ou ou le module lang-dropdown est activé
+
+  // ceci c'est uniquement au cas ou ou le module lang-dropdown est activé
   form.lang-dropdown-form {
     display: flex;
     align-items: center;
@@ -90,5 +91,12 @@
         background-color: $wbu-background;
       }
     }
+  }
+
+  //
+  .layout-region.user_compact {
+    left: auto;
+    right: 0;
+    min-width: 150px;
   }
 }
