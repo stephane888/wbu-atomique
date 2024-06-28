@@ -8,24 +8,29 @@
  * est n'est pas optimisé, il contient des blocks qui doivent etre separer lorqu'on souhaite avoir uniquement le menu. 
  */
 .header-section-handler {
+
   // overflow: hidden; // On rend visble car on a ajouté un dropdown.
   // module .lang-dropdown-form by drupal.
   .lang-dropdown-form {
     display: flex;
     margin-left: $wbu-margin * 1.5;
+
     .js-form-item {
       margin-bottom: 0 !important;
     }
-    img {
+
+    img.language-icon {
       min-width: 25px;
       padding: 1.2rem 0;
     }
+
     select {
       width: auto !important;
       border: none;
       background: transparent;
       padding-right: $wbu-margin * 0.25;
       padding-left: $wbu-margin * 0.25;
+
       &:focus,
       &:focus-visible {
         border: none;
@@ -33,6 +38,7 @@
       }
     }
   }
+
   &.mn-fixed-top {
     position: fixed;
     top: 0;
@@ -43,46 +49,64 @@
     background-color: rgba($wbu-background, 0.2);
     @include WBUtransition($temps: 0.7s);
   }
+
   img.logo {
     max-height: 100px;
     max-width: 150px;
     @include WBUtransition($temps: 0.7s);
   }
+
   .header-nav {
     padding: $wbu-margin * 0.25 0;
+
     @include media-min(mobile) {
       padding-left: $wbu-margin;
       padding-top: $wbu-margin * 0.5;
       padding-bottom: $wbu-margin * 0.5;
     }
+
     .navbar-collapse {
       align-items: stretch;
     }
+
     .navbar-brand {
       padding: 0;
+
+      a[rel=home] {
+        img {
+          width: 45px;
+        }
+      }
+
     }
 
     .nav-links {
       margin-left: auto;
       color: $wbu-color-text;
+
       .nav-item {
         display: flex;
         align-items: center;
       }
+
       .nav-link {
         margin-right: 12px;
         font-weight: 600;
         text-transform: capitalize;
+
         &:hover {
           background-color: $wbu-color-primary;
           color: color-yiq($wbu-color-primary);
         }
+
         &.is-active {
           position: relative;
           margin-bottom: $wbu-margin * 0.5;
+
           @include media-min(DD) {
             margin-bottom: 0;
           }
+
           &::before {
             content: "";
             position: absolute;
@@ -95,10 +119,12 @@
           }
         }
       }
+
       .colored {
         color: $wbu-color-secondary;
         text-decoration: none;
       }
+
       .cart {
         .count {
           position: absolute;
@@ -110,6 +136,7 @@
           border-radius: 100%;
         }
       }
+
       .app-btn {
         background: $wbu-color-secondary;
         width: 130px;
@@ -120,6 +147,7 @@
         margin-top: $wbu-margin;
         padding: $wbu-margin;
         position: relative;
+
         &:hover {
           .link {
             z-index: 1;
@@ -127,6 +155,7 @@
             color: $wbu-border-color;
           }
         }
+
         &::before {
           content: "";
           position: absolute;
@@ -139,12 +168,15 @@
           transform-origin: 0 0;
           transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
         }
+
         &::before {
           transform: scaleX(0);
         }
+
         &:hover::before {
           transform: scaleX(1);
         }
+
         .link {
           color: $wbu-background;
           font-size: $wbu-title-font-size-sm;
@@ -155,6 +187,7 @@
           font-size: 10px;
         }
       }
+
       .search-form {
         margin-left: auto;
         margin-right: auto;
@@ -167,6 +200,7 @@
           outline: none;
           border: 1px solid $wbu-border-color;
         }
+
         .btn {
           background: $wbu-color-secondary;
           border-radius: 0;
@@ -187,12 +221,15 @@
             transform: 0 0;
             transition-timing-function: cubic-bezier(0.5, 1.6, 0.4);
           }
+
           &::before {
             transform: scaleX(0);
           }
+
           &:hover::before {
             transform: scaleX(1);
           }
+
           &:hover {
             color: $wbu-border-color;
             font-size: $wbu-title-font-size-sm * 0.6;
@@ -235,6 +272,7 @@
   .swiper-v {
     background: #eee;
   }
+
   .header-slider-1 {
     background: url("https://www.francetvinfo.fr/pictures/irhmQ_SrzAInupT6b6aEeZjZXOA/1200x1200/2016/12/27/phpkDRkQh_1.jpg");
     background-size: cover;
@@ -246,6 +284,7 @@
     position: absolute;
     background-position: center center;
     background-repeat: no-repeat;
+
     &::before {
       content: "";
       width: 100%;
@@ -260,14 +299,17 @@
     .description {
       text-align: center;
       padding: $wbu-margin $wbu-margin 0 0;
+
       @include media-max(SM) {
         margin-left: auto;
         margin-right: auto;
       }
+
       @include media-max(XS) {
         margin-left: auto;
         margin-right: auto;
       }
+
       .title {
         font-size: $wbu-h2-font-size;
         font-weight: 100 !important;
@@ -276,12 +318,14 @@
         z-index: 1;
         position: relative;
       }
+
       .sub-title {
         font-size: $wbu-titre-big;
         color: $wbu-border-color;
         z-index: 1;
         position: relative;
       }
+
       .btn-desc {
         background: $wbu-color-secondary;
         display: inline-block;
@@ -297,10 +341,12 @@
         &:hover {
           transition: all 0.7s;
           background: $wbu-background;
+
           .link {
             color: $wbu-border-color;
           }
         }
+
         .link {
           color: $wbu-background;
           font-size: $wbu-default-font-size;
@@ -308,6 +354,7 @@
           font-weight: 400;
           position: relative;
           transition: all 0.5s;
+
           &:hover {
             color: $wbu-border-color;
           }
@@ -315,6 +362,7 @@
       }
     }
   }
+
   .header-slider-2 {
     background: url("https://static.cotemaison.fr/medias_11915/w_640,c_fill,g_north/porte-dentree-une-selection-de-poignees-stylees-6_6100848.jpg");
     background-size: cover;
@@ -326,6 +374,7 @@
     position: absolute;
     background-position: center center;
     background-repeat: no-repeat;
+
     &::before {
       content: "";
       width: 100%;
@@ -340,14 +389,17 @@
     .description {
       text-align: center;
       padding: 0 $wbu-margin 0 $space-top;
+
       @include media-max(SM) {
         margin-left: auto;
         margin-right: auto;
       }
+
       @include media-max(XS) {
         margin-left: auto;
         margin-right: auto;
       }
+
       .title {
         font-size: $wbu-h2-font-size;
         font-weight: 100 !important;
@@ -356,12 +408,14 @@
         z-index: 1;
         position: relative;
       }
+
       .sub-title {
         font-size: $wbu-titre-big;
         color: $wbu-border-color;
         z-index: 1;
         position: relative;
       }
+
       .btn-desc {
         background: $wbu-color-secondary;
         display: inline-block;
@@ -377,10 +431,12 @@
         &:hover {
           transition: all 0.7s;
           background: $wbu-background;
+
           .link {
             color: $wbu-border-color;
           }
         }
+
         .link {
           color: $wbu-background;
           font-size: $wbu-default-font-size;
@@ -388,6 +444,7 @@
           font-weight: 400;
           position: relative;
           transition: all 0.5s;
+
           &:hover {
             color: $wbu-border-color;
           }
@@ -395,6 +452,7 @@
       }
     }
   }
+
   .header-slider-3 {
     background: url("https://www.ul.com/sites/g/files/qbfpbp251/files/styles/hero_boxed_width/public/2020-04/BLST_081_Access_Control_webinars-v2business-door-entry-fb-event-image_2400x1600_0.jpg?itok=Haky9-uB");
     background-size: cover;
@@ -406,6 +464,7 @@
     position: absolute;
     background-position: center center;
     background-repeat: no-repeat;
+
     &::before {
       content: "";
       width: 100%;
@@ -420,14 +479,17 @@
     .description {
       text-align: center;
       padding: 0 $wbu-margin 0 $space-top;
+
       @include media-max(SM) {
         margin-left: auto;
         margin-right: auto;
       }
+
       @include media-max(XS) {
         margin-left: auto;
         margin-right: auto;
       }
+
       .title {
         font-size: $wbu-h2-font-size;
         font-weight: 100 !important;
@@ -436,12 +498,14 @@
         z-index: 1;
         position: relative;
       }
+
       .sub-title {
         font-size: $wbu-titre-big;
         color: $wbu-border-color;
         z-index: 1;
         position: relative;
       }
+
       .btn-desc {
         background: $wbu-color-secondary;
         display: inline-block;
@@ -457,10 +521,12 @@
         &:hover {
           transition: all 0.7s;
           background: $wbu-background;
+
           .link {
             color: $wbu-border-color;
           }
         }
+
         .link {
           color: $wbu-background;
           font-size: $wbu-default-font-size;
@@ -468,12 +534,14 @@
           font-weight: 400;
           position: relative;
           transition: all 0.5s;
+
           &:hover {
             color: $wbu-border-color;
           }
         }
       }
     }
+
     .header-slide {
       position: relative;
     }
@@ -483,6 +551,7 @@
     position: fixed;
     top: 40%;
     z-index: 1;
+
     .element {
       margin-top: $wbu-margin * 0.5;
       color: $wbu-background;
@@ -490,20 +559,24 @@
       &:hover {
         transition: all 1s;
         background: $wbu-background;
+
         .icon {
           transition: all 1s;
           padding: $wbu-margin * 0.4;
         }
+
         .icon-title {
           transition: all 0.7s;
           display: block;
         }
       }
+
       .icon {
         background: $wbu-color-secondary;
         height: 50%;
         padding: $wbu-margin * 0.3;
       }
+
       .icon-title {
         margin-top: $wbu-margin;
         margin-left: $wbu-margin * 0.8;
@@ -513,6 +586,7 @@
       }
     }
   }
+
   /**
    * Style pour le dropdown de la partie compte.
    */
@@ -520,8 +594,10 @@
     box-shadow: 0 0 0 1px #8898aa1a, 0 15px 35px #31315d1a, 0 5px 15px #00000014;
     border-radius: $wbu-margin * 0.25;
     padding: 0;
+
     &--user {
       min-width: 13rem;
+
       &::before {
         content: "";
         position: absolute;
@@ -541,6 +617,7 @@
 .scrolled .header-section-handler {
   &.mn-fixed-top {
     background-color: rgba($wbu-background, 0.88);
+
     img.logo {
       max-height: 50px;
     }
