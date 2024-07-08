@@ -1,5 +1,5 @@
 //import $ from "jquery";
-//à remplacer car utiliser jquery 
+//à remplacer car utiliser jquery
 // import "zurb-twentytwenty/js/jquery.event.move.js";
 // import "zurb-twentytwenty/js/jquery.twentytwenty.js";
 import "bootstrap/js/src/tab.js";
@@ -7,9 +7,10 @@ import "bootstrap/js/src/tab.js";
 if (window.jQuery) {
   var $ = window.jQuery;
   $(document).ready(function () {
-    //add src
+    // add src
     document.querySelectorAll(".zurb-twentytwenty img").forEach((item) => {
-      item.src = item.getAttribute("data-src");
+      // item.src = item.getAttribute("data-src");
+      item.src = item.getAttribute("src");
     });
     setTimeout(() => {
       (function () {
@@ -19,7 +20,7 @@ if (window.jQuery) {
           //orientation: "vertical", // Orientation of the before and after images ('horizontal' or 'vertical')
           //before_label: "January 2017", // Set a custom before label
           //after_label: "March 2017", // Set a custom after label
-          no_overlay: true, //Do not show the overlay with before and after
+          no_overlay: true, // Do not show the overlay with before and after
           //move_slider_on_hover: true, // Move slider on mouse hover?
           //move_with_handle_only: true, // Allow a user to swipe anywhere on the image to control slider movement.
           //click_to_move: true // Allow a user to click (or tap) anywhere on the image to move the slider to that location.
@@ -41,10 +42,8 @@ if (window.jQuery) {
         // Tabs
         // ******************
         var idTab = $(this).attr("data-tab");
-        console.log("idTab : ", idTab);
-        $(".main-twentytwenty .tab-content .tab-pane").removeClass(
-          "show active"
-        );
+        // console.log(" idTab : ", idTab);
+        $(".main-twentytwenty .tab-content .tab-pane").removeClass("show active");
         $(idTab).addClass("show active");
       });
       //
