@@ -9,7 +9,7 @@ if (window.jQuery) {
   $(document).ready(function () {
     //add src
     document.querySelectorAll(".zurb-twentytwenty img").forEach((item) => {
-      item.src = item.getAttribute("data-src");
+      item.src = item.getAttribute("src");
     });
     setTimeout(() => {
       (function () {
