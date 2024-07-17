@@ -1,0 +1,6 @@
+@use "../../wbu-ressources-clean.scss" as *;
+@use "../../variables";
+// vertical tabs
+.vertical-tabs__panes {
+  padding: $wbu-margin * 0.5;
+}

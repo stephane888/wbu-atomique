@@ -40,29 +40,38 @@
         };
         //
         if (config) {
+          console.log(" enter config ");
           // facebook.
-          // Cet event "hbk_fbInit" est declenché de maniere personnalisé apres le chargement du SDK.
-          document.addEventListener("hbk_fbInit", () => {
-            function shareFaceBook(url) {
-              FB.ui(
-                {
-                  method: "share",
-                  href: url,
-                },
-                function (response) {
-                  if (response && !response.error_message) {
-                    //console.log('Posting completed.');
-                  } else {
-                    console.log("Error while posting.");
-                    console.log(response);
-                  }
+          function shareFaceBook(url) {
+            FB.ui(
+              {
+                method: "share",
+                href: url,
+              },
+              function (response) {
+                if (response && !response.error_message) {
+                  //console.log('Posting completed.');
+                } else {
+                  console.log("Error while posting.");
+                  console.log(response);
                 }
-              );
-            }
+              }
+            );
+          }
+          if (window.FB) {
+            console.log("run : window.FB ", window.FB);
             sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", () => {
               shareFaceBook(url);
             });
-          });
+          } else {
+            console.log(" Wait event : window.FB ", window.FB);
+            // Cet event "hbk_fbInit" est declenché de maniere personnalisé apres le chargement du SDK.
+            document.addEventListener("hbk_fbInit", () => {
+              sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", () => {
+                shareFaceBook(url);
+              });
+            });
+          }
           //
           const TwitterShare = function () {
             sharerx.querySelector(".habeukUtilitaireRxTwitter").addEventListener("click", () => {
