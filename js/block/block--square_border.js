@@ -144,14 +144,14 @@ jQuery(document).ready(function ($) {
           });
         }
         /**
-         * on lance la boite de login scorpion888 kksa-STEPH888#
+         * on lance la boite de login
          */
         function LoginByFB() {
           //console.log('LoginByFB');
           FB.login(
             function (response) {
-              //console.log('appel de la function FB.login 1');
-              //console.log(response);
+              // console.log('appel de la function FB.login 1');
+              // console.log(response);
               if (response.authResponse) {
                 console.log("Welcome!  Fetching your information.... ");
                 console.log(response);

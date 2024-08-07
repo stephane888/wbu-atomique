@@ -77,8 +77,6 @@
     }
   }
   .csp-title {
-    padding: $wbu-margin 0 0;
-    &,
     a {
       @include WBUtransition();
       &:hover {
@@ -104,18 +102,7 @@
       text-decoration: line-through;
     }
   }
-  .rating {
-    display: flex;
-    svg {
-      width: 1.5rem;
-      height: 1.5rem;
-      fill: white;
-      stroke: black;
-    }
-    .rated {
-      fill: black;
-    }
-  }
+
   // .clothing-four-btn {
   //   position: absolute;
   //   transform: translate(-50%, -50%);

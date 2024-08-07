@@ -1,3 +1,4 @@
+import ManageLoginFacebook from "./loginFacebook.js";
 /**
  * - https://developers.facebook.com/tools/debug/
  */
@@ -43,6 +44,7 @@
           console.log(" enter config ");
           // facebook.
           function shareFaceBook(url) {
+            console.log(" ShareFaceBook url : ", url);
             FB.ui(
               {
                 method: "share",
@@ -62,6 +64,8 @@
             console.log("run : window.FB ", window.FB);
             sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", () => {
               shareFaceBook(url);
+              // const MgLogin = new ManageLoginFacebook(window.FB);
+              // MgLogin.CheckStatusLogin();
             });
           } else {
             console.log(" Wait event : window.FB ", window.FB);
