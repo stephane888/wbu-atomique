@@ -9,14 +9,6 @@
       &::before {
         display: none;
       }
-      @include media-max(MD) {
-        margin-left: 0;
-      }
-    }
-    @include media-max(MD) {
-      .title-description {
-        margin-left: 0;
-      }
     }
   }
   .about-img {
