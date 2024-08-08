@@ -40,6 +40,7 @@
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.2",
     "drift-zoom": "^1.5.1",
+    "file-loader": "^6.2.0",
     "image-webpack-loader": "^8.1.0",
     "imagemin": "^8.0.1",
     "lightgallery": "^2.7.2",
