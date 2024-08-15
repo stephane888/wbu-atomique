@@ -79,7 +79,15 @@ fieldset.form-item fieldset.form-item legend {
 .field--type-text-long {
   img {
     max-width: 100%;
-    width: auto;
+    width: auto !important;
+    height: auto !important;
+    + p,
+    + h2,
+    + h3,
+    + h4,
+    + h5 {
+      margin-top: $wbu-margin;
+    }
   }
   .align-right {
     margin-left: $wbu-margin;
@@ -88,5 +96,16 @@ fieldset.form-item fieldset.form-item legend {
   .align-left {
     margin-right: $wbu-margin;
     margin-bottom: $wbu-margin;
+  }
+  p {
+    + h2,
+    + h3,
+    + h4 {
+      margin-top: $wbu-margin;
+    }
+    + h5,
+    + h6 {
+      margin-top: $wbu-margin * 0.5;
+    }
   }
 }

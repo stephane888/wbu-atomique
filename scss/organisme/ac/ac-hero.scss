@@ -99,3 +99,60 @@
     }
   }
 }
+.formatage-models-simple-block-4508--VYd7YVE5les {
+  min-height: 100vh;
+  position: relative;
+  .position-unset {
+    position: unset;
+  }
+  .custom-btn {
+    .block {
+      width: 50%;
+      margin-top: 0 !important;
+      margin: 1.5rem;
+    }
+  }
+  .custom-title {
+    letter-spacing: 2px;
+  }
+  .layout-region {
+    position: relative;
+    z-index: 3;
+  }
+  .video-cover {
+    z-index: 2;
+    position: unset;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgb(0 0 0 / 35%);
+      z-index: 2;
+    }
+    video {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      height: 100% !important;
+      right: 0;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      width: 100% !important;
+      z-index: 1;
+    }
+  }
+}
+
+.formatage-models-simple-block-1531--hG2giUVkmvY {
+  min-height: 650px;
+  background-color: rgb(239 239 239 / 1);
+  .width-phone {
+    max-width: 720px;
+    padding: $wbu-margin;
+  }
+}
