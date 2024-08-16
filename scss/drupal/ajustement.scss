@@ -109,3 +109,15 @@ fieldset.form-item fieldset.form-item legend {
     }
   }
 }
+
+/**
+ * blockquote
+ */
+blockquote {
+  padding: 0;
+  padding-left: $wbu-margin * 0.8;
+  margin: $wbu-margin * 0.8;
+  margin-right: 0;
+  border-left: 2px solid $wbu-color-primary;
+  color: lighten($wbu-color-text, 10);
+}
