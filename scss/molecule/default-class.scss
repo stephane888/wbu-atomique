@@ -202,13 +202,23 @@
     padding-bottom: $space_bottom;
   }
 }
+
+/**
+ * --
+ */
 .g-inner,
 .gy-inner {
-  --bs-gutter-y: $space_inner_top * 0.5;
+  --bs-gutter-y: #{$space_inner_top * 0.5};
+  @include media-min("mobile") {
+    --bs-gutter-y: #{$space_inner_top};
+  }
 }
 .g-inner,
 .gx-inner {
-  --bs-gutter-x: $space_inner_top * 0.5;
+  --bs-gutter-x: #{$space_inner_top * 0.5};
+  @include media-min("mobile") {
+    --bs-gutter-x: #{$space_inner_top};
+  }
 }
 
 /**
