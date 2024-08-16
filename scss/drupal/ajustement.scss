@@ -115,9 +115,14 @@ fieldset.form-item fieldset.form-item legend {
  */
 blockquote {
   padding: 0;
-  padding-left: $wbu-margin * 0.8;
-  margin: $wbu-margin * 0.8;
+  padding-left: $wbu-margin;
+  margin: $wbu-margin;
   margin-right: 0;
   border-left: 2px solid $wbu-color-primary;
-  color: lighten($wbu-color-text, 10);
+  color: darken($wbu-color-primary, 25%);
+  font-style: italic;
+  font-size: 110%;
+  @include media-min(MD) {
+    margin: $wbu-margin * 2;
+  }
 }
