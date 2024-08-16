@@ -202,6 +202,14 @@
     padding-bottom: $space_bottom;
   }
 }
+.g-inner,
+.gy-inner {
+  --bs-gutter-y: $space_inner_top * 0.5;
+}
+.g-inner,
+.gx-inner {
+  --bs-gutter-x: $space_inner_top * 0.5;
+}
 
 /**
  * -- Gestion des backgrounds.
