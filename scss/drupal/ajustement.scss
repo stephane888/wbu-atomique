@@ -113,7 +113,8 @@ fieldset.form-item fieldset.form-item legend {
 /**
  * blockquote
  */
-blockquote {
+blockquote,
+.blockquote {
   padding: 0;
   padding-left: $wbu-margin;
   margin: $wbu-margin * 1.5;

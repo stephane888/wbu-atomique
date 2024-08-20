@@ -3,7 +3,6 @@
 // les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
 
 .footer-last-bar {
-  margin-top: $wbu-margin * 1.5;
   border-top: 1px solid rgba(255, 255, 255, 0.459);
   padding: $wbu-margin 0;
 
@@ -35,6 +34,6 @@
   .explicit {
     min-width: 2rem;
     margin: 0;
-    font-size: $wbu-default-font-size ;
+    font-size: $wbu-default-font-size;
   }
 }

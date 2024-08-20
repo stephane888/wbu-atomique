@@ -3,32 +3,8 @@
 // les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
 
 .fns-menu {
-  margin-bottom: $wbu-margin;
   .fn-title {
-    font-size: $wbu-h3-font-size-sm;
+    margin-bottom: $wbu-margin;
     font-weight: bold;
-    color: white;
-    text-transform: capitalize;
-    margin-bottom: $wbu-margin * 1.2;
-  }
-  .fn-ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    //gap: 1.5rem;
-    padding: 0;
-    &-li {
-      display: inline-block;
-      font-size: $wbu-default-font-size ;
-      text-transform: capitalize;
-      margin-bottom: $wbu-margin * 0.9;
-      a {
-        color: $wbu-color-boder;
-        transition: ease 0.5s;
-        //line-height: $wbu-default-line-height * 1.8;
-        text-decoration: none;
-        line-height: 1;
-      }
-    }
   }
 }

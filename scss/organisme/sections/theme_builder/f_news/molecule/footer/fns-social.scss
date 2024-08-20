@@ -3,36 +3,11 @@
 // les variables surcharger ne doivent pas etre dans wbu-atomique ... @use ...ariables.scss" as *;
 
 .fns-social {
-  margin-bottom: $wbu-margin;
   .fn-title {
-    font-size: $wbu-h3-font-size-sm;
+    margin-bottom: $wbu-margin * 1.5;
     font-weight: bold;
-    color: white;
-    text-transform: capitalize;
-    margin-bottom: $wbu-margin * 1.6;
   }
   .fn-desc {
-    font-size: $wbu-h6-font-size;
-    font-weight: bold;
-    color: white;
-    text-transform: capitalize;
-    margin-bottom: $wbu-margin;
-  }
-  .card-social {
-    display: flex;
-    gap: 1.5rem;
-    a {
-      &:hover {
-        svg {
-          transform: scale(1.2);
-        }
-      }
-    }
-    svg {
-      transition: 0.4s;
-      width: 4rem;
-      height: 4rem;
-      fill: $wbu-color-boder;
-    }
+    margin-bottom: $wbu-margin * 1.5;
   }
 }
