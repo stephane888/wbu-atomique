@@ -70,9 +70,17 @@
       // margin-left: -$wbu-margin * 0.5;
       // margin-right: -$wbu-margin * 0.5;
       //margin-top: $wbu-margin;
+      .radios {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-items: baseline;
+        margin-right: -($wbu-margin * 0.5);
+        margin-left: -($wbu-margin * 0.5);
+      }
       .form-check {
         padding: 0;
-        margin: 0 $wbu-margin/2 $wbu-margin $wbu-margin/2;
+        margin: 0 $wbu-margin * 0.5 $wbu-margin $wbu-margin * 0.5;
         flex-grow: 1;
         label {
           width: 100%;
@@ -87,10 +95,15 @@
         clip: rect(1px 1px 1px 1px);
         clip: rect(1px, 1px, 1px, 1px);
         opacity: 0;
+        ~ label {
+          opacity: 0.8;
+        }
+        &:checked ~ label .product-pricer__item {
+          border-color: $wbu-color-primary;
+          opacity: 1;
+        }
       }
-      input:checked ~ label .product-pricer__item {
-        border-color: $wbu-color-primary;
-      }
+
       .ajax-progress {
         position: absolute;
         bottom: -$wbu-margin;

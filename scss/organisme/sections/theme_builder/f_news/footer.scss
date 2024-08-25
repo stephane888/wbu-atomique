@@ -85,3 +85,68 @@
     }
   }
 }
+////
+.layoutscommerce-product-parfumn-1159--xL4kX6g3cDY {
+  .galleries-main-thumbs {
+    .galleries-thumb.swiper-horizontal {
+      padding: 0;
+    }
+    @include media-min(DD) {
+      max-height: 700px;
+      height: 700px;
+    }
+  }
+  .accordion-item {
+    .accordion-header {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .field-icon {
+      display: none;
+    }
+  }
+  .product-pricer__item {
+    .product-pricer__item_price {
+      display: none;
+    }
+  }
+  form {
+    .field--name-quantity label {
+      display: none;
+    }
+  }
+  .products_add {
+    margin-top: $wbu-margin * 1.8;
+  }
+  .product-pricer__item {
+    border-radius: 0;
+  }
+  .titre-product {
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 3px;
+    > .block:nth-child(1) {
+      grid-area: title_product;
+    }
+    > .block:nth-child(2) {
+      grid-area: price_product;
+      text-align: right;
+    }
+    > .block:nth-child(3) {
+      grid-area: price_barre;
+      text-align: right;
+    }
+    grid-template-areas:
+      "title_product price_product"
+      "title_product price_barre";
+    @include media-min(SM) {
+      grid-template-columns: 1fr auto auto;
+      grid-template-areas: "title_product price_product price_barre";
+      > .block:nth-child(3) {
+        margin-left: $wbu-margin * 0.5;
+      }
+    }
+  }
+}
+///
