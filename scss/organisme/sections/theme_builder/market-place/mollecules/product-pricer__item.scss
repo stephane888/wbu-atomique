@@ -22,6 +22,12 @@
       margin-right: $wbu-margin * 0.2;
       img {
         width: 16px;
+        height: 16px;
+        border-radius: 5px;
+      }
+      .colorapi_color_display {
+        width: 16px;
+        height: 18px;
         border-radius: 5px;
       }
     }
