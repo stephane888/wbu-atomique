@@ -125,9 +125,17 @@
         right: 0;
         bottom: 0;
         top: 0;
-        background-color: rgba($wbu-color-primary, 25%);
+        background-color: rgb(255 255 255 / 85%);
         z-index: 9999;
+        min-height: 30px;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
+      // .ajax-progress-throbber .throbber {
+      //
+      // }
     }
     .product-price__quality {
       position: relative;
