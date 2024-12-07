@@ -67,6 +67,7 @@
       flex-direction: row;
       align-items: center;
       flex-wrap: wrap;
+      position: relative;
       // margin-left: -$wbu-margin * 0.5;
       // margin-right: -$wbu-margin * 0.5;
       //margin-top: $wbu-margin;
@@ -119,7 +120,13 @@
       .ajax-progress {
         position: absolute;
         bottom: -$wbu-margin;
-        font-size: $wbu-default-font-size * 0.8;
+        font-size: $wbu-default-font-size * 1.2;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba($wbu-color-primary, 25%);
+        z-index: 9999;
       }
     }
     .product-price__quality {
