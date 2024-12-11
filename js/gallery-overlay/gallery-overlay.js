@@ -180,14 +180,14 @@ class GalleryOverlay {
       const img = document.createElement("img");
       img.src = location;
       img.addEventListener("load", () => {
-        setTimeout(() => {
-          generatedElement.imagesContainer.style.width = img.naturalWidth + "px";
-          generatedElement.imagesContainer.style.height = img.naturalHeight + "px";
-          generatedElement.image.setAttribute("src", img.src);
-          generatedElement.image.classList.add("show");
-          this.toggleLoader(generatedElement, false);
-          resolv(img);
-        }, 200);
+        //  setTimeout(() => {
+        generatedElement.imagesContainer.style.width = img.naturalWidth + "px";
+        generatedElement.imagesContainer.style.height = img.naturalHeight + "px";
+        generatedElement.image.setAttribute("src", img.src);
+        generatedElement.image.classList.add("show");
+        this.toggleLoader(generatedElement, false);
+        resolv(img);
+        //}, 200);
       });
     });
   }
@@ -196,6 +196,7 @@ class GalleryOverlay {
    */
   OpenPopup(generatedElement) {
     generatedElement.overlay.classList.add("show");
+    document.body.classList.add("overflow-hidden");
   }
   /**
    * Ouvre le popup
@@ -206,6 +207,7 @@ class GalleryOverlay {
     generatedElement.overlay.classList.remove("show");
     generatedElement.image.classList.remove("show");
     generatedElement.image.setAttribute("src", "");
+    document.body.classList.remove("overflow-hidden");
   }
   /**
    * Construit le html
