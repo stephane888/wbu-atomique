@@ -84,75 +84,76 @@ class GalleryOverlay {
         }
       }
     }
+    this.listernerClick(imagesOverlay, generatedElement);
     // document.generatedElement = generatedElement;
     generatedElement.overlay.prepend(generatedElement.prevButton);
     generatedElement.overlay.appendChild(generatedElement.imagesContainer);
     generatedElement.overlay.appendChild(generatedElement.nextButton);
     generatedElement.imagesContainer.appendChild(generatedElement.image);
-    generatedElement.imagesContainer.appendChild(generatedElement.image2);
     generatedElement.imagesContainer.appendChild(generatedElement.exitButton);
     generatedElement.imagesContainer.appendChild(generatedElement.loader);
     section.appendChild(generatedElement.overlay);
-    // generatedElement.overlay.style.display = "none";
-
-    // imagesOverlay.forEach((imageOverlay) => {
-    //   imageOverlay.addEventListener("click", function (event) {
-    //     event.preventDefault();
-    //     // alert("clicked");
-    //     const imageLocation = this.previousElementSibling.getAttribute("href");
-    //     generatedElement.image.setAttribute("src", imageLocation);
-    //     generatedElement.image.classList.add("show");
-    //     generatedElement.overlay.classList.add("show");
-    //   });
-    // });
-    this.listernerClick(imagesOverlay, generatedElement);
+    // On appeche la propagation du click sur l'element parent.
+    generatedElement.imagesContainer.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
 
     generatedElement.overlay.addEventListener("click", () => {
       this.closePoup(generatedElement);
     });
-
-    const elementSelector = settings.galleryElement.selector + settings.galleryElement.value;
-
-    generatedElement.nextButton.addEventListener("click", (event) => {
-      let imgRender = generatedElement.image.classList.contains("show") ? generatedElement.image : generatedElement.image2;
-      const currentImgSrc = imgRender.getAttribute("src");
-      const currentImg = this.context.querySelector(gallerySelector + ' a[href="' + currentImgSrc + '"]');
-
-      const nextElement = currentImg.closest(elementSelector).nextElementSibling;
-      if (nextElement) {
-        const nextImg = nextElement.querySelector("a");
-        imgRender = switchShowElement(generatedElement.image, generatedElement.image2);
-        imgRender.setAttribute("src", nextImg.getAttribute("href"));
-      } else {
-        const images = this.context.querySelectorAll(gallerySelector + " a");
-        imgRender = switchShowElement(generatedElement.image, generatedElement.image2);
-        imgRender.setAttribute("src", images[0].getAttribute("href"));
-      }
+    generatedElement.exitButton.addEventListener("click", (event) => {
+      this.closePoup(generatedElement);
       event.stopPropagation();
     });
 
-    generatedElement.prevButton.addEventListener("click", (event) => {
-      let imgRender = generatedElement.image.classList.contains("show") ? generatedElement.image : generatedElement.image2;
+    const elementSelector = settings.galleryElement.selector + settings.galleryElement.value;
+    this.nextButton(generatedElement, gallerySelector, elementSelector);
+    this.prevButton(generatedElement, gallerySelector, elementSelector);
+  }
+
+  /**
+   *
+   * @param {*} generatedElement
+   * @param {*} gallerySelector
+   * @param {*} elementSelector
+   */
+  nextButton(generatedElement, gallerySelector, elementSelector) {
+    generatedElement.nextButton.addEventListener("click", (event) => {
+      let imgRender = generatedElement.image;
       const currentImgSrc = imgRender.getAttribute("src");
+      const currentImg = this.context.querySelector(gallerySelector + ' a[href="' + currentImgSrc + '"]');
+      const nextElement = currentImg.closest(elementSelector).nextElementSibling;
+      if (nextElement) {
+        this.LoadImage(generatedElement, nextElement.querySelector("a.img-overlay").getAttribute("href"));
+      } else {
+        const images = this.context.querySelectorAll(gallerySelector + " a.img-overlay");
+        if (images) this.LoadImage(generatedElement, images[0].getAttribute("href"));
+      }
+      event.stopPropagation();
+    });
+  }
+
+  /**
+   * Selectionne l'image precedante.
+   * @param {*} generatedElement
+   * @param {*} gallerySelector
+   * @param {*} elementSelector
+   */
+  prevButton(generatedElement, gallerySelector, elementSelector) {
+    generatedElement.prevButton.addEventListener("click", (event) => {
+      const currentImgSrc = generatedElement.image.getAttribute("src");
       const currentImg = this.context.querySelector(gallerySelector + ' a[href="' + currentImgSrc + '"]');
       const prevElement = currentImg.closest(elementSelector).previousElementSibling;
       if (prevElement) {
-        const prevImg = prevElement.querySelector("a");
-        imgRender = switchShowElement(generatedElement.image, generatedElement.image2);
-        imgRender.setAttribute("src", prevImg.getAttribute("href"));
+        this.LoadImage(generatedElement, prevElement.querySelector("a.img-overlay").getAttribute("href"));
       } else {
-        const images = this.context.querySelectorAll(gallerySelector + " a");
-        imgRender = switchShowElement(generatedElement.image, generatedElement.image2);
-        imgRender.setAttribute("src", images[images.length - 1].getAttribute("href"));
-        // generatedElement.image.style.opacity = 1;
+        const images = this.context.querySelectorAll(gallerySelector + " a.img-overlay");
+        if (images) this.LoadImage(generatedElement, images[images.length - 1].getAttribute("href"));
       }
       event.stopPropagation();
     });
-
-    generatedElement.exitButton.addEventListener("click", () => {
-      generatedElement.overlay.classList.remove("show");
-    });
   }
+
   /**
    * Ecoute l'action click sur l'image.
    * @param {*} imagesOverlay
@@ -163,27 +164,30 @@ class GalleryOverlay {
       imageOverlay.addEventListener("click", (event) => {
         event.preventDefault();
         this.OpenPopup(generatedElement);
-        this.LoadImage(event.target.getAttribute("href")).then((img) => {
-          generatedElement.image.setAttribute("src", img.src);
-          generatedElement.image.classList.add("show");
-        });
+        this.LoadImage(generatedElement, event.target.getAttribute("href"));
       });
     });
   }
 
   /**
-   * Retourne l'image lorsqu'elle est entirement chargé.
+   * Charge et affiche la nouvelle image.
    * @param {*} location
    * @returns
    */
-  LoadImage(location) {
+  LoadImage(generatedElement, location) {
     return new Promise((resolv) => {
+      this.toggleLoader(generatedElement, true);
       const img = document.createElement("img");
       img.src = location;
       img.addEventListener("load", () => {
         setTimeout(() => {
+          generatedElement.imagesContainer.style.width = img.naturalWidth + "px";
+          generatedElement.imagesContainer.style.height = img.naturalHeight + "px";
+          generatedElement.image.setAttribute("src", img.src);
+          generatedElement.image.classList.add("show");
+          this.toggleLoader(generatedElement, false);
           resolv(img);
-        }, 1500);
+        }, 200);
       });
     });
   }
@@ -198,10 +202,10 @@ class GalleryOverlay {
    * @param {*} generatedElement
    * @param {*} item
    */
-  closePoup(generatedElement, item) {
+  closePoup(generatedElement) {
     generatedElement.overlay.classList.remove("show");
     generatedElement.image.classList.remove("show");
-    generatedElement.image2.classList.remove("show");
+    generatedElement.image.setAttribute("src", "");
   }
   /**
    * Construit le html
@@ -220,7 +224,7 @@ class GalleryOverlay {
     };
 
     generatedElement.overlay.className = "gallery-overlay-section-overlay";
-    generatedElement.imagesContainer.classList.add("gallery-overlay-images-container");
+    generatedElement.imagesContainer.classList.add("gallery-overlay-images-container", "d-flex", "justify-content-center", "align-items-center");
     generatedElement.image.className = "gallery-overlay-section-current-image";
     generatedElement.image2.className = "gallery-overlay-section-current-image";
     generatedElement.prevButton.className = "gallery-overlay-section-btn-prev";
@@ -276,6 +280,14 @@ class GalleryOverlay {
         this.querySelector(".img-overlay").style.opacity = 0;
       });
     });
+  }
+  toggleLoader(generatedElement, show = true) {
+    generatedElement.loader.style.display = show ? "block" : "none";
+    // si on affiche le loader, il ne doit pas avoir d'image.
+    if (show) {
+      generatedElement.image.classList.remove("show");
+      generatedElement.image.setAttribute("src", "");
+    }
   }
 
   build() {
