@@ -12,7 +12,7 @@ import GalleryOverlay from "./gallery-overlay";
 
             const settings = element.hasAttribute("data-gallery-overlay") ? JSON.parse(element.getAttribute("data-gallery-overlay")) : {};
             const dg = new GalleryOverlay(context, settings);
-            dg.buildV2();
+            dg.build();
           });
         }
       }
