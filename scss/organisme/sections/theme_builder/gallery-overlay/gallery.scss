@@ -1,0 +1,217 @@
+@use "../../../../wbu-ressources-clean.scss" as *;
+@use "../../../../variables" as *;
+
+//Décommenter pour des environnement dans lesquels font-awesome n'est pas encore importé
+// @import "font-awesome/scss/font-awesome";
+
+.gallery-overlay-section {
+  padding-top: 40px;
+
+  @include media-min(DD) {
+    padding: 60px 30px 0 30px;
+  }
+
+  .gallery-overlay-section-gallery {
+    .go-img-wrapper {
+      position: relative;
+      margin-top: 15px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .go-img-overlay {
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      i {
+        color: #fff;
+        font-size: 3em;
+      }
+    }
+  }
+
+  .gallery-overlay-section-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    // Removes blue highlight
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .loader {
+      position: relative;
+      z-index: 1;
+      svg circle {
+        fill: $wbu-color-primary;
+      }
+    }
+
+    .gallery-overlay-images-container {
+      position: relative;
+      background-color: white;
+      height: 300px;
+      width: 300px;
+      min-height: 300px;
+      min-width: 300px;
+      max-height: calc(100vh - 30px);
+      max-width: calc(100% - 100px);
+      @include WBUtransition($temps: 0.9s);
+      .gallery-overlay-section-btn-exit {
+        position: absolute;
+        width: 5%;
+        max-width: 35px;
+        min-width: 20px;
+        aspect-ratio: 1;
+        top: 0;
+        right: 0;
+        transform: translate(100%, 0);
+      }
+      .gallery-overlay-section-current-image {
+        display: block;
+        position: absolute;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 2rem;
+        @include WBUtransition();
+        &.show {
+          opacity: 1;
+        }
+        @include media-min(MD) {
+          //   width: 60%;
+        }
+
+        @include media-min(M) {
+          //   width: 50%;
+        }
+      }
+
+      &-btn-next {
+        color: #fff;
+        font-size: 2em;
+        transition: opacity 0.8s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        @include media-min(MD) {
+          font-size: 3em;
+        }
+      }
+
+      &-btn-prev {
+        color: #fff;
+        font-size: 2em;
+        transition: opacity 0.8s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        @include media-min(MD) {
+          font-size: 3em;
+        }
+      }
+
+      &-btn-exit {
+        color: #fff;
+        font-size: 2em;
+        transition: opacity 0.8s;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        @include media-min(MD) {
+          font-size: 3em;
+        }
+      }
+    }
+  }
+
+  & ~ .radio {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .radio {
+      padding: 0;
+
+      .ajax-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .message {
+          display: none;
+        }
+      }
+
+      input {
+        & ~ label {
+          color: $light;
+          background-color: $info;
+          border-color: $info;
+
+          display: inline-block;
+          font-weight: 400;
+          color: #212529;
+          text-align: center;
+          vertical-align: middle;
+          user-select: none;
+          padding: 1rem 1.8rem;
+          font-size: 1.6rem;
+          line-height: 1.3;
+          border-radius: 0;
+          transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+          &:hover {
+            background-color: darken($color: $info, $amount: 10);
+            border-color: darken($color: $info, $amount: 10);
+          }
+        }
+
+        &[checked="checked"] {
+          & ~ label {
+            opacity: 0.65;
+          }
+        }
+      }
+    }
+  }
+}
