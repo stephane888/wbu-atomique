@@ -1,0 +1,64 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+// @use "../../../variables" as *;
+.video-container {
+  position: relative;
+  z-index: 1;
+  .videos_control {
+    object-position: center;
+    object-fit: cover;
+  }
+  .elt-controls {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 300px;
+    left: 50%;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    overflow: hidden;
+    svg {
+      fill: currentColor;
+      cursor: pointer;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      left: 50%;
+      right: auto;
+      top: 50%;
+      bottom: auto;
+      transform: translate(-50%, -50%);
+      @include WBUtransition();
+      width: 10rem;
+      height: 10rem;
+      padding: 2rem;
+      &.bottom {
+        transform: none;
+        top: auto;
+        bottom: 1rem;
+        left: auto;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
+      }
+      &.pause {
+        border: 2px solid $wbu-color-primary;
+        border-radius: 50%;
+        margin-top: calc(100% + 10rem);
+      }
+      &.play.btn-show {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &:hover svg.pause.btn-show,
+  &:hover svg.bottom.btn-show,
+  .elt-controls svg.show_delay {
+    visibility: visible;
+    margin-top: 0;
+    opacity: 1;
+  }
+}
