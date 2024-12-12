@@ -51,7 +51,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
         // Si le paramettre autoplay=1
         // On rassure que la video a effectivement demarrer
         if (!video.paused) {
-          playVideo(video);
+          playVideo(video, play, pause);
         }
         // On determiner le bouton à afficher
         video.addEventListener(
