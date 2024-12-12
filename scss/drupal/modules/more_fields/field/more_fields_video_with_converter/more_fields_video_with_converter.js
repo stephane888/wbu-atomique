@@ -24,6 +24,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
        * @param {*} video
        */
       const pauseVideo = (video, play, pause) => {
+        console.log("function : pauseVideo");
         if (video.paused) video.pause();
         pause.classList.add("btn-fade");
         pause.classList.remove("btn-show");
@@ -32,6 +33,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
         pause.classList.remove("show_delay");
       };
       const mutedVideo = (video, volumeHigh, volumeOff) => {
+        console.log("function : mutedVideo");
         if (video.muted) {
           volumeOff.classList.add("btn-show");
           volumeHigh.classList.remove("btn-show");
@@ -57,6 +59,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
         video.addEventListener(
           "play",
           () => {
+            console.log("event play video");
             playVideo(video, play, pause);
             // Si on joue la video, on doit pouvoir controler le volume.
             mutedVideo(video, volumeHigh, volumeOff);
