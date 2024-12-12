@@ -40,7 +40,6 @@ Drupal.behaviors.more_fields_video_with_converter = {
           volumeOff.classList.remove("btn-show");
         }
       };
-      console.log("check selectors:", context);
       once("more_fields_video_with_converter", ".video-container", context).forEach((item) => {
         const eltControls = item.querySelector(".elt-controls");
         const play = item.querySelector(".play");
@@ -48,13 +47,11 @@ Drupal.behaviors.more_fields_video_with_converter = {
         const volumeHigh = item.querySelector(".volume-high");
         const volumeOff = item.querySelector(".volume-off");
         const video = item.querySelector("video.videos_control");
-        console.log("more_fields_video_with_converter");
-        console.log(item, eltControls, play, pause, volumeHigh, volumeOff, video);
         eltControls.style.display = "flex";
         // Si le paramettre autoplay=1
         // On rassure que la video a effectivement demarrer
         if (!video.paused) {
-          playVideo(video);
+          playVideo(video, play, pause);
         }
         // On determiner le bouton à afficher
         video.addEventListener(
