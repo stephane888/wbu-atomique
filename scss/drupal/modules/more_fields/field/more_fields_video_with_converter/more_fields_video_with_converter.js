@@ -8,8 +8,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
         read_mouse_enter: true, //  Demarre la lecture si le cuiseur survol la video.
         stop_video_over_display: true, // Stop la video si'elle n'est plus dans la zone visible (50%)
         start_video_is_display: false,
-        show_custom_control: false,
-        ...settings,
+        show_custom_control: true,
       };
       // Ajustement de la config
       if (configs.read_auto && configs.read_mouse_enter) configs.read_auto = 0;
@@ -19,8 +18,9 @@ Drupal.behaviors.more_fields_video_with_converter = {
        * Permet de jourer la video.
        * @param {*} video
        */
-      const playVideo = (video, play, pause) => {
-        if (!video.paused) video.play();
+      const playVideo = (video, play, pause, key = null) => {
+        console.log("function : playVideo : ", video.paused, "key : ", key);
+        if (video.paused) video.play();
         play.classList.add("btn-fade");
         play.classList.remove("btn-show");
         pause.classList.add("btn-show");
@@ -36,9 +36,9 @@ Drupal.behaviors.more_fields_video_with_converter = {
        *
        * @param {*} video
        */
-      const pauseVideo = (video, play, pause) => {
-        console.log("function : pauseVideo");
-        if (video.paused) video.pause();
+      const pauseVideo = (video, play, pause, key = null) => {
+        console.log("function : pauseVideo", "key : ", key);
+        if (!video.paused) video.pause();
         pause.classList.add("btn-fade");
         pause.classList.remove("btn-show");
         play.classList.add("btn-show");
@@ -70,11 +70,15 @@ Drupal.behaviors.more_fields_video_with_converter = {
         const volumeOff = item.querySelector(".volume-off");
         const video = item.querySelector("video.videos_control");
         eltControls.style.display = "flex";
+        console.log("configs : ", configs);
         if (configs.show_custom_control) {
+          if (!configs.read_auto) {
+            pauseVideo(video, play, pause, "Event lister pause");
+          }
           if (configs.read_auto && !video.paused) {
             // Si le paramettre autoplay=1
             // On se rassure que la video a effectivement demarrer.
-            playVideo(video, play, pause);
+            playVideo(video, play, pause, "auto_read");
             // Si on joue la video, on doit pouvoir controler le volume.
             mutedVideo(video, volumeHigh, volumeOff);
           }
@@ -83,7 +87,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
             video.addEventListener(
               "mouseenter",
               () => {
-                playVideo(video, play, pause);
+                playVideo(video, play, pause, "read_by_mouse_enter");
                 // Si on joue la video, on doit pouvoir controler le volume.
                 mutedVideo(video, volumeHigh, volumeOff);
               },
@@ -93,7 +97,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
           video.addEventListener(
             "play",
             () => {
-              playVideo(video, play, pause);
+              playVideo(video, play, pause, "event lister play");
               // Si on joue la video, on doit pouvoir controler le volume.
               mutedVideo(video, volumeHigh, volumeOff);
             },
@@ -102,7 +106,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
           video.addEventListener(
             "pause",
             () => {
-              pauseVideo(video, play, pause);
+              pauseVideo(video, play, pause, "Event lister pause");
             },
             false
           );
