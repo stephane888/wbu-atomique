@@ -6,15 +6,11 @@ import GalleryOverlay from "./gallery-overlay";
   Drupal.behaviors.gallery_overlay_options = {
     attach: function (context, settings) {
       if (context.querySelectorAll && context.querySelectorAll(".drupal-gallery-overlay").length) {
-        if (![...context.querySelector(".drupal-gallery-overlay").classList].includes("loaded")) {
-          [...context.querySelectorAll(".drupal-gallery-overlay")].forEach((element) => {
-            element.classList.add("loaded");
-
-            const settings = element.hasAttribute("data-gallery-overlay") ? JSON.parse(element.getAttribute("data-gallery-overlay")) : {};
-            const dg = new GalleryOverlay(context, settings);
-            dg.build();
-          });
-        }
+        once("more_fields_drupal-gallery-overlay", ".drupal-gallery-overlay", context).forEach((element) => {
+          const settings = element.hasAttribute("data-gallery-overlay") ? JSON.parse(element.getAttribute("data-gallery-overlay")) : {};
+          const dg = new GalleryOverlay(element, settings);
+          dg.build();
+        });
       }
     },
   };

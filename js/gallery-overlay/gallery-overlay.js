@@ -27,13 +27,10 @@ const defaultSettings = {
     type: "class",
     value: "hello_world",
   },
-  section: {
-    selector: "#",
-    value: "gallery",
-  },
+
   galleryContainer: {
-    selector: "#",
-    value: "image-gallery",
+    selector: ".",
+    value: "gallery-overlay-section-gallery",
   },
   galleryElement: {
     selector: ".",
@@ -60,7 +57,7 @@ const switchShowElement = (element1, element2) => {
 
 class GalleryOverlay {
   constructor(context, settings = {}) {
-    this.context = context;
+    this.section = context;
     this.settings = settings;
   }
 
@@ -71,9 +68,7 @@ class GalleryOverlay {
     this.effetOnItem();
     const settings = { ...defaultSettings, ...this.settings };
     const generatedElement = this.buildHtmlRender();
-    // generatedElement.prevButton.nextElementSibling().classList;
-    const section = this.context.querySelector(settings.section.selector + settings.section.value);
-    const imagesOverlay = this.context.querySelectorAll(settings.image_overlay.selector + settings.image_overlay.value);
+    const imagesOverlay = this.section.querySelectorAll(settings.image_overlay.selector + settings.image_overlay.value);
     const gallerySelector = settings.galleryContainer.selector + settings.galleryContainer.value;
     for (const key in generatedElement) {
       if (settings[key]) {
@@ -92,7 +87,7 @@ class GalleryOverlay {
     generatedElement.imagesContainer.appendChild(generatedElement.image);
     generatedElement.imagesContainer.appendChild(generatedElement.exitButton);
     generatedElement.imagesContainer.appendChild(generatedElement.loader);
-    section.appendChild(generatedElement.overlay);
+    this.section.appendChild(generatedElement.overlay);
     // On appeche la propagation du click sur l'element parent.
     generatedElement.imagesContainer.addEventListener("click", (event) => {
       event.stopPropagation();
@@ -121,12 +116,12 @@ class GalleryOverlay {
     generatedElement.nextButton.addEventListener("click", (event) => {
       let imgRender = generatedElement.image;
       const currentImgSrc = imgRender.getAttribute("src");
-      const currentImg = this.context.querySelector(gallerySelector + ' a[href="' + currentImgSrc + '"]');
+      const currentImg = this.section.querySelector(gallerySelector + ' a[href="' + currentImgSrc + '"]');
       const nextElement = currentImg.closest(elementSelector).nextElementSibling;
       if (nextElement) {
         this.LoadImage(generatedElement, nextElement.querySelector("a.img-overlay").getAttribute("href"));
       } else {
-        const images = this.context.querySelectorAll(gallerySelector + " a.img-overlay");
+        const images = this.section.querySelectorAll(gallerySelector + " a.img-overlay");
         if (images) this.LoadImage(generatedElement, images[0].getAttribute("href"));
       }
       event.stopPropagation();
@@ -142,12 +137,12 @@ class GalleryOverlay {
   prevButton(generatedElement, gallerySelector, elementSelector) {
     generatedElement.prevButton.addEventListener("click", (event) => {
       const currentImgSrc = generatedElement.image.getAttribute("src");
-      const currentImg = this.context.querySelector(gallerySelector + ' a[href="' + currentImgSrc + '"]');
+      const currentImg = this.section.querySelector(gallerySelector + ' a[href="' + currentImgSrc + '"]');
       const prevElement = currentImg.closest(elementSelector).previousElementSibling;
       if (prevElement) {
         this.LoadImage(generatedElement, prevElement.querySelector("a.img-overlay").getAttribute("href"));
       } else {
-        const images = this.context.querySelectorAll(gallerySelector + " a.img-overlay");
+        const images = this.section.querySelectorAll(gallerySelector + " a.img-overlay");
         if (images) this.LoadImage(generatedElement, images[images.length - 1].getAttribute("href"));
       }
       event.stopPropagation();
@@ -178,17 +173,17 @@ class GalleryOverlay {
     return new Promise((resolv) => {
       this.toggleLoader(generatedElement, true);
       const img = document.createElement("img");
-      img.src = location;
       img.addEventListener("load", () => {
-        //  setTimeout(() => {
-        generatedElement.imagesContainer.style.width = img.naturalWidth + "px";
-        generatedElement.imagesContainer.style.height = img.naturalHeight + "px";
-        generatedElement.image.setAttribute("src", img.src);
-        generatedElement.image.classList.add("show");
-        this.toggleLoader(generatedElement, false);
-        resolv(img);
-        //}, 200);
+        setTimeout(() => {
+          generatedElement.imagesContainer.style.width = img.naturalWidth + "px";
+          generatedElement.imagesContainer.style.height = img.naturalHeight + "px";
+          generatedElement.image.setAttribute("src", img.src);
+          generatedElement.image.classList.add("show");
+          this.toggleLoader(generatedElement, false);
+          resolv(img);
+        }, 100);
       });
+      img.src = location;
     });
   }
   /**
@@ -218,7 +213,6 @@ class GalleryOverlay {
       overlay: document.createElement("div"),
       imagesContainer: document.createElement("div"),
       image: document.createElement("img"),
-      image2: document.createElement("img"),
       prevButton: document.createElement("div"),
       nextButton: document.createElement("div"),
       exitButton: document.createElement("div"),
@@ -227,8 +221,7 @@ class GalleryOverlay {
 
     generatedElement.overlay.className = "gallery-overlay-section-overlay";
     generatedElement.imagesContainer.classList.add("gallery-overlay-images-container", "d-flex", "justify-content-center", "align-items-center");
-    generatedElement.image.className = "gallery-overlay-section-current-image";
-    generatedElement.image2.className = "gallery-overlay-section-current-image";
+    generatedElement.image.classList.add("gallery-overlay-section-current-image", "img-responsive", "img-fluid");
     generatedElement.prevButton.className = "gallery-overlay-section-btn-prev";
     generatedElement.prevButton.innerHTML =
       '<svg fill="#fff" width="150" height="150" viewBox="-1.5 -0.938 4.5 4.5" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin" class="jam jam-chevron-right" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" transform="matrix(-1,0,0,-1,0,0)"><path d="M.996 1.326.068.398A.188.188 0 0 1 .333.133l1.061 1.061a.19.19 0 0 1 0 .265L.333 2.52a.188.188 0 0 1-.265-.265z"></path></svg>';
@@ -274,7 +267,7 @@ class GalleryOverlay {
    * Gere les effets sur l'image.
    */
   effetOnItem() {
-    this.context.querySelectorAll(".img-wrapper").forEach((wrapper) => {
+    this.section.querySelectorAll(".img-wrapper").forEach((wrapper) => {
       wrapper.addEventListener("mouseenter", function () {
         this.querySelector(".img-overlay").style.opacity = 1;
       });
