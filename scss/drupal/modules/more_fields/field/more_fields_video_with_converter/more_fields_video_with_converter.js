@@ -84,14 +84,16 @@ Drupal.behaviors.more_fields_video_with_converter = {
               // Si on joue la video, on doit pouvoir controler le volume.
               mutedVideo(video, volumeHigh, volumeOff);
             }
-            // li la video au survol
+            // lit la video au survol
             if (configs.read_mouse_enter)
               video.addEventListener(
                 "mouseenter",
                 () => {
-                  playVideo(video, play, pause, "read_by_mouse_enter");
-                  // Si on joue la video, on doit pouvoir controler le volume.
-                  mutedVideo(video, volumeHigh, volumeOff);
+                  if (configs.read_mouse_enter) {
+                    playVideo(video, play, pause, "read_by_mouse_enter");
+                    // Si on joue la video, on doit pouvoir controler le volume.
+                    mutedVideo(video, volumeHigh, volumeOff);
+                  }
                 },
                 false
               );
@@ -123,6 +125,16 @@ Drupal.behaviors.more_fields_video_with_converter = {
             pause.addEventListener(
               "click",
               () => {
+                // lorsqu'on met une video en pause on doit desactiver mouseEnter Read.
+                configs.read_mouse_enter = false;
+                // On retire l'evement "mouseenter"
+                video.removeEventListener(
+                  "mouseenter",
+                  () => {
+                    console.log("evenement mousedown retirer ");
+                  },
+                  false
+                );
                 video.pause();
               },
               false
@@ -130,8 +142,6 @@ Drupal.behaviors.more_fields_video_with_converter = {
             play.addEventListener(
               "click",
               () => {
-                // lorsqu'on met une video en pause on doit desactiver mouseEnter Read.
-                configs.read_mouse_enter = false;
                 video.play();
               },
               false
