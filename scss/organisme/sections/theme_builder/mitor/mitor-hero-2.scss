@@ -1,7 +1,7 @@
 @use "../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../_variables.scss" as *;
 @use "./atome/mitor-card__body.scss";
-@use "./atome/carrousel-nav.scss";
+// @use "./atome/carrousel-nav.scss";
 @use "./atome/mitor-btn.scss";
 @use "./atome/mitor-form-inline.scss";
 
@@ -253,8 +253,7 @@
       }
       .wave:nth-of-type(2) {
         top: -175px;
-        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
-          swell 7s ease -1.25s infinite;
+        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
         opacity: 1;
       }
       svg {
@@ -338,7 +337,9 @@
         }
       }
     }
-    .svg, .svg-2, .svg-3{
+    .svg,
+    .svg-2,
+    .svg-3 {
       display: none;
     }
     &::before {
