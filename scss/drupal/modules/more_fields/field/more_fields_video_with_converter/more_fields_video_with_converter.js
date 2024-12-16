@@ -42,7 +42,6 @@ Drupal.behaviors.more_fields_video_with_converter = {
        * @param {*} volumeOff
        */
       const mutedVideo = (video, volumeHigh, volumeOff) => {
-        console.log("function : mutedVideo");
         if (video.muted) {
           volumeOff.classList.add("btn-show");
           volumeHigh.classList.remove("btn-show");
@@ -131,6 +130,8 @@ Drupal.behaviors.more_fields_video_with_converter = {
             play.addEventListener(
               "click",
               () => {
+                // lorsqu'on met une video en pause on doit desactiver mouseEnter Read.
+                configs.read_mouse_enter = false;
                 video.play();
               },
               false
