@@ -199,3 +199,56 @@
     }
   }
 }
+
+//
+// Preparation du megamenus
+//
+.hbk-mega-menu--items {
+  @include media-min(DD) {
+    min-width: 350px;
+    width: 350px;
+  }
+}
+
+.hbk-mega-menu--items.megas {
+  > .item {
+    position: unset;
+    > .megaslayout {
+      position: absolute;
+      overflow: visible;
+      visibility: hidden;
+      opacity: 0;
+      top: 100%;
+      bottom: auto;
+      left: 0;
+      right: 0;
+      box-shadow: 1px 3px 11px 1px #d1d1d1;
+      background-color: #fff;
+      padding: $wbu-margin * 0.5;
+      max-height: 0;
+      z-index: 1;
+      @include WBUtransition($temps: 0.5s);
+      > .hbk-mega-menu--items__sub {
+        position: relative;
+        width: auto;
+        overflow: visible;
+        opacity: 1;
+      }
+      .hbk-mega-menu--items__sub {
+        box-shadow: 0 8px 10px -5px #e7e7e7;
+      }
+    }
+    &:hover {
+      > .megaslayout {
+        z-index: 10;
+        visibility: visible;
+        opacity: 1;
+        max-height: 100vh;
+        > .hbk-mega-menu--items__sub {
+          opacity: 1;
+          max-height: 700px;
+        }
+      }
+    }
+  }
+}
