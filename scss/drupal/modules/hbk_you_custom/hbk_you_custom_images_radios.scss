@@ -1,0 +1,171 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../variables" as *;
+/**
+ * Le style pour la vue
+ */
+.views_exposed__nos_cuisines {
+  border: solid 4px var(--bg-body);
+  margin-top: -4rem;
+  font-size: 15px;
+  label,
+  legend {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+  .custom-form-select {
+    width: 300px;
+    margin: 0;
+    margin-right: 2rem;
+    &::last-child {
+      margin-right: 0;
+    }
+    .options {
+      @include WBUtransition($temps: 0.5s);
+      &.open {
+        margin-top: 4rem;
+      }
+    }
+  }
+  .form-actions {
+    display: none;
+  }
+  .form-composite.term-node-tid-depth {
+    width: 242px;
+    margin-right: 3rem;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin: 0 0.3rem 0.2rem 0;
+        padding: 0;
+        position: relative;
+        &:first-child {
+          display: none;
+          margin: 0;
+          padding: 0;
+        }
+        label {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .block-color {
+      width: 44px;
+      height: 44px;
+      position: relative;
+      z-index: 9;
+      border: 1px solid var(--color-body);
+      display: flex;
+      cursor: pointer;
+    }
+    input {
+      position: absolute;
+      float: none;
+      margin: 0;
+      z-index: 1;
+      top: 5px;
+      left: 5px;
+      visibility: hidden;
+    }
+    .form-check {
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    .description {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 1.44rem;
+    }
+  }
+}
+//
+.ajax-progress-fullscreen {
+  &::before {
+    content: " ";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+  }
+}
+//
+.pager__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0;
+  &.kitchen_list {
+    .pager__item {
+      .page-link {
+        font-size: 20px;
+        border: 1px solid var(--color-body);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        margin: 0 0.2rem;
+        color: var(--color-body);
+        background-color: transparent;
+        &:hover {
+          background: $wbu-color-primary;
+          color: #fff;
+        }
+      }
+      &.active .page-link {
+        background: $wbu-color-primary;
+        color: #fff;
+        border-color: $wbu-color-primary;
+      }
+      &--ellipsis {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0.2rem;
+        border: 1px solid var(--color-body);
+      }
+      &--next {
+        .page-link {
+          position: relative;
+          &:hover {
+            background: transparent;
+          }
+          &::before {
+            background-image: var(--sprite-arrow-down);
+            background-size: 100%;
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transform: rotate(-90deg);
+          }
+        }
+        span {
+          display: none;
+        }
+      }
+      &--prev {
+        display: none;
+      }
+      &--first {
+        display: none;
+      }
+      &--last {
+        display: none;
+      }
+    }
+  }
+}
