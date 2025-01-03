@@ -3,9 +3,18 @@
 /**
  * Le style pour la vue
  */
+.kitchen-list {
+  margin-top: -7.5rem;
+  .breadcrumb {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    a {
+      color: var(--color-body);
+    }
+  }
+}
 .views_exposed__nos_cuisines {
   border: solid 4px var(--bg-body);
-  margin-top: -4rem;
   font-size: 15px;
   label,
   legend {
