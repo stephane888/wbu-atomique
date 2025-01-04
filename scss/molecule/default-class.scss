@@ -24,7 +24,7 @@
 @use "./Default/vertical-tabs.scss";
 
 //
-
+@include requiredFieldForm($wbu-color-primary);
 /**
  * Espacement/marge entre blog
  */

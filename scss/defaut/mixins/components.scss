@@ -76,18 +76,18 @@
   position: relative;
   &::after {
     content: "*";
-    padding: 0 0.5em;
+    padding: 0 0.75rem;
     color: $color_star;
     position: absolute;
-    right: -1em;
-    font-size: 1.8em;
+    right: -1.8rem;
+    font-size: inherit;
     top: 0;
-    line-height: 1.1;
+    line-height: inherit;
     display: block;
   }
 }
 
-@mixin requiredFieldForm($color_star: $color1) {
+@mixin requiredFieldForm($color_star) {
   label.form-required {
     @include LabelAddRequiredStar($color_star);
   }

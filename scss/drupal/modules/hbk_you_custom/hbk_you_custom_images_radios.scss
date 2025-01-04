@@ -3,6 +3,7 @@
 /**
  * Le style pour la vue
  */
+// main container
 .kitchen-list {
   margin-top: -7.5rem;
   .breadcrumb {
@@ -12,10 +13,42 @@
       color: var(--color-body);
     }
   }
+  .view--empty {
+    .titre {
+      line-height: 1.4;
+      color: var(--main-color-blue);
+      margin-top: 0;
+      margin-bottom: 10px !important;
+      font-size: 26px !important;
+    }
+    .descr {
+      font-size: 18px;
+      line-height: 1.2;
+      color: #ad1010;
+    }
+    .btn {
+      background-color: #fff;
+      padding: 3px 15px 3px 5px;
+      margin: 5px auto 15px;
+      color: #8f8f8d;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .icon-ping {
+      display: inline-block;
+      &::before {
+        font-size: 44px;
+        margin-left: 0;
+      }
+    }
+  }
 }
+// form exposed filter
 .views_exposed__nos_cuisines {
   border: solid 4px var(--bg-body);
   font-size: 15px;
+  position: relative;
+  z-index: 3;
   label,
   legend {
     font-size: 20px;
@@ -174,6 +207,67 @@
       }
       &--last {
         display: none;
+      }
+    }
+  }
+}
+/**
+ *  Page de login et utilisateur.
+ */
+.page-user {
+  .breadcrumb-item {
+    a {
+      color: var(--color-body);
+    }
+  }
+  .region-content {
+    background-color: #fff;
+    margin-top: -5rem;
+    border: solid 4px var(--bg-body);
+    border-bottom: 0;
+    .breadcrumb {
+      padding: 0 1.5rem;
+      margin-top: -3rem;
+    }
+  }
+  form.custom-form-you {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 5rem 0;
+    .form-item-name,
+    .form-item-pass {
+      position: relative;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    input {
+      border: solid 2px #afb0b2;
+      text-align: left;
+      color: #000;
+      text-transform: none;
+      border-radius: 5px;
+      font-size: 11px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    label {
+      position: absolute;
+      left: 1.5rem;
+      top: 7px;
+    }
+    .form-submit {
+      border: solid 2px var(--color-deep-red) !important;
+      background-color: var(--color-deep-red) !important;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      min-height: 51px;
+      margin-top: 2.5rem;
+      &:hover {
+        background-color: transparent !important;
+        color: var(--color-deep-red);
       }
     }
   }

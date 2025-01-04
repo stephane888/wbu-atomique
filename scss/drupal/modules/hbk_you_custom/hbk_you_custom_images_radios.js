@@ -18,6 +18,7 @@ Drupal.behaviors.hbk_you_custom_bef_radios = {
         }
 
         const ManageCheckbox = (radio) => {
+          console.log("radio", radio.value);
           // Si cest deja coché, on coche le premier element.
           if (radio.getAttribute("checked")) {
             radios[0].click();
@@ -43,6 +44,43 @@ Drupal.behaviors.hbk_you_custom_bef_radios = {
             radio.nextElementSibling.style["box-shadow"] = "1px 1px 1px 1px #adadad";
           }
         });
+      });
+    }
+  },
+};
+/**
+ * Ajoute l'animation sur les formulaires.
+ */
+Drupal.behaviors.page_user = {
+  attach: function (context, settings) {
+    if (context.querySelectorAll && context.querySelectorAll("form.custom-form-you")) {
+      const formatInputs = (fields) => {
+        fields.forEach((field) => {
+          // Si le champs est rempli, on masque le label
+          if (field.querySelector("input").value) {
+            field.querySelector("label").style.display = "none";
+          }
+          // si l'utilisateur clique sur le champs, on masque le label
+          field.querySelector("input").addEventListener("focus", () => {
+            field.querySelector("label").style.display = "none";
+          });
+          // si l'utilisateur quitte le champs et que le contenu est vide, on affiche le label
+          field.querySelector("input").addEventListener("blur", () => {
+            if (!field.querySelector("input").value) {
+              field.querySelector("label").style.display = "block";
+            }
+          });
+          //  si l'utilisateur tape quelque chose, on masque le label
+          field.querySelector("input").addEventListener("keyup", () => {
+            field.querySelector("label").style.display = "none";
+          });
+        });
+      };
+      once("hbk_style_form", "form.custom-form-you", context).forEach((form) => {
+        const textfields = form.querySelectorAll(".form-item.form-type-textfield");
+        const passwords = form.querySelectorAll(".form-item.form-type-password");
+        formatInputs(textfields);
+        formatInputs(passwords);
       });
     }
   },
