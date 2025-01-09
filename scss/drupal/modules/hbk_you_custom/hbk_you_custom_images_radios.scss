@@ -256,6 +256,19 @@
       left: 1.5rem;
       top: 7px;
     }
+    .form-actions {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        background: var(--sprite-bg-image) no-repeat scroll 0px -272px rgba(0, 0, 0, 0);
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: -10px;
+        top: 28px;
+      }
+    }
     .form-submit {
       border: solid 2px var(--color-deep-red) !important;
       background-color: var(--color-deep-red) !important;
@@ -265,6 +278,7 @@
       text-transform: uppercase;
       min-height: 51px;
       margin-top: 2.5rem;
+      position: relative;
       &:hover {
         background-color: transparent !important;
         color: var(--color-deep-red);
