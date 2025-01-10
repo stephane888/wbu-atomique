@@ -62,7 +62,6 @@
     color: $color;
     @include WBUtransition();
   }
-
   &:hover {
     > a {
       border-color: $color_hover;
@@ -79,7 +78,6 @@
     color: $color_star;
   }
 }
-
 @mixin requiredFieldForm($color_star) {
   label.form-required {
     @include LabelAddRequiredStar($color_star);
@@ -89,7 +87,6 @@
       @include LabelAddRequiredStar($color_star);
     }
   }
-
   .js-form-type-checkbox {
     input.required + label {
       @include LabelAddRequiredStar($color_star);
