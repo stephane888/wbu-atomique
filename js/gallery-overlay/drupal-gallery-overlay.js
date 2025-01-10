@@ -3,7 +3,7 @@ import GalleryOverlay from "./gallery-overlay";
  * il faudra documenter.
  */
 (function (Drupal) {
-  Drupal.behaviors.gallery_overlay_options = {
+  Drupal.behaviors.more_fields__gallery_overlay_options = {
     attach: function (context, settings) {
       if (context.querySelectorAll && context.querySelectorAll(".drupal-gallery-overlay").length) {
         once("more_fields_drupal-gallery-overlay", ".drupal-gallery-overlay", context).forEach((element) => {

@@ -98,7 +98,7 @@
         object-fit: contain;
         max-width: 100%;
         max-height: 100%;
-        padding: 2rem;
+        padding: 1rem;
         opacity: 0;
         @include WBUtransition($temps: 0.1s);
         &.show {
