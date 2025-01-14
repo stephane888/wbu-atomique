@@ -526,6 +526,6 @@ form {
   line-height: 1;
 }
 //
-a:visited {
+a:visited:not(.btn) {
   color: $wbu-link-color-visited;
 }
