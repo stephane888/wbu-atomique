@@ -1,3 +1,4 @@
+// On a cette erreur qui est recurrente : Uncaught (in promise) AbortError: The play() request was interrupted by a call to pause()
 Drupal.behaviors.more_fields_video_with_converter = {
   attach: function (context, settings) {
     // On se rassure que l'element est present dans le context.
