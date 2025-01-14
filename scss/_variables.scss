@@ -18,6 +18,7 @@ $wbu-background: #003b73 !default;
 $wbu-color-thirdly: #60a3d9 !default;
 // couleurs des liens
 $wbu-link-color: $wbu-color-primary !default;
+$wbu-link-color-visited: darken($wbu-link-color, 15%) !default;
 //
 // Autre couleurs
 // =========================================================

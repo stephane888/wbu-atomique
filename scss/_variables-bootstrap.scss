@@ -40,6 +40,7 @@ $input-btn-padding-x-lg: $wbu-margin * 1.44 !default; //1rem !default;
 //bootstrap override
 $primary: $wbu-bootstrap-primary;
 $link-color: $wbu-link-color;
+$link-hover-color: lighten($wbu-link-color, 15%) !default;
 $border-radius: 0;
 $border-radius-lg: 0;
 $border-radius-sm: 0;
