@@ -73,7 +73,11 @@
       document.querySelector(".commerceformatage_cart_habeuk").classList.add("show");
       reloadBloc();
       DispachCartDatas();
-    } else document.querySelector(".commerceformatage_cart_habeuk").classList.remove("show");
+      document.querySelector("body").classList.add("overflow-hidden");
+    } else {
+      document.querySelector("body").classList.remove("overflow-hidden");
+      document.querySelector(".commerceformatage_cart_habeuk").classList.remove("show");
+    }
   };
   /**
    * --
