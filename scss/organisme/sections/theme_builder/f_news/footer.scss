@@ -7,13 +7,19 @@
 // @use "../../../../libraries/_inline-svg.scss" as *;
 @use "./variables.scss" as *;
 .footer-fnews {
+  .nav {
+    --bs-nav-link-color: #{color-yiq($wbu-background)};
+  }
   background-color: $wbu-background;
   color: $wbu-color-boder;
-
   a {
     &:hover {
       color: $wbu-color-primary;
     }
+  }
+  a.nav-link,
+  a.nav-link:visited {
+    color: var(--bs-nav-link-color);
   }
   .fn-content {
     display: flex;

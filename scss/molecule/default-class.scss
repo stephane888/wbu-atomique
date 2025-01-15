@@ -525,7 +525,20 @@ form {
 .line-height-1 {
   line-height: 1;
 }
-//
-a:visited:not(.btn) {
+/**
+ * Style pour les liens.
+ */
+a:visited {
   color: $wbu-link-color-visited;
+}
+a.btn {
+  &:visited {
+    color: var(--bs-btn-color);
+  }
+  &:visited:hover {
+    color: var(--bs-btn-hover-color);
+  }
+}
+a.nav-link:visited {
+  color: var(--bs-nav-link-color);
 }
