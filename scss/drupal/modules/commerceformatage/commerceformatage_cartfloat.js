@@ -68,67 +68,67 @@
    * Ouvre le popup
    * @param {*} open
    */
-  function openCartPopup(open, context = null) {
+  const openCartPopup = (open, context = null) => {
     if (open) {
       document.querySelector(".commerceformatage_cart_habeuk").classList.add("show");
       reloadBloc();
+      DispachCartDatas();
     } else document.querySelector(".commerceformatage_cart_habeuk").classList.remove("show");
-  }
+  };
   /**
    * --
    * @returns
    */
-  function makeRequest(cartItem) {
-    return new Promise((resolv) => {
-      httpRequest = new XMLHttpRequest();
-      if (!httpRequest) {
-        alert("Svp, veillez mettre à jour votre navigateur ou contactez notre support technique");
-        return false;
-      }
-      httpRequest.onreadystatechange = () => {
-        if (httpRequest.readyState === XMLHttpRequest.DONE) {
-          if (httpRequest.status === 200) {
-            resolv(true);
-          } else {
-            //alert(" Il y a eu un problème avec la requête. ");
-            console.log("error in request ", httpRequest);
-          }
-        }
-      };
-      httpRequest.open("post", "/cart/add?_format=json");
-      httpRequest.setRequestHeader("Content-Type", "application/json");
-      httpRequest.send(JSON.stringify(cartItem));
-    });
-  }
-
-  function removeItem(orderId, itemId) {
+  const makeRequest = (cartItem, url = "/cart/add?_format=json", method = "post") => {
     return new Promise((resolv, reject) => {
       httpRequest = new XMLHttpRequest();
       if (!httpRequest) {
         alert("Svp, veillez mettre à jour votre navigateur ou contactez notre support technique");
+        reject(false);
         return false;
       }
+      httpRequest.responseType = "json";
       httpRequest.onreadystatechange = () => {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
-          if (httpRequest.status === 200) {
-            resolv(true);
-          } else {
-            console.log();
-            reject(false);
-          }
+          if (httpRequest.status >= 200 && httpRequest.status < 300) resolv(httpRequest.response);
+          else reject(httpRequest);
         }
       };
-      httpRequest.open("get", "/commerceformatage/remove-product/" + orderId + "/" + itemId);
+      httpRequest.open(method, url);
       httpRequest.setRequestHeader("Content-Type", "application/json");
-      httpRequest.send();
+      httpRequest.send(JSON.stringify(cartItem));
     });
+  };
+
+  function removeItem(orderId, itemId) {
+    return makeRequest([], "/commerceformatage/remove-product/" + orderId + "/" + itemId, "get");
+    // return new Promise((resolv, reject) => {
+    //   httpRequest = new XMLHttpRequest();
+    //   if (!httpRequest) {
+    //     alert("Svp, veillez mettre à jour votre navigateur ou contactez notre support technique");
+    //     return false;
+    //   }
+    //   httpRequest.onreadystatechange = () => {
+    //     if (httpRequest.readyState === XMLHttpRequest.DONE) {
+    //       if (httpRequest.status === 200) {
+    //         resolv(true);
+    //       } else {
+    //         console.log();
+    //         reject(false);
+    //       }
+    //     }
+    //   };
+    //   httpRequest.open("get", "/commerceformatage/remove-product/" + orderId + "/" + itemId);
+    //   httpRequest.setRequestHeader("Content-Type", "application/json");
+    //   httpRequest.send();
+    // });
   }
 
   /**
-   * --
+   * Gere l'ajout au panier.
    * @param {*} context
    */
-  function initAddTocart(context) {
+  const initAddTocart = function (context) {
     once("commerceformatage", ".commerceformatage-button-add-to-cart", context).forEach((item) => {
       item.addEventListener("click", (event) => {
         event.preventDefault();
@@ -170,7 +170,6 @@
             ];
           }
         }
-
         if (cartItem)
           makeRequest(cartItem).then(() => {
             openCartPopup(true, context);
@@ -182,12 +181,69 @@
         //
       });
     });
-  }
+  };
+  /**
+   * Permet de dispacher les informations sur le panier.
+   */
+  const DispachCartDatas = () => {
+    makeRequest([], "/cart?_format=json", "get").then((result) => {
+      const cart = {
+        quantities: 0,
+        total_price: {},
+      };
+      if (result.length) {
+        result.forEach((order) => {
+          if (order.order_items && order.order_items.length) {
+            order.order_items.forEach((item) => {
+              cart.quantities += parseInt(item.quantity);
+            });
+            cart.total_price = order.total_price;
+          }
+        });
+        // create and send event.
+        let customValuesEvent = new CustomEvent("commerceformatage__cart_status", {
+          detail: cart,
+        });
+        document.dispatchEvent(customValuesEvent);
+      } else {
+        // create and send event.
+        let customValuesEvent = new CustomEvent("commerceformatage__cart_status", {
+          detail: cart,
+        });
+        document.dispatchEvent(customValuesEvent);
+      }
+    });
+  };
+
+  /**
+   *
+   * @param {*} context
+   */
+  const updateCartCount = (context) => {
+    /**
+     * --
+     * @param {*} detail
+     */
+    const updateText = (detail, context) => {
+      const qty = context.querySelector(".commerceformatage_cart_habeuk_icon1 .number");
+      if (qty) qty.innerHTML = "(" + detail.quantities + ")";
+
+      const PriceValue = context.querySelector(".price-value");
+      if (PriceValue) {
+        PriceValue.innerHTML = detail.total_price.formatted ? detail.total_price.formatted : "";
+      }
+    };
+    once("commerceformatage_cart_update", ".commerceformatage_cart_bloc_count", context).forEach(() => {
+      document.addEventListener("commerceformatage__cart_status", (event) => {
+        updateText(event.detail, context);
+      });
+    });
+  };
   // Close cart popup
   function initCloseCary(context) {
     var cl = context && context.querySelector ? context.querySelector(".commerceformatage_cart_habeuk_close") : null;
     if (cl) {
-      once("commerceformatage", ".commerceformatage_cart_habeuk_close", context).forEach((item) => {
+      once("commerceformatage_close", ".commerceformatage_cart_habeuk_close", context).forEach((item) => {
         item.addEventListener("click", () => {
           openCartPopup(false, context);
           ManageCover(false, context);
@@ -200,11 +256,10 @@
   function initOpenCart(context) {
     var cl = context && context.querySelector ? context.querySelector(".commerceformatage_cart_habeuk_open") : null;
     if (cl) {
-      once("commerceformatage", ".commerceformatage_cart_habeuk_open", context).forEach((item) => {
+      once("commerceformatage_open_cart", ".commerceformatage_cart_habeuk_open", context).forEach((item) => {
         item.addEventListener("click", () => {
           openCartPopup(true, context);
           ManageCover(true, context);
-          console.log("initOpenCart");
         });
       });
     }
@@ -214,7 +269,7 @@
   function initRemoveItems(context) {
     var cl = context && context.querySelectorAll ? context.querySelectorAll(".commerceformatage_cart_habeuk_remove") : null;
     if (cl) {
-      once("commerceformatage", ".commerceformatage_cart_habeuk_remove", context).forEach((item) => {
+      once("commerceformatage_remove", ".commerceformatage_cart_habeuk_remove", context).forEach((item) => {
         item.addEventListener("click", () => {
           removeItem(item.getAttribute("data-order-id"), item.getAttribute("data-cart-id")).then(() => {
             reloadBloc(context);
@@ -233,6 +288,7 @@
       initCloseCary(context);
       initOpenCart(context);
       initRemoveItems(context);
+      updateCartCount(context);
     },
   };
 })(jQuery, Drupal);
