@@ -10,7 +10,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
        */
       const playVideo = (video, play, pause, key = null) => {
         console.log("function : playVideo : ", video.paused, "key : ", key);
-        if (video.paused) video.play();
+        //if (video.paused) video.play();
         play.classList.add("btn-fade");
         play.classList.remove("btn-show");
         pause.classList.add("btn-show");
@@ -27,8 +27,8 @@ Drupal.behaviors.more_fields_video_with_converter = {
        * @param {*} video
        */
       const pauseVideo = (video, play, pause, key = null) => {
-        console.log("function : pauseVideo", "key : ", key);
-        if (!video.paused) video.pause();
+        console.log("function : playVideo : ", video.paused, "key : ", key);
+        //if (!video.paused) video.pause();
         pause.classList.add("btn-fade");
         pause.classList.remove("btn-show");
         play.classList.add("btn-show");
