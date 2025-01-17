@@ -295,17 +295,18 @@ class SwiperManager {
         });
       }
     };
+    console.log("SwipersInstancesConfig : ", this.SwipersInstancesConfig);
     this.SwipersInstancesConfig.forEach((params) => {
       if (params.unique && !sliderKeys.includes(params.unique)) {
         sliderKeys.push(params.unique);
         const swiper = this.getInstances(params.unique);
         if (swiper) {
           swiper.hostEl.addEventListener("mouseenter", () => {
-            pauseSliders({ parent: swiper });
+            pauseSliders({ parent: swiper }, params.config.custom_config);
           });
           swiper.hostEl.addEventListener("mouseleave", () => {
             swiper.autoplay.start();
-            playSliders({ parent: swiper });
+            playSliders({ parent: swiper }, params.config.custom_config);
           });
           manageVideosInSlider({ parent: swiper, children: null }, params);
         }
