@@ -9,8 +9,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
        * @param {*} video
        */
       const playVideo = (video, play, pause, key = null) => {
-        console.log("function : playVideo : ", video.paused, "key : ", key);
-        //if (video.paused) video.play();
+        console.log("function : playVideo. \n video en pause : ", video.paused, "\n key : ", key);
         play.classList.add("btn-fade");
         play.classList.remove("btn-show");
         pause.classList.add("btn-show");
@@ -27,8 +26,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
        * @param {*} video
        */
       const pauseVideo = (video, play, pause, key = null) => {
-        console.log("function : playVideo : ", video.paused, "key : ", key);
-        //if (!video.paused) video.pause();
+        console.log("function : pauseVideo. \n video en pause : ", video.paused, "\n key : ", key);
         pause.classList.add("btn-fade");
         pause.classList.remove("btn-show");
         play.classList.add("btn-show");
@@ -55,7 +53,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
         const eltControls = item.querySelector(".elt-controls");
         if (eltControls) {
           const dataSettings = eltControls.getAttribute("data-settings") ? JSON.parse(eltControls.getAttribute("data-settings")) : {};
-          console.log("dataSettings : ", dataSettings);
+          //console.log("dataSettings : ", dataSettings);
           const configs = {
             read_auto: true, // Lit la video de maniere automatique.
             muted: false, // son desactivé par defaut
@@ -76,12 +74,14 @@ Drupal.behaviors.more_fields_video_with_converter = {
           console.log("configs : ", configs);
           if (configs.show_custom_control) {
             if (!configs.read_auto) {
-              pauseVideo(video, play, pause, "Event lister pause");
+              if (!video.paused) {
+                video.pause();
+              }
             }
             if (configs.read_auto && !video.paused) {
               // Si le paramettre autoplay=1
               // On se rassure que la video a effectivement demarrer.
-              playVideo(video, play, pause, "auto_read");
+              video.play();
               // Si on joue la video, on doit pouvoir controler le volume.
               mutedVideo(video, volumeHigh, volumeOff);
             }
@@ -91,7 +91,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
                 "mouseenter",
                 () => {
                   if (configs.read_mouse_enter) {
-                    playVideo(video, play, pause, "read_by_mouse_enter");
+                    video.play();
                     // Si on joue la video, on doit pouvoir controler le volume.
                     mutedVideo(video, volumeHigh, volumeOff);
                   }
@@ -111,7 +111,7 @@ Drupal.behaviors.more_fields_video_with_converter = {
             video.addEventListener(
               "pause",
               () => {
-                pauseVideo(video, play, pause, "Event lister pause");
+                pauseVideo(video, play, pause, "Event lister pause ...");
               },
               false
             );
