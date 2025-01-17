@@ -1,5 +1,4 @@
-import Swiper from "swiper";
-import { Navigation, Pagination, Parallax, Autoplay } from "swiper/modules";
+import Swiper, { Navigation, Pagination, Parallax, Autoplay } from "swiper";
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination, Parallax, Autoplay]);
 // import Swiper styles
