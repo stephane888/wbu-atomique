@@ -21,7 +21,12 @@
 @use "./Default/text-titre.scss";
 //
 @use "./Default/details.scss";
-@use "./Default//AjaxLoader.scss";
+@use "./Default/vertical-tabs.scss";
+
+/**
+ * --
+ */
+@include requiredFieldForm($wbu-color-primary);
 /**
  * Espacement/marge entre blog
  */
@@ -197,6 +202,24 @@
 
   @include media-min("desktop") {
     padding-bottom: $space_bottom;
+  }
+}
+
+/**
+ * --
+ */
+.g-inner,
+.gy-inner {
+  --bs-gutter-y: #{$space_inner_top * 0.5};
+  @include media-min("mobile") {
+    --bs-gutter-y: #{$space_inner_top};
+  }
+}
+.g-inner,
+.gx-inner {
+  --bs-gutter-x: #{$space_inner_top * 0.5};
+  @include media-min("mobile") {
+    --bs-gutter-x: #{$space_inner_top};
   }
 }
 
@@ -501,4 +524,21 @@ form {
 }
 .line-height-1 {
   line-height: 1;
+}
+/**
+ * Style pour les liens.
+ */
+a:visited {
+  color: $wbu-link-color-visited;
+}
+a.btn {
+  &:visited {
+    color: var(--bs-btn-color);
+  }
+  &:visited:hover {
+    color: var(--bs-btn-hover-color);
+  }
+}
+a.nav-link:visited {
+  color: var(--bs-nav-link-color);
 }

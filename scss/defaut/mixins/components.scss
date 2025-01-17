@@ -75,35 +75,22 @@
 @mixin LabelAddRequiredStar($color_star) {
   position: relative;
   &::after {
-    content: "*";
-    padding: 0 0.5em;
+    content: " * ";
     color: $color_star;
-    position: absolute;
-    right: -1em;
-    font-size: 1.8em;
-    top: 0;
-    line-height: 1.1;
-    display: block;
   }
 }
-
-@mixin requiredFieldForm($color_star: $color1) {
+@mixin requiredFieldForm($color_star) {
   label.form-required {
     @include LabelAddRequiredStar($color_star);
   }
-
+  .form-item.required {
+    legend span {
+      @include LabelAddRequiredStar($color_star);
+    }
+  }
   .js-form-type-checkbox {
     input.required + label {
       @include LabelAddRequiredStar($color_star);
-
-      &::after {
-        display: inline-block;
-        position: relative;
-        padding: 0;
-        height: 17px;
-        overflow: hidden;
-        right: -2px;
-      }
     }
   }
 }
