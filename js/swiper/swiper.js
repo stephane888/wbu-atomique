@@ -37,7 +37,6 @@ class SwiperManager {
      */
     this.SwipersInstancesConfig = [];
     this.waitterResizeWindow;
-    this.aosRunning = false;
   }
   /**
    * Permet de verifier si le slider est bien construit.
@@ -56,13 +55,6 @@ class SwiperManager {
     } else {
       console.log(" Le slider ne contient pas 'swiper-wrapper' ", slider);
       return false;
-    }
-  }
-
-  initAos() {
-    if (!this.aosRunning) {
-      AOS.init();
-      this.aosRunning = true;
     }
   }
 
@@ -103,6 +95,8 @@ class SwiperManager {
               // modules: [Navigation, Pagination, Parallax, Autoplay, Controller, Thumbs, EffectFade, Scrollbar],
               on: {
                 slideChangeTransitionEnd(swiper) {
+                  // permet de reinitialiser l'animation.
+                  AOS.init();
                   // On le retire sur tous les elements sauf celui encours.
                   swiper.slides.forEach((item, index) => {
                     if (swiper.activeIndex !== index)
@@ -119,22 +113,8 @@ class SwiperManager {
                   });
                 },
                 // lorsque la construction du slider est ok.
-                init(swiper) {
-                  // console.log("Le slider est initialiser : ", swiper.hostEl);
-                  // //
-                  // if (swiper.hostEl) {
-                  //   swiper.hostEl.addEventListener("mouseenter", () => {
-                  //     swiper.autoplay.stop();
-                  //   });
-                  //   swiper.hostEl.addEventListener("mouseleave", () => {
-                  //     swiper.autoplay.start();
-                  //   });
-                  // }
-                  // // On verifie si dans l'enssemble des slides on a une video.
-                  // swiper.slides.forEach((item) => {
-                  //   item.querySelectorAll("video").forEach((video) => {});
-                  // });
-                },
+                // init(swiper) {
+                // },
               },
             };
             /**
@@ -203,9 +183,8 @@ class SwiperManager {
    * Permet de gerer de maniere efficace l'animation.
    */
   GestionDeLanimation() {
-    this.initAos();
     /**
-     * Fonctionne uniquement pour le comportement par defaut.
+     * Permet de mettre en pause le slider si les conditions sont respectées
      *
      * @param {*} reference
      * @param {*} custom_config
@@ -216,11 +195,11 @@ class SwiperManager {
         custom_config.manager = manager;
         if (reference.parent) reference.parent.autoplay.stop();
         if (reference.children) reference.children.autoplay.stop();
+        //console.log("Slider en pause, manager : ", manager);
       }
     };
     /**
-     * Fonctionne uniquement pour le comportement par defaut.
-     *
+     * Permet de demerer le slider si les conditions sont respectées
      * @param {*} reference
      * @param {*} custom_config
      */
@@ -230,6 +209,7 @@ class SwiperManager {
         custom_config.manager = manager;
         if (reference.parent) reference.parent.autoplay.start();
         if (reference.children) reference.children.autoplay.start();
+        //console.log("Slider demarrer, manager : ", manager);
       }
     };
     /**
@@ -244,6 +224,11 @@ class SwiperManager {
       const videos = swiperParent.hostEl.querySelectorAll("video");
       if (videos) {
         videos.forEach((video) => {
+          // on desactive la lecture automatique.
+          video.autoplay = false;
+          // desactive le preload.
+          video.preload = "none";
+          video.muted = false;
           // Par defaut on arrete la lecture sur toute les videos.
           if (!video.paused) {
             video.pause();
@@ -254,7 +239,7 @@ class SwiperManager {
             () => {
               // On utilise le paramettre "video" afin d'empecher d'autres elements de pouvoir controller le slider.
               pauseSliders({ parent: swiperParent, children: swiperChildren }, params.config.custom_config, "video");
-              console.log("video demarrer, slider en pause : ", swiperParent);
+              console.log("Video demarrer");
             },
             false
           );
@@ -263,7 +248,7 @@ class SwiperManager {
             () => {
               // La video mis en pause, on ne demarre par le slide.
               // L'utilisateur choisira une action.
-              console.log("video mise en pause");
+              console.log("Video mise en pause");
             },
             false
           );
@@ -274,12 +259,14 @@ class SwiperManager {
               params.config.custom_config.swiper_status = "auto";
               params.config.custom_config.manager = "auto";
               playSliders({ parent: swiperParent, children: swiperChildren }, params.config.custom_config);
-              console.log("video terminé, slider run");
+              console.log("Video terminé, slider run");
             },
             false
           );
         });
-        // si une transition se produit on met les videos en pause.
+        /**
+         * Si une transition se produit on met les videos en pause.
+         */
         swiperParent.on("slideChangeTransitionStart", () => {
           videos.forEach((video) => {
             if (!video.paused) {
@@ -305,7 +292,6 @@ class SwiperManager {
             pauseSliders({ parent: swiper }, params.config.custom_config);
           });
           swiper.hostEl.addEventListener("mouseleave", () => {
-            swiper.autoplay.start();
             playSliders({ parent: swiper }, params.config.custom_config);
           });
           manageVideosInSlider({ parent: swiper, children: null }, params);

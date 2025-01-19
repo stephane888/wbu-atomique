@@ -71,14 +71,16 @@ Drupal.behaviors.more_fields_video_with_converter = {
           const volumeOff = item.querySelector(".volume-off");
           const video = item.querySelector("video.videos_control");
           eltControls.style.display = "flex";
-          console.log("configs : ", configs);
+          console.log("configs : ", configs, "\n Video en pause : ", video.paused);
           if (configs.show_custom_control) {
             if (!configs.read_auto) {
               if (!video.paused) {
                 video.pause();
               }
+              // La video etant en pause on doit l'initialiser.
+              pauseVideo(video, play, pause, "Initialisation");
             }
-            if (configs.read_auto && !video.paused) {
+            if (configs.read_auto && video.paused) {
               // Si le paramettre autoplay=1
               // On se rassure que la video a effectivement demarrer.
               video.play();
