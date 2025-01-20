@@ -277,6 +277,7 @@
         item.addEventListener("click", () => {
           removeItem(item.getAttribute("data-order-id"), item.getAttribute("data-cart-id")).then(() => {
             reloadBloc(context);
+            DispachCartDatas();
           });
         });
       });
