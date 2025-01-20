@@ -144,8 +144,9 @@
       position: relative;
       text-decoration: none;
       color: inherit;
-      @include WBUtransition();
       width: 100%;
+      white-space: nowrap;
+      @include WBUtransition();
       @include media-min("DD") {
         width: auto;
       }
