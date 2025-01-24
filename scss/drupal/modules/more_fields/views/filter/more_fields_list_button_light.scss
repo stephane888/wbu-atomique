@@ -1,5 +1,6 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 @use "../../../../../variables" as *;
+@use "./more_fields_default.scss";
 
 .more_fields_list_button_light.more_fields_exposed_filter {
   margin-bottom: $wbu-margin * 0.75;
