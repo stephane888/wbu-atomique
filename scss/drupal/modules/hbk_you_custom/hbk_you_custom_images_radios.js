@@ -85,3 +85,11 @@ Drupal.behaviors.page_user = {
     }
   },
 };
+
+(function ($) {
+  $(document).ready(function () {
+    $("#kictchen-collapse-button").on("click", function () {
+      $(this).parent().toggleClass("active");
+    });
+  });
+})(jQuery);
