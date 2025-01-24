@@ -5,7 +5,13 @@
  */
 // main container
 .kitchen-list {
-  margin-top: -7.5rem;
+  & > header {
+    background-color: white;
+  }
+  @include media-min(SM) {
+    background-color: white;
+    margin-top: -7.5rem;
+  }
   .breadcrumb {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -44,22 +50,92 @@
   }
 }
 // form exposed filter
-.views_exposed__nos_cuisines {
+form.views_exposed__nos_cuisines {
   border: solid 4px var(--bg-body);
   font-size: 15px;
   position: relative;
   z-index: 3;
+  padding-block: 5.2rem 0 !important;
+  padding-bottom: 0rem;
+  height: 0;
+  overflow: hidden;
+  &.active {
+    height: auto;
+    padding-block: 7.2rem 2rem !important;
+    #kictchen-collapse-button {
+      background-color: var(--color-deep-red);
+      color: white;
+      &::before,
+      &::after {
+        background: var(--sprite-bg-image) no-repeat -50px -218px transparent;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(5.2rem - 1px);
+    left: 50%;
+    width: 2.6rem;
+    height: 1.1rem;
+    transform: translateX(-50%);
+    background: var(--sprite-bg-image) no-repeat -104px -225px transparent;
+  }
+  @include media-min(SM) {
+    padding-block: 3rem !important;
+    height: auto;
+    &::before {
+      content: none;
+    }
+  }
+  #kictchen-collapse-button {
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    height: 52px;
+    line-height: 52px;
+    font-size: 15px;
+    background: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    &::before,
+    &::after {
+      position: absolute;
+      width: 18px;
+      top: 13px;
+      height: 20px;
+      background: var(--sprite-bg-image) no-repeat -80px -218px transparent;
+      content: "";
+    }
+    &::before {
+      left: 2rem;
+    }
+    &::after {
+      right: 2rem;
+    }
+    @include media-min(SM) {
+      display: none;
+    }
+  }
   label,
   legend {
-    font-size: 20px;
+    font-size: 15px;
     margin: 0;
-    margin-bottom: 10px;
     font-weight: 800;
+    @include media-min(SM) {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
   }
   .custom-form-select {
-    width: 300px;
-    margin: 0;
-    margin-right: 2rem;
+    width: 100%;
+    @include media-min(SM) {
+      width: 300px;
+      margin: 0;
+      margin-right: 2rem;
+    }
     &::last-child {
       margin-right: 0;
     }
@@ -74,8 +150,12 @@
     display: none;
   }
   .form-composite.term-node-tid-depth {
-    width: 242px;
-    margin-right: 3rem;
+    width: 100%;
+    margin: 0;
+    @include media-min(SM) {
+      width: 242px;
+      margin-right: 3rem;
+    }
     ul {
       display: flex;
       flex-wrap: wrap;
