@@ -141,7 +141,7 @@
       text-decoration: none;
       flex-grow: 2;
       color: inherit;
-      position: relative;
+      // position: relative;
       text-decoration: none;
       color: inherit;
       width: 100%;
@@ -219,7 +219,8 @@
     left: 0;
     top: 100%;
     background-color: #fff;
-    width: 100%;
+    // width: 100%;
+    min-width: 100%;
     padding-left: $wbu-margin;
     max-height: 0;
     overflow: hidden;

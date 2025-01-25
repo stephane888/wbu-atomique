@@ -1,5 +1,11 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
+// on re-utilise les styles de la mega-menu de base.
+/**
+ * On verra plus tard, il faut faire un style cuqtom pour les mega menus.
+ */
 @use "../../../../../organisme/sections/theme_builder/utilitaires/mega-menu/mega-menu.scss";
+@use "../../../../../organisme/sections/theme_builder/utilitaires/mega-menu/model-marseille.scss";
+@use "../../../../../organisme/sections/theme_builder/utilitaires/mega-menu/mega-menu-components.scss";
 
 .hbk-mega-menu--items {
   @include media-min(DD) {
