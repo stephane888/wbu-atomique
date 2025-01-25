@@ -107,8 +107,8 @@
         min-width: 0;
       }
       .svg-arrow {
-        min-width: $wbu-margin * 2;
-        width: $wbu-margin * 2;
+        min-width: $wbu-margin;
+        width: $wbu-margin;
         height: $wbu-margin * 2;
         align-self: center;
         margin-left: $wbu-margin * 0.5;
@@ -117,7 +117,7 @@
         position: absolute;
         right: 0;
         top: $wbu-margin * 0.5;
-        padding: $wbu-margin * 0.5;
+        padding: $wbu-margin * 0.5 0;
         cursor: pointer;
         @include WBUtransition();
       }

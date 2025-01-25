@@ -1,5 +1,6 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
-// end
+@use "../../../../../organisme/sections/theme_builder/utilitaires/mega-menu/mega-menu.scss";
+
 .hbk-mega-menu--items {
   @include media-min(DD) {
     min-width: 350px;
