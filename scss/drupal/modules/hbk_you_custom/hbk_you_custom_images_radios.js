@@ -86,10 +86,14 @@ Drupal.behaviors.page_user = {
   },
 };
 
-(function ($) {
-  $(document).ready(function () {
-    $("#kictchen-collapse-button").on("click", function () {
-      $(this).parent().toggleClass("active");
-    });
-  });
-})(jQuery);
+Drupal.behaviors.kitchen_exposed_form = {
+  attach: function (context, settings) {
+    if (context.querySelectorAll && context.querySelectorAll("#kitchen-collapse-button")) {
+      once("kitchen_exposed_form", "#kitchen-collapse-button", context).forEach((item) => {
+        item.addEventListener("click", function () {
+          this.parentElement.classList.toggle("active");
+        });
+      })
+    }
+  }
+}

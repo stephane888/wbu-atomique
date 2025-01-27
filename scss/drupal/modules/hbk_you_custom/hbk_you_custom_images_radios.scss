@@ -62,7 +62,8 @@ form.views_exposed__nos_cuisines {
   &.active {
     height: auto;
     padding-block: 7.2rem 2rem !important;
-    #kictchen-collapse-button {
+    overflow: visible;
+    #kitchen-collapse-button {
       background-color: var(--color-deep-red);
       color: white;
       &::before,
@@ -88,7 +89,7 @@ form.views_exposed__nos_cuisines {
       content: none;
     }
   }
-  #kictchen-collapse-button {
+  #kitchen-collapse-button {
     left: 0;
     right: 0;
     top: 0;
@@ -142,7 +143,10 @@ form.views_exposed__nos_cuisines {
     .options {
       @include WBUtransition($temps: 0.5s);
       &.open {
-        margin-top: 4rem;
+        margin-top: 2.5rem;
+        @include media-min(SM) {
+          margin-top: 4rem;
+        }
       }
     }
   }
@@ -177,8 +181,8 @@ form.views_exposed__nos_cuisines {
       }
     }
     .block-color {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       position: relative;
       z-index: 9;
       border: 1px solid var(--color-body);
