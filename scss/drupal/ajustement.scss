@@ -79,8 +79,8 @@ fieldset.form-item fieldset.form-item legend {
 .field--type-text-long {
   img {
     max-width: 100%;
-    // width: auto !important; à de gros consequaneces à cause d'important
-    // height: auto !important; à de gros consequaneces à cause d'important
+    width: auto;
+    height: auto;
     + p,
     + h2,
     + h3,

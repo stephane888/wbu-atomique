@@ -92,3 +92,27 @@
     }
   }
 }
+///
+.formatage-models-simple-block-2518--TyVg9O0OO68 {
+  .custom-text {
+    letter-spacing: 4px;
+  }
+  .custom-text-1 {
+    letter-spacing: 7px;
+  }
+  .custom-img {
+    margin-left: 2px;
+    margin-right: 2px;
+    img {
+      transform-origin: center;
+      transition: scale 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    &:hover {
+      img {
+        scale: 1.2;
+      }
+    }
+  }
+  //
+}
+/////
