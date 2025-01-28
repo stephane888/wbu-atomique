@@ -224,12 +224,15 @@ form.views_exposed__nos_cuisines {
   }
 }
 //
+
 .pager__items {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2.5rem 0;
-  &.kitchen_list {
+}
+.custom-kitchen-list-pager {
+  .pager__items {
     .pager__item {
       .page-link {
         font-size: 20px;
