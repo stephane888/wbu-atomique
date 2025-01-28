@@ -85,6 +85,7 @@ form.views_exposed__nos_cuisines {
   @include media-min(SM) {
     padding-block: 3rem !important;
     height: auto;
+    overflow: visible;
     &::before {
       content: none;
     }
@@ -139,6 +140,14 @@ form.views_exposed__nos_cuisines {
     }
     &::last-child {
       margin-right: 0;
+    }
+    .trigger {
+      border: 1px solid #1d1d1d;
+      &::after {
+        bottom: 0;
+        height: auto;
+        border-left: 1px solid #1d1d1d;
+      }
     }
     .options {
       @include WBUtransition($temps: 0.5s);
@@ -264,7 +273,8 @@ form.views_exposed__nos_cuisines {
         margin: 0 0.2rem;
         border: 1px solid var(--color-body);
       }
-      &--next {
+      &--next,
+      &--previous {
         .page-link {
           position: relative;
           &:hover {
@@ -279,15 +289,21 @@ form.views_exposed__nos_cuisines {
             right: 0;
             top: 0;
             bottom: 0;
-            transform: rotate(-90deg);
           }
         }
         span {
           display: none;
         }
       }
-      &--prev {
-        display: none;
+      &--next {
+        .page-link::before {
+          transform: rotate(-90deg);
+        }
+      }
+      &--previous {
+        .page-link::before {
+          transform: rotate(90deg);
+        }
       }
       &--first {
         display: none;
