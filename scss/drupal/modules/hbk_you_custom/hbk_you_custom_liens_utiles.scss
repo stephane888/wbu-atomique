@@ -14,6 +14,12 @@
     border: 2px solid;
     font-size: 13px;
     transition: all 0.3s ease-in-out, font-size 0s;
+    &:last-child {
+      margin-bottom: 0.8rem;
+      @include media-min(SM) {
+        margin-bottom: 1.5rem;
+      }
+    }
     i {
       width: 50px;
       height: 35px;
