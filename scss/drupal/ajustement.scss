@@ -77,6 +77,10 @@ fieldset.form-item fieldset.form-item legend {
  */
 .field--type-text-with-summary,
 .field--type-text-long {
+  iframe,
+  video {
+    max-width: 100%;
+  }
   img {
     max-width: 100%;
     width: auto;
