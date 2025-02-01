@@ -114,8 +114,8 @@ fieldset.form-item fieldset.form-item legend {
     + h6 {
       margin-top: $wbu-margin * 0.5;
     }
-    ul,
-    ol {
+    + ul,
+    + ol {
       margin-top: -$wbu-margin * 0.5;
     }
   }
