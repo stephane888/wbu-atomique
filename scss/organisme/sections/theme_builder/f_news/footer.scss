@@ -4,15 +4,22 @@
 @use "./molecule/footer/fns-menu.scss";
 @use "./molecule/footer/fns-social.scss";
 @use "./molecule/footer/footer-last.scss";
+// @use "../../../../libraries/_inline-svg.scss" as *;
 @use "./variables.scss" as *;
 .footer-fnews {
+  .nav {
+    --bs-nav-link-color: #{color-yiq($wbu-background)};
+  }
   background-color: $wbu-background;
   color: $wbu-color-boder;
-
   a {
     &:hover {
       color: $wbu-color-primary;
     }
+  }
+  a.nav-link,
+  a.nav-link:visited {
+    color: var(--bs-nav-link-color);
   }
   .fn-content {
     display: flex;
@@ -85,3 +92,27 @@
     }
   }
 }
+///
+.formatage-models-simple-block-2518--TyVg9O0OO68 {
+  .custom-text {
+    letter-spacing: 4px;
+  }
+  .custom-text-1 {
+    letter-spacing: 7px;
+  }
+  .custom-img {
+    margin-left: 2px;
+    margin-right: 2px;
+    img {
+      transform-origin: center;
+      transition: scale 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    &:hover {
+      img {
+        scale: 1.2;
+      }
+    }
+  }
+  //
+}
+/////

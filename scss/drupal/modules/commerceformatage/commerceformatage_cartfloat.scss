@@ -1,5 +1,6 @@
 @use "../../../wbu-ressources-clean.scss" as *;
 @use "../../../variables" as *;
+@use "../../../libraries/inline-svg" as *;
 .commerce-cart-form {
   margin-bottom: $wbu-margin;
   table {
@@ -106,12 +107,15 @@
   box-shadow: 0px 0px 10px 0px #3c3b3b;
   background-color: #fff;
   max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  padding: $wbu-margin * 2 $wbu-margin $wbu-margin;
   @include WBUtransition($temps: 0.8s);
   .commerceformatage_cart_habeuk_close {
     font-size: 3rem;
     position: absolute;
     z-index: 2;
-    top: 25px;
+    top: 40px;
     right: 15px;
     color: darken($color: $wbu-color-primary, $amount: 30%);
     cursor: pointer;
@@ -131,7 +135,7 @@
     display: none;
   }
   .block-title {
-    padding: $wbu-margin 0 $wbu-margin * 0.5 $wbu-margin;
+    padding: 0 0 $wbu-margin * 0.5 0;
   }
 
   .table-responsive {
@@ -168,30 +172,52 @@
 
   .commerceformatage_cart_habeuk_remove {
     cursor: pointer;
-    opacity: 0.7;
     color: $wbu-background;
-    @include WBUtransition();
-
+    position: relative;
+    min-height: 20px;
+    min-width: 20px;
+    &::before {
+      opacity: 0.7;
+      @include WBUtransition();
+      position: absolute;
+      content: "";
+      $svg_search: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none" stroke="#F00" stroke-linecap="round" stroke-linejoin="round" id="Trash-2--Streamline-Lucide" height="16" width="16"><path d="M1.875 3.75h11.25" stroke-width="1"></path><path d="M11.875 3.75v8.75c0 0.625 -0.625 1.25 -1.25 1.25H4.375c-0.625 0 -1.25 -0.625 -1.25 -1.25V3.75" stroke-width="1"></path><path d="M5 3.75V2.5c0 -0.625 0.625 -1.25 1.25 -1.25h2.5c0.625 0 1.25 0.625 1.25 1.25v1.25" stroke-width="1"></path><path d="m6.25 6.875 0 3.75" stroke-width="1"></path><path d="m8.75 6.875 0 3.75" stroke-width="1"></path></svg>';
+      @include background-svg($svg_search);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      filter: saturate(70%);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scale(1);
+    }
     &:hover {
-      opacity: 1;
-      color: $danger;
+      &::before {
+        opacity: 1;
+        color: $danger;
+        filter: saturate(100%);
+        transform: scale(1.4);
+      }
     }
   }
 }
 
 //
 .field--name-total-price {
-  background: rgba($wbu-background, 20%);
-  padding: $wbu-margin * 0.75 $wbu-margin * 0.5;
-  margin-bottom: $wbu-margin;
+  //background: rgba($wbu-background, 20%);
+  padding: $wbu-margin * 0.75 0;
+  //margin-bottom: $wbu-margin;
   .order-total-line.mb-5 {
     margin-bottom: 0 !important;
   }
 }
 .order-total-line {
+  padding: 0;
   text-align: left;
   .order-total-line-label {
-    padding-right: $wbu-margin * 0.5;
+    padding: 0;
   }
   .order-total-line-value {
     width: auto;

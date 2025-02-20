@@ -1,6 +1,7 @@
 @use "../../../../../wbu-ressources-clean.scss" as *;
 
 .hbk-mega-menu.style-merseille {
+  $contaiver_width: 600px;
   display: flex;
   justify-content: space-between;
   // padding: 0 $wbu-margin * 0.75;
@@ -40,12 +41,14 @@
     }
     .block-form-search {
       position: fixed;
-      top: 40%;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 13%;
+      left: auto;
+      right: 0;
+      //  transform: translateX(-50%);
       z-index: 1001;
-      width: 100%;
-      max-width: 600px;
+      //width: calc(#{$contaiver_width} - 30px);
+      width: $contaiver_width;
+      max-width: 100%;
       padding: $wbu-margin;
       opacity: 0;
       @include WBUtransition($temps: 0.6s);
@@ -102,9 +105,11 @@
         > .svg-arrow {
           position: relative;
           margin: 0;
+          margin-left: -0.75rem;
+          margin-right: $wbu-margin * 0.5;
           margin-bottom: $wbu-margin;
         }
-        &::before {
+        > a::before {
           position: absolute;
           height: 4px;
           top: auto;
@@ -120,7 +125,7 @@
         &.is-active,
         &.open,
         &:hover {
-          &::before {
+          > a::before {
             width: 100%;
           }
           > .item-link {
@@ -128,6 +133,32 @@
           }
           > .svg-arrow {
             fill: $wbu-color-primary;
+          }
+        }
+        &.sub-alt {
+          .hbk-mega-menu--items__sub {
+            &::before {
+              position: absolute;
+              height: 4px;
+              top: -4px;
+              bottom: auto;
+              left: 0;
+              right: auto;
+              background-color: $wbu-color-primary;
+              width: 0;
+              @include WBUtransition($temps: 0.3s);
+              content: "";
+            }
+          }
+        }
+        &.sub-alt:hover {
+          .hbk-mega-menu--items__sub {
+            &::before {
+              width: 100%;
+            }
+          }
+          > a::before {
+            display: none;
           }
         }
       }
@@ -140,9 +171,6 @@
         }
       }
     }
-    &__sub {
-      //box-shadow: none;
-    }
   }
   .overlay-search {
     z-index: 1000;
@@ -152,20 +180,25 @@
     display: block;
     margin: 0;
     transition-duration: 0.4s;
-    height: 0;
+    height: 100vh;
+    width: $contaiver_width;
+    max-width: 100%;
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
     .svg-close {
       width: $wbu-margin * 1.5;
       height: $wbu-margin * 1.5;
       position: absolute;
-      top: $wbu-margin * 2;
-      right: $wbu-margin * 1.5;
+      top: $wbu-margin * 4;
+      right: $wbu-margin;
       visibility: hidden;
       opacity: 0;
       @include WBUtransition($temps: 0.15s);
-      @include media-min(DD) {
-        top: $wbu-margin * 5;
-        right: $wbu-margin * 4;
-      }
+      // @include media-min(DD) {
+      //   top: $wbu-margin * 5;
+      //   right: $wbu-margin * 4;
+      // }
       left: auto;
       cursor: pointer;
       path {
@@ -180,7 +213,7 @@
       display: block;
       background: $wbu-background;
       opacity: 1;
-      height: 100vh;
+      transform: translateX(0);
       .svg-close {
         visibility: visible;
         opacity: 1;

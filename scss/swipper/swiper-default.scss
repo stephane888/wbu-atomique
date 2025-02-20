@@ -9,10 +9,12 @@
     align-items: center;
     > * {
       flex-grow: 1;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
   /**
-     * Pagination bug d'affichage
-     * Lorsque l'on bascule de l'affichage vertical à horizontal on a la pagination qui reste en place.
-     */
+   * Pagination bug d'affichage
+   * Lorsque l'on bascule de l'affichage vertical à horizontal on a la pagination qui reste en place.
+   */
 }

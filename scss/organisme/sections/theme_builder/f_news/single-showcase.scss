@@ -4,17 +4,9 @@
 @use "./atome/blog-btn.scss";
 @use "./variables.scss" as *;
 .single-showcase_fnews {
-  font-size: $wbu-h5-font-size;
   h3,
   h2 {
     font-weight: 400;
-  }
-  img {
-    //width: auto;
-    object-fit: contain;
-    height: auto;
-    max-width: 100%;
-    margin: 0 auto;
   }
   a {
     color: $wbu-color-secondary;
@@ -115,18 +107,18 @@
       }
     }
   }
-  .ssf-paragraph,
-  p {
-    //font-size: $wbu-default-font-size;
-    padding: $wbu-margin 0;
-    margin: 0;
-    //span {
-    //font-size: $wbu-default-font-size;
-    //}
-    // @include media-max(XX) {
-    //   font-size: $wbu-h6-font-size;
-    // }
-  }
+  // .ssf-paragraph,
+  // p {
+  //   //font-size: $wbu-default-font-size;
+  //   padding: $wbu-margin 0;
+  //   margin: 0;
+  //   //span {
+  //   //font-size: $wbu-default-font-size;
+  //   //}
+  //   // @include media-max(XX) {
+  //   //   font-size: $wbu-h6-font-size;
+  //   // }
+  // }
 
   .ssf-bq {
     margin: $wbu-margin 0;

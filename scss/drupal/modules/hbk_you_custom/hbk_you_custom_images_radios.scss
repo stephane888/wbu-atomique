@@ -1,0 +1,391 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../variables" as *;
+/**
+ * Le style pour la vue
+ */
+// main container
+.kitchen-list {
+  & > header {
+    background-color: white;
+  }
+  @include media-min(SM) {
+    background-color: white;
+    margin-top: -7.5rem;
+  }
+  .breadcrumb {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    a {
+      color: var(--color-body);
+    }
+  }
+  .view--empty {
+    .titre {
+      line-height: 1.4;
+      color: var(--main-color-blue);
+      margin-top: 0;
+      margin-bottom: 10px !important;
+      font-size: 26px !important;
+    }
+    .descr {
+      font-size: 18px;
+      line-height: 1.2;
+      color: #ad1010;
+    }
+    .btn {
+      background-color: #fff;
+      padding: 3px 15px 3px 5px;
+      margin: 5px auto 15px;
+      color: #8f8f8d;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .icon-ping {
+      display: inline-block;
+      &::before {
+        font-size: 44px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+// form exposed filter
+form.views_exposed__nos_cuisines {
+  border: solid 4px var(--bg-body);
+  font-size: 15px;
+  position: relative;
+  z-index: 3;
+  padding-block: 5.2rem 0 !important;
+  padding-bottom: 0rem;
+  height: 0;
+  overflow: hidden;
+  &.active {
+    height: auto;
+    padding-block: 7.2rem 2rem !important;
+    overflow: visible;
+    #kitchen-collapse-button {
+      background-color: var(--color-deep-red);
+      color: white;
+      &::before,
+      &::after {
+        background: var(--sprite-bg-image) no-repeat -50px -218px transparent;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(5.2rem - 1px);
+    left: 50%;
+    width: 2.6rem;
+    height: 1.1rem;
+    transform: translateX(-50%);
+    background: var(--sprite-bg-image) no-repeat -104px -225px transparent;
+  }
+  @include media-min(SM) {
+    padding-block: 3rem !important;
+    height: auto;
+    overflow: visible;
+    &::before {
+      content: none;
+    }
+  }
+  #kitchen-collapse-button {
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    height: 52px;
+    line-height: 52px;
+    font-size: 15px;
+    background: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    &::before,
+    &::after {
+      position: absolute;
+      width: 18px;
+      top: 13px;
+      height: 20px;
+      background: var(--sprite-bg-image) no-repeat -80px -218px transparent;
+      content: "";
+    }
+    &::before {
+      left: 2rem;
+    }
+    &::after {
+      right: 2rem;
+    }
+    @include media-min(SM) {
+      display: none;
+    }
+  }
+  label,
+  legend {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 800;
+    @include media-min(SM) {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+  }
+  .custom-form-select {
+    width: 100%;
+    @include media-min(SM) {
+      width: 300px;
+      margin: 0;
+      margin-right: 2rem;
+    }
+    &::last-child {
+      margin-right: 0;
+    }
+    .trigger {
+      border: 1px solid #1d1d1d;
+      &::after {
+        bottom: 0;
+        height: auto;
+        border-left: 1px solid #1d1d1d;
+      }
+    }
+    .options {
+      @include WBUtransition($temps: 0.5s);
+      &.open {
+        margin-top: 2.5rem;
+        @include media-min(SM) {
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
+  .form-actions {
+    display: none;
+  }
+  .form-composite.term-node-tid-depth {
+    width: 100%;
+    margin: 0;
+    @include media-min(SM) {
+      width: 242px;
+      margin-right: 3rem;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin: 0 0.3rem 0.2rem 0;
+        padding: 0;
+        position: relative;
+        &:first-child {
+          display: none;
+          margin: 0;
+          padding: 0;
+        }
+        label {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .block-color {
+      width: 46px;
+      height: 46px;
+      position: relative;
+      z-index: 9;
+      border: 1px solid var(--color-body);
+      display: flex;
+      cursor: pointer;
+    }
+    input {
+      position: absolute;
+      float: none;
+      margin: 0;
+      z-index: 1;
+      top: 5px;
+      left: 5px;
+      visibility: hidden;
+    }
+    .form-check {
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    .description {
+      font-size: 12px;
+      line-height: 22px;
+      margin-bottom: 1.44rem;
+    }
+  }
+}
+//
+.ajax-progress-fullscreen {
+  &::before {
+    content: " ";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+  }
+}
+//
+
+.pager__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+.custom-kitchen-list-pager {
+  .pager__items {
+    .pager__item {
+      .page-link {
+        font-size: 20px;
+        border: 1px solid var(--color-body);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        margin: 0 0.2rem;
+        color: var(--color-body);
+        background-color: transparent;
+        &:hover {
+          background: $wbu-color-primary;
+          color: #fff;
+        }
+      }
+      &.active .page-link {
+        background: $wbu-color-primary;
+        color: #fff;
+        border-color: $wbu-color-primary;
+      }
+      &--ellipsis {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0.2rem;
+        border: 1px solid var(--color-body);
+      }
+      &--next,
+      &--previous {
+        .page-link {
+          position: relative;
+          &:hover {
+            background: transparent;
+          }
+          &::before {
+            background-image: var(--sprite-arrow-down);
+            background-size: 100%;
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        span {
+          display: none;
+        }
+      }
+      &--next {
+        .page-link::before {
+          transform: rotate(-90deg);
+        }
+      }
+      &--previous {
+        .page-link::before {
+          transform: rotate(90deg);
+        }
+      }
+      &--first {
+        display: none;
+      }
+      &--last {
+        display: none;
+      }
+    }
+  }
+}
+/**
+ *  Page de login et utilisateur.
+ */
+.page-user {
+  .breadcrumb-item {
+    a {
+      color: var(--color-body);
+    }
+  }
+  .region-content {
+    background-color: #fff;
+    margin-top: -5rem;
+    border: solid 4px var(--bg-body);
+    border-bottom: 0;
+    .breadcrumb {
+      padding: 0 1.5rem;
+      margin-top: -3rem;
+    }
+  }
+  form.custom-form-you {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 5rem 0;
+    .form-item-name,
+    .form-item-pass {
+      position: relative;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    input {
+      border: solid 2px #afb0b2;
+      text-align: left;
+      color: #000;
+      text-transform: none;
+      border-radius: 5px;
+      font-size: 11px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    label {
+      position: absolute;
+      left: 1.5rem;
+      top: 7px;
+    }
+    .form-actions {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        background: var(--sprite-bg-image) no-repeat scroll 0px -272px rgba(0, 0, 0, 0);
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: -10px;
+        top: 28px;
+      }
+    }
+    .form-submit {
+      border: solid 2px var(--color-deep-red) !important;
+      background-color: var(--color-deep-red) !important;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      min-height: 51px;
+      margin-top: 2.5rem;
+      position: relative;
+      &:hover {
+        background-color: transparent !important;
+        color: var(--color-deep-red);
+      }
+    }
+  }
+}

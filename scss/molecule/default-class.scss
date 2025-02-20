@@ -21,10 +21,13 @@
 @use "./Default/text-titre.scss";
 //
 @use "./Default/details.scss";
+@use "./Default/AjaxLoader.scss";
 @use "./Default/vertical-tabs.scss";
 
-//
-
+/**
+ * --
+ */
+@include requiredFieldForm($wbu-color-primary);
 /**
  * Espacement/marge entre blog
  */
@@ -522,4 +525,21 @@ form {
 }
 .line-height-1 {
   line-height: 1;
+}
+/**
+ * Style pour les liens.
+ */
+a:visited {
+  color: $wbu-link-color-visited;
+}
+a.btn {
+  &:visited {
+    color: var(--bs-btn-color);
+  }
+  &:visited:hover {
+    color: var(--bs-btn-hover-color);
+  }
+}
+a.nav-link:visited {
+  color: var(--bs-nav-link-color);
 }

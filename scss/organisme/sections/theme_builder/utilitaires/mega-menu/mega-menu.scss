@@ -107,8 +107,8 @@
         min-width: 0;
       }
       .svg-arrow {
-        min-width: $wbu-margin * 2;
-        width: $wbu-margin * 2;
+        min-width: $wbu-margin;
+        width: $wbu-margin;
         height: $wbu-margin * 2;
         align-self: center;
         margin-left: $wbu-margin * 0.5;
@@ -117,7 +117,7 @@
         position: absolute;
         right: 0;
         top: $wbu-margin * 0.5;
-        padding: $wbu-margin * 0.5;
+        padding: $wbu-margin * 0.5 0;
         cursor: pointer;
         @include WBUtransition();
       }
@@ -141,11 +141,12 @@
       text-decoration: none;
       flex-grow: 2;
       color: inherit;
-      position: relative;
+      // position: relative;
       text-decoration: none;
       color: inherit;
-      @include WBUtransition();
       width: 100%;
+      white-space: nowrap;
+      @include WBUtransition();
       @include media-min("DD") {
         width: auto;
       }
@@ -218,7 +219,8 @@
     left: 0;
     top: 100%;
     background-color: #fff;
-    width: 100%;
+    // width: 100%;
+    min-width: 100%;
     padding-left: $wbu-margin;
     max-height: 0;
     overflow: hidden;
