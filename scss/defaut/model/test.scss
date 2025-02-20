@@ -1,0 +1,284 @@
+.tb-megamenu {
+    position: unset !important;
+    background-color: transparent !important;
+    .custom-li {
+      > a {
+        position: relative;
+        font-size: 16px;
+        &:focus{
+          color: black;
+           background-color: transparent !important;
+         }
+        &::after {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #e2001a;
+          position: absolute;
+          margin-left: -7.5px;
+          left: 50%;
+          top: 55px;
+          content: "";
+          opacity: 1;
+  
+          display: none;
+        }
+        list-style: none !important;
+        padding: 3rem 1rem;
+        border: none !important;
+        color: black;
+        font-weight: normal !important;
+        &:hover {
+          background-color: transparent;
+          color: black;
+        }
+  @include media-min(MS){
+    padding: 3rem 1.7rem;
+  }
+      }
+      &:hover {
+        a {
+          &::after {
+            display: block;
+          }
+        }
+      }
+  
+      custom-li {
+        a {
+          &:hover {
+            &::after {
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: var(--main-color-red);
+              position: absolute;
+              margin-left: -7.5px;
+              left: 50%;
+              top: 55px;
+              content: "";
+            }
+          }
+          position: relative;
+        }
+      }
+  
+        flex-wrap: nowrap !important;
+        display: flex;
+      }
+      .tb-megamenu-button {
+        right: 0 !important;
+        position: absolute;
+      }
+  
+      .tb-megamenu-nav {
+        > li{
+    margin-bottom: 0px !important;
+  }
+    }
+   
+    position: fixed;
+    width: 100%;
+    background-color: #f1eeec;
+    z-index: 1000;
+  
+    .you-revendeurItem {
+      a {
+        padding: 0 10px !important;
+        border: none !important;
+        color: #0b0b0b !important;
+        max-width: 75px;
+        &:hover {
+          color: #0b0b0b;
+        }
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #fff;
+      font-size: 9px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .you-devisItem {
+      max-width: 67px;
+      a {
+        padding: 0 10px !important;
+        border: none !important;
+        color: #fff;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #e2001a;
+      font-size: 9px;
+      text-align: center;
+      font-weight: bold;
+      &:hover {
+        background-color: #fff;
+  
+        a {
+          color: #e2001a !important;
+        }
+      }
+    }
+    .you-geolocItem {
+      max-width: 77px;
+      a {
+        padding: 0 10px !important;
+        border: none !important;
+        color: #fff;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #004790;
+      font-size: 9px;
+      text-align: center;
+      font-weight: bold;
+      &:hover {
+        background-color: #fff;
+        a {
+          color: #004790 !important;
+        }
+      }
+    }
+    .you-catalogItem {
+      max-width: 75px;
+      a {
+        padding: 0 10px !important;
+        border: none !important;
+        color: #fff;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: black;
+  
+      font-size: 9px;
+      text-align: center;
+      font-weight: bold;
+      &:hover {
+        background-color: #fff;
+        a {
+          color: black !important;
+        }
+      }
+    }
+  
+    .tb-megamenu-submenu {
+      border: none !important;
+    }
+    .you-tb-menu-container {
+      border: none !important;
+  box-shadow: none !important;
+    }
+    .mega-dropdown-inner {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      padding-left: 15rem;
+      padding-right: 15rem;
+      h3 {
+        font-size: 20px;
+    font-weight: 600;
+    line-height: 29.3833px;
+    color: black;
+    text-transform: capitalize;
+      }
+      .tb-megamenu-column {
+        text-align: center;
+        .mega-inner {
+          padding: 0px !important;
+        }
+      }
+      .views-row {
+        margin-bottom: 0.5rem;
+        a {
+          text-transform: uppercase;
+          border: 1px solid black !important;
+          text-align: center !important;
+          padding: 8px 15px !important;
+          line-height: 24px;
+          color: black !important;
+          font-size: 16px !important;
+          &:hover {
+            background-color: #e2001a;
+            color: #fff;
+            border: 1px solid #e2001a !important;
+          }
+        }
+      }
+    }
+    .tb-megamenu-item {
+        margin-bottom: 0.5rem;
+  .custom-box{
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          border: 1px solid black !important;
+          text-align: center !important;
+          padding: 8px 15px;
+          font-size: 16px;
+          text-transform: uppercase;
+          &:hover {
+            background-color: #e2001a;
+            color: #fff !important;
+            border: 1px solid #e2001a !important;
+          }
+        }
+        .mega-dropdown-inner {
+          padding-top: 6rem !important;
+          padding-bottom: 6rem !important;
+        }
+      }
+  }
+  .custom-btn {
+  a{
+    font-size: 14px !important;
+    padding-bottom: 4px !important;
+    padding-top: 4px !important;
+    line-height: 14px;
+  }
+  }
+  .dropdown-toggle::after {
+  border: none !important;
+  }
+  .tb-megamenu-nav{
+    flex-wrap: nowrap !important;
+  display: flex !important;
+  }
+  
+  }
+  .tb-megamenu .nav li.dropdown.open > .dropdown-toggle {
+    background-color: transparent !important;
+    color: black !important;
+  }
+  
+   .left {
+      img {
+        width: 100%;
+        max-width: 169px;
+        height: 110px;
+      }
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        padding: 0;
+      }
+    }
+  .tb-megamenu .mega-align-justify > .dropdown-menu{
+    top: 100%;
+  }
+  .tb-megamenu .mega-nav > li:first-child > a, .tb-megamenu .dropdown-menu .mega-nav > li:first-child > a{
+    padding-top: 8px;
+  }
+  
+  

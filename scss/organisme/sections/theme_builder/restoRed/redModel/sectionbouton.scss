@@ -1,0 +1,78 @@
+@use "../../../../../wbu-ressources-clean.scss" as *;
+@use "../restoRedTeasers/reservationTeaser.scss";
+@use "../restoRedTeasers/service.scss";
+
+.whatsapp-button {
+  display: none; /* Cacher le bouton par défaut */
+    position: fixed;
+    bottom: 20px;  /* Marge de 20px du bas */
+    right: 20px;   /* Marge de 20px à droite */
+    background-color: #25D366; /* Couleur de fond WhatsApp */
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    z-index: 1000;
+    width: 300px;
+    transition: all 0.5s ease;
+  }
+  .rond{
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    width: auto !important;
+  }
+  
+  .whatsapp-button:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+  }
+  
+  .whatsapp-button svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Bloc de chat (initialement caché) */
+  .chat-box {
+    transition: all 0.5s ease;
+    display: none; /* Cacher par défaut */
+    position: fixed;
+    bottom: 80px;  /* Placer au-dessus du bouton flottant */
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    opacity: 0;
+  }
+  
+  .chat-box.active {
+    transition: all 0.5s ease;
+    opacity: 1;
+    display: block; /* Afficher lorsqu'il est activé */
+  }
+  
+  button {
+    background-color: #25D366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #128C7E;
+  }
+  
+  .butonclose{
+    button{
+      width: 20px;
+  height: 20px;
+  padding: 5px;
+    }
+  }
