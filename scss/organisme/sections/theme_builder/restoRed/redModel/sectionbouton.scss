@@ -76,3 +76,57 @@
   padding: 5px;
     }
   }
+
+  /* Style du bouton WhatsApp flottant */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  cursor: pointer;
+}
+
+.whatsapp-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Style du chat (textarea) */
+.whatsapp-chat {
+  display: none; /* Masquer initialement */
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  z-index: 999;
+}
+
+.whatsapp-chat textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.whatsapp-chat button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.whatsapp-chat.active {
+  transition: all 0.5s ease;
+  opacity: 1;
+  display: block; /* Afficher lorsqu'il est activé */
+}
