@@ -22,7 +22,7 @@ class whatsappMessage {
     whatsappElement.querySelector(".whatsapp-message-btn").addEventListener("click", function (event) {
       event.preventDefault();
       var message = whatsappElement.querySelector(".whatsapp-message").value;
-      var numero = "+237658647156"; // Remplace par ton numéro WhatsApp
+      var numero = "+237678857178"; // Remplace par ton numéro WhatsApp
       var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(message);
       window.open(url, "_blank"); // Ouvre WhatsApp avec le message
     });
@@ -32,6 +32,7 @@ class whatsappMessage {
     whatsappElement.querySelector(".icone-close").addEventListener("click", function () {
       whatsappElement.querySelector(".whatsapp-chat").style.display = "none"; // Cache la zone de message
       whatsappElement.querySelector(".icone-close").style.display = "block"; // Réaffiche le bouton WhatsApp
+      whatsappElement.querySelector(".whatsapp-btn").style.display = "block"; // affiche le bouton WhatsApp
     });
   }
 }
