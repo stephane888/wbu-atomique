@@ -1,0 +1,34 @@
+@use "../wbu-ressources-clean.scss" as *;
+@use "../variables";
+
+.webform_id {
+  background-color: rgba($wbu-color-primary, 5%) !important;
+}
+.user-webform,
+.container.user-webform {
+  max-width: 1000px;
+}
+.user-webform {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  @include media-min(DD) {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 20px;
+  .title {
+    margin-bottom: 5rem;
+  }
+  .description {
+    margin-top: -2rem;
+    margin-bottom: 5rem;
+    p {
+      margin: 0;
+      & + p {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

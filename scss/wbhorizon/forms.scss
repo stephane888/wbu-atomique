@@ -1,0 +1,24 @@
+@use "../wbu-ressources-clean.scss" as *;
+@use "../variables";
+//
+form {
+  label {
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+  }
+  .form-item + .form-item,
+  .form-actions {
+    margin-top: 3rem;
+  }
+  textarea::placeholder,
+  input::placeholder {
+    //color: $wbu-color-grey;
+    color: var(--bs-gray-600) !important;
+    font-style: normal !important;
+    opacity: 0.7;
+  }
+  .form-control {
+    border-radius: 10px;
+  }
+}
