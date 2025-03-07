@@ -1,0 +1,69 @@
+produits:
+  "#type": custom_composite
+  "#title": Produit
+  "#required": true
+  "#multiple__header": false
+  "#element":
+    container_text:
+      "#type": container
+      "#attributes":
+        class:
+          - webform-container
+      titre:
+        "#type": textfield
+        "#required": true
+        "#title": titre
+      description:
+        "#type": textarea
+        "#required": true
+        "#title": Description
+    container_images:
+      "#type": container
+      "#attributes":
+        class:
+          - webform-container
+      image:
+        "#type": webform_image_file
+        "#title": image
+        "#multiple": 10
+    container_files:
+      "#type": container
+      "#attributes":
+        class:
+          - webform-container
+      fichiers:
+        "#type": webform_document_file
+        "#title": fichiers
+        "#description": "Si vous avez plusieurs images, faites un zip"
+        "#multiple": 2
+    container_videos:
+      "#type": container
+      "#attributes":
+        class:
+          - webform-container
+      video:
+        "#type": webform_video_file
+        "#title": video
+        "#multiple": 3
+images:
+  "#type": image_file
+  "#title": Images
+  "#multiple": 10
+  "#max_filesize": "3"
+  "#sanitize": true
+  "#min_resolution": 400x400
+  "#attachment_image_style": thumbnail
+container:
+  "#type": container
+ma_section:
+  "#type": section
+  "#title": "Ma section"
+  "#attributes":
+    class:
+      - d-none0
+  test:
+    "#type": textfield
+    "#title": test
+croup_de_champs:
+  "#type": fieldset
+  "#title": "Croup de champs"

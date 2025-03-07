@@ -6,7 +6,7 @@
 }
 .user-webform,
 .container.user-webform {
-  max-width: 1000px;
+  max-width: 1100px;
 }
 .user-webform {
   margin-top: 5rem;
@@ -15,19 +15,108 @@
     margin-top: 10rem;
     margin-bottom: 10rem;
   }
-  background-color: #fff;
+  //background-color: #fff;
   padding: 4rem;
   border-radius: 20px;
+  .webform-container {
+    background-color: #fff;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+  }
   .title {
     margin-bottom: 5rem;
   }
-  .description {
+  .description-form {
     margin-top: -2rem;
     margin-bottom: 5rem;
     p {
       margin: 0;
       & + p {
         margin-top: 1rem;
+      }
+    }
+  }
+
+  .webform-containers {
+    // display: grid;
+    // grid-template-columns: 2fr 2fr;
+    // grid-gap: 2rem;
+    // grid-template-areas: "left right";
+    display: grid;
+    /* Auto-fit as many items on a row as possible without going under 180px */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* A little spacing between articles */
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+    grid-auto-rows: max-content;
+  }
+  //
+  .sousmissions {
+    margin-bottom: 3rem;
+    .sousmission {
+      margin-bottom: 1.5rem;
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      .titre {
+        width: calc(100% - 80px);
+      }
+      a {
+        color: #000;
+        font-weight: 600;
+      }
+      .svg-1 {
+        padding: 0.5rem;
+        border: 1px solid $wbu-color-primary;
+        border-radius: 10px;
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1rem;
+        background-color: rgba($wbu-color-primary, 10%);
+        path {
+          stroke: $wbu-color-primary;
+        }
+      }
+    }
+  }
+  .add_submision {
+    .svg-icon-plus {
+      background: $wbu-color-primary;
+      border-radius: 50%;
+      padding: 0.5rem;
+      margin-left: 0.5rem;
+      path {
+        stroke: #fff;
+        fill: #fff;
+      }
+    }
+  }
+
+  .webform-submission-navigation,
+  .webform-submission-information {
+    display: none;
+  }
+}
+.user-list-webform {
+  .items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .item {
+      width: 300px;
+      text-align: center;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      box-shadow: 1px 1px 13px 0px #aba8a8;
+      border-radius: 10px;
+      .item--title {
+        padding: 2rem;
+        background-color: $wbu-color-primary;
+        color: #fff;
+        border-radius: 10px 10px 0 0;
       }
     }
   }

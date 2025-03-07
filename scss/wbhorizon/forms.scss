@@ -8,12 +8,13 @@ form {
     line-height: 1.2;
   }
   .form-item + .form-item,
+  .webform-multiple-table .form-item + .form-item,
   .form-actions {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   textarea::placeholder,
   input::placeholder {
-    //color: $wbu-color-grey;
+    // color: $wbu-color-grey;
     color: var(--bs-gray-600) !important;
     font-style: normal !important;
     opacity: 0.7;
