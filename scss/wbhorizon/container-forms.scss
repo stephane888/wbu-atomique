@@ -112,11 +112,35 @@
       margin-right: 3rem;
       box-shadow: 1px 1px 13px 0px #aba8a8;
       border-radius: 10px;
+      min-height: 250px;
+      position: relative;
+      margin-bottom: 5rem;
       .item--title {
         padding: 2rem;
-        background-color: $wbu-color-primary;
-        color: #fff;
+        background-color: $wbu-background;
+        color: color-yiq($wbu-background);
         border-radius: 10px 10px 0 0;
+        position: relative;
+        overflow: visible;
+        padding-bottom: 5.5rem;
+      }
+      .number {
+        color: $wbu-background;
+        background-color: #fff;
+        position: absolute;
+        font-weight: 700;
+        left: 50%;
+        right: auto;
+        top: calc(100% - 33px);
+        bottom: auto;
+        height: 64px;
+        width: 64px;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow: 1px 1px 11px #ccc inset;
       }
     }
   }
