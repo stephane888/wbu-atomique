@@ -3,6 +3,24 @@
 
 .webform_id {
   background-color: rgb(126 131 141) !important;
+  background: url("/modules/contrib/drag_and_drop_files/images/bg1.webp");
+  background-size: 100% auto;
+  background-position: bottom;
+  background-attachment: fixed;
+  .dialog-off-canvas-main-canvas {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgb(47 62 99);
+      opacity: 0.8;
+      content: "";
+      z-index: -2;
+    }
+  }
 }
 .user-webform,
 .container.user-webform {
@@ -18,6 +36,12 @@
   //background-color: #fff;
   padding: 4rem;
   border-radius: 20px;
+  .breadcrumb {
+    color: #f0f8ff;
+    a {
+      color: #f0f8ff;
+    }
+  }
   .webform-container {
     background-color: #fff;
     width: 100%;
@@ -26,6 +50,7 @@
   }
   .title {
     margin-bottom: 5rem;
+    color: #fff;
   }
   .description-form {
     margin-top: -2rem;
@@ -36,6 +61,9 @@
         margin-top: 1rem;
       }
     }
+  }
+  .add-submision {
+    color: #f0f8ff;
   }
 
   .webform-containers {
@@ -56,7 +84,7 @@
     margin-bottom: 3rem;
     .sousmission {
       margin-bottom: 1.5rem;
-      background-color: #fff;
+      background-color: #f0f8ff;
       padding: 1.5rem;
       border-radius: 15px;
       display: flex;
