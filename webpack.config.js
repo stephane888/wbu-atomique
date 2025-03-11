@@ -31,34 +31,45 @@ module.exports = {
     filename: "js/[name].js",
   },
   devtool: devMode ? "inline-source-map" : false,
-  module: {
+  cache: {
+    type: "filesystem", // Active le cache
+  },
+    module: {
     rules: [
-      // règles de compilations pour les fichiers .js
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["babel-preset-env"],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env"],
+            },
           },
-        },
+          {
+            loader: "eslint-loader",
+            options: {
+              fix: true,
+            },
+          },
+        ],
       },
-      // règles de compilations pour les fichiers .css
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: "../",
-            },
-          },
-
+          devMode
+            ? "style-loader"
+            : {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  publicPath: "../",
+                },
+              },
           {
             loader: "css-loader",
             options: {
               importLoaders: 1,
+              url: false, // Désactive le traitement des URLs
             },
           },
           {
@@ -66,92 +77,53 @@ module.exports = {
             options: {
               sourceMap: true,
               postcssOptions: {
-                // postcss plugins, can be exported to postcss.config.js
-                plugins: function () {
-                  return [require("autoprefixer")];
-                },
+                plugins: [require("autoprefixer")],
               },
-            },
-          },
-          {
-            test: /\.css$/,
-            use: ["style-loader", "css-loader"],
-          },
-          {
-            loader: "resolve-url-loader", // améliore la résolution des chemins relatifs
-            // (utile par exemple quand une librairie tierce fait référence à des images ou des fonts situés dans son propre dossier)
-            options: {
-              publicPath: "../images",
             },
           },
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true, // il est indispensable d'activer les sourcemaps pour que postcss fonctionne correctement
+              sourceMap: true,
               implementation: require("sass"),
             },
           },
         ],
       },
-      //règles de compilations pour les fonts
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        loader: "file-loader",
-        options: {
-          name: "fonts/[name].[hash].[ext]",
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[name][ext]",
         },
-      },
-      //règles de compilations pour les images
-      {
-        test: /\.(gif|png|jpe?g)$/i,
-        use: [
-          {
-            // Using file-loader for these files
-            loader: "file-loader?name=[name].[ext]&outputPath=./images/",
-
-            // In options we can set different things like format
-            // and directory to save
-            // options: {
-            //     outputPath: (__dirname, '../images')
-            // }
-          },
-          { loader: "image-webpack-loader" },
-        ],
       },
       {
         test: /\.svg$/i,
-        use: [
-          {
-            // Using file-loader for these files
-            loader: "file-loader?name=[name].[ext]&outputPath=./icons/",
-            // In options we can set different things like format
-            // and directory to save
-            // options: {
-            //     outputPath: (__dirname, '../images')
-            // }
-          },
-          { loader: "image-webpack-loader" },
-        ],
+        type: "asset/resource",
+        generator: {
+          filename: "icons/[name][ext]",
+        },
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[name][ext]",
+        },
       },
     ],
   },
   devServer: {
+    contentBase: path.resolve(__dirname, "./public"),
     port: 3000,
+    publicPath: "/dist/",
+    watchContentBase: true,
     hot: true,
   },
   optimization: {
     minimizer: [
-      new CssMinimizerPlugin({
-        minimizerOptions: {
-          preset: [
-            "default",
-            {
-              discardComments: { removeAll: true },
-            },
-          ],
-        },
-      }),
-      // new TerserPlugin(),
+      new CssMinimizerPlugin(),
+      new TerserPlugin(),
     ],
   },
 };
