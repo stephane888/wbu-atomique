@@ -15,7 +15,7 @@
       right: 0;
       bottom: 0;
       background: rgb(47 62 99);
-      opacity: 0.8;
+      opacity: 0.75;
       content: "";
       z-index: -2;
     }
@@ -137,11 +137,12 @@
       text-align: center;
       margin-left: 3rem;
       margin-right: 3rem;
-      box-shadow: 1px 1px 13px 0px #aba8a8;
+      box-shadow: 11px 11px 13px -6px #00000061;
       border-radius: 10px;
       min-height: 250px;
       position: relative;
       margin-bottom: 5rem;
+      background-color: #fff;
       .item--title {
         padding: 2rem;
         background-color: $wbu-background;
