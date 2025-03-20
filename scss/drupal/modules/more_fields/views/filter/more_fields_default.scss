@@ -4,16 +4,34 @@
  * On doit mettre cette partie dans un autre fichier, celui du block.
  */
 .view_filter_display_exposed_fields_filter {
-  label {
+  label,
+  .form-item legend {
     font-weight: 600;
     @include bp_h5();
     margin-bottom: $wbu-margin * 0.5;
   }
-  form {
-    .js-form-item {
-      width: 100%;
+
+  .js-form-item {
+    width: 100%;
+  }
+  .form-item {
+    .bef-link-active {
+      box-shadow: inset 0px 0px 3px $wbu-color-primary;
+      border-color: $wbu-color-primary;
+    }
+    ::placeholder {
+      opacity: 0.5;
     }
   }
+  .op--between {
+    .fieldset-wrapper {
+      display: flex;
+      label {
+        display: none;
+      }
+    }
+  }
+
   .show_reset_link {
     text-align: right;
     width: 100%;
@@ -39,5 +57,10 @@
         transform: rotate(45deg);
       }
     }
+  }
+}
+.views-exposed-form {
+  > .form-item:last-child {
+    margin-bottom: 0 !important;
   }
 }

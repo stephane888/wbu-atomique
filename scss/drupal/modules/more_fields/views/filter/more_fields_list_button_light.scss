@@ -9,9 +9,11 @@
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
+    margin-right: -$wbu-margin * 0.4;
     li {
       margin-bottom: $wbu-margin * 0.4;
       margin-right: $wbu-margin * 0.4;
+      flex-grow: 1;
     }
     a {
       border-radius: 5px;
