@@ -60,7 +60,8 @@ import ManageLoginFacebook from "./loginFacebook.js";
           }
           if (window.FB) {
             if (sharerx.querySelector(".habeukUtilitaireRxFacebook"))
-              sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", () => {
+              sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", (event) => {
+                event.preventDefault();
                 shareFaceBook(url);
               });
           } else {
@@ -68,7 +69,8 @@ import ManageLoginFacebook from "./loginFacebook.js";
             // Cet event "hbk_fbInit" est declenché de maniere personnalisé apres le chargement du SDK.
             document.addEventListener("hbk_fbInit", () => {
               if (sharerx.querySelector(".habeukUtilitaireRxFacebook"))
-                sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", () => {
+                sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", (event) => {
+                  event.preventDefault();
                   shareFaceBook(url);
                 });
             });
@@ -76,7 +78,8 @@ import ManageLoginFacebook from "./loginFacebook.js";
           //
           const TwitterShare = function () {
             if (sharerx.querySelector(".habeukUtilitaireRxTwitter"))
-              sharerx.querySelector(".habeukUtilitaireRxTwitter").addEventListener("click", () => {
+              sharerx.querySelector(".habeukUtilitaireRxTwitter").addEventListener("click", (event) => {
+                event.preventDefault();
                 let shareUrl = "https://x.com//intent/tweet?text=" + encodeURIComponent(title) + "&original_referer=" + encodeURIComponent(url) + "&url=" + encodeURIComponent(url);
                 popupCenter(shareUrl, "Partager sur Twitter");
               });
@@ -89,7 +92,8 @@ import ManageLoginFacebook from "./loginFacebook.js";
           //
           const PrintButton = function () {
             if (sharerx.querySelector(".habeukUtilitaireRxPrint"))
-              sharerx.querySelector(".habeukUtilitaireRxPrint").addEventListener("click", () => {
+              sharerx.querySelector(".habeukUtilitaireRxPrint").addEventListener("click", (event) => {
+                event.preventDefault();
                 window.print();
               });
           };
