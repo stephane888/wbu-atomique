@@ -543,3 +543,9 @@ a.btn {
 a.nav-link:visited {
   color: var(--bs-nav-link-color);
 }
+/**
+ *
+ */
+::placeholder {
+  opacity: 0.5;
+}

@@ -4,35 +4,46 @@ class whatsappMessage {
     this.settings = settings;
   }
   init() {
-    console.log(this.context, "texte de debugg");
     this.context.querySelectorAll(".whatsapp-widget").forEach((whatsappElement) => {
+      const phone_number = whatsappElement.querySelector(".whatsapp-chat").getAttribute("data-phone-number");
+      if (phone_number) {
+        whatsappElement.classList.remove("d-none");
+        this.hideTextarea(whatsappElement);
+      }
       this.closebox(whatsappElement);
-      this.envoyerMessage(whatsappElement);
-      this.toggleWhatsappChat(whatsappElement);
+      this.envoyerMessage(whatsappElement, phone_number);
+      whatsappElement.querySelector(".whatsapp-btn").addEventListener("click", () => {
+        this.ShowTextarea(whatsappElement);
+      });
     });
   }
-  toggleWhatsappChat(whatsappElement) {
-    whatsappElement.querySelector(".whatsapp-btn").addEventListener("click", function () {
-      whatsappElement.querySelector(".whatsapp-chat").style.display = "block"; // Affiche la zone de message
-      whatsappElement.querySelector(".whatsapp-btn").style.display = "none"; // Cache le bouton WhatsApp
-    });
+  ShowTextarea(whatsappElement) {
+    whatsappElement.querySelector(".whatsapp-chat").classList.add("open");
+    whatsappElement.querySelector(".whatsapp-btn").classList.remove("open");
   }
-
-  envoyerMessage(whatsappElement) {
-    whatsappElement.querySelector(".whatsapp-message-btn").addEventListener("click", function (event) {
+  hideTextarea(whatsappElement) {
+    whatsappElement.querySelector(".whatsapp-chat").classList.remove("open");
+    whatsappElement.querySelector(".whatsapp-btn").classList.add("open");
+  }
+  envoyerMessage(whatsappElement, numero) {
+    whatsappElement.querySelector(".whatsapp-message-btn").addEventListener("click", (event) => {
       event.preventDefault();
       var message = whatsappElement.querySelector(".whatsapp-message").value;
-      var numero = "+237678857178"; // Remplace par ton numéro WhatsApp
-      var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(message);
-      window.open(url, "_blank"); // Ouvre WhatsApp avec le message
+      if (message) {
+        var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(message);
+        window.open(url, "_blank");
+      } else {
+        whatsappElement.querySelector(".whatsapp-message").classList.add("border-danger", "text-danger");
+        setTimeout(() => {
+          whatsappElement.querySelector(".whatsapp-message").classList.remove("border-danger", "text-danger");
+        }, 700);
+      }
     });
   }
 
   closebox(whatsappElement) {
-    whatsappElement.querySelector(".icone-close").addEventListener("click", function () {
-      whatsappElement.querySelector(".whatsapp-chat").style.display = "none"; // Cache la zone de message
-      whatsappElement.querySelector(".icone-close").style.display = "block"; // Réaffiche le bouton WhatsApp
-      whatsappElement.querySelector(".whatsapp-btn").style.display = "block"; // affiche le bouton WhatsApp
+    whatsappElement.querySelector(".icone-close").addEventListener("click", () => {
+      this.hideTextarea(whatsappElement);
     });
   }
 }

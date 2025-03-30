@@ -239,7 +239,7 @@ class SwiperManager {
             () => {
               // On utilise le paramettre "video" afin d'empecher d'autres elements de pouvoir controller le slider.
               pauseSliders({ parent: swiperParent, children: swiperChildren }, params.config.custom_config, "video");
-              console.log("Video demarrer");
+              // console.log("Video demarrer");
             },
             false
           );
@@ -248,7 +248,7 @@ class SwiperManager {
             () => {
               // La video mis en pause, on ne demarre par le slide.
               // L'utilisateur choisira une action.
-              console.log("Video mise en pause");
+              //console.log("Video mise en pause");
             },
             false
           );
@@ -259,7 +259,7 @@ class SwiperManager {
               params.config.custom_config.swiper_status = "auto";
               params.config.custom_config.manager = "auto";
               playSliders({ parent: swiperParent, children: swiperChildren }, params.config.custom_config);
-              console.log("Video terminé, slider run");
+              // console.log("Video terminé, slider run");
             },
             false
           );
@@ -282,7 +282,7 @@ class SwiperManager {
         });
       }
     };
-    console.log("SwipersInstancesConfig : ", this.SwipersInstancesConfig);
+    // console.log("SwipersInstancesConfig : ", this.SwipersInstancesConfig);
     this.SwipersInstancesConfig.forEach((params) => {
       if (params.unique && !sliderKeys.includes(params.unique)) {
         sliderKeys.push(params.unique);

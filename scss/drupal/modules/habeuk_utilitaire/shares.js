@@ -2,7 +2,7 @@ import ManageLoginFacebook from "./loginFacebook.js";
 /**
  * - https://developers.facebook.com/tools/debug/
  */
-(function (Drupal) {
+(function (Drupal, once) {
   //
   /**
    * --
@@ -41,58 +41,57 @@ import ManageLoginFacebook from "./loginFacebook.js";
         };
         //
         if (config) {
-          console.log(" enter config ");
           // facebook.
           function shareFaceBook(url) {
-            console.log(" ShareFaceBook url : ", url);
-            FB.ui(
+            window.FB.ui(
               {
                 method: "share",
                 href: url,
-              },
-              function (response) {
-                if (response && !response.error_message) {
-                  //console.log('Posting completed.');
-                } else {
-                  console.log("Error while posting.");
-                  console.log(response);
-                }
               }
+              // function (response) {
+              //   if (response && !response.error_message) {
+              //     //console.log('Posting completed.');
+              //   } else {
+              //     // console.log("Error while posting.");
+              //     // console.log(response);
+              //   }
+              // }
             );
           }
           if (window.FB) {
-            console.log("run : window.FB ", window.FB);
-            sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", () => {
-              shareFaceBook(url);
-              // const MgLogin = new ManageLoginFacebook(window.FB);
-              // MgLogin.CheckStatusLogin();
-            });
-          } else {
-            console.log(" Wait event : window.FB ", window.FB);
-            // Cet event "hbk_fbInit" est declenché de maniere personnalisé apres le chargement du SDK.
-            document.addEventListener("hbk_fbInit", () => {
+            if (sharerx.querySelector(".habeukUtilitaireRxFacebook"))
               sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", () => {
                 shareFaceBook(url);
               });
+          } else {
+            // console.log(" Wait event : window.FB ", window.FB);
+            // Cet event "hbk_fbInit" est declenché de maniere personnalisé apres le chargement du SDK.
+            document.addEventListener("hbk_fbInit", () => {
+              if (sharerx.querySelector(".habeukUtilitaireRxFacebook"))
+                sharerx.querySelector(".habeukUtilitaireRxFacebook").addEventListener("click", () => {
+                  shareFaceBook(url);
+                });
             });
           }
           //
           const TwitterShare = function () {
-            sharerx.querySelector(".habeukUtilitaireRxTwitter").addEventListener("click", () => {
-              let shareUrl = "https://x.com//intent/tweet?text=" + encodeURIComponent(title) + "&original_referer=" + encodeURIComponent(url) + "&url=" + encodeURIComponent(url);
-              popupCenter(shareUrl, "Partager sur Twitter");
-            });
+            if (sharerx.querySelector(".habeukUtilitaireRxTwitter"))
+              sharerx.querySelector(".habeukUtilitaireRxTwitter").addEventListener("click", () => {
+                let shareUrl = "https://x.com//intent/tweet?text=" + encodeURIComponent(title) + "&original_referer=" + encodeURIComponent(url) + "&url=" + encodeURIComponent(url);
+                popupCenter(shareUrl, "Partager sur Twitter");
+              });
           };
           //
           const EmailShare = function () {
             let shareUrl = "mailto:?body=" + encodeURIComponent(url);
-            sharerx.querySelector(".habeukUtilitaireRxEmail").setAttribute("href", shareUrl);
+            if (sharerx.querySelector(".habeukUtilitaireRxEmail")) sharerx.querySelector(".habeukUtilitaireRxEmail").setAttribute("href", shareUrl);
           };
           //
           const PrintButton = function () {
-            sharerx.querySelector(".habeukUtilitaireRxPrint").addEventListener("click", () => {
-              window.print();
-            });
+            if (sharerx.querySelector(".habeukUtilitaireRxPrint"))
+              sharerx.querySelector(".habeukUtilitaireRxPrint").addEventListener("click", () => {
+                window.print();
+              });
           };
           // RUN
           TwitterShare();
@@ -102,4 +101,4 @@ import ManageLoginFacebook from "./loginFacebook.js";
       });
     },
   };
-})(Drupal);
+})(window.Drupal, window.once);

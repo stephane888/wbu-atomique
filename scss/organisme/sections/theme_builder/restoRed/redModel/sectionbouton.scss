@@ -4,7 +4,7 @@
 
 .whatsapp-widget {
   .butonclose {
-    button {
+    .button {
       width: 20px;
       height: 20px;
       padding: 5px;
@@ -14,33 +14,60 @@
   /* Style du bouton WhatsApp flottant */
   .whatsapp-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 0.5rem;
+    right: 0.5rem;
     background-color: #25d366;
     border-radius: 50%;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 42px -12px #00000085;
     z-index: 999;
+    margin-bottom: -100px;
+    opacity: 0;
+    @include WBUtransition();
+    &.open {
+      margin-bottom: 0;
+      opacity: 1;
+      z-index: 99999;
+    }
     cursor: pointer;
+    @include media-min(SM) {
+      right: 2rem;
+      bottom: 2rem;
+    }
   }
-
+  //
   .whatsapp-btn img {
     width: 30px;
     height: auto;
   }
-
+  
   /* Style du chat (textarea) */
   .whatsapp-chat {
-    display: none; // Masquer initialement
     position: fixed;
-    bottom: 80px;
-    right: 20px;
+    bottom: 1rem;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: white;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: calc(100% - 1rem);
+    max-width: 400px;
     z-index: 999;
+    margin-bottom: -350px;
+    opacity: 0;
+    @include WBUtransition();
+    &.open {
+      margin-bottom: 0;
+      opacity: 1;
+    }
+    @include media-min(SM) {
+      right: 2rem;
+      bottom: 2rem;
+      left: auto;
+      transform: none;
+    }
 
     textarea {
       width: 100%;
@@ -48,9 +75,12 @@
       border: 1px solid #ddd;
       padding: 10px;
       border-radius: 5px;
+      &.text-danger::placeholder {
+        color: #f00;
+      }
     }
 
-    button {
+    .button {
       background-color: #25d366;
       color: white;
       border: none;
