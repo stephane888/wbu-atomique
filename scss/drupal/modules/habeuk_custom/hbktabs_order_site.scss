@@ -1,0 +1,102 @@
+@use "../../../wbu-ressources-clean.scss" as *;
+@use "../../../variables" as *;
+.hbktabs-order-site-modal {
+  @include media-min(DD) {
+    .modal-dialog {
+      max-width: 920px;
+      width: 100%;
+    }
+  }
+}
+.hbktabs-order-site {
+  $hbktabs-order-bg-body: rgba($wbu-background, 10%);
+  border-radius: 30px;
+  background-color: #fff;
+  margin: 4rem 0rem;
+  position: relative;
+  .btn-close {
+    position: absolute;
+    left: auto;
+    right: 11px;
+    top: 5px;
+    bottom: auto;
+  }
+  //role=tablist
+  > ul.nav {
+    border-radius: 30px 30px 0 0;
+    border: 1px solid $hbktabs-order-bg-body;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    @include media-min(DD) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .nav-item {
+      flex: 1 1 auto;
+      width: 100%;
+      max-width: 100%;
+      font-size: 80%;
+      @include media-min(DD) {
+        border-right: 1px solid $hbktabs-order-bg-body;
+        width: auto;
+        font-size: 95%;
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        padding: 0.6rem;
+        margin-right: 1rem;
+        @include media-min(DD) {
+          width: 4.2rem;
+          height: 4.2rem;
+          padding: 1.2rem;
+          margin-right: 2rem;
+        }
+        background: rgb(185 185 185 / 15%);
+
+        opacity: 0.7;
+        @include WBUtransition();
+      }
+      .nav-link {
+        color: inherit;
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+        @include media-min(DD) {
+          padding-top: 3rem;
+          padding-bottom: 2rem;
+        }
+        &:hover {
+          svg {
+            background: rgba($wbu-color-secondary, 35%);
+          }
+        }
+        &.active {
+          background: transparent;
+          svg {
+            background: $wbu-color-primary;
+            fill: #fff; //color-yiq($wbu-color-primary);
+            padding: 0.4rem;
+            opacity: 1;
+            @include media-min(DD) {
+              padding: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  > .tab-content {
+    padding: 2.5rem;
+    @include media-min(DD) {
+      padding: 4.5rem;
+    }
+    background-color: $hbktabs-order-bg-body;
+    border-radius: 0 0 30px 30px;
+  }
+}

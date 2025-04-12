@@ -1,22 +1,24 @@
 /**
  * Pour le developpment ,
- * on peut ajouter "import "@stephane888/wbu-atomique/js/test/try_code.js;"
+ * on peut ajouter  : import "@stephane888/wbu-atomique/js/test/try_code.js;"
  */
 // Code for orthers things.
-Drupal.behaviors.hbk_d45d_navigate_to_next = {
-  attach: function (context, settings) {
-    if (context.querySelectorAll && context.querySelectorAll('[data-action="navigate-next"]')) {
-      once("paragraph_navigate_to_next", '[data-action="navigate-next"]', context).forEach((scrollToTopBtn) => {
-        scrollToTopBtn.addEventListener("click", function () {
-          scrollToTopBtn.classList.add("is-active");
-          // Obtenir la position du bouton par rapport au haut de la page
-          const buttonPosition = scrollToTopBtn.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({
-            top: buttonPosition,
-            behavior: "smooth", // Pour un défilement fluide
+(function (Drupal) {
+  Drupal.behaviors.habeuk_custom_block__modal = {
+    attach: function (context) {
+      if (context && context.querySelector && context.querySelector("#ecommerce-72h-modal")) {
+        console.log("ecommerce-72h-modal ... DOMContentLoaded");
+        // ecommerce-72h
+        const modalElement = context.querySelector("#ecommerce-72h-modal");
+        if (modalElement) {
+          const modal = new window.bootstrap.Modal(modalElement);
+          once("habeuk_custom_block__modal--ecommerce-72h-modal", ".trigger--ecommerce-72h-modal", context).forEach((b1) => {
+            b1.addEventListener("click", () => {
+              modal.show();
+            });
           });
-        });
-      });
-    }
-  },
-};
+        }
+      }
+    },
+  };
+})(window.Drupal, window.once);
