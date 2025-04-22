@@ -5,14 +5,13 @@
  */
 // main container
 .kitchen-list {
-  border: solid 4px var(--bg-body);
-  border-color: rgba(53, 56, 57, 0.8);
-  border-bottom: 0;
   & > header {
     background-color: white;
   }
   @include media-min(SM) {
-    // background-color: white;
+    border: solid 4px var(--bg-body);
+    border-color: rgba(53, 56, 57, 0.8);
+    border-bottom: 0;
     margin-top: -4rem;
   }
   .breadcrumb {
@@ -70,12 +69,15 @@ form.views_exposed__nos_cuisines {
   padding-bottom: 0rem;
   height: 0;
   overflow: hidden;
+  .hbk_you_custom_bef_radios label {
+    border-radius: 50%;
+  }
   &.active {
     height: auto;
     padding-block: 7.2rem 2rem !important;
     overflow: visible;
     #kitchen-collapse-button {
-      background-color: var(--color-deep-red);
+      background-color: var(--bg-footer-end);
       color: white;
       &::before,
       &::after {
@@ -113,6 +115,7 @@ form.views_exposed__nos_cuisines {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    color: #000;
     &::before,
     &::after {
       position: absolute;
@@ -201,8 +204,8 @@ form.views_exposed__nos_cuisines {
       }
     }
     .block-color {
-      width: 46px;
-      height: 46px;
+      width: 43px;
+      height: 43px;
       position: relative;
       z-index: 9;
       border: 1px solid var(--color-body);
