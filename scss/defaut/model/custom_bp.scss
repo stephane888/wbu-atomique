@@ -62,22 +62,22 @@ $MD_debut: 769px;
 $MD_fin: 991px;
 
 $DD_debut: 992px;
-$DD_fin: 1024px;
+$DD_fin: 991px;
 
 $MS_debut: 1025px;
-$MS_fin: 1200px;
+$MS_fin: 1024px;
 
 $M_debut: 1201px;
-$M_fin: 1450px;
+$M_fin: 1200px;
 
 $LM_debut: 1451px;
-$LM_fin: 1600px;
+$LM_fin: 1450px;
 
 $L_debut: 1601px;
-$L_fin: 1920px;
+$L_fin: 1600px;
 
 $XL_debut: 1921px;
-//$XL_fin: 2500px;
+$XL_fin: 1920px;
 
 @mixin media-min($_key: false) {
   @if $_key == "XS" {
@@ -234,8 +234,7 @@ $XL_debut: 1921px;
     @media only screen and (max-width: $S_992_fin) {
       @content;
     }
-  }
- @else if $_key == "desktop" {
+  } @else if $_key == "desktop" {
     @media only screen and (max-width: $S_1366_fin) {
       @content;
     }

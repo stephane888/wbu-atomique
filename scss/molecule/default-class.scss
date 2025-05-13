@@ -206,6 +206,22 @@
   }
 }
 
+.padding-inner-bottom {
+  padding-bottom: $space_inner_top * 0.5;
+
+  @include media-min("mobile") {
+    padding-bottom: $space_inner_top;
+  }
+}
+
+.padding-inner-top {
+  padding-top: $space_inner_top * 0.5;
+
+  @include media-min("mobile") {
+    padding-top: $space_inner_top;
+  }
+}
+
 /**
  * --
  */
