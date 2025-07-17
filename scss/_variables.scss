@@ -56,19 +56,23 @@ $wbu-default-font-size-sm: $wbu-default-font-size * 0.88 !default;
 $wbu-title-font-family: inherit !default;
 $wbu-title-font-weight: 600 !default;
 // Big text ( Generalement pour les sections hero ).
-$wbu-titre-suppra: $wbu-default-font-size * 6 !default; // 96px
+$wbu-titre-suppra: $wbu-default-font-size * 6.5 !default; // 96px
 $wbu-titre-suppra-m: $wbu-titre-suppra * 0.88 !default;
 $wbu-titre-suppra-dd: $wbu-titre-suppra * 0.79 !default;
 $wbu-titre-suppra-sm: $wbu-titre-suppra * 0.65 !default;
 $wbu-titre-suppra-xs: $wbu-titre-suppra * 0.45 !default;
 //
-$wbu-titre-biggest: $wbu-default-font-size * 5.5 !default; // 88px
-$wbu-titre-biggest-md: $wbu-titre-biggest * 0.8 !default;
+$wbu-titre-biggest: $wbu-default-font-size * 5 !default; // 88px
+$wbu-titre-biggest-m: $wbu-titre-biggest * 0.9 !default;
+$wbu-titre-biggest-dd: $wbu-titre-biggest * 0.8 !default;
 $wbu-titre-biggest-sm: $wbu-titre-biggest * 0.7 !default;
+$wbu-titre-biggest-xs: $wbu-titre-biggest * 0.5 !default;
 //
-$wbu-titre-big: $wbu-default-font-size * 4.4 !default; // 70.4px
-$wbu-titre-big-md: $wbu-titre-big * 0.8 !default; //56.px
+$wbu-titre-big: $wbu-default-font-size * 4 !default; // 70.4px
+$wbu-titre-big-m: $wbu-titre-big * 0.9 !default;
+$wbu-titre-big-dd: $wbu-titre-big * 0.8 !default; //56.px
 $wbu-titre-big-sm: $wbu-titre-big * 0.7 !default; // 49.28px
+$wbu-titre-big-xs: $wbu-titre-big * 0.5 !default;
 //h1
 $wbu-h1-font-size: $wbu-default-font-size * 3.5 !default; //56px
 $wbu-h1-font-size-md: $wbu-h1-font-size * 0.8 !default; // 44.8px

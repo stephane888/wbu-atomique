@@ -43,7 +43,11 @@ h6 {
 
 .bp_hero,
 .wbu-titre-biggest {
-  @include bp_hero();
+  @include wbu-titre-biggest();
+}
+
+.wbu-titre-big {
+  @include wbu-titre-big();
 }
 
 .h1 {
