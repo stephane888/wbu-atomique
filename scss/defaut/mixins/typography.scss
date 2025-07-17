@@ -4,20 +4,43 @@
 /**
  *  Breack point hero.
  */
-@mixin bp_hero() {
-  font-size: $wbu-h1-font-size-sm;
+@mixin wbu-titre-biggest() {
+  font-size: $wbu-titre-biggest-xs;
   @include media-min(SM) {
-    font-size: $wbu-titre-big-sm;
+    font-size: $wbu-titre-biggest-sm;
   }
   @include media-min(DD) {
-    font-size: $wbu-titre-big-md;
+    font-size: $wbu-titre-biggest-dd;
   }
   @include media-min(M) {
-    font-size: $wbu-titre-big;
+    font-size: $wbu-titre-biggest-m;
   }
   @include media-min(LM) {
     font-size: $wbu-titre-biggest;
   }
+}
+
+/**
+ *  Breack point hero.
+ */
+@mixin wbu-titre-big() {
+  font-size: $wbu-titre-big-xs;
+  @include media-min(SM) {
+    font-size: $wbu-titre-big-sm;
+  }
+  @include media-min(DD) {
+    font-size: $wbu-titre-big-dd;
+  }
+  @include media-min(M) {
+    font-size: $wbu-titre-big-m;
+  }
+  @include media-min(LM) {
+    font-size: $wbu-titre-big;
+  }
+}
+
+@mixin bp_hero() {
+  @include wbu-titre-biggest();
 }
 
 @mixin wbu-titre-suppra() {
