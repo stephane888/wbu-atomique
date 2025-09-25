@@ -79,7 +79,8 @@
   }
 }
 @mixin requiredFieldForm($color_star) {
-  label.form-required {
+  label[class*="required"],
+  legend[class*="required"] {
     @include LabelAddRequiredStar($color_star);
   }
   .form-item.required {
