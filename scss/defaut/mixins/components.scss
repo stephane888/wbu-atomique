@@ -289,9 +289,7 @@
     }
   }
 }
-/*!
- * .list-element{@include list-element(($paddingY:10px, $paddingX:5px, $borderW:1px));}
- */
+
 @mixin list-element($paddingT: 10px, $paddingB: 10px, $paddingL: 5px, $paddingR: 5px, $borderW: 1px) {
   margin: 0;
   list-style: none;
