@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"No test specified\"",
     "dev": "webpack serve  --mode='development'  --progress",
-    "build": "--node-env=production webpack --watch --progress",
+    "build": "NODE_ENV=production webpack --progress",
     "devel": "--node-env=development webpack --watch --progress",
     "copy": "--node-env=production node scripts/build.js  --watch",
     "publish": "npm publish --access public",
@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.26.9",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
+    "core-js": "^3.47.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
     "eslint": "^9.22.0",
