@@ -44,7 +44,15 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              presets: ["@babel/preset-env"],
+              presets: [
+                [
+                  "@babel/preset-env",
+                  {
+                    useBuiltIns: "usage",
+                    corejs: 3,
+                  },
+                ],
+              ],
             },
           },
         ],
@@ -53,16 +61,16 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           // 1/2 permet d'injecter directeent le style dans le navigateur.
-//          devMode
-//            ? "style-loader"
-//            : {
-//                loader: MiniCssExtractPlugin.loader,
-//                options: {
-//                  publicPath: "../",
-//                },
-//              },
+          //          devMode
+          //            ? "style-loader"
+          //            : {
+          //                loader: MiniCssExtractPlugin.loader,
+          //                options: {
+          //                  publicPath: "../",
+          //                },
+          //              },
           // 2/2 Permet de modifier directement les fichiers css.
-		  // On doit desactiver la premiere approche, car on a pour abitude de fonctionner avec la seconde.
+          // On doit desactiver la premiere approche, car on a pour abitude de fonctionner avec la seconde.
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
@@ -118,11 +126,12 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "./public"),
-    port: 3000,
-    publicPath: "/dist/",
-    watchContentBase: true,
+    static: {
+      directory: path.resolve(__dirname, "./public"),
+    },
+    port: 3008,
     hot: true,
+    watchFiles: ["./js/**/*", "./scss/**/*"],
   },
   optimization: {
     minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
