@@ -2,10 +2,13 @@
  * Help to build, classic menu, mega-menu
  */
 class HbkMegaMenu {
-  constructor() {
-    //
+  constructor(hbkMenus = null) {
     this.timerScroll;
     this.timerResize;
+  }
+
+  initHtml() {
+    //
   }
   /**
    * Ajoute les icones svg, à tous les elements qui possedent de
