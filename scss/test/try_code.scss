@@ -1,1 +1,88 @@
+@use "../wbu-ressources-clean.scss" as *;
 
+///
+/* Map container */
+.dpd-map-wrapper {
+  height: 500px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow-y: hidden;
+  .leaflet-popup-content {
+    font-size: $wbu-default-font-size;
+  }
+}
+
+/* Radio list styling */
+.dpd-parcelshop-radios .radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  > .js-form-type-radio {
+    position: relative;
+  }
+}
+.dpd-parcelshop-radios .form-item {
+  margin: 0;
+  padding: 0;
+}
+
+.dpd-parcelshop-radios .form-type-radio {
+  width: calc(50% - 1rem);
+  min-width: 210px;
+  label {
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    background: #fff;
+  }
+}
+
+.dpd-parcelshop-radios .form-type-radio label:hover {
+  border-color: $wbu-color-primary;
+  background-color: #f7f7f7;
+}
+
+.dpd-parcelshop-radios input[type="radio"] {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  margin: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  &:checked + label {
+    border-color: $wbu-color-primary;
+    background-color: rgba($wbu-color-secondary, 0.1);
+  }
+  &:active,
+  &:focus,
+  &:focus-visible {
+    box-shadow: none;
+  }
+}
+
+.parcelshop-option {
+  color: #676565;
+  font-size: 80%;
+  padding-left: 3rem;
+  font-weight: 400;
+  &__company {
+    font-weight: 700;
+  }
+}
+
+/* Popup styling */
+.dpd-map-popup {
+  min-width: 220px;
+}
+
+.dpd-map-popup button.dpd-select-from-map {
+  display: block;
+  width: 100%;
+  margin-top: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
