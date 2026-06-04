@@ -241,7 +241,7 @@ class SwiperManager {
               pauseSliders({ parent: swiperParent, children: swiperChildren }, params.config.custom_config, "video");
               // console.log("Video demarrer");
             },
-            false
+            false,
           );
           video.addEventListener(
             "pause",
@@ -250,7 +250,7 @@ class SwiperManager {
               // L'utilisateur choisira une action.
               //console.log("Video mise en pause");
             },
-            false
+            false,
           );
           video.addEventListener(
             "ended",
@@ -261,7 +261,7 @@ class SwiperManager {
               playSliders({ parent: swiperParent, children: swiperChildren }, params.config.custom_config);
               // console.log("Video terminé, slider run");
             },
-            false
+            false,
           );
         });
         /**
@@ -357,7 +357,7 @@ class SwiperManager {
           changeDirection();
         }, 50);
       },
-      true
+      true,
     );
   }
 }
